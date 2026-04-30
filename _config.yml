@@ -1,17 +1,4 @@
 # Jekyll configuration
 title: Şahmat
-description: Modern ve minimalist bir satranç dergisi.
-baseurl: ""
-url: "https://sahmat.com"
-
-# Build settings
-markdown: kramdown
-
-# Exclude list for GitHub Pages
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - package.json
-  - vendor/
-  - .gitignore
-  - metadata.json
+description: Satranç dergisi
+url: "https://sahvemat.github.io"
