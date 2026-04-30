@@ -1,0 +1,27 @@
+<header id="main-header" class="main-nav border-b-2 border-line flex items-center justify-between px-8 bg-paper sticky top-0 z-50">
+  <div class="logo-container flex flex-col items-center cursor-pointer">
+    <div class="logo font-display font-black tracking-[-0.05em] uppercase">
+      ŞAH<span class="text-accent">MAT</span>
+    </div>
+    <div class="tagline font-sans font-bold uppercase tracking-[0.4em] text-accent transition-all duration-500">
+      Süreli Satranç Yayını
+    </div>
+  </div>
+
+  <nav class="flex gap-8 font-sans text-[11px] uppercase font-bold tracking-widest items-center">
+    <a href="/" class="hover:text-accent hidden sm:block">Analiz</a>
+    <a href="#" class="hover:text-accent hidden sm:block">Tarih</a>
+    <a href="#" class="bg-ink text-paper px-6 py-3 hover:bg-accent transition-all duration-300">Arşiv</a>
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>

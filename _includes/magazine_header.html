@@ -1,0 +1,33 @@
+<header class="relative py-20 px-8 border-b-2 border-line overflow-hidden flex flex-col lg:flex-row justify-between items-start gap-12">
+  {% assign featured_post = collections.posts | where: "data.featured", true | first %}
+  <div class="flex-1">
+    <div>
+      <span class="font-sans text-xs uppercase font-black bg-accent text-paper px-2 py-1 tracking-widest inline-block mb-8">{{ featured_post.data.category }}</span>
+      <h1 class="text-[12vw] lg:text-[8vw] leading-[0.8] font-black tracking-tighter uppercase whitespace-pre-line">
+        {{ featured_post.data.title | replace: " ", "<br/>" }}
+      </h1>
+      <div class="w-16 h-1 bg-ink my-8"></div>
+      <p class="text-2xl lg:text-3xl leading-[1.1] font-serif italic max-w-xl text-neutral-600">
+        {{ featured_post.data.excerpt }}
+      </p>
+    </div>
+  </div>
+
+  <div class="w-full lg:w-72 flex flex-col gap-6">
+    <div class="bg-ink text-paper p-6 shadow-editorial">
+      <h5 class="font-sans text-[10px] uppercase font-bold tracking-[0.2em] mb-3 text-accent">Editörün Seçimi</h5>
+      <p class="text-xl leading-tight font-display font-bold uppercase tracking-tight">"Makinedeki Kasparov Ruhu: Derin hazırlık neden hâlâ önemli?"</p>
+      <span class="inline-block mt-4 text-[10px] font-sans border-b border-paper pb-1 cursor-pointer hover:text-accent transition-colors">Analizi Oku</span>
+    </div>
+    
+    <div class="flex justify-between items-end">
+      <div class="flex flex-col">
+        <span class="text-[10px] font-sans font-bold uppercase opacity-40">Sayı</span>
+        <span class="text-4xl font-display font-black leading-none uppercase tracking-tighter">04</span>
+      </div>
+      <div class="flex flex-col text-right">
+        <span class="text-sm font-sans font-black leading-none uppercase tracking-widest">Süreli Yayın</span>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: Şahmat
+description: Satranç dergisi
+baseurl: ""
+url: "https://sahmat.com"
+
+# Build settings
+markdown: kramdown
+theme: minima # Just as a placeholder, we use custom layouts
+plugins:
+  - jekyll-feed
+
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - eleventy.config.js
+  - _site
+  - dist
+  - src
+  - vite.config.ts
+  - tsconfig.json

@@ -1,0 +1,21 @@
+<section class="p-8 border-y-2 border-line bg-ink text-paper flex flex-col md:flex-row gap-12 items-center">
+  <div class="flex-1">
+    <span class="text-accent font-sans text-[10px] font-black uppercase tracking-[0.4em] mb-6 block">Taktik Motoru</span>
+    <h2 class="text-5xl font-black uppercase tracking-tighter mb-6 leading-none">Sabah<br/><span class="text-accent italic font-serif font-normal">Şahı.</span></h2>
+    <p class="text-neutral-400 font-serif italic text-xl max-w-md">
+      "Hesaplama satrancın temelidir. Beyazın rakibinin direnci kıran hamlelerini bulun."
+    </p>
+    <div class="mt-8 flex gap-4">
+      <button class="border border-paper/20 px-6 py-3 text-[10px] font-sans font-bold uppercase tracking-widest hover:bg-paper hover:text-ink transition-colors">İpucu</button>
+      <button class="border border-paper/20 px-6 py-3 text-[10px] font-sans font-bold uppercase tracking-widest hover:bg-paper hover:text-ink transition-colors">Çözümü Göster</button>
+    </div>
+  </div>
+
+  <div class="w-full md:w-96 aspect-square bg-white/5 p-4 border border-white/10 shadow-2xl">
+    <puzzle 
+      fen="{{ chess.puzzle_fen }}"
+      interactive="true"
+      class="w-full h-full"
+    ></puzzle>
+  </div>
+</section>
