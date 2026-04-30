@@ -1,22 +1,18 @@
 # Jekyll configuration
 title: Şahmat
-description: Satranç dergisi
+description: Modern ve minimalist bir satranç dergisi.
 baseurl: ""
 url: "https://sahmat.com"
 
 # Build settings
 markdown: kramdown
-theme: minima # Just as a placeholder, we use custom layouts
-plugins:
-  - jekyll-feed
 
+# Exclude list for GitHub Pages
 exclude:
   - node_modules
   - package.json
   - package-lock.json
   - eleventy.config.js
-  - _site
+  - .env.example
   - dist
-  - src
-  - vite.config.ts
-  - tsconfig.json
+  - vendor

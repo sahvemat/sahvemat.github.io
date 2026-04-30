@@ -1,18 +1,16 @@
 {
-  "name": "react-example",
+  "name": "sahmat-magazine",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Şahmat Satranç Dergisi - GitHub Pages Edisyonu",
   "type": "module",
-  "engines": {
-    "node": ">=22"
-  },
   "scripts": {
     "dev": "concurrently \"npm run dev:css\" \"npm run dev:11ty\"",
     "dev:css": "npx -y @tailwindcss/cli -i assets/css/input.css -o assets/css/style.css --watch",
     "dev:11ty": "npx -y @11ty/eleventy --serve --port 3000",
     "build": "npx -y @tailwindcss/cli -i assets/css/input.css -o assets/css/style.css && npx -y @11ty/eleventy",
-    "clean": "rm -rf dist assets/css/style.css",
-    "lint": "echo 'No linting configured for pure HTML/Jekyll setup'"
+    "clean": "rm -rf _site assets/css/style.css",
+    "lint": "echo 'No linting configured'"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
