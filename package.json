@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "concurrently \"npm run dev:css\" \"npm run dev:11ty\"",
     "dev:css": "npx -y @tailwindcss/cli -i assets/css/input.css -o assets/css/style.css --watch",
