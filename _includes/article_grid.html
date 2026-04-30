@@ -1,25 +1,2 @@
-<section class="grid grid-cols-1 md:grid-cols-3 divide-y-2 md:divide-y-0 md:divide-x-2 divide-line">
-  {% for article in collections.posts %}
-    {% if article.data.featured %}{% continue %}{% endif %}
-  <article class="p-8 group cursor-pointer hover:bg-neutral-50 transition-colors">
-    <div class="mb-8">
-      <span class="text-[10px] font-sans font-black uppercase tracking-[0.2em] text-accent mb-4 block">{{ article.data.category }}</span>
-      <h3 class="text-3xl font-display font-bold leading-tight uppercase group-hover:text-accent transition-colors">
-        {{ article.data.title }}
-      </h3>
-      <p class="mt-4 text-sm font-serif text-neutral-500 italic leading-relaxed">
-        "{{ article.data.excerpt }}"
-      </p>
-    </div>
-    
-    <div class="aspect-square bg-white border-2 border-line p-2 mb-6 shadow-sm group-hover:shadow-editorial transition-all group-hover:-translate-y-1">
-      <fen fen="{{ article.data.fen }}" class="w-full h-full"></fen>
-    </div>
-
-    <div class="flex justify-between items-center pt-6 border-t border-line/30">
-      <span class="text-[9px] font-sans font-bold uppercase tracking-widest text-neutral-400">Yazar: {{ article.data.author }}</span>
-      <span class="text-[9px] font-sans font-bold uppercase tracking-widest text-ink group-hover:text-accent transition-colors">Açık Teori //</span>
-    </div>
-  </article>
-  {% endfor %}
-</section>
+### {{ article.data.title }}
+"{{ article.data.excerpt }}"
