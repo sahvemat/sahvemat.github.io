@@ -486,25 +486,44 @@
     </div>
 
     <script>
-      // Header scroll animation with smooth state transitions
+      // Header scroll animation with hysteresis and state locking to prevent flickering
       const header = document.getElementById('main-header');
       const tagline = document.getElementById('tagline');
+      let isScrolled = false;
       
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
+      const updateHeader = () => {
+        const scrollY = window.scrollY;
+        const thresholdIn = 140; // Point to collapse
+        const thresholdOut = 60; // Point to expand (buffer prevents flickering)
+
+        if (scrollY > thresholdIn && !isScrolled) {
+          isScrolled = true;
           header.classList.add('scrolled');
           if (tagline) {
             tagline.style.opacity = '0';
             tagline.style.transform = 'translateY(-10px)';
           }
-        } else {
+        } else if (scrollY < thresholdOut && isScrolled) {
+          isScrolled = false;
           header.classList.remove('scrolled');
           if (tagline) {
             tagline.style.opacity = '1';
             tagline.style.transform = 'translateY(0)';
           }
         }
-      });
+      };
+
+      // Use requestAnimationFrame for smoother performance
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateHeader();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
     </script>
   </body>
 </html>
