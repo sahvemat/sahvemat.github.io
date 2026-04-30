@@ -23,6 +23,21 @@ export default function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("_posts/*.md").filter(item => item.data.featured === true);
   });
 
+  // Flash news posts collection
+  eleventyConfig.addCollection("flash", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("_posts/*.md").filter(item => item.data.type === "flash");
+  });
+
+  // Analysis posts collection
+  eleventyConfig.addCollection("analysis", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("_posts/*.md").filter(item => item.data.type === "analysis");
+  });
+
+  // Upcoming articles collection
+  eleventyConfig.addCollection("upcoming", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("_posts/*.md").filter(item => item.data.type === "upcoming");
+  });
+
   return {
     dir: {
       input: ".",

@@ -8,5 +8,24 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 px-0">{% for post in collections.posts %}<!-- Article --><article class="group space-y-6"><div class="aspect-[16/10] bg-ink text-paper flex items-center justify-center overflow-hidden border border-line/5 relative"><div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-ink text-[10px] font-black uppercase tracking-widest shadow-sm">{{ post.data.category | default: "SATRANÇ" }}</div><div class="font-display font-black text-[120px] opacity-10 group-hover:opacity-100 group-hover:text-accent transition-all duration-700 select-none">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</div></div><div class="space-y-4"><div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50"><span>{{ post.date | date: "%B %Y" | upcase }}</span><span>{{ post.data.reading_time | default: "8" }} DK OKUMA</span></div><h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">{{ post.data.title }}</h3><p class="font-serif text-slate text-lg leading-snug line-clamp-2">"{{ post.data.excerpt }}"</p><a href="{{ post.url }}" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a></div></article>{% endfor %}</div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 px-0">
+    {% for post in collections.posts %}
+    <!-- Article -->
+    <article class="group space-y-6">
+      <div class="aspect-[16/10] bg-ink text-paper flex items-center justify-center overflow-hidden border border-line/5 relative">
+          <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-ink text-[10px] font-black uppercase tracking-widest shadow-sm">{{ post.data.category | default: "SATRANÇ" }}</div>
+          <div class="font-display font-black text-[120px] opacity-10 group-hover:opacity-100 group-hover:text-accent transition-all duration-700 select-none">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</div>
+      </div>
+      <div class="space-y-4">
+          <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
+              <span>{{ post.date | date: "%B %Y" | upcase }}</span>
+              <span>{{ post.data.reading_time | default: "8" }} DK OKUMA</span>
+          </div>
+          <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">{{ post.data.title }}</h3>
+          <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"{{ post.data.excerpt }}"</p>
+          <a href="{{ post.url }}" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
 </section>

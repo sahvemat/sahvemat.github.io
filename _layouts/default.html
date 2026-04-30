@@ -3,51 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }} | Şah ve mat</title>
+    <title>{{ title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      window.tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-              display: ["Outfit", "sans-serif"],
-              mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
-              serif: ["Playfair Display", "serif"],
-            },
-            colors: {
-              ink: '#121212',
-              paper: '#FDFCF8',
-              accent: '#E11D48',
-              line: '#121212',
-              slate: '#475569',
-            },
-            animation: {
-                'marquee': 'marquee 25s linear infinite',
-                'fade-in': 'fadeIn 0.8s ease-out forwards',
-            },
-            keyframes: {
-                marquee: {
-                    '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(-50%)' },
-                },
-                fadeIn: {
-                    '0%': { opacity: '0', transform: 'translateY(10px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
-                }
-            }
-          }
-        }
-      }
-    </script>
+    <script src="/assets/js/tailwind.config.js"></script>
     <style type="text/tailwindcss">
-      {% include style.css %}
+      @import url("/assets/css/style.css");
     </style>
     <script src="https://chesspublica.github.io/elements.js"></script>
-    <script src="/assets/script.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
   </head>
   <body class="min-h-screen">
     <div class="fixed inset-0 paper-texture z-[-1]"></div>

@@ -31,24 +31,26 @@
   </div>
 
   <div class="lg:col-span-4 flex flex-col">
+    {% assign flashPost = collections.flash | first %}
     <div class="p-8 md:p-12 border-b border-line/10 flex-1 hover:bg-neutral-100 transition-colors group cursor-pointer">
         <h5 class="text-[10px] font-sans font-black tracking-widest uppercase text-accent mb-6 flex items-center gap-3">
             <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span> FLAŞ HABER
         </h5>
-        <h3 class="text-4xl leading-[1] mb-6 group-hover:underline decoration-accent underline-offset-8">Garry Kasparov ile 30 Yıl Sonra: "Deep Blue sadece bir başlangıçtı."</h3>
-        <p class="font-serif text-slate/80 text-lg">Eski şampiyon, yapay zekanın satranç psikolojisi üzerindeki etkilerini derinlemesine inceliyor.</p>
+        <h3 class="text-4xl leading-[1] mb-6 group-hover:underline decoration-accent underline-offset-8">{{ flashPost.data.title | default: "Garry Kasparov ile 30 Yıl Sonra" }}</h3>
+        <p class="font-serif text-slate/80 text-lg">{{ flashPost.data.excerpt | default: "Eski şampiyon, yapay zekanın satranç psikolojisi üzerindeki etkilerini derinlemesine inceliyor." }}</p>
     </div>
+    {% assign upcomingPost = collections.upcoming | first %}
     <div class="p-8 md:p-12 bg-ink text-paper space-y-8 min-h-[300px] flex flex-col justify-between">
         <div class="space-y-4">
             <h5 class="text-[10px] font-mono tracking-widest uppercase text-paper/40">Gelecek Sayıdan</h5>
-            <h2 class="text-3xl tracking-tight leading-none">DOPİNGSİZ SATRANÇ: Biyolojik Kapasitenin Sınırları</h2>
+            <h2 class="text-3xl tracking-tight leading-none uppercase">{{ upcomingPost.data.title | default: "DOPİNGSİZ SATRANÇ: Biyolojik Kapasitenin Sınırları" }}</h2>
         </div>
         <div class="flex justify-between items-end">
             <div class="text-[10px] font-mono opacity-50 uppercase leading-none">
                 Tüm hakları saklıdır <br/> © 2026 Şahvmat
             </div>
             <div class="flex gap-1">
-                <div class="w-8 h-8 rounded-full border border-paper/20 flex items-center justify-center hover:bg-paper hover:text-ink cursor-pointer transition-all">→</div>
+                <a href="{{ upcomingPost.url | default: '#' }}" class="w-8 h-8 rounded-full border border-paper/20 flex items-center justify-center hover:bg-paper hover:text-ink cursor-pointer transition-all">→</a>
             </div>
         </div>
     </div>
