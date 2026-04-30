@@ -1,20 +1,12 @@
 {
-  "name": "şah-ve-mat",
-  "private": true,
-  "version": "0.0.0",
+  "name": "sahmat-magazine",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npx -y @11ty/eleventy",
+    "dev": "npx -y @11ty/eleventy --serve --port 3000"
   },
   "dependencies": {
-
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@11ty/eleventy": "^3.0.0"
   }
 }
