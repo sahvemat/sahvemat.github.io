@@ -142,13 +142,8 @@
       <header id="main-header" class="main-nav sticky top-0 bg-paper z-50 px-8 flex flex-col justify-center overflow-hidden">
         <div class="flex items-center justify-between w-full">
           <div class="flex flex-col relative group">
-            <a href="/" class="logo-text inline-flex items-baseline group">
-              <span class="font-display font-black tracking-tighter uppercase leading-[0.75]">Şah</span>
-              <span class="font-serif italic font-medium lowercase text-accent mx-1 md:mx-3 transform group-hover:-rotate-12 transition-transform duration-700">v</span>
-              <span class="font-display font-black tracking-tighter uppercase leading-[0.75]">mat</span>
-              <span class="block w-2 h-2 md:w-3 md:h-3 bg-accent ml-1 md:ml-3 self-end mb-[0.05em] transition-all duration-700 group-hover:rotate-45 group-hover:scale-150"></span>
-            </a>
-            <div id="tagline" class="absolute -bottom-5 left-1 transition-all duration-700 overflow-hidden">
+            <magazine-logo></magazine-logo>
+            <div id="tagline" class="absolute -bottom-5 left-1 transition-all duration-500 overflow-hidden">
                 <span class="font-sans font-black tracking-[0.8em] uppercase text-slate text-[9px] opacity-40 group-hover:opacity-100 group-hover:text-accent transition-all">
                   Süreli Yayın
                 </span>
@@ -427,9 +422,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-16 relative z-10">
           <div class="md:col-span-5 space-y-10">
-            <h5 class="font-display font-black text-6xl uppercase tracking-tighter items-center flex gap-4">
-                Şahmat <span class="w-12 h-px bg-accent"></span>
-            </h5>
+            <div class="flex items-center gap-4">
+               <magazine-logo class="text-5xl"></magazine-logo>
+            </div>
             <p class="font-serif text-xl leading-relaxed text-paper/60 max-w-sm">
               Modern satranç teorisi, derinlemesine kültür analizleri ve etkileşimli tahtalardan oluşan küratörlü bir yayın. ChessPublica tarafından hayal edildi.
             </p>
@@ -486,9 +481,26 @@
     </div>
 
     <script>
+      // Define Unified Logo Component
+      class MagazineLogo extends HTMLElement {
+        connectedCallback() {
+          const sizeClass = this.getAttribute('class') || '';
+          this.innerHTML = `
+            <a href="/" class="logo-text inline-flex items-baseline group ${sizeClass}">
+              <span class="font-display font-black tracking-tighter uppercase leading-[0.75]">Şah</span>
+              <span class="font-serif italic font-medium lowercase text-accent mx-1 md:mx-3 transform group-hover:-rotate-12 transition-transform duration-700">v</span>
+              <span class="font-display font-black tracking-tighter uppercase leading-[0.75]">mat</span>
+              <span class="block w-2 h-2 md:w-3 md:h-3 bg-accent ml-1 md:ml-3 self-end mb-[0.05em] transition-all duration-700 group-hover:rotate-45 group-hover:scale-150"></span>
+            </a>
+          `;
+        }
+      }
+      customElements.define('magazine-logo', MagazineLogo);
+
       // Header scroll animation with hysteresis and state locking to prevent flickering
       const header = document.getElementById('main-header');
       const tagline = document.getElementById('tagline');
+      const headerLogo = header.querySelector('magazine-logo');
       let isScrolled = false;
       
       const updateHeader = () => {
@@ -499,6 +511,10 @@
         if (scrollY > thresholdIn && !isScrolled) {
           isScrolled = true;
           header.classList.add('scrolled');
+          if (headerLogo) {
+              headerLogo.style.transform = 'scale(0.35)';
+              headerLogo.style.transformOrigin = 'left center';
+          }
           if (tagline) {
             tagline.style.opacity = '0';
             tagline.style.transform = 'translateY(-10px)';
@@ -506,12 +522,20 @@
         } else if (scrollY < thresholdOut && isScrolled) {
           isScrolled = false;
           header.classList.remove('scrolled');
+          if (headerLogo) {
+              headerLogo.style.transform = 'scale(1)';
+          }
           if (tagline) {
             tagline.style.opacity = '1';
             tagline.style.transform = 'translateY(0)';
           }
         }
       };
+
+      // Set initial styles for logo transition
+      if (headerLogo) {
+          headerLogo.style.transition = 'all 0.7s cubic-bezier(0.23,1,0.32,1)';
+      }
 
       // Use requestAnimationFrame for smoother performance
       let ticking = false;
