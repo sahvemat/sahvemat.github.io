@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Şahmat | Süreli Yayın
+title: Şahvemat | 3 aylık satranç dergisi.
 ---
 
 {% include magazine_header.html %}
