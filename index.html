@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Şah ve mat | Süreli Yayın</title>
+    <title>Şah ve mat | Modern Satranç Kültürü</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -19,10 +19,25 @@
               serif: ["Playfair Display", "serif"],
             },
             colors: {
-              ink: '#1A1A1A',
+              ink: '#121212',
               paper: '#FDFCF8',
-              accent: '#DC2626',
-              line: '#000000',
+              accent: '#E11D48', // More vibrant crimson
+              line: '#121212',
+              slate: '#475569',
+            },
+            animation: {
+                'marquee': 'marquee 25s linear infinite',
+                'fade-in': 'fadeIn 0.8s ease-out forwards',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-50%)' },
+                },
+                fadeIn: {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
             }
           }
         }
@@ -31,238 +46,460 @@
     <style type="text/tailwindcss">
       @layer base {
         body {
-          @apply bg-paper text-ink font-serif antialiased;
+          @apply bg-[#F4F1EA] text-ink font-serif antialiased selection:bg-accent selection:text-white;
         }
         h1, h2, h3, h4 {
           @apply font-display tracking-tighter uppercase font-black text-balance;
         }
+        p {
+            @apply leading-relaxed;
+        }
+      }
+
+      /* Custom thin scrollbar */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        @apply bg-paper;
+      }
+      ::-webkit-scrollbar-thumb {
+        @apply bg-accent;
       }
 
       header.main-nav {
-        @apply transition-all duration-500 ease-in-out;
-      }
-      header.main-nav .logo {
-        @apply transition-all duration-500 ease-in-out;
+        @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border-b border-line/10;
       }
       header.main-nav.scrolled {
-        @apply h-24;
+        @apply h-20 bg-paper/95 backdrop-blur-md shadow-sm;
       }
       header.main-nav:not(.scrolled) {
-        @apply h-48 md:h-64 border-b-4;
+        @apply h-40 md:h-56;
       }
-      header.main-nav.scrolled .logo {
-        @apply text-4xl;
+
+      .logo-text {
+         @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)];
       }
-      header.main-nav:not(.scrolled) .logo {
-        @apply text-7xl md:text-8xl;
+      header.main-nav.scrolled .logo-text {
+        @apply text-3xl;
       }
-      header.main-nav.scrolled .tagline {
-        @apply text-[8px] mt-0 opacity-0 h-0 overflow-hidden;
-      }
-      header.main-nav:not(.scrolled) .tagline {
-        @apply text-[10px] md:text-xs -mt-2 opacity-100 h-auto;
+      header.main-nav:not(.scrolled) .logo-text {
+        @apply text-7xl md:text-9xl;
       }
 
       @layer utilities {
         .border-editorial {
           @apply border-2 border-line;
         }
-        .shadow-editorial {
-          box-shadow: 10px 10px 0px 0px #1A1A1A;
+        .shadow-premium {
+          box-shadow: 12px 12px 0px 0px #121212;
         }
         .text-vertical {
           writing-mode: vertical-rl;
           text-orientation: mixed;
         }
+        .paper-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
       }
 
-      fen, puzzle, pgn, pgn-player {
-        display: block;
-        margin: 2rem 0;
-        max-width: 100%;
+      pgn-player {
+        @apply border-line border rounded-none p-4 bg-white shadow-premium;
       }
-      .magazine-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
+      
+      .stagger-in > * {
+          @apply opacity-0;
+          animation: fadeIn 0.8s ease-out forwards;
       }
-      .article-card {
-        @apply border-t border-line pt-6 flex flex-col gap-4;
-      }
+      .stagger-in > *:nth-child(1) { animation-delay: 0.1s; }
+      .stagger-in > *:nth-child(2) { animation-delay: 0.2s; }
+      .stagger-in > *:nth-child(3) { animation-delay: 0.3s; }
+      .stagger-in > *:nth-child(4) { animation-delay: 0.4s; }
     </style>
     <script src="https://chesspublica.github.io/elements.js"></script>
   </head>
-  <body class="min-h-screen selection:bg-accent selection:text-paper bg-neutral-100">
-    <div class="max-w-7xl mx-auto border-line bg-paper">
+  <body class="min-h-screen">
+    <!-- Texture Overlay -->
+    <div class="fixed inset-0 paper-texture z-[-1]"></div>
+
+    <div class="max-w-[1400px] mx-auto border-x border-line/10 bg-paper shadow-2xl relative">
       
+      <!-- Top Utility Nav -->
+      <div class="h-10 border-b border-line px-8 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-slate">
+        <div class="flex gap-6">
+          <span>Sayı No: 04</span>
+          <span>Nisan 2026</span>
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-accent transition-colors">Abone Ol</a>
+          <a href="#" class="hover:text-accent transition-colors">Giriş</a>
+        </div>
+      </div>
+
       <!-- Navigation -->
-      <header id="main-header" class="main-nav sticky top-0 bg-paper z-50 px-8 flex flex-col justify-center border-line overflow-hidden">
-        <div class="flex items-baseline justify-between w-full">
-          <div class="flex flex-col">
-            <a href="/" class="logo font-display font-black tracking-tighter uppercase leading-none block">
+      <header id="main-header" class="main-nav sticky top-0 bg-paper z-50 px-8 flex flex-col justify-center overflow-hidden">
+        <div class="flex items-center justify-between w-full">
+          <div class="flex flex-col relative group">
+            <a href="/" class="logo-text font-display font-black tracking-tighter uppercase leading-[0.75] block">
               Şahmat
             </a>
-            <span class="tagline font-sans font-black tracking-[0.4em] uppercase text-accent transition-all duration-500">
-              Süreli Yayın
-            </span>
+            <div id="tagline" class="absolute -bottom-4 left-1 transition-all duration-500 overflow-hidden">
+                <span class="font-sans font-black tracking-[0.6em] uppercase text-accent text-[11px]">
+                  Süreli Yayın
+                </span>
+            </div>
           </div>
-          <nav class="hidden md:flex gap-8 font-sans font-black text-[11px] uppercase tracking-widest pt-4">
-            <a href="#" class="hover:text-accent transition-colors">Analiz</a>
-            <a href="#" class="hover:text-accent transition-colors">Tarih</a>
-            <a href="#" class="hover:text-accent transition-colors">Arşiv</a>
+          <nav class="hidden lg:flex gap-12 font-sans font-black text-[11px] uppercase tracking-[0.25em] pt-4 items-center">
+            <a href="#" class="hover:text-accent transition-all hover:scale-110">Analiz</a>
+            <a href="#" class="hover:text-accent transition-all hover:scale-110">Gündem</a>
+            <a href="#" class="hover:text-accent transition-all hover:scale-110">Tarih</a>
+            <a href="#" class="hover:text-accent transition-all hover:scale-110">Arşiv</a>
+            <button class="bg-ink text-paper px-6 py-3 text-[10px] hover:bg-accent transition-colors ml-4">KATILIN</button>
           </nav>
         </div>
       </header>
 
       <main>
-        <!-- Home Header -->
-        <section class="grid grid-cols-1 md:grid-cols-12 border-b-4 border-line">
-          <div class="md:col-span-8 p-8 md:p-12 md:border-r-4 border-line flex flex-col justify-end min-h-[400px]">
-            <span class="text-[11px] font-sans font-black tracking-[0.5em] uppercase text-accent mb-4 block">Özel Dosya</span>
-            <h1 class="text-6xl md:text-[120px] leading-[0.82] mb-8">
-              SİLİKON<br/><span class="italic font-serif font-normal lowercase tracking-normal">devrimi.</span>
-            </h1>
-            <p class="text-2xl md:text-3xl font-serif max-w-2xl leading-tight text-balance">
-              "Stockfish 16 gibi nöral ağlar, temel satranç teorisini nasıl baştan yazıyor?"
-            </p>
+        <!-- Intense Editorial Hero -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-line min-h-[70vh]">
+          <div class="lg:col-span-1 border-r border-line/10 hidden lg:flex flex-col items-center justify-center gap-24 py-12">
+            <span class="text-vertical text-[10px] font-mono uppercase tracking-[0.5em] text-slate/50">Modern Satranç Kültürü</span>
+            <div class="w-px h-32 bg-line/10"></div>
+            <span class="text-vertical text-[10px] font-mono uppercase tracking-[0.5em] text-slate/50">2026 BASKI</span>
           </div>
-          <div class="md:col-span-4 p-8 bg-neutral-100 flex flex-col gap-8 justify-between">
-            <div class="space-y-4">
-              <h5 class="text-xs font-sans font-black tracking-widest uppercase text-neutral-400">Editörün Seçimi</h5>
-              <h3 class="text-3xl leading-tight">"Makinedeki Kasparov Ruhu: Derin hazırlık neden hâlâ önemli?"</h3>
+          
+          <div class="lg:col-span-7 p-8 md:p-16 border-r border-line/10 flex flex-col justify-center relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 text-[240px] font-display font-black text-black/[0.02] pointer-events-none select-none">04</div>
+            
+            <div class="stagger-in space-y-6">
+                <span class="inline-block px-3 py-1 bg-accent text-white font-sans text-[10px] font-black tracking-widest uppercase mb-4">ÖZEL DOSYA No. 1</span>
+                <h1 class="text-7xl md:text-[180px] leading-[0.8] mb-12 tracking-tighter">
+                  SİLİKON<br/><span class="italic font-serif font-normal lowercase tracking-normal text-accent -ml-2">Devrimi.</span>
+                </h1>
+                <div class="flex flex-col md:flex-row gap-12 items-start">
+                    <p class="text-2xl md:text-3xl font-serif leading-tight max-w-xl text-balance italic font-light">
+                      "Stockfish 16 gibi nöral ağlar, beş yüz yıllık temel satranç teorisini nasıl baştan yazıyor ve insan dehasını sorgulatıyor?"
+                    </p>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <span class="font-mono text-[10px] text-slate uppercase tracking-widest">Yazar:</span>
+                        <span class="font-sans font-bold text-xs uppercase border-b-2 border-accent pb-1">Dr. Selim Arda</span>
+                    </div>
+                </div>
             </div>
-            <div class="border-t border-line pt-4 font-sans text-xs uppercase tracking-tighter font-bold flex justify-between">
-              <span>Sayı 04</span>
-              <span>Nisan 2026</span>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col">
+            <div class="p-8 md:p-12 border-b border-line/10 flex-1 hover:bg-neutral-100 transition-colors group cursor-pointer">
+                <h5 class="text-[10px] font-sans font-black tracking-widest uppercase text-accent mb-6 flex items-center gap-3">
+                    <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span> FLAŞ HABER
+                </h5>
+                <h3 class="text-4xl leading-[1] mb-6 group-hover:underline decoration-accent underline-offset-8">Garry Kasparov ile 30 Yıl Sonra: "Deep Blue sadece bir başlangıçtı."</h3>
+                <p class="font-serif text-slate/80 text-lg">Eski şampiyon, yapay zekanın satranç psikolojisi üzerindeki etkilerini derinlemesine inceliyor.</p>
+            </div>
+            <div class="p-8 md:p-12 bg-ink text-paper space-y-8 min-h-[300px] flex flex-col justify-between">
+                <div class="space-y-4">
+                    <h5 class="text-[10px] font-mono tracking-widest uppercase text-paper/40">Gelecek Sayıdan</h5>
+                    <h2 class="text-3xl tracking-tight leading-none">DOPİNGSİZ SATRANÇ: Biyolojik Kapasitenin Sınırları</h2>
+                </div>
+                <div class="flex justify-between items-end">
+                    <div class="text-[10px] font-mono opacity-50 uppercase leading-none">
+                        Tüm hakları saklıdır <br/> © 2026 Şah Vmat
+                    </div>
+                    <div class="flex gap-1">
+                        <div class="w-8 h-8 rounded-full border border-paper/20 flex items-center justify-center hover:bg-paper hover:text-ink cursor-pointer transition-all">→</div>
+                    </div>
+                </div>
             </div>
           </div>
         </section>
 
-        <!-- Featured Analysis -->
-        <section class="p-8 md:p-12 border-b-4 border-line bg-paper">
-          <div class="max-w-4xl">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-6 block">Etkileşimli: Ölümsüz Oyun'un (1851) analiz etmek için hamlelere dokunun</span>
-            <h2 class="text-5xl md:text-7xl mb-8 leading-none">Ölümsüz Hamle Dizisi.</h2>
-            <p class="text-xl font-serif mb-12 text-neutral-600 leading-relaxed max-w-2xl">
-              "Anderssen, materyalin bir vizyonerin elinde sadece bir araç olduğunu kanıtladı." 1851'de dostane bir oyun, taktiksel dehanın estetiğini yeniden tanımladı. Mat etmek için her iki kaleyi ve veziri feda etmek.
-            </p>
-            <pgn-player fen="r1b1k1nr/p2p1ppp/n1p1p3/1p2N2P/1b1P1B1P/2N5/PqP1KPP1/R2Q1BbR w kq - 0 1">
-              [Event "Ölümsüz Oyun"] [Site "Londra"] [Date "1851.06.21"] [White "Adolf Anderssen"] [Black "Lionel Kieseritzky"] [Result "1-0"] 1. e4 e5 2. f4 exf4 3. Bc4 Qh4+ 4. Kf1 b5 5. Bxb5 Nf6 6. Nf3 Qh6 7. d3 Nh5 8. Nh4 Qg5 9. Nf5 c6 10. g4 Nf6 11. Rg1 cxb5 12. h4 Qg6 13. h5 Qg5 14. Qf3 Ng8 15. Bxf4 Qf6 16. Nc3 Bc5 17. Nd5 Qxb2 18. Bd6 Bxg1 19. e5 Qxa1+ 20. Ke2 Na6 21. Nxg7+ Kd8 22. Qf6+ Nxf6 23. Be7# 1-0
-            </pgn-player>
+        <!-- Dynamic Marquee -->
+        <div class="bg-accent text-white py-4 overflow-hidden border-b border-line">
+            <div class="marquee-track font-sans font-black text-xs uppercase tracking-[0.5em] flex whitespace-nowrap">
+                <span class="mx-8">Grand Chess Tour 2026 Canlı Analizler</span>
+                <span class="mx-8 text-white/50">•</span>
+                <span class="mx-8">Modern Londra Sistemi Kılavuzu Yayınlandı</span>
+                <span class="mx-8 text-white/50">•</span>
+                <span class="mx-8">Magnus Carlsen: "Motivasyonum Hiç Olmadığı Kadar Yüksek"</span>
+                <span class="mx-8 text-white/50">•</span>
+                <span class="mx-8">Grand Chess Tour 2026 Canlı Analizler</span>
+                <span class="mx-8 text-white/50">•</span>
+                <span class="mx-8">Modern Londra Sistemi Kılavuzu Yayınlandı</span>
+            </div>
+        </div>
+
+        <!-- Technical Workbench Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-line bg-white">
+          <div class="lg:col-span-8 p-8 md:p-16 border-r border-line/10">
+            <div class="max-w-4xl space-y-8">
+                <header class="space-y-4 border-l-4 border-accent pl-8">
+                    <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-slate mb-2 block">Etkileşimli Analiz Odası</span>
+                    <h2 class="text-6xl md:text-8xl leading-[0.9]">Ölümsüz<br/>Mirası.</h2>
+                </header>
+                <div class="flex gap-4 font-mono text-[10px] uppercase text-slate border-y border-line/5 py-4">
+                    <span>1851 LONDRA</span>
+                    <span class="text-accent">/</span>
+                    <span>ADOLF ANDERSSEN vs LIONEL KIESERITZKY</span>
+                    <span class="text-accent">/</span>
+                    <span>ROMANTİK DÖNEM</span>
+                </div>
+                <p class="text-xl font-serif text-slate leading-relaxed max-w-2xl drop-cap">
+                    "Satranç tahtası, fantezinin matematiğe dönüştüğü yerdir." Anderssen'in hamleleri, materyalin bir vizyonerin elinde sadece bir araç olduğunu kanıtladı. Mat etmek için her iki kaleyi ve en sonunda veziri feda etmek... Bu, oyunun sadece bir spor değil, bir manifesto olduğunun kanıtıydı.
+                </p>
+                <div class="pt-8">
+                    <pgn-player fen="r1b1k1nr/p2p1ppp/n1p1p3/1p2N2P/1b1P1B1P/2C2N5/PqP1KPP1/R2Q1BbR w kq - 0 1">
+                    [Event "Ölümsüz Oyun"] [Site "Londra"] [Date "1851.06.21"] [White "Adolf Anderssen"] [Black "Lionel Kieseritzky"] [Result "1-0"] 1. e4 e5 2. f4 exf4 3. Bc4 Qh4+ 4. Kf1 b5 5. Bxb5 Nf6 6. Nf3 Qh6 7. d3 Nh5 8. Nh4 Qg5 9. Nf5 c6 10. g4 Nf6 11. Rg1 cxb5 12. h4 Qg6 13. h5 Qg5 14. Qf3 Ng8 15. Bxf4 Qf6 16. Nc3 Bc5 17. Nd5 Qxb2 18. Bd6 Bxg1 19. e5 Qxa1+ 20. Ke2 Na6 21. Nxg7+ Kd8 22. Qf6+ Nxf6 23. Be7# 1-0
+                    </pgn-player>
+                </div>
+            </div>
+          </div>
+          
+          <div class="lg:col-span-4 p-8 md:p-12 bg-[#faf9f6]">
+            <div class="sticky top-32 space-y-12">
+                <div class="space-y-6">
+                    <h4 class="text-xs font-sans font-black tracking-widest uppercase flex items-center gap-3">
+                        Kritik Pozisyonlar <div class="flex-1 h-px bg-line/10"></div>
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-square bg-neutral-200 border border-line/5 rounded-sm overflow-hidden group cursor-help">
+                            <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                        </div>
+                        <div class="aspect-square bg-neutral-200 border border-line/5 rounded-sm overflow-hidden group cursor-help">
+                            <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 border-l-2 border-line bg-white shadow-lg space-y-4">
+                    <span class="text-xs font-mono text-accent">TIP: Mat Ağı</span>
+                    <p class="font-serif italic text-lg leading-snug">"Beyazın f6 vezir fedası, tarihin en estetik mat kurgularından birini başlatıyor. Siyah şahın kaçacak hiçbir yeri yok."</p>
+                    <div class="text-[10px] font-mono text-slate uppercase">Analiz: GM Emre Can</div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs font-sans font-black tracking-widest uppercase">Yorumlar</h4>
+                    <div class="space-y-4">
+                        <div class="text-sm font-sans">
+                            <span class="font-bold">@pawn_slayer:</span> "Feda ruhu ölmedi, sadece motorlar tarafından evcilleştirildi."
+                        </div>
+                        <div class="text-sm font-sans">
+                            <span class="font-bold">@checkmate88:</span> "Bu oyunu bin kere analiz etsem de hala şaşırıyorum."
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
         </section>
 
-        <!-- Article Grid -->
-        <section class="p-8 md:p-12 border-b-4 border-line">
-          <h4 class="text-xs font-sans font-black tracking-widest uppercase mb-12 flex items-center gap-4">
-            Son Yazılar <div class="h-[1px] flex-1 bg-line/10"></div>
-          </h4>
-          <div class="magazine-grid">
+        <!-- Horizontal Breadth: Article Grid -->
+        <section class="p-8 md:px-16 md:py-24 border-b border-line text-ink">
+          <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+            <h2 class="text-6xl md:text-9xl">DERİN<br/>ARŞİV.</h2>
+            <div class="flex gap-4 font-sans font-black text-[10px] uppercase tracking-widest">
+                <button class="px-6 py-2 border border-line hover:bg-line hover:text-paper transition-all">Tümü</button>
+                <button class="px-6 py-2 border border-line/20 text-slate hover:border-line hover:text-line transition-all">Teori</button>
+                <button class="px-6 py-2 border border-line/20 text-slate hover:border-line hover:text-line transition-all">Profil</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 px-0">
             <!-- Article 1 -->
-            <article class="article-card">
-              <div class="flex justify-between items-start">
-                <span class="text-[10px] font-sans font-black tracking-widest text-accent uppercase">Strateji</span>
-                <span class="text-[10px] font-mono text-neutral-400">28.04.2026</span>
+            <article class="group space-y-6">
+              <div class="aspect-[16/10] bg-neutral-100 overflow-hidden border border-line/5 relative">
+                  <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-[10px] font-black uppercase tracking-widest shadow-sm">TEORİ</div>
+                  <img src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
               </div>
-              <h3 class="text-3xl leading-[0.9] hover:text-accent transition-colors cursor-pointer">2026'da Londra Sistemi'nde Ustalaşmak</h3>
-              <p class="text-neutral-500 font-serif leading-snug">"Londra Sistemi beyazlar için hala müthiş bir silah olmaya devam ediyor. Modern çağdaki evrimini analiz ediyoruz."</p>
+              <div class="space-y-4">
+                  <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
+                      <span>NİSAN 2026</span>
+                      <span>8 DK OKUMA</span>
+                  </div>
+                  <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">2026'da Londra Sistemi'nde Ustalaşmak</h3>
+                  <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"Sıkıcı bir açılış olarak bilinen Londra Sistemi, beyazlar için hala en güvenilir silahlardan biri."</p>
+                  <a href="#" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
+              </div>
             </article>
 
             <!-- Article 2 -->
-            <article class="article-card">
-              <div class="flex justify-between items-start">
-                <span class="text-[10px] font-sans font-black tracking-widest text-accent uppercase">Tarih</span>
-                <span class="text-[10px] font-mono text-neutral-400">28.04.2026</span>
+            <article class="group space-y-6">
+              <div class="aspect-[16/10] bg-neutral-100 overflow-hidden border border-line/5 relative">
+                  <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-[10px] font-black uppercase tracking-widest shadow-sm">ANALİZ</div>
+                  <img src="https://images.unsplash.com/photo-1544085311-11a028465b03?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
               </div>
-              <h3 class="text-3xl leading-[0.9] hover:text-accent transition-colors cursor-pointer">Ölümsüz Oyun'un Mirası</h3>
-              <p class="text-neutral-500 font-serif leading-snug">"Gelmiş geçmiş en ünlü romantik dönem oyununa derinlemesine bir bakış."</p>
+              <div class="space-y-4">
+                  <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
+                      <span>MART 2026</span>
+                      <span>12 DK OKUMA</span>
+                  </div>
+                  <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">Carlsen'in Oyun Sonu Dehası</h3>
+                  <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"Kaybolmuş gibi görünen pozisyonlarda su gibi sızan o inanılmaz tekniğin anatomisi."</p>
+                  <a href="#" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
+              </div>
             </article>
 
             <!-- Article 3 -->
-            <article class="article-card">
-              <div class="flex justify-between items-start">
-                <span class="text-[10px] font-sans font-black tracking-widest text-accent uppercase">Bulmaca</span>
-                <span class="text-[10px] font-mono text-neutral-400">28.04.2026</span>
+            <article class="group space-y-6">
+              <div class="aspect-[16/10] bg-neutral-100 overflow-hidden border border-line/5 relative">
+                  <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-[10px] font-black uppercase tracking-widest shadow-sm">KÜLTÜR</div>
+                  <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
               </div>
-              <h3 class="text-3xl leading-[0.9] hover:text-accent transition-colors cursor-pointer">Dünya Şampiyonası'ndan İki Hamlede Matlar</h3>
-              <p class="text-neutral-500 font-serif leading-snug">"En büyük unvanın kaderini belirleyen o ezici darbeleri bulabilir misiniz?"</p>
+              <div class="space-y-4">
+                  <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
+                      <span>ŞUBAT 2026</span>
+                      <span>6 DK OKUMA</span>
+                  </div>
+                  <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">Satranç ve Edebiyat: Nabokov'un Savunması</h3>
+                  <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"Luzhin Savunması'ndan modern kurguya; tahtadaki trajedilerin edebi yansıması."</p>
+                  <a href="#" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
+              </div>
             </article>
           </div>
         </section>
 
-        <!-- Subscription Interstice -->
-        <section class="py-32 px-8 border-b-4 border-line text-center bg-white">
-          <span class="text-[11px] font-sans font-black tracking-[0.5em] uppercase text-accent mb-10 block">Abonelik</span>
-          <h2 class="text-5xl sm:text-8xl font-black uppercase tracking-tighter mb-10 max-w-5xl mx-auto leading-[0.85]">
-            Gerçek Satrancı <span class="italic font-serif font-normal text-accent lowercase">Basılı</span> Deneyimleyin.
-          </h2>
-          <p class="text-xl font-serif max-w-2xl mx-auto mb-10 text-neutral-500 italic leading-relaxed">
-            "Ustaları incelerken kağıdın ağırlığının ve mürekkep kokusunun yerini hiçbir şey tutamaz."
-          </p>
-          <button class="bg-ink text-paper px-16 py-6 font-sans font-bold uppercase tracking-[0.2em] text-sm hover:bg-accent transition-colors shadow-editorial">
-            Abone Olun
-          </button>
+        <!-- Subscription / Poster -->
+        <section class="relative bg-ink py-40 overflow-hidden px-4 md:px-8">
+            <div class="absolute inset-0 opacity-20 flex items-center justify-center">
+                <span class="text-[500px] font-display font-black text-white/5 tracking-tighter uppercase whitespace-nowrap hidden lg:block">PREMIUM</span>
+            </div>
+            
+            <div class="max-w-5xl mx-auto px-8 relative z-10 text-center space-y-12">
+                <h2 class="text-5xl md:text-[140px] text-paper leading-[0.8] tracking-tighter mb-8">
+                    KAĞIDIN<br/><span class="italic font-serif font-normal lowercase tracking-normal text-accent">ağırlığı.</span>
+                </h2>
+                <div class="max-w-2xl mx-auto space-y-8">
+                    <p class="text-2xl font-serif text-paper/60 italic leading-relaxed">
+                        "Ustaları incelerken kağıdın dokusunun ve mürekkep kokusunun yerini hiçbir dijital ekran tutamaz. Satrancı dokunarak yaşayın."
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                        <input type="email" placeholder="E-posta adresiniz" class="bg-paper text-ink px-8 py-4 w-full md:w-96 font-sans font-bold uppercase text-[12px] tracking-widest focus:outline-none" />
+                        <button class="bg-accent text-white px-12 py-4 font-sans font-black uppercase text-[12px] tracking-[0.3em] hover:bg-white hover:text-ink transition-all shadow-2xl">
+                          ABONE OL
+                        </button>
+                    </div>
+                    <p class="text-[10px] font-mono text-paper/30 uppercase tracking-widest">Aylık sadece ₺49. İstediğiniz zaman iptal edebilirsiniz.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Puzzle Widget -->
-        <section class="p-8 md:p-12 bg-neutral-900 text-paper">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-               <span class="text-[11px] font-sans font-black tracking-[0.5em] uppercase text-accent mb-6 block">Günlük Meydan Okuma</span>
-               <h2 class="text-5xl md:text-7xl mb-6 leading-none">SabahŞahı.</h2>
-               <p class="text-xl font-serif text-neutral-400 leading-relaxed italic">
-                 "Hesaplama satrancın temelidir. Beyazın rakibinin direnci kıran hamlelerini bulun."
+        <!-- Puzzle Ritual -->
+        <section class="p-8 md:p-24 bg-[#F4F1EA]">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="space-y-12">
+                <div class="space-y-4">
+                    <span class="text-6xl font-display font-black text-accent/20 block">04/04</span>
+                    <h2 class="text-7xl md:text-9xl leading-[0.85]">Sabah<br/><span class="text-accent underline decoration-4 underline-offset-[20px]">Şahı.</span></h2>
+                </div>
+               <p class="text-2xl font-serif text-slate leading-relaxed border-l-4 border-accent pl-8">
+                 "Hesaplama satrancın temelidir. Beyazın rakibinin direncini kıran o sarsıcı hamlesini bulun. Zamanınız: 3 dakika."
                </p>
+               <div class="flex gap-12 font-mono text-xs uppercase tracking-widest text-slate/60">
+                   <div>Zorluk: <span class="text-ink font-bold">★★★★☆</span></div>
+                   <div>Tema: <span class="text-ink font-bold">FEDALI MAT</span></div>
+               </div>
             </div>
-            <div class="bg-paper p-4 border-editorial shadow-editorial">
-              <puzzle fen="r1bqk2r/pppp1ppp/2n2n2/4p3/2B1P3/2C2N2/PPP2PPP/R1BQK2R w KQkq - 0 1"></puzzle>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-accent/5 -rotate-2"></div>
+                <div class="relative bg-white p-6 border-editorial shadow-premium">
+                  <header class="flex justify-between items-center mb-6 font-mono text-[10px] uppercase border-b border-line/10 pb-4">
+                    <span>Sıra: Beyazda</span>
+                    <span class="text-accent">Meydan Okuma</span>
+                  </header>
+                  <puzzle fen="r1bqk2r/pppp1ppp/2n2n2/4p3/2B1P3/2C2N2/PPP2PPP/R1BQK2R w KQkq - 0 1"></puzzle>
+                  <footer class="mt-6 flex justify-center">
+                    <button class="text-xs font-sans font-black uppercase tracking-widest text-slate hover:text-accent transition-colors">Çözümü Göster</button>
+                  </footer>
+                </div>
             </div>
           </div>
         </section>
       </main>
 
-      <!-- Footer -->
-      <footer class="p-12 md:p-24 bg-paper border-t-4 border-line">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div class="md:col-span-2 space-y-6">
-            <h5 class="font-display font-black text-4xl uppercase tracking-tighter">Şahmat</h5>
-            <p class="font-serif text-lg leading-relaxed text-neutral-600 max-w-md">
-              Modern satranç teorisi, kültürü ve etkileşimli analizlerden oluşan küratörlü bir günlük. ChessPublica tarafından tasarlandı.
+      <!-- Advanced Footer -->
+      <footer class="p-12 md:p-32 bg-ink text-paper border-t border-line overflow-hidden relative">
+        <div class="absolute bottom-0 right-0 opacity-5 pointer-events-none transform translate-x-1/2 translate-y-1/2">
+            <span class="text-[600px] font-display font-black">Ş</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 relative z-10">
+          <div class="md:col-span-5 space-y-10">
+            <h5 class="font-display font-black text-6xl uppercase tracking-tighter items-center flex gap-4">
+                Şahmat <span class="w-12 h-px bg-accent"></span>
+            </h5>
+            <p class="font-serif text-xl leading-relaxed text-paper/60 max-w-sm">
+              Modern satranç teorisi, derinlemesine kültür analizleri ve etkileşimli tahtalardan oluşan küratörlü bir yayın. ChessPublica tarafından hayal edildi.
             </p>
+            <div class="flex gap-4">
+                <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all cursor-pointer">IG</div>
+                <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all cursor-pointer">X</div>
+                <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all cursor-pointer">YT</div>
+            </div>
           </div>
-          <div class="space-y-4">
-             <h6 class="text-[10px] font-sans font-black uppercase tracking-widest text-neutral-400">Bölümler</h6>
-             <ul class="font-sans font-bold text-sm space-y-2 uppercase tracking-tight">
-               <li><a href="#" class="hover:text-accent">Strateji</a></li>
-               <li><a href="#" class="hover:text-accent">Tarih</a></li>
-               <li><a href="#" class="hover:text-accent">Bulmacalar</a></li>
-               <li><a href="#" class="hover:text-accent">Arşiv</a></li>
+          
+          <div class="md:col-span-2 space-y-8 text-paper/80">
+             <h6 class="text-[10px] font-mono uppercase tracking-[0.4em] text-paper/30">Keşfet</h6>
+             <ul class="font-sans font-bold text-sm space-y-4 uppercase tracking-tighter">
+               <li><a href="#" class="hover:text-accent transition-colors">Strateji Masası</a></li>
+               <li><a href="#" class="hover:text-accent transition-colors">Büyük Arşiv</a></li>
+               <li><a href="#" class="hover:text-accent transition-colors">Bulmaca Koleksiyonu</a></li>
+               <li><a href="#" class="hover:text-accent transition-colors">Mektuplar</a></li>
              </ul>
           </div>
-          <div class="space-y-4">
-             <h6 class="text-[10px] font-sans font-black uppercase tracking-widest text-neutral-400">Sosyal</h6>
-             <ul class="font-sans font-bold text-sm space-y-2 uppercase tracking-tight">
-               <li><a href="#" class="hover:text-accent">Instagram</a></li>
-               <li><a href="#" class="hover:text-accent">Twitter X</a></li>
-               <li><a href="#" class="hover:text-accent">RSS</a></li>
+
+          <div class="md:col-span-2 space-y-8 text-paper/80">
+             <h6 class="text-[10px] font-mono uppercase tracking-[0.4em] text-paper/30">Kurumsal</h6>
+             <ul class="font-sans font-bold text-sm space-y-4 uppercase tracking-tighter">
+               <li><a href="#" class="hover:text-accent transition-colors">Hakkımızda</a></li>
+               <li><a href="#" class="hover:text-accent transition-colors">Yazar Olun</a></li>
+               <li><a href="#" class="hover:text-accent transition-colors">Künye</a></li>
+               <li><a href="#" class="hover:text-accent transition-colors">İletişim</a></li>
              </ul>
+          </div>
+
+          <div class="md:col-span-3 space-y-8 bg-white/5 p-8 border border-white/10">
+            <h6 class="text-[10px] font-mono uppercase tracking-[0.4em] text-paper/30 text-paper/30">Haftalık Bülten</h6>
+            <p class="text-xs text-white/50 font-serif italic">En iyi analizler her Cuma e-postanızda.</p>
+            <div class="flex flex-col gap-4">
+                <input type="text" placeholder="Adresiniz" class="bg-transparent border-b border-white/20 p-2 text-xs focus:outline-none focus:border-accent transition-colors text-white" />
+                <button class="bg-white text-ink py-3 text-[10px] font-black uppercase tracking-widest hover:bg-accent hover:text-white transition-all">GÖNDER</button>
+            </div>
           </div>
         </div>
-        <div class="mt-24 pt-8 border-t border-line flex flex-col md:flex-row justify-between gap-4 text-[10px] font-mono uppercase text-neutral-400">
-          <span>&copy; 2026 Şah ve mat Magazine</span>
-          <span>Satrancın Geleceği Şimdi Başlıyor</span>
+
+        <div class="mt-32 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-8 text-[10px] font-mono uppercase tracking-widest text-paper/30 relative z-10">
+          <div class="flex gap-12 flex-wrap">
+            <span>&copy; 2026 Şah ve mat Magazine</span>
+            <a href="#" class="hover:text-paper transition-colors">Gizlilik Politikası</a>
+            <a href="#" class="hover:text-paper transition-colors">Kullanım Koşulları</a>
+          </div>
+          <div class="flex items-center gap-4">
+              <span>Made with Intensity in Istanbul</span>
+              <div class="w-1 h-1 bg-accent rounded-full"></div>
+              <span>Sayı No: 04</span>
+          </div>
         </div>
       </footer>
     </div>
 
     <script>
-      // Header scroll animation
+      // Header scroll animation with smooth state transitions
+      const header = document.getElementById('main-header');
+      const tagline = document.getElementById('tagline');
+      
       window.addEventListener('scroll', () => {
-        const header = document.getElementById('main-header');
-        if (window.scrollY > 50) {
+        if (window.scrollY > 100) {
           header.classList.add('scrolled');
+          if (tagline) {
+            tagline.style.opacity = '0';
+            tagline.style.transform = 'translateY(-10px)';
+          }
         } else {
           header.classList.remove('scrolled');
+          if (tagline) {
+            tagline.style.opacity = '1';
+            tagline.style.transform = 'translateY(0)';
+          }
         }
       });
     </script>

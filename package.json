@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "echo 'Static build successful'",
-    "dev": "echo 'Static site serving'"
+    "dev": "echo 'Static site serving'",
+    "lint": "echo 'Static HTML - No linting required'"
   }
 }
