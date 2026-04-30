@@ -1,8 +1,8 @@
-node_modules/
-build/
 _site/
-coverage/
-.DS_Store
-*.log
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
 .env*
 !.env.example

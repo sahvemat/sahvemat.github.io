@@ -9,10 +9,9 @@ markdown: kramdown
 
 # Exclude list for GitHub Pages
 exclude:
-  - node_modules
+  - Gemfile
+  - Gemfile.lock
   - package.json
-  - package-lock.json
-  - eleventy.config.js
-  - .env.example
-  - dist
-  - vendor
+  - vendor/
+  - .gitignore
+  - metadata.json

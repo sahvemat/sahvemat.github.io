@@ -2,16 +2,10 @@
   "name": "sahmat-magazine",
   "private": true,
   "version": "1.0.0",
-  "description": "Şahmat Satranç Dergisi - GitHub Pages Edisyonu",
-  "type": "module",
+  "description": "Minimal Node wrapper for AI Studio compatibility. Not used in GitHub Pages deployment.",
   "scripts": {
-    "dev": "npx -y @11ty/eleventy --serve --port 3000",
-    "build": "npx -y @11ty/eleventy",
+    "build": "echo 'Jekyll build will be handled by GitHub Pages'",
     "clean": "rm -rf _site",
-    "lint": "echo 'No linting needed for pure Jekyll setup'"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^3.1.5"
-  },
-  "devDependencies": {}
+    "lint": "echo 'No linting needed'"
+  }
 }
