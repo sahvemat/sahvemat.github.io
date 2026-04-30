@@ -8,115 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-              display: ["Outfit", "sans-serif"],
-              mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
-              serif: ["Playfair Display", "serif"],
-            },
-            colors: {
-              ink: '#121212',
-              paper: '#FDFCF8',
-              accent: '#E11D48',
-              line: '#121212',
-              slate: '#475569',
-            },
-            animation: {
-                'marquee': 'marquee 25s linear infinite',
-                'fade-in': 'fadeIn 0.8s ease-out forwards',
-            },
-            keyframes: {
-                marquee: {
-                    '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(-50%)' },
-                },
-                fadeIn: {
-                    '0%': { opacity: '0', transform: 'translateY(10px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
-                }
-            }
-          }
-        }
-      }
-    </script>
-    <style type="text/tailwindcss">
-      @layer base {
-        body {
-          @apply bg-[#F4F1EA] text-ink font-serif antialiased selection:bg-accent selection:text-white;
-        }
-        h1, h2, h3, h4 {
-          @apply font-display tracking-tighter uppercase font-black text-balance;
-        }
-        p {
-            @apply leading-relaxed;
-        }
-      }
-
-      ::-webkit-scrollbar {
-        width: 4px;
-      }
-      ::-webkit-scrollbar-track {
-        @apply bg-paper;
-      }
-      ::-webkit-scrollbar-thumb {
-        @apply bg-accent;
-      }
-
-      header.main-nav {
-        @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border-b border-line/10;
-      }
-      header.main-nav.scrolled {
-        @apply h-20 bg-paper/95 backdrop-blur-md shadow-sm;
-      }
-      header.main-nav:not(.scrolled) {
-        @apply h-40 md:h-56;
-      }
-
-      .logo-text {
-         @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)];
-      }
-      header.main-nav.scrolled .logo-text {
-        @apply text-3xl;
-      }
-      header.main-nav:not(.scrolled) .logo-text {
-        @apply text-7xl md:text-9xl;
-      }
-
-      @layer utilities {
-        .border-editorial {
-          @apply border-2 border-line;
-        }
-        .shadow-premium {
-          box-shadow: 12px 12px 0px 0px #121212;
-        }
-        .text-vertical {
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
-        }
-        .paper-texture {
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-        }
-      }
-
-      pgn-player {
-        @apply border-line border rounded-none p-4 bg-white shadow-premium;
-      }
-      
-      .stagger-in > * {
-          @apply opacity-0;
-          animation: fadeIn 0.8s ease-out forwards;
-      }
-      .stagger-in > *:nth-child(1) { animation-delay: 0.1s; }
-      .stagger-in > *:nth-child(2) { animation-delay: 0.2s; }
-      .stagger-in > *:nth-child(3) { animation-delay: 0.3s; }
-      .stagger-in > *:nth-child(4) { animation-delay: 0.4s; }
-    </style>
+    <script src="/assets/script.js" defer></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="/assets/style.css">
     <script src="https://chesspublica.github.io/elements.js"></script>
   </head>
   <body class="min-h-screen">
@@ -124,80 +17,15 @@
 
     <div class="max-w-[1400px] mx-auto border-x border-line/10 bg-paper shadow-2xl relative">
       
-      {% include nav_top.html %}
-      {% include nav_main.html %}
+      {% include "nav_top.html" %}
+      {% include "nav_main.html" %}
 
       <main>
         {{ content }}
       </main>
 
-      {% include footer.html %}
+      {% include "footer.html" %}
     </div>
 
-    <script>
-      class MagazineLogo extends HTMLElement {
-        connectedCallback() {
-          const sizeClass = this.getAttribute('class') || '';
-          this.innerHTML = `
-            <a href="/" class="logo-text inline-flex items-baseline group ${sizeClass}">
-              <span class="font-display font-black tracking-tighter uppercase leading-[0.75]">Şah</span>
-              <span class="font-serif italic font-medium lowercase text-accent mx-1 md:mx-3 transform group-hover:-rotate-12 transition-transform duration-700">v</span>
-              <span class="font-display font-black tracking-tighter uppercase leading-[0.75]">mat</span>
-              <span class="block w-2 h-2 md:w-3 md:h-3 bg-accent ml-1 md:ml-3 self-end mb-[0.05em] transition-all duration-700 group-hover:rotate-45 group-hover:scale-150"></span>
-            </a>
-          `;
-        }
-      }
-      customElements.define('magazine-logo', MagazineLogo);
-
-      const header = document.getElementById('main-header');
-      const tagline = document.getElementById('tagline');
-      const headerLogo = header?.querySelector('magazine-logo');
-      let isScrolled = false;
-      
-      const updateHeader = () => {
-        const scrollY = window.scrollY;
-        const thresholdIn = 140; 
-        const thresholdOut = 60; 
-
-        if (scrollY > thresholdIn && !isScrolled) {
-          isScrolled = true;
-          header?.classList.add('scrolled');
-          if (headerLogo) {
-              headerLogo.style.transform = 'scale(0.7)';
-              headerLogo.style.transformOrigin = 'left center';
-          }
-          if (tagline) {
-            tagline.style.opacity = '0';
-            tagline.style.transform = 'translateY(-10px)';
-          }
-        } else if (scrollY < thresholdOut && isScrolled) {
-          isScrolled = false;
-          header?.classList.remove('scrolled');
-          if (headerLogo) {
-              headerLogo.style.transform = 'scale(1)';
-          }
-          if (tagline) {
-            tagline.style.opacity = '1';
-            tagline.style.transform = 'translateY(0)';
-          }
-        }
-      };
-
-      if (headerLogo) {
-          headerLogo.style.transition = 'all 0.7s cubic-bezier(0.23,1,0.32,1)';
-      }
-
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            updateHeader();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
-    </script>
   </body>
 </html>

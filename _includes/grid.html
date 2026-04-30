@@ -8,56 +8,5 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 px-0">
-    <!-- Article 1 -->
-    <article class="group space-y-6">
-      <div class="aspect-[16/10] bg-ink text-paper flex items-center justify-center overflow-hidden border border-line/5 relative">
-          <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-ink text-[10px] font-black uppercase tracking-widest shadow-sm">TEORİ</div>
-          <div class="font-display font-black text-[120px] opacity-10 group-hover:opacity-100 group-hover:text-accent transition-all duration-700 select-none">01</div>
-      </div>
-      <div class="space-y-4">
-          <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
-              <span>NİSAN 2026</span>
-              <span>8 DK OKUMA</span>
-          </div>
-          <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">2026'da Londra Sistemi'nde Ustalaşmak</h3>
-          <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"Sıkıcı bir açılış olarak bilinen Londra Sistemi, beyazlar için hala en güvenilir silahlardan biri."</p>
-          <a href="#" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
-      </div>
-    </article>
-
-    <!-- Article 2 -->
-    <article class="group space-y-6">
-      <div class="aspect-[16/10] bg-accent text-paper flex items-center justify-center overflow-hidden border border-line/5 relative">
-          <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-ink text-[10px] font-black uppercase tracking-widest shadow-sm">ANALİZ</div>
-          <div class="font-display font-black text-[120px] opacity-20 group-hover:opacity-100 group-hover:text-ink transition-all duration-700 select-none">02</div>
-      </div>
-      <div class="space-y-4">
-          <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
-              <span>MART 2026</span>
-              <span>12 DK OKUMA</span>
-          </div>
-          <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">Carlsen'in Oyun Sonu Dehası</h3>
-          <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"Kaybolmuş gibi görünen pozisyonlarda su gibi sızan o inanılmaz tekniğin anatomisi."</p>
-          <a href="#" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
-      </div>
-    </article>
-
-    <!-- Article 3 -->
-    <article class="group space-y-6">
-      <div class="aspect-[16/10] bg-[#e5e7eb] text-ink flex items-center justify-center overflow-hidden border border-line/5 relative">
-          <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-ink text-[10px] font-black uppercase tracking-widest shadow-sm">KÜLTÜR</div>
-          <div class="font-display font-black text-[120px] opacity-10 group-hover:opacity-100 group-hover:text-accent transition-all duration-700 select-none">03</div>
-      </div>
-      <div class="space-y-4">
-          <div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50">
-              <span>ŞUBAT 2026</span>
-              <span>6 DK OKUMA</span>
-          </div>
-          <h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">Satranç ve Edebiyat: Nabokov'un Savunması</h3>
-          <p class="font-serif text-slate text-lg leading-snug line-clamp-2">"Luzhin Savunması'ndan modern kurguya; tahtadaki trajedilerin edebi yansıması."</p>
-          <a href="#" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a>
-      </div>
-    </article>
-  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 px-0">{% for post in collections.posts %}<!-- Article --><article class="group space-y-6"><div class="aspect-[16/10] bg-ink text-paper flex items-center justify-center overflow-hidden border border-line/5 relative"><div class="absolute top-4 left-4 z-10 px-3 py-1 bg-white text-ink text-[10px] font-black uppercase tracking-widest shadow-sm">{{ post.data.category | default: "SATRANÇ" }}</div><div class="font-display font-black text-[120px] opacity-10 group-hover:opacity-100 group-hover:text-accent transition-all duration-700 select-none">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</div></div><div class="space-y-4"><div class="flex justify-between items-center font-mono text-[10px] uppercase text-slate/50"><span>{{ post.date | date: "%B %Y" | upcase }}</span><span>{{ post.data.reading_time | default: "8" }} DK OKUMA</span></div><h3 class="text-4xl leading-[0.9] group-hover:text-accent transition-colors">{{ post.data.title }}</h3><p class="font-serif text-slate text-lg leading-snug line-clamp-2">"{{ post.data.excerpt }}"</p><a href="{{ post.url }}" class="inline-block font-sans font-black text-[10px] uppercase tracking-[0.2em] border-b-2 border-accent pb-1">Devamını Oku</a></div></article>{% endfor %}</div>
 </section>
