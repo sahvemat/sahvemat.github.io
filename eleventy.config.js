@@ -1,8 +1,24 @@
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export default function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('default', 'default.html');
 
   // Copy assets folder to output
   eleventyConfig.addPassthroughCopy("assets");
+
+  // Shortcode to include any file content
+  eleventyConfig.addShortcode("includeFile", function(filePath) {
+    const fullPath = path.join(__dirname, filePath);
+    if (fs.existsSync(fullPath)) {
+      return fs.readFileSync(fullPath, 'utf8');
+    }
+    return `/* Error: File ${filePath} not found at ${fullPath} */`;
+  });
 
   // Liquid configuration
   // dynamicPartials: false allows {% include nav_top.html %} without quotes

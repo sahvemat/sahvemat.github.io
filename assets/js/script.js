@@ -19,36 +19,33 @@ const headerLogo = header?.querySelector('magazine-logo');
 let isScrolled = false;
 
 const updateHeader = () => {
-  const scrollY = window.scrollY;
-  const thresholdIn = 140; 
-  const thresholdOut = 60; 
+  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Adjusted thresholds for smoother transition
+  const thresholdIn = 100; 
+  const thresholdOut = 40; 
 
   if (scrollY > thresholdIn && !isScrolled) {
     isScrolled = true;
     header?.classList.add('scrolled');
-    if (headerLogo) {
-        headerLogo.style.transform = 'scale(0.7)';
-        headerLogo.style.transformOrigin = 'left center';
-    }
     if (tagline) {
       tagline.style.opacity = '0';
       tagline.style.transform = 'translateY(-10px)';
+      tagline.style.pointerEvents = 'none';
     }
-  } else if (scrollY < thresholdOut && isScrolled) {
+  } else if (scrollY <= thresholdOut && isScrolled) {
     isScrolled = false;
     header?.classList.remove('scrolled');
-    if (headerLogo) {
-        headerLogo.style.transform = 'scale(1)';
-    }
     if (tagline) {
       tagline.style.opacity = '1';
       tagline.style.transform = 'translateY(0)';
+      tagline.style.pointerEvents = 'auto';
     }
   }
 };
 
 if (headerLogo) {
-    headerLogo.style.transition = 'all 0.7s cubic-bezier(0.23,1,0.32,1)';
+    headerLogo.style.transition = 'font-size 0.6s cubic-bezier(0.23,1,0.32,1)';
 }
 
 let ticking = false;

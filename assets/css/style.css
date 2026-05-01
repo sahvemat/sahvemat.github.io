@@ -1,6 +1,6 @@
 @layer base {
   body {
-    @apply bg-[#F4F1EA] text-ink font-serif antialiased selection:bg-accent selection:text-white;
+    @apply bg-paper text-ink font-serif antialiased selection:bg-accent selection:text-white;
   }
   h1, h2, h3, h4 {
     @apply font-display tracking-tighter uppercase font-black text-balance;
@@ -8,6 +8,10 @@
   p {
       @apply leading-relaxed;
   }
+}
+
+magazine-logo {
+  @apply block;
 }
 
 ::-webkit-scrollbar {
@@ -21,23 +25,25 @@
 }
 
 header.main-nav {
-  @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border-b border-line/10;
+  @apply border-b border-line/10 h-auto;
+  transition: padding 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
 }
 header.main-nav.scrolled {
-  @apply h-20 bg-paper/95 backdrop-blur-md shadow-sm;
+  @apply bg-paper/95 backdrop-blur-md shadow-sm py-4;
 }
 header.main-nav:not(.scrolled) {
-  @apply h-40 md:h-56;
+  @apply py-8 md:py-16;
 }
 
 .logo-text {
-   @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)];
+   @apply flex items-baseline;
+   transition: font-size 0.5s ease;
 }
 header.main-nav.scrolled .logo-text {
-  @apply text-3xl;
+  @apply text-3xl md:text-4xl;
 }
 header.main-nav:not(.scrolled) .logo-text {
-  @apply text-7xl md:text-9xl;
+  @apply text-6xl md:text-8xl lg:text-9xl;
 }
 
 @layer utilities {

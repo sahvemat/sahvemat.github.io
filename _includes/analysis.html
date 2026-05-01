@@ -4,7 +4,7 @@
     <div class="max-w-4xl space-y-8">
         <header class="space-y-4 border-l-4 border-accent pl-8">
             <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-slate mb-2 block">Etkileşimli Analiz Odası</span>
-            <h2 class="text-6xl md:text-8xl leading-[0.9]">{{ analysisPost.data.title | replace: " ", "<br/>" | default: "Ölümsüz<br/>Mirası." }}</h2>
+            <h2 class="text-5xl md:text-7xl leading-[0.9] uppercase">{{ analysisPost.data.title | default: "Ölümsüz Mirası." }}</h2>
         </header>
         <div class="flex gap-4 font-mono text-[10px] uppercase text-slate border-y border-line/5 py-4">
             <span>{{ analysisPost.date | date: "%Y" | default: "1851" }}</span>
