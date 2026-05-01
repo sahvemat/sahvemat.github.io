@@ -5,7 +5,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   // Liquid configuration
-  // dynamicPartials: false allows {% include file.html %} without quotes
+  // dynamicPartials: false allows {% include nav_top.html %} without quotes
   eleventyConfig.setLiquidOptions({
     dynamicPartials: false,
     strictFilters: false,
