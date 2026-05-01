@@ -1,0 +1,10 @@
+title: ŞAHMAT
+description: "Satrancın Estetik Dünyası"
+baseurl: ""
+url: "https://sahmat-magazine.com"
+
+markdown: kramdown
+permalink: /posts/:title/
+
+# Jekyll typically uses _posts by default. 
+# We don't need explicit collections for posts, but we'll filter them in Liquid.

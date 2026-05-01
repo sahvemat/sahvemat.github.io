@@ -9,19 +9,19 @@
     <div class="absolute -top-24 -right-24 text-[240px] font-display font-black text-black/[0.02] pointer-events-none select-none">04</div>
     
     <div class="stagger-in space-y-6">
-        {% assign featuredPost = collections.featured | first %}
+        {% assign featuredPost = site.posts | where: "featured", true | first %}
         {% if featuredPost %}
-          <span class="inline-block px-3 py-1 bg-accent text-white font-sans text-[10px] font-black tracking-widest uppercase mb-4">{{ featuredPost.data.category | default: "ÖZEL DOSYA" }}</span>
+          <span class="inline-block px-3 py-1 bg-accent text-white font-sans text-[10px] font-black tracking-widest uppercase mb-4">{{ featuredPost.category | default: "ÖZEL DOSYA" }}</span>
           <h1 class="text-6xl md:text-[120px] leading-[0.8] mb-12 tracking-tighter">
-            {{ featuredPost.data.title | replace: " ", "<br/>" }}
+            {{ featuredPost.title | replace: " ", "<br/>" }}
           </h1>
           <div class="flex flex-col md:flex-row gap-12 items-start">
               <p class="text-2xl md:text-3xl font-serif leading-tight max-w-xl text-balance italic font-light">
-                "{{ featuredPost.data.excerpt }}"
+                "{{ featuredPost.excerpt }}"
               </p>
               <div class="flex flex-col gap-2 pt-2">
                   <span class="font-mono text-[10px] text-slate uppercase tracking-widest">Yazar:</span>
-                  <span class="font-sans font-bold text-xs uppercase border-b-2 border-accent pb-1">{{ featuredPost.data.author }}</span>
+                  <span class="font-sans font-bold text-xs uppercase border-b-2 border-accent pb-1">{{ featuredPost.author }}</span>
               </div>
           </div>
         {% else %}
@@ -31,19 +31,19 @@
   </div>
 
   <div class="lg:col-span-4 flex flex-col">
-    {% assign flashPost = collections.flash | first %}
+    {% assign flashPost = site.posts | where: "type", "flash" | first %}
     <div class="p-8 md:p-12 border-b border-line/10 flex-1 hover:bg-neutral-100 transition-colors group cursor-pointer">
         <h5 class="text-[10px] font-sans font-black tracking-widest uppercase text-accent mb-6 flex items-center gap-3">
             <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span> FLAŞ HABER
         </h5>
-        <h3 class="text-4xl leading-[1] mb-6 group-hover:underline decoration-accent underline-offset-8">{{ flashPost.data.title | default: "Garry Kasparov ile 30 Yıl Sonra" }}</h3>
-        <p class="font-serif text-slate/80 text-lg">{{ flashPost.data.excerpt | default: "Eski şampiyon, yapay zekanın satranç psikolojisi üzerindeki etkilerini derinlemesine inceliyor." }}</p>
+        <h3 class="text-4xl leading-[1] mb-6 group-hover:underline decoration-accent underline-offset-8">{{ flashPost.title | default: "Garry Kasparov ile 30 Yıl Sonra" }}</h3>
+        <p class="font-serif text-slate/80 text-lg">{{ flashPost.excerpt | default: "Eski şampiyon, yapay zekanın satranç psikolojisi üzerindeki etkilerini derinlemesine inceliyor." }}</p>
     </div>
-    {% assign upcomingPost = collections.upcoming | first %}
+    {% assign upcomingPost = site.posts | where: "type", "upcoming" | first %}
     <div class="p-8 md:p-12 bg-ink text-paper space-y-8 min-h-[300px] flex flex-col justify-between">
         <div class="space-y-4">
             <h5 class="text-[10px] font-mono tracking-widest uppercase text-paper/40">Gelecek Sayıdan</h5>
-            <h2 class="text-3xl tracking-tight leading-none uppercase">{{ upcomingPost.data.title | default: "DOPİNGSİZ SATRANÇ: Biyolojik Kapasitenin Sınırları" }}</h2>
+            <h2 class="text-3xl tracking-tight leading-none uppercase">{{ upcomingPost.title | default: "DOPİNGSİZ SATRANÇ: Biyolojik Kapasitenin Sınırları" }}</h2>
         </div>
         <div class="flex justify-between items-end">
             <div class="text-[10px] font-mono opacity-50 uppercase leading-none">

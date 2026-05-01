@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "npx -y @11ty/eleventy",
-    "dev": "npx -y @11ty/eleventy --serve --port 3000"
+    "build": "echo 'Jekyll site ready for GitHub Pages' && exit 0",
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "express": "^4.22.1",
+    "front-matter": "^4.0.2",
+    "liquidjs": "^10.25.7",
+    "marked": "^4.3.0"
   }
 }
