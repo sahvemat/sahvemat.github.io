@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SİLİKON DEVRİMİ | Şah ve mat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+              mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              ink: '#121212',
+              paper: '#FDFCF8',
+              accent: '#E11D48',
+              line: '#121212',
+              slate: '#475569',
+            },
+            animation: {
+                'marquee': 'marquee 25s linear infinite',
+                'fade-in': 'fadeIn 0.8s ease-out forwards',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-50%)' },
+                },
+                fadeIn: {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+  body {
+    @apply bg-paper text-ink font-serif antialiased selection:bg-accent selection:text-white;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tighter uppercase font-black text-balance;
+  }
+  p {
+      @apply leading-relaxed;
+  }
+}
+
+magazine-logo {
+  @apply block;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-paper;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent;
+}
+
+header.main-nav {
+  @apply border-b border-line/10 h-auto;
+  transition: padding 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+header.main-nav.scrolled {
+  @apply bg-paper/95 backdrop-blur-md shadow-sm py-4;
+}
+header.main-nav:not(.scrolled) {
+  @apply py-8 md:py-16;
+}
+
+.logo-text {
+   @apply flex items-baseline;
+   transition: font-size 0.5s ease;
+}
+header.main-nav.scrolled .logo-text {
+  @apply text-3xl md:text-4xl;
+}
+header.main-nav:not(.scrolled) .logo-text {
+  @apply text-6xl md:text-8xl lg:text-9xl;
+}
+
+@layer utilities {
+  .border-editorial {
+    @apply border-2 border-line;
+  }
+  .shadow-premium {
+    box-shadow: 12px 12px 0px 0px #121212;
+  }
+  .text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .paper-texture {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+  }
+}
+
+.drop-cap::first-letter {
+  @apply text-8xl font-display font-black float-left mr-4 mt-2 text-ink leading-[0.7];
+}
+
+pgn-player {
+  @apply border-line border rounded-none p-4 bg-white shadow-premium;
+}
+
+.stagger-in > * {
+    @apply opacity-0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+.stagger-in > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-in > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-in > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-in > *:nth-child(4) { animation-delay: 0.4s; }
+
+    </style>
+    <script src="https://chesspublica.github.io/elements.js"></script>
+    <script src="/assets/js/script.js" defer></script>
+  </head>
+  <body class="min-h-screen">
+    <div class="fixed inset-0 paper-texture z-[-1]"></div>
+
+    <div class="max-w-[1400px] mx-auto border-x border-line/10 bg-paper shadow-2xl relative">
+      
+      <div class="h-10 border-b border-line px-8 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-slate">
+  <div class="flex gap-6">
+    <span>Nisan 2026</span>
+  </div>
+  <div class="flex gap-6">
+    <a href="#" class="hover:text-accent transition-colors">Abone Ol</a>
+  </div>
+</div>
+
+      <header id="main-header" class="main-nav sticky top-0 bg-paper z-50 px-8 flex flex-col justify-center">
+  <div class="flex items-center justify-between w-full">
+    <div class="flex flex-col relative group">
+      <magazine-logo></magazine-logo>
+      <div id="tagline" class="absolute -bottom-5 left-1 transition-all duration-500 overflow-hidden">
+          <span class="font-sans font-black tracking-[0.8em] uppercase text-slate text-[9px] opacity-40 group-hover:opacity-100 group-hover:text-accent transition-all">
+            3 Aylık Satranç Dergisi
+          </span>
+      </div>
+    </div>
+    <nav class="hidden lg:flex gap-12 font-sans font-black text-[11px] uppercase tracking-[0.25em] pt-4 items-center">
+      <a href="#" class="hover:text-accent transition-all hover:scale-110">Sayılar</a>
+      <a href="#" class="hover:text-accent transition-all hover:scale-110">Yazarlar</a>
+      <a href="#" class="hover:text-accent transition-all hover:scale-110">Arşiv</a>
+      <button class="bg-ink text-paper px-6 py-3 text-[10px] hover:bg-accent transition-colors ml-4">ABONE OL</button>
+    </nav>
+  </div>
+</header>
+
+
+      <main>
+        <p>Yapay zeka ve nöral ağların satranç dünyasına girişiyle birlikte, yüzyıllardır değişmez kabul edilen teoriler sarsılıyor. Stockfish 16'nın getirdiği derin analizler, insan oyuncuların hayal edemeyeceği stratejik derinlikleri gün yüzüne çıkarıyor.</p>
+
+      </main>
+
+      <footer class="p-12 md:p-32 bg-ink text-paper border-t border-line overflow-hidden relative">
+  <div class="absolute bottom-0 right-0 opacity-5 pointer-events-none transform translate-x-1/2 translate-y-1/2">
+      <span class="text-[600px] font-display font-black">Ş</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-16 relative z-10">
+    <div class="md:col-span-5 space-y-10">
+      <div class="flex items-center gap-4">
+         <magazine-logo class="text-5xl"></magazine-logo>
+      </div>
+      <p class="font-serif text-xl leading-relaxed text-paper/60 max-w-sm">
+        Modern satranç teorisi, satranç tarihi ve kültürü ile derin satranç analizlerini satranç okuruyla buluşturan 3 aylık süreli yayın.
+      </p>
+      <div class="flex gap-4">
+          <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all cursor-pointer">IG</div>
+          <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all cursor-pointer">X</div>
+          <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all cursor-pointer">YT</div>
+      </div>
+    </div>
+    
+    <div class="md:col-span-2 space-y-8 text-paper/80">
+       <h6 class="text-[10px] font-mono uppercase tracking-[0.4em] text-paper/30">Keşfet</h6>
+       <ul class="font-sans font-bold text-sm space-y-4 uppercase tracking-tighter">
+         <li><a href="#" class="hover:text-accent transition-colors">Strateji Masası</a></li>
+         <li><a href="#" class="hover:text-accent transition-colors">Büyük Arşiv</a></li>
+         <li><a href="#" class="hover:text-accent transition-colors">Bulmaca Koleksiyonu</a></li>
+         <li><a href="#" class="hover:text-accent transition-colors">Mektuplar</a></li>
+       </ul>
+    </div>
+
+    <div class="md:col-span-2 space-y-8 text-paper/80">
+       <h6 class="text-[10px] font-mono uppercase tracking-[0.4em] text-paper/30">Kurumsal</h6>
+       <ul class="font-sans font-bold text-sm space-y-4 uppercase tracking-tighter">
+         <li><a href="#" class="hover:text-accent transition-colors">Hakkımızda</a></li>
+         <li><a href="#" class="hover:text-accent transition-colors">Yazar Olun</a></li>
+         <li><a href="#" class="hover:text-accent transition-colors">Künye</a></li>
+         <li><a href="#" class="hover:text-accent transition-colors">İletişim</a></li>
+       </ul>
+    </div>
+
+    <div class="md:col-span-3 space-y-8 bg-white/5 p-8 border border-white/10">
+      <h6 class="text-[10px] font-mono uppercase tracking-[0.4em] text-paper/30 text-paper/30">Haftalık Bülten</h6>
+      <p class="text-xs text-white/50 font-serif italic">En iyi analizler her Cuma e-postanızda.</p>
+      <div class="flex flex-col gap-4">
+          <input type="text" placeholder="Adresiniz" class="bg-transparent border-b border-white/20 p-2 text-xs focus:outline-none focus:border-accent transition-colors text-white" />
+          <button class="bg-white text-ink py-3 text-[10px] font-black uppercase tracking-widest hover:bg-accent hover:text-white transition-all">GÖNDER</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-32 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-8 text-[10px] font-mono uppercase tracking-widest text-paper/30 relative z-10">
+    <div class="flex gap-12 flex-wrap">
+      <span>&copy; 2026 Şah ve mat Magazine</span>
+      <a href="#" class="hover:text-paper transition-colors">Gizlilik Politikası</a>
+      <a href="#" class="hover:text-paper transition-colors">Kullanım Koşulları</a>
+    </div>
+    <div class="flex items-center gap-4">
+        <span>Made with Intensity in Istanbul</span>
+        <div class="w-1 h-1 bg-accent rounded-full"></div>
+        <span>Sayı No: 04</span>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+  </body>
+</html>

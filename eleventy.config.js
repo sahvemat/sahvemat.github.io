@@ -12,7 +12,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   // Shortcode to include any file content
-  eleventyConfig.addShortcode("includeFile", function(filePath) {
+  eleventyConfig.addLiquidShortcode("includeFile", function(filePath) {
     const fullPath = path.join(__dirname, filePath);
     if (fs.existsSync(fullPath)) {
       return fs.readFileSync(fullPath, 'utf8');
