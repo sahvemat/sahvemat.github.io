@@ -80,7 +80,7 @@
   align-items: center;
   justify-content: center;
   gap: calc(var(--logo-size) * 0.04);
-  margin-top: calc(var(--logo-size) * 0.14);
+  margin-top: calc(var(--logo-size) * 0.07);
   transition: opacity 0.3s ease, transform 0.3s ease, margin 0.35s ease;
 }
 
@@ -106,10 +106,6 @@
 
 .logo-link:hover .logo-dot {
   transform: rotate(45deg);
-}
-
-.logo-link:hover .tagline {
-  color: var(--color-accent);
 }
 
 .logo-link:focus-visible {
