@@ -80,7 +80,7 @@
   align-items: center;
   justify-content: center;
   gap: calc(var(--logo-size) * 0.04);
-  margin-top: calc(var(--logo-size) * 0.28);
+  margin-top: calc(var(--logo-size) * 0.14);
   transition: opacity 0.3s ease, transform 0.3s ease, margin 0.35s ease;
 }
 
