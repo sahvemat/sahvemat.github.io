@@ -108,6 +108,10 @@
   transform: rotate(45deg);
 }
 
+.logo-link:hover .tagline {
+  color: var(--color-accent);
+}
+
 .logo-link:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 6px;
