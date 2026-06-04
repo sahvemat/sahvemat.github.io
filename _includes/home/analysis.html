@@ -1,0 +1,42 @@
+{% assign analysisPost = site.posts | where: "type", "analysis" | first %}
+<section class="analysis-section">
+    <div class="analysis-main">
+        <div class="analysis-content">
+            <header class="analysis-header">
+                <h2 class="analysis-title">{{ analysisPost.title }}</h2>
+            </header>
+            <div class="analysis-meta">
+                <span>{{ analysisPost.date | date: "%Y" }}</span>
+                <span class="meta-divider">/</span>
+                <span>{{ analysisPost.author }}</span>
+                <span class="meta-divider">/</span>
+                <span>{{ analysisPost.category }}</span>
+            </div>
+            <p class="analysis-body drop-cap">
+                "{{ analysisPost.excerpt | strip_html | strip_newlines }}"
+            </p>
+            <div class="chess-board-display">
+                <div class="board-header">
+                    <span>{{ analysisPost.category }}</span>
+                    <span>{{ analysisPost.author }}</span>
+                </div>
+                <div class="board-grid"></div>
+            </div>
+        </div>
+    </div>
+    <div class="analysis-sidebar">
+        <div class="sidebar-sticky">
+            <div class="critical-positions">
+                <div class="positions-grid">
+                    <div class="position-card position-card--accent"></div>
+                    <div class="position-card position-card--dark"></div>
+                </div>
+            </div>
+            <div class="tip-card">
+                <span class="tip-label">TIP: Mat Ağı</span>
+                <p class="tip-text">"{{ analysisPost.analysis_tip }}"</p>
+                <div class="tip-author">Analiz: {{ analysisPost.analysis_author }}</div>
+            </div>
+        </div>
+    </div>
+</section>
