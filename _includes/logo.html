@@ -1,0 +1,17 @@
+{%- assign logo_size = include.size | default: "medium" -%}
+{%- assign logo_variant = include.variant | default: "" -%}
+<div class="logo-body logo-{{ logo_size }}{% if logo_variant != '' %} logo-{{ logo_variant }}{% endif %}">
+  <div class="logo-container">
+    <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="ŞahvMat - Dijital Satranç Dergisi">
+      <span class="logo-main">
+        <span class="logo-sah">Şah</span>
+        <span class="logo-v">v</span>
+        <span class="logo-mat">Mat</span>
+      </span>
+      <span class="logo-sub">
+        <span class="tagline">DİJİTAL SATRANÇ DERGİSİ</span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </span>
+    </a>
+  </div>
+</div>
