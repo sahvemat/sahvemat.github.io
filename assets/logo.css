@@ -30,7 +30,7 @@
 .logo-link {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-decoration: none;
   color: var(--color-ink);
 }
@@ -69,7 +69,7 @@
   display: inline-flex;
   align-items: center;
   gap: calc(var(--logo-size) * 0.04);
-  margin-top: calc(var(--logo-size) * -0.16);
+  margin-top: calc(var(--logo-size) * 0.1);
   transition: opacity 0.3s ease, transform 0.3s ease, margin 0.35s ease;
 }
 
