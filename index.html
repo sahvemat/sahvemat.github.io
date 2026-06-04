@@ -1451,7 +1451,7 @@ a:hover {
         <!-- Top bar -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <span>Nisan 2026</span>
+                <span id="current-month-year">Nisan 2026</span>
             </div>
             <div class="top-bar-right">
                 <a href="#">Abone Ol</a>
@@ -1499,7 +1499,6 @@ a:hover {
                 <!-- Main content area -->
                 <div class="grid-main">
                     <div class="hero-content stagger-in">
-                        <span class="category-badge">PROFİL</span>
                         <h1 class="hero-title">
                             MAKSİMUM<br>
                             RİSK:<br>
@@ -1525,16 +1524,12 @@ a:hover {
                 <div class="grid-sidebar-right">
                     <!-- Flash news -->
                     <div class="sidebar-card sidebar-card--light">
-                        <h5 class="flash-label">
-                            <span class="pulse-dot"></span> FLAŞ HABER
-                        </h5>
                         <h3 class="sidebar-title">KASPAROV: SİYASET VE STRATEJİ</h3>
                         <p class="sidebar-desc">Eski dünya şampiyonu Garry Kasparov ile tahtadaki stratejilerin gerçek dünyadaki jeopolitik hamlelere nasıl dönüştüğünü konuştuk.</p>
                     </div>
                     <!-- Next issue preview -->
                     <div class="sidebar-card sidebar-card--dark">
                         <div class="sidebar-dark-content">
-                            <h5 class="sidebar-dark-label">Gelecek Sayıdan</h5>
                             <h2 class="sidebar-dark-title">Dünya Şampiyonası'ndan İki Hamlede Matlar</h2>
                         </div>
                         <div class="sidebar-dark-footer">
@@ -1560,7 +1555,6 @@ a:hover {
                 <div class="analysis-main">
                     <div class="analysis-content">
                         <header class="analysis-header">
-                            <span class="section-label">Etkileşimli Analiz Odası</span>
                             <h2 class="analysis-title">HİNDİSTAN'IN YÜKSELİŞİ: Satrançta Yeni Dünya Düzeni</h2>
                         </header>
                         <div class="analysis-meta">
@@ -1588,9 +1582,6 @@ a:hover {
                 <div class="analysis-sidebar">
                     <div class="sidebar-sticky">
                         <div class="critical-positions">
-                            <h4 class="positions-title">
-                                Kritik Pozisyonlar <span class="title-line"></span>
-                            </h4>
                             <div class="positions-grid">
                                 <div class="position-card position-card--accent">
                                     
@@ -1624,7 +1615,6 @@ a:hover {
                     <!-- Article 1 -->
                     <article class="article-card">
                         <div class="article-thumbnail">
-                            <div class="article-tag">PROFİL</div>
                             <div class="article-number">01</div>
                         </div>
                         <div class="article-info">
@@ -1641,7 +1631,6 @@ a:hover {
                     <!-- Article 2 -->
                     <article class="article-card">
                         <div class="article-thumbnail">
-                            <div class="article-tag">ANALİZ</div>
                             <div class="article-number">02</div>
                         </div>
                         <div class="article-info">
@@ -1658,7 +1647,6 @@ a:hover {
                     <!-- Article 3 -->
                     <article class="article-card">
                         <div class="article-thumbnail">
-                            <div class="article-tag">RÖPORTAJ</div>
                             <div class="article-number">03</div>
                         </div>
                         <div class="article-info">
@@ -1675,7 +1663,6 @@ a:hover {
                     <!-- Article 4 -->
                     <article class="article-card">
                         <div class="article-thumbnail">
-                            <div class="article-tag">ÖZEL DOSYA</div>
                             <div class="article-number">04</div>
                         </div>
                         <div class="article-info">
@@ -1838,6 +1825,12 @@ a:hover {
         </footer>
     </div>
     <script>
+        (function () {
+            const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+            const now = new Date();
+            const el = document.getElementById('current-month-year');
+            if (el) el.textContent = months[now.getMonth()] + ' ' + now.getFullYear();
+        })();
         (function () {
             const header = document.getElementById('main-header');
             const headerLogo = header && header.querySelector('.logo-body');
