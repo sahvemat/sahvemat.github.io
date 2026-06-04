@@ -1,0 +1,10 @@
+{%- capture marqueeContent -%}
+{%- for post in site.posts limit: 8 -%}
+♔ {{ post.title | upcase }} {% endfor -%}
+{%- endcapture -%}
+<div class="marquee-section">
+    <div class="marquee-track">
+        <span>{{ marqueeContent }}&nbsp;</span>
+        <span>{{ marqueeContent }}&nbsp;</span>
+    </div>
+</div>

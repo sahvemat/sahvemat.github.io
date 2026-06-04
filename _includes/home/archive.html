@@ -1,0 +1,29 @@
+<section class="archive-section">
+    <div class="archive-header">
+        <h2 class="archive-title">ARŞİV</h2>
+        <div class="archive-filters">
+            <button class="filter-btn filter-btn--active">Tümü</button>
+            <button class="filter-btn">Teori</button>
+            <button class="filter-btn">Profil</button>
+        </div>
+    </div>
+
+    <div class="articles-grid">
+        {% for post in site.posts %}
+        <article class="article-card">
+            <div class="article-thumbnail">
+                <div class="article-number">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</div>
+            </div>
+            <div class="article-info">
+                <div class="article-meta-row">
+                    <span>{{ post.date | date: "%B %Y" | upcase }}</span>
+                    <span>{{ post.reading_time | default: "8" }} DK OKUMA</span>
+                </div>
+                <h3 class="article-card-title">{{ post.title }}</h3>
+                <p class="article-card-desc">"{{ post.excerpt | strip_html | strip_newlines }}"</p>
+                <a href="{{ post.url | relative_url }}" class="read-more-link">Devamını Oku</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
