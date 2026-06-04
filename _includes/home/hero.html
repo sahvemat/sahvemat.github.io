@@ -1,0 +1,41 @@
+{% assign featuredPost = site.posts | where: "featured", true | first %}
+{% assign flashPost = site.posts | where: "type", "flash" | first %}
+{% assign upcomingPost = site.posts | where: "type", "upcoming" | first %}
+<section class="hero-grid">
+    <div class="grid-sidebar-left">
+        <span class="vertical-text">Dijital Satranç Dergisi</span>
+        <div class="vertical-divider"></div>
+        <span class="vertical-text">{{ site.time | date: "%Y" }}</span>
+    </div>
+
+    <div class="grid-main">
+        <div class="hero-content stagger-in">
+            <h1 class="hero-title">{{ featuredPost.title | replace: " ", "<br>" }}</h1>
+            <div class="hero-meta">
+                <p class="hero-description">"{{ featuredPost.excerpt | strip_html | strip_newlines }}"</p>
+                <div class="hero-author">
+                    <span class="author-label">Yazar:</span>
+                    <span class="author-name">{{ featuredPost.author }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-sidebar-right">
+        <a href="{{ flashPost.url | relative_url }}" class="sidebar-card sidebar-card--light">
+            <h3 class="sidebar-title">{{ flashPost.title }}</h3>
+            <p class="sidebar-desc">{{ flashPost.excerpt | strip_html | strip_newlines }}</p>
+        </a>
+        <div class="sidebar-card sidebar-card--dark">
+            <div class="sidebar-dark-content">
+                <h2 class="sidebar-dark-title">{{ upcomingPost.title }}</h2>
+            </div>
+            <div class="sidebar-dark-footer">
+                <div class="copyright-text">
+                    Tüm hakları saklıdır<br>© {{ site.time | date: "%Y" }} Şahvmat
+                </div>
+                <a href="{{ upcomingPost.url | relative_url }}" class="arrow-link">→</a>
+            </div>
+        </div>
+    </div>
+</section>
