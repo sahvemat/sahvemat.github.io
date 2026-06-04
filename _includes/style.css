@@ -10,10 +10,6 @@
   }
 }
 
-magazine-logo {
-  @apply block;
-}
-
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -33,17 +29,6 @@ header.main-nav.scrolled {
 }
 header.main-nav:not(.scrolled) {
   @apply py-8 md:py-16;
-}
-
-.logo-text {
-   @apply flex items-baseline;
-   transition: font-size 0.5s ease;
-}
-header.main-nav.scrolled .logo-text {
-  @apply text-3xl md:text-4xl;
-}
-header.main-nav:not(.scrolled) .logo-text {
-  @apply text-6xl md:text-8xl lg:text-9xl;
 }
 
 @layer utilities {
