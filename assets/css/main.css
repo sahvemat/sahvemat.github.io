@@ -455,6 +455,35 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+/* ── Hero Content ───────────────────────────────────────────── */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Hero Board (FEN backdrop) ──────────────────────────────── */
+.hero-board {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.18;
+}
+
+.hero-board .board-grid {
+    width: min(80%, 560px);
+    aspect-ratio: 1;
+}
+
+.hero-content > .hero-title,
+.hero-content > .hero-meta {
+    position: relative;
+    z-index: 1;
+}
+
 /* ── Hero Title ─────────────────────────────────────────────── */
 .hero-title {
     font-size: clamp(3rem, 10vw, 120px);
