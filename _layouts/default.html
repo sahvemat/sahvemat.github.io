@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <script src="https://chesspublica.github.io/elements.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ChessPublica/ChessPublica.github.io@v0.1.0/dist/ChessPublica.all.min.css">
+
+
 </head>
 <body>
     <div class="paper-texture"></div>
@@ -21,6 +23,7 @@
         </main>
         {% include footer.html %}
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/ChessPublica/ChessPublica.github.io@v0.1.0/dist/ChessPublica.all.min.js"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 </html>
