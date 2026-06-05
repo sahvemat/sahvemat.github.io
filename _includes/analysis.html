@@ -21,7 +21,7 @@
                     <span>{{ analysisPost.author }}</span>
                 </div>
                 <div class="board-grid">
-                    <fen>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</fen>
+                    <fen>{{ analysisPost.FEN }}</fen>
                 </div>
             </div>
         </div>
@@ -30,8 +30,8 @@
         <div class="sidebar-sticky">
             <div class="critical-positions">
                 <div class="positions-grid">
-                    <div class="position-card position-card--accent"><fen>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</fen></div>
-                    <div class="position-card position-card--dark"><fen>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</fen></div>
+                    <div class="position-card position-card--accent"><fen>{{ analysisPost.FEN }}</fen></div>
+                    <div class="position-card position-card--dark"><fen>{{ analysisPost.FEN }}</fen></div>
                 </div>
             </div>
             <div class="tip-card">
