@@ -8,6 +8,7 @@ excerpt: "Mihail Tal, satranç tarihinin en sevilen şampiyonlarından biri. Onu
 featured: true
 type: feature
 tags: posts
+FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 ---
 
 Mihail Tal, rakiplerini öyle pozisyonlara sokardı ki, en hassas bilgisayar analizleri bile o anki psikolojik baskıyı ölçemezdi. "Rakiplerimi 2+2=5 olduğu o karanlık ormana götürmeliyim," diyen 'Riga Sihirbazı', satranç tarihine fanteziyi getiren adamdı.

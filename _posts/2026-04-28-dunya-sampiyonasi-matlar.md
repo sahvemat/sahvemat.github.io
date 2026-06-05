@@ -6,8 +6,8 @@ category: BULMACA
 author: "Haftalık Taktikler"
 excerpt: "En büyük unvanın kaderini belirleyen o ezici darbeleri bulabilir misiniz?"
 type: upcoming
-fen: "6k1/5p2/6p1/4Q3/8/6P1/5PK1/2q5 w - - 0 1"
 tags: posts
+FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 ---
 
 Dünya Şampiyonası arenaları sadece stratejik savaşlara değil, aynı zamanda göz kamaştırıcı taktiksel bitirişlere de sahne olur. Bu hafta, tarihe geçen iki hamlelik mat pozisyonlarını inceliyoruz.
