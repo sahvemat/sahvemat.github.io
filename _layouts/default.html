@@ -1,66 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }} | Şah ve mat</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>♔</text></svg>" type="image/svg+xml">
+    <title>{% if page.title %}{{ page.title }} — {% endif %}ŞAH v MAT — Dijital Satranç Dergisi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      window.tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"],
-              display: ["Outfit", "sans-serif"],
-              mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
-              serif: ["Playfair Display", "serif"],
-            },
-            colors: {
-              ink: '#121212',
-              paper: '#FDFCF8',
-              accent: '#E11D48',
-              line: '#121212',
-              slate: '#475569',
-            },
-            animation: {
-                'marquee': 'marquee 25s linear infinite',
-                'fade-in': 'fadeIn 0.8s ease-out forwards',
-            },
-            keyframes: {
-                marquee: {
-                    '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(-50%)' },
-                },
-                fadeIn: {
-                    '0%': { opacity: '0', transform: 'translateY(10px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
-                }
-            }
-          }
-        }
-      }
-    </script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <script src="https://chesspublica.github.io/elements.js"></script>
-    <script src="/assets/js/script.js" defer></script>
-  </head>
-  <body class="min-h-screen">
-    <div class="fixed inset-0 paper-texture z-[-1]"></div>
-
-    <div class="max-w-[1400px] mx-auto border-x border-line/10 bg-paper shadow-2xl relative">
-      
-      {% include nav_top.html %}
-      {% include nav_main.html %}
-
-      <main>
-        {{ content }}
-      </main>
-
-      {% include footer.html %}
+    <script src="https://chesspublica.github.io/elements.js" defer></script>
+</head>
+<body>
+    <div class="paper-texture"></div>
+    <div class="site-container">
+        {% include home/topbar.html %}
+        {% include home/header.html %}
+        <main>
+            {{ content }}
+        </main>
+        {% include footer.html %}
     </div>
-
-  </body>
+    <script src="{{ '/assets/js/index.js' | relative_url }}" defer></script>
+</body>
 </html>
