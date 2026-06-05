@@ -1,5 +1,5 @@
 ---
-title: Ana sayfa
+title: ŞAHvMAT Dijital Satranç Dergisi
 layout: default
 ---
 {% include hero.html %}
