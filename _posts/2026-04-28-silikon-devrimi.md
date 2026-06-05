@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "SİLİKON DEVRİMİ"
-date: 2026-04-28
-category: ÖZEL DOSYA
-author: "Şahmat Editör"
-excerpt: "Stockfish 16 gibi nöral ağlar, temel satranç teorisini nasıl baştan yazıyor?"
-featured: true
 tags: posts
+title: "Lorem ipsum dolor sit amet"
+author: "Lorem Ipsum"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec."
 FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+date: 2026-01-08
 ---
 
-Yapay zeka ve nöral ağların satranç dünyasına girişiyle birlikte, yüzyıllardır değişmez kabul edilen teoriler sarsılıyor. Stockfish 16'nın getirdiği derin analizler, insan oyuncuların hayal edemeyeceği stratejik derinlikleri gün yüzüne çıkarıyor.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec.
+
+Etiam efficitur felis et quam suscipit, at dignissim sem varius. Aenean quis turpis pellentesque, auctor quam non, aliquet purus. Pellentesque tincidunt ligula id ullamcorper commodo.

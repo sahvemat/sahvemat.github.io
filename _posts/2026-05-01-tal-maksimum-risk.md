@@ -1,16 +1,14 @@
 ---
 layout: default
-title: "MAKSİMUM RİSK: Tal'in Fedaları Neden Hâlâ Büyülüyor?"
-date: 2026-05-01
-category: PROFİL
-author: "Caner Ekinci"
-excerpt: "Mihail Tal, satranç tarihinin en sevilen şampiyonlarından biri. Onun fedalarındaki o saf kumarbaz ruhunu ve rakiplerini nasıl 'karanlık bir ormana' çektiğini inceliyoruz."
-featured: true
-type: feature
 tags: posts
+title: "Lorem ipsum dolor sit amet"
+author: "Lorem Ipsum"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec."
+type: feature
 FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+date: 2026-01-08
 ---
 
-Mihail Tal, rakiplerini öyle pozisyonlara sokardı ki, en hassas bilgisayar analizleri bile o anki psikolojik baskıyı ölçemezdi. "Rakiplerimi 2+2=5 olduğu o karanlık ormana götürmeliyim," diyen 'Riga Sihirbazı', satranç tarihine fanteziyi getiren adamdı.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec.
 
-Bu yazıda, Tal'in en ünlü fedalarının ardındaki sezgisel dehanın izini sürüyoruz. Sahada kazanılan puanların ötesinde, bir sanatçının tuvaline attığı fırça darbeleri gibi duran o hamleler...
+Etiam efficitur felis et quam suscipit, at dignissim sem varius. Aenean quis turpis pellentesque, auctor quam non, aliquet purus. Pellentesque tincidunt ligula id ullamcorper commodo.
