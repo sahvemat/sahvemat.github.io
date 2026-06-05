@@ -429,7 +429,7 @@ a:hover {
 }
 
 .grid-main::before {
-    content: 'YAZILAR';
+    content: '♔';
     position: absolute;
     top: -1.5rem;
     right: -1.5rem;
