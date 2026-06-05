@@ -1,4 +1,5 @@
 ---
+title: Ana sayfa
 layout: default
 ---
 {% include hero.html %}
