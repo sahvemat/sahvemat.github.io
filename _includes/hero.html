@@ -11,6 +11,11 @@
     <div class="grid-main">
         <div class="hero-content stagger-in">
             <h1 class="hero-title">{{ featuredPost.title | replace: " ", "<br>" }}</h1>
+            <div class="hero-board" aria-hidden="true">
+                <div class="board-grid">
+                    <fen>{{ featuredPost.FEN }}</fen>
+                </div>
+            </div>
             <div class="hero-meta">
                 <p class="hero-description">"{{ featuredPost.excerpt | strip_html | strip_newlines }}"</p>
                 <div class="hero-author">
