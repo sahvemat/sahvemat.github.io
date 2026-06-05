@@ -1,4 +1,4 @@
-{% assign featuredPost = site.posts | where: "featured", true | first %}
+{% assign featuredPost = site.posts | where: "type", "feature" | first %}
 {% assign flashPost = site.posts | where: "type", "flash" | first %}
 {% assign upcomingPost = site.posts | where: "type", "upcoming" | first %}
 <section class="hero-grid">
