@@ -1368,6 +1368,7 @@ a:hover {
 }
 
 .social-links {
+    margin-top: 1rem;
     display: flex;
     gap: 1rem;
 }
