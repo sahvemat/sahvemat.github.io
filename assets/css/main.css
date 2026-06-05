@@ -256,7 +256,7 @@ a:hover {
 }
 
 .logo-body.logo-negative .tagline {
-    color: var(--color-paper);
+    color: var(--color-ink);
     opacity: 0.9;
 }
 

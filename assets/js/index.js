@@ -1,8 +1,11 @@
 (function () {
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     const now = new Date();
+    const text = months[now.getMonth()] + ' ' + now.getFullYear();
     const el = document.getElementById('current-month-year');
-    if (el) el.textContent = months[now.getMonth()] + ' ' + now.getFullYear();
+    if (el) el.textContent = text;
+    const footerEl = document.getElementById('footer-month-year');
+    if (footerEl) footerEl.textContent = text;
 })();
 
 (function () {
