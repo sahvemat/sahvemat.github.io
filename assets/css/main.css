@@ -428,19 +428,6 @@ a:hover {
     .grid-main { padding: 4rem; }
 }
 
-.grid-main::before {
-    content: '!!   ';
-    position: absolute;
-    top: -1.5rem;
-    right: -1.5rem;
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 240px;
-    color: rgba(0, 0, 0, 0.02);
-    pointer-events: none;
-    user-select: none;
-}
-
 /* ── Category Badge ─────────────────────────────────────────── */
 .category-badge {
     display: inline-block;
