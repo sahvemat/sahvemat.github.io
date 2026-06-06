@@ -13,6 +13,11 @@
         <article class="article-card">
             <div class="article-thumbnail">
                 <div class="article-number">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</div>
+                {% if post.FEN %}
+                <div class="article-fen" aria-hidden="true">
+                    <fen>{{ post.FEN }}</fen>
+                </div>
+                {% endif %}
             </div>
             <div class="article-info">
                 <div class="article-meta-row">
