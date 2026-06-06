@@ -21,26 +21,36 @@
 
     let games = [];
     let index = 0;
+    let currentBlobUrl = null;
+    let observer = null;
+
+    const cleanup = () => {
+        if (observer) { observer.disconnect(); observer = null; }
+        if (currentBlobUrl) { URL.revokeObjectURL(currentBlobUrl); currentBlobUrl = null; }
+    };
+
+    const advance = () => {
+        index = (index + 1) % games.length;
+        render();
+    };
 
     const render = () => {
+        cleanup();
         container.innerHTML = '';
+        const blob = new Blob([games[index]], { type: 'application/x-chess-pgn' });
+        currentBlobUrl = URL.createObjectURL(blob);
         const puzzle = document.createElement('puzzle');
-        puzzle.textContent = games[index];
+        puzzle.setAttribute('src', currentBlobUrl);
         container.appendChild(puzzle);
         initAll();
 
-        const advance = () => {
-            index = (index + 1) % games.length;
-            render();
-        };
-
-        puzzle.addEventListener('cp-puzzle-move', () => {
-            setTimeout(() => {
-                if (puzzle.querySelector('.cp-fire-solved')) {
-                    setTimeout(advance, 1200);
-                }
-            }, 50);
+        observer = new MutationObserver(() => {
+            if (container.querySelector('.cp-fire-solved')) {
+                cleanup();
+                setTimeout(advance, 1500);
+            }
         });
+        observer.observe(container, { subtree: true, attributes: true, attributeFilter: ['class'], childList: true });
     };
 
     fetch(src)
