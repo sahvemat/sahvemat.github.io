@@ -1586,4 +1586,29 @@ pgn-player {
     padding: 1rem;
     background: white;
     box-shadow: 12px 12px 0px 0px #121212;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+pgn-player h1,
+pgn-player h2,
+pgn-player h3,
+pgn-player h4,
+pgn-player h5,
+pgn-player h6 {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+    text-wrap: auto;
+}
+
+pgn-player p {
+    line-height: inherit;
 }
