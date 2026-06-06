@@ -275,6 +275,10 @@ a:hover {
     margin-top: calc(var(--logo-size) * -0.4);
 }
 
+.site-footer .logo-sub {
+    display: none;
+}
+
 /* ============================================================
    HOME PAGE
    ============================================================ */
@@ -755,6 +759,8 @@ a:hover {
     background: white;
     box-shadow: 12px 12px 0px 0px var(--ink);
     margin-top: 2rem;
+    width: fit-content;
+    max-width: 100%;
 }
 
 .board-header {
@@ -1026,11 +1032,9 @@ a:hover {
 
 .article-fen {
     position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 80px;
     pointer-events: none;
 }
 
@@ -1038,7 +1042,7 @@ a:hover {
 .article-fen .cp-fen,
 .article-fen .fen-container,
 .article-fen .board-wrapper {
-    width: min(70%, 160px);
+    width: 100%;
     max-width: 100%;
     aspect-ratio: 1;
 }
