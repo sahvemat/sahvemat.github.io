@@ -461,7 +461,7 @@ a:hover {
 }
 
 .hero-board .board-grid {
-    width: min(80%, 560px);
+    width: min(80%, 400px);
     aspect-ratio: 1;
 }
 
