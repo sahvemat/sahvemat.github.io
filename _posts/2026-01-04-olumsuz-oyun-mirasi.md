@@ -4,9 +4,10 @@ tags: posts
 title: "Lorem ipsum dolor sit amet"
 author: "Lorem Ipsum"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec."
+date: 2026-01-04
 type: analysis
 FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
-date: 2026-01-04
+PGNURL: https://lichess.org/api/study/97di6JjX/Jzyakrf4.pgn
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec.
