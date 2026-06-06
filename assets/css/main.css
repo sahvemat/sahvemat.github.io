@@ -332,7 +332,7 @@ a:hover {
     gap: 3rem;
     font-family: var(--font-sans);
     font-weight: 900;
-    font-size: 11px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.25em;
     padding-top: 1rem;
@@ -1577,8 +1577,6 @@ header.main-nav {
     height: auto;
     transition: padding 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
 }
-
-header.main-nav a {font-size: 3rem;}
 
 header.main-nav.scrolled {
     background: rgba(253, 252, 248, 0.95);
