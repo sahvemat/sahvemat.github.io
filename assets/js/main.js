@@ -9,6 +9,51 @@
 })();
 
 (function () {
+    const container = document.getElementById('puzzle-rotator');
+    if (!container) return;
+    const src = container.dataset.pgnSrc;
+    if (!src) return;
+
+    const splitGames = (text) =>
+        text.split(/\n(?=\[Event )/).map(s => s.trim()).filter(Boolean);
+
+    const initAll = () => window.ChessPublica && window.ChessPublica.initAll && window.ChessPublica.initAll();
+
+    let games = [];
+    let index = 0;
+
+    const render = () => {
+        container.innerHTML = '';
+        const puzzle = document.createElement('puzzle');
+        puzzle.textContent = games[index];
+        container.appendChild(puzzle);
+        initAll();
+
+        const advance = () => {
+            index = (index + 1) % games.length;
+            render();
+        };
+
+        puzzle.addEventListener('cp-puzzle-move', () => {
+            setTimeout(() => {
+                if (puzzle.querySelector('.cp-fire-solved')) {
+                    setTimeout(advance, 1200);
+                }
+            }, 50);
+        });
+    };
+
+    fetch(src)
+        .then(r => r.text())
+        .then(text => {
+            games = splitGames(text);
+            if (!games.length) return;
+            render();
+        })
+        .catch(() => {});
+})();
+
+(function () {
     const header = document.getElementById('main-header');
     const headerLogo = header && header.querySelector('.logo-body');
     let isScrolled = false;
