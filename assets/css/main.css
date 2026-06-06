@@ -1578,6 +1578,8 @@ header.main-nav {
     transition: padding 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
+header.main-nav a {font-size: 3rem;}
+
 header.main-nav.scrolled {
     background: rgba(253, 252, 248, 0.95);
     backdrop-filter: blur(12px);
@@ -1600,11 +1602,8 @@ header.main-nav:not(.scrolled) {
 
 /* PGN player embed */
 pgn-player {
-    border: 1px solid var(--line);
-    border-radius: 0;
     padding: 1rem;
     background: white;
-    box-shadow: 12px 12px 0px 0px #121212;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     font-size: 14px;
     font-weight: 400;
