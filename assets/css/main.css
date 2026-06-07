@@ -1034,7 +1034,8 @@ a:hover {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    width: 80px;
+    width: 45%;
+    max-width: 160px;
     pointer-events: none;
 }
 
