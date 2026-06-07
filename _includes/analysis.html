@@ -20,13 +20,7 @@
                     <span>{{ analysisPost.category }}</span>
                     <span>{{ analysisPost.author }}</span>
                 </div>
-                <pgn-player src="{{ analysisPost.PGNURL }}"></pgn-player>
-            </div>
-        </div>
-    </div>
-    <div class="analysis-sidebar">
-        <div class="sidebar-sticky">
-            <div class="critical-positions">
+                <div class="critical-positions">
                 <div class="positions-grid">
                     <div class="position-card position-card--accent"><fen>{{ analysisPost.FEN }}</fen></div>
                     <div class="position-card position-card--dark"><fen>{{ analysisPost.FEN }}</fen></div>
@@ -37,6 +31,13 @@
                 <p class="tip-text">{{ analysisPost.analysis_tip }}</p>
                 <div class="tip-author">Analiz: {{ analysisPost.analysis_author }}</div>
             </div>
+            </div>
+        </div>
+    </div>
+    <div class="analysis-sidebar">
+        <div class="sidebar-sticky">
+            <pgn-player src="{{ analysisPost.PGNURL }}"></pgn-player>
+            
         </div>
     </div>
 </section>
