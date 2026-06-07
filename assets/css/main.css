@@ -1034,12 +1034,15 @@ a:hover {
 
 .article-fen {
     position: absolute;
-    top: 0.75rem;
+    top: 50%;
     right: 0.75rem;
-    bottom: 0.75rem;
-    width: auto;
+    transform: translateY(-50%);
+    height: calc(100% - 1.5rem);
     aspect-ratio: 1;
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .article-fen > fen,
