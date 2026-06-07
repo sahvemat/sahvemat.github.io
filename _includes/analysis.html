@@ -29,12 +29,14 @@
         </div>
     </div>
     <div class="analysis-sidebar">
+        <div class="sidebar-sticky">
         <div class="chess-board-display">
             <div class="board-header">
             <span>{{ analysisPost.category }}</span>
             <span>{{ analysisPost.author }}</span>
             </div>
             <pgn-player src="{{ analysisPost.PGNURL }}"></pgn-player>
+        </div>
         </div>
     </div>
 </section>
