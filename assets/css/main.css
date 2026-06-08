@@ -456,7 +456,7 @@ a:hover {
 .hero-board {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
     width: min(400px, 50%);
     aspect-ratio: 1;
     pointer-events: none;
