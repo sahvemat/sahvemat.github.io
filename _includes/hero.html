@@ -1,6 +1,7 @@
 {% assign featurePost = site.posts | where: "type", "feature" | first %}
 {% assign flashPost = site.posts | where: "type", "flash" | first %}
 {% assign upcomingPost = site.posts | where: "type", "upcoming" | first %}
+
 <section class="hero-grid">
     <div class="grid-sidebar-left">
         <span class="vertical-text">ŞAHvMAT Dijital Satranç Dergisi</span>
@@ -23,7 +24,9 @@
                     <span class="author-name">{{ featurePost.author }}</span>
                     <span class="author-label">Tarih:</span>
                     <span class="author-name">{{ featurePost.date | date: "%-d %B %Y" }}</span>
-                    <a href="{{ featurePost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
+                    <span class="author-label">
+                        <a href="{{ featurePost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
+                    </span>
                 </div>
             </div>
         </div>
