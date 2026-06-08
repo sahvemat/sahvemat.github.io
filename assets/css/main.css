@@ -1712,7 +1712,7 @@ pgn-player p {
         right: 2rem;
         left: auto;
         bottom: auto;
-        width: min(250px, 60vw);
+        width: min(200px, 60vw);
     }
     .hero-board .board-grid {
         width: 100%;
