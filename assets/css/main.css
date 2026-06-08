@@ -1741,9 +1741,6 @@ pgn-player p {
         grid-template-columns: minmax(0, 1fr) auto;
         max-width: 100%;
     }
-    .article-fen {
-        max-width: 55%;
-    }
     .article-fen .fen-container,
     .article-fen .cp-board {
         max-width: 100%;
