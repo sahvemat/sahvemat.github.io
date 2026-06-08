@@ -460,7 +460,7 @@ a:hover {
     width: min(400px, 50%);
     aspect-ratio: 1;
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.75;
     margin: 0;
     padding: 0;
 }
