@@ -1671,7 +1671,7 @@ pgn-player p {
         inset: 0;
     }
     .hero-board .board-grid {
-        width: 200px;
+        width: 250px;
     }
 
     /* 3. Analysis sidebar position cards must fit */
