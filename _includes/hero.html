@@ -15,6 +15,7 @@
             </div>
         </div>
         <div class="hero-content stagger-in">
+            <a href="{{ flashPost.url | relative_url }}">
             <h1 class="hero-title">{{ featurePost.title | replace: " ", "<br>" }}</h1>
             <div class="hero-meta">
                 <p class="hero-description">"{{ featurePost.excerpt | strip_html | strip_newlines }}"</p>
@@ -23,6 +24,7 @@
                     <span class="author-name">{{ featurePost.author }}</span>
                 </div>
             </div>
+            </a>
         </div>
     </div>
 
