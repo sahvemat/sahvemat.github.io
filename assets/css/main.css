@@ -91,19 +91,6 @@ a:hover {
 }
 
 /* ── Utilities ──────────────────────────────────────────────── */
-.border-editorial {
-    border: 2px solid var(--ink);
-}
-
-.shadow-premium {
-    box-shadow: 12px 12px 0px 0px #121212;
-}
-
-.text-vertical {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
-
 .drop-cap::first-letter {
     font-size: 5rem;
     font-family: var(--font-display);
@@ -132,14 +119,6 @@ a:hover {
 /* ============================================================
    LOGO SYSTEM
    ============================================================ */
-
-.logo-body *,
-.logo-body *::before,
-.logo-body *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .logo-body {
     --color-ink: #121212;
@@ -553,32 +532,6 @@ a:hover {
     background: #f5f5f0;
 }
 
-.flash-label {
-    font-family: var(--font-sans);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
 .sidebar-title {
     font-size: 2rem;
     line-height: 1;
@@ -607,15 +560,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.sidebar-dark-label {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 1rem;
 }
 
 .sidebar-dark-title {
@@ -716,14 +660,6 @@ a:hover {
     gap: 1rem;
 }
 
-.section-label {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: var(--slate);
-}
-
 .analysis-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 0.9;
@@ -816,24 +752,6 @@ a:hover {
     gap: 3rem;
 }
 
-.positions-title {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-}
-
-.title-line {
-    flex: 1;
-    height: 1px;
-    background: rgba(18, 18, 18, 0.1);
-}
-
 .positions-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -868,21 +786,6 @@ a:hover {
 
 .position-card--dark:hover {
     background: var(--accent);
-}
-
-.chess-piece-large {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 3.5rem;
-    transition: transform 0.5s;
-}
-
-.position-card:hover .chess-piece-large {
-    transform: scale(1.25);
-}
-
-.position-card--dark:hover .chess-piece-large {
-    transform: rotate(12deg);
 }
 
 .tip-card {
@@ -1037,7 +940,6 @@ a:hover {
 }
 
 .article-fen {
-    position: static;
     grid-column: 2;
     align-self: center;
     height: 100%;
@@ -1267,13 +1169,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-}
-
-.puzzle-number {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 3.5rem;
-    color: rgba(225, 29, 72, 0.2);
 }
 
 .puzzle-title {
@@ -1595,33 +1490,6 @@ a:hover {
 /* ============================================================
    POST PAGES  (default.html layout)
    ============================================================ */
-
-/* Scroll-responsive header for post pages */
-header.main-nav {
-    border-bottom: 1px solid rgba(18, 18, 18, 0.1);
-    height: auto;
-    transition: padding 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-header.main-nav.scrolled {
-    background: rgba(253, 252, 248, 0.95);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-header.main-nav:not(.scrolled) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-    header.main-nav:not(.scrolled) {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-}
 
 /* PGN player embed */
 pgn-player {
