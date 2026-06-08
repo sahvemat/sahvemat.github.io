@@ -1663,7 +1663,7 @@ pgn-player p {
     }
     .main-header .logo-body.logo-large {
         --logo-size: clamp(2rem, 13vw, 3.75rem);
-        max-width: 80vw;
+        max-width: 90vw;
     }
 
     /* 2. Smaller hero board backdrop, kept on-screen */
@@ -1671,7 +1671,7 @@ pgn-player p {
         inset: 0;
     }
     .hero-board .board-grid {
-        width: min(55%, 220px);
+        width: 220px);
     }
 
     /* 3. Analysis sidebar position cards must fit */
