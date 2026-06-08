@@ -456,7 +456,7 @@ a:hover {
 .hero-board {
     position: absolute;
     top: 0;
-    right: 1rem;
+    right: 0;
     width: min(400px, 50%);
     aspect-ratio: 1;
     pointer-events: none;
@@ -1709,7 +1709,7 @@ pgn-player p {
     /* 2. Smaller hero board backdrop, anchored top-right */
     .hero-board {
         top: 0;
-        right: 0;
+        right: 1rem;
         left: auto;
         bottom: auto;
         width: min(250px, 80vw);
