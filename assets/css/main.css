@@ -1675,8 +1675,16 @@ pgn-player p {
     }
 
     /* 3. Analysis sidebar position cards must fit */
+    .analysis-sidebar {
+        padding: 2rem 1.25rem;
+    }
+    .positions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
     .position-card {
         min-width: 0;
+        width: 100%;
     }
     .position-card > fen,
     .position-card .fen-container,
