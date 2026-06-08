@@ -1652,3 +1652,53 @@ pgn-player h6 {
 pgn-player p {
     line-height: inherit;
 }
+
+/* ============================================================
+   MOBILE OVERRIDES
+   ============================================================ */
+@media (max-width: 767px) {
+    /* 1. Constrain logo width and center it */
+    .header-inner {
+        justify-content: center;
+    }
+    .main-header .logo-body.logo-large {
+        --logo-size: clamp(2rem, 13vw, 3.75rem);
+        max-width: 80vw;
+    }
+
+    /* 2. Smaller hero board backdrop, kept on-screen */
+    .hero-board {
+        inset: 0;
+    }
+    .hero-board .board-grid {
+        width: min(55%, 220px);
+    }
+
+    /* 3. Analysis sidebar position cards must fit */
+    .position-card {
+        min-width: 0;
+    }
+    .position-card > fen,
+    .position-card .fen-container,
+    .position-card .cp-board {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 4. Center and constrain the pgn-player embed */
+    .chess-board-display {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 6px 6px 0px 0px var(--ink);
+        overflow-x: auto;
+    }
+    pgn-player {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
