@@ -22,23 +22,21 @@
                 </div>
             </div>
             <div class="chess-board-display">
-            <div class="board-header">
-            <span>{{ analysisPost.category }}</span>
-            <span>{{ analysisPost.author }}</span>
-            </div>
-
-            <div class="tip-card">
-                <span class="tip-label">{{ analysisPost.analysis_tip }}</span>
-                <p class="tip-text">{{ analysisPost.analysis_tip }}</p>
-                <div class="tip-author">Analiz: {{ analysisPost.analysis_author }}</div>
-            </div>
+                <div class="board-header">
+                    <span>{{ analysisPost.category }}</span>
+                    <span>{{ analysisPost.author }}</span>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-label">{{ analysisPost.analysis_tip }}</span>
+                    <p class="tip-text">{{ analysisPost.analysis_tip }}</p>
+                    <div class="tip-author">Analiz: {{ analysisPost.analysis_author }}</div>
+                </div>
             </div>
         </div>
     </div>
     <div class="analysis-sidebar">
         <div class="sidebar-sticky">
             <pgn-player src="{{ analysisPost.PGNURL }}"></pgn-player>
-        <!---->
         </div>
     </div>
 </section>
