@@ -22,7 +22,7 @@
                     <span class="author-label">Yazar:</span>
                     <span class="author-name">{{ featurePost.author }}</span>
                     <span class="author-label">Tarih:</span>
-                    <span class="author-name">{{ featurePost.date }}</span>
+                    <span class="author-name">{{ featurePost.date | date: "%-d %B %Y" }}</span>
                     <a href="{{ featurePost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
                 </div>
             </div>
@@ -30,17 +30,17 @@
     </div>
 
     <div class="grid-sidebar-right">
-        <a href="{{ flashPost.url | relative_url }}" class="sidebar-card sidebar-card--light">
+        <div class="sidebar-card sidebar-card--light">
             <h3 class="sidebar-title">{{ flashPost.title }}</h3>
             <p class="sidebar-desc">{{ flashPost.excerpt | strip_html | strip_newlines }}</p>
-        </a>
+            <a href="{{ flashPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
+        </div>
         <div class="sidebar-card sidebar-card--dark">
             <div class="sidebar-dark-content">
                 <fen>{{ upcomingPost.FEN }}</fen>
                 <h2 class="sidebar-dark-title">{{ upcomingPost.title }}</h2>
-            </div>
-            <div class="sidebar-dark-footer">
-                <a href="{{ upcomingPost.url | relative_url }}" class="arrow-link">→</a>
+                <a href="{{ upcomingPost.url | relative_url }}" class="read-more-link">Devamını Oku</a><a href="{{ upcomingPost.url | relative_url }}" class="arrow-link">→</a>
+            </div>     
             </div>
         </div>
     </div>
