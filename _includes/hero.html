@@ -24,9 +24,9 @@
                     <span class="author-name">{{ featurePost.author }}</span>
                     <span class="author-label">Tarih:</span>
                     <span class="author-name">{{ featurePost.date | date: "%-d %B %Y" }}</span>
-                    <span class="author-label">
-                        <a href="{{ featurePost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
-                    </span>
+                </div>
+                <div>
+                    <a href="{{ featurePost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
             <div class="sidebar-dark-content">
                 <fen>{{ upcomingPost.FEN }}</fen>
                 <h2 class="sidebar-dark-title">{{ upcomingPost.title }}</h2>
-                <a href="{{ upcomingPost.url | relative_url }}" class="read-more-link">Devamını Oku</a><a href="{{ upcomingPost.url | relative_url }}" class="arrow-link">→</a>
+                <a href="{{ upcomingPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
             </div>     
             </div>
         </div>
