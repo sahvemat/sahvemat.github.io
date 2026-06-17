@@ -9,12 +9,12 @@ permalink: /ogren/at/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>At</span>
+  <span>Bölüm 1 · At</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Knight · 3 puan · Her oyuncuda 2 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Knight · 3 puan · Her oyuncuda 2 adet</span>
     <h1 class="piece-page-title">AT</h1>
     <p class="piece-page-tagline">Satrancın en özel taşı. L şeklinde hareket eder, her şeyin üzerinden atlar.</p>
   </div>
@@ -25,9 +25,9 @@ permalink: /ogren/at/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
-    <p class="piece-text">At, satrançtaki en özgün harekete sahip taştır. "L" şeklinde ilerler: bir yönde iki kare, ardından dik açıyla bir kare. Ya da bir yönde bir kare, ardından dik açıyla iki kare.</p>
+    <p class="piece-text">At, satrançtaki en özgün harekete sahip taştır. "L" şeklinde ilerler: bir yönde iki kare, ardından dik açıyla bir kare. Toplamda sekiz farklı hedef kare mümkündür.</p>
     <p class="piece-text">Atın en büyük ayrıcalığı, yolundaki taşları engel olarak görmemesidir. Diğer taşların üzerinden atlayabilir; bu, kapalı pozisyonlarda onu son derece değerli kılar.</p>
-    <p class="piece-text">Her hamlede at, renk değiştirir: açık kareden koyu kareye, koyu kareden açık kareye gider. Merkezdeki bir at sekiz farklı kareyi tehdit edebilir; köşedeki bir at ise yalnızca iki kareye gidebilir.</p>
+    <p class="piece-text">Her hamlede at renk değiştirir. Merkezdeki bir at sekiz farklı kareyi tehdit ederken köşedeki yalnızca iki kareye gidebilir — "At köşede kötüdür" denir.</p>
     <ul class="move-rules">
       <li class="move-rule">
         <span class="move-rule-icon">⌐</span>
@@ -35,15 +35,15 @@ permalink: /ogren/at/
       </li>
       <li class="move-rule">
         <span class="move-rule-icon">↟</span>
-        <span class="move-rule-text">Diğer taşların üzerinden atlayabilir — tahtanın tek taşı budur.</span>
+        <span class="move-rule-text">Diğer taşların üzerinden atlayabilir — satrancın tek taşı budur.</span>
       </li>
       <li class="move-rule">
         <span class="move-rule-icon">◈</span>
-        <span class="move-rule-text">Her hamlede kare rengi değişir (açık → koyu veya koyu → açık).</span>
+        <span class="move-rule-text">Her hamlede kare rengi değişir.</span>
       </li>
       <li class="move-rule">
         <span class="move-rule-icon">✦</span>
-        <span class="move-rule-text">Merkezdeyken 8, kenardayken daha az kareye gidebilir.</span>
+        <span class="move-rule-text">Merkezdeyken 8, kenarda veya köşedeyken daha az kareye gidebilir.</span>
       </li>
     </ul>
   </div>
@@ -60,20 +60,20 @@ permalink: /ogren/at/
       <div class="position-card position-card--dark">
         <fen>N7/8/8/8/8/8/8/8 w - - 0 1</fen>
       </div>
-      <p class="fen-demo-caption">a8 köşesindeki at yalnızca b6 ve c7'ye gidebilir. "At köşede kötüdür."</p>
+      <p class="fen-demo-caption">a8 köşesindeki at yalnızca b6 ve c7'ye gidebilir. Köşe atı için felakettir.</p>
     </div>
   </div>
 </div>
 
 <div class="piece-pagination">
-  <a href="/ogren/fil/" class="piece-prev">
+  <a href="/ogren/sah/" class="piece-prev">
     <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♝</span>
-    <span class="pagination-piece">Fil</span>
+    <span class="pagination-symbol">♚</span>
+    <span class="pagination-piece">Şah</span>
   </a>
-  <a href="/ogren/vezir/" class="piece-next">
+  <a href="/ogren/piyon/" class="piece-next">
     <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♛</span>
-    <span class="pagination-piece">Vezir</span>
+    <span class="pagination-symbol">♟</span>
+    <span class="pagination-piece">Piyon</span>
   </a>
 </div>

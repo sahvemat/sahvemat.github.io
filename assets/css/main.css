@@ -2083,3 +2083,114 @@ pgn-player p {
 }
 
 .pagination-symbol { font-size: 1.25rem; }
+
+/* ── Learn Chapter Index ────────────────────────────────────── */
+.learn-chapter {
+    border-top: 1px solid var(--line);
+}
+
+.learn-chapter-header {
+    padding: 3rem 2rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .learn-chapter-header { padding: 4rem 4rem 2rem; }
+}
+
+.learn-chapter-num {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 0.85;
+    flex-shrink: 0;
+}
+
+.learn-chapter-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.9;
+    margin-bottom: 0.75rem;
+}
+
+.learn-chapter-desc {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--slate);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.concept-card {
+    display: block;
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.concept-card:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.concept-card-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 0.85;
+    margin-bottom: 1rem;
+    display: block;
+    transition: color 0.2s;
+}
+
+.concept-card:hover .concept-card-num {
+    color: var(--paper);
+}
+
+.concept-card-name {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.concept-card-desc {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    transition: color 0.2s;
+}
+
+.concept-card:hover .concept-card-desc {
+    color: rgba(253, 252, 248, 0.7);
+}
+
+.concept-card-arrow {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.25rem;
+    color: var(--accent);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.concept-card:hover .concept-card-arrow {
+    color: var(--paper);
+    border-color: var(--paper);
+}

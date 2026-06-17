@@ -9,12 +9,12 @@ permalink: /ogren/vezir/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Vezir</span>
+  <span>Bölüm 1 · Vezir</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Queen · 9 puan · Her oyuncuda 1 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Queen · 9 puan · Her oyuncuda 1 adet</span>
     <h1 class="piece-page-title">VEZİR</h1>
     <p class="piece-page-tagline">Tahtanın en güçlü taşı. Kale ve filin tüm güçlerini tek bedende taşır.</p>
   </div>
@@ -25,8 +25,8 @@ permalink: /ogren/vezir/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
-    <p class="piece-text">Vezir, kale ve filin birleşimidir. Yatay, dikey ve çapraz — her yönde, istediği kadar kare hareket edebilir. Bu onu satrancın açık ara en güçlü taşı yapar.</p>
-    <p class="piece-text">Merkezdeki bir vezir teorik olarak tahtanın 27 farklı karesini tek hamlede tehdit edebilir. Bu muazzam baskı gücü, onu hem saldırıda hem savunmada kritik bir silah haline getirir.</p>
+    <p class="piece-text">Vezir, kale ve filin birleşimidir. Yatay, dikey ve çapraz — her yönde, istediği kadar kare hareket edebilir. Bu, onu satrancın açık ara en güçlü taşı yapar.</p>
+    <p class="piece-text">Merkezdeki bir vezir teorik olarak tahtanın 27 farklı karesini tek hamlede tehdit edebilir. Bu muazzam baskı gücü, onu hem saldırıda hem savunmada kritik kılar.</p>
     <p class="piece-text">Ancak gücü onu aynı zamanda bir hedef yapar. Rakip taşlar veziri kovaladığında tempo kaybedilebilir; bu yüzden veziri erken ve pervasızca oyuna sokmak tehlikeli olabilir.</p>
     <ul class="move-rules">
       <li class="move-rule">
@@ -56,20 +56,20 @@ permalink: /ogren/vezir/
       <p class="fen-demo-caption">d4'teki vezir, satır, sütun ve çaprazlar boyunca 27 kareye ulaşabilir.</p>
     </div>
     <div class="fen-demo-item">
-      <span class="fen-demo-label">Düşman taşlar arasında</span>
+      <span class="fen-demo-label">Engel durumu</span>
       <div class="position-card position-card--dark">
         <fen>8/8/8/2p1p3/3Q4/2p1p3/8/8 w - - 0 1</fen>
       </div>
-      <p class="fen-demo-caption">Vezir çevrili olsa da yatay, dikey ve çapraz doğrultularda hâlâ güçlüdür.</p>
+      <p class="fen-demo-caption">Çevrili olsa da yatay, dikey ve çapraz doğrultularda hâlâ güçlüdür — düşman taşları yiyerek geçer.</p>
     </div>
   </div>
 </div>
 
 <div class="piece-pagination">
-  <a href="/ogren/at/" class="piece-prev">
+  <a href="/ogren/fil/" class="piece-prev">
     <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♞</span>
-    <span class="pagination-piece">At</span>
+    <span class="pagination-symbol">♝</span>
+    <span class="pagination-piece">Fil</span>
   </a>
   <a href="/ogren/sah/" class="piece-next">
     <span class="pagination-label">Sonraki taş →</span>
