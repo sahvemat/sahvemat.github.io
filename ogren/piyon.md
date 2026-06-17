@@ -9,12 +9,12 @@ permalink: /ogren/piyon/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Piyon</span>
+  <span>Bölüm 1 · Piyon</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Pawn · 1 puan · Her oyuncuda 8 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Pawn · 1 puan · Her oyuncuda 8 adet</span>
     <h1 class="piece-page-title">PİYON</h1>
     <p class="piece-page-tagline">"Piyon, satrancın ruhudur." — François-André Philidor</p>
   </div>
@@ -27,7 +27,7 @@ permalink: /ogren/piyon/
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
     <p class="piece-text">Piyon, satranç tahtasının en sıradan ama en gizemli taşıdır. Yalnızca ileriye doğru hareket edebilir; geri gidemez.</p>
     <p class="piece-text">Başlangıç karesindeyken oyuncuya bir seçenek sunulur: bir kare ya da iki kare ileri. Bu seçenek yalnızca ilk hamlede geçerlidir; sonraki her hamlede piyon ancak bir kare ilerleyebilir.</p>
-    <p class="piece-text">Piyon, diğer taşları düz ilerleyerek alamaz. Yalnızca bir karesinin çapraz önündeki düşman taşını yiyebilir.</p>
+    <p class="piece-text">Piyon, diğer taşları düz ilerleyerek alamaz. Yalnızca bir karesinin çapraz önündeki düşman taşını yiyebilir. Terfi ve geçerken alma kuralları Bölüm 3'te ayrıntılı anlatılmıştır.</p>
     <ul class="move-rules">
       <li class="move-rule">
         <span class="move-rule-icon">↑</span>
@@ -43,7 +43,7 @@ permalink: /ogren/piyon/
       </li>
       <li class="move-rule">
         <span class="move-rule-icon">✦</span>
-        <span class="move-rule-text">Önündeki kare doluysa hiçbir yöne gidemez.</span>
+        <span class="move-rule-text">Önündeki kare doluysa ileri gidemez.</span>
       </li>
     </ul>
   </div>
@@ -65,44 +65,14 @@ permalink: /ogren/piyon/
   </div>
 </div>
 
-<section class="special-rules-section">
-  <h2 class="special-rules-title">ÖZEL<br>KURALLAR</h2>
-
-  <div class="special-rule-item">
-    <div class="special-rule-num">01</div>
-    <div>
-      <div class="special-rule-name">Terfi (Promotion)</div>
-      <p class="special-rule-desc">Bir piyon tahtanın karşı ucuna ulaştığında — beyaz için 8. sıra, siyah için 1. sıra — terfi eder. Oyuncu piyonu vezir, kale, fil veya ata dönüştürebilir. Neredeyse her zaman vezir seçilir.</p>
-      <div class="special-rule-fen">
-        <div class="position-card">
-          <fen>3P4/8/8/8/8/8/8/8 w - - 0 1</fen>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="special-rule-item">
-    <div class="special-rule-num">02</div>
-    <div>
-      <div class="special-rule-name">Geçerken Alma (En Passant)</div>
-      <p class="special-rule-desc">Rakip piyon ilk hamlede iki kare ileri gelerek yanınıza geçerse, bu hamlenin hemen ardından sanki bir kare ileri gelmiş gibi çapraz alabilirsiniz. Bu hak yalnızca bir tur geçerlidir.</p>
-      <div class="special-rule-fen">
-        <div class="position-card">
-          <fen>8/8/8/2pP4/8/8/8/8 w - c6 0 1</fen>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <div class="piece-pagination">
-  <a href="/ogren/" class="piece-prev">
-    <span class="pagination-label">← Geri</span>
-    <span class="pagination-piece">Tüm Taşlar</span>
+  <a href="/ogren/at/" class="piece-prev">
+    <span class="pagination-label">← Önceki taş</span>
+    <span class="pagination-symbol">♞</span>
+    <span class="pagination-piece">At</span>
   </a>
-  <a href="/ogren/kale/" class="piece-next">
-    <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♜</span>
-    <span class="pagination-piece">Kale</span>
+  <a href="/ogren/alma/" class="piece-next">
+    <span class="pagination-label">Bölüm 2 →</span>
+    <span class="pagination-piece">Alma</span>
   </a>
 </div>
