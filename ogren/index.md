@@ -147,3 +147,153 @@ permalink: /ogren/
     </a>
   </div>
 </section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">03</span>
+    <div>
+      <h2 class="learn-chapter-title">BASİT MATLAR</h2>
+      <p class="learn-chapter-desc">Tek başına kalmış şahı mat etmeyi öğrenin.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/vezir-mati/" class="concept-card">
+      <span class="concept-card-num">3.1</span>
+      <span class="concept-card-name">Vezir Matı</span>
+      <p class="concept-card-desc">En kolay oyunsonu. Bir plan ve zugzwang yeterli.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/kale-mati/" class="concept-card">
+      <span class="concept-card-num">3.2</span>
+      <span class="concept-card-name">Kale Matı</span>
+      <p class="concept-card-desc">Vezirsiz ama yine de kazanılabilir. Şahın rolü kritik.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/iki-fil-mati/" class="concept-card">
+      <span class="concept-card-num">3.3</span>
+      <span class="concept-card-name">İki Fil Matı</span>
+      <p class="concept-card-desc">İki fil köşe karanlığında mat yapar. Pat'a dikkat.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/iki-at-mati/" class="concept-card">
+      <span class="concept-card-num">3.4</span>
+      <span class="concept-card-name">İki At</span>
+      <p class="concept-card-desc">Mat pozisyonu var, ama zorla ulaşmak olanaksız.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">04</span>
+    <div>
+      <h2 class="learn-chapter-title">AÇILIŞ İLKELERİ</h2>
+      <p class="learn-chapter-desc">Gelişim, merkez kontrolü ve şahın güvenliği.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/acilis-ilkeleri/" class="concept-card">
+      <span class="concept-card-num">4.1</span>
+      <span class="concept-card-name">Açılış İlkeleri</span>
+      <p class="concept-card-desc">Gelişim, merkez, rok. İlk on hamle oyunun kaderini belirler.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/taslarin-karakteri/" class="concept-card">
+      <span class="concept-card-num">4.2</span>
+      <span class="concept-card-name">Taşların Karakteri</span>
+      <p class="concept-card-desc">Her taş farklı çalışır. Doğru taşı doğru yere koymak satrancın özüdür.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">05</span>
+    <div>
+      <h2 class="learn-chapter-title">TAKTİK ARAÇLAR</h2>
+      <p class="learn-chapter-desc">Çatal, şiş, açmaz ve açarak saldırı.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/cifte-tehdit/" class="concept-card">
+      <span class="concept-card-num">5.1</span>
+      <span class="concept-card-name">Çatal ve Çifte Tehdit</span>
+      <p class="concept-card-desc">Tek bir hamleyle iki hedefe saldırın. Rakip ikisini birden kurtaramaz.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/sis-acmaz/" class="concept-card">
+      <span class="concept-card-num">5.2</span>
+      <span class="concept-card-name">Şiş ve Açmaz</span>
+      <p class="concept-card-desc">Rakip taşları aynı hat üzerinde yakalayın. Biri kaçarsa diğeri düşer.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/acarak-saldiri/" class="concept-card">
+      <span class="concept-card-num">5.3</span>
+      <span class="concept-card-name">Açarak Saldırı</span>
+      <p class="concept-card-desc">Bir taşı hareket ettirin, arkasındakini serbest bırakın.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">06</span>
+    <div>
+      <h2 class="learn-chapter-title">MAT KALIPLARI</h2>
+      <p class="learn-chapter-desc">Tarihin en önemli mat temalarını öğrenin.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/koridor-mat/" class="concept-card">
+      <span class="concept-card-num">6.1</span>
+      <span class="concept-card-name">Koridor Matı</span>
+      <p class="concept-card-desc">Pratikte en sık karşılaşılan mat. Son sıra tehlikesi ve hava deliği.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/bogmaca-mati/" class="concept-card">
+      <span class="concept-card-num">6.2</span>
+      <span class="concept-card-name">Boğmaca ve Arap Matı</span>
+      <p class="concept-card-desc">At ile yapılan en zarif matlar. Bin yıllık kalıplar.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/klasik-mat-temalari/" class="concept-card">
+      <span class="concept-card-num">6.3</span>
+      <span class="concept-card-name">Klasik Mat Temaları</span>
+      <p class="concept-card-desc">Damiano, Lolli, Mayet, Boden — dört temel mat kalıbı.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">07</span>
+    <div>
+      <h2 class="learn-chapter-title">OYUNSONLARI</h2>
+      <p class="learn-chapter-desc">Oyunun en kritik aşamasında doğru oynamayı öğrenin.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/er-oyunsonu/" class="concept-card">
+      <span class="concept-card-num">7.1</span>
+      <span class="concept-card-name">Er Oyunsonu</span>
+      <p class="concept-card-desc">Kare kuralı ve anahtar kareler. Piyon oyunsonunun temel ilkeleri.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/opozisyon/" class="concept-card">
+      <span class="concept-card-num">7.2</span>
+      <span class="concept-card-name">Opozisyon</span>
+      <p class="concept-card-desc">Yakın, uzak ve çapraz opozisyon. Şah oyunsonunun tempo savaşı.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/kenar-erleri/" class="concept-card">
+      <span class="concept-card-num">7.3</span>
+      <span class="concept-card-name">Kenar Erleri</span>
+      <p class="concept-card-desc">a ve h piyonlarının özel dinamikleri. Beraberlik tuzakları.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>
