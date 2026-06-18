@@ -147,3 +147,39 @@ permalink: /ogren/
     </a>
   </div>
 </section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">03</span>
+    <div>
+      <h2 class="learn-chapter-title">BASİT MATLAR</h2>
+      <p class="learn-chapter-desc">Tek başına kalmış şahı mat etmeyi öğrenin.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/vezir-mati/" class="concept-card">
+      <span class="concept-card-num">3.1</span>
+      <span class="concept-card-name">Vezir Matı</span>
+      <p class="concept-card-desc">En kolay oyunsonu. Bir plan ve zugzwang yeterli.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/kale-mati/" class="concept-card">
+      <span class="concept-card-num">3.2</span>
+      <span class="concept-card-name">Kale Matı</span>
+      <p class="concept-card-desc">Vezirsiz ama yine de kazanılabilir. Şahın rolü kritik.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/iki-fil-mati/" class="concept-card">
+      <span class="concept-card-num">3.3</span>
+      <span class="concept-card-name">İki Fil Matı</span>
+      <p class="concept-card-desc">İki fil köşe karanlığında mat yapar. Pat'a dikkat.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/iki-at-mati/" class="concept-card">
+      <span class="concept-card-num">3.4</span>
+      <span class="concept-card-name">İki At</span>
+      <p class="concept-card-desc">Mat pozisyonu var, ama zorla ulaşmak olanaksız.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>

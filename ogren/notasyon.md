@@ -98,8 +98,8 @@ permalink: /ogren/notasyon/
     <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">Diğer Kurallar</span>
   </a>
-  <a href="/ogren/" class="piece-next">
-    <span class="pagination-label">Tüm Konular →</span>
-    <span class="pagination-piece">Satranç Öğren</span>
+  <a href="/ogren/vezir-mati/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Vezir Matı</span>
   </a>
 </div>
