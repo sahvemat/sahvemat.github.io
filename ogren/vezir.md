@@ -25,6 +25,11 @@ permalink: /ogren/vezir/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
+<fen>
+  [FEN "8/8/8/8/4Q3/8/8/8 w - - 0 1"]
+  {[%cal Ge4h7,Ge4b1,Ge4h1,Ge4a8,Ge4e1,Ge4e8,Ge4h4,Ge4a4]}
+</fen>
+    
     <p class="piece-text">Vezir, kale ve filin birleşimidir. Yatay, dikey ve çapraz — her yönde, istediği kadar kare hareket edebilir. Bu, onu satrancın açık ara en güçlü taşı yapar.</p>
     <p class="piece-text">Merkezdeki bir vezir teorik olarak tahtanın 27 farklı karesini tek hamlede tehdit edebilir. Bu muazzam baskı gücü, onu hem saldırıda hem savunmada kritik kılar.</p>
     <p class="piece-text">Ancak gücü onu aynı zamanda bir hedef yapar. Rakip taşlar veziri kovaladığında tempo kaybedilebilir; bu yüzden veziri erken ve pervasızca oyuna sokmak tehlikeli olabilir.</p>
