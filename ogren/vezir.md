@@ -71,14 +71,14 @@ permalink: /ogren/vezir/
 </div>
 
 <div class="piece-pagination">
-  <a href="/ogren/fil/" class="piece-prev">
+  <a href="/ogren/kale/" class="piece-prev">
     <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♝</span>
-    <span class="pagination-piece">Fil</span>
+    <span class="pagination-symbol">♜</span>
+    <span class="pagination-piece">Kale</span>
   </a>
-  <a href="/ogren/sah/" class="piece-next">
+  <a href="/ogren/at/" class="piece-next">
     <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♚</span>
-    <span class="pagination-piece">Şah</span>
+    <span class="pagination-symbol">♞</span>
+    <span class="pagination-piece">At</span>
   </a>
 </div>

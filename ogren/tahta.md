@@ -114,9 +114,8 @@ permalink: /ogren/tahta/
     <span class="pagination-label">← Geri</span>
     <span class="pagination-piece">Tüm Konular</span>
   </a>
-  <a href="/ogren/kale/" class="piece-next">
-    <span class="pagination-label">İlk taş →</span>
-    <span class="pagination-symbol">♜</span>
-    <span class="pagination-piece">Kale</span>
+  <a href="/ogren/genel-kurallar/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Genel Kurallar</span>
   </a>
 </div>
