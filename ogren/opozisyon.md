@@ -9,12 +9,12 @@ permalink: /ogren/opozisyon/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 7.2 · Opozisyon</span>
+  <span>Bölüm 9.2 · Opozisyon</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 7 · Oyunsonları — Şah Savaşı</span>
+    <span class="piece-page-eyebrow">Bölüm 9 · Piyon Oyunsonları — Şah Savaşı</span>
     <h1 class="piece-page-title">OPOZİSYON<br><em>TEMPO SAVAŞI</em></h1>
     <p class="piece-page-tagline">İki şah karşı karşıya geldiğinde, aralarında tam bir kare olan taraf opozisyon kazanır. Hamle yapmak zorunda olan taraf çekilmek zorundadır. Bu sessiz güç, oyunsonlarında galibiyeti belirler.</p>
   </div>
@@ -100,10 +100,10 @@ permalink: /ogren/opozisyon/
 <div class="piece-pagination">
   <a href="/ogren/er-oyunsonu/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Er Oyunsonu</span>
+    <span class="pagination-piece">Kare Kuralı</span>
   </a>
   <a href="/ogren/kenar-erleri/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Kenar Erleri</span>
+    <span class="pagination-piece">Kenar Piyonları</span>
   </a>
 </div>

@@ -94,9 +94,9 @@ permalink: /ogren/piyon-terfisi/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/gecerken-alma/" class="piece-prev">
+  <a href="/ogren/mat-kavrami/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Geçerken Alma</span>
+    <span class="pagination-piece">Mat</span>
   </a>
   <a href="/ogren/rok/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>

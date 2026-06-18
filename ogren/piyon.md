@@ -67,13 +67,11 @@ permalink: /ogren/piyon/
 
 <div class="piece-pagination">
   <a href="/ogren/at/" class="piece-prev">
-    <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♞</span>
+    <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">At</span>
   </a>
   <a href="/ogren/sah/" class="piece-next">
-    <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♚</span>
+    <span class="pagination-label">Sonraki →</span>
     <span class="pagination-piece">Şah</span>
   </a>
 </div>

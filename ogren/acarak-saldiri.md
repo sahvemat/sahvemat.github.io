@@ -94,9 +94,9 @@ permalink: /ogren/acarak-saldiri/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/sis-acmaz/" class="piece-prev">
+  <a href="/ogren/acmaz/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Şiş ve Açmaz</span>
+    <span class="pagination-piece">Açmaz</span>
   </a>
   <a href="/ogren/koridor-mat/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>

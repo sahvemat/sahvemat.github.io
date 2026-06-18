@@ -94,12 +94,12 @@ permalink: /ogren/notasyon/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/diger-kurallar/" class="piece-prev">
+  <a href="/ogren/oyunun-sonu/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Diğer Kurallar</span>
+    <span class="pagination-piece">Pat ve Beraberlik</span>
   </a>
-  <a href="/ogren/vezir-mati/" class="piece-next">
+  <a href="/ogren/merdiven-mati/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Vezir Matı</span>
+    <span class="pagination-piece">Merdiven Matı</span>
   </a>
 </div>

@@ -94,12 +94,12 @@ permalink: /ogren/cifte-tehdit/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/taslarin-karakteri/" class="piece-prev">
+  <a href="/ogren/iki-at-mati/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Taşların Karakteri</span>
+    <span class="pagination-piece">İki At ve Pat</span>
   </a>
-  <a href="/ogren/sis-acmaz/" class="piece-next">
+  <a href="/ogren/sis/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Şiş ve Açmaz</span>
+    <span class="pagination-piece">Şiş</span>
   </a>
 </div>

@@ -95,12 +95,12 @@ permalink: /ogren/vezir-mati/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/notasyon/" class="piece-prev">
+  <a href="/ogren/merdiven-mati/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Notasyon</span>
+    <span class="pagination-piece">Merdiven Matı</span>
   </a>
   <a href="/ogren/kale-mati/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Kale Matı</span>
+    <span class="pagination-piece">Kale ile Mat</span>
   </a>
 </div>

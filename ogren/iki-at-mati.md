@@ -97,10 +97,10 @@ permalink: /ogren/iki-at-mati/
 <div class="piece-pagination">
   <a href="/ogren/iki-fil-mati/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">İki Fil Matı</span>
+    <span class="pagination-piece">İki Fil ile Mat</span>
   </a>
-  <a href="/ogren/acilis-ilkeleri/" class="piece-next">
-    <span class="pagination-label">Bölüm 4 →</span>
-    <span class="pagination-piece">Açılış İlkeleri</span>
+  <a href="/ogren/cifte-tehdit/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Çatal</span>
   </a>
 </div>

@@ -9,12 +9,12 @@ permalink: /ogren/kenar-erleri/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 7.3 · Kenar Erleri</span>
+  <span>Bölüm 9.3 · Kenar Piyonları</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 7 · Oyunsonları — Beraberlik Tuzakları</span>
+    <span class="piece-page-eyebrow">Bölüm 9 · Piyon Oyunsonları — Beraberlik Tuzakları</span>
     <h1 class="piece-page-title">KENAR ERLERİ<br><em>SARKAÇ VE PAT</em></h1>
     <p class="piece-page-tagline">a ve h piyonları, merkez piyonlarından farklı kurallara tabidir. Savunan şah köşeye sığındığında ve sarkaç hareketini sürdürdüğünde, güçlü taraf materyal üstünlüğüne rağmen kazanamayabilir.</p>
   </div>
@@ -102,8 +102,8 @@ permalink: /ogren/kenar-erleri/
     <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">Opozisyon</span>
   </a>
-  <a href="/ogren/" class="piece-next">
-    <span class="pagination-label">Tüm Konular →</span>
-    <span class="pagination-piece">Satranç Öğren</span>
+  <a href="/ogren/merkez-kontrolu/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Merkez Kontrolü</span>
   </a>
 </div>
