@@ -96,12 +96,12 @@ permalink: /ogren/rok/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/mat/" class="piece-prev">
-    <span class="pagination-label">← Bölüm 2</span>
-    <span class="pagination-piece">Mat</span>
+  <a href="/ogren/piyon-terfisi/" class="piece-prev">
+    <span class="pagination-label">← Önceki</span>
+    <span class="pagination-piece">Piyon Terfisi</span>
   </a>
-  <a href="/ogren/gecerken-alma/" class="piece-next">
-    <span class="pagination-label">Sonraki konu →</span>
-    <span class="pagination-piece">Geçerken Alma</span>
+  <a href="/ogren/oyunun-sonu/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Oyunun Sonu</span>
   </a>
 </div>

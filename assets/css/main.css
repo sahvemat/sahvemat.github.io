@@ -2199,3 +2199,22 @@ pgn-player p {
     color: var(--paper);
     border-color: var(--paper);
 }
+
+.learn-subsection {
+    border-top: 1px solid var(--line);
+}
+
+.learn-subsection-label {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+    padding: 2rem 2rem 0.5rem;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .learn-subsection-label { padding: 2.5rem 4rem 0.75rem; }
+}

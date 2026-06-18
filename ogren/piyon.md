@@ -71,8 +71,9 @@ permalink: /ogren/piyon/
     <span class="pagination-symbol">♞</span>
     <span class="pagination-piece">At</span>
   </a>
-  <a href="/ogren/alma/" class="piece-next">
-    <span class="pagination-label">Bölüm 2 →</span>
-    <span class="pagination-piece">Alma</span>
+  <a href="/ogren/sah/" class="piece-next">
+    <span class="pagination-label">Sonraki taş →</span>
+    <span class="pagination-symbol">♚</span>
+    <span class="pagination-piece">Şah</span>
   </a>
 </div>

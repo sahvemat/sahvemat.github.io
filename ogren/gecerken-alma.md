@@ -94,12 +94,13 @@ permalink: /ogren/gecerken-alma/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/rok/" class="piece-prev">
-    <span class="pagination-label">← Önceki konu</span>
-    <span class="pagination-piece">Rok</span>
+  <a href="/ogren/sah/" class="piece-prev">
+    <span class="pagination-label">← Önceki taş</span>
+    <span class="pagination-symbol">♚</span>
+    <span class="pagination-piece">Şah</span>
   </a>
-  <a href="/ogren/pat/" class="piece-next">
-    <span class="pagination-label">Sonraki konu →</span>
-    <span class="pagination-piece">Pat</span>
+  <a href="/ogren/piyon-terfisi/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Piyon Terfisi</span>
   </a>
 </div>
