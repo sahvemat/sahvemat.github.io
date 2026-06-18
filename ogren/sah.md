@@ -25,6 +25,11 @@ permalink: /ogren/sah/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
+    <fen>
+  [FEN "8/8/8/8/4K3/8/8/8 w - - 0 1"]
+  {[%cal Ge4e5,Ge4e3,Ge4d5,Ge4d3,Ge4d4,Ge4f5,Ge4f4,Ge4f3]}
+</fen>
+    
     <p class="piece-text">Şah her yönde hareket edebilir — yatay, dikey ve çapraz — ancak her seferinde yalnızca bir kare. Bu kısıtına karşın oyunun merkezi taşıdır; onun mat edilmesi anında oyunu bitirir.</p>
     <p class="piece-text">Şah, tehdit altındaki bir kareye giremez. Rakibin herhangi bir taşının saldırdığı kare "tehlikeli" sayılır ve şah oraya adım atamaz. Bu kural, şahın korunmasını stratejinin merkezine taşır.</p>
     <p class="piece-text">Şah tehdit altına girdiğinde "şah çekme" denir. Oyuncu üç seçenekten birini uygulamalıdır: şahı güvenli bir kareye taşımak, tehdidi kesen bir taş koymak veya tehdit eden taşı almak. Bölüm 2'de bu kavramları ayrıntılı göreceksiniz.</p>
