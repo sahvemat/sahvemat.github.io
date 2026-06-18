@@ -9,12 +9,12 @@ permalink: /ogren/notasyon/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 2.1 · Notasyon</span>
+  <span>Bölüm 5.1 · Algebraik Notasyon</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 2 · Notasyon — Algebraic Notation · Evrensel satranç dili</span>
+    <span class="piece-page-eyebrow">Bölüm 5 · Hamlelerin Yazılması — Algebraic Notation · Evrensel satranç dili</span>
     <h1 class="piece-page-title">NOTASYON</h1>
     <p class="piece-page-tagline">Tüm dünyada satranççıların kullandığı ortak dil. Bir partiyi sayfadan okuyabilmek için şarttır.</p>
   </div>

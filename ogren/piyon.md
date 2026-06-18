@@ -9,12 +9,12 @@ permalink: /ogren/piyon/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1 · Piyon</span>
+  <span>Bölüm 1.5 · Piyon</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Pawn · 1 puan · Her oyuncuda 8 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — Pawn · 1 puan · Her oyuncuda 8 adet</span>
     <h1 class="piece-page-title">PİYON</h1>
     <p class="piece-page-tagline">"Piyon, satrancın ruhudur." — François-André Philidor</p>
   </div>

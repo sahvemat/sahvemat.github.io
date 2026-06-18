@@ -9,12 +9,12 @@ permalink: /ogren/kale/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1 · Kale</span>
+  <span>Bölüm 1.1 · Kale</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Rook · 5 puan · Her oyuncuda 2 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — Rook · 5 puan · Her oyuncuda 2 adet</span>
     <h1 class="piece-page-title">KALE</h1>
     <p class="piece-page-tagline">Uzun hatların efendisi. Açık sütunlarda olağanüstü güçtür.</p>
   </div>

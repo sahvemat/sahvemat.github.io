@@ -9,12 +9,12 @@ permalink: /ogren/koridor-mat/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 6.1 · Koridor Matı</span>
+  <span>Bölüm 8.1 · Koridor Matı</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 6 · Mat Kalıpları — Pratikte en sık karşılaşılan mat</span>
+    <span class="piece-page-eyebrow">Bölüm 8 · Mat Temaları — Pratikte en sık karşılaşılan mat</span>
     <h1 class="piece-page-title">KORİDOR<br>MATI</h1>
     <p class="piece-page-tagline">Şah kendi erlerinin arkasında mahsur kaldığında, ağır taş son sıradan tek hamlede mat eder.</p>
   </div>

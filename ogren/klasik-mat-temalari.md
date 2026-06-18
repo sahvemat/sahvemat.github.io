@@ -9,12 +9,12 @@ permalink: /ogren/klasik-mat-temalari/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 6.3 · Klasik Mat Temaları</span>
+  <span>Bölüm 8.3 · Klasik Mat Motifleri</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 6 · Mat Kalıpları — Yüzyıllar boyunca tekrar eden kalıplar</span>
+    <span class="piece-page-eyebrow">Bölüm 8 · Mat Temaları — Yüzyıllar boyunca tekrar eden kalıplar</span>
     <h1 class="piece-page-title">KLASİK<br>MAT TEMALARI</h1>
     <p class="piece-page-tagline">Damiano, Lolli, Mayet, Boden — satranç tarihinin dört temel mat kalıbı.</p>
   </div>

@@ -9,12 +9,12 @@ permalink: /ogren/vezir/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1 · Vezir</span>
+  <span>Bölüm 1.3 · Vezir</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Queen · 9 puan · Her oyuncuda 1 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — Queen · 9 puan · Her oyuncuda 1 adet</span>
     <h1 class="piece-page-title">VEZİR</h1>
     <p class="piece-page-tagline">Tahtanın en güçlü taşı. Kale ve filin tüm güçlerini tek bedende taşır.</p>
   </div>

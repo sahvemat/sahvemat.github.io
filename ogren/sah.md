@@ -9,12 +9,12 @@ permalink: /ogren/sah/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1 · Şah</span>
+  <span>Bölüm 1.6 · Şah</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — King · Sınırsız değer · Her oyuncuda 1 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — King · Sınırsız değer · Her oyuncuda 1 adet</span>
     <h1 class="piece-page-title">ŞAH</h1>
     <p class="piece-page-tagline">Oyunun kalbi ve tek hedefi. Onu kaybetmek oyunu kaybetmektir.</p>
   </div>
