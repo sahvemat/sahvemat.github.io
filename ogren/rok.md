@@ -96,9 +96,9 @@ permalink: /ogren/rok/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/tahta/" class="piece-prev">
-    <span class="pagination-label">← Önceki konu</span>
-    <span class="pagination-piece">Tahta</span>
+  <a href="/ogren/mat/" class="piece-prev">
+    <span class="pagination-label">← Bölüm 2</span>
+    <span class="pagination-piece">Mat</span>
   </a>
   <a href="/ogren/gecerken-alma/" class="piece-next">
     <span class="pagination-label">Sonraki konu →</span>

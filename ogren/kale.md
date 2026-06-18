@@ -66,9 +66,9 @@ permalink: /ogren/kale/
 </div>
 
 <div class="piece-pagination">
-  <a href="/ogren/" class="piece-prev">
-    <span class="pagination-label">← Geri</span>
-    <span class="pagination-piece">Tüm Taşlar</span>
+  <a href="/ogren/tahta/" class="piece-prev">
+    <span class="pagination-label">← Önceki ders</span>
+    <span class="pagination-piece">Tahta</span>
   </a>
   <a href="/ogren/fil/" class="piece-next">
     <span class="pagination-label">Sonraki taş →</span>
