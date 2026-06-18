@@ -267,3 +267,33 @@ permalink: /ogren/
     </a>
   </div>
 </section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
+    <span class="learn-chapter-num">07</span>
+    <div>
+      <h2 class="learn-chapter-title">OYUNSONLARI</h2>
+      <p class="learn-chapter-desc">Oyunun en kritik aşamasında doğru oynamayı öğrenin.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/er-oyunsonu/" class="concept-card">
+      <span class="concept-card-num">7.1</span>
+      <span class="concept-card-name">Er Oyunsonu</span>
+      <p class="concept-card-desc">Kare kuralı ve anahtar kareler. Piyon oyunsonunun temel ilkeleri.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/opozisyon/" class="concept-card">
+      <span class="concept-card-num">7.2</span>
+      <span class="concept-card-name">Opozisyon</span>
+      <p class="concept-card-desc">Yakın, uzak ve çapraz opozisyon. Şah oyunsonunun tempo savaşı.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+    <a href="/ogren/kenar-erleri/" class="concept-card">
+      <span class="concept-card-num">7.3</span>
+      <span class="concept-card-name">Kenar Erleri</span>
+      <p class="concept-card-desc">a ve h piyonlarının özel dinamikleri. Beraberlik tuzakları.</p>
+      <span class="concept-card-arrow">İncele →</span>
+    </a>
+  </div>
+</section>
