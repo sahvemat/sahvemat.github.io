@@ -18,7 +18,7 @@ permalink: /ogren/kale/
     <h1 class="piece-page-title">KALE</h1>
     <p class="piece-page-tagline">Uzun hatların efendisi. Açık sütunlarda olağanüstü güçtür.</p>
   </div>
-  <div class="piece-page-symbol">♜</div>
+  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wR.png" alt="Kale"></div>
 </div>
 
 <div class="piece-content">

@@ -18,7 +18,7 @@ permalink: /ogren/fil/
     <h1 class="piece-page-title">FİL</h1>
     <p class="piece-page-tagline">Çaprazların hâkimi. Hiçbir zaman kare rengini değiştirmez.</p>
   </div>
-  <div class="piece-page-symbol">♝</div>
+  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wB.png" alt="Fil"></div>
 </div>
 
 <div class="piece-content">
