@@ -99,8 +99,8 @@ permalink: /ogren/iki-at-mati/
     <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">İki Fil Matı</span>
   </a>
-  <a href="/ogren/" class="piece-next">
-    <span class="pagination-label">Tüm Konular →</span>
-    <span class="pagination-piece">Satranç Öğren</span>
+  <a href="/ogren/acilis-ilkeleri/" class="piece-next">
+    <span class="pagination-label">Bölüm 4 →</span>
+    <span class="pagination-piece">Açılış İlkeleri</span>
   </a>
 </div>
