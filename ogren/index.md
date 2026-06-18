@@ -49,37 +49,37 @@ permalink: /ogren/
         <span class="piece-card-cta">1.1 →</span>
       </a>
       <a href="/ogren/fil/" class="piece-card">
-        <span class="piece-card-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wB.png" alt="Fil"></span>
+        <span class="piece-card-symbol"><img src="/assets/img/pieces/wB.png" alt="Fil"></span>
         <span class="piece-card-name">Fil</span>
         <span class="piece-card-desc">Çaprazların hâkimi. Hiçbir zaman kare rengini değiştirmez.</span>
         <span class="piece-card-cta">1.2 →</span>
       </a>
       <a href="/ogren/kale/" class="piece-card">
-        <span class="piece-card-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wR.png" alt="Kale"></span>
+        <span class="piece-card-symbol"><img src="/assets/img/pieces/wR.png" alt="Kale"></span>
         <span class="piece-card-name">Kale</span>
         <span class="piece-card-desc">Satır ve sütunların efendisi. Güçlü, direkt, etkili.</span>
         <span class="piece-card-cta">1.3 →</span>
       </a>
       <a href="/ogren/vezir/" class="piece-card">
-        <span class="piece-card-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wQ.png" alt="Vezir"></span>
+        <span class="piece-card-symbol"><img src="/assets/img/pieces/wQ.png" alt="Vezir"></span>
         <span class="piece-card-name">Vezir</span>
         <span class="piece-card-desc">Tahtanın en güçlü taşı. Kale ve filin tüm güçlerini taşır.</span>
         <span class="piece-card-cta">1.4 →</span>
       </a>
       <a href="/ogren/at/" class="piece-card">
-        <span class="piece-card-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wN.png" alt="At"></span>
+        <span class="piece-card-symbol"><img src="/assets/img/pieces/wN.png" alt="At"></span>
         <span class="piece-card-name">At</span>
         <span class="piece-card-desc">Satrancın en özel taşı. L şeklinde hareket eder, her şeyin üzerinden atlar.</span>
         <span class="piece-card-cta">1.5 →</span>
       </a>
       <a href="/ogren/piyon/" class="piece-card">
-        <span class="piece-card-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wP.png" alt="Piyon"></span>
+        <span class="piece-card-symbol"><img src="/assets/img/pieces/wP.png" alt="Piyon"></span>
         <span class="piece-card-name">Piyon</span>
         <span class="piece-card-desc">Satrancın ruhu. Mütevazı başlangıç, büyük potansiyel.</span>
         <span class="piece-card-cta">1.6 →</span>
       </a>
       <a href="/ogren/sah/" class="piece-card">
-        <span class="piece-card-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wK.png" alt="Şah"></span>
+        <span class="piece-card-symbol"><img src="/assets/img/pieces/wK.png" alt="Şah"></span>
         <span class="piece-card-name">Şah</span>
         <span class="piece-card-desc">Oyunun kalbi ve tek hedefi. Onu kaybetmek oyunu kaybetmektir.</span>
         <span class="piece-card-cta">1.7 →</span>

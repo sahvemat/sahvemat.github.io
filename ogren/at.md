@@ -18,7 +18,7 @@ permalink: /ogren/at/
     <h1 class="piece-page-title">AT</h1>
     <p class="piece-page-tagline">Satrancın en özel taşı. L şeklinde hareket eder, her şeyin üzerinden atlar.</p>
   </div>
-  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wN.png" alt="At"></div>
+  <div class="piece-page-symbol"><img src="/assets/img/pieces/wN.png" alt="At"></div>
 </div>
 
 <div class="piece-content">
