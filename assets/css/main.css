@@ -1842,11 +1842,16 @@ pgn-player p {
 }
 
 .piece-page-symbol {
-    font-size: clamp(5rem, 15vw, 11rem);
-    line-height: 1;
-    color: var(--accent);
     text-align: right;
     align-self: center;
+}
+
+.piece-page-symbol img {
+    width: clamp(5rem, 15vw, 10rem);
+    height: clamp(5rem, 15vw, 10rem);
+    display: block;
+    margin-left: auto;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
 }
 
 .piece-content {

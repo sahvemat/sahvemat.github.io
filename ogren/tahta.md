@@ -9,12 +9,12 @@ permalink: /ogren/tahta/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3 · Tahta</span>
+  <span>Giriş · Tahta</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Özel Kurallar</span>
+    <span class="piece-page-eyebrow">Giriş · İlk Ders</span>
     <h1 class="piece-page-title">TAHTA</h1>
     <p class="piece-page-tagline">64 kare, 8 sütun, 8 sıra. Koordinat sistemini anlamak oyunun dilidir.</p>
   </div>
@@ -110,12 +110,13 @@ permalink: /ogren/tahta/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/mat/" class="piece-prev">
-    <span class="pagination-label">← Bölüm 2</span>
-    <span class="pagination-piece">Mat</span>
+  <a href="/ogren/" class="piece-prev">
+    <span class="pagination-label">← Geri</span>
+    <span class="pagination-piece">Tüm Konular</span>
   </a>
-  <a href="/ogren/rok/" class="piece-next">
-    <span class="pagination-label">Sonraki konu →</span>
-    <span class="pagination-piece">Rok</span>
+  <a href="/ogren/kale/" class="piece-next">
+    <span class="pagination-label">İlk taş →</span>
+    <span class="pagination-symbol">♜</span>
+    <span class="pagination-piece">Kale</span>
   </a>
 </div>

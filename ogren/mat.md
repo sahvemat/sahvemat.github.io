@@ -98,8 +98,8 @@ permalink: /ogren/mat/
     <span class="pagination-label">← Önceki konu</span>
     <span class="pagination-piece">Şah Çekme</span>
   </a>
-  <a href="/ogren/tahta/" class="piece-next">
+  <a href="/ogren/rok/" class="piece-next">
     <span class="pagination-label">Bölüm 3 →</span>
-    <span class="pagination-piece">Tahta</span>
+    <span class="pagination-piece">Rok</span>
   </a>
 </div>

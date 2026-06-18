@@ -12,6 +12,24 @@ permalink: /ogren/
 
 <section class="learn-chapter">
   <div class="learn-chapter-header">
+    <div class="learn-chapter-num">00</div>
+    <div>
+      <h2 class="learn-chapter-title">GİRİŞ</h2>
+      <p class="learn-chapter-desc">Her şeyden önce sahneyi tanıyın. Taşları öğrenmeden önce tahtayı anlayın.</p>
+    </div>
+  </div>
+  <div class="pieces-grid">
+    <a href="/ogren/tahta/" class="concept-card">
+      <span class="concept-card-num">0.1</span>
+      <div class="concept-card-name">Tahta</div>
+      <p class="concept-card-desc">64 kare, 8 sütun, 8 sıra. Koordinat sistemini ve başlangıç dizilişini öğrenin.</p>
+      <span class="concept-card-arrow">Buradan Başlayın →</span>
+    </a>
+  </div>
+</section>
+
+<section class="learn-chapter">
+  <div class="learn-chapter-header">
     <div class="learn-chapter-num">01</div>
     <div>
       <h2 class="learn-chapter-title">TAŞLAR</h2>
@@ -109,26 +127,20 @@ permalink: /ogren/
     </div>
   </div>
   <div class="pieces-grid">
-    <a href="/ogren/tahta/" class="concept-card">
-      <span class="concept-card-num">3.1</span>
-      <div class="concept-card-name">Tahta</div>
-      <p class="concept-card-desc">64 kare, 8 sütun, 8 sıra. Koordinat sistemini ve başlangıç dizilişini öğrenin.</p>
-      <span class="concept-card-arrow">Öğren →</span>
-    </a>
     <a href="/ogren/rok/" class="concept-card">
-      <span class="concept-card-num">3.2</span>
+      <span class="concept-card-num">3.1</span>
       <div class="concept-card-name">Rok</div>
       <p class="concept-card-desc">Şah ile kalenin özel hamlesi. Hem kral güvenliği hem kale aktivasyonu.</p>
       <span class="concept-card-arrow">Öğren →</span>
     </a>
     <a href="/ogren/gecerken-alma/" class="concept-card">
-      <span class="concept-card-num">3.3</span>
+      <span class="concept-card-num">3.2</span>
       <div class="concept-card-name">Geçerken Alma</div>
       <p class="concept-card-desc">Satrancın en az bilinen ama en zarif piyonu kuralı.</p>
       <span class="concept-card-arrow">Öğren →</span>
     </a>
     <a href="/ogren/pat/" class="concept-card">
-      <span class="concept-card-num">3.4</span>
+      <span class="concept-card-num">3.3</span>
       <div class="concept-card-name">Pat</div>
       <p class="concept-card-desc">Hamle yapılamaz ama şah yok. Kazanan beraberliği nasıl kaçırır?</p>
       <span class="concept-card-arrow">Öğren →</span>

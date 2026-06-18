@@ -18,7 +18,7 @@ permalink: /ogren/vezir/
     <h1 class="piece-page-title">VEZİR</h1>
     <p class="piece-page-tagline">Tahtanın en güçlü taşı. Kale ve filin tüm güçlerini tek bedende taşır.</p>
   </div>
-  <div class="piece-page-symbol">♛</div>
+  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wQ.png" alt="Vezir"></div>
 </div>
 
 <div class="piece-content">

@@ -18,7 +18,7 @@ permalink: /ogren/kale/
     <h1 class="piece-page-title">KALE</h1>
     <p class="piece-page-tagline">Uzun hatların efendisi. Açık sütunlarda olağanüstü güçtür.</p>
   </div>
-  <div class="piece-page-symbol">♜</div>
+  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wR.png" alt="Kale"></div>
 </div>
 
 <div class="piece-content">
@@ -72,9 +72,9 @@ permalink: /ogren/kale/
 </div>
 
 <div class="piece-pagination">
-  <a href="/ogren/" class="piece-prev">
-    <span class="pagination-label">← Geri</span>
-    <span class="pagination-piece">Tüm Taşlar</span>
+  <a href="/ogren/tahta/" class="piece-prev">
+    <span class="pagination-label">← Önceki ders</span>
+    <span class="pagination-piece">Tahta</span>
   </a>
   <a href="/ogren/fil/" class="piece-next">
     <span class="pagination-label">Sonraki taş →</span>
