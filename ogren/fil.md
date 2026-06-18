@@ -25,6 +25,12 @@ permalink: /ogren/fil/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
+    
+  <fen>
+  [FEN "8/8/8/8/4B3/8/8/8 w - - 0 1"]
+  {[%cal Ge4h7,Ge4b1,Ge4h1,Ge4a8]}
+</fen>
+
     <p class="piece-text">Fil yalnızca çapraz yönde hareket eder. Sağ-yukarı, sol-yukarı, sağ-aşağı ve sol-aşağı olmak üzere dört çapraz doğrultuda, istediği kadar kare gidebilir.</p>
     <p class="piece-text">Her oyuncunun iki fili vardır: biri yalnızca açık renk karelerde, diğeri yalnızca koyu renk karelerde kalır. Bu, filin tüm oyun boyunca değişmez bir özelliğidir.</p>
     <p class="piece-text">Açık pozisyonlarda uzun çaprazları kontrol eden fil son derece güçlüdür. Piyonların gerisine sıkışan file ise "kötü fil" denir.</p>
