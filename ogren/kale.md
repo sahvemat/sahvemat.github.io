@@ -28,7 +28,7 @@ permalink: /ogren/kale/
 <div>
   <fen>
   [FEN "8/8/8/8/4R3/8/8/8 w - - 0 1"]
-  {[%cal Ge4h5,Ge4e8,Ge4e1,Ge4a4]}
+  {[%cal Ge4h4,Ge4e8,Ge4e1,Ge4a4]}
 </fen>
 </div>
     <p class="piece-text">Kale, yatay veya dikey olarak istediği kadar kare hareket edebilir. Hem soluna hem sağına, hem de öne ve arkaya gidebilir; tek kısıtı yolunu kesen taşlardır.</p>
