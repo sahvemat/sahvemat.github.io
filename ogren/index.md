@@ -5,8 +5,8 @@ permalink: /ogren/
 ---
 
 <section class="learn-hero">
-  <span class="learn-hero-eyebrow">Başlangıç Rehberi</span>
-  <h1 class="learn-hero-title">SATRANÇ<br><em>öğren</em></h1>
+  <span class="learn-hero-eyebrow">Satranç Öğren</span>
+  <h1 class="learn-hero-title">Başlangıç<br><em>Rehberi</em></h1>
   <p class="learn-hero-desc">Satranç tahtasından mat'a — her kavramı adım adım, üç bölümde öğrenin.</p>
 </section>
 
