@@ -18,7 +18,7 @@ permalink: /ogren/piyon/
     <h1 class="piece-page-title">PİYON</h1>
     <p class="piece-page-tagline">"Piyon, satrancın ruhudur." — François-André Philidor</p>
   </div>
-  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wP.png" alt="Piyon"></div>
+  <div class="piece-page-symbol"><img src="/assets/img/pieces/wP.png" alt="Piyon"></div>
 </div>
 
 <div class="piece-content">

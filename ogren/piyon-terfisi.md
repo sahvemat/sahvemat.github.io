@@ -18,7 +18,7 @@ permalink: /ogren/piyon-terfisi/
     <h1 class="piece-page-title">PİYON<br>TERFİSİ</h1>
     <p class="piece-page-tagline">Piyonun hayalinin sonu: son sıraya ulaşmak. O andan itibaren her şey değişir.</p>
   </div>
-  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wQ.png" alt="Vezir"></div>
+  <div class="piece-page-symbol"><img src="/assets/img/pieces/wQ.png" alt="Vezir"></div>
 </div>
 
 <div class="piece-content">

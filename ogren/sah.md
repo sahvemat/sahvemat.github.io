@@ -18,7 +18,7 @@ permalink: /ogren/sah/
     <h1 class="piece-page-title">ŞAH</h1>
     <p class="piece-page-tagline">Oyunun kalbi ve tek hedefi. Onu kaybetmek oyunu kaybetmektir.</p>
   </div>
-  <div class="piece-page-symbol"><img src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/wK.png" alt="Şah"></div>
+  <div class="piece-page-symbol"><img src="/assets/img/pieces/wK.png" alt="Şah"></div>
 </div>
 
 <div class="piece-content">
