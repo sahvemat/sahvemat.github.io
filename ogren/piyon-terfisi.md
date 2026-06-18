@@ -9,12 +9,12 @@ permalink: /ogren/piyon-terfisi/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1.9 · Piyon Terfisi</span>
+  <span>Bölüm 4.1 · Piyon Terfisi</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Özel Hamleler — Promotion · Piyona özgü kural</span>
+    <span class="piece-page-eyebrow">Bölüm 4 · Diğer Kurallar — Promotion · Piyona özgü kural</span>
     <h1 class="piece-page-title">PİYON<br>TERFİSİ</h1>
     <p class="piece-page-tagline">Piyonun hayalinin sonu: son sıraya ulaşmak. O andan itibaren her şey değişir.</p>
   </div>

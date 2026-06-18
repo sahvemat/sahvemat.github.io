@@ -9,12 +9,12 @@ permalink: /ogren/acarak-saldiri/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 5.3 · Açarak Saldırı</span>
+  <span>Bölüm 7.4 · Açarak Saldırı</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 5 · Taktik Araçlar — Taktiğin en güçlü silahlarından biri</span>
+    <span class="piece-page-eyebrow">Bölüm 7 · Temel Taktikler — Taktiğin en güçlü silahlarından biri</span>
     <h1 class="piece-page-title">AÇARAK<br>SALDIRI</h1>
     <p class="piece-page-tagline">Bir taşı hareket ettirin, arkasındakini serbest bırakın. Rakip ikisine birden yetişemez.</p>
   </div>

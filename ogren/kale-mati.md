@@ -9,12 +9,12 @@ permalink: /ogren/kale-mati/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3.2 · Kale Matı</span>
+  <span>Bölüm 6.2 · Kale ile Mat</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Basit Matlar — Şah + Kale vs Şah</span>
+    <span class="piece-page-eyebrow">Bölüm 6 · Temel Matlar — Şah + Kale vs Şah</span>
     <h1 class="piece-page-title">KALE<br>MATI</h1>
     <p class="piece-page-tagline">Vezirden daha zor, ama yine de kazanılabilir. Şahın aktif desteği olmadan kale tek başına hiçbir şey yapamaz.</p>
   </div>

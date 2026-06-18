@@ -9,12 +9,12 @@ permalink: /ogren/iki-fil-mati/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3.3 · İki Fil Matı</span>
+  <span>Bölüm 6.3 · İki Fil ile Mat</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Basit Matlar — Şah + İki Fil vs Şah</span>
+    <span class="piece-page-eyebrow">Bölüm 6 · Temel Matlar — Şah + İki Fil vs Şah</span>
     <h1 class="piece-page-title">İKİ FİL<br>MATI</h1>
     <p class="piece-page-tagline">İki fil birlikte çalıştığında tahtanın tamamını kontrol altına alır — biri açık kareleri, diğeri koyu kareleri hükmü altında tutar.</p>
   </div>

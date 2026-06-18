@@ -9,12 +9,12 @@ permalink: /ogren/bogmaca-mati/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 6.2 · Boğmaca ve Arap Matı</span>
+  <span>Bölüm 8.2 · Boğmaca ve Arap Matı</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 6 · Mat Kalıpları — At ile yapılan en zarif matlar</span>
+    <span class="piece-page-eyebrow">Bölüm 8 · Mat Temaları — At ile yapılan en zarif matlar</span>
     <h1 class="piece-page-title">BOĞMACA<br>VE ARAP MATI</h1>
     <p class="piece-page-tagline">Şah kendi taşlarına boğulduğunda, at ölümcül darbeyi indirir.</p>
   </div>

@@ -9,12 +9,12 @@ permalink: /ogren/iki-at-mati/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3.4 · İki At ve Pat</span>
+  <span>Bölüm 6.4 · İki At ve Pat</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Basit Matlar — Şah + İki At vs Şah · Özel durum</span>
+    <span class="piece-page-eyebrow">Bölüm 6 · Temel Matlar — Şah + İki At vs Şah · Özel durum</span>
     <h1 class="piece-page-title">İKİ AT<br>VE PAT</h1>
     <p class="piece-page-tagline">İki at mat pozisyonu kurabilir — ama oraya ulaşmanın yolu pat tuzağından geçer. Bu oyunsonu teoride berabere, pratikte ise en büyük dersi sunar.</p>
   </div>

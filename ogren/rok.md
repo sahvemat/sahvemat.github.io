@@ -9,12 +9,12 @@ permalink: /ogren/rok/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3 · Rok</span>
+  <span>Bölüm 4.2 · Rok</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Özel Kurallar</span>
+    <span class="piece-page-eyebrow">Bölüm 4 · Diğer Kurallar</span>
     <h1 class="piece-page-title">ROK</h1>
     <p class="piece-page-tagline">Şah ile kale arasındaki tek ortak hamle. Hem koruma hem aktivasyon.</p>
   </div>

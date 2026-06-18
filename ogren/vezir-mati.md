@@ -9,12 +9,12 @@ permalink: /ogren/vezir-mati/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3.1 · Vezir Matı</span>
+  <span>Bölüm 6.1 · Vezir ile Mat</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Basit Matlar — Şah + Vezir vs Şah</span>
+    <span class="piece-page-eyebrow">Bölüm 6 · Temel Matlar — Şah + Vezir vs Şah</span>
     <h1 class="piece-page-title">VEZİR<br>MATI</h1>
     <p class="piece-page-tagline">En kolay oyunsonu — ama yine de bir plana ihtiyaç var. Rastgele hamlelerle mat yapılamaz; bir yöntem izlenmesi şarttır.</p>
   </div>

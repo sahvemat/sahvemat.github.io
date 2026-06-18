@@ -9,12 +9,12 @@ permalink: /ogren/oyunun-sonu/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1.11 · Oyunun Sonu</span>
+  <span>Bölüm 4.4 · Pat ve Beraberlik</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Oyunun Tamamlanması — Hedef, zafer ve beraberlik</span>
+    <span class="piece-page-eyebrow">Bölüm 4 · Diğer Kurallar — Hedef, zafer ve beraberlik</span>
     <h1 class="piece-page-title">OYUNUN<br>SONU</h1>
     <p class="piece-page-tagline">Satranç mat ile biter. Ya da bitmeyebilir de. Tüm sonuçları tanıyın.</p>
   </div>

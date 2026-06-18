@@ -9,12 +9,12 @@ permalink: /ogren/cifte-tehdit/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 5.1 · Çatal ve Çifte Tehdit</span>
+  <span>Bölüm 7.1 · Çatal</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 5 · Taktik Araçlar — Strateji düşünmenin, taktik görmenin işidir</span>
+    <span class="piece-page-eyebrow">Bölüm 7 · Temel Taktikler — Strateji düşünmenin, taktik görmenin işidir</span>
     <h1 class="piece-page-title">ÇATAL VE<br>ÇİFTE TEHDİT</h1>
     <p class="piece-page-tagline">Tek bir hamleyle iki hedefe saldırın. Rakip ikisini birden kurtaramaz.</p>
   </div>

@@ -9,12 +9,12 @@ permalink: /ogren/at/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1 · At</span>
+  <span>Bölüm 1.4 · At</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Knight · 3 puan · Her oyuncuda 2 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — Knight · 3 puan · Her oyuncuda 2 adet</span>
     <h1 class="piece-page-title">AT</h1>
     <p class="piece-page-tagline">Satrancın en özel taşı. L şeklinde hareket eder, her şeyin üzerinden atlar.</p>
   </div>

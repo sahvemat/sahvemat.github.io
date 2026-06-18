@@ -9,12 +9,12 @@ permalink: /ogren/fil/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 1 · Fil</span>
+  <span>Bölüm 1.2 · Fil</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 1 · Taşlar — Bishop · 3 puan · Her oyuncuda 2 adet</span>
+    <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — Bishop · 3 puan · Her oyuncuda 2 adet</span>
     <h1 class="piece-page-title">FİL</h1>
     <p class="piece-page-tagline">Çaprazların hâkimi. Hiçbir zaman kare rengini değiştirmez.</p>
   </div>

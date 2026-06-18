@@ -9,12 +9,12 @@ permalink: /ogren/gecerken-alma/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 3 · Geçerken Alma</span>
+  <span>Bölüm 4.3 · Geçerken Alma</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 3 · Özel Kurallar</span>
+    <span class="piece-page-eyebrow">Bölüm 4 · Diğer Kurallar</span>
     <h1 class="piece-page-title">GEÇERKEN<br>ALMA</h1>
     <p class="piece-page-tagline">Satrancın en nadir ve en zarif kuralı. Şimdi ya da asla.</p>
   </div>

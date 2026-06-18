@@ -9,12 +9,12 @@ permalink: /ogren/er-oyunsonu/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 7.1 · Er Oyunsonu</span>
+  <span>Bölüm 9.1 · Kare Kuralı</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 7 · Oyunsonları — Piyon ve Şah</span>
+    <span class="piece-page-eyebrow">Bölüm 9 · Piyon Oyunsonları — Piyon ve Şah</span>
     <h1 class="piece-page-title">ER OYUNSONU<br><em>KARE KURALI</em></h1>
     <p class="piece-page-tagline">Oyunsonları satrancın en kritik aşamasıdır. Açılış hataları veya orta oyun saldırılarından çok daha fazla oyun, oyunsonu hatalarıyla kaybedilir. Doğru tekniği öğrenmek kazanan ile beraberlik arasındaki farkı belirler.</p>
   </div>
