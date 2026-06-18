@@ -25,6 +25,12 @@ permalink: /ogren/kale/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
+<div>
+  <fen>
+  [FEN "8/8/8/8/4R3/8/8/8 w - - 0 1"]
+  {[%cal Ge4h5,Ge4e8,Ge4e1,Ge4a4]}
+</fen>
+</div>
     <p class="piece-text">Kale, yatay veya dikey olarak istediği kadar kare hareket edebilir. Hem soluna hem sağına, hem de öne ve arkaya gidebilir; tek kısıtı yolunu kesen taşlardır.</p>
     <p class="piece-text">Yolunda dost bir taş varsa o kareye kadar ilerleyebilir ancak geçemez. Düşman bir taş varsa onu alarak o kareye yerleşir, daha öteye gidemez.</p>
     <p class="piece-text">Oyunun başında köşelere hapsolur; diğer taşlar oyuna girdikçe kalenin açık hat bulması kolaylaşır ve gerçek gücü ortaya çıkar.</p>
