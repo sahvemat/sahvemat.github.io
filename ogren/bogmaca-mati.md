@@ -1,5 +1,5 @@
 ---
-title: Boğmaca Matı — Satranç Öğren
+title: Boğmaca ve Arap Matı — Satranç Öğren
 layout: default
 permalink: /ogren/bogmaca-mati/
 ---
@@ -9,79 +9,86 @@ permalink: /ogren/bogmaca-mati/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 6.2 · Boğmaca Matı</span>
+  <span>Bölüm 6.2 · Boğmaca ve Arap Matı</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 6 · Mat Kalıpları — At'ın Zafer Anı</span>
-    <h1 class="piece-page-title">BOĞMACA<br><em>MATI</em></h1>
-    <p class="piece-page-tagline">Kendi taşlarıyla boğulan şahı at tek başına mat eder. Zarif, nadir ve unutulmaz — satrancın en güzel mat kalıbı.</p>
+    <span class="piece-page-eyebrow">Bölüm 6 · Mat Kalıpları — At ile yapılan en zarif matlar</span>
+    <h1 class="piece-page-title">BOĞMACA<br>VE ARAP MATI</h1>
+    <p class="piece-page-tagline">Şah kendi taşlarına boğulduğunda, at ölümcül darbeyi indirir.</p>
   </div>
   <div class="piece-page-symbol">♞</div>
 </div>
 
 <div class="piece-content">
   <div class="piece-text-col">
-    <span class="piece-section-label">Boğmaca ve Arap Matı</span>
-    <h2 class="piece-section-heading">AT MATI VE KÖŞE TUZAĞI</h2>
-    <p class="piece-text">Boğmaca matı (smothered mate), atın kendi taşlarıyla çevrilmiş bir şahı mat ettiği nadide kalıptır. Şah köşeye ya da kenara sıkışmıştır, çıkış yolları kendi taşlarıyla kapatılmıştır — ve at yalnız başına mat yapar. Bu mat özellikle vezir fedakârlığıyla önceden hazırlanır.</p>
-    <p class="piece-text">Klasik boğmaca matı kombinasyonu şöyle ilerler: şah köşeye sürülür, kale ve piyon onu çevreler. Ardından vezir fedası gelir — şah veziri almak zorundadır. Ve son olarak at o köşeye atlar, mat. Vezir feda edilmesi bu matın en dramatik anıdır; genellikle "at ile matı hazırlamak için veziri yok ediyorum" kombinasyonu olarak tanınır.</p>
-    <p class="piece-text">Arap matı (Arabian mate), at ve kale birlikte köşede mat yapar. Kale şahın yan kaçışını keser, at ise çapraz kaçışı engeller — at eşsiz biçimde birbirini dik kesen iki çaprazı kontrol eder. Bu mat köşede oluşur ve orta oyunda en az bir kale + at kalırsa akılda tutulması gereken bir kalıptır.</p>
+    <span class="piece-section-label">At ile Mat</span>
+    <h2 class="piece-section-heading">BOĞULMUŞ BİR ŞAH</h2>
+    <p class="piece-text"><strong>Boğmaca matı</strong>, şahın kendi taşları tarafından çevrildiği ve ardından bir atın mat verdiği kalıptır. Şah hiçbir yöne kaçamaz çünkü tüm komşu kareler kendi taşları tarafından doldurulmuştur. "Boğmaca" adı tam da bu görüntüden gelir: şah boğulmuş, nefes alamaz hale gelmiştir.</p>
+    <p class="piece-text">Klasik boğmaca sekansı bir vezir fedası içerir: 1.Vg8+! Şxg8 2.Af7# — beyaz veziri g8'e fededer, siyah şah onu almak zorunda kalır. Artık kendi taşları tarafından çevrilmiş olan şah, f7'ye atlayan atın matiyle karşılaşır. Bu sekans satrancın en zarif ve beklenmedik kombinasyonlarından biridir.</p>
+    <p class="piece-text"><strong>Arap matı</strong>, yaklaşık bin yıllık Arap satranç elyazmalarında belgelenmiş en eski mat kalıplarından biridir. Kale ve at koordineli çalışarak köşeye sıkışmış bir şahı mat eder: kale son sırayı kontrol eder, at ise şahın kaçabileceği köşe karesini bloke eder. Bu kombinasyon bugün hâlâ modern grandmaster partilerinde karşımıza çıkar.</p>
     <ul class="move-rules">
       <li class="move-rule">
-        <span class="move-rule-icon">N</span>
-        <span class="move-rule-text">Boğmaca matı — şah kendi taşlarıyla çevrilir, at köşeye atlayarak mat yapar. Kurtarış hamlesi yoktur.</span>
+        <span class="move-rule-icon">♞</span>
+        <span class="move-rule-text">Boğmaca matında şah kendi taşları tarafından çevrilmiştir.</span>
       </li>
       <li class="move-rule">
-        <span class="move-rule-icon">Q</span>
-        <span class="move-rule-text">Vezir fedası hazırlık için şarttır — şahın veziri almasını sağlayarak onu köşeye hapsetmek gerekir.</span>
+        <span class="move-rule-icon">♛</span>
+        <span class="move-rule-text">Klasik boğmaca: Vezir fedası (Vg8+!) şahın tek kaçış yolunu tıklar.</span>
       </li>
       <li class="move-rule">
-        <span class="move-rule-icon">R</span>
-        <span class="move-rule-text">Arap matı — kale şahın kaçış sütununu keser, at köşeden çapraz kaçışı engeller. At + kale kombinasyonu.</span>
+        <span class="move-rule-icon">♜</span>
+        <span class="move-rule-text">Arap matında kale ve at köşeye sıkışmış şahı mat eder.</span>
       </li>
       <li class="move-rule">
-        <span class="move-rule-icon">!</span>
-        <span class="move-rule-text">Savunma: şahın önünde daima kaçış karesi bırakın; kendi taşlarınızın şahı hapsettirmesine izin vermeyin.</span>
+        <span class="move-rule-icon">✦</span>
+        <span class="move-rule-text">Bu matlar ~1000 yıllık — satrancın en eski taktik kalıplarındandır.</span>
       </li>
     </ul>
   </div>
   <div class="piece-boards-col">
     <div class="fen-demo-item">
-      <span class="fen-demo-label">Boğmaca Matı Pozisyonu</span>
+      <span class="fen-demo-label">Boğmaca matı tehdidi</span>
       <div class="position-card position-card--accent">
-        <fen>6rk/6pp/7N/8/8/8/8/7K w - - 0 1</fen>
+        <fen>6rk/6pp/8/8/8/8/6PP/4R1K1 w - - 0 1</fen>
       </div>
-      <p class="fen-demo-caption">Siyah şah h8'de, g7-h7 piyonları ve g8 kalesi onu çeviriyor. Beyaz Nf7# oynuyor — at f7'ye atlıyor ve mat! Kendi taşları şahı hapsetti.</p>
+      <p class="fen-demo-caption">g8'deki siyah kale ve g7, h7 piyonları siyah şahı hapsetmiş. Beyaz ağır taş manüvralarıyla mat yaratabilir.</p>
+    </div>
+    <div class="fen-demo-item">
+      <span class="fen-demo-label">Arap matı</span>
+      <div class="position-card position-card--dark">
+        <fen>7k/5R2/6N1/8/8/8/8/7K w - - 0 1</fen>
+      </div>
+      <p class="fen-demo-caption">f7'deki kale son sıraya baskı yapıyor, g6'daki at h8 karesini kontrol ediyor. Siyah şahın kaçacak yeri yok — klasik Arap matı.</p>
     </div>
   </div>
 </div>
 
 <section class="special-rules-section">
-  <h2 class="special-rules-title">BOĞMACA VE<br>ARAP MATI</h2>
+  <h2 class="special-rules-title">VEZİR FEDASIyla<br>BOĞMACA</h2>
 
   <div class="special-rule-item">
     <div class="special-rule-num">01</div>
     <div>
-      <div class="special-rule-name">Boğmaca Matı Kombinasyonu</div>
-      <p class="special-rule-desc">Klasik sıra: şahı köşeye sür (şah verilerle), kale ve piyonlarla çevresini sar, ardından vezirle köşeye şah ver ve şah veziri almak zorunda kalsın. Son hamle: at köşeye atlar, mat. Vezir feda edilir ama at kazanır.</p>
+      <div class="special-rule-name">01 — Klasik Sekans</div>
+      <p class="special-rule-desc">1.Vg8+! Şxg8 2.Af7# — Vezir fedası şahı g8 köşesine çeker, kendi taşları tarafından zaten çevrilmiş olan şah ata yenik düşer. Zarif, beklenmedik, kesin.</p>
     </div>
   </div>
 
   <div class="special-rule-item">
     <div class="special-rule-num">02</div>
     <div>
-      <div class="special-rule-name">Arap Matı</div>
-      <p class="special-rule-desc">At ve kale birlikte köşede mat yapar. Kale şahın bulunduğu sıra veya sütunu kontrol eder, at ise köşe karesine atlayarak çapraz iki kareyi denetler. At + kale kombinasyonu, oyunsonunda öğrenilmesi gereken temel bir mottir.</p>
+      <div class="special-rule-name">02 — Neden "Boğmaca"?</div>
+      <p class="special-rule-desc">Şah kendi taşları tarafından "boğulmuştur" — her kaçış karesi arkadaşları tarafından tutulmaktadır. Rakip en az değerli taş olan atı bile alamaz, çünkü önemli olan kareleri kontrol etmesidir.</p>
     </div>
   </div>
 
   <div class="special-rule-item">
     <div class="special-rule-num">03</div>
     <div>
-      <div class="special-rule-name">Neden "Boğmaca"?</div>
-      <p class="special-rule-desc">Şah kendi taşlarının "boğduğu" bir köşede hapsolur — hareket edemez, nefes alamaz. Taşlarınız bazen en büyük düşmanınızdır. Bu mat, kendi taşlarınızla şahınıza kaçış yolu bırakmanın ne kadar önemli olduğunu en çarpıcı biçimde gösterir.</p>
+      <div class="special-rule-name">03 — Arap Matının Tarihi</div>
+      <p class="special-rule-desc">Yaklaşık 1000 yıllık Arap satranç elyazmalarında görülen bu mat, satrancın en eski kayıtlı taktik kalıplarından biridir. Kale ve at kombinasyonu bugün hâlâ modern grandmaster partilerinde karşımıza çıkar.</p>
     </div>
   </div>
 </section>

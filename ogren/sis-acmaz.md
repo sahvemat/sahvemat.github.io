@@ -1,5 +1,5 @@
 ---
-title: Şiş ve Bağlama — Satranç Öğren
+title: Şiş ve Açmaz — Satranç Öğren
 layout: default
 permalink: /ogren/sis-acmaz/
 ---
@@ -9,86 +9,86 @@ permalink: /ogren/sis-acmaz/
   <span class="piece-breadcrumb-sep">/</span>
   <a href="/ogren/">Satranç Öğren</a>
   <span class="piece-breadcrumb-sep">/</span>
-  <span>Bölüm 5.2 · Şiş ve Bağlama</span>
+  <span>Bölüm 5.2 · Şiş ve Açmaz</span>
 </nav>
 
 <div class="piece-page-hero">
   <div>
-    <span class="piece-page-eyebrow">Bölüm 5 · Taktik Araçlar — Hat Taktikleri</span>
-    <h1 class="piece-page-title">ŞİŞ VE<br><em>BAĞLAMA</em></h1>
-    <p class="piece-page-tagline">Bir taşın arkasındaki değerliye uzanın. Bağlamada öndeki hareket edemez — şişte ise değerli olanı kaçırmak zorunda kalır.</p>
+    <span class="piece-page-eyebrow">Bölüm 5 · Taktik Araçlar — Uzun erimli taşların gizli silahları</span>
+    <h1 class="piece-page-title">ŞİŞ VE<br>AÇMAZ</h1>
+    <p class="piece-page-tagline">Rakip taşları aynı hat üzerinde yakalayın. Biri kaçarsa, diğeri düşer.</p>
   </div>
-  <div class="piece-page-symbol">📌</div>
+  <div class="piece-page-symbol">♝</div>
 </div>
 
 <div class="piece-content">
   <div class="piece-text-col">
     <span class="piece-section-label">Hat Taktikleri</span>
-    <h2 class="piece-section-heading">BAĞLAMA VE ŞİŞ</h2>
-    <p class="piece-text">Bağlama (pin/açmaz), uzun menzilli bir taşın (fil, kale, vezir) bir taşı arkasındaki daha değerli taşa karşı dondurduğu taktiktir. Bağlanan taş hareket ederse arkasındaki daha değerli taş tehlikeye girer. Mutlak bağlama — öndeki taş şahı koruyorsa hiç hareket edemez; görece bağlama — öndeki taş veziri veya kaleyi koruyorsa teoride hareket edebilir ama materyal kaybına yol açar.</p>
-    <p class="piece-text">Şiş (skewer), bağlamanın tam tersidir. Bu sefer sıradaki daha değerli taş doğrudan tehdit edilir. Değerli taş kaçmak zorunda kalır ve arkasındaki daha az değerli taş ele geçirilir. Düşünün: kale şahı tehdit ediyor, şah kaçıyor, arkadaki vezir alınıyor — bu bir şiştir.</p>
-    <p class="piece-text">Her iki taktik de aynı ilkeye dayanır: bir hat (çapraz, sütun veya satır) üzerinde iki taş arasındaki ilişkiyi sömürmek. Bağlamada değersiz taş önde, şişte değerli taş önde durur.</p>
+    <h2 class="piece-section-heading">AYNI HATTA İKİ HEDEF</h2>
+    <p class="piece-text"><strong>Şiş</strong>, uzun erimli bir taşın (fil, kale veya vezir) değerli bir hedefe saldırması ve o hedef kaçınca arkasındaki ikinci taşın ateş hattına girmesidir. Şişte değerli taş öndedir; o kaçar, arkadaki düşer. Türkçede adı "et şişi"ne benzetilir — taşlar şişin ucuna dizilmiş gibidir. Kale şişleri aynı sıra ya da sütunda, fil şişleri aynı çaprazda gerçekleşir.</p>
+    <p class="piece-text"><strong>Açmaz</strong> ise tam tersidir: değerli taş arkadadır. Öndeki taş hareket etmeye zorlanır çünkü hareketinin açacağı hatta arkasında daha değerli bir taş vardır. <strong>Mutlak açmazda</strong> arkadaki taş şahtır — öndeki taş yasal olarak hareket edemez, çünkü şahı tehlikeye atmak yasaktır. Bu taş işlevsiz ve savunmasız hale gelir.</p>
+    <p class="piece-text"><strong>Nisbi açmazda</strong> arkadaki taş şah değil, kale veya vezir gibi değerli bir taştır. Öndeki taş hareket edebilir; ancak bunu yaparsa arkasındaki taşı kaybeder. Açmazda kalan taşların bir başka zayıflığı daha vardır: savunma görevlerini yerine getiremezler. Üzerine ikinci bir saldırı yönelirse, kurtarmak neredeyse imkânsız hale gelir.</p>
     <ul class="move-rules">
       <li class="move-rule">
-        <span class="move-rule-icon">B</span>
-        <span class="move-rule-text">Mutlak bağlama — şahın önündeki taş kesinlikle hareket edemez; şahı tehlikeye atmak yasadışıdır.</span>
+        <span class="move-rule-icon">↗</span>
+        <span class="move-rule-text">Şiş: Önden saldırıyorsunuz, arkadaki taş ateş hattında kalıyor.</span>
       </li>
       <li class="move-rule">
-        <span class="move-rule-icon">Q</span>
-        <span class="move-rule-text">Görece bağlama — vezirin önündeki taş hareket edebilir ama bunu yapması veziri tehlikeye atar.</span>
+        <span class="move-rule-icon">⊘</span>
+        <span class="move-rule-text">Mutlak açmaz: Şahın önündeki taş hareket edemez — yasadışı olur.</span>
       </li>
       <li class="move-rule">
-        <span class="move-rule-icon">R</span>
-        <span class="move-rule-text">Şiş — değerli taş tehdit edilir, kaçar, arkasındaki daha az değerli taş alınır. Kale ve fil sıklıkla şiş yapar.</span>
+        <span class="move-rule-icon">◎</span>
+        <span class="move-rule-text">Nisbi açmaz: Taş teknik olarak hareket edebilir ama arkasını kaybeder.</span>
       </li>
       <li class="move-rule">
-        <span class="move-rule-icon">!</span>
-        <span class="move-rule-text">Bağlamayı kırmak için: bağlayan taşı alın, hat dışına çıkın, araya taş koyun veya karşı tehdit yaratın.</span>
+        <span class="move-rule-icon">✦</span>
+        <span class="move-rule-text">Açmazda kalan taş diğer saldırılara da savunmasız hale gelir.</span>
       </li>
     </ul>
   </div>
   <div class="piece-boards-col">
     <div class="fen-demo-item">
-      <span class="fen-demo-label">Mutlak Bağlama</span>
+      <span class="fen-demo-label">Şiş: Fil saldırıyor</span>
       <div class="position-card position-card--accent">
-        <fen>r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 0 6</fen>
+        <fen>4k3/8/8/8/8/8/4B3/4K3 w - - 0 1</fen>
       </div>
-      <p class="fen-demo-caption">c6 atı şah ile aynı çaprazda. Beyaz Bb5 oynarsa at mutlak bağlı olur — hareket ederse şah açıkta kalır.</p>
+      <p class="fen-demo-caption">e2'deki beyaz fil, e8'deki şahı tehdit ediyor. Şah kaçmak zorunda — arkasındaki taş saldırı hattında kalacak.</p>
     </div>
     <div class="fen-demo-item">
-      <span class="fen-demo-label">Şiş</span>
+      <span class="fen-demo-label">Mutlak açmaz</span>
       <div class="position-card position-card--dark">
-        <fen>4k3/8/8/4r3/8/8/4Q3/4K3 w - - 0 1</fen>
+        <fen>r3k3/8/8/8/8/8/4B3/4K3 w - - 0 1</fen>
       </div>
-      <p class="fen-demo-caption">Siyah kale e8 şahını tehdit ediyor mu? Hayır — ama beyaz vezir Qe5! oynarsa kaleyi şişler: kale kaçar, vezir alınır. Değerli taş önde.</p>
+      <p class="fen-demo-caption">Eğer e-dikeyinde bir siyah taş olsaydı ve arkasında şah bulunsaydı, o taş mutlak açmazda olurdu — şah açıkta kalacağı için hareket edemez.</p>
     </div>
   </div>
 </div>
 
 <section class="special-rules-section">
-  <h2 class="special-rules-title">BAĞLAMA VE<br>ŞİŞ FARKI</h2>
+  <h2 class="special-rules-title">AÇMAZIN<br>İKİ YÜZÜ</h2>
 
   <div class="special-rule-item">
     <div class="special-rule-num">01</div>
     <div>
-      <div class="special-rule-name">Bağlama — Değersiz Önde</div>
-      <p class="special-rule-desc">Saldırı hattında önde daha az değerli taş, arkada daha değerli taş vardır. Önde duran taş hareket edemez (ya da etmemeli). Mutlak bağlamada şah arkada, görece bağlamada vezir veya kale arkadadır.</p>
+      <div class="special-rule-name">01 — Mutlak Açmaz — Hareket Yasak</div>
+      <p class="special-rule-desc">Arkasında şah bulunan taş mutlak açmazda kalır ve hareket edemez. Bu, o taşı hem işlevsiz hem de savunmasız kılar. Üzerine ikinci bir saldırı yönelirse kaybedilir.</p>
     </div>
   </div>
 
   <div class="special-rule-item">
     <div class="special-rule-num">02</div>
     <div>
-      <div class="special-rule-name">Şiş — Değerli Önde</div>
-      <p class="special-rule-desc">Saldırı hattında önde daha değerli taş, arkada daha az değerli taş vardır. Değerli taş kaçmak zorunda kalır, arkada kalan alınır. En klasik örnek: fil veya kale şahı tehdit eder, şah kaçar, arkasındaki vezir gider.</p>
+      <div class="special-rule-name">02 — Nisbi Açmaz — Hareket Pahalı</div>
+      <p class="special-rule-desc">Arkasında vezir veya kale bulunan taş hareket edebilir ama bedelini öder. Kimi zaman bu hamle taktiksel olarak zorunludur, ama genellikle bir materyal kaybıdır.</p>
     </div>
   </div>
 
   <div class="special-rule-item">
     <div class="special-rule-num">03</div>
     <div>
-      <div class="special-rule-name">Bağlamayı Kırmak</div>
-      <p class="special-rule-desc">Bağlanan bir taştan kurtulmak için dört yol vardır: bağlayan taşı almak, araya başka taş koymak, bağlanan taşı destekleyerek aktif tutmak ya da bağlamayı yaratan hatta karşı bir tehdit açmak. Bağlama pasif bir durum — onu kırmak aktif oyunun işaretidir.</p>
+      <div class="special-rule-name">03 — Şiş ile Açmazın Farkı</div>
+      <p class="special-rule-desc">Şiş'te değerli taş önde, daha az değerli olan arkadadır — önden saldırı yapılır ve önden kaçılınca arkadaki düşer. Açmazda ise değerli taş arkadadır ve öndeki taş kıpırdayamaz.</p>
     </div>
   </div>
 </section>

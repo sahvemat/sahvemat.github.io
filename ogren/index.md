@@ -189,20 +189,20 @@ permalink: /ogren/
     <span class="learn-chapter-num">04</span>
     <div>
       <h2 class="learn-chapter-title">AÇILIŞ İLKELERİ</h2>
-      <p class="learn-chapter-desc">İlk hamlelerden doğru plan kurmaya.</p>
+      <p class="learn-chapter-desc">Gelişim, merkez kontrolü ve şahın güvenliği.</p>
     </div>
   </div>
   <div class="pieces-grid">
     <a href="/ogren/acilis-ilkeleri/" class="concept-card">
       <span class="concept-card-num">4.1</span>
       <span class="concept-card-name">Açılış İlkeleri</span>
-      <p class="concept-card-desc">Gelişim, merkez kontrolü ve şah güvenliği — açılışın üç temel hedefi.</p>
+      <p class="concept-card-desc">Gelişim, merkez, rok. İlk on hamle oyunun kaderini belirler.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
     <a href="/ogren/taslarin-karakteri/" class="concept-card">
       <span class="concept-card-num">4.2</span>
       <span class="concept-card-name">Taşların Karakteri</span>
-      <p class="concept-card-desc">Her taşın değeri ve stratejik özellikleri. Materyal dengesini anlayın.</p>
+      <p class="concept-card-desc">Her taş farklı çalışır. Doğru taşı doğru yere koymak satrancın özüdür.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
   </div>
@@ -213,26 +213,26 @@ permalink: /ogren/
     <span class="learn-chapter-num">05</span>
     <div>
       <h2 class="learn-chapter-title">TAKTİK ARAÇLAR</h2>
-      <p class="learn-chapter-desc">Rakibi alt etmek için keskin silahlar.</p>
+      <p class="learn-chapter-desc">Çatal, şiş, açmaz ve açarak saldırı.</p>
     </div>
   </div>
   <div class="pieces-grid">
     <a href="/ogren/cifte-tehdit/" class="concept-card">
       <span class="concept-card-num">5.1</span>
       <span class="concept-card-name">Çatal ve Çifte Tehdit</span>
-      <p class="concept-card-desc">Tek hamleyle iki taşı tehdit etmek. Rakip yalnızca birine yanıt verebilir.</p>
+      <p class="concept-card-desc">Tek bir hamleyle iki hedefe saldırın. Rakip ikisini birden kurtaramaz.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
     <a href="/ogren/sis-acmaz/" class="concept-card">
       <span class="concept-card-num">5.2</span>
-      <span class="concept-card-name">Şiş ve Bağlama</span>
-      <p class="concept-card-desc">Bir taşın arkasındaki değerli taşı tehdit etmek veya hareketi kısıtlamak.</p>
+      <span class="concept-card-name">Şiş ve Açmaz</span>
+      <p class="concept-card-desc">Rakip taşları aynı hat üzerinde yakalayın. Biri kaçarsa diğeri düşer.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
     <a href="/ogren/acarak-saldiri/" class="concept-card">
       <span class="concept-card-num">5.3</span>
       <span class="concept-card-name">Açarak Saldırı</span>
-      <p class="concept-card-desc">Bir taşı çekerek ardındaki taşın saldırısını açığa çıkarmak.</p>
+      <p class="concept-card-desc">Bir taşı hareket ettirin, arkasındakini serbest bırakın.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
   </div>
@@ -243,26 +243,26 @@ permalink: /ogren/
     <span class="learn-chapter-num">06</span>
     <div>
       <h2 class="learn-chapter-title">MAT KALIPLARI</h2>
-      <p class="learn-chapter-desc">Tekrar eden mat pozisyonlarını tanıyın.</p>
+      <p class="learn-chapter-desc">Tarihin en önemli mat temalarını öğrenin.</p>
     </div>
   </div>
   <div class="pieces-grid">
     <a href="/ogren/koridor-mat/" class="concept-card">
       <span class="concept-card-num">6.1</span>
       <span class="concept-card-name">Koridor Matı</span>
-      <p class="concept-card-desc">Kendi piyonlarına sıkışan şah, son sırada mat yer. "Luft" açın!</p>
+      <p class="concept-card-desc">Pratikte en sık karşılaşılan mat. Son sıra tehlikesi ve hava deliği.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
     <a href="/ogren/bogmaca-mati/" class="concept-card">
       <span class="concept-card-num">6.2</span>
-      <span class="concept-card-name">Boğmaca Matı</span>
-      <p class="concept-card-desc">Kendi taşlarıyla boğulan şahı at mat eder. Zarif ve nadir.</p>
+      <span class="concept-card-name">Boğmaca ve Arap Matı</span>
+      <p class="concept-card-desc">At ile yapılan en zarif matlar. Bin yıllık kalıplar.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
     <a href="/ogren/klasik-mat-temalari/" class="concept-card">
       <span class="concept-card-num">6.3</span>
       <span class="concept-card-name">Klasik Mat Temaları</span>
-      <p class="concept-card-desc">Anastasia, Damiano, Legal, Boden — satrancın en güzel mat kombinasyonları.</p>
+      <p class="concept-card-desc">Damiano, Lolli, Mayet, Boden — dört temel mat kalıbı.</p>
       <span class="concept-card-arrow">İncele →</span>
     </a>
   </div>
