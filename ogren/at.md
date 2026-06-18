@@ -25,6 +25,12 @@ permalink: /ogren/at/
   <div class="piece-text-col">
     <span class="piece-section-label">Hareket Kuralları</span>
     <h2 class="piece-section-heading">NASIL HAREKET EDER?</h2>
+
+    <fen>
+    [FEN "8/8/8/8/4N3/8/8/8 w - - 0 1"]
+    {[%cal Ge4f6,Ge4f2,Ge4d6,Ge4d2,Ge4c5,Ge4c3,Ge4g3,Ge4g5]}
+    </fen>
+
     <p class="piece-text">At, satrançtaki en özgün harekete sahip taştır. "L" şeklinde ilerler: bir yönde iki kare, ardından dik açıyla bir kare. Toplamda sekiz farklı hedef kare mümkündür.</p>
     <p class="piece-text">Atın en büyük ayrıcalığı, yolundaki taşları engel olarak görmemesidir. Diğer taşların üzerinden atlayabilir; bu, kapalı pozisyonlarda onu son derece değerli kılar.</p>
     <p class="piece-text">Her hamlede at renk değiştirir. Merkezdeki bir at sekiz farklı kareyi tehdit ederken köşedeki yalnızca iki kareye gidebilir — "At köşede kötüdür" denir.</p>
