@@ -59,7 +59,7 @@ permalink: /ogren/merkez-kontrolu/
     <div class="fen-demo-item">
       <span class="fen-demo-label">Güçlü merkez kurulumu</span>
       <div class="position-card position-card--dark">
-        <fen>rnbqkbnr/ppp2ppp/8/3pp3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3</tml>
+        <fen>rnbqkbnr/ppp2ppp/8/3pp3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3</fen>
       </div>
       <p class="fen-demo-caption">Her iki taraf da merkeze piyon yerleştirdi. Merkez gerilimi en yüksek noktada — kim merkezi kazanırsa avantajı olur.</p>
     </div>
