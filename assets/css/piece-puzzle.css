@@ -42,119 +42,12 @@
   font-weight: 900;
 }
 
-/* ── Board wrapper ───────────────────────────────────────────── */
-.pp-wrap {
-  position: relative;
+/* ── ChessPublica puzzle wrapper ─────────────────────────────── */
+.pp-puzzle-wrap {
   width: 100%;
-  aspect-ratio: 1;
   border: 1px solid var(--line);
-  overflow: hidden;
-}
-
-.pp-board {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  width: 100%;
-  height: 100%;
-}
-
-/* ── Squares ─────────────────────────────────────────────────── */
-.pp-sq {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: default;
-  aspect-ratio: 1;
-  overflow: hidden;
-  transition: filter 0.12s;
-}
-
-.pp-sq--light { background: #f0d9b5; }
-.pp-sq--dark  { background: #b58863; }
-
-/* Legal move indicator dot */
-.pp-sq--legal:not(.pp-sq--sun)::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.22) 28%, transparent 29%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.pp-sq--legal {
-  cursor: pointer;
-}
-
-.pp-sq--legal:hover {
-  filter: brightness(1.14);
-}
-
-/* Sun square highlight */
-.pp-sq--sun.pp-sq--light { background: #f7e8a0; }
-.pp-sq--sun.pp-sq--dark  { background: #c9a84c; }
-
-/* ── Piece image ─────────────────────────────────────────────── */
-.pp-piece {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
-  cursor: grab;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: none;
-}
-
-.pp-piece--dragging {
-  opacity: 0.25;
-  cursor: grabbing;
-}
-
-/* Ghost piece that follows the pointer */
-.pp-drag-ghost {
-  position: fixed;
-  z-index: 9999;
-  pointer-events: none;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.55));
-  transform: scale(1.08);
-  transform-origin: center;
-}
-
-/* Drop target highlight */
-.pp-sq--drag-over {
-  filter: brightness(1.35) !important;
-}
-
-/* ── Sun icon ────────────────────────────────────────────────── */
-.pp-sun {
-  font-size: clamp(1rem, 4.5vw, 1.6rem);
-  line-height: 1;
-  position: relative;
-  z-index: 2;
-  pointer-events: none;
-  animation: pp-sun-pulse 1.6s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes pp-sun-pulse {
-  0%, 100% { transform: scale(1);    filter: brightness(1); }
-  50%       { transform: scale(1.22); filter: brightness(1.2); }
-}
-
-/* ── SVG arrow overlay ───────────────────────────────────────── */
-.pp-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 3;
+  border-top: none;
+  border-bottom: none;
 }
 
 /* ── Hint text ───────────────────────────────────────────────── */
