@@ -110,12 +110,12 @@ permalink: /ogren/oyunun-sonu/
 </section>
 
 <div class="piece-pagination">
-  <a href="/ogren/rok/" class="piece-prev">
+  <a href="/ogren/gecerken-alma/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Rok</span>
+    <span class="pagination-piece">Geçerken Alma</span>
   </a>
-  <a href="/ogren/diger-kurallar/" class="piece-next">
+  <a href="/ogren/notasyon/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Diğer Kurallar</span>
+    <span class="pagination-piece">Algebraik Notasyon</span>
   </a>
 </div>

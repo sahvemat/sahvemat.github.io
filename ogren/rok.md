@@ -100,8 +100,8 @@ permalink: /ogren/rok/
     <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">Piyon Terfisi</span>
   </a>
-  <a href="/ogren/oyunun-sonu/" class="piece-next">
+  <a href="/ogren/gecerken-alma/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Oyunun Sonu</span>
+    <span class="pagination-piece">Geçerken Alma</span>
   </a>
 </div>

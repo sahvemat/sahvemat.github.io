@@ -70,15 +70,22 @@ permalink: /ogren/vezir/
   </div>
 </div>
 
+<section class="puzzle-section">
+  <div class="puzzle-section-header">
+    <span class="puzzle-section-eyebrow">Pratik Yap</span>
+    <h2 class="puzzle-section-title">VEZİRİ<br>HAREKET<br>ETTİR</h2>
+    <p class="puzzle-section-desc">Veziri tıklayarak güneşlerin üzerine götür. Her çözümde yeni bulmaca üretilir.</p>
+  </div>
+  <div class="piece-puzzle" data-piece="wQ"></div>
+</section>
+
 <div class="piece-pagination">
-  <a href="/ogren/kale/" class="piece-prev">
-    <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♜</span>
-    <span class="pagination-piece">Kale</span>
+  <a href="/ogren/fil/" class="piece-prev">
+    <span class="pagination-label">← Önceki</span>
+    <span class="pagination-piece">Fil</span>
   </a>
   <a href="/ogren/at/" class="piece-next">
-    <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♞</span>
+    <span class="pagination-label">Sonraki →</span>
     <span class="pagination-piece">At</span>
   </a>
 </div>

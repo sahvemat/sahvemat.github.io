@@ -100,6 +100,6 @@ permalink: /ogren/bogmaca-mati/
   </a>
   <a href="/ogren/klasik-mat-temalari/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Klasik Mat Temaları</span>
+    <span class="pagination-piece">Klasik Mat Motifleri</span>
   </a>
 </div>

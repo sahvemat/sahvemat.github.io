@@ -71,14 +71,22 @@ permalink: /ogren/fil/
   </div>
 </div>
 
+<section class="puzzle-section">
+  <div class="puzzle-section-header">
+    <span class="puzzle-section-eyebrow">Pratik Yap</span>
+    <h2 class="puzzle-section-title">FİLİ<br>HAREKET<br>ETTİR</h2>
+    <p class="puzzle-section-desc">Fili tıklayarak güneşlerin üzerine götür. Her çözümde yeni bulmaca üretilir.</p>
+  </div>
+  <div class="piece-puzzle" data-piece="wB"></div>
+</section>
+
 <div class="piece-pagination">
-  <a href="/ogren/genel-kurallar/" class="piece-prev">
+  <a href="/ogren/kale/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Genel Kurallar</span>
-  </a>
-  <a href="/ogren/kale/" class="piece-next">
-    <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♜</span>
     <span class="pagination-piece">Kale</span>
+  </a>
+  <a href="/ogren/vezir/" class="piece-next">
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Vezir</span>
   </a>
 </div>

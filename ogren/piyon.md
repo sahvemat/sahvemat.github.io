@@ -65,15 +65,22 @@ permalink: /ogren/piyon/
   </div>
 </div>
 
+<section class="puzzle-section">
+  <div class="puzzle-section-header">
+    <span class="puzzle-section-eyebrow">Pratik Yap</span>
+    <h2 class="puzzle-section-title">PİYONU<br>HAREKET<br>ETTİR</h2>
+    <p class="puzzle-section-desc">Piyonu tıklayarak güneşlerin üzerine götür. Her çözümde yeni bulmaca üretilir.</p>
+  </div>
+  <div class="piece-puzzle" data-piece="wP"></div>
+</section>
+
 <div class="piece-pagination">
   <a href="/ogren/at/" class="piece-prev">
-    <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♞</span>
+    <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">At</span>
   </a>
   <a href="/ogren/sah/" class="piece-next">
-    <span class="pagination-label">Sonraki taş →</span>
-    <span class="pagination-symbol">♚</span>
+    <span class="pagination-label">Sonraki →</span>
     <span class="pagination-piece">Şah</span>
   </a>
 </div>

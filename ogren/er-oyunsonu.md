@@ -100,7 +100,7 @@ permalink: /ogren/er-oyunsonu/
 <div class="piece-pagination">
   <a href="/ogren/klasik-mat-temalari/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Klasik Mat Temaları</span>
+    <span class="pagination-piece">Klasik Mat Motifleri</span>
   </a>
   <a href="/ogren/opozisyon/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>

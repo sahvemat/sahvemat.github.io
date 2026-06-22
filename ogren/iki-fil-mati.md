@@ -96,10 +96,10 @@ permalink: /ogren/iki-fil-mati/
 <div class="piece-pagination">
   <a href="/ogren/kale-mati/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
-    <span class="pagination-piece">Kale Matı</span>
+    <span class="pagination-piece">Kale ile Mat</span>
   </a>
   <a href="/ogren/iki-at-mati/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">İki At</span>
+    <span class="pagination-piece">İki At ve Pat</span>
   </a>
 </div>

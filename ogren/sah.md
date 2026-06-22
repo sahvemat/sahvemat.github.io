@@ -70,14 +70,22 @@ permalink: /ogren/sah/
   </div>
 </div>
 
+<section class="puzzle-section">
+  <div class="puzzle-section-header">
+    <span class="puzzle-section-eyebrow">Pratik Yap</span>
+    <h2 class="puzzle-section-title">ŞAHI<br>HAREKET<br>ETTİR</h2>
+    <p class="puzzle-section-desc">Şahı tıklayarak güneşlerin üzerine götür. Her çözümde yeni bulmaca üretilir.</p>
+  </div>
+  <div class="piece-puzzle" data-piece="wK"></div>
+</section>
+
 <div class="piece-pagination">
   <a href="/ogren/piyon/" class="piece-prev">
-    <span class="pagination-label">← Önceki taş</span>
-    <span class="pagination-symbol">♟</span>
+    <span class="pagination-label">← Önceki</span>
     <span class="pagination-piece">Piyon</span>
   </a>
-  <a href="/ogren/gecerken-alma/" class="piece-next">
+  <a href="/ogren/tas-alma/" class="piece-next">
     <span class="pagination-label">Sonraki →</span>
-    <span class="pagination-piece">Geçerken Alma</span>
+    <span class="pagination-piece">Taş Alma</span>
   </a>
 </div>

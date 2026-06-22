@@ -99,7 +99,7 @@ permalink: /ogren/klasik-mat-temalari/
     <span class="pagination-piece">Boğmaca ve Arap Matı</span>
   </a>
   <a href="/ogren/er-oyunsonu/" class="piece-next">
-    <span class="pagination-label">Bölüm 7 →</span>
-    <span class="pagination-piece">Er Oyunsonu</span>
+    <span class="pagination-label">Sonraki →</span>
+    <span class="pagination-piece">Kare Kuralı</span>
   </a>
 </div>
