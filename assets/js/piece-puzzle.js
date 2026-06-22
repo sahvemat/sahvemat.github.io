@@ -153,7 +153,7 @@
     var bar = document.createElement('div');
     bar.className = 'pp-bar';
     bar.innerHTML =
-      '<span class="pp-bar-label">' + NAMES[this.piece] + '\'yi sürükle</span>' +
+      '<span class="pp-bar-label">' + NAMES[this.piece] + '\'yi hareket ettir</span>' +
       '<span class="pp-bar-score">☀ <strong>' + st.score + '</strong></span>';
     this.el.appendChild(bar);
 
@@ -173,6 +173,34 @@
     if (window.ChessPublica && window.ChessPublica.initAll) {
       window.ChessPublica.initAll();
     }
+
+    // ── Apply overlays once the board squares are in the DOM
+    var sunSq = sq(st.sun.r, st.sun.c);
+    var overlayAttempts = 0;
+    var overlayTimer = setInterval(function () {
+      var boardSq = wrapper.querySelector('[data-square="' + sunSq + '"]');
+      if (boardSq || ++overlayAttempts > 60) {
+        clearInterval(overlayTimer);
+        if (!boardSq) return;
+
+        // Hide kings (kept in FEN for legality, invisible to user)
+        ['a1', 'h8'].forEach(function (ksq) {
+          var kel = wrapper.querySelector('[data-square="' + ksq + '"]');
+          if (kel) {
+            var img = kel.querySelector('img');
+            if (img) img.style.opacity = '0';
+          }
+        });
+
+        // Sun emoji overlay on target square
+        if (!boardSq.querySelector('.pp-sun')) {
+          var sunEl = document.createElement('div');
+          sunEl.className = 'pp-sun';
+          sunEl.textContent = '☀';
+          boardSq.appendChild(sunEl);
+        }
+      }
+    }, 50);
 
     // ── Watch for solve (.cp-fire-solved appears on the puzzle element)
     this._observer = new MutationObserver(function () {
