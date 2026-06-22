@@ -52,7 +52,7 @@ permalink: /ogren/kale/
     </ul>
 
   </div>
-
+</div>
     <section class="puzzle-section">
   <div class="puzzle-section-header">
     <h2 class="puzzle-section-title">KALEYLE<br>HAMLE<br>YAP</h2>
@@ -60,8 +60,6 @@ permalink: /ogren/kale/
   </div>
   <div class="piece-puzzle" data-piece="wR"></div>
 </section>
-
-</div>
 
 <div class="piece-pagination">
   <a href="/ogren/taslar/" class="piece-prev">
