@@ -102,10 +102,33 @@
   width: 80%;
   height: 80%;
   object-fit: contain;
-  pointer-events: none;
   position: relative;
   z-index: 2;
   filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.pp-piece--dragging {
+  opacity: 0.25;
+  cursor: grabbing;
+}
+
+/* Ghost piece that follows the pointer */
+.pp-drag-ghost {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.55));
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+/* Drop target highlight */
+.pp-sq--drag-over {
+  filter: brightness(1.35) !important;
 }
 
 /* ── Sun icon ────────────────────────────────────────────────── */
