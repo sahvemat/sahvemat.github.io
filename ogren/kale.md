@@ -71,6 +71,15 @@ permalink: /ogren/kale/
   </div>
 </div>
 
+<section class="puzzle-section">
+  <div class="puzzle-section-header">
+    <span class="puzzle-section-eyebrow">Pratik Yap</span>
+    <h2 class="puzzle-section-title">KALEYİ<br>HAREKET<br>ETTİR</h2>
+    <p class="puzzle-section-desc">Kaleyi tıklayarak güneşlerin üzerine götür. Her çözümde yeni bulmaca üretilir.</p>
+  </div>
+  <div class="piece-puzzle" data-piece="wR"></div>
+</section>
+
 <div class="piece-pagination">
   <a href="/ogren/taslar/" class="piece-prev">
     <span class="pagination-label">← Önceki</span>
