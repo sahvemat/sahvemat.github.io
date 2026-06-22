@@ -16,7 +16,7 @@ permalink: /ogren/kale/
   <div>
     <span class="piece-page-eyebrow">Bölüm 1 · Taşların Hareketleri — Rook · 5 puan · Her oyuncuda 2 adet</span>
     <h1 class="piece-page-title">KALE</h1>
-    <p class="piece-page-tagline">Uzun hatların efendisi. Açık sütunlarda olağanüstü güçtür.</p>
+    <p class="piece-page-tagline">Bulunduğu karenin dikey ve yatayları üzerindeki herhangi bir kareye gidebilir.</p>
   </div>
   <div class="piece-page-symbol"><img src="/assets/img/pieces/wR.png" alt="Kale"></div>
 </div>
@@ -54,24 +54,8 @@ permalink: /ogren/kale/
     </ul>
   </div>
   <div class="piece-boards-col">
-    <div class="fen-demo-item">
-      <span class="fen-demo-label">Açık tahtada kale</span>
-      <div class="position-card position-card--accent">
-        <fen>8/8/8/8/3R4/8/8/8 w - - 0 1</fen>
-      </div>
-      <p class="fen-demo-caption">d4'teki kale, aynı satır ve sütundaki tüm karelere gidebilir — toplamda 14 kare.</p>
-    </div>
-    <div class="fen-demo-item">
-      <span class="fen-demo-label">Engel durumu</span>
-      <div class="position-card position-card--dark">
-        <fen>8/3p4/8/8/3R4/8/3P4/8 w - - 0 1</fen>
-      </div>
-      <p class="fen-demo-caption">Kale yukarı giderse d7'deki siyah piyonu alabilir; aşağı gidemez çünkü d2'de kendi piyonu var.</p>
-    </div>
-  </div>
-</div>
-
-<section class="puzzle-section">
+    
+  <section class="puzzle-section">
   <div class="puzzle-section-header">
     <span class="puzzle-section-eyebrow">Pratik Yap</span>
     <h2 class="puzzle-section-title">KALEYİ<br>HAREKET<br>ETTİR</h2>
@@ -79,6 +63,10 @@ permalink: /ogren/kale/
   </div>
   <div class="piece-puzzle" data-piece="wR"></div>
 </section>
+
+  </div>
+
+</div>
 
 <div class="piece-pagination">
   <a href="/ogren/taslar/" class="piece-prev">
