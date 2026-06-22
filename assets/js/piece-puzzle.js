@@ -1,9 +1,8 @@
-/* Piece Puzzle — interactive movement trainer */
+/* Piece Puzzle — drag and drop movement trainer */
 (function () {
   'use strict';
 
   var NAMES = { wR: 'Kale', wB: 'Fil', wQ: 'Vezir', wN: 'At', wP: 'Piyon', wK: 'Şah' };
-  var TOTAL_SUNS = 3;
 
   function rand(n) { return Math.floor(Math.random() * n); }
 
@@ -48,35 +47,27 @@
   function newPiecePos(piece) {
     var pr, pc, tries = 0;
     do {
-      if (piece === 'wP') {
-        pr = 3 + rand(3); pc = 1 + rand(6);
-      } else {
-        pr = rand(8); pc = rand(8);
-      }
+      if (piece === 'wP') { pr = 3 + rand(3); pc = 1 + rand(6); }
+      else                { pr = rand(8);      pc = rand(8); }
       tries++;
     } while (legalMoves(piece, pr, pc).length < 2 && tries < 60);
     return [pr, pc];
   }
 
-  function newSun(piece, pr, pc, excludeR, excludeC) {
+  function newSun(piece, pr, pc) {
     var moves = legalMoves(piece, pr, pc);
-    var filtered = moves.filter(function(m) {
-      return !(m[0] === excludeR && m[1] === excludeC);
-    });
-    var pool = filtered.length > 0 ? filtered : moves;
-    if (pool.length === 0) return null;
-    var s = pickFrom(pool);
+    if (!moves.length) return null;
+    var s = pickFrom(moves);
     return { r: s[0], c: s[1] };
   }
 
   function newState(piece) {
     var pos = newPiecePos(piece);
-    var pr = pos[0], pc = pos[1];
-    var sun = newSun(piece, pr, pc, -1, -1);
-    return { pr: pr, pc: pc, sun: sun, collected: 0, total: TOTAL_SUNS };
+    var sun = newSun(piece, pos[0], pos[1]);
+    return { pr: pos[0], pc: pos[1], sun: sun, score: 0 };
   }
 
-  // ── SVG arrow ───────────────────────────────────────────────
+  // ── Chess-style filled arrow ──────────────────────────────────
   function drawArrow(svg, fr, fc, tr, tc) {
     var x1 = fc + 0.5, y1 = fr + 0.5;
     var x2 = tc + 0.5, y2 = tr + 0.5;
@@ -86,35 +77,39 @@
     var ux = dx / len, uy = dy / len;
     var px = -uy, py = ux;
 
-    var startOff = 0.28, endOff = 0.22, headLen = 0.3, hw = 0.15;
+    var startOff = 0.2, endOff = 0.15;
+    var bodyW = 0.18, headW = 0.42, headLen = 0.42;
     var sx = x1 + ux * startOff, sy = y1 + uy * startOff;
-    var baseX = x2 - ux * (endOff + headLen), baseY = y2 - uy * (endOff + headLen);
-    var tipX = x2 - ux * endOff, tipY = y2 - uy * endOff;
+    var tipX = x2 - ux * endOff,  tipY = y2 - uy * endOff;
+    var bx = tipX - ux * headLen,  by = tipY - uy * headLen;
 
-    var color = '#4ade80';
+    var pts = [
+      [sx + px * bodyW, sy + py * bodyW],
+      [bx + px * bodyW, by + py * bodyW],
+      [bx + px * headW, by + py * headW],
+      [tipX, tipY],
+      [bx - px * headW, by - py * headW],
+      [bx - px * bodyW, by - py * bodyW],
+      [sx - px * bodyW, sy - py * bodyW]
+    ];
 
-    var shaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    shaft.setAttribute('x1', sx); shaft.setAttribute('y1', sy);
-    shaft.setAttribute('x2', baseX); shaft.setAttribute('y2', baseY);
-    shaft.setAttribute('stroke', color);
-    shaft.setAttribute('stroke-width', '0.1');
-    shaft.setAttribute('stroke-linecap', 'round');
-    svg.appendChild(shaft);
-
-    var head = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-    head.setAttribute('points',
-      tipX + ',' + tipY + ' ' +
-      (baseX + px * hw) + ',' + (baseY + py * hw) + ' ' +
-      (baseX - px * hw) + ',' + (baseY - py * hw));
-    head.setAttribute('fill', color);
-    svg.appendChild(head);
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M ' + pts.map(function(p){
+      return p[0].toFixed(4) + ',' + p[1].toFixed(4);
+    }).join(' L ') + ' Z');
+    path.setAttribute('fill', 'rgba(74, 222, 128, 0.82)');
+    path.setAttribute('stroke', 'rgba(20, 120, 60, 0.35)');
+    path.setAttribute('stroke-width', '0.03');
+    path.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(path);
   }
 
-  // ── Puzzle class ─────────────────────────────────────────────
+  // ── Puzzle class ──────────────────────────────────────────────
   function PiecePuzzle(el) {
     this.el = el;
     this.piece = el.dataset.piece || 'wN';
     this.state = newState(this.piece);
+    this.boardEl = null;
     this.render();
   }
 
@@ -126,13 +121,9 @@
     // ── Header bar
     var bar = document.createElement('div');
     bar.className = 'pp-bar';
-    var sunDots = '';
-    for (var i = 0; i < st.total; i++) {
-      sunDots += '<span class="pp-dot' + (i < st.collected ? ' pp-dot--done' : '') + '">☀</span>';
-    }
     bar.innerHTML =
-      '<span class="pp-bar-label">' + NAMES[this.piece] + 'yi hareket ettir</span>' +
-      '<span class="pp-bar-suns">' + sunDots + '</span>';
+      '<span class="pp-bar-label">' + NAMES[this.piece] + '\'yi sürükle</span>' +
+      '<span class="pp-bar-score">☀ <strong>' + st.score + '</strong></span>';
     this.el.appendChild(bar);
 
     // ── Board wrapper
@@ -141,6 +132,7 @@
 
     var board = document.createElement('div');
     board.className = 'pp-board';
+    this.boardEl = board;
 
     var moves = legalMoves(this.piece, st.pr, st.pc);
     var legalSet = {};
@@ -150,35 +142,34 @@
       for (var c = 0; c < 8; c++) {
         (function(r, c) {
           var sq = document.createElement('div');
-          var light = (r + c) % 2 === 0;
-          sq.className = 'pp-sq ' + (light ? 'pp-sq--light' : 'pp-sq--dark');
+          sq.className = 'pp-sq ' + ((r + c) % 2 === 0 ? 'pp-sq--light' : 'pp-sq--dark');
+          sq.dataset.row = r;
+          sq.dataset.col = c;
 
           var isLegal = !!legalSet[r + ',' + c];
-          var isSun = st.sun && st.sun.r === r && st.sun.c === c;
+          var isSun   = st.sun && st.sun.r === r && st.sun.c === c;
           var isPiece = st.pr === r && st.pc === c;
 
           if (isLegal) sq.classList.add('pp-sq--legal');
-          if (isSun) sq.classList.add('pp-sq--sun');
+          if (isSun)   sq.classList.add('pp-sq--sun');
 
-          // Piece image
           if (isPiece) {
             var img = document.createElement('img');
             img.src = '/assets/img/pieces/' + self.piece + '.png';
             img.className = 'pp-piece';
             img.alt = NAMES[self.piece];
+            // Attach drag handler to the piece
+            img.addEventListener('pointerdown', function(e) {
+              self.startDrag(e, img);
+            });
             sq.appendChild(img);
           }
 
-          // Sun icon
           if (isSun) {
             var sunEl = document.createElement('div');
             sunEl.className = 'pp-sun';
             sunEl.textContent = '☀';
             sq.appendChild(sunEl);
-          }
-
-          if (isLegal) {
-            sq.addEventListener('click', function() { self.move(r, c); });
           }
 
           board.appendChild(sq);
@@ -192,80 +183,139 @@
     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('class', 'pp-svg');
     svg.setAttribute('viewBox', '0 0 8 8');
-    if (st.sun) {
-      drawArrow(svg, st.pr, st.pc, st.sun.r, st.sun.c);
-    }
+    if (st.sun) drawArrow(svg, st.pr, st.pc, st.sun.r, st.sun.c);
     wrap.appendChild(svg);
 
     this.el.appendChild(wrap);
 
-    // ── Hint text
+    // ── Hint
+    var hints = {
+      wR: 'Kale yatay veya dikey olarak istediği kadar ilerler.',
+      wB: 'Fil çaprazda istediği kadar ilerler.',
+      wQ: 'Vezir her yönde istediği kadar ilerler.',
+      wN: 'At L şeklinde zıplar ve taşları atlayabilir.',
+      wP: 'Piyon ileri hareket eder; çapraz saldırır.',
+      wK: 'Şah her yöne tek kare hareket eder.'
+    };
     var hint = document.createElement('div');
     hint.className = 'pp-hint';
-    if (this.piece === 'wP') {
-      hint.textContent = 'Piyon ileri hareket eder, çapraz saldırır.';
-    } else if (this.piece === 'wN') {
-      hint.textContent = 'At L şeklinde zıplar ve taşları atlayabilir.';
-    } else if (this.piece === 'wK') {
-      hint.textContent = 'Şah her yöne tek kare hareket eder.';
-    } else if (this.piece === 'wR') {
-      hint.textContent = 'Kale yatay veya dikey olarak istediği kadar ilerler.';
-    } else if (this.piece === 'wB') {
-      hint.textContent = 'Fil çaprazda istediği kadar ilerler.';
-    } else if (this.piece === 'wQ') {
-      hint.textContent = 'Vezir her yönde istediği kadar ilerler.';
-    }
+    hint.textContent = hints[this.piece] || '';
     this.el.appendChild(hint);
   };
 
+  // ── Drag logic ────────────────────────────────────────────────
+  PiecePuzzle.prototype.startDrag = function (e, pieceEl) {
+    e.preventDefault();
+    var self = this;
+
+    // Ghost image that follows the pointer
+    var ghost = document.createElement('img');
+    ghost.src = pieceEl.src;
+    ghost.className = 'pp-drag-ghost';
+    ghost.style.pointerEvents = 'none';
+
+    // Size ghost to match current square size
+    var squarePx = this.boardEl.offsetWidth / 8;
+    ghost.style.width  = Math.round(squarePx * 1.1) + 'px';
+    ghost.style.height = Math.round(squarePx * 1.1) + 'px';
+    document.body.appendChild(ghost);
+
+    var startX = e.clientX, startY = e.clientY;
+    var dragged = false;          // true once pointer moves past threshold
+    var activeTarget = null;      // pp-sq currently hovered
+
+    function posGhost(cx, cy) {
+      var half = ghost.offsetWidth / 2;
+      ghost.style.left = (cx - half) + 'px';
+      ghost.style.top  = (cy - half) + 'px';
+    }
+    posGhost(startX, startY);
+
+    function sqAt(cx, cy) {
+      // Temporarily hide ghost so it doesn't block elementFromPoint
+      ghost.style.visibility = 'hidden';
+      var el = document.elementFromPoint(cx, cy);
+      ghost.style.visibility = '';
+      if (!el) return null;
+      var sq = el.closest ? el.closest('.pp-sq') : null;
+      if (!sq) {
+        // Walk up manually for older browsers
+        var cur = el;
+        while (cur && cur !== document.body) {
+          if (cur.classList && cur.classList.contains('pp-sq')) { sq = cur; break; }
+          cur = cur.parentElement;
+        }
+      }
+      return sq;
+    }
+
+    function onMove(e) {
+      var cx = e.clientX, cy = e.clientY;
+      if (!dragged) {
+        var dx = cx - startX, dy = cy - startY;
+        if (Math.sqrt(dx*dx + dy*dy) < 6) return;
+        dragged = true;
+        pieceEl.classList.add('pp-piece--dragging');
+      }
+      posGhost(cx, cy);
+
+      var sq = sqAt(cx, cy);
+      if (activeTarget && activeTarget !== sq) {
+        activeTarget.classList.remove('pp-sq--drag-over');
+        activeTarget = null;
+      }
+      if (sq && sq.classList.contains('pp-sq--legal')) {
+        sq.classList.add('pp-sq--drag-over');
+        activeTarget = sq;
+      }
+    }
+
+    function onEnd(e) {
+      document.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerup',   onEnd);
+      document.removeEventListener('pointercancel', onEnd);
+
+      if (activeTarget) activeTarget.classList.remove('pp-sq--drag-over');
+      pieceEl.classList.remove('pp-piece--dragging');
+      ghost.remove();
+
+      if (!dragged) return; // pure tap — ignore
+
+      var sq = sqAt(e.clientX, e.clientY);
+      if (sq && sq.classList.contains('pp-sq--legal')) {
+        var r = parseInt(sq.dataset.row, 10);
+        var c = parseInt(sq.dataset.col, 10);
+        self.move(r, c);
+      }
+    }
+
+    document.addEventListener('pointermove',   onMove);
+    document.addEventListener('pointerup',     onEnd);
+    document.addEventListener('pointercancel', onEnd);
+  };
+
+  // ── Move logic ────────────────────────────────────────────────
   PiecePuzzle.prototype.move = function (r, c) {
     var st = this.state;
     var wasSun = st.sun && st.sun.r === r && st.sun.c === c;
 
     st.pr = r;
     st.pc = c;
+    if (wasSun) st.score++;
 
-    if (wasSun) {
-      st.collected++;
-      if (st.collected >= st.total) {
-        this.showSuccess();
-        return;
-      }
-      // New sun from new position
-      st.sun = newSun(this.piece, r, c, -1, -1);
-    } else {
-      // Keep old sun if still reachable, otherwise regenerate
-      var moves = legalMoves(this.piece, r, c);
-      var reachable = st.sun && moves.some(function(m){ return m[0] === st.sun.r && m[1] === st.sun.c; });
-      if (!reachable) {
-        st.sun = newSun(this.piece, r, c, -1, -1);
-      }
-    }
+    // Keep sun if still reachable; otherwise generate fresh one
+    var moves = legalMoves(this.piece, r, c);
+    var sunOk = st.sun && !wasSun && moves.some(function(m){
+      return m[0] === st.sun.r && m[1] === st.sun.c;
+    });
+    if (!sunOk) st.sun = newSun(this.piece, r, c);
 
     this.render();
   };
 
-  PiecePuzzle.prototype.showSuccess = function () {
-    var self = this;
-    this.el.innerHTML = '';
-
-    var msg = document.createElement('div');
-    msg.className = 'pp-success';
-    msg.innerHTML =
-      '<span class="pp-success-emoji">🎉</span>' +
-      '<span class="pp-success-text">Tebrikler!</span>' +
-      '<span class="pp-success-sub">Yeni bulmaca hazırlanıyor…</span>';
-    this.el.appendChild(msg);
-
-    setTimeout(function () {
-      self.state = newState(self.piece);
-      self.render();
-    }, 1200);
-  };
-
-  // ── Boot ─────────────────────────────────────────────────────
+  // ── Boot ──────────────────────────────────────────────────────
   function init() {
-    document.querySelectorAll('.piece-puzzle[data-piece]').forEach(function(el) {
+    document.querySelectorAll('.piece-puzzle[data-piece]').forEach(function(el){
       new PiecePuzzle(el);
     });
   }
