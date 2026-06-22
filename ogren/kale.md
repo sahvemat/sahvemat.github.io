@@ -34,7 +34,11 @@ permalink: /ogren/kale/
     <p class="piece-text">Kale, yatay veya dikey olarak istediği kadar kare hareket edebilir. Hem soluna hem sağına, hem de öne ve arkaya gidebilir; tek kısıtı yolunu kesen taşlardır.</p>
     <p class="piece-text">Yolunda dost bir taş varsa o kareye kadar ilerleyebilir ancak geçemez. Düşman bir taş varsa onu alarak o kareye yerleşir, daha öteye gidemez.</p>
     <p class="piece-text">Oyunun başında köşelere hapsolur; diğer taşlar oyuna girdikçe kalenin açık hat bulması kolaylaşır ve gerçek gücü ortaya çıkar.</p>
-    <ul class="move-rules">
+   
+  </div>
+  <div class="piece-boards-col">
+
+ <ul class="move-rules">
       <li class="move-rule">
         <span class="move-rule-icon">↔</span>
         <span class="move-rule-text">Yatay olarak istediği kadar kare hareket eder (sola veya sağa).</span>
@@ -52,10 +56,10 @@ permalink: /ogren/kale/
         <span class="move-rule-text">Yolundaki taşların üzerinden atlayamaz.</span>
       </li>
     </ul>
+
   </div>
-  <div class="piece-boards-col">
-    
-  <section class="puzzle-section">
+
+    <section class="puzzle-section">
   <div class="puzzle-section-header">
     <span class="puzzle-section-eyebrow">Pratik Yap</span>
     <h2 class="puzzle-section-title">KALEYİ<br>HAREKET<br>ETTİR</h2>
@@ -63,8 +67,6 @@ permalink: /ogren/kale/
   </div>
   <div class="piece-puzzle" data-piece="wR"></div>
 </section>
-
-  </div>
 
 </div>
 
