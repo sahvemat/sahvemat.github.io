@@ -30,26 +30,16 @@
   text-transform: uppercase;
 }
 
-.pp-bar-suns {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
+.pp-bar-score {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
 }
 
-.pp-dot {
+.pp-bar-score strong {
   font-size: 1rem;
-  opacity: 0.25;
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.pp-dot--done {
-  opacity: 1;
-  animation: pp-dot-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@keyframes pp-dot-pop {
-  from { transform: scale(0.3); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
+  font-weight: 900;
 }
 
 /* ── Board wrapper ───────────────────────────────────────────── */
@@ -88,9 +78,6 @@
   content: '';
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle, rgba(0,0,0,0.22) 28%, transparent 29%);
@@ -106,7 +93,7 @@
   filter: brightness(1.14);
 }
 
-/* Sun square glow */
+/* Sun square highlight */
 .pp-sq--sun.pp-sq--light { background: #f7e8a0; }
 .pp-sq--sun.pp-sq--dark  { background: #c9a84c; }
 
@@ -159,51 +146,6 @@
   color: var(--slate);
   text-align: center;
   background: var(--paper);
-}
-
-/* ── Success screen ──────────────────────────────────────────── */
-.pp-success {
-  width: 100%;
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  background: var(--ink);
-  color: var(--paper);
-  animation: pp-fade-in 0.25s ease;
-}
-
-.pp-success-emoji {
-  font-size: clamp(2.5rem, 12vw, 4rem);
-  animation: pp-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.pp-success-text {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 6vw, 2rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-}
-
-.pp-success-sub {
-  font-family: var(--font-serif);
-  font-size: 0.85rem;
-  font-style: italic;
-  color: rgba(253, 252, 248, 0.6);
-}
-
-@keyframes pp-fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes pp-pop {
-  from { transform: scale(0.2); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
 }
 
 /* ── Puzzle section wrapper ──────────────────────────────────── */
