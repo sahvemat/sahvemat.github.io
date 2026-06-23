@@ -2,7 +2,7 @@
 layout: default
 tags: posts
 title: "Karlsruhe ve Yol Ayrımları"
-author: "Tarik Selbes"
+author: "Tarık Selbes"
 excerpt: "Hayatta bazen kritik yol ayrımlarına geliriz. 21 yıllık bir gecikmeyle de olsa Karlsruhe ile yolum bu yıl Nisan ayında kesişti — \"dünyanın en büyük açık turnuvası\" sloganıyla düzenlenen Grenke Açık'ta oynamak için."
 date: 2026-04-07
 FEN: r4rk1/2q2pb1/2p3pp/p1pP4/Pp2P3/1Pn1NN1P/2Q1BPP1/R1B2RK1 w - - 0 1
@@ -15,7 +15,7 @@ reading_time: 18
   <span class="post-eyebrow">ŞAHvMAT · Turnuva Günlüğü · Nisan 2026</span>
   <h1 class="post-title">KARLSRUHE<br><em>VE YOL AYRIMLARI</em></h1>
   <div class="post-meta">
-    <span>Yazar: <strong>Tarik Selbes</strong></span>
+    <span>Yazar: <strong>Tarık Selbes</strong></span>
     <span class="meta-divider">/</span>
     <span>Grenke Açık · A Grubu</span>
     <span class="meta-divider">/</span>
@@ -92,7 +92,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">3. Tur</span>
-    <span class="post-game-players">Garner, Isaac (2403) — Selbes, Tamer Tarik (2246)</span>
+    <span class="post-game-players">Garner, Isaac (2403) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">½–½</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn-player>
@@ -103,7 +103,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">4. Tur</span>
-    <span class="post-game-players">Selbes, Tamer Tarik (2246) — Brilej, Jaka (2386)</span>
+    <span class="post-game-players">Selbes, Tarık (2246) — Brilej, Jaka (2386)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn-player>
@@ -132,7 +132,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">6. Tur</span>
-    <span class="post-game-players">Selbes, Tamer Tarik (2246) — Nunez Gregoire, Daniel (2375)</span>
+    <span class="post-game-players">Selbes, Tarık (2246) — Nunez Gregoire, Daniel (2375)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn-player>
