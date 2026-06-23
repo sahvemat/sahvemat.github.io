@@ -1647,7 +1647,28 @@ pgn-player p {
 }
 
 @media (min-width: 768px) {
-    .post-article { padding: 5rem 3rem 6rem; }
+    .post-article {
+        padding: 5rem 3rem 6rem;
+        column-count: 2;
+        column-gap: 3.5rem;
+        column-rule: 1px solid var(--line);
+    }
+
+    /* Elements that span both columns */
+    .post-article > .post-hero,
+    .post-article > .post-epigraph,
+    .post-article > .post-colophon,
+    .post-article > .post-archive {
+        column-span: all;
+    }
+
+    /* Prevent ugly mid-element breaks */
+    .post-article > p,
+    .post-article > .post-figure,
+    .post-article > .post-game,
+    .post-article > figure {
+        break-inside: avoid;
+    }
 }
 
 .post-hero {
