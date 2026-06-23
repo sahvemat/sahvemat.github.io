@@ -1815,6 +1815,9 @@ pgn-player p {
     border: 1px solid var(--line);
     background: white;
     box-shadow: 8px 8px 0 0 var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .post-game-header {
@@ -1842,19 +1845,28 @@ pgn-player p {
 }
 
 .post-game pgn-player {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     box-shadow: none;
     text-align: left;
+    width: 100%;
+}
+
+.post-game pgn-player > * {
+    max-width: 100%;
 }
 
 .post-game pgn-player .cp-board,
 .post-game pgn-player .board-wrapper,
 .post-game pgn-player .cp-pgn-board,
 .post-game pgn-player cg-container,
-.post-game pgn-player cg-board {
-    margin-left: auto;
-    margin-right: auto;
+.post-game pgn-player cg-board,
+.post-game pgn-player [class*="board"],
+.post-game pgn-player [class*="Board"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .post-ps {
