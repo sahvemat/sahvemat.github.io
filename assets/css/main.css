@@ -1814,12 +1814,14 @@ pgn-player p {
     display: block;
     margin: 0 auto;
     box-shadow: none;
-    text-align: center;
+    text-align: left;
 }
 
 .post-game pgn-player .cp-board,
 .post-game pgn-player .board-wrapper,
-.post-game pgn-player .cp-pgn-board {
+.post-game pgn-player .cp-pgn-board,
+.post-game pgn-player cg-container,
+.post-game pgn-player cg-board {
     margin-left: auto;
     margin-right: auto;
 }
