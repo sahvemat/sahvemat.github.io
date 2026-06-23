@@ -61,7 +61,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">1. Tur</span>
-    <span class="post-game-players">Watarkar, Yash (2018) — Selbes, Tarik (2246)</span>
+    <span class="post-game-players">Watarkar, Yash (2018) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn-player>
@@ -72,7 +72,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">2. Tur</span>
-    <span class="post-game-players">Selbes, Tarik (2246) — Wolfer, Noah (1944)</span>
+    <span class="post-game-players">Selbes, Tarık (2246) — Wolfer, Noah (1944)</span>
     <span class="post-game-result">1–0</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn-player>
@@ -116,7 +116,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">5. Tur</span>
-    <span class="post-game-players">Aşıcı, Poyraz Efe (2110) — Selbes, Tarik (2258)</span>
+    <span class="post-game-players">Aşıcı, Poyraz Efe (2110) — Selbes, Tarık (2258)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn-player>
@@ -145,7 +145,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">7. Tur</span>
-    <span class="post-game-players">Krockenberger, Martin (2123) — Selbes, Tarik (2246)</span>
+    <span class="post-game-players">Krockenberger, Martin (2123) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn-player>
@@ -156,7 +156,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">8. Tur</span>
-    <span class="post-game-players">Selbes, Tarik (2246) — Fedorovsky, Michael (2383)</span>
+    <span class="post-game-players">Selbes, Tarık (2246) — Fedorovsky, Michael (2383)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn-player>
@@ -167,7 +167,7 @@ reading_time: 18
 <div class="post-game">
   <div class="post-game-header">
     <span class="post-game-round">9. Tur</span>
-    <span class="post-game-players">Zhang, Xiheng (2135) — Selbes, Tarik (2246)</span>
+    <span class="post-game-players">Zhang, Xiheng (2135) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">0–1</span>
   </div>
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn-player>
