@@ -1637,6 +1637,224 @@ pgn-player p {
     }
 }
 
+/* ============================================================
+   POST ARTICLE (Karlsruhe & similar long-form posts)
+   ============================================================ */
+.post-article {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+}
+
+@media (min-width: 768px) {
+    .post-article { padding: 5rem 3rem 6rem; }
+}
+
+.post-hero {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.post-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.post-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9vw, 7rem);
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.post-title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--accent);
+}
+
+.post-meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--slate);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.post-meta .meta-divider { color: var(--accent); }
+
+.post-epigraph {
+    border-left: 3px solid var(--accent);
+    padding: 1rem 0 1rem 2rem;
+    margin: 2.5rem 0 3rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--slate);
+}
+
+.post-epigraph p { margin: 0; }
+.post-epigraph cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.post-body {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+}
+
+.post-body em { color: var(--accent); }
+
+.post-figure {
+    margin: 3rem 0;
+    border: 1px solid var(--line);
+    background: white;
+    box-shadow: 8px 8px 0 0 var(--ink);
+}
+
+.post-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.post-figure figcaption {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--slate);
+    line-height: 1.5;
+}
+
+.figure-num {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+.post-game {
+    margin: 3rem 0;
+    border: 1px solid var(--line);
+    background: white;
+    box-shadow: 8px 8px 0 0 var(--ink);
+}
+
+.post-game-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    align-items: baseline;
+    padding: 1rem 1.25rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.post-game-round { color: var(--accent); font-weight: 700; }
+.post-game-players { flex: 1 1 auto; }
+.post-game-result {
+    background: var(--accent);
+    color: white;
+    padding: 0.15rem 0.6rem;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.post-game pgn-player {
+    display: block;
+    margin: 0;
+    box-shadow: none;
+}
+
+.post-ps {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--line);
+    font-size: 1rem;
+    color: var(--slate);
+}
+
+.post-colophon {
+    margin: 4rem 0 3rem;
+    padding: 2rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.colophon-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.colophon-list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 2rem;
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.colophon-list dt {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+.colophon-list dd { color: var(--paper); margin: 0; }
+
+.post-archive {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--ink);
+}
+
+.post-archive-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-archive-desc {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--slate);
+    margin-bottom: 1.5rem;
+}
+
 /* ── Learn Section (Satranç Öğren) ─────────────────────────── */
 .learn-hero {
     padding: 5rem 2rem 4rem;
