@@ -64,6 +64,30 @@
 })();
 
 (function () {
+    const LABEL_BOARD = 'Makaleyi oku';
+    const LABEL_ARTICLE = 'Tahtaya dön';
+
+    document.querySelectorAll('.post-game-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const game = btn.closest('.post-game');
+            if (!game) return;
+            const board = game.querySelector('.post-game-view--board');
+            const article = game.querySelector('.post-game-view--article');
+            if (!board || !article) return;
+            const showArticle = btn.dataset.view === 'board';
+            board.hidden = showArticle;
+            article.hidden = !showArticle;
+            btn.dataset.view = showArticle ? 'article' : 'board';
+            btn.setAttribute('aria-pressed', showArticle ? 'true' : 'false');
+            btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
+            if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
+                window.ChessPublica.initAll();
+            }
+        });
+    });
+})();
+
+(function () {
     const header = document.getElementById('main-header');
     const headerLogo = header && header.querySelector('.logo-body');
     let isScrolled = false;
