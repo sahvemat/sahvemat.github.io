@@ -8,23 +8,30 @@
         </div>
     </div>
 
+    {% assign tr_months_upper = "OCAK,ŞUBAT,MART,NİSAN,MAYIS,HAZİRAN,TEMMUZ,AĞUSTOS,EYLÜL,EKİM,KASIM,ARALIK" | split: "," %}
+
     <div class="articles-grid">
         {% for post in site.posts %}
+        {% assign month_idx = post.date | date: "%-m" | minus: 1 %}
         <article class="article-card">
-            <div class="article-thumbnail">
+            <a class="article-thumbnail" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
                 <div class="article-number">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</div>
                 {% if post.FEN %}
                 <div class="article-fen" aria-hidden="true">
                     <fen>{{ post.FEN }}</fen>
                 </div>
                 {% endif %}
-            </div>
+            </a>
             <div class="article-info">
                 <div class="article-meta-row">
-                    <span>{{ post.date | date: "%B %Y" | upcase }}</span>
+                    <span>{{ tr_months_upper[month_idx] }} {{ post.date | date: "%Y" }}</span>
                     <span>{{ post.reading_time | default: "8" }} DK OKUMA</span>
                 </div>
-                <h3 class="article-card-title">{{ post.title }}</h3>
+                <h3 class="article-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <div class="article-author-row">
+                    <span class="article-author-label">YAZAR:</span>
+                    <span class="article-author-name">{{ post.author | default: "ŞAHvMAT" }}</span>
+                </div>
                 <p class="article-card-desc">"{{ post.excerpt | strip_html | strip_newlines }}"</p>
                 <a href="{{ post.url | relative_url }}" class="read-more-link">Devamını Oku</a>
             </div>
