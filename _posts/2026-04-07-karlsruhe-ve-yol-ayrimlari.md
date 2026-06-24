@@ -301,11 +301,6 @@ reading_time: 18
       <span class="archive-card-result">0–1</span>
     </a>
   </div>
-  <a class="archive-download" href="{{ '/assets/pgn/karlsruhe-grenke.pgn' | relative_url }}" download>
-    <span class="archive-download-icon">⤓</span>
-    <span class="archive-download-text">Tüm partileri PGN olarak indir</span>
-    <span class="archive-download-meta">karlsruhe-grenke.pgn · 9 parti</span>
-  </a>
 </section>
 
 </article>
