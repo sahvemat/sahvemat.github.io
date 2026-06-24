@@ -122,11 +122,6 @@ reading_time: 18
   <pgn-player src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn-player>
 </div>
 
-<figure class="post-figure">
-  <img src="{{ '/assets/img/karlsruhe/ormanlik-alan.jpg' | relative_url }}" alt="Karlsruhe'de ormanlık alan">
-  <figcaption><span class="figure-num">Foto 4</span> · Hemen her sabah yürüdüğüm ormanlık alan.</figcaption>
-</figure>
-
 <p class="post-body">Altıncı tur benim adıma tam bir faciaydı. Yine doğaçlama bir açılış ve hazırlıksız yakalanan rakibimin kötü oyunu sonucu elde edilmiş kazanç bir konum ardından yanlış tercihler ve fahiş hatalar… Oyunu kaybeden hata benim adıma utanç vericiydi ve tüm parti boyunca moralsiz bir şekilde tahtaya bakan, Doğu Alman filmlerinden çıkmış gibi bir tarza sahip genç rakibimin yüzü o anda gülmeye başladı:</p>
 
 <div class="post-game">
@@ -139,6 +134,11 @@ reading_time: 18
 </div>
 
 <h2 class="post-section-title"><span class="post-section-num">06</span> Son Gün</h2>
+
+<figure class="post-figure">
+  <img src="{{ '/assets/img/karlsruhe/ormanlik-alan.jpg' | relative_url }}" alt="Karlsruhe'de ormanlık alan">
+  <figcaption><span class="figure-num">Foto 4</span> · Hemen her sabah yürüdüğüm ormanlık alan.</figcaption>
+</figure>
 
 <p class="post-body">Böyle bir felaketten sonra turnuvada dağılmak çok mümkün ve geçmişte bunun örneklerini de yaşamadım diyemem ama artık hem eskisine göre daha deneyimliyim hem de ratingimi 2400'e çıkarmak gibi bir amaçla oynadığım için her partinin önemli olduğu fikrini kendime aşılamaya çalışıyorum. Elbette eşlendirme şansı da bana yardımcı oldu demem lazım zira birçok genç ismin olduğu turnuvanın yedinci turunda rakibim 1965 doğumlu FM Krockenberger (2123) oldu. Rakibim iyi bir satranççı olsa da zamana karşı koymak kimse için kolay değil ve nispeten rahat bir galibiyet elde ettiğimi söyleyebilirim.</p>
 
