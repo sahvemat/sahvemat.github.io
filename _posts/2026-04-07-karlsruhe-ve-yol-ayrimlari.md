@@ -13,7 +13,7 @@ reading_time: 18
 
 <header class="post-hero">
   <span class="post-eyebrow">ŞAHvMAT · Turnuva Günlüğü · Nisan 2026</span>
-  <h1 class="post-title">KARLSRUHE<br><em>VE YOL AYRIMLARI</em></h1>
+  <h1 class="post-title">KARLSRUHE<br><em>ve YOL AYRIMLARI</em></h1>
   <div class="post-meta">
     <span>Yazar: <strong>Tarık Selbes</strong></span>
     <span class="meta-divider">/</span>
@@ -58,24 +58,36 @@ reading_time: 18
 
 <p class="post-body">Telefonu her zamanki gibi odada bıraktığım için eşlendirmeyi de ancak sorarak öğrenmiş ve doğru masada oturduğumdan bile tam emin olamayarak tahta başına geçmiştim. Freestyle kategorisinde her tur öncesi oynanacak pozisyon için çekilen kuranın ve açılış töreninin ardından başlayan tur öncesi az da olsa heyecanlıydım. Sadece rakibimin isminin Yash Watarkar olduğu ve siyah olduğum bilgisine sahiptim ve hangi açılışı oynadığından ve hatta oyun kuvvetinden bile bihaber vaziyetteydim. Fakat her Hintli oyuncu gibi düşük ratinge sahip de olsa genç rakibimin tehlikeli olabileceğini biliyordum. Bu nedenle ilk turdan bir kazaya uğramamak gerekiyordu ve her ne kadar bazı badireler atlattıysam da bunu başardım:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-1">
   <div class="post-game-header">
     <span class="post-game-round">1. Tur</span>
     <span class="post-game-players">Watarkar, Yash (2018) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <p class="post-body">İsviçre sistemi turnuvalarda en önemli şey tablonun üst tarafında kalmaya çalışmak ve alta her düşüldüğünde gereken sıçramayı gerçekleştirebilmek. Eğer düşük ratingli rakiplere karşı kayıpsız veya çok az kayıpla oynayabilirseniz üstten çekeceğiniz rakiplere karşı en iyi performansınızı gösteremeseniz bile turnuvayı artıda bitirmeyi garantiliyorsunuz ve bu en önemlisi. Bu açıdan hem ilk tur, hem de 1944 ELO'ya sahip 2008 doğumlu Noah Wolfe ile eşleştiğim ikinci tur büyük önem taşıyordu. İkinci gün sabah 10'da başlayan ikinci turu da kayıpsız geçmem iyi bir turnuva geçirme yolunda atılmış büyük bir adımdı:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-2">
   <div class="post-game-header">
     <span class="post-game-round">2. Tur</span>
     <span class="post-game-players">Selbes, Tarık (2246) — Wolfer, Noah (1944)</span>
     <span class="post-game-result">1–0</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <h2 class="post-section-title"><span class="post-section-num">04</span> Üstten Rakipler</h2>
@@ -89,48 +101,72 @@ reading_time: 18
 
 <p class="post-body">Nihayet üstten bir rakip çektiğim üçüncü turda 20 yaşındaki genç Alman Isaac Garner (2403) karşısında tahta başında orijinal bir fikir buldum ve rakibim biraz da gereksiz yere panikleyerek beraberlik teklif edince kabul ederek iyi başlangıcımı sürdürdüm:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-3">
   <div class="post-game-header">
     <span class="post-game-round">3. Tur</span>
     <span class="post-game-players">Garner, Isaac (2403) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">½–½</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <p class="post-body">2,5/3, hiç de fena değil! Genç Sloven FM Brilej (2386) karşısında beyaz taşlarla alınacak bir galibiyetle pekâlâ bu skoru 3,5/4'e taşımak da mümkündü. Çok da yaklaştım aslında ama üst üste yaptığım inanılmaz hatalarla maalesef turnuvadaki ilk mağlubiyetimi almış oldum:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-4">
   <div class="post-game-header">
     <span class="post-game-round">4. Tur</span>
     <span class="post-game-players">Selbes, Tarık (2246) — Brilej, Jaka (2386)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
-<h2 class="post-section-title"><span class="post-section-num">05</span> Gençler ve Felaketler</h2>
+<h2 class="post-section-title"><span class="post-section-num">05</span> Gençler <span class="kw-lc">ve</span> Felaketler</h2>
 
 <p class="post-body">Bu oyunla başlayan üstten çektiğim rakiplere karşı üstün, hatta kazanç konum elde edip kaybetme paternini maalesef turnuva sonuna kadar sürdürdüm. İşin sevindirici tarafıysa benden düşük ratingli oyunculara karşı iyi performans göstermiş olmamdı. Nitekim beşinci turda 12 yaşındaki yetenekli satranççımız Poyraz Efe Aşıcı'yı biraz da belki açılış olarak şansımın yaver gitmesi nedeniyle kolay yenmeyi başardım:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-5">
   <div class="post-game-header">
     <span class="post-game-round">5. Tur</span>
     <span class="post-game-players">Aşıcı, Poyraz Efe (2110) — Selbes, Tarık (2258)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <p class="post-body">Altıncı tur benim adıma tam bir faciaydı. Yine doğaçlama bir açılış ve hazırlıksız yakalanan rakibimin kötü oyunu sonucu elde edilmiş kazanç bir konum ardından yanlış tercihler ve fahiş hatalar… Oyunu kaybeden hata benim adıma utanç vericiydi ve tüm parti boyunca moralsiz bir şekilde tahtaya bakan, Doğu Alman filmlerinden çıkmış gibi bir tarza sahip genç rakibimin yüzü o anda gülmeye başladı:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-6">
   <div class="post-game-header">
     <span class="post-game-round">6. Tur</span>
     <span class="post-game-players">Selbes, Tarık (2246) — Nunez Gregoire, Daniel (2375)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <h2 class="post-section-title"><span class="post-section-num">06</span> Son Gün</h2>
@@ -142,35 +178,53 @@ reading_time: 18
 
 <p class="post-body">Böyle bir felaketten sonra turnuvada dağılmak çok mümkün ve geçmişte bunun örneklerini de yaşamadım diyemem ama artık hem eskisine göre daha deneyimliyim hem de ratingimi 2400'e çıkarmak gibi bir amaçla oynadığım için her partinin önemli olduğu fikrini kendime aşılamaya çalışıyorum. Elbette eşlendirme şansı da bana yardımcı oldu demem lazım zira birçok genç ismin olduğu turnuvanın yedinci turunda rakibim 1965 doğumlu FM Krockenberger (2123) oldu. Rakibim iyi bir satranççı olsa da zamana karşı koymak kimse için kolay değil ve nispeten rahat bir galibiyet elde ettiğimi söyleyebilirim.</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-7">
   <div class="post-game-header">
     <span class="post-game-round">7. Tur</span>
     <span class="post-game-players">Krockenberger, Martin (2123) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <p class="post-body">Böylelikle turnuvanın son gününe 4,5/7 puan ile giriyordum ve kuvvetli IM Fedorovsky (2383) karşısında elde edeceğim bir galibiyetle turnuvayı hatırı sayılır bir ELO kazancıyla noktalama şansım vardı. Maalesef dördüncü ve altıncı turdaki senaryo bu oyunda da tekrarlandı:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-8">
   <div class="post-game-header">
     <span class="post-game-round">8. Tur</span>
     <span class="post-game-players">Selbes, Tarık (2246) — Fedorovsky, Michael (2383)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <p class="post-body">Artık turnuvayı ELO kazancı olarak artıda mı yoksa az da olsa ekside mi bitireceğim siyah taşlarla oynayacağım son tura bağlıydı. 12 yaşında Hollanda adına oynayan Xiheng Zhang (2135) kâğıt üzerinde bir eşlendirme şanssızlığı olduğu söylenebilirdi. Tam olarak doğru oynadığımı söyleyemesem de oyunsonunda genç rakibimin üstesinden geldim ve ELO kazancımı 12 puana yükselterek turnuvayı noktalamış oldum:</p>
 
-<div class="post-game">
+<div class="post-game" id="tur-9">
   <div class="post-game-header">
     <span class="post-game-round">9. Tur</span>
     <span class="post-game-players">Zhang, Xiheng (2135) — Selbes, Tarık (2246)</span>
     <span class="post-game-result">0–1</span>
+    <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn-player>
+  <div class="post-game-view post-game-view--board">
+    <pgn-player src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn-player>
+  </div>
+  <div class="post-game-view post-game-view--article" hidden>
+    <pgn src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn>
+  </div>
 </div>
 
 <p class="post-body">Elbette turnuva öncesi beklediğim gibi 30-40 ELO kazanamadığım için çok başarılı bir turnuva olduğunu söyleyemem fakat artıda bitirdiğim ve hedefe biraz da olsa yaklaştığım için turnuva sonu mutluydum. Salonun hemen dışında kurulan kitap standından aldığım kitaplar ve satranç takımıyla kendimi bir anlamda ödüllendirdim ve yan tarafta Nepomniachtchi genç hayranlarına imza dağıtıp fotoğraf çektirirken bir kafein bağımlısı olarak son defa kahve kuyruğuna girdim: <em>"Noch einen schwarzen Kaffee bitte!"</em></p>
@@ -199,8 +253,59 @@ reading_time: 18
 
 <section class="post-archive">
   <h3 class="post-archive-title">Tüm Partiler</h3>
-  <p class="post-archive-desc">Dokuz turun PGN dosyasına tek seferde göz atın.</p>
-  <pgn-player src="{{ '/assets/pgn/karlsruhe-grenke.pgn' | relative_url }}"></pgn-player>
+  <p class="post-archive-desc">Dokuz turun tamamı — bir karta tıklayın, partiye gidin.</p>
+  <div class="archive-grid">
+    <a class="archive-card" href="#tur-1">
+      <span class="archive-card-round">1. Tur</span>
+      <span class="archive-card-players">Watarkar, Yash (2018) — Selbes, Tarık (2246)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+    <a class="archive-card" href="#tur-2">
+      <span class="archive-card-round">2. Tur</span>
+      <span class="archive-card-players">Selbes, Tarık (2246) — Wolfer, Noah (1944)</span>
+      <span class="archive-card-result">1–0</span>
+    </a>
+    <a class="archive-card" href="#tur-3">
+      <span class="archive-card-round">3. Tur</span>
+      <span class="archive-card-players">Garner, Isaac (2403) — Selbes, Tarık (2246)</span>
+      <span class="archive-card-result">½–½</span>
+    </a>
+    <a class="archive-card" href="#tur-4">
+      <span class="archive-card-round">4. Tur</span>
+      <span class="archive-card-players">Selbes, Tarık (2246) — Brilej, Jaka (2386)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+    <a class="archive-card" href="#tur-5">
+      <span class="archive-card-round">5. Tur</span>
+      <span class="archive-card-players">Aşıcı, Poyraz Efe (2110) — Selbes, Tarık (2258)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+    <a class="archive-card" href="#tur-6">
+      <span class="archive-card-round">6. Tur</span>
+      <span class="archive-card-players">Selbes, Tarık (2246) — Nunez Gregoire, Daniel (2375)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+    <a class="archive-card" href="#tur-7">
+      <span class="archive-card-round">7. Tur</span>
+      <span class="archive-card-players">Krockenberger, Martin (2123) — Selbes, Tarık (2246)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+    <a class="archive-card" href="#tur-8">
+      <span class="archive-card-round">8. Tur</span>
+      <span class="archive-card-players">Selbes, Tarık (2246) — Fedorovsky, Michael (2383)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+    <a class="archive-card" href="#tur-9">
+      <span class="archive-card-round">9. Tur</span>
+      <span class="archive-card-players">Zhang, Xiheng (2135) — Selbes, Tarık (2246)</span>
+      <span class="archive-card-result">0–1</span>
+    </a>
+  </div>
+  <a class="archive-download" href="{{ '/assets/pgn/karlsruhe-grenke.pgn' | relative_url }}" download>
+    <span class="archive-download-icon">⤓</span>
+    <span class="archive-download-text">Tüm partileri PGN olarak indir</span>
+    <span class="archive-download-meta">karlsruhe-grenke.pgn · 9 parti</span>
+  </a>
 </section>
 
 </article>
