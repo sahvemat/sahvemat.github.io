@@ -1699,9 +1699,29 @@ pgn-player p {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
-        /* ChessPublica reads --board-size to cap the board; default
-           400px overflows phones, so shrink to fit the card width. */
-        --board-size: calc(100vw - 4rem);
+        /* ChessPublica caps the board via --board-size (default 400px).
+           The total player widget is calc(--board-size + 10px) for the
+           eval bar, so we subtract enough that wrapper + eval bar still
+           fits inside the card on narrow phones. */
+        --board-size: min(360px, calc(100vw - 6rem));
+    }
+
+    /* Belt-and-suspenders: chesspublica hard-codes width on these via
+       calc(var(--board-size) + 10px). If anything else (older cached
+       CSS, future updates) sets a wider value, clamp them to the card. */
+    .post-game .player-wrapper,
+    .post-game .player-container,
+    .post-game .pgn-container,
+    .post-game .cp-board-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .post-game .video-moves {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 
