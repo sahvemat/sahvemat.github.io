@@ -1699,6 +1699,9 @@ pgn-player p {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
+        /* ChessPublica reads --board-size to cap the board; default
+           400px overflows phones, so shrink to fit the card width. */
+        --board-size: calc(100vw - 4rem);
     }
 }
 
