@@ -1674,6 +1674,48 @@ pgn-player p {
         margin-right: auto;
         display: block;
     }
+
+    /* Constrain the in-post game cards so the pgn-player board never
+       overflows the viewport on phones. */
+    .post-game,
+    .post-game-view,
+    .post-game-view--board,
+    .post-game-view--article {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .post-game {
+        box-shadow: 4px 4px 0 0 var(--ink);
+    }
+
+    .post-game pgn-player,
+    .post-game pgn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .post-game pgn-player *,
+    .post-game pgn * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .post-game cg-container,
+    .post-game cg-board,
+    .post-game .cp-board,
+    .post-game .board-wrapper,
+    .post-game [class*="board"],
+    .post-game [class*="Board"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+    }
 }
 
 /* ============================================================
