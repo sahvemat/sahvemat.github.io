@@ -1703,7 +1703,7 @@ pgn-player p {
            The total player widget is calc(--board-size + 10px) for the
            eval bar, so we subtract enough that wrapper + eval bar still
            fits inside the card on narrow phones. */
-        --board-size: min(360px, calc(100vw - 6rem));
+        --board-size: min(320px, calc(100vw - 8rem));
     }
 
     /* Belt-and-suspenders: chesspublica hard-codes width on these via
