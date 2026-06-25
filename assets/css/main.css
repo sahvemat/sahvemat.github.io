@@ -1676,7 +1676,9 @@ pgn-player p {
     }
 
     /* Constrain the in-post game cards so the pgn-player board never
-       overflows the viewport on phones. */
+       overflows the viewport on phones. We only cap the outer card and
+       the pgn-player element itself — DO NOT touch chessground internals
+       (cg-container/cg-board) or the board's square layout breaks. */
     .post-game,
     .post-game-view,
     .post-game-view--board,
@@ -1684,11 +1686,11 @@ pgn-player p {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
-        overflow-x: hidden;
     }
 
     .post-game {
         box-shadow: 4px 4px 0 0 var(--ink);
+        overflow-x: hidden;
     }
 
     .post-game pgn-player,
@@ -1697,24 +1699,6 @@ pgn-player p {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
-    }
-
-    .post-game pgn-player *,
-    .post-game pgn * {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .post-game cg-container,
-    .post-game cg-board,
-    .post-game .cp-board,
-    .post-game .board-wrapper,
-    .post-game [class*="board"],
-    .post-game [class*="Board"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 1 / 1;
     }
 }
 
