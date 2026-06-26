@@ -1699,16 +1699,11 @@ pgn-player p {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
-        /* ChessPublica caps the board via --board-size (default 400px).
-           The total player widget is calc(--board-size + 10px) for the
-           eval bar, so we subtract enough that wrapper + eval bar still
-           fits inside the card on narrow phones. */
-        --board-size: min(320px, calc(100vw - 8rem));
+        /* Single column on phones: card = 100vw - 3rem (article padding).
+           Player widget = board + 10px (eval bar). Leave safety margin. */
+        --board-size: min(320px, calc(100vw - 5rem));
     }
 
-    /* Belt-and-suspenders: chesspublica hard-codes width on these via
-       calc(var(--board-size) + 10px). If anything else (older cached
-       CSS, future updates) sets a wider value, clamp them to the card. */
     .post-game .player-wrapper,
     .post-game .player-container,
     .post-game .pgn-container,
@@ -1722,6 +1717,17 @@ pgn-player p {
     .post-game .video-moves {
         max-width: 100%;
         box-sizing: border-box;
+    }
+}
+
+/* Two-column desktop layout: each column is ~half the article width,
+   which is narrower than the 400px default board on small desktops
+   and tablets. Compute a column-aware cap so the board (and the 10px
+   eval bar beside it) fit inside the column. */
+@media (min-width: 768px) {
+    .post-game pgn-player,
+    .post-game pgn {
+        --board-size: min(380px, calc((min(100vw, 72rem) - 14rem) / 2));
     }
 }
 
