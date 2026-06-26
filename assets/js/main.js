@@ -102,8 +102,64 @@
         tick();
     }
 
+    // ChessPublica draws [%cal] arrows and [%csl] squares synchronously
+    // right after board.position() starts chessboardjs's piece animation
+    // (~200ms). Result: arrows pop in before the piece arrives. Defer
+    // the overlay render until the animation finishes, and clear the
+    // previous arrow immediately on each move so it doesn't linger.
+    const ANIM_MS = 220;
+    function patchOverlayTiming(el) {
+        const engine = el._engine;
+        if (!engine || engine.__sahOverlayPatched) return;
+        engine.__sahOverlayPatched = true;
+        const origDraw = typeof engine._drawLastMoveArrow === 'function'
+            ? engine._drawLastMoveArrow.bind(engine) : null;
+        const origRender = typeof engine.renderAnnotations === 'function'
+            ? engine.renderAnnotations.bind(engine) : null;
+        const origGoTo = typeof engine.goTo === 'function'
+            ? engine.goTo.bind(engine) : null;
+        const clear = typeof engine.clearOverlay === 'function'
+            ? engine.clearOverlay.bind(engine) : null;
+        if (origDraw) {
+            engine._drawLastMoveArrow = function (idx) {
+                const targetIdx = idx;
+                setTimeout(function () {
+                    if (engine.state && engine.state.index === targetIdx) {
+                        origDraw(targetIdx);
+                    }
+                }, ANIM_MS);
+            };
+        }
+        if (origRender) {
+            engine.renderAnnotations = function (idx) {
+                const targetIdx = idx;
+                setTimeout(function () {
+                    if (engine.state && engine.state.index === targetIdx) {
+                        origRender(targetIdx);
+                    }
+                }, ANIM_MS);
+            };
+        }
+        if (origGoTo && clear) {
+            engine.goTo = function (i) {
+                clear();
+                return origGoTo(i);
+            };
+        }
+    }
+
     function setupOne(el) {
         pollResize(el);
+        // Patch overlay timing once the engine is ready
+        let patchAttempts = 0;
+        const tryPatch = function () {
+            if (el._engine) {
+                patchOverlayTiming(el);
+                return;
+            }
+            if (patchAttempts++ < 50) setTimeout(tryPatch, 100);
+        };
+        tryPatch();
         const card = el.closest('.post-game');
         if (card && window.ResizeObserver) {
             const ro = new ResizeObserver(() => refit(el));
