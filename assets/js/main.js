@@ -146,6 +146,23 @@
                 return origGoTo(i);
             };
         }
+
+        // ChessPublica's autoplay loop seeds _loopLastTick to the first
+        // RAF timestamp, so the very first move is delayed by a full
+        // `1000 / speed` ms after pressing play — that's the long pause
+        // before anything happens. Backdate _loopLastTick when play()
+        // is invoked so the next RAF fires the first move immediately,
+        // while leaving subsequent ticks at the natural cadence.
+        if (typeof engine.play === 'function') {
+            const origPlay = engine.play.bind(engine);
+            engine.play = function () {
+                const result = origPlay.apply(this, arguments);
+                if (engine.state && engine.state.playing) {
+                    engine._loopLastTick = -1e9;
+                }
+                return result;
+            };
+        }
     }
 
     function setupOne(el) {
