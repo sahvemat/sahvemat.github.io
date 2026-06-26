@@ -1938,6 +1938,11 @@ pgn-player p {
     font-weight: 700;
 }
 
+/* Hide ChessPublica's auto-generated player/event title — duplicates .post-game-header */
+.post-game .video-title {
+    display: none;
+}
+
 /* Lowercase keyword inside uppercased headings (Turkish "ve" etc.) */
 .kw-lc {
     text-transform: lowercase;
