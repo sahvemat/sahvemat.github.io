@@ -269,6 +269,84 @@
 })();
 
 (function () {
+    // Fix the <pgn> article view: remove the auto-generated game header
+    // (player names, event, date) and apply sans-serif font.
+    // ChessPublica renders <pgn> content inside a shadow root, so external
+    // CSS cannot reach it — we have to patch it via JS.
+    var SANS = "Outfit, ui-sans-serif, system-ui, sans-serif";
+
+    function cleanPgnElement(pgn) {
+        // Work on whichever root has the pgn-container (light or shadow DOM)
+        var roots = [pgn];
+        if (pgn.shadowRoot) roots.push(pgn.shadowRoot);
+
+        for (var r = 0; r < roots.length; r++) {
+            var root = roots[r];
+            var container = root.querySelector('.pgn-container');
+            if (!container) continue;
+
+            // Hide every sibling that comes before .pgn-container
+            var parent = container.parentNode;
+            var node = parent.firstChild;
+            while (node && node !== container) {
+                var next = node.nextSibling;
+                if (node.nodeType === 1) {
+                    node.style.display = 'none';
+                } else if (node.nodeType === 3 && node.textContent.trim()) {
+                    var sp = document.createElement('span');
+                    sp.style.display = 'none';
+                    parent.insertBefore(sp, node);
+                    sp.appendChild(node);
+                }
+                node = next;
+            }
+            break;
+        }
+
+        // Inject font override into shadow root when accessible
+        if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
+            var s = document.createElement('style');
+            s.setAttribute('data-sah-font', '');
+            s.textContent = ':host, * { font-family: ' + SANS + ' !important; }';
+            pgn.shadowRoot.prepend(s);
+        }
+        pgn.style.fontFamily = SANS;
+    }
+
+    function tryCleanAll() {
+        document.querySelectorAll('.post-game-view--article pgn').forEach(function (pgn) {
+            if (!pgn.dataset.sahCleaned) {
+                // Poll until .pgn-container exists (async PGN load)
+                var attempts = 0;
+                var poll = function () {
+                    var root = pgn.shadowRoot || pgn;
+                    if (root.querySelector('.pgn-container')) {
+                        cleanPgnElement(pgn);
+                        pgn.dataset.sahCleaned = '1';
+                    } else if (attempts++ < 50) {
+                        setTimeout(poll, 100);
+                    }
+                };
+                poll();
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tryCleanAll);
+    } else {
+        tryCleanAll();
+    }
+
+    window.__sahCleanPgn = function (articleEl) {
+        articleEl.querySelectorAll('pgn').forEach(function (pgn) {
+            delete pgn.dataset.sahCleaned;
+        });
+        tryCleanAll();
+    };
+})();
+
+(function () {
     const LABEL_BOARD = 'Analizi oku';
     const LABEL_ARTICLE = 'Tahtaya dön';
 
@@ -285,6 +363,9 @@
             btn.dataset.view = showArticle ? 'article' : 'board';
             btn.setAttribute('aria-pressed', showArticle ? 'true' : 'false');
             btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
+            if (showArticle && window.__sahCleanPgn) {
+                window.__sahCleanPgn(article);
+            }
             // After swapping back to board view, ensure the player is initialized
             // and re-fit so chessboardjs recomputes square sizes.
             const placeholder = board.querySelector('.pgn-placeholder');
