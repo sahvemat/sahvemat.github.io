@@ -1858,7 +1858,7 @@ pgn-player p {
     break-after: avoid;
 }
 
-.post-article > h2 > span {
+.post-article > h2 > span:first-child {
     font-family: var(--font-mono);
     font-size: 0.7em;
     color: var(--accent);
