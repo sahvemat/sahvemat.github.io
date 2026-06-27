@@ -1951,6 +1951,7 @@ pgn-player p {
     position: static !important;
     display: flex !important;
     align-items: center !important;
+    align-self: center !important;
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
@@ -1989,6 +1990,7 @@ pgn-player p {
 /* Toggle button: pgn-player <-> pgn (annotated article) */
 .post-game-toggle {
     margin-left: auto;
+    align-self: center;
     background: var(--paper);
     color: var(--ink);
     border: 1px solid var(--paper);
