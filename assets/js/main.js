@@ -168,14 +168,13 @@
     function moveSettingsToolbar(el) {
         const card = el.closest('.post-game');
         if (!card) return;
-        const header = card.querySelector('.post-game-header');
-        if (!header) return;
+        const boardView = card.querySelector('.post-game-view--board') || el.parentNode;
         let attempts = 0;
         const tryMove = function () {
             const toolbar = el.querySelector('.board-toolbar');
             if (toolbar && !toolbar.dataset.moved) {
                 toolbar.dataset.moved = '1';
-                header.appendChild(toolbar);
+                boardView.insertBefore(toolbar, el);
                 return;
             }
             if (!toolbar && attempts++ < 50) setTimeout(tryMove, 100);
