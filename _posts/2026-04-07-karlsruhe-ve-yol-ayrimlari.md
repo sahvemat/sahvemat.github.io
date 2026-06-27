@@ -1,6 +1,5 @@
 ---
 layout: post
-tags: posts
 title: "Karlsruhe ve Yol Ayrımları"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
@@ -222,7 +221,7 @@ Elbette turnuva öncesi beklediğim gibi 30-40 ELO kazanamadığım için çok b
   <figcaption><span>Foto 5</span> · Ganimetler!</figcaption>
 </figure>
 
-## Dönüş
+<h2>Eve Dönüş</h2>
 
 Ertesi gün trenle Stuttgart'a ağırlaşmış bir valizle dönerken aynı tren istasyonuna 2010 senesinde yaptığım interrail gezisinde geldiğim anları tekrar hatırladım. Artık saçlarım tamamen ağarmış ve öyle hissetmesem de yaşlanmıştım, değişmeyen tek şeyse o zamanlar protesto edilen Stuttgart 21 projesinin hala tamamlanmamış olmasaydı. Almanların bu projeyi tamamlaması zor görünüyor fakat benim yeni başlayan bu kişisel IM olma projesinin bir gün nihayete ereceğinden şüphem yok! Umarım çok fazla yazı yazmadan bu amacımı gerçekleştirmeyi başarabilirim!
 
