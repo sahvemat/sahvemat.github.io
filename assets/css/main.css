@@ -2007,12 +2007,29 @@ pgn-player p {
     color: var(--ink);
 }
 
-/* Hide auto-generated game header (player names, event, date) inside the pgn text view */
-.post-game-view--article pgn .video-title,
-.post-game-view--article pgn .video-title-players,
-.post-game-view--article pgn .video-title-event,
-.post-game-view--article pgn > *:not(.pgn-container):first-child {
-    display: none;
+/* Loading bar shown while a pgn-player placeholder waits for initialization */
+.pgn-placeholder {
+    min-height: 380px;
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+}
+
+.pgn-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 40%;
+    background: var(--ink);
+    opacity: 0.35;
+    animation: pgn-loading 1.4s ease-in-out infinite;
+}
+
+@keyframes pgn-loading {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(350%); }
 }
 
 .post-game pgn-player {
