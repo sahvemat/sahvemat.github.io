@@ -61,8 +61,8 @@ reading_time: 18
 <div class="post-game" id="tur-1">
   <div class="post-game-header">
     <span class="post-game-round">1. Tur</span>
-    <span class="post-game-players">Watarkar, Yash (2018) — Selbes, Tarık (2246)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -78,8 +78,8 @@ reading_time: 18
 <div class="post-game" id="tur-2">
   <div class="post-game-header">
     <span class="post-game-round">2. Tur</span>
-    <span class="post-game-players">Selbes, Tarık (2246) — Wolfer, Noah (1944)</span>
-    <span class="post-game-result">1–0</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -104,8 +104,8 @@ reading_time: 18
 <div class="post-game" id="tur-3">
   <div class="post-game-header">
     <span class="post-game-round">3. Tur</span>
-    <span class="post-game-players">Garner, Isaac (2403) — Selbes, Tarık (2246)</span>
-    <span class="post-game-result">½–½</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -121,8 +121,8 @@ reading_time: 18
 <div class="post-game" id="tur-4">
   <div class="post-game-header">
     <span class="post-game-round">4. Tur</span>
-    <span class="post-game-players">Selbes, Tarık (2246) — Brilej, Jaka (2386)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -140,8 +140,8 @@ reading_time: 18
 <div class="post-game" id="tur-5">
   <div class="post-game-header">
     <span class="post-game-round">5. Tur</span>
-    <span class="post-game-players">Aşıcı, Poyraz Efe (2110) — Selbes, Tarık (2258)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -162,8 +162,8 @@ reading_time: 18
 <div class="post-game" id="tur-6">
   <div class="post-game-header">
     <span class="post-game-round">6. Tur</span>
-    <span class="post-game-players">Selbes, Tarık (2246) — Nunez Gregoire, Daniel (2375)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -181,8 +181,8 @@ reading_time: 18
 <div class="post-game" id="tur-7">
   <div class="post-game-header">
     <span class="post-game-round">7. Tur</span>
-    <span class="post-game-players">Krockenberger, Martin (2123) — Selbes, Tarık (2246)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -198,8 +198,8 @@ reading_time: 18
 <div class="post-game" id="tur-8">
   <div class="post-game-header">
     <span class="post-game-round">8. Tur</span>
-    <span class="post-game-players">Selbes, Tarık (2246) — Fedorovsky, Michael (2383)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
@@ -215,8 +215,8 @@ reading_time: 18
 <div class="post-game" id="tur-9">
   <div class="post-game-header">
     <span class="post-game-round">9. Tur</span>
-    <span class="post-game-players">Zhang, Xiheng (2135) — Selbes, Tarık (2246)</span>
-    <span class="post-game-result">0–1</span>
+    <span class="post-game-players"></span>
+    <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">

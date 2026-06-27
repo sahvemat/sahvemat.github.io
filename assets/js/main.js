@@ -416,3 +416,47 @@
         }
     }, { passive: true });
 })();
+
+(function () {
+    var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
+
+    function parseHeader(pgn, tag) {
+        var m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
+        return m ? m[1] : '';
+    }
+
+    function populateGameHeaders() {
+        document.querySelectorAll('.post-game').forEach(function (game) {
+            var ph = game.querySelector('.pgn-placeholder');
+            if (!ph || !ph.dataset.pgnSrc) return;
+            var playersEl = game.querySelector('.post-game-players');
+            var resultEl = game.querySelector('.post-game-result');
+            if (!playersEl && !resultEl) return;
+
+            fetch(ph.dataset.pgnSrc)
+                .then(function (r) { return r.text(); })
+                .then(function (pgn) {
+                    var white = parseHeader(pgn, 'White');
+                    var black = parseHeader(pgn, 'Black');
+                    var whiteElo = parseHeader(pgn, 'WhiteElo');
+                    var blackElo = parseHeader(pgn, 'BlackElo');
+                    var result = parseHeader(pgn, 'Result');
+
+                    if (playersEl) {
+                        var wp = white + (whiteElo && whiteElo !== '-1' ? ' (' + whiteElo + ')' : '');
+                        var bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
+                        playersEl.textContent = wp + ' — ' + bp;
+                    }
+                    if (resultEl) {
+                        resultEl.textContent = resultMap[result] || result;
+                    }
+                });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', populateGameHeaders);
+    } else {
+        populateGameHeaders();
+    }
+})();
