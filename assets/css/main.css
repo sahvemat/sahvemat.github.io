@@ -1943,6 +1943,44 @@ pgn-player p {
     display: none;
 }
 
+/* Settings cog toolbar moved from pgn-player into .post-game-header via JS */
+.post-game-header {
+    position: relative;
+}
+.post-game-header .board-toolbar {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+}
+.post-game-header .settings-toggle {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    color: var(--paper) !important;
+    padding: 0.15rem 0.45rem !important;
+    border-radius: 2px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+    font-size: 14px !important;
+}
+.post-game-header .settings-toggle svg,
+.post-game-header .settings-toggle * {
+    fill: currentColor !important;
+    color: var(--paper) !important;
+}
+.post-game-header .settings-panel {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    z-index: 100 !important;
+}
+
 /* Lowercase keyword inside uppercased headings (Turkish "ve" etc.) */
 .kw-lc {
     text-transform: lowercase;
