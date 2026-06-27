@@ -1735,6 +1735,7 @@ pgn-player p {
    POST ARTICLE (Karlsruhe & similar long-form posts)
    ============================================================ */
 .post-article {
+    counter-reset: section;
     max-width: 72rem;
     margin: 0 auto;
     padding: 3rem 1.5rem 5rem;
@@ -1853,17 +1854,19 @@ pgn-player p {
     border-top: 2px solid var(--ink);
     display: flex;
     align-items: baseline;
-    gap: 1rem;
     break-inside: avoid;
     break-after: avoid;
 }
 
-.post-article > h2 > span:first-child {
+.post-article > h2::before {
+    counter-increment: section;
+    content: counter(section, decimal-leading-zero);
     font-family: var(--font-mono);
     font-size: 0.7em;
     color: var(--accent);
     font-weight: 500;
     letter-spacing: 0.05em;
+    margin-right: 1rem;
 }
 
 @media (min-width: 768px) {
