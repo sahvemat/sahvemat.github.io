@@ -184,8 +184,80 @@
         }
     }
 
+    // Serialize initializations so at most one pgn-player boots at a time.
+    // This prevents the 9-instance stampede where all players compete for
+    // the main thread simultaneously on page load.
+    var initQueue = [];
+    var initBusy = false;
+
+    function drainQueue() {
+        if (initBusy || !initQueue.length) return;
+        initBusy = true;
+        var el = initQueue.shift();
+        var dataSrc = el.getAttribute('data-src');
+        if (dataSrc) {
+            el.setAttribute('src', dataSrc);
+            el.removeAttribute('data-src');
+            if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
+                window.ChessPublica.initAll();
+            }
+        }
+        setupOne(el);
+        // Wait for chessboardjs to finish initializing before starting the next
+        // player — poll until _engine.board exists or 3s elapse.
+        var waited = 0;
+        var poll = function () {
+            if (el._engine && el._engine.board || waited >= 30) {
+                initBusy = false;
+                drainQueue();
+            } else {
+                waited++;
+                setTimeout(poll, 100);
+            }
+        };
+        setTimeout(poll, 100);
+    }
+
+    function enqueue(el) {
+        if (initQueue.indexOf(el) === -1) initQueue.push(el);
+        drainQueue();
+    }
+    window.__sahEnqueue = enqueue;
+
     function initAll() {
-        document.querySelectorAll('.post-game pgn-player').forEach(setupOne);
+        var players = document.querySelectorAll('.post-game pgn-player');
+        if (!players.length) return;
+
+        // Move src → data-src on all players so the library doesn't auto-init
+        // them all at once. Players already in the viewport are enqueued first.
+        players.forEach(function (el) {
+            var src = el.getAttribute('src');
+            if (src) {
+                el.setAttribute('data-src', src);
+                el.removeAttribute('src');
+            }
+        });
+
+        if (!window.IntersectionObserver) {
+            // Fallback: just init them all (old browsers)
+            players.forEach(function (el) {
+                var s = el.getAttribute('data-src');
+                if (s) { el.setAttribute('src', s); el.removeAttribute('data-src'); }
+                setupOne(el);
+            });
+            return;
+        }
+
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    io.unobserve(entry.target);
+                    enqueue(entry.target);
+                }
+            });
+        }, { rootMargin: '200px 0px' }); // start loading 200px before entering viewport
+
+        players.forEach(function (el) { io.observe(el); });
     }
 
     if (document.readyState === 'loading') {
@@ -220,17 +292,24 @@
             btn.dataset.view = showArticle ? 'article' : 'board';
             btn.setAttribute('aria-pressed', showArticle ? 'true' : 'false');
             btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
-            if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
-                window.ChessPublica.initAll();
-            }
             // After swapping back to the board, re-fit so chessboardjs
             // recomputes square sizes for the now-visible board.
             const player = board.querySelector('pgn-player');
-            if (player && player._engine && player._engine.board &&
-                typeof player._engine.board.resize === 'function') {
-                setTimeout(function () {
-                    try { player._engine.board.resize(); } catch (e) {}
-                }, 50);
+            if (player) {
+                // If this player hasn't been lazy-initialized yet, kick it off now.
+                if (player.getAttribute('data-src') && window.__sahEnqueue) {
+                    window.__sahEnqueue(player);
+                } else {
+                    if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
+                        window.ChessPublica.initAll();
+                    }
+                    if (player._engine && player._engine.board &&
+                        typeof player._engine.board.resize === 'function') {
+                        setTimeout(function () {
+                            try { player._engine.board.resize(); } catch (e) {}
+                        }, 50);
+                    }
+                }
             }
         });
     });
