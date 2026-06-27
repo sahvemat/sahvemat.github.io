@@ -222,7 +222,7 @@ reading_time: 18
   <figcaption><span>Foto 5</span> · Ganimetler!</figcaption>
 </figure>
 
-<h2>Dönüş</h2>
+<h2>Eve Dönüş</h2>
 
 <p>Ertesi gün trenle Stuttgart'a ağırlaşmış bir valizle dönerken aynı tren istasyonuna 2010 senesinde yaptığım interrail gezisinde geldiğim anları tekrar hatırladım. Artık saçlarım tamamen ağarmış ve öyle hissetmesem de yaşlanmıştım, değişmeyen tek şeyse o zamanlar protesto edilen Stuttgart 21 projesinin hala tamamlanmamış olmasaydı. Almanların bu projeyi tamamlaması zor görünüyor fakat benim yeni başlayan bu kişisel IM olma projesinin bir gün nihayete ereceğinden şüphem yok! Umarım çok fazla yazı yazmadan bu amacımı gerçekleştirmeyi başarabilirim!</p>
 
