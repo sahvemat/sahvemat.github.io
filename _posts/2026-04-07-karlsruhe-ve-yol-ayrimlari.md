@@ -19,7 +19,7 @@ reading_time: 18
     <span class="meta-divider">/</span>
     <span>Grenke Açık · A Grubu</span>
     <span class="meta-divider">/</span>
-    <span>2–6 Nisan 2026</span>
+    <span data-date="{{ page.date | date: '%Y-%m-%d' }}"></span>
   </div>
 </header>
 

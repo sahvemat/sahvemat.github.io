@@ -418,6 +418,15 @@
 })();
 
 (function () {
+    var months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+    document.querySelectorAll('[data-date]').forEach(function (el) {
+        var parts = el.dataset.date.split('-');
+        if (parts.length < 3) return;
+        el.textContent = months[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
+    });
+})();
+
+(function () {
     function formatPostTitle(h1) {
         var title = h1.dataset.title;
         if (!title) return;
