@@ -2001,10 +2001,18 @@ pgn-player p {
 
 .post-game-view--article pgn {
     display: block;
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--ink);
+}
+
+/* Hide auto-generated game header (player names, event, date) inside the pgn text view */
+.post-game-view--article pgn .video-title,
+.post-game-view--article pgn .video-title-players,
+.post-game-view--article pgn .video-title-event,
+.post-game-view--article pgn > *:not(.pgn-container):first-child {
+    display: none;
 }
 
 .post-game pgn-player {
