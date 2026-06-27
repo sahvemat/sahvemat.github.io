@@ -165,23 +165,6 @@
         }
     }
 
-    function moveSettingsToolbar(el) {
-        const card = el.closest('.post-game');
-        if (!card) return;
-        const boardView = card.querySelector('.post-game-view--board') || el.parentNode;
-        let attempts = 0;
-        const tryMove = function () {
-            const toolbar = el.querySelector('.board-toolbar');
-            if (toolbar && !toolbar.dataset.moved) {
-                toolbar.dataset.moved = '1';
-                boardView.insertBefore(toolbar, el);
-                return;
-            }
-            if (!toolbar && attempts++ < 50) setTimeout(tryMove, 100);
-        };
-        tryMove();
-    }
-
     function setupOne(el) {
         pollResize(el);
         // Patch overlay timing once the engine is ready
@@ -194,7 +177,6 @@
             if (patchAttempts++ < 50) setTimeout(tryPatch, 100);
         };
         tryPatch();
-        moveSettingsToolbar(el);
         const card = el.closest('.post-game');
         if (card && window.ResizeObserver) {
             const ro = new ResizeObserver(() => refit(el));
