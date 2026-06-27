@@ -66,7 +66,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn>
@@ -83,7 +83,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn>
@@ -109,7 +109,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn>
@@ -126,7 +126,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn>
@@ -145,7 +145,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn>
@@ -167,7 +167,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn>
@@ -186,7 +186,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn>
@@ -203,7 +203,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn>
@@ -220,7 +220,7 @@ reading_time: 18
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Makaleyi oku</button>
   </div>
   <div class="post-game-view post-game-view--board">
-    <pgn-player data-src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn-player>
+    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></div>
   </div>
   <div class="post-game-view post-game-view--article" hidden>
     <pgn src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn>

@@ -184,30 +184,38 @@
         }
     }
 
-    // Lazy-initialize pgn-player elements that ship with data-src (not src).
-    // ChessPublica never sees a src attribute on these elements at parse time,
-    // so it does nothing. We add src and call initAll() only when the element
-    // scrolls within 200px of the viewport, one at a time, to avoid a stampede.
+    // Lazy-initialize post-game boards using neutral placeholder divs.
+    //
+    // The markup uses <div class="pgn-placeholder" data-pgn-src="..."> instead
+    // of <pgn-player src="...">. ChessPublica never sees these elements, so
+    // zero boards are initialized on page load. When a placeholder scrolls
+    // within 200px of the viewport it is queued; the queue activates one board
+    // at a time to prevent a render stampede.
     var initQueue = [];
     var initBusy = false;
+
+    function activate(ph) {
+        var src = ph.dataset.pgnSrc;
+        if (!src || !ph.parentNode) return null;
+        var player = document.createElement('pgn-player');
+        player.setAttribute('src', src);
+        ph.parentNode.replaceChild(player, ph);
+        if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
+            window.ChessPublica.initAll();
+        }
+        setupOne(player);
+        return player;
+    }
 
     function drainQueue() {
         if (initBusy || !initQueue.length) return;
         initBusy = true;
-        var el = initQueue.shift();
-        var src = el.getAttribute('data-src');
-        if (src) {
-            el.setAttribute('src', src);
-            el.removeAttribute('data-src');
-            if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
-                window.ChessPublica.initAll();
-            }
-        }
-        setupOne(el);
+        var ph = initQueue.shift();
+        var player = activate(ph);
         // Wait for chessboardjs to finish before starting the next player.
         var waited = 0;
         var poll = function () {
-            if ((el._engine && el._engine.board) || waited >= 30) {
+            if (!player || (player._engine && player._engine.board) || waited >= 30) {
                 initBusy = false;
                 drainQueue();
             } else {
@@ -218,20 +226,18 @@
         setTimeout(poll, 100);
     }
 
-    function enqueue(el) {
-        if (initQueue.indexOf(el) === -1) initQueue.push(el);
+    function enqueue(ph) {
+        if (initQueue.indexOf(ph) === -1) initQueue.push(ph);
         drainQueue();
     }
     window.__sahEnqueue = enqueue;
 
     function initAll() {
-        // Only target elements that have data-src (never initialized by ChessPublica).
-        var players = document.querySelectorAll('.post-game pgn-player[data-src]');
-        if (!players.length) return;
+        var placeholders = document.querySelectorAll('.post-game .pgn-placeholder');
+        if (!placeholders.length) return;
 
         if (!window.IntersectionObserver) {
-            // Fallback for old browsers: activate all immediately.
-            players.forEach(function (el) { enqueue(el); });
+            placeholders.forEach(function (ph) { enqueue(ph); });
             return;
         }
 
@@ -244,7 +250,7 @@
             });
         }, { rootMargin: '200px 0px' });
 
-        players.forEach(function (el) { io.observe(el); });
+        placeholders.forEach(function (ph) { io.observe(ph); });
     }
 
     if (document.readyState === 'loading') {
@@ -281,17 +287,16 @@
             btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
             // After swapping back to board view, ensure the player is initialized
             // and re-fit so chessboardjs recomputes square sizes.
+            const placeholder = board.querySelector('.pgn-placeholder');
             const player = board.querySelector('pgn-player');
-            if (player) {
-                if (player.getAttribute('data-src') && window.__sahEnqueue) {
-                    // Not yet lazy-initialized — kick it off now.
-                    window.__sahEnqueue(player);
-                } else if (player._engine && player._engine.board &&
-                        typeof player._engine.board.resize === 'function') {
-                    setTimeout(function () {
-                        try { player._engine.board.resize(); } catch (e) {}
-                    }, 50);
-                }
+            if (placeholder && window.__sahEnqueue) {
+                // Not yet lazy-initialized — activate it now.
+                window.__sahEnqueue(placeholder);
+            } else if (player && player._engine && player._engine.board &&
+                    typeof player._engine.board.resize === 'function') {
+                setTimeout(function () {
+                    try { player._engine.board.resize(); } catch (e) {}
+                }, 50);
             }
         });
     });
