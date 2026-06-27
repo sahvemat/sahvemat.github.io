@@ -1,6 +1,5 @@
 ---
 layout: post
-tags: posts
 title: "Karlsruhe ve Yol Ayrımları"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
