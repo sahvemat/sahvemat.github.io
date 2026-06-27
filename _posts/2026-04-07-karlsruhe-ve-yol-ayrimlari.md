@@ -48,7 +48,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-1">
   <div class="post-game-header">
-    <span class="post-game-round">1. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -65,7 +65,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-2">
   <div class="post-game-header">
-    <span class="post-game-round">2. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -91,7 +91,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-3">
   <div class="post-game-header">
-    <span class="post-game-round">3. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -108,7 +108,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-4">
   <div class="post-game-header">
-    <span class="post-game-round">4. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -127,7 +127,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-5">
   <div class="post-game-header">
-    <span class="post-game-round">5. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -149,7 +149,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-6">
   <div class="post-game-header">
-    <span class="post-game-round">6. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -168,7 +168,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-7">
   <div class="post-game-header">
-    <span class="post-game-round">7. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -185,7 +185,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-8">
   <div class="post-game-header">
-    <span class="post-game-round">8. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
@@ -202,7 +202,7 @@ reading_time: 18
 
 <div class="post-game" id="tur-9">
   <div class="post-game-header">
-    <span class="post-game-round">9. Tur</span>
+    <span class="post-game-round"></span>
     <span class="post-game-players"></span>
     <span class="post-game-result"></span>
     <button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>
