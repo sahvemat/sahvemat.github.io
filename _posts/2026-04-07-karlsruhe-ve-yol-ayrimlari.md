@@ -13,7 +13,7 @@ reading_time: 18
 
 <header class="post-hero">
   <span class="post-eyebrow">ŞAHvMAT · Turnuva Günlüğü · Nisan 2026</span>
-  <h1 class="post-title">KARLSRUHE<br><em>ve YOL AYRIMLARI</em></h1>
+  <h1 class="post-title" data-title="{{ page.title }}"></h1>
   <div class="post-meta">
     <span>Yazar: <strong>Tarık Selbes</strong></span>
     <span class="meta-divider">/</span>

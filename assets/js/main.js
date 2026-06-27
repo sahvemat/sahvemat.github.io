@@ -418,6 +418,25 @@
 })();
 
 (function () {
+    function formatPostTitle(h1) {
+        var title = h1.dataset.title;
+        if (!title) return;
+        var words = title.split(' ');
+        var veIdx = words.indexOf('ve');
+        var up = function (w) { return w.toLocaleUpperCase('tr-TR'); };
+        if (veIdx === -1) {
+            h1.textContent = words.map(up).join(' ');
+            return;
+        }
+        var before = words.slice(0, veIdx).map(up).join(' ');
+        var after = ['ve'].concat(words.slice(veIdx + 1).map(up)).join(' ');
+        h1.innerHTML = before + '<br><em>' + after + '</em>';
+    }
+
+    document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
+})();
+
+(function () {
     var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
 
     function parseHeader(pgn, tag) {
