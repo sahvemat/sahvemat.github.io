@@ -453,6 +453,20 @@
         return m ? m[1] : '';
     }
 
+    function injectGameHeaders() {
+        document.querySelectorAll('.post-game').forEach(function (game) {
+            if (game.querySelector('.post-game-header')) return;
+            var header = document.createElement('div');
+            header.className = 'post-game-header';
+            header.innerHTML =
+                '<span class="post-game-round"></span>' +
+                '<span class="post-game-players"></span>' +
+                '<span class="post-game-result"></span>' +
+                '<button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>';
+            game.insertBefore(header, game.firstChild);
+        });
+    }
+
     function populateGameHeaders() {
         document.querySelectorAll('.post-game').forEach(function (game) {
             var ph = game.querySelector('.pgn-placeholder');
@@ -487,9 +501,14 @@
         });
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', populateGameHeaders);
-    } else {
+    function init() {
+        injectGameHeaders();
         populateGameHeaders();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
 })();
