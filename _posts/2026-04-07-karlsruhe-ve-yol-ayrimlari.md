@@ -1,27 +1,15 @@
 ---
-layout: default
+layout: post
 tags: posts
 title: "Karlsruhe ve Yol Ayrımları"
 author: "Tarık Selbes"
+section: "Turnuva Günlüğü"
+event: "Grenke Açık · A Grubu"
 excerpt: "Hayatta bazen kritik yol ayrımlarına geliriz. 21 yıllık bir gecikmeyle de olsa Karlsruhe ile yolum bu yıl Nisan ayında kesişti — \"dünyanın en büyük açık turnuvası\" sloganıyla düzenlenen Grenke Açık'ta oynamak için."
 date: 2026-04-07
 FEN: r4rk1/2q2pb1/2p3pp/p1pP4/Pp2P3/1Pn1NN1P/2Q1BPP1/R1B2RK1 w - - 0 1
 reading_time: 18
 ---
-
-<article class="post-article">
-
-<header class="post-hero">
-  <span class="post-eyebrow">ŞAHvMAT · Turnuva Günlüğü · Nisan 2026</span>
-  <h1 class="post-title">KARLSRUHE<br><em>ve YOL AYRIMLARI</em></h1>
-  <div class="post-meta">
-    <span>Yazar: <strong>Tarık Selbes</strong></span>
-    <span class="meta-divider">/</span>
-    <span>Grenke Açık · A Grubu</span>
-    <span class="meta-divider">/</span>
-    <span>2–6 Nisan 2026</span>
-  </div>
-</header>
 
 <blockquote class="post-epigraph">
   <p>Two roads diverged in a wood, and I—<br>
@@ -302,5 +290,3 @@ reading_time: 18
     </a>
   </div>
 </section>
-
-</article>
