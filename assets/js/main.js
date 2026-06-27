@@ -457,9 +457,10 @@
         document.querySelectorAll('.post-game').forEach(function (game) {
             var ph = game.querySelector('.pgn-placeholder');
             if (!ph || !ph.dataset.pgnSrc) return;
+            var roundEl = game.querySelector('.post-game-round');
             var playersEl = game.querySelector('.post-game-players');
             var resultEl = game.querySelector('.post-game-result');
-            if (!playersEl && !resultEl) return;
+            if (!roundEl && !playersEl && !resultEl) return;
 
             fetch(ph.dataset.pgnSrc)
                 .then(function (r) { return r.text(); })
@@ -469,7 +470,11 @@
                     var whiteElo = parseHeader(pgn, 'WhiteElo');
                     var blackElo = parseHeader(pgn, 'BlackElo');
                     var result = parseHeader(pgn, 'Result');
+                    var round = parseHeader(pgn, 'Round');
 
+                    if (roundEl) {
+                        roundEl.textContent = round + '. Tur';
+                    }
                     if (playersEl) {
                         var wp = white + (whiteElo && whiteElo !== '-1' ? ' (' + whiteElo + ')' : '');
                         var bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
