@@ -275,17 +275,17 @@
     // CSS cannot reach it — we have to patch it via JS.
     var SANS = "Outfit, ui-sans-serif, system-ui, sans-serif";
 
+    function applyFont(el) {
+        el.style.fontFamily = SANS;
+    }
+
     function cleanPgnElement(pgn) {
-        // Work on whichever root has the pgn-container (light or shadow DOM)
-        var roots = [pgn];
-        if (pgn.shadowRoot) roots.push(pgn.shadowRoot);
+        // Determine which root to search: prefer shadow DOM if open, else light DOM.
+        var root = (pgn.shadowRoot) || pgn;
+        var container = root.querySelector('.pgn-container');
 
-        for (var r = 0; r < roots.length; r++) {
-            var root = roots[r];
-            var container = root.querySelector('.pgn-container');
-            if (!container) continue;
-
-            // Hide every sibling that comes before .pgn-container
+        if (container) {
+            // Hide every node before .pgn-container (auto-generated header)
             var parent = container.parentNode;
             var node = parent.firstChild;
             while (node && node !== container) {
@@ -300,17 +300,24 @@
                 }
                 node = next;
             }
-            break;
+
+            // Apply font to every element inside the resolved root
+            applyFont(root === pgn.shadowRoot ? root.host : pgn);
+            root.querySelectorAll('*').forEach(applyFont);
         }
 
-        // Inject font override into shadow root when accessible
+        // Open shadow DOM: inject a stylesheet so future dynamic content inherits it too
         if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
             var s = document.createElement('style');
             s.setAttribute('data-sah-font', '');
             s.textContent = ':host, * { font-family: ' + SANS + ' !important; }';
             pgn.shadowRoot.prepend(s);
         }
-        pgn.style.fontFamily = SANS;
+
+        // Light DOM fallback: walk all children and stamp font-family directly
+        // (covers cases where shadow DOM is closed or absent)
+        pgn.querySelectorAll('*').forEach(applyFont);
+        applyFont(pgn);
     }
 
     function tryCleanAll() {

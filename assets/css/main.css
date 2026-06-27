@@ -1999,9 +1999,13 @@ pgn-player p {
     background: var(--paper);
 }
 
+.post-game-view--article pgn,
+.post-game-view--article pgn * {
+    font-family: var(--font-sans) !important;
+}
+
 .post-game-view--article pgn {
     display: block;
-    font-family: var(--font-sans);
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--ink);
