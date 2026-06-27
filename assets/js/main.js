@@ -269,7 +269,7 @@
 })();
 
 (function () {
-    const LABEL_BOARD = 'Makaleyi oku';
+    const LABEL_BOARD = 'Analizi oku';
     const LABEL_ARTICLE = 'Tahtaya dön';
 
     document.querySelectorAll('.post-game-toggle').forEach(function (btn) {
