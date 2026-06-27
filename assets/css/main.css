@@ -1833,7 +1833,7 @@ pgn-player p {
     color: var(--ink);
 }
 
-.post-body {
+.post-article > p {
     font-family: var(--font-serif);
     font-size: 1.1rem;
     line-height: 1.8;
@@ -1841,7 +1841,7 @@ pgn-player p {
     color: var(--ink);
 }
 
-.post-body em { color: var(--accent); }
+.post-article > p em { color: var(--accent); }
 
 .post-section-title {
     font-family: var(--font-display);
