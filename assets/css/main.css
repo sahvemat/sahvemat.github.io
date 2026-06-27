@@ -1867,7 +1867,7 @@ pgn-player p {
 }
 
 @media (min-width: 768px) {
-    .post-article > .post-article > h2 {
+    .post-article > h2 {
         column-span: all;
         margin-top: 2.5rem;
     }
