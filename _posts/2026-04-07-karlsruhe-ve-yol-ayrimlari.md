@@ -45,25 +45,11 @@ Fakat Grenke için şartlar son derece elverişliydi. Stuttgart havalimanındaki
 
 Telefonu her zamanki gibi odada bıraktığım için eşlendirmeyi de ancak sorarak öğrenmiş ve doğru masada oturduğumdan bile tam emin olamayarak tahta başına geçmiştim. Freestyle kategorisinde her tur öncesi oynanacak pozisyon için çekilen kuranın ve açılış töreninin ardından başlayan tur öncesi az da olsa heyecanlıydım. Sadece rakibimin isminin Yash Watarkar olduğu ve siyah olduğum bilgisine sahiptim ve hangi açılışı oynadığından ve hatta oyun kuvvetinden bile bihaber vaziyetteydim. Fakat her Hintli oyuncu gibi düşük ratinge sahip de olsa genç rakibimin tehlikeli olabileceğini biliyordum. Bu nedenle ilk turdan bir kazaya uğramamak gerekiyordu ve her ne kadar bazı badireler atlattıysam da bunu başardım:
 
-<div class="post-game" id="tur-1">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-1" data-pgn="{{ '/assets/pgn/karlsruhe-r1.pgn' | relative_url }}"></div>
 
 İsviçre sistemi turnuvalarda en önemli şey tablonun üst tarafında kalmaya çalışmak ve alta her düşüldüğünde gereken sıçramayı gerçekleştirebilmek. Eğer düşük ratingli rakiplere karşı kayıpsız veya çok az kayıpla oynayabilirseniz üstten çekeceğiniz rakiplere karşı en iyi performansınızı gösteremeseniz bile turnuvayı artıda bitirmeyi garantiliyorsunuz ve bu en önemlisi. Bu açıdan hem ilk tur, hem de 1944 ELO'ya sahip 2008 doğumlu Noah Wolfe ile eşleştiğim ikinci tur büyük önem taşıyordu. İkinci gün sabah 10'da başlayan ikinci turu da kayıpsız geçmem iyi bir turnuva geçirme yolunda atılmış büyük bir adımdı:
 
-<div class="post-game" id="tur-2">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-2" data-pgn="{{ '/assets/pgn/karlsruhe-r2.pgn' | relative_url }}"></div>
 
 ## Üstten Rakipler
 
@@ -76,38 +62,17 @@ Telefonu her zamanki gibi odada bıraktığım için eşlendirmeyi de ancak sora
 
 Nihayet üstten bir rakip çektiğim üçüncü turda 20 yaşındaki genç Alman Isaac Garner (2403) karşısında tahta başında orijinal bir fikir buldum ve rakibim biraz da gereksiz yere panikleyerek beraberlik teklif edince kabul ederek iyi başlangıcımı sürdürdüm:
 
-<div class="post-game" id="tur-3">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-3" data-pgn="{{ '/assets/pgn/karlsruhe-r3.pgn' | relative_url }}"></div>
 
 2,5/3, hiç de fena değil! Genç Sloven FM Brilej (2386) karşısında beyaz taşlarla alınacak bir galibiyetle pekâlâ bu skoru 3,5/4'e taşımak da mümkündü. Çok da yaklaştım aslında ama üst üste yaptığım inanılmaz hatalarla maalesef turnuvadaki ilk mağlubiyetimi almış oldum:
 
-<div class="post-game" id="tur-4">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-4" data-pgn="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></div>
 
 ## Gençler <span class="kw-lc">ve</span> Felaketler
 
 Bu oyunla başlayan üstten çektiğim rakiplere karşı üstün, hatta kazanç konum elde edip kaybetme paternini maalesef turnuva sonuna kadar sürdürdüm. İşin sevindirici tarafıysa benden düşük ratingli oyunculara karşı iyi performans göstermiş olmamdı. Nitekim beşinci turda 12 yaşındaki yetenekli satranççımız Poyraz Efe Aşıcı'yı biraz da belki açılış olarak şansımın yaver gitmesi nedeniyle kolay yenmeyi başardım:
 
-<div class="post-game" id="tur-5">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-5" data-pgn="{{ '/assets/pgn/karlsruhe-r5.pgn' | relative_url }}"></div>
 
 <figure>
   <img src="{{ '/assets/img/karlsruhe/ormanlik-alan.jpg' | relative_url }}" alt="Karlsruhe'de ormanlık alan">
@@ -116,49 +81,21 @@ Bu oyunla başlayan üstten çektiğim rakiplere karşı üstün, hatta kazanç 
 
 Altıncı tur benim adıma tam bir faciaydı. Yine doğaçlama bir açılış ve hazırlıksız yakalanan rakibimin kötü oyunu sonucu elde edilmiş kazanç bir konum ardından yanlış tercihler ve fahiş hatalar… Oyunu kaybeden hata benim adıma utanç vericiydi ve tüm parti boyunca moralsiz bir şekilde tahtaya bakan, Doğu Alman filmlerinden çıkmış gibi bir tarza sahip genç rakibimin yüzü o anda gülmeye başladı:
 
-<div class="post-game" id="tur-6">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-6" data-pgn="{{ '/assets/pgn/karlsruhe-r6.pgn' | relative_url }}"></div>
 
 ## Son Gün
 
 Böyle bir felaketten sonra turnuvada dağılmak çok mümkün ve geçmişte bunun örneklerini de yaşamadım diyemem ama artık hem eskisine göre daha deneyimliyim hem de ratingimi 2400'e çıkarmak gibi bir amaçla oynadığım için her partinin önemli olduğu fikrini kendime aşılamaya çalışıyorum. Elbette eşlendirme şansı da bana yardımcı oldu demem lazım zira birçok genç ismin olduğu turnuvanın yedinci turunda rakibim 1965 doğumlu FM Krockenberger (2123) oldu. Rakibim iyi bir satranççı olsa da zamana karşı koymak kimse için kolay değil ve nispeten rahat bir galibiyet elde ettiğimi söyleyebilirim.
 
-<div class="post-game" id="tur-7">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-7" data-pgn="{{ '/assets/pgn/karlsruhe-r7.pgn' | relative_url }}"></div>
 
 Böylelikle turnuvanın son gününe 4,5/7 puan ile giriyordum ve kuvvetli IM Fedorovsky (2383) karşısında elde edeceğim bir galibiyetle turnuvayı hatırı sayılır bir ELO kazancıyla noktalama şansım vardı. Maalesef dördüncü ve altıncı turdaki senaryo bu oyunda da tekrarlandı:
 
-<div class="post-game" id="tur-8">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-8" data-pgn="{{ '/assets/pgn/karlsruhe-r8.pgn' | relative_url }}"></div>
 
 Artık turnuvayı ELO kazancı olarak artıda mı yoksa az da olsa ekside mi bitireceğim siyah taşlarla oynayacağım son tura bağlıydı. 12 yaşında Hollanda adına oynayan Xiheng Zhang (2135) kâğıt üzerinde bir eşlendirme şanssızlığı olduğu söylenebilirdi. Tam olarak doğru oynadığımı söyleyemesem de oyunsonunda genç rakibimin üstesinden geldim ve ELO kazancımı 12 puana yükselterek turnuvayı noktalamış oldum:
 
-<div class="post-game" id="tur-9">
-  <div class="post-game-view post-game-view--board">
-    <div class="pgn-placeholder" data-pgn-src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></div>
-  </div>
-  <div class="post-game-view post-game-view--article" hidden>
-    <pgn src="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></pgn>
-  </div>
-</div>
+<div class="post-game" id="tur-9" data-pgn="{{ '/assets/pgn/karlsruhe-r9.pgn' | relative_url }}"></div>
 
 Elbette turnuva öncesi beklediğim gibi 30-40 ELO kazanamadığım için çok başarılı bir turnuva olduğunu söyleyemem fakat artıda bitirdiğim ve hedefe biraz da olsa yaklaştığım için turnuva sonu mutluydum. Salonun hemen dışında kurulan kitap standından aldığım kitaplar ve satranç takımıyla kendimi bir anlamda ödüllendirdim ve yan tarafta Nepomniachtchi genç hayranlarına imza dağıtıp fotoğraf çektirirken bir kafein bağımlısı olarak son defa kahve kuyruğuna girdim: <em>"Noch einen schwarzen Kaffee bitte!"</em>
 

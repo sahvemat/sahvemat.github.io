@@ -232,7 +232,7 @@
     }
     window.__sahEnqueue = enqueue;
 
-    function initAll() {
+    function initBoards() {
         var placeholders = document.querySelectorAll('.post-game .pgn-placeholder');
         if (!placeholders.length) return;
 
@@ -253,11 +253,7 @@
         placeholders.forEach(function (ph) { io.observe(ph); });
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initAll);
-    } else {
-        initAll();
-    }
+    window.__sahInitBoards = initBoards;
 
     let resizeTimer;
     window.addEventListener('resize', function () {
@@ -357,36 +353,33 @@
     const LABEL_BOARD = 'Analizi oku';
     const LABEL_ARTICLE = 'Tahtaya dön';
 
-    document.querySelectorAll('.post-game-toggle').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            const game = btn.closest('.post-game');
-            if (!game) return;
-            const board = game.querySelector('.post-game-view--board');
-            const article = game.querySelector('.post-game-view--article');
-            if (!board || !article) return;
-            const showArticle = btn.dataset.view === 'board';
-            board.hidden = showArticle;
-            article.hidden = !showArticle;
-            btn.dataset.view = showArticle ? 'article' : 'board';
-            btn.setAttribute('aria-pressed', showArticle ? 'true' : 'false');
-            btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
-            if (showArticle && window.__sahCleanPgn) {
-                window.__sahCleanPgn(article);
-            }
-            // After swapping back to board view, ensure the player is initialized
-            // and re-fit so chessboardjs recomputes square sizes.
-            const placeholder = board.querySelector('.pgn-placeholder');
-            const player = board.querySelector('pgn-player');
-            if (placeholder && window.__sahEnqueue) {
-                // Not yet lazy-initialized — activate it now.
-                window.__sahEnqueue(placeholder);
-            } else if (player && player._engine && player._engine.board &&
-                    typeof player._engine.board.resize === 'function') {
-                setTimeout(function () {
-                    try { player._engine.board.resize(); } catch (e) {}
-                }, 50);
-            }
-        });
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.post-game-toggle');
+        if (!btn) return;
+        var game = btn.closest('.post-game');
+        if (!game) return;
+        var board = game.querySelector('.post-game-view--board');
+        var article = game.querySelector('.post-game-view--article');
+        if (!board || !article) return;
+        var showArticle = btn.dataset.view === 'board';
+        board.hidden = showArticle;
+        article.hidden = !showArticle;
+        btn.dataset.view = showArticle ? 'article' : 'board';
+        btn.setAttribute('aria-pressed', showArticle ? 'true' : 'false');
+        btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
+        if (showArticle && window.__sahCleanPgn) {
+            window.__sahCleanPgn(article);
+        }
+        var placeholder = board.querySelector('.pgn-placeholder');
+        var player = board.querySelector('pgn-player');
+        if (placeholder && window.__sahEnqueue) {
+            window.__sahEnqueue(placeholder);
+        } else if (player && player._engine && player._engine.board &&
+                typeof player._engine.board.resize === 'function') {
+            setTimeout(function () {
+                try { player._engine.board.resize(); } catch (e) {}
+            }, 50);
+        }
     });
 })();
 
@@ -453,6 +446,22 @@
         return m ? m[1] : '';
     }
 
+    function injectGameViews() {
+        document.querySelectorAll('.post-game[data-pgn]').forEach(function (game) {
+            if (game.querySelector('.post-game-view')) return;
+            var src = game.dataset.pgn;
+            var board = document.createElement('div');
+            board.className = 'post-game-view post-game-view--board';
+            board.innerHTML = '<div class="pgn-placeholder" data-pgn-src="' + src + '"></div>';
+            var article = document.createElement('div');
+            article.className = 'post-game-view post-game-view--article';
+            article.hidden = true;
+            article.innerHTML = '<pgn src="' + src + '"></pgn>';
+            game.appendChild(board);
+            game.appendChild(article);
+        });
+    }
+
     function injectGameHeaders() {
         document.querySelectorAll('.post-game').forEach(function (game) {
             if (game.querySelector('.post-game-header')) return;
@@ -472,9 +481,13 @@
         if (!games.length) return;
 
         var promises = games.map(function (game) {
-            var ph = game.querySelector('.pgn-placeholder');
-            if (!ph || !ph.dataset.pgnSrc) return Promise.resolve(null);
-            return fetch(ph.dataset.pgnSrc)
+            var src = game.dataset.pgn;
+            if (!src) {
+                var ph = game.querySelector('.pgn-placeholder');
+                src = ph && ph.dataset.pgnSrc;
+            }
+            if (!src) return Promise.resolve(null);
+            return fetch(src)
                 .then(function (r) { return r.text(); })
                 .then(function (pgn) {
                     var white = parseHeader(pgn, 'White');
@@ -523,6 +536,8 @@
     }
 
     function init() {
+        injectGameViews();
+        if (window.__sahInitBoards) window.__sahInitBoards();
         injectGameHeaders();
         populateGames();
     }
