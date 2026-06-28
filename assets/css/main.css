@@ -1705,8 +1705,14 @@ pgn-player p {
         --board-size: min(300px, calc(100vw - 4rem));
     }
 
+    /* Let ChessPublica size .player-wrapper/.player-container from --board-size;
+       refit() now accounts for pgn-player padding so no width cap is needed.
+       Keep min-width:0 so the flex item can shrink if ever needed. */
     .post-game .player-wrapper,
-    .post-game .player-container,
+    .post-game .player-container {
+        min-width: 0 !important;
+    }
+
     .post-game .pgn-container,
     .post-game .cp-board-wrapper {
         width: 100% !important;
