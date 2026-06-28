@@ -1690,9 +1690,7 @@ pgn-player p {
 
     .post-game {
         box-shadow: 4px 4px 0 0 var(--ink);
-        /* overflow-x: hidden removed — refit() now sizes the board correctly so
-           clipping is not needed, and it was cutting off the eval bar. */
-        overflow-x: visible;
+        overflow-x: hidden;
     }
 
     .post-game pgn-player,
