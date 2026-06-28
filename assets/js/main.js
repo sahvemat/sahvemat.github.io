@@ -411,6 +411,22 @@
 })();
 
 (function () {
+    var n = 0;
+    document.querySelectorAll('.post-article p > img[title]').forEach(function (img) {
+        var p = img.parentNode;
+        if (p.childNodes.length !== 1) return;
+        n++;
+        var fig = document.createElement('figure');
+        var caption = document.createElement('figcaption');
+        caption.innerHTML = '<span>Foto ' + n + '</span> · ' + img.title;
+        img.removeAttribute('title');
+        p.parentNode.replaceChild(fig, p);
+        fig.appendChild(img);
+        fig.appendChild(caption);
+    });
+})();
+
+(function () {
     var months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     document.querySelectorAll('[data-date]').forEach(function (el) {
         var parts = el.dataset.date.split('-');
