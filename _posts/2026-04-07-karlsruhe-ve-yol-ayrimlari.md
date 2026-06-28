@@ -68,7 +68,7 @@ Nihayet üstten bir rakip çektiğim üçüncü turda 20 yaşındaki genç Alman
 
 <div class="post-game" id="tur-4" data-pgn="{{ '/assets/pgn/karlsruhe-r4.pgn' | relative_url }}"></div>
 
-## Gençler <span class="kw-lc">ve</span> Felaketler
+## Gençler ve Felaketler
 
 Bu oyunla başlayan üstten çektiğim rakiplere karşı üstün, hatta kazanç konum elde edip kaybetme paternini maalesef turnuva sonuna kadar sürdürdüm. İşin sevindirici tarafıysa benden düşük ratingli oyunculara karşı iyi performans göstermiş olmamdı. Nitekim beşinci turda 12 yaşındaki yetenekli satranççımız Poyraz Efe Aşıcı'yı biraz da belki açılış olarak şansımın yaver gitmesi nedeniyle kolay yenmeyi başardım:
 
