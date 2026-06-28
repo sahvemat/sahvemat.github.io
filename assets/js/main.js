@@ -79,14 +79,14 @@
     function refit(el) {
         const card = el.closest('.post-game');
         if (!card) return;
-        const inner = card.clientWidth - 2; // minus 1px border each side
+        const inner = card.clientWidth; // clientWidth already excludes borders
         if (!inner) return;
         // Subtract pgn-player's own horizontal padding so the board + eval bar
         // (10px) fit inside the padded content area, not just the element box.
         const style = window.getComputedStyle(el);
         const padH = parseFloat(style.paddingLeft || 0) + parseFloat(style.paddingRight || 0);
         const content = inner - padH;
-        const target = Math.max(160, Math.min(380, content - 12)); // 10px eval bar + 2px buffer
+        const target = Math.max(160, Math.min(380, content - 17)); // 10px eval bar + 7px buffer
         el.style.setProperty('--board-size', target + 'px');
         const engine = el._engine;
         if (engine && engine.board && typeof engine.board.resize === 'function') {
