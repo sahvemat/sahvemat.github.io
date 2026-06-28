@@ -81,8 +81,12 @@
         if (!card) return;
         const inner = card.clientWidth - 2; // minus 1px border each side
         if (!inner) return;
-        // 10px for the eval bar + a small buffer
-        const target = Math.max(160, Math.min(380, inner - 12));
+        // Subtract pgn-player's own horizontal padding so the board + eval bar
+        // (10px) fit inside the padded content area, not just the element box.
+        const style = window.getComputedStyle(el);
+        const padH = parseFloat(style.paddingLeft || 0) + parseFloat(style.paddingRight || 0);
+        const content = inner - padH;
+        const target = Math.max(160, Math.min(380, content - 12)); // 10px eval bar + 2px buffer
         el.style.setProperty('--board-size', target + 'px');
         const engine = el._engine;
         if (engine && engine.board && typeof engine.board.resize === 'function') {

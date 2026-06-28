@@ -1699,9 +1699,10 @@ pgn-player p {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
-        /* Single column on phones: card = 100vw - 3rem (article padding).
-           Player widget = board + 10px (eval bar). Leave safety margin. */
-        --board-size: min(320px, calc(100vw - 5rem));
+        /* Reduce padding so the board + eval bar have room to breathe.
+           refit() will compute --board-size from the available content area. */
+        padding: 0.5rem;
+        --board-size: min(300px, calc(100vw - 4rem));
     }
 
     .post-game .player-wrapper,
