@@ -510,7 +510,6 @@
             var turLabel = n === 1 ? 'turun' : 'turun';
             archive.innerHTML =
                 '<h3 class="post-archive-title">Tüm Partiler</h3>' +
-                '<p>' + n + ' ' + turLabel + ' tamamı — bir karta tıklayın, partiye gidin.</p>' +
                 '<div class="archive-grid">' +
                 valid.map(function (g) {
                     return '<a class="archive-card" href="#' + g.id + '">' +
