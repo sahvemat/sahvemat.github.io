@@ -2051,13 +2051,10 @@ figcaption > span {
     max-width: 100%;
 }
 
-.post-game pgn-player .cp-board,
-.post-game pgn-player .board-wrapper,
-.post-game pgn-player .cp-pgn-board,
-.post-game pgn-player cg-container,
-.post-game pgn-player cg-board,
-.post-game pgn-player [class*="board"],
-.post-game pgn-player [class*="Board"] {
+/* Center the player-container (board + eval bar as a unit) rather than
+   individual board elements — applying auto margins inside the flex row
+   that holds .eval-bar + .board-wrap breaks the eval bar layout. */
+.post-game pgn-player .player-container {
     margin-left: auto !important;
     margin-right: auto !important;
 }
