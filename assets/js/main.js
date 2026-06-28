@@ -453,16 +453,28 @@
         return m ? m[1] : '';
     }
 
-    function populateGameHeaders() {
+    function injectGameHeaders() {
         document.querySelectorAll('.post-game').forEach(function (game) {
-            var ph = game.querySelector('.pgn-placeholder');
-            if (!ph || !ph.dataset.pgnSrc) return;
-            var roundEl = game.querySelector('.post-game-round');
-            var playersEl = game.querySelector('.post-game-players');
-            var resultEl = game.querySelector('.post-game-result');
-            if (!roundEl && !playersEl && !resultEl) return;
+            if (game.querySelector('.post-game-header')) return;
+            var header = document.createElement('div');
+            header.className = 'post-game-header';
+            header.innerHTML =
+                '<span class="post-game-round"></span>' +
+                '<span class="post-game-players"></span>' +
+                '<span class="post-game-result"></span>' +
+                '<button class="post-game-toggle" type="button" data-view="board" aria-pressed="false">Analizi oku</button>';
+            game.insertBefore(header, game.firstChild);
+        });
+    }
 
-            fetch(ph.dataset.pgnSrc)
+    function populateGames() {
+        var games = Array.from(document.querySelectorAll('.post-game'));
+        if (!games.length) return;
+
+        var promises = games.map(function (game) {
+            var ph = game.querySelector('.pgn-placeholder');
+            if (!ph || !ph.dataset.pgnSrc) return Promise.resolve(null);
+            return fetch(ph.dataset.pgnSrc)
                 .then(function (r) { return r.text(); })
                 .then(function (pgn) {
                     var white = parseHeader(pgn, 'White');
@@ -471,25 +483,54 @@
                     var blackElo = parseHeader(pgn, 'BlackElo');
                     var result = parseHeader(pgn, 'Result');
                     var round = parseHeader(pgn, 'Round');
+                    var wp = white + (whiteElo && whiteElo !== '-1' ? ' (' + whiteElo + ')' : '');
+                    var bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
+                    var players = wp + ' — ' + bp;
+                    var displayResult = resultMap[result] || result;
+                    var roundLabel = round + '. Tur';
 
-                    if (roundEl) {
-                        roundEl.textContent = round + '. Tur';
-                    }
-                    if (playersEl) {
-                        var wp = white + (whiteElo && whiteElo !== '-1' ? ' (' + whiteElo + ')' : '');
-                        var bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
-                        playersEl.textContent = wp + ' — ' + bp;
-                    }
-                    if (resultEl) {
-                        resultEl.textContent = resultMap[result] || result;
-                    }
+                    var roundEl = game.querySelector('.post-game-round');
+                    var playersEl = game.querySelector('.post-game-players');
+                    var resultEl = game.querySelector('.post-game-result');
+                    if (roundEl) roundEl.textContent = roundLabel;
+                    if (playersEl) playersEl.textContent = players;
+                    if (resultEl) resultEl.textContent = displayResult;
+
+                    return { id: game.id, roundLabel: roundLabel, players: players, result: displayResult };
                 });
+        });
+
+        Promise.all(promises).then(function (data) {
+            var archive = document.querySelector('.post-archive');
+            if (!archive) return;
+            var valid = data.filter(Boolean);
+            if (!valid.length) return;
+
+            var n = valid.length;
+            var turLabel = n === 1 ? 'turun' : 'turun';
+            archive.innerHTML =
+                '<h3 class="post-archive-title">Tüm Partiler</h3>' +
+                '<p>' + n + ' ' + turLabel + ' tamamı — bir karta tıklayın, partiye gidin.</p>' +
+                '<div class="archive-grid">' +
+                valid.map(function (g) {
+                    return '<a class="archive-card" href="#' + g.id + '">' +
+                        '<span class="archive-card-round">' + g.roundLabel + '</span>' +
+                        '<span class="archive-card-players">' + g.players + '</span>' +
+                        '<span class="archive-card-result">' + g.result + '</span>' +
+                        '</a>';
+                }).join('') +
+                '</div>';
         });
     }
 
+    function init() {
+        injectGameHeaders();
+        populateGames();
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', populateGameHeaders);
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        populateGameHeaders();
+        init();
     }
 })();
