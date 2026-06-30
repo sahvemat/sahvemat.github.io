@@ -191,7 +191,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: calc(var(--logo-size) * 0.04);
-    margin-top: -0.5rem;
+    margin-top: -0.35rem;
     transition: opacity 0.3s ease, transform 0.3s ease, margin 0.35s ease;
 }
 
