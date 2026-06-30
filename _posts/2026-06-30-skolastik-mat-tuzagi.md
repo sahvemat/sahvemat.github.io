@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Skolastik Mat Tuzağı"
-author: "Tarık Selbes"
+author: "ŞAHvMAT Editör"
 section: "Açılış Tuzakları"
 event: "Acemi Tuzakları Serisi"
 excerpt: "Erken vezir çıkışıyla kurulan en eski tuzaklardan biri: rakip savunmasız bir hamleyle f7'yi unutursa parti dört hamlede biter. Beyaz'ın oynayacağı o son hamleyi siz bulun."
