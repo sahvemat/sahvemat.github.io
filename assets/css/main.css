@@ -1624,6 +1624,7 @@ a.article-thumbnail:hover {
 
 /* PGN player embed */
 pgn-player {
+    margin-top: 2rem;
     padding: 1rem;
     background: white;
     color: var(--ink);
