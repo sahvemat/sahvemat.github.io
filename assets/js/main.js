@@ -390,6 +390,29 @@
 })();
 
 (function () {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const root = document.documentElement;
+
+    const setPressed = () => {
+        btn.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+    };
+    setPressed();
+
+    btn.addEventListener('click', function () {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('sah-theme', 'light');
+        } else {
+            root.setAttribute('data-theme', 'dark');
+            localStorage.setItem('sah-theme', 'dark');
+        }
+        setPressed();
+    });
+})();
+
+(function () {
     const header = document.getElementById('main-header');
     const headerLogo = header && header.querySelector('.logo-body');
     let isScrolled = false;
