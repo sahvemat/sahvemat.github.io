@@ -332,6 +332,12 @@ a:hover {
     color: var(--accent);
 }
 
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
 /* ── Header ─────────────────────────────────────────────────── */
 .main-header {
     position: sticky;
@@ -420,16 +426,15 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    margin-left: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 1px solid var(--border-20);
     background: transparent;
     color: var(--fg);
     border-radius: 50%;
     cursor: pointer;
     transition: border-color 0.3s, background 0.3s;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1;
 }
 
