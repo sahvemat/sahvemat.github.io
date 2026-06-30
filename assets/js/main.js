@@ -190,6 +190,214 @@
         }
     }
 
+    // Puzzle-pause boards: a `.post-game[data-puzzle-pause]` plays normally
+    // up to a `{...[P]...}` comment marker in its PGN, then hands control to
+    // an inline ChessPublica <puzzle> for the marked move. Once the reader
+    // drags the correct move onto the board, playback resumes up to the next
+    // marker (if any), repeating until the game is fully revealed as an
+    // ordinary, fully playable pgn-player landed on the final position. A
+    // PGN may contain any number of `{[P]}` markers for multiple critical
+    // moments in the same game.
+    var SAN_TOKEN_RE = /^(?:O-O-O|O-O|[KQRBN]?[a-h]?[1-8]?x?[a-h][1-8](?:=[QRBN])?[+#]?)$/;
+
+    function sanTokens(text) {
+        var raw = String(text || '')
+            .replace(/\{[^}]*\}/g, ' ')
+            .replace(/\([^()]*\)/g, ' ')
+            .replace(/\$\d+/g, ' ')
+            .replace(/\d+\.(\.\.)?/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+        if (!raw) return [];
+        // Strip trailing annotation glyphs (e.g. "Nf6??", "Bc4!") so the
+        // bare SAN underneath can be validated and replayed with chess.js.
+        return raw.split(' ').reduce(function (out, tok) {
+            var san = tok.replace(/(?:!!|\?\?|!\?|\?!|!|\?)+$/, '');
+            if (SAN_TOKEN_RE.test(san)) out.push(san);
+            return out;
+        }, []);
+    }
+
+    function headerValue(pgn, tag) {
+        var m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
+        return m ? m[1] : '';
+    }
+
+    function makePlayer(src) {
+        var player = document.createElement('pgn-player');
+        player.setAttribute('src', src);
+        return player;
+    }
+
+    function whenEngineReady(player, cb) {
+        var attempts = 0;
+        (function poll() {
+            if (player._engine && player._engine.board) { cb(player._engine); return; }
+            if (attempts++ < 80) setTimeout(poll, 100);
+        })();
+    }
+
+    // Like whenEngineReady, but also waits for the PGN fetch behind the
+    // engine to resolve and populate state.moves (load() runs async after
+    // the board itself already exists).
+    function whenMovesLoaded(player, cb) {
+        whenEngineReady(player, function (engine) {
+            var attempts = 0;
+            (function poll() {
+                if (engine.state.moves.length) { cb(engine); return; }
+                if (attempts++ < 80) setTimeout(poll, 100);
+            })();
+        });
+    }
+
+    function whenGameFinished(engine, cb) {
+        var id = setInterval(function () {
+            if (engine.state.moves.length && engine.state.index >= engine.state.moves.length) {
+                clearInterval(id);
+                cb();
+            }
+        }, 250);
+    }
+
+    function renderPlainPlayer(container, src) {
+        container.innerHTML = '';
+        var player = makePlayer(src);
+        container.appendChild(player);
+        if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
+        setupOne(player);
+        return player;
+    }
+
+    function activatePuzzlePause(ph, src) {
+        var container = document.createElement('div');
+        container.className = 'post-game-puzzle-pause';
+        container.innerHTML = '<div class="pgn-placeholder"></div>';
+        ph.parentNode.replaceChild(container, ph);
+
+        var MARKER_RE = /\{[^}]*\[P\][^}]*\}/g;
+
+        fetch(src)
+            .then(function (r) { return r.text(); })
+            .then(function (pgnText) {
+                var rawMatches = Array.from(pgnText.matchAll(MARKER_RE));
+                if (!rawMatches.length || typeof window.Chess !== 'function') {
+                    renderPlainPlayer(container, src);
+                    return;
+                }
+
+                var headerless = pgnText.replace(/^\s*\[[^\]]*\]\s*$/gm, ' ');
+                var headerlessMatches = Array.from(headerless.matchAll(MARKER_RE));
+                if (headerlessMatches.length !== rawMatches.length) {
+                    renderPlainPlayer(container, src);
+                    return;
+                }
+
+                // Pre-compute every marker's puzzle: the FEN right before its
+                // critical move, the move itself, and how many plies precede
+                // it (used to fast-forward later stages past already-solved
+                // moves instead of making the reader replay them).
+                var puzzles = [];
+                for (var i = 0; i < headerlessMatches.length; i++) {
+                    var beforeText = headerless.slice(0, headerlessMatches[i].index);
+                    var afterText = headerless.slice(headerlessMatches[i].index + headerlessMatches[i][0].length);
+                    var beforeTokens = sanTokens(beforeText);
+                    var afterTokens = sanTokens(afterText);
+                    if (!beforeTokens.length || !afterTokens.length) {
+                        renderPlainPlayer(container, src);
+                        return;
+                    }
+                    var chess = new window.Chess();
+                    var legal = true;
+                    for (var j = 0; j < beforeTokens.length; j++) {
+                        if (!chess.move(beforeTokens[j], { sloppy: true })) { legal = false; break; }
+                    }
+                    if (!legal) {
+                        renderPlainPlayer(container, src);
+                        return;
+                    }
+                    puzzles.push({ fen: chess.fen(), move: afterTokens[0], beforeCount: beforeTokens.length });
+                }
+
+                runStage(0);
+
+                function runStage(i) {
+                    container.innerHTML = '';
+                    var gameWrap = document.createElement('div');
+                    gameWrap.className = 'post-game-puzzle-pause-game';
+                    container.appendChild(gameWrap);
+
+                    var isFinal = i >= puzzles.length;
+                    var visibleRaw = isFinal
+                        ? pgnText.replace(MARKER_RE, '')
+                        : pgnText.slice(0, rawMatches[i].index)
+                            .replace(MARKER_RE, '')
+                            .replace(/\[Result\s+"[^"]*"\]/, '[Result "*"]')
+                            .replace(/\s+$/, '') + ' *\n';
+
+                    var stageSrc = URL.createObjectURL(new Blob([visibleRaw], { type: 'application/x-chess-pgn' }));
+                    var stagePlayer = makePlayer(stageSrc);
+                    gameWrap.appendChild(stagePlayer);
+                    if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
+                    setupOne(stagePlayer);
+
+                    if (isFinal) {
+                        // Fully revealed game: land on the final position.
+                        whenMovesLoaded(stagePlayer, function (engine) {
+                            engine.goTo(engine.state.moves.length);
+                        });
+                        return;
+                    }
+
+                    if (i > 0) {
+                        // Skip straight to the move the reader just solved
+                        // instead of making them step through it again.
+                        whenMovesLoaded(stagePlayer, function (engine) {
+                            engine.goTo(puzzles[i - 1].beforeCount + 1);
+                        });
+                    }
+
+                    whenEngineReady(stagePlayer, function (engine) {
+                        whenGameFinished(engine, function () { showChallenge(i); });
+                    });
+                }
+
+                function showChallenge(i) {
+                    var puzzle = puzzles[i];
+                    var challenge = document.createElement('div');
+                    challenge.className = 'post-game-puzzle-pause-challenge';
+                    var label = puzzles.length > 1
+                        ? '🧩 Kritik an ' + (i + 1) + '/' + puzzles.length + ' — doğru hamleyi tahtaya sürükle.'
+                        : '🧩 Sırada ne var? Doğru hamleyi tahtaya sürükle.';
+                    challenge.innerHTML =
+                        '<div class="post-game-puzzle-pause-banner">' + label + '</div>' +
+                        '<div class="post-game-puzzle-pause-puzzle"></div>';
+                    container.appendChild(challenge);
+                    challenge.classList.add('is-visible');
+                    var puzzleHost = challenge.querySelector('.post-game-puzzle-pause-puzzle');
+
+                    var fenParts = puzzle.fen.split(' ');
+                    var movetextLine = fenParts[5] + (fenParts[1] === 'b' ? '...' : '.') + ' ' + puzzle.move + ' *';
+                    var puzzlePgn = '[Event "Bul Bakalım"]\n[FEN "' + puzzle.fen + '"]\n[Result "*"]\n\n' + movetextLine + '\n';
+                    var puzzleSrc = URL.createObjectURL(new Blob([puzzlePgn], { type: 'application/x-chess-pgn' }));
+                    var puzzleEl = document.createElement('puzzle');
+                    puzzleEl.setAttribute('src', puzzleSrc);
+                    puzzleHost.appendChild(puzzleEl);
+                    if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
+
+                    var solveObserver = new MutationObserver(function () {
+                        if (puzzleHost.querySelector('.cp-fire-solved')) {
+                            solveObserver.disconnect();
+                            setTimeout(function () { runStage(i + 1); }, 900);
+                        }
+                    });
+                    solveObserver.observe(puzzleHost, { subtree: true, attributes: true, attributeFilter: ['class'], childList: true });
+                }
+            })
+            .catch(function () { renderPlainPlayer(container, src); });
+
+        return null;
+    }
+
     // Lazy-initialize post-game boards using neutral placeholder divs.
     //
     // The markup uses <div class="pgn-placeholder" data-pgn-src="..."> instead
@@ -203,8 +411,11 @@
     function activate(ph) {
         var src = ph.dataset.pgnSrc;
         if (!src || !ph.parentNode) return null;
-        var player = document.createElement('pgn-player');
-        player.setAttribute('src', src);
+        var game = ph.closest('.post-game');
+        if (game && game.hasAttribute('data-puzzle-pause')) {
+            return activatePuzzlePause(ph, src);
+        }
+        var player = makePlayer(src);
         ph.parentNode.replaceChild(player, ph);
         if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
             window.ChessPublica.initAll();
