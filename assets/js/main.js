@@ -357,7 +357,18 @@
                     }
 
                     whenEngineReady(stagePlayer, function (engine) {
-                        whenGameFinished(engine, function () { showChallenge(i); });
+                        whenGameFinished(engine, function () {
+                            // The stage's own board is done (no more moves to
+                            // show), but ChessPublica still renders its native
+                            // "play" button and still toggles play on click —
+                            // clicking it just replays the same segment from
+                            // move 1 and looks exactly like a broken puzzle.
+                            // Lock it (see .is-finished in main.css) so the
+                            // reader's next click/tap can only land on the
+                            // actual puzzle below.
+                            gameWrap.classList.add('is-finished');
+                            showChallenge(i);
+                        });
                     });
                 }
 
@@ -373,6 +384,7 @@
                         '<div class="post-game-puzzle-pause-puzzle"></div>';
                     container.appendChild(challenge);
                     challenge.classList.add('is-visible');
+                    challenge.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     var puzzleHost = challenge.querySelector('.post-game-puzzle-pause-puzzle');
 
                     var fenParts = puzzle.fen.split(' ');
