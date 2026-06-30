@@ -2111,7 +2111,7 @@ figcaption > span {
     display: block;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--fg);
+    color: var(--ink);
 }
 
 /* Loading bar shown while a pgn-player placeholder waits for initialization */
@@ -2143,7 +2143,7 @@ figcaption > span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem auto 0;
+    margin: 3rem auto 0;
     box-shadow: none;
     text-align: left;
     width: 100%;
