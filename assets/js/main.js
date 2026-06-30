@@ -357,17 +357,31 @@
                     }
 
                     whenEngineReady(stagePlayer, function (engine) {
+                        // ChessPublica's own goTo()/pause() call
+                        // showPlayBtn() the instant a stage runs out of
+                        // moves — that happens synchronously, before our
+                        // whenGameFinished poll (which runs on a 250ms
+                        // timer) ever gets a chance to react, so the button
+                        // could flash into view right as the puzzle is
+                        // about to take over. Intercept showPlayBtn()
+                        // itself so it never renders at this stage's final
+                        // position in the first place; everywhere else
+                        // (scrubbing back through already-seen moves) it
+                        // still behaves normally.
+                        var origShowPlayBtn = engine.showPlayBtn.bind(engine);
+                        engine.showPlayBtn = function () {
+                            if (engine.state.moves.length && engine.state.index >= engine.state.moves.length) {
+                                if (engine.playBtn) engine.playBtn.remove();
+                                return;
+                            }
+                            origShowPlayBtn();
+                        };
+
                         whenGameFinished(engine, function () {
-                            // The stage's own board is done (no more moves to
-                            // show), but ChessPublica still renders its native
-                            // "play" button overlay on top of it and still
-                            // toggles play on click — clicking it just
-                            // replays the same segment from move 1 and looks
-                            // exactly like a broken puzzle. Remove the
-                            // overlay outright (not just dim/disable it) and
-                            // lock the board (see .is-finished in main.css)
-                            // so nothing sits on top of, or competes with,
-                            // the actual puzzle below.
+                            // Belt-and-suspenders: also strip the button
+                            // and lock the board (see .is-finished in
+                            // main.css) so nothing here can still toggle
+                            // play or compete visually with the puzzle.
                             var playBtn = gameWrap.querySelector('.play');
                             if (playBtn) playBtn.remove();
                             gameWrap.classList.add('is-finished');
