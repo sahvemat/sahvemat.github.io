@@ -2162,6 +2162,44 @@ figcaption > span {
     margin-right: auto !important;
 }
 
+/* Puzzle-pause widget: the opening plays out as a normal pgn-player, then
+   a drag-and-drop puzzle for the marked move fades in below it. */
+.post-game-puzzle-pause {
+    width: 100%;
+}
+
+.post-game-puzzle-pause-challenge {
+    display: none;
+    border-top: 1px dashed var(--line);
+    padding: 1.5rem 1.25rem 2rem;
+    animation: ppp-reveal 0.4s ease;
+}
+
+.post-game-puzzle-pause-challenge.is-visible {
+    display: block;
+}
+
+@keyframes ppp-reveal {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.post-game-puzzle-pause-banner {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.post-game-puzzle-pause-puzzle {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
 .post-ps {
     margin-top: 3rem;
     padding-top: 1.5rem;
