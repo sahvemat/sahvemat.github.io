@@ -27,6 +27,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Hide raw FEN text until ChessPublica enhances <fen> tags into boards. */
+fen {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    overflow: hidden;
+}
+
+fen > * {
+    font-size: initial;
+    line-height: initial;
+    color: initial;
+}
+
 body {
     background-color: var(--paper);
     color: var(--ink);
