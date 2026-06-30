@@ -1842,7 +1842,7 @@ pgn-player p {
     counter-reset: section;
     max-width: 72rem;
     margin: 0 auto;
-    padding: 3rem 1.5rem 5rem;
+    padding: 2rem 1rem 5rem;
 }
 
 @media (min-width: 768px) {
