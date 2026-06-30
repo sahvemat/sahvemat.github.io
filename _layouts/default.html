@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ChessPublica/ChessPublica.github.io@v0.1.0/dist/ChessPublica.all.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/piece-puzzle.css' | relative_url }}">
-
+    <script>
+        (function () {
+            var stored = localStorage.getItem('sah-theme');
+            var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
 
 </head>
 <body>
