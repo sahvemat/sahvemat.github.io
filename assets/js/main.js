@@ -360,12 +360,16 @@
                         whenGameFinished(engine, function () {
                             // The stage's own board is done (no more moves to
                             // show), but ChessPublica still renders its native
-                            // "play" button and still toggles play on click —
-                            // clicking it just replays the same segment from
-                            // move 1 and looks exactly like a broken puzzle.
-                            // Lock it (see .is-finished in main.css) so the
-                            // reader's next click/tap can only land on the
-                            // actual puzzle below.
+                            // "play" button overlay on top of it and still
+                            // toggles play on click — clicking it just
+                            // replays the same segment from move 1 and looks
+                            // exactly like a broken puzzle. Remove the
+                            // overlay outright (not just dim/disable it) and
+                            // lock the board (see .is-finished in main.css)
+                            // so nothing sits on top of, or competes with,
+                            // the actual puzzle below.
+                            var playBtn = gameWrap.querySelector('.play');
+                            if (playBtn) playBtn.remove();
                             gameWrap.classList.add('is-finished');
                             showChallenge(i);
                         });
