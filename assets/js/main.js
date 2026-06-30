@@ -85,8 +85,10 @@
         const padH = parseFloat(style.paddingLeft || 0) + parseFloat(style.paddingRight || 0);
         const content = el.clientWidth - padH;
         if (!content) return;
-        // board + 10px eval bar must fit in content; keep a 5px safety margin.
-        const target = Math.max(160, Math.min(380, content - 15));
+        // board + 10px eval bar must fit in content; keep a generous safety
+        // margin to absorb rounding/border discrepancies in ChessPublica's
+        // own layout math.
+        const target = Math.max(160, Math.min(380, content - 25));
         el.style.setProperty('--board-size', target + 'px');
         const engine = el._engine;
         if (engine && engine.board && typeof engine.board.resize === 'function') {

@@ -1705,12 +1705,16 @@ pgn-player p {
         --board-size: min(300px, calc(100vw - 4rem));
     }
 
-    /* Let ChessPublica size .player-wrapper/.player-container from --board-size;
-       refit() now accounts for pgn-player padding so no width cap is needed.
-       Keep min-width:0 so the flex item can shrink if ever needed. */
+    /* Let ChessPublica size .player-wrapper/.player-container from --board-size,
+       but cap them at 100% of the pgn-player content box as a hard safety net:
+       refit()'s buffer should already keep board+evalbar inside, but this
+       guarantees the eval bar can never push past the card's frame even if
+       the JS measurement is off by a few px. */
     .post-game .player-wrapper,
     .post-game .player-container {
         min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .post-game .pgn-container,
