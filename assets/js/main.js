@@ -1,32 +1,4 @@
 (function () {
-    // Some ad-block / anti-fingerprinting browser extensions neuter
-    // requestAnimationFrame outright: it's still callable and returns
-    // normally, but the callback itself is silently never invoked. Real
-    // sightings on this site confirmed exactly that — pgn-player's initial
-    // DOM template built fine (that part is synchronous), but the engine
-    // that's constructed inside its own rAF callback never appeared, with
-    // no error anywhere. That would break every pgn-player on the entire
-    // site for affected visitors, not just puzzle-pause boards. Guarantee
-    // every rAF callback eventually fires by racing the native
-    // implementation (if it works, great, no visible change) against a
-    // setTimeout fallback that fires regardless.
-    if (typeof window.requestAnimationFrame === 'function') {
-        var nativeRAF = window.requestAnimationFrame.bind(window);
-        window.requestAnimationFrame = function (callback) {
-            var fired = false;
-            var fire = function (ts) {
-                if (fired) return;
-                fired = true;
-                callback(typeof ts === 'number' ? ts : performance.now());
-            };
-            try { nativeRAF(fire); } catch (e) {}
-            setTimeout(fire, 32);
-            return 0;
-        };
-    }
-})();
-
-(function () {
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     const now = new Date();
     const text = months[now.getMonth()] + ' ' + now.getFullYear();
@@ -291,6 +263,8 @@
                     '— player-container built:', !!player.querySelector('.player-container'),
                     ', board-wrap built:', !!player.querySelector('.board-wrap'),
                     ', _engine assigned:', !!player._engine,
+                    ', requestAnimationFrame patch installed:', typeof window.__rafPatchCalls === 'number',
+                    ', total rAF calls seen site-wide so far:', window.__rafPatchCalls,
                     '— still waiting.');
             }
         }

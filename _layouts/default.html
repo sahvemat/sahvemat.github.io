@@ -13,6 +13,42 @@
     <link rel="stylesheet" href="{{ '/assets/css/piece-puzzle.css' | relative_url }}">
     <script>
         (function () {
+            // Some ad-block / anti-fingerprinting browser extensions
+            // neuter requestAnimationFrame outright: it's still callable
+            // and returns normally, but the callback is silently never
+            // invoked. ChessPublica (loaded below) builds every pgn-player
+            // board's engine inside exactly one such callback, so on an
+            // affected browser no board on the whole site would ever
+            // become interactive, with no error anywhere. This has to run
+            // before that script tag — not from our own deferred main.js,
+            // which runs too late to matter if something re-patches
+            // requestAnimationFrame again in between — and has to be
+            // locked non-configurable so nothing later can silently
+            // replace it back to a broken version.
+            if (typeof window.requestAnimationFrame !== 'function') return;
+            var nativeRAF = window.requestAnimationFrame.bind(window);
+            window.__rafPatchCalls = 0;
+            function patchedRAF(callback) {
+                window.__rafPatchCalls++;
+                var fired = false;
+                var fire = function (ts) {
+                    if (fired) return;
+                    fired = true;
+                    callback(typeof ts === 'number' ? ts : performance.now());
+                };
+                try { nativeRAF(fire); } catch (e) {}
+                setTimeout(fire, 32);
+                return 0;
+            }
+            try {
+                Object.defineProperty(window, 'requestAnimationFrame', {
+                    value: patchedRAF, writable: false, configurable: false
+                });
+            } catch (e) {
+                window.requestAnimationFrame = patchedRAF;
+            }
+        })();
+        (function () {
             var stored = localStorage.getItem('sah-theme');
             var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
