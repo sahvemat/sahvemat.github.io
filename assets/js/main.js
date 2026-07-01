@@ -229,14 +229,23 @@
     // Polls every animation frame rather than on a fixed timer so goTo() is
     // wrapped (see wirePuzzlePauses) as close as possible to the moment the
     // engine exists — before there's any realistic chance of a reader
-    // reaching the play button first.
+    // reaching the play button first. Keeps polling indefinitely rather
+    // than giving up after a fixed number of tries: rAF can be throttled
+    // to a crawl in a backgrounded tab, and giving up early just means the
+    // whole game silently plays through with no puzzle pauses at all — far
+    // worse than polling a little longer. Only logs once, as a diagnostic,
+    // without ever actually abandoning the wait.
     function whenEngineReady(player, cb) {
         var attempts = 0;
+        var warned = false;
         (function poll() {
             if (player._engine && player._engine.board) { cb(player._engine); return; }
-            if (attempts++ < 600) { requestAnimationFrame(poll); return; }
-            console.warn('[puzzle-pause] engine never became ready for', player.getAttribute('src'),
-                '— puzzle pauses were not wired up, so the game will play through unimpeded.');
+            if (!warned && attempts++ > 600) {
+                warned = true;
+                console.warn('[puzzle-pause] engine still not ready after 600 frames for', player.getAttribute('src'),
+                    '— still waiting (this tab may be backgrounded/throttled).');
+            }
+            requestAnimationFrame(poll);
         })();
     }
 
@@ -341,7 +350,16 @@
                 !engine.__pausedForPuzzle) {
                 engine.__pausedForPuzzle = true;
                 var wasPlaying = engine.state.playing;
-                engine.pause();
+                // Stop autoplay directly instead of calling engine.pause():
+                // pause() itself calls this.goTo(this.state.index) again,
+                // re-entering this same wrapper for a position that hasn't
+                // changed — which schedules a second, overlapping copy of
+                // ChessPublica's own deferred last-move-arrow redraw and
+                // piece animation for no reason. The overlay we're about to
+                // show covers the whole board anyway, so pause()'s own
+                // play-button/comment-box refresh isn't needed here.
+                engine.state.playing = false;
+                engine.container.classList.add('paused');
                 showPuzzleOverlay(engine, puzzles[pending], pending, puzzles.length, function () {
                     engine.__pausedForPuzzle = false;
                     solvedUpTo = pending;
