@@ -190,13 +190,15 @@
         }
     }
 
-    // Puzzle-pause boards: a `.post-game[data-puzzle-pause]` plays normally
-    // up to a `{...[P]...}` comment marker in its PGN, then hands control to
-    // an inline ChessPublica <puzzle> for the marked move. Once the reader
-    // drags the correct move onto the board, playback resumes up to the next
-    // marker (if any), repeating until the game is fully revealed as an
-    // ordinary, fully playable pgn-player landed on the final position. A
-    // PGN may contain any number of `{[P]}` markers for multiple critical
+    // Puzzle-pause boards: a `.post-game[data-puzzle-pause]` is one ordinary
+    // pgn-player loaded with the whole game. When playback (autoplay, arrow
+    // keys, or a move-list click) reaches a `{...[P]...}` comment marker in
+    // its PGN, an interactive ChessPublica <puzzle> drops in directly on top
+    // of the board for that critical move. Solving it removes the overlay
+    // and the same pgn-player carries on from there — the reader can't skip
+    // an unsolved puzzle by jumping ahead, and its move list keeps
+    // not-yet-solved moves masked so they aren't spoiled in advance. A PGN
+    // may contain any number of `{[P]}` markers for multiple critical
     // moments in the same game.
     var SAN_TOKEN_RE = /^(?:O-O-O|O-O|[KQRBN]?[a-h]?[1-8]?x?[a-h][1-8](?:=[QRBN])?[+#]?)$/;
 
@@ -218,11 +220,6 @@
         }, []);
     }
 
-    function headerValue(pgn, tag) {
-        var m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
-        return m ? m[1] : '';
-    }
-
     function makePlayer(src) {
         var player = document.createElement('pgn-player');
         player.setAttribute('src', src);
@@ -237,28 +234,6 @@
         })();
     }
 
-    // Like whenEngineReady, but also waits for the PGN fetch behind the
-    // engine to resolve and populate state.moves (load() runs async after
-    // the board itself already exists).
-    function whenMovesLoaded(player, cb) {
-        whenEngineReady(player, function (engine) {
-            var attempts = 0;
-            (function poll() {
-                if (engine.state.moves.length) { cb(engine); return; }
-                if (attempts++ < 80) setTimeout(poll, 100);
-            })();
-        });
-    }
-
-    function whenGameFinished(engine, cb) {
-        var id = setInterval(function () {
-            if (engine.state.moves.length && engine.state.index >= engine.state.moves.length) {
-                clearInterval(id);
-                cb();
-            }
-        }, 250);
-    }
-
     function renderPlainPlayer(container, src) {
         container.innerHTML = '';
         var player = makePlayer(src);
@@ -266,6 +241,110 @@
         if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
         setupOne(player);
         return player;
+    }
+
+    // Drops an interactive <puzzle> directly on top of the pgn-player's own
+    // board (as a child of its .board-wrap, the same positioned element
+    // ChessPublica itself uses to center the native play button) so the
+    // reader moves a piece on what looks like the same board, rather than a
+    // separate widget appearing elsewhere on the page.
+    function showPuzzleOverlay(engine, puzzle, index, total, onSolved) {
+        var overlay = document.createElement('div');
+        overlay.className = 'post-game-puzzle-pause-overlay';
+        var label = total > 1
+            ? '🧩 Kritik an ' + (index + 1) + '/' + total + ' — doğru hamleyi tahtaya sürükle.'
+            : '🧩 Sırada ne var? Doğru hamleyi tahtaya sürükle.';
+        overlay.innerHTML =
+            '<div class="post-game-puzzle-pause-banner">' + label + '</div>' +
+            '<div class="post-game-puzzle-pause-puzzle"></div>';
+        engine.boardWrap.appendChild(overlay);
+        var puzzleHost = overlay.querySelector('.post-game-puzzle-pause-puzzle');
+
+        var fenParts = puzzle.fen.split(' ');
+        var movetextLine = fenParts[5] + (fenParts[1] === 'b' ? '...' : '.') + ' ' + puzzle.move + ' *';
+        var puzzlePgn = '[Event "Bul Bakalım"]\n[FEN "' + puzzle.fen + '"]\n[Result "*"]\n\n' + movetextLine + '\n';
+        var puzzleEl = document.createElement('puzzle');
+        puzzleEl.setAttribute('src', URL.createObjectURL(new Blob([puzzlePgn], { type: 'application/x-chess-pgn' })));
+        puzzleHost.appendChild(puzzleEl);
+        if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
+
+        var solveObserver = new MutationObserver(function () {
+            if (puzzleHost.querySelector('.cp-fire-solved')) {
+                solveObserver.disconnect();
+                setTimeout(function () {
+                    overlay.remove();
+                    onSolved();
+                }, 900);
+            }
+        });
+        solveObserver.observe(puzzleHost, { subtree: true, attributes: true, attributeFilter: ['class'], childList: true });
+    }
+
+    // The move-list sidebar is built once from the *complete* game (that's
+    // what lets a single continuous player carry on past a solved puzzle
+    // without reloading), so left alone it would spell out every critical
+    // move in plain text before the reader ever sees the board pause.
+    // Replace not-yet-solved moves' text with a placeholder and restore it
+    // as each puzzle is solved.
+    function applyMoveListMask(engine, puzzles, solvedUpTo) {
+        var halfSpans = engine.moveList && engine.moveList._halfSpans;
+        if (!halfSpans) return;
+        var pending = solvedUpTo + 1;
+        var revealLimit = pending < puzzles.length ? puzzles[pending].beforeCount : Infinity;
+        halfSpans.forEach(function (span, idx) {
+            var textEl = span && span.firstElementChild;
+            if (!textEl) return;
+            span.classList.toggle('ppp-move-masked', idx >= revealLimit);
+            if (idx >= revealLimit) {
+                if (textEl.dataset.pppOriginal === undefined) textEl.dataset.pppOriginal = textEl.textContent;
+                textEl.textContent = '···';
+            } else if (textEl.dataset.pppOriginal !== undefined) {
+                textEl.textContent = textEl.dataset.pppOriginal;
+                delete textEl.dataset.pppOriginal;
+            }
+        });
+    }
+
+    // Wraps goTo() — the single choke point every navigation path (autoplay,
+    // arrow keys, move-list clicks) goes through — so reaching a marker's
+    // position always pauses and shows its puzzle, and the reader can't
+    // skip past an unsolved one by jumping ahead. Solving a puzzle reveals
+    // its critical move and, if the game was autoplaying, resumes it.
+    function wirePuzzlePauses(engine, puzzles) {
+        var solvedUpTo = -1;
+        var origGoTo = engine.goTo.bind(engine);
+
+        if (engine.moveList && typeof engine.moveList.build === 'function') {
+            var origBuild = engine.moveList.build.bind(engine.moveList);
+            engine.moveList.build = function () {
+                origBuild.apply(this, arguments);
+                applyMoveListMask(engine, puzzles, solvedUpTo);
+            };
+        }
+        // In case the move list was already built before this ran.
+        applyMoveListMask(engine, puzzles, solvedUpTo);
+
+        engine.goTo = function (e) {
+            var pending = solvedUpTo + 1;
+            if (pending < puzzles.length && e > puzzles[pending].beforeCount) {
+                e = puzzles[pending].beforeCount;
+            }
+            origGoTo(e);
+            if (pending < puzzles.length &&
+                engine.state.index === puzzles[pending].beforeCount &&
+                !engine.__pausedForPuzzle) {
+                engine.__pausedForPuzzle = true;
+                var wasPlaying = engine.state.playing;
+                engine.pause();
+                showPuzzleOverlay(engine, puzzles[pending], pending, puzzles.length, function () {
+                    engine.__pausedForPuzzle = false;
+                    solvedUpTo = pending;
+                    applyMoveListMask(engine, puzzles, solvedUpTo);
+                    if (wasPlaying) engine.play();
+                    else engine.goTo(engine.state.index + 1);
+                });
+            }
+        };
     }
 
     function activatePuzzlePause(ph, src) {
@@ -294,8 +373,7 @@
 
                 // Pre-compute every marker's puzzle: the FEN right before its
                 // critical move, the move itself, and how many plies precede
-                // it (used to fast-forward later stages past already-solved
-                // moves instead of making the reader replay them).
+                // it (the ply index the engine must reach and pause at).
                 var puzzles = [];
                 for (var i = 0; i < headerlessMatches.length; i++) {
                     var beforeText = headerless.slice(0, headerlessMatches[i].index);
@@ -318,112 +396,16 @@
                     puzzles.push({ fen: chess.fen(), move: afterTokens[0], beforeCount: beforeTokens.length });
                 }
 
-                runStage(0);
+                container.innerHTML = '';
+                var visibleRaw = pgnText.replace(MARKER_RE, '');
+                var player = makePlayer(URL.createObjectURL(new Blob([visibleRaw], { type: 'application/x-chess-pgn' })));
+                container.appendChild(player);
+                if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
+                setupOne(player);
 
-                function runStage(i) {
-                    container.innerHTML = '';
-                    var gameWrap = document.createElement('div');
-                    gameWrap.className = 'post-game-puzzle-pause-game';
-                    container.appendChild(gameWrap);
-
-                    var isFinal = i >= puzzles.length;
-                    var visibleRaw = isFinal
-                        ? pgnText.replace(MARKER_RE, '')
-                        : pgnText.slice(0, rawMatches[i].index)
-                            .replace(MARKER_RE, '')
-                            .replace(/\[Result\s+"[^"]*"\]/, '[Result "*"]')
-                            .replace(/\s+$/, '') + ' *\n';
-
-                    var stageSrc = URL.createObjectURL(new Blob([visibleRaw], { type: 'application/x-chess-pgn' }));
-                    var stagePlayer = makePlayer(stageSrc);
-                    gameWrap.appendChild(stagePlayer);
-                    if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
-                    setupOne(stagePlayer);
-
-                    if (isFinal) {
-                        // Fully revealed game: land on the final position.
-                        whenMovesLoaded(stagePlayer, function (engine) {
-                            engine.goTo(engine.state.moves.length);
-                        });
-                        return;
-                    }
-
-                    if (i > 0) {
-                        // Skip straight to the move the reader just solved
-                        // instead of making them step through it again.
-                        whenMovesLoaded(stagePlayer, function (engine) {
-                            engine.goTo(puzzles[i - 1].beforeCount + 1);
-                        });
-                    }
-
-                    whenEngineReady(stagePlayer, function (engine) {
-                        // ChessPublica's own goTo()/pause() call
-                        // showPlayBtn() the instant a stage runs out of
-                        // moves — that happens synchronously, before our
-                        // whenGameFinished poll (which runs on a 250ms
-                        // timer) ever gets a chance to react, so the button
-                        // could flash into view right as the puzzle is
-                        // about to take over. Intercept showPlayBtn()
-                        // itself so it never renders at this stage's final
-                        // position in the first place; everywhere else
-                        // (scrubbing back through already-seen moves) it
-                        // still behaves normally.
-                        var origShowPlayBtn = engine.showPlayBtn.bind(engine);
-                        engine.showPlayBtn = function () {
-                            if (engine.state.moves.length && engine.state.index >= engine.state.moves.length) {
-                                if (engine.playBtn) engine.playBtn.remove();
-                                return;
-                            }
-                            origShowPlayBtn();
-                        };
-
-                        whenGameFinished(engine, function () {
-                            // The stage board has nowhere left to go — pull
-                            // it off the page entirely (not just dim/lock
-                            // it) so there is nothing above the puzzle that
-                            // could visually sit over it or intercept a
-                            // drag. destroy() first so its listeners,
-                            // observers and abort controller are torn down
-                            // cleanly instead of leaking.
-                            if (typeof engine.destroy === 'function') engine.destroy();
-                            gameWrap.remove();
-                            showChallenge(i);
-                        });
-                    });
-                }
-
-                function showChallenge(i) {
-                    var puzzle = puzzles[i];
-                    var challenge = document.createElement('div');
-                    challenge.className = 'post-game-puzzle-pause-challenge';
-                    var label = puzzles.length > 1
-                        ? '🧩 Kritik an ' + (i + 1) + '/' + puzzles.length + ' — doğru hamleyi tahtaya sürükle.'
-                        : '🧩 Sırada ne var? Doğru hamleyi tahtaya sürükle.';
-                    challenge.innerHTML =
-                        '<div class="post-game-puzzle-pause-banner">' + label + '</div>' +
-                        '<div class="post-game-puzzle-pause-puzzle"></div>';
-                    container.appendChild(challenge);
-                    challenge.classList.add('is-visible');
-                    challenge.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    var puzzleHost = challenge.querySelector('.post-game-puzzle-pause-puzzle');
-
-                    var fenParts = puzzle.fen.split(' ');
-                    var movetextLine = fenParts[5] + (fenParts[1] === 'b' ? '...' : '.') + ' ' + puzzle.move + ' *';
-                    var puzzlePgn = '[Event "Bul Bakalım"]\n[FEN "' + puzzle.fen + '"]\n[Result "*"]\n\n' + movetextLine + '\n';
-                    var puzzleSrc = URL.createObjectURL(new Blob([puzzlePgn], { type: 'application/x-chess-pgn' }));
-                    var puzzleEl = document.createElement('puzzle');
-                    puzzleEl.setAttribute('src', puzzleSrc);
-                    puzzleHost.appendChild(puzzleEl);
-                    if (window.ChessPublica && window.ChessPublica.initAll) window.ChessPublica.initAll();
-
-                    var solveObserver = new MutationObserver(function () {
-                        if (puzzleHost.querySelector('.cp-fire-solved')) {
-                            solveObserver.disconnect();
-                            setTimeout(function () { runStage(i + 1); }, 900);
-                        }
-                    });
-                    solveObserver.observe(puzzleHost, { subtree: true, attributes: true, attributeFilter: ['class'], childList: true });
-                }
+                whenEngineReady(player, function (engine) {
+                    wirePuzzlePauses(engine, puzzles);
+                });
             })
             .catch(function () { renderPlainPlayer(container, src); });
 
