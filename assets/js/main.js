@@ -113,6 +113,17 @@
     // (~200ms). Result: arrows pop in before the piece arrives. Defer
     // the overlay render until the animation finishes, and clear the
     // previous arrow immediately on each move so it doesn't linger.
+    // A `{...[P]...}` PGN comment makes ChessPublica pause autoplay on its
+    // own the moment it reaches that move (see goTo's native
+    // commentBox.update()-triggered pause() call) — no extra JS is needed
+    // for the pause itself. This only adds a visual cue for it: dim the
+    // board while it's sitting at one of those marker positions.
+    function updateMarkerPauseClass(engine) {
+        const comment = engine.state && engine.state.comments && engine.state.comments[engine.state.index - 1];
+        const isMarkerPause = !engine.state.playing && !!comment && /\[P\]/.test(comment);
+        engine.container.classList.toggle('post-game-marker-paused', isMarkerPause);
+    }
+
     const ANIM_MS = 220;
     function patchOverlayTiming(el) {
         const engine = el._engine;
@@ -149,7 +160,9 @@
         if (origGoTo && clear) {
             engine.goTo = function (i) {
                 clear();
-                return origGoTo(i);
+                const result = origGoTo(i);
+                updateMarkerPauseClass(engine);
+                return result;
             };
         }
 
@@ -166,9 +179,12 @@
                 if (engine.state && engine.state.playing) {
                     engine._loopLastTick = -1e9;
                 }
+                updateMarkerPauseClass(engine);
                 return result;
             };
         }
+
+        updateMarkerPauseClass(engine);
     }
 
     function setupOne(el) {
