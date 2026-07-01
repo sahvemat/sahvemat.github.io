@@ -238,12 +238,28 @@
     function whenEngineReady(player, cb) {
         var attempts = 0;
         var warned = false;
+        // pgn-player builds its engine inside its own requestAnimationFrame
+        // callback, registered the instant it's inserted into the DOM —
+        // before this poll's very first rAF is even scheduled. So if that
+        // callback throws partway through construction, _engine never gets
+        // assigned and we'd otherwise wait forever with no clue why. Catch
+        // any uncaught error while we're waiting and tag it so it's easy to
+        // spot in the console instead of scrolling past it.
+        var onError = function (e) {
+            console.error('[puzzle-pause] uncaught error while waiting for the engine:', e.message,
+                'at', e.filename + ':' + e.lineno);
+        };
+        window.addEventListener('error', onError);
         (function poll() {
-            if (player._engine && player._engine.board) { cb(player._engine); return; }
+            if (player._engine && player._engine.board) {
+                window.removeEventListener('error', onError);
+                cb(player._engine);
+                return;
+            }
             if (!warned && attempts++ > 600) {
                 warned = true;
                 console.warn('[puzzle-pause] engine still not ready after 600 frames for', player.getAttribute('src'),
-                    '— still waiting (this tab may be backgrounded/throttled).');
+                    '— still waiting (this tab may be backgrounded/throttled, or something threw during construction — see any [puzzle-pause] error above).');
             }
             requestAnimationFrame(poll);
         })();
