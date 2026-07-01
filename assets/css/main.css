@@ -2173,12 +2173,71 @@ figcaption > span {
     margin-right: auto !important;
 }
 
-/* Visual cue that the player has paused on a {[P]} critical-move marker. */
-.post-game pgn-player .player-container.post-game-marker-paused {
-    opacity: 0.55;
+/* Modal shown over the board while paused on a {[P]} critical-move marker. */
+.post-game-marker-modal {
+    position: absolute;
+    inset: 0;
+    z-index: 45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(18, 18, 18, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.post-game-marker-modal.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.post-game-marker-modal-pane {
+    background: var(--surface);
+    color: var(--fg);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    max-width: 88%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.post-game-marker-modal-label {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.post-game-marker-modal-fen {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.4;
+    word-break: break-all;
+    color: var(--fg);
+    background: var(--surface-alt);
+    border: 1px solid var(--border-10);
+    padding: 0.5rem 0.6rem;
     border-radius: 6px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.25s ease, box-shadow 0.25s ease;
+    margin-bottom: 0.75rem;
+}
+
+.post-game-marker-modal-continue {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    cursor: pointer;
 }
 
 .post-ps {

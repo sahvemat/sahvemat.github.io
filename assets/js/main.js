@@ -113,15 +113,41 @@
     // (~200ms). Result: arrows pop in before the piece arrives. Defer
     // the overlay render until the animation finishes, and clear the
     // previous arrow immediately on each move so it doesn't linger.
+
     // A `{...[P]...}` PGN comment makes ChessPublica pause autoplay on its
     // own the moment it reaches that move (see goTo's native
     // commentBox.update()-triggered pause() call) — no extra JS is needed
-    // for the pause itself. This only adds a visual cue for it: dim the
-    // board while it's sitting at one of those marker positions.
-    function updateMarkerPauseClass(engine) {
+    // for the pause itself. This only adds a modal over the board while
+    // paused there, showing the FEN of the position it stopped at.
+    function ensureMarkerModal(engine) {
+        if (engine.__markerModalEl) return engine.__markerModalEl;
+        const modal = document.createElement('div');
+        modal.className = 'post-game-marker-modal';
+        modal.innerHTML =
+            '<div class="post-game-marker-modal-pane">' +
+                '<div class="post-game-marker-modal-label">Kritik pozisyon</div>' +
+                '<code class="post-game-marker-modal-fen"></code>' +
+                '<button type="button" class="post-game-marker-modal-continue">Devam et ▶</button>' +
+            '</div>';
+        modal.querySelector('.post-game-marker-modal-continue').addEventListener('click', function () {
+            engine.play();
+        });
+        engine.boardWrap.appendChild(modal);
+        engine.__markerModalEl = modal;
+        return modal;
+    }
+
+    function updateMarkerPause(engine) {
         const comment = engine.state && engine.state.comments && engine.state.comments[engine.state.index - 1];
         const isMarkerPause = !engine.state.playing && !!comment && /\[P\]/.test(comment);
-        engine.container.classList.toggle('post-game-marker-paused', isMarkerPause);
+        if (isMarkerPause) {
+            const modal = ensureMarkerModal(engine);
+            const fen = engine.state.cache && engine.state.cache[engine.state.index];
+            modal.querySelector('.post-game-marker-modal-fen').textContent = fen || '';
+            modal.classList.add('is-visible');
+        } else if (engine.__markerModalEl) {
+            engine.__markerModalEl.classList.remove('is-visible');
+        }
     }
 
     const ANIM_MS = 220;
@@ -161,7 +187,7 @@
             engine.goTo = function (i) {
                 clear();
                 const result = origGoTo(i);
-                updateMarkerPauseClass(engine);
+                updateMarkerPause(engine);
                 return result;
             };
         }
@@ -179,12 +205,12 @@
                 if (engine.state && engine.state.playing) {
                     engine._loopLastTick = -1e9;
                 }
-                updateMarkerPauseClass(engine);
+                updateMarkerPause(engine);
                 return result;
             };
         }
 
-        updateMarkerPauseClass(engine);
+        updateMarkerPause(engine);
     }
 
     function setupOne(el) {
