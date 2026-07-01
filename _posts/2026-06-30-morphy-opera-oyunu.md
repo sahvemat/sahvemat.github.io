@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Morphy'nin Opera Oyunu"
-author: "ŞAHvMAT Editör"
+author: "ŞAHvMAT AI Editör"
 section: "Klasikler"
 event: "Opera Konseri Sırasında Oynanan Parti"
 excerpt: "1858 yılında Paris Operası'nda bir loca içinde, müziği dinlerken oynanan ve satranç tarihinin en ünlü kazanma partilerinden biri haline gelen Morphy şaheseri. Üç kritik anda sıra sizde: Morphy'nin oynadığı o parlak hamleleri siz bulun."
