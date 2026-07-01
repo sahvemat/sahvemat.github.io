@@ -2173,6 +2173,14 @@ figcaption > span {
     margin-right: auto !important;
 }
 
+/* Visual cue that the player has paused on a {[P]} critical-move marker. */
+.post-game pgn-player .player-container.post-game-marker-paused {
+    opacity: 0.55;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.25s ease, box-shadow 0.25s ease;
+}
+
 .post-ps {
     margin-top: 3rem;
     padding-top: 1.5rem;
