@@ -2173,66 +2173,6 @@ figcaption > span {
     margin-right: auto !important;
 }
 
-/* Puzzle-pause widget: the game plays out as a normal pgn-player; when a
-   {[P]} marker is reached, an interactive puzzle drops in directly on top
-   of the board (inside ChessPublica's own .board-wrap). Solving it removes
-   the overlay and the same pgn-player carries on from there. */
-.post-game-puzzle-pause {
-    width: 100%;
-}
-
-.post-game-puzzle-pause-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 40;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--paper);
-    animation: ppp-reveal 0.3s ease;
-}
-
-.post-game-puzzle-pause-overlay .post-game-puzzle-pause-puzzle {
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes ppp-reveal {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-.post-game-puzzle-pause-banner {
-    position: absolute;
-    top: 0.6rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 41;
-    max-width: 92%;
-    text-align: center;
-    background: var(--accent);
-    color: white;
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    font-family: var(--font-display);
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-/* Move-list entries for a not-yet-solved critical move, replaced with "···"
-   so the answer isn't spoiled before the reader solves its puzzle. */
-.white-half.ppp-move-masked {
-    cursor: default;
-}
-
-.white-half.ppp-move-masked span {
-    color: var(--slate);
-    letter-spacing: 0.15em;
-}
-
 .post-ps {
     margin-top: 3rem;
     padding-top: 1.5rem;
