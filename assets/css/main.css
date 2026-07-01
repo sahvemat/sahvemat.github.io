@@ -1977,6 +1977,11 @@ pgn-player p {
     margin-right: 1rem;
 }
 
+.post-article > h2:only-of-type::before {
+    content: none;
+    margin-right: 0;
+}
+
 @media (min-width: 768px) {
     .post-article > h2 {
         column-span: all;
