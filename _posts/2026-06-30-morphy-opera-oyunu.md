@@ -16,7 +16,7 @@ Bir kış akşamı, 1858 yılının Kasım ayında Paris Operası'nda Rossini'ni
 
 Bu parti bugün hâlâ satranç öğretiminin temel taşlarından biri: Hızlı gelişim, açık hatlar ve şah güvenliği üzerine verilebilecek en iyi derslerden biri. Aşağıda oyunu kendiniz oynayabilirsiniz — üç kritik konumda parti duracak ve Morphy'nin yaptığı tarihi hameleri tahtada siz bulacaksınız.
 
-<div class="post-game" id="opera-oyunu" data-pgn="{{ '/assets/pgn/morphy-opera-oyunu.pgn' | relative_url }}" data-puzzle-pause="true"></div>
+<div class="post-game" id="opera-oyunu" data-pgn="{{ '/assets/pgn/morphy-opera-oyunu.pgn' | relative_url }}"></div>
 
 Her üç feda da aynı fikre hizmet ediyor: Materyal değil, zaman ve açık hatlar kazanmak. Morphy taşlarını veriyor ama karşılığında rakibin şahını merkezde turuyor ve taşlarının gelişmesine engel oluyor. Nihayetinde vezirini de feda ederek kaleyle matı tamamlıyor.
 
