@@ -226,11 +226,17 @@
         return player;
     }
 
+    // Polls every animation frame rather than on a fixed timer so goTo() is
+    // wrapped (see wirePuzzlePauses) as close as possible to the moment the
+    // engine exists — before there's any realistic chance of a reader
+    // reaching the play button first.
     function whenEngineReady(player, cb) {
         var attempts = 0;
         (function poll() {
             if (player._engine && player._engine.board) { cb(player._engine); return; }
-            if (attempts++ < 80) setTimeout(poll, 100);
+            if (attempts++ < 600) { requestAnimationFrame(poll); return; }
+            console.warn('[puzzle-pause] engine never became ready for', player.getAttribute('src'),
+                '— puzzle pauses were not wired up, so the game will play through unimpeded.');
         })();
     }
 
@@ -360,6 +366,8 @@
             .then(function (pgnText) {
                 var rawMatches = Array.from(pgnText.matchAll(MARKER_RE));
                 if (!rawMatches.length || typeof window.Chess !== 'function') {
+                    console.warn('[puzzle-pause] falling back to a plain player for', src,
+                        '— no {[P]} marker found, or chess.js failed to load in time.');
                     renderPlainPlayer(container, src);
                     return;
                 }
@@ -367,6 +375,8 @@
                 var headerless = pgnText.replace(/^\s*\[[^\]]*\]\s*$/gm, ' ');
                 var headerlessMatches = Array.from(headerless.matchAll(MARKER_RE));
                 if (headerlessMatches.length !== rawMatches.length) {
+                    console.warn('[puzzle-pause] falling back to a plain player for', src,
+                        '— marker count changed after stripping PGN headers (should never happen).');
                     renderPlainPlayer(container, src);
                     return;
                 }
@@ -381,6 +391,8 @@
                     var beforeTokens = sanTokens(beforeText);
                     var afterTokens = sanTokens(afterText);
                     if (!beforeTokens.length || !afterTokens.length) {
+                        console.warn('[puzzle-pause] falling back to a plain player for', src,
+                            '— marker', i, 'has no move before or after it.');
                         renderPlainPlayer(container, src);
                         return;
                     }
@@ -390,6 +402,8 @@
                         if (!chess.move(beforeTokens[j], { sloppy: true })) { legal = false; break; }
                     }
                     if (!legal) {
+                        console.warn('[puzzle-pause] falling back to a plain player for', src,
+                            '— an illegal move was found while replaying up to marker', i, ':', beforeTokens);
                         renderPlainPlayer(container, src);
                         return;
                     }
