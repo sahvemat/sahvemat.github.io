@@ -226,43 +226,49 @@
         return player;
     }
 
-    // Polls every animation frame rather than on a fixed timer so goTo() is
-    // wrapped (see wirePuzzlePauses) as close as possible to the moment the
-    // engine exists — before there's any realistic chance of a reader
-    // reaching the play button first. Keeps polling indefinitely rather
-    // than giving up after a fixed number of tries: rAF can be throttled
-    // to a crawl in a backgrounded tab, and giving up early just means the
-    // whole game silently plays through with no puzzle pauses at all — far
-    // worse than polling a little longer. Only logs once, as a diagnostic,
-    // without ever actually abandoning the wait.
+    // Waits for pgn-player's own engine object (built inside a
+    // requestAnimationFrame callback registered the instant the element is
+    // inserted into the DOM) to exist, then wraps goTo() on it — see
+    // wirePuzzlePauses. Polls via rAF *and* setTimeout in parallel rather
+    // than relying on rAF alone: rAF is tied to the rendering pipeline and
+    // can go quiet under conditions setTimeout isn't subject to (and vice
+    // versa), so whichever the browser is willing to schedule right now
+    // wins. Never gives up — abandoning the wait just means the whole game
+    // silently plays through with no puzzle pauses at all, which is worse
+    // than continuing to poll. Also catches any uncaught error during the
+    // wait (in case the engine's own construction is throwing) and, if
+    // it's taking unusually long, logs which parts of pgn-player's DOM did
+    // or didn't get built, to narrow down exactly where it's stuck.
     function whenEngineReady(player, cb) {
         var attempts = 0;
         var warned = false;
-        // pgn-player builds its engine inside its own requestAnimationFrame
-        // callback, registered the instant it's inserted into the DOM —
-        // before this poll's very first rAF is even scheduled. So if that
-        // callback throws partway through construction, _engine never gets
-        // assigned and we'd otherwise wait forever with no clue why. Catch
-        // any uncaught error while we're waiting and tag it so it's easy to
-        // spot in the console instead of scrolling past it.
+        var done = false;
         var onError = function (e) {
             console.error('[puzzle-pause] uncaught error while waiting for the engine:', e.message,
                 'at', e.filename + ':' + e.lineno);
         };
         window.addEventListener('error', onError);
-        (function poll() {
+
+        function check() {
+            if (done) return;
             if (player._engine && player._engine.board) {
+                done = true;
                 window.removeEventListener('error', onError);
                 cb(player._engine);
                 return;
             }
             if (!warned && attempts++ > 600) {
                 warned = true;
-                console.warn('[puzzle-pause] engine still not ready after 600 frames for', player.getAttribute('src'),
-                    '— still waiting (this tab may be backgrounded/throttled, or something threw during construction — see any [puzzle-pause] error above).');
+                console.warn('[puzzle-pause] engine still not ready after', attempts, 'checks for', player.getAttribute('src'),
+                    '— player-container built:', !!player.querySelector('.player-container'),
+                    ', board-wrap built:', !!player.querySelector('.board-wrap'),
+                    ', _engine assigned:', !!player._engine,
+                    '— still waiting.');
             }
-            requestAnimationFrame(poll);
-        })();
+        }
+
+        (function rafLoop() { check(); if (!done) requestAnimationFrame(rafLoop); })();
+        (function timeoutLoop() { check(); if (!done) setTimeout(timeoutLoop, 50); })();
     }
 
     function renderPlainPlayer(container, src) {
