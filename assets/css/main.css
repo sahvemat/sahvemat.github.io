@@ -2174,15 +2174,6 @@ figcaption > span {
     width: 100%;
 }
 
-/* Once a stage has played out, its board no longer has anywhere to go —
-   clicking it would just replay the same segment and look like a dead
-   end. Dim it and swap the cursor so attention moves to the puzzle below. */
-.post-game-puzzle-pause-game.is-finished {
-    opacity: 0.55;
-    cursor: default;
-    pointer-events: none;
-}
-
 .post-game-puzzle-pause-challenge {
     display: none;
     border-top: 1px dashed var(--line);

@@ -378,13 +378,15 @@
                         };
 
                         whenGameFinished(engine, function () {
-                            // Belt-and-suspenders: also strip the button
-                            // and lock the board (see .is-finished in
-                            // main.css) so nothing here can still toggle
-                            // play or compete visually with the puzzle.
-                            var playBtn = gameWrap.querySelector('.play');
-                            if (playBtn) playBtn.remove();
-                            gameWrap.classList.add('is-finished');
+                            // The stage board has nowhere left to go — pull
+                            // it off the page entirely (not just dim/lock
+                            // it) so there is nothing above the puzzle that
+                            // could visually sit over it or intercept a
+                            // drag. destroy() first so its listeners,
+                            // observers and abort controller are torn down
+                            // cleanly instead of leaking.
+                            if (typeof engine.destroy === 'function') engine.destroy();
+                            gameWrap.remove();
                             showChallenge(i);
                         });
                     });
