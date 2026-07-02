@@ -215,14 +215,19 @@
 
     function setupOne(el) {
         pollResize(el);
-        // Patch overlay timing once the engine is ready
-        let patchAttempts = 0;
+        // Patch overlay timing once the engine is ready. Keep polling
+        // indefinitely rather than giving up after a fixed number of
+        // attempts — ChessPublica defers building _engine to a
+        // requestAnimationFrame callback, which can be delayed well past
+        // a few seconds on a slow connection or a backgrounded tab, and
+        // giving up here silently disables the [P] marker modal for the
+        // rest of the page's life with no way to recover.
         const tryPatch = function () {
             if (el._engine) {
                 patchOverlayTiming(el);
                 return;
             }
-            if (patchAttempts++ < 50) setTimeout(tryPatch, 100);
+            setTimeout(tryPatch, 100);
         };
         tryPatch();
         const card = el.closest('.post-game');
