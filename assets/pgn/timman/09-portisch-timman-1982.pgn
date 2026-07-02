@@ -1,0 +1,20 @@
+[Event "Mar del Plata Clarin Masters"]
+[Site "Mar del Plata"]
+[Date "1982.02.??"]
+[White "Portisch, Lajos"]
+[Black "Timman, Jan H"]
+[Result "0-1"]
+[WhiteElo "2630"]
+[BlackElo "2655"]
+[Variant "Standard"]
+[ECO "E41"]
+[Opening "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"]
+[StudyName "TIMMAN"]
+[ChapterName "Portisch, Lajos - Timman, Jan H"]
+[ChapterURL "https://lichess.org/study/F0mOCg4p/DmI0Z1fA"]
+[Annotator "https://lichess.org/@/NaSil"]
+
+{ Timman'ın Macar Büyükusta Lajos Portisch ile olan partileri her zaman incelemeyi hak eder. Öyle ki, 1994 yılında yayınlanan ve kariyerinin 1983-1993 arasında oynadığı 80 oyuna odaklanan eseri "Chess the Adventurous Way" kitabında aralarında oynadıkları 3 oyuna yer vermiştir. Portisch turnuvaya 6 oyunda 5.5 puanla inanılmaz bir başlangıç yapmış, fakat 7. turda Timman'ı da yenen Larsen'e kaybetmişti.
+Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Clarin'e şöyle demişti: “Beyaz taşlarla oynayan Portisch'in her zaman zaferi hedefleyeceğini biliyordum. Dahası, sıralamada yarım puan geride olduğu için beni yakalamasının tek yolu kazanmaktı. Bu yüzden bu oyun önemliydi ve dikkatlice hazırlandım.” }
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 c5 5. Bd3 Nc6 6. Nf3 Bxc3+ 7. bxc3 d6 { Hala revaçta olan bir devamyolu: Hübner Sistemi. Siyah c3-c4 piyonlarını sabitleyerek ve piyonlarını koyu renklere yerleştirerek Beyazın fil çiftine karşı bir oyun planlıyor. } 8. e4 e5 9. h3 h6 10. Be3 b6 11. O-O (11. d5 Ne7 { Merkez kapalı olmasına rağmen zengin bir oyun var. Tarafların savaş alanı şah kanadı olacak gibi duruyor. } 12. g3 Ng6 13. Nd2 O-O 14. Kf1 (14. Nf1 Nh7 15. h4 Bd7 16. h5 Ne7 17. g4 $14 { Jussupow, Artur - Hall, Jesper, 1-0, Bundesliga 9899, 1999, https://lichess.org/cN25alPD }) 14... Ne8 15. Kg2 Ne7 16. f3 f5 $132 { Portisch, Lajos - Browne, Walter S, 0-1, Interpolis, 1982, https://lichess.org/8y5qWUll }) 11... Qc7 (11... g5!? { Rok atılmışken h3-sürmenin eksilerinden birini gösteren bir hamle. } 12. Bc2 Qe7 13. Re1 Rg8 14. Nh2 Na5 15. Bd3 g4 16. h4 g3 $132 { Li Chao2 - Flores, Di, 1-0, 42nd Olympiad 2016, https://lichess.org/HgSaxfZh }) 12. d5 Ne7 (12... Na5 { Beyaz yine oyundakine benzer şekilde oynayabilirdi. } { [%cal Gc8a6] } 13. Nh4 { [%cal Rf2f4,Gh4f5] } 13... g5 14. Qf3 Qe7 15. Nf5 Bxf5 16. Qxf5 $13) 13. Nh4 g5 14. Qf3 Nfg8 15. Nf5 Nxf5 16. exf5 Nf6 17. g4 { Zorunlu bir dizi hamle ardından piyon yapısı değişti. Beyazın Şg2-Kh1-h4 ve a4-a5 ile devam etmek fikirlerine karşı Siyahın rakibinin duble piyonlarına karşı oynamak ve e4-sürüşü ile alan kazanmak fikirleri bulunuyor. } 17... Ba6 18. Qd1 e4 19. Qa4+ (19. Be2 { Oyunda oynanan hamleyi tehdit olarak saklı tutmak daha iyi olabilirdi. } { [%cal Gd1a4] } 19... Bb7 20. Qa4+ Qd7 21. Qa3 { Uzun roku engelleyerek. } 21... Kd8 { [%cal Gd8c7] } 22. Qb3 $36 { [%cal Ga2a4,Ga4a5] }) 19... Kf8 20. Qxa6 exd3 { Beyaz başlattığı operasyon ile d3-piyonunu önünde sonunda alacağını düşünmüş olmalı. } 21. Qa4 Re8 22. Rae1! (22. Rad1?? { Konumun tehlikelerini gösteren bir durum oluşurdu. } 22... Rxe3! 23. fxe3 h5 $19 { Siyah vezirin de dahil olmasıyla hızlıca kazandıran bir saldırıya dönüşür. } { [%csl Gg4][%cal Gc7e7,Gh8h1] }) 22... Qb7!? { [%cal Gb6b5] } 23. Qd1 b5! 24. Qb1 (24. Qxd3 bxc4 25. Qxc4 Qxd5 { Timman tek şansın bu olduğunu belirtmişti. Bu durumda bile Siyahın oyununun iyi olduğunu düşünüyordu. } 26. Qxd5 Nxd5 { Beyaz, belki de daha fazlasını elde edebilmek ümidiyle bu olanaktan kaçınıyor. }) 24... Re4! 25. Qxd3 Rxc4 26. Rd1 Kg7 27. f3 (27. f4 { Beyazın bir hedefi olacaksa bunun şah kanadında yaratılması oldukça mantıklı olurdu. }) 27... Qe7 28. f4? { [P]
+Bu gecikmenin bedeli ağır olacak. Şimdi beyaz şah, e4 karesi ve diğer açık renkler kalıcı olarak zayıflıyor. } (28. Kg2) 28... Re8! 29. Bc1 { [P] } (29. Rfe1 Qe4 $19) 29... Qe2! 30. fxg5 hxg5 31. Qg3 (31. Bxg5 Rxg4+! 32. hxg4 Qxg4+ { [%cal Re8h8,Gg1h1,Gg1h2] } 33. Kf2 Ne4+ $19) 31... Ne4 32. f6+ Kg6 33. Qg2 Nxc3 34. Rd2 Qxg2+ 35. Kxg2 Ne2 { Beyaz daha fazla direnç göstermenin gereksiz olduğunu düşünerek terk ediyor. } 0-1

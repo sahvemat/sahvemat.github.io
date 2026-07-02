@@ -1,0 +1,19 @@
+[Event "Mar del Plata Clarin Masters"]
+[Site "Mar del Plata"]
+[Date "1982.02.??"]
+[White "Timman, Jan H"]
+[Black "Quinteros, Miguel Angel"]
+[Result "1-0"]
+[WhiteElo "2655"]
+[BlackElo "2505"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Quinteros Variation"]
+[StudyName "TIMMAN"]
+[ChapterName "Timman, Jan H - Quinteros, Miguel Angel"]
+[ChapterURL "https://lichess.org/study/F0mOCg4p/tWBpZAOX"]
+[Annotator "https://lichess.org/@/NaSil"]
+
+{ Fischer'ın en yakın dostu ve yardımcısı Arjantinli Büyükusta Miguel Quinteros 1972'de Spassky'e karşı hazırlanırken Fischer'a yardım etmiş ve hatta 1992 senesindeki rövanş maçında da Fischer'ın yanında bulunmuştur. }
+1. e4 c5 2. Nf3 Qc7 { Quinteros Varyantı! Siyahla oynayan oyuncu hakkında çok şey söyleyen ilginç bir hamle. Arjantinli Büyükusta orijinal devamyollarını ve tahtada kaosu seven bir oyuncuydu. } 3. c3!? { Beyaz, Alapin varyantında ...♕c7'nin yarayışlı olmayacağını iddia ediyor. } 3... Nf6 4. e5 Nd5 5. d4 (5. c4! $146 { Alapin'de 1. e4 c5 2. c3 ♘f6 3. e5 ♘d5 4. c4? durumunda konumsal intihar olabilecek bu hamle burada oldukça güçlü. Beyaz pek çok durumda siyah vezirin konumunda da faydalanarak hızla d4 ile merkezi açabiliyor. } 5... Nb4 6. Nc3 N4c6 7. Be2 Nxe5 8. d4 Nxf3+ 9. Bxf3 cxd4 10. Nd5 Qd8 11. Qxd4 $44) 5... cxd4 6. cxd4 d6 7. Bd3 dxe5 (7... Bg4 8. O-O e6 { Açık renkli filin durumu oyundakiyle kıyaslayınca belki de böylesi daha iyidir. }) 8. Nxe5 e6 9. O-O Nc6 10. Nxc6 bxc6! { İzole piyona karşı oynarken tipik bu yaklaşım d5-karesinin kontrolü için önemlidir. } 11. Nd2 c5 { Anlaşılır görünse de Siyah bu tip durumlarda genelde c6-piyonundan kurtulmak için bu denli hevesli olmaz. Belki de Beyazın ♕g4 veya ♕h5 ile başlayacak olası şah kanadı saldırısı Siyaha korkutucu göründü. } 12. Nf3 (12. Re1! cxd4 13. Qa4+ Bd7 14. Qxd4 $40) 12... Bd6? { [P]
+Stockfish gerçek hatanın bu olduğunu söylüyor. Filin nereden geliştirildiği şah güvenliği için önemlidir. } (12... Be7 13. dxc5 O-O { Siyah şah güvendedir ve durum eşittir. }) 13. dxc5! Qxc5 { [P] } 14. Qa4+! Bd7 { [P] } 15. Qg4! { Bu mükemmel vezir manevrası sayesinde Beyaz girişimi elde eder. } 15... g6 { [P] } 16. Bh6! Bf8 17. Bxf8 Kxf8 { Şimdi Siyahın ...♔g7 ardından koordinasyonu sağlamasına izin vermemek gerek. } 18. Rac1 Qb6 19. Ne5 Be8 20. Nc4 Qd8 21. Be4! { [%cal Gf1d1] } 21... Qf6 22. Bxd5 exd5 23. Ne3 Qxb2? (23... Rd8 { ile savunmak ve ...d4 sürüşünü hazırlamak daha iyi savunma şansları verirdi. }) 24. Nxd5 { Siyahın en büyük sorunu koyu renkleri ve şahı oldukça zayıftır ve merkezin tamamen açık olması durumunu daha da güçleştirmektedir. } 24... Kg7 25. Rc3! { ♕d4 ile başlayacak saldırı engellenemez. Siyah terk etti. Örneğin, } { [%cal Gg4d4] } 25... Qd2 { [P] } 26. Qe4! { [%csl Ge5][%cal Ge4e5] } (26. Rd1 Bd7 27. Qf3 Rhe8 28. Qf6+ Kg8 29. Rcc1 $18) 26... Qg5 27. h4 Qf5 28. Qd4+ f6 29. Re1 Bf7 30. Re7 $18 { [%csl Ge7,Gf7,Gf5,Gf6][%cal Ge7f7,Gg2g4] } 1-0

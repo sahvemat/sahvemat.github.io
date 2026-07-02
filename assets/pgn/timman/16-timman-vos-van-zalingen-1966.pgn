@@ -1,0 +1,16 @@
+[Event "NED-ch U18"]
+[Site "Delft"]
+[Date "1966.??.??"]
+[Round "1"]
+[White "Timman, Jan H"]
+[Black "Vos van Zalingen, Jorge"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E87"]
+[Opening "King's Indian Defense: Sämisch Variation, Closed Variation"]
+[StudyName "TIMMAN"]
+[ChapterName "Timman, Jan H - Vos van Zalingen, Jorge"]
+[ChapterURL "https://lichess.org/study/F0mOCg4p/39cynJzU"]
+[Annotator "https://lichess.org/@/NaSil"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 { Agresif Saemisch varyantı Timman'ın uzun satranç kariyerinin ayrılmaz parçalarından. } 5... O-O 6. Be3 (6. Nge2 e5 7. Bg5 h6 8. Be3 Nc6 9. d5 Ne7 10. Qd2 Kh7 11. g4 $40 { Timman - Benoit, Paris 1966. Aynı varyantta aynı yıl oynanan bir başka güzel partiye götürürdü. }) 6... e5 7. d5 Ne8 { Kasparov'un Timman'a karşı tercihi } (7... c6 8. Bd3 (8. Qd2 cxd5 9. cxd5 Na6 { Siyah taşlarla Timman'ı bu konumu iki kez oynarken görmek mümkün. } { Kavalek, Lubomir - Timman, Jan H, 0-1, Interpolis, 1980, https://lichess.org/kFhJ2McO }) 8... b5! $13 { Timman, Jan H - Kasparov, Garry, 0-1, World Cup, 1988, https://lichess.org/qjC0KySP } (8... cxd5 { Timman, Jan H - Kasparov, Garry, 1-0, Paris Immopar rapid, 1991, https://lichess.org/S7EXmGrO } { Timman zaferiyle sonuçlanan bir başka Kasparov düellosu. })) (7... Nh5 8. Qd2 f5 9. exf5 gxf5 10. O-O-O a6 11. Bd3 Nd7 12. Nge2 Nc5 13. Bc2 Qh4 14. b3 Qf6 15. Rhg1 b5 16. g4 fxg4 17. fxg4 Nf4 18. b4 Nxe2+ 19. Nxe2 Nd7 20. g5 Qf3 21. Ng3 Nb6 22. Rdf1 Qg4 23. Qd3 Rxf1+ 24. Rxf1 Qh4 25. g6 h6 26. Rf7 Nxc4 27. Qf1! { Siyah terk etti. Timman - Wibe, 1967 Kudüs U20 Dünya Şampiyonası Finali. }) 8. Qd2 f5 9. exf5! { Beyaz uzun rok ardından şah-kanadından saldırma fikrini sürdürmek istiyor. } (9. O-O-O f4! { Beyazın işini zorlaştırırdı. }) 9... gxf5 { Kural olarak e4-karesinin kontrolü için piyonla almak önerilir. } (9... Bxf5 10. g4 Bd7 11. h4 $40) 10. O-O-O Rf7 11. Bd3 Nd7 12. g4! { Beyaz elbette 9. hamledeki fikrini bu hamleyle taçlandırmak istemekteydi. } 12... Nf8? (12... e4! { Standart kabul edilen bu yaklaşımla e5-karesi ve filin çaprazı boşaltılmak istenir. } 13. Be2 (13. fxe4 fxg4 $132 { [%csl Ge5][%cal Gd7e5] }) 13... Nc5 $13) 13. gxf5 Bxf5 14. Bxf5 Rxf5 { Beyaz konumsal bir zafer elde etti. Açık renkli fillerin değilmesi ve e4-karesinin kontrolünün kazanılması ve g-dikeyinin açılması karşılığında siyahın elinde bir şey yoktur. } 15. Qd3 Qd7 16. Rf1 { [%csl Gf3,Ge2][%cal Rg1e2,Ge2g3] } 16... Ng6 17. Nge2 e4 { Geç kalmış bir karşı saldırı. } 18. Qxe4 Nf6 19. Qc2 Re8 20. Ng3 Rfe5 21. Bd4 R5e7 22. Nf5 Rf7 23. Nxg7 Kxg7 24. Ne4 { Siyah terk etti, çünkü materyal kaybı kaçınılmazdır. Örneğin, } 24... Ne5 25. Nxf6 Rxf6 26. f4 $18 1-0

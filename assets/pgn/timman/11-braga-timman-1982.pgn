@@ -1,0 +1,17 @@
+[Event "Mar del Plata Clarin Masters"]
+[Site "Mar del Plata"]
+[Date "1982.02.??"]
+[White "Braga, Fernando Alberto"]
+[Black "Timman, Jan H"]
+[Result "1/2-1/2"]
+[WhiteElo "2375"]
+[BlackElo "2655"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Van der Wiel Attack"]
+[StudyName "TIMMAN"]
+[ChapterName "Braga, Fernando Alberto - Timman, Jan H"]
+[ChapterURL "https://lichess.org/study/F0mOCg4p/S0z4oj88"]
+[Annotator "https://lichess.org/@/NaSil"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nc3 { 80'li yıllarda popülerlik kazanan ve günümüzde de görülen sert bir devamyolu. Beyaz güçlü rakibinden çekinmediğini gösteriyor. } 4... e6 5. g4 Bg6 6. Nge2 { Hemen 6.h4 h5! ile yanıtlanabildiği için Beyaz♘f4 ile birlikte h4 yapmak istiyor. } 6... c5! 7. Be3 (7. h4 h5 8. Nf4 { Daha yaygındır. }) 7... Nc6 8. dxc5 Nxe5 9. Nd4 Nf6!? { Timman'ın stiline uygun bir hamle. } (9... Bxc5 10. Bb5+ Nd7 11. Nxe6 fxe6 12. Bxc5 a6 13. Bxd7+ { Daha sade bir oyun verirdi. }) 10. f4 Nexg4! { Daha fazla karmaşa! } 11. Bb5+ Ke7 12. Bg1 { Belki bu aşamada hızla beyaz şahın da güvenliğini hazırlamak ve saldırıyı hızlandırmak daha pratik olabilirdi. } (12. Qe2 { [%csl Gf5][%cal Ge1c1,Gf4f5] } 12... a6 13. Ba4 Nxe3 14. Qxe3 Be4 15. O-O-O $13 { [%cal Ge4h1,Bd4f5] }) 12... Qc7 { [%csl Gf4,Gc5] } 13. c6 b6 { İki tarafın da her hamlede pek çok olanağı bulunuyor. } (13... Rc8 14. Qe2 { Beyaz oyundaki gibi oynamak istiyorsa belki de bu sıralamayı kullanmalı. } { [%cal Gf4f5] }) 14. Qe2 { Beyaz hatların açılması düşüncesiyle f4-piyonunu feda ediyor ancak bu kendi şahı için de bir güvenlik sorunu yaratacak. } { [%cal Gf4f5] } (14. Qf3 a6 15. Be2 Nh6 { [%csl Gf5][%cal Yf4f5,Gh6f5] } 16. O-O-O $14) 14... Qxf4! 15. c7? { Beyaz çok fazla risk alıyor. } (15. h3 Ne5 16. Be3 Qg3+ 17. Bf2 Qf4 $10) 15... Ne4! 16. Nc6+ Kd6 { Hangi şahın daha zayıf olduğunu söylemek güçtür. } 17. h3 Qg3+ 18. Kf1 Qf4+ 19. Ke1 Qg3+ 20. Kf1 { [P] } 20... Qxc3! { [%cal Ge4g3] } 21. Qxg4 Qxb2 { [%csl Rb5,Ra1] } 22. a4 { Buraya kadar her şey Siyahın bir şekilde kazanacağı hissini yaratıyordu, ancak şimdi her şey altüst olacak. } 22... Qxa1+? (22... Qf6+ 23. Kg2 Kxc7 $19 { Pratik bir çözüm olurdu. }) 23. Kg2 f5?? { [P] } (23... Qxg1+ 24. Rxg1 Kxc7 { Siyahın veziri karşılayacak yeterince materyali fazlasıyla bulunmaktadır. }) 24. Qh4?? (24. Bh2+! e5 25. Qh4 { Aniden beliren kritik durumda Siyahın vezirden vazgeçse bile sıkıntıları bitmeyecekti. } { [%cal Gh4d8,Gh2e5] } 25... Qxh1+ 26. Kxh1 Kxc7 27. Nxe5 (27. Bxe5+ Kb7 28. Nd8+ $18) 27... Bd6 28. Nxg6 hxg6 29. Qe7+ $18) 24... Qf6 25. Bh2+ Kc5 26. Nb8 { Harika bir deneme! } { [%cal Gc7c8] } (26. Bg1+ Kd6 27. Bh2+ $10) 26... Qxh4 27. c8=Q+ Kb4 28. Rb1+ Ka3 { Konum tam bir görsel şölen sunuyor! } 29. Ra1+ Kb4 30. Rb1+ Ka3 31. Ra1+ Kb4 { 1/2-1/2  } 1/2-1/2

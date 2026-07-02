@@ -1,0 +1,18 @@
+[Event "Bugojno"]
+[Site "Bugojno YUG"]
+[Date "1978.03.08"]
+[Round "9"]
+[White "Robert Huebner"]
+[Black "Jan Timman"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TIMMAN"]
+[ChapterName "Taktik - Robert Huebner - Jan Timman"]
+[ChapterURL "https://lichess.org/study/F0mOCg4p/m99Zflrj"]
+[FEN "r2r2k1/p4ppp/1p2q3/1Q1bN1n1/3P4/6P1/PP3PBP/R1R3K1 w - - 5 19"]
+[SetUp "1"]
+
+19. Nc6?? { Beyaz oldukça iyi bir konumda taktik bir hata yapıyor. } 19... Bxg2 20. Nxd8 (20. Kxg2 Qh3+ 21. Kh1 Nf3 $19) 20... Qe4 21. h4 Nf3+! { Son dokunuş! Beyaz terk eder. } 22. Kxg2 Nxd4+ $19 { [%csl Gb5][%cal Gd4b5] } 0-1
