@@ -114,41 +114,11 @@
     // the overlay render until the animation finishes, and clear the
     // previous arrow immediately on each move so it doesn't linger.
 
-    // A `{...[P]...}` PGN comment makes ChessPublica pause autoplay on its
-    // own the moment it reaches that move (see goTo's native
-    // commentBox.update()-triggered pause() call) — no extra JS is needed
-    // for the pause itself. This only adds a modal over the board while
-    // paused there, showing the FEN of the position it stopped at.
-    function ensureMarkerModal(engine) {
-        if (engine.__markerModalEl) return engine.__markerModalEl;
-        const modal = document.createElement('div');
-        modal.className = 'post-game-marker-modal';
-        modal.innerHTML =
-            '<div class="post-game-marker-modal-pane">' +
-                '<div class="post-game-marker-modal-label">Kritik pozisyon</div>' +
-                '<code class="post-game-marker-modal-fen"></code>' +
-                '<button type="button" class="post-game-marker-modal-continue">Devam et ▶</button>' +
-            '</div>';
-        modal.querySelector('.post-game-marker-modal-continue').addEventListener('click', function () {
-            engine.play();
-        });
-        engine.boardWrap.appendChild(modal);
-        engine.__markerModalEl = modal;
-        return modal;
-    }
-
-    function updateMarkerPause(engine) {
-        const comment = engine.state && engine.state.comments && engine.state.comments[engine.state.index - 1];
-        const isMarkerPause = !engine.state.playing && !!comment && /\[P\]/.test(comment);
-        if (isMarkerPause) {
-            const modal = ensureMarkerModal(engine);
-            const fen = engine.state.cache && engine.state.cache[engine.state.index];
-            modal.querySelector('.post-game-marker-modal-fen').textContent = fen || '';
-            modal.classList.add('is-visible');
-        } else if (engine.__markerModalEl) {
-            engine.__markerModalEl.classList.remove('is-visible');
-        }
-    }
+    // `{[P]}` / `{[Pn]}` PGN comments are now a native ChessPublica
+    // feature (PuzzleMode): the marked move becomes a drag-and-drop
+    // puzzle on the same board, with its own pause/resume/shake-on-wrong-
+    // move handling. We used to reimplement the pause+FEN-modal here by
+    // hand; that's gone now that the library owns the whole flow.
 
     const ANIM_MS = 220;
     function patchOverlayTiming(el) {
@@ -186,9 +156,7 @@
         if (origGoTo && clear) {
             engine.goTo = function (i) {
                 clear();
-                const result = origGoTo(i);
-                updateMarkerPause(engine);
-                return result;
+                return origGoTo(i);
             };
         }
 
@@ -205,12 +173,9 @@
                 if (engine.state && engine.state.playing) {
                     engine._loopLastTick = -1e9;
                 }
-                updateMarkerPause(engine);
                 return result;
             };
         }
-
-        updateMarkerPause(engine);
     }
 
     function setupOne(el) {
@@ -220,8 +185,8 @@
         // attempts — ChessPublica defers building _engine to a
         // requestAnimationFrame callback, which can be delayed well past
         // a few seconds on a slow connection or a backgrounded tab, and
-        // giving up here silently disables the [P] marker modal for the
-        // rest of the page's life with no way to recover.
+        // giving up here silently disables the overlay-timing patch for
+        // the rest of the page's life with no way to recover.
         const tryPatch = function () {
             if (el._engine) {
                 patchOverlayTiming(el);
