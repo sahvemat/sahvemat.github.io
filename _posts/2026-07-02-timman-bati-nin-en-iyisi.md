@@ -4,7 +4,7 @@ title: "Batı'nın En İyisi: Jan Timman"
 author: "Nazmi Can Doğan"
 section: "Klasikler"
 event: "1964–1995 · 28 Parti"
-excerpt: "Hollandalı Büyükusta Jan Timman'ın kariyerinden 28 parti: 1964'teki gençlik adımlarından 1982 Mar del Plata Clarin zaferine, klasik pozisyonel oyunlardan yıldırım taktiklere uzanan bir portre. Nazmi Can Doğan'ın (lichess: NaSil) hazırladığı çalışmadan, tüm notlarıyla birlikte, hiçbir ekleme veya çıkarma yapılmadan."
+excerpt: "Hollandalı Büyükusta Jan Timman'ın kariyerinden 28 parti: 1964'teki gençlik adımlarından 1982 Mar del Plata Clarin zaferine, klasik pozisyonel oyunlardan yıldırım taktiklere uzanan bir portre."
 date: 2026-07-02
 FEN: 4r1k1/1pQ3pp/2p2p2/P3n3/1q4b1/6P1/1P2PP1P/2RN1BK1 b - - 0 26
 reading_time: 45
