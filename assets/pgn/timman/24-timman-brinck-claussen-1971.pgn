@@ -1,0 +1,18 @@
+[Event "Hoogovens-B"]
+[Site "Wijk aan Zee"]
+[Date "1971.01.25"]
+[Round "11"]
+[White "Timman, Jan H"]
+[Black "Brinck Claussen, Bjorn"]
+[Result "1-0"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TIMMAN"]
+[ChapterName "Timman, Jan H - Brinck Claussen, Bjorn"]
+[ChapterURL "https://lichess.org/study/F0mOCg4p/SLIAKTwb"]
+[FEN "r5k1/p1pp1rp1/1pq1pBQp/n3P3/2bP4/P1P2P2/6PP/3RK1NR w K - 6 19"]
+[SetUp "1"]
+
+19. h4 Ba6 (19... Raf8 20. Nh3 Rxf6 $19) 20. Nh3! Qxc3+ 21. Kf2 Nc4 22. Ng5 { 1-0 White wins. } 1-0
