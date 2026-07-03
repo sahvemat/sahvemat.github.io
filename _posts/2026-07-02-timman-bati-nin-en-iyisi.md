@@ -10,9 +10,15 @@ FEN: 4r1k1/1pQ3pp/2p2p2/P3n3/1q4b1/6P1/1P2PP1P/2RN1BK1 b - - 0 26
 reading_time: 45
 ---
 
-Aşağıdaki 28 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve Jan Timman'ın kariyerini gençlik yıllarından 1990'lara uzanan geniş bir yelpazede ele aldığı **TIMMAN** adlı çalışmadan, hiçbir ekleme veya çıkarma yapılmadan aktarılmıştır. Notlar, değerlendirmeler ve tüm varyantlar orijinal haliyle korunmuştur.
+Aşağıdaki 28 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve Jan Timman'ın kariyerini gençlik yıllarından 1990'lara uzanan geniş bir yelpazede ele aldığı **TIMMAN** adlı çalışmadan aktarılmıştır.
 
 ### Timman, Jan H - Larsen, Bent
+
+Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı. Şampiyon şöyle diyordu:
+
+"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki, Arjantin'de bu bölge akciğer rahatsızlığı olan insanlar için favori bir yer."
+
+Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'de ise Karpov ve Timman önünde kazanan Bent Larsen 1982'ye gelindiğinde harika bir sonuç elde edemese de ilk tura zaferle başlamıştı. Aynı yıl Buenos Aires'e taşınan Larsen ömrünün sonuna kadar orada ikamet etmiştir.
 
 <div class="post-game" id="timman-larsen-1982" data-pgn="{{ '/assets/pgn/timman/01-timman-larsen-1982.pgn' | relative_url }}"></div>
 
