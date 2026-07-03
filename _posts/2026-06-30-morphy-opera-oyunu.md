@@ -20,4 +20,4 @@ Bu parti bugün hâlâ satranç öğretiminin temel taşlarından biri: Hızlı 
 
 Her üç feda da aynı fikre hizmet ediyor: Materyal değil, zaman ve açık hatlar kazanmak. Morphy taşlarını veriyor ama karşılığında rakibin şahını merkezde turuyor ve taşlarının gelişmesine engel oluyor. Nihayetinde vezirini de feda ederek kaleyle matı tamamlıyor.
 
-<p class="post-ps">Bu parti, "gelişim üstünlüğü nasıl değerlendirilir?" sorusuna verilebilecek en zarif cevaplardan biri — Önemli olan tahtaki tüm taşların sayısı değil, aktif taşların sayısıdır.</p>
+<p class="post-ps">Bu parti, "gelişim üstünlüğü nasıl değerlendirilir?" sorusuna verilebilecek en zarif cevaplardan biri — Önemli olan tahtadaki tüm taşların sayısı değil, aktif taşların sayısıdır.</p>
