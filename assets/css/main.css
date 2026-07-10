@@ -1880,8 +1880,7 @@ pgn-player p {
     .post-article > .post-hero,
     .post-article > .post-epigraph,
     .post-article > .post-colophon,
-    .post-article > .post-archive,
-    .post-article > p:first-of-type {
+    .post-article > .post-archive {
         column-span: all;
     }
 
