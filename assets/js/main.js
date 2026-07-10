@@ -485,16 +485,28 @@
     function formatPostTitle(h1) {
         var title = h1.dataset.title;
         if (!title) return;
-        var words = title.split(' ');
-        var veIdx = words.indexOf('ve');
-        var up = function (w) { return w.toLocaleUpperCase('tr-TR'); };
-        if (veIdx === -1) {
-            h1.textContent = words.map(up).join(' ');
-            return;
+        var up = function (s) { return s.toLocaleUpperCase('tr-TR'); };
+
+        var before, after;
+        var colonIdx = title.indexOf(':');
+        if (colonIdx !== -1) {
+            before = title.slice(0, colonIdx + 1);
+            after = title.slice(colonIdx + 1).trim();
+        } else {
+            var words = title.split(' ');
+            var veIdx = words.indexOf('ve');
+            if (veIdx !== -1) {
+                before = words.slice(0, veIdx).join(' ');
+                after = words.slice(veIdx).join(' ');
+            } else if (words.length > 1) {
+                before = words[0];
+                after = words.slice(1).join(' ');
+            } else {
+                h1.textContent = up(title);
+                return;
+            }
         }
-        var before = words.slice(0, veIdx).map(up).join(' ');
-        var after = ['ve'].concat(words.slice(veIdx + 1).map(up)).join(' ');
-        h1.innerHTML = before + '<br><em>' + after + '</em>';
+        h1.innerHTML = up(before) + '<br><em>' + up(after) + '</em>';
     }
 
     document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
