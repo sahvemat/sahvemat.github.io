@@ -2230,6 +2230,23 @@ figcaption > span {
     box-shadow: 0 0 0 3px var(--accent);
 }
 
+/* Highlight the source square while click-and-click (or tap-and-tap) puzzle
+   input is awaiting its destination square — see wirePuzzleClickToMove in
+   main.js. An overlay rather than a background-color override, since
+   chessboardjs already paints each square's own light/dark background. */
+.post-game pgn-player [data-square].sah-puzzle-selected {
+    position: relative;
+}
+
+.post-game pgn-player [data-square].sah-puzzle-selected::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
 .post-ps {
     margin-top: 3rem;
     padding-top: 1.5rem;

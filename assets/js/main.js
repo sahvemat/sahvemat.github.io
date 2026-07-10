@@ -247,6 +247,67 @@
         }
     }
 
+    // ChessPublica's puzzle mode only wires chessboardjs's onDragStart/
+    // onDrop callbacks, so it only ever accepts drag gestures. Worse: a
+    // plain tap (mousedown+mouseup with no movement) is exactly what
+    // chessboardjs reports as "picked the piece up and dropped it back on
+    // its own square" — onDrop(square, square) — so puzzle.handleDrop()
+    // runs a real from===to chess.js move, which is illegal, and shakes
+    // the board as a wrong answer on *every* tap, including ones that
+    // never attempted a move at all. Add click-and-click (and, on touch,
+    // tap-and-tap) support ourselves: neutralize that same-square false
+    // negative, then track a "selected" square across two clicks and
+    // replay it through the same puzzle.handleDrop() a real drag would
+    // have used, so success/failure (advance, shake, board render) all
+    // still go through the library's own logic.
+    function wirePuzzleClickToMove(el) {
+        const engine = el._engine;
+        if (!engine || !engine.puzzle || engine.__sahClickMovePatched) return;
+        engine.__sahClickMovePatched = true;
+
+        const origHandleDrop = engine.puzzle.handleDrop.bind(engine.puzzle);
+        engine.puzzle.handleDrop = function (from, to) {
+            if (from === to) return 'snapback';
+            return origHandleDrop(from, to);
+        };
+
+        let selected = null;
+        const squareEl = (square) => el.querySelector('[data-square="' + square + '"]');
+        const clearSelected = () => {
+            if (!selected) return;
+            const s = squareEl(selected);
+            if (s) s.classList.remove('sah-puzzle-selected');
+            selected = null;
+        };
+        const setSelected = (square) => {
+            clearSelected();
+            selected = square;
+            const s = squareEl(square);
+            if (s) s.classList.add('sah-puzzle-selected');
+        };
+
+        el.addEventListener('click', function (e) {
+            if (!engine._puzzleActive) return;
+            const target = e.target.closest('[data-square]');
+            if (!target || !el.contains(target)) return;
+            const square = target.getAttribute('data-square');
+            const pos = engine.board && typeof engine.board.position === 'function'
+                ? engine.board.position() : null;
+            const piece = pos ? pos[square] : null;
+
+            if (!selected) {
+                if (piece && engine.puzzle.canDrag(piece)) setSelected(square);
+                return;
+            }
+            if (square === selected) { clearSelected(); return; }
+            if (piece && engine.puzzle.canDrag(piece)) { setSelected(square); return; }
+
+            const from = selected;
+            clearSelected();
+            engine.puzzle.handleDrop(from, square);
+        });
+    }
+
     function setupOne(el) {
         pollResize(el);
         // Patch overlay timing once the engine is ready. Keep polling
@@ -259,6 +320,7 @@
         const tryPatch = function () {
             if (el._engine) {
                 patchOverlayTiming(el);
+                wirePuzzleClickToMove(el);
                 return;
             }
             setTimeout(tryPatch, 100);
