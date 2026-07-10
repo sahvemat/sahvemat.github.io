@@ -6,13 +6,6 @@
 [Result "1-0"]
 [WhiteTeam "Netherlands"]
 [BlackTeam "Switzerland"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "TIMMAN"]
-[ChapterName "Timman, Jan H - Hug, Werner"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/x7Z1vHuD"]
-[Annotator "https://lichess.org/@/NaSil"]
 [FEN "4q3/1pkb4/2n2r2/5p2/R2N4/3BQ3/2P2K1P/8 w - - 0 35"]
 [SetUp "1"]
 
