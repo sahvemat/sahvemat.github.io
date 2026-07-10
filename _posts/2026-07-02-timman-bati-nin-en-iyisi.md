@@ -16,7 +16,7 @@ Aşağıdaki 28 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve
 
 Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı. Şampiyon şöyle diyordu:
 
-"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki, Arjantin'de bu bölge akciğer rahatsızlığı olan insanlar için favori bir yer."
+*"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki, Arjantin'de bu bölge akciğer rahatsızlığı olan insanlar için favori bir yer."*
 
 Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'de ise Karpov ve Timman önünde kazanan Bent Larsen 1982'ye gelindiğinde harika bir sonuç elde edemese de ilk tura zaferle başlamıştı. Aynı yıl Buenos Aires'e taşınan Larsen ömrünün sonuna kadar orada ikamet etmiştir.
 
@@ -76,7 +76,8 @@ Fischer'ın en yakın dostu ve yardımcısı Arjantinli Büyükusta Miguel Quint
 ## Portisch, Lajos - Timman, Jan H
 
 Timman'ın Macar Büyükusta Lajos Portisch ile olan partileri her zaman incelemeyi hak eder. Öyle ki, 1994 yılında yayınlanan ve kariyerinin 1983-1993 arasında oynadığı 80 oyuna odaklanan eseri "Chess the Adventurous Way" kitabında aralarında oynadıkları 3 oyuna yer vermiştir. Portisch turnuvaya 6 oyunda 5.5 puanla inanılmaz bir başlangıç yapmış, fakat 7. turda Timman'ı da yenen Larsen'e kaybetmişti.
-Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Clarin'e şöyle demişti: “Beyaz taşlarla oynayan Portisch'in her zaman zaferi hedefleyeceğini biliyordum. Dahası, sıralamada yarım puan geride olduğu için beni yakalamasının tek yolu kazanmaktı. Bu yüzden bu oyun önemliydi ve dikkatlice hazırlandım.”
+
+Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Clarin'e şöyle demişti: *“Beyaz taşlarla oynayan Portisch'in her zaman zaferi hedefleyeceğini biliyordum. Dahası, sıralamada yarım puan geride olduğu için beni yakalamasının tek yolu kazanmaktı. Bu yüzden bu oyun önemliydi ve dikkatlice hazırlandım.”*
 
 <div class="post-game" id="portisch-timman-1982" data-pgn="{{ '/assets/pgn/timman/09-portisch-timman-1982.pgn' | relative_url }}"></div>
 
