@@ -18,22 +18,6 @@ Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, 
 
 "Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki, Arjantin'de bu bölge akciğer rahatsızlığı olan insanlar için favori bir yer."
 
-<pgn-player>
-[Event "Mar del Plata Clarin Masters"]
-[Site "Mar del Plata"]
-[Date "1982.02.??"]
-[White "Timman, Jan H"]
-[Black "Larsen, Bent"]
-[Result "0-1"]
-[WhiteElo "2655"]
-[BlackElo "2605"]
-[Orientation "Black"]
-[SetUp "1"]
-[FEN "3rrb1k/3n1qp1/2p1b2p/ppP1p3/4P3/1P2QPP1/PBR1N1B1/5RK1 b - - 3 31"]
-
-{[P]} 31... Bxc5! { Siyahın güçlü seçeneklerinden yalnızca biri. } 32. Rxc5 Nxc5 33. Bxe5 (33. Qxc5 Rd2 $19 { Siyahın 31. hamlesinin ana fikri buydu. }) 33... Nd3! $19 { Kalite fazla olan Siyah, kolaylıkla olmasa da kazanmasını bildi. } 0-1
-</pgn-player>
-
 Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'de ise Karpov ve Timman önünde kazanan Bent Larsen 1982'ye gelindiğinde harika bir sonuç elde edemese de ilk tura zaferle başlamıştı. Aynı yıl Buenos Aires'e taşınan Larsen ömrünün sonuna kadar orada ikamet etmiştir.
 
 <div class="post-game" id="timman-larsen-1982" data-pgn="{{ '/assets/pgn/timman/01-timman-larsen-1982.pgn' | relative_url }}"></div>
