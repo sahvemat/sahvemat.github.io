@@ -66,8 +66,8 @@
 // so translate it in place once it appears.
 (function () {
     var TRANSLATIONS = {
-        'Find the best move for White.': 'Hamle sırası beyazda. Beyazın en iyi hamlesini bulun.',
-        'Find the best move for Black.': 'Hamle sırası siyahta. Siyahın en iyi hamlesini bulun.'
+        'Find the best move for White.': 'Hamle sırası Beyazda. Beyazın en iyi hamlesini bulmayı deneyin.',
+        'Find the best move for Black.': 'Hamle sırası Siyahta. Siyahın en iyi hamlesini bulmayı deneyin.'
     };
 
     function translate(root) {
