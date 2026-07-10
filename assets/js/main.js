@@ -502,6 +502,7 @@
 
 (function () {
     var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
+    var ROUND_MISSING_ICON = '<svg class="post-game-round-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';
 
     function parseHeader(pgn, tag) {
         var m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
@@ -562,16 +563,28 @@
                     var bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
                     var players = wp + ' — ' + bp;
                     var displayResult = resultMap[result] || result;
-                    var roundLabel = round + '. Tur';
+                    var roundLabel = round ? round + '. Tur' : '';
 
                     var roundEl = game.querySelector('.post-game-round');
                     var playersEl = game.querySelector('.post-game-players');
                     var resultEl = game.querySelector('.post-game-result');
-                    if (roundEl) roundEl.textContent = roundLabel;
+                    if (roundEl) {
+                        if (round) {
+                            roundEl.textContent = roundLabel;
+                        } else {
+                            roundEl.innerHTML = ROUND_MISSING_ICON;
+                            roundEl.title = 'Tur bilgisi mevcut değil';
+                        }
+                    }
                     if (playersEl) playersEl.textContent = players;
                     if (resultEl) resultEl.textContent = displayResult;
 
-                    return { id: game.id, roundLabel: roundLabel, players: players, result: displayResult };
+                    return {
+                        id: game.id,
+                        roundDisplay: round ? roundLabel : ROUND_MISSING_ICON,
+                        players: players,
+                        result: displayResult
+                    };
                 });
         });
 
@@ -588,7 +601,7 @@
                 '<div class="archive-grid">' +
                 valid.map(function (g) {
                     return '<a class="archive-card" href="#' + g.id + '">' +
-                        '<span class="archive-card-round">' + g.roundLabel + '</span>' +
+                        '<span class="archive-card-round">' + g.roundDisplay + '</span>' +
                         '<span class="archive-card-players">' + g.players + '</span>' +
                         '<span class="archive-card-result">' + g.result + '</span>' +
                         '</a>';

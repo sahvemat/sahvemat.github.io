@@ -2062,6 +2062,7 @@ figcaption > span {
 }
 
 .post-game-round { color: var(--accent); font-weight: 700; }
+.post-game-round-icon { display: block; vertical-align: text-bottom; }
 .post-game-players { flex: 1 1 auto; }
 .post-game-result {
     background: var(--accent);
