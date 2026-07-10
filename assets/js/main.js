@@ -1,3 +1,66 @@
+// Enforce the "ŞAHvMAT" wordmark's exact casing everywhere it appears in
+// rendered text, regardless of any ancestor's text-transform (many headings
+// on this site are visually uppercased via CSS) or of the source casing.
+// Wraps each match in a span that opts back out of text-transform, and
+// watches the DOM for content added after this first pass runs.
+(function () {
+    var CANONICAL = 'ŞAHvMAT';
+    var PATTERN = /şahvmat/i;
+
+    function isProtected(el) {
+        while (el) {
+            if (el.classList && el.classList.contains('brand-name')) return true;
+            var tag = el.tagName;
+            if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'TEXTAREA' || tag === 'INPUT') return true;
+            el = el.parentElement;
+        }
+        return false;
+    }
+
+    function wrap(node) {
+        var text = node.nodeValue;
+        var m = PATTERN.exec(text);
+        if (!m || !node.parentNode) return;
+        var before = text.slice(0, m.index);
+        var after = text.slice(m.index + m[0].length);
+        var span = document.createElement('span');
+        span.className = 'brand-name';
+        span.textContent = CANONICAL;
+        var frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(span);
+        if (after) frag.appendChild(document.createTextNode(after));
+        node.parentNode.replaceChild(frag, node);
+    }
+
+    function normalize(root) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var targets = [];
+        var n;
+        while ((n = walker.nextNode())) {
+            if (PATTERN.test(n.nodeValue) && !isProtected(n.parentElement)) targets.push(n);
+        }
+        targets.forEach(wrap);
+    }
+
+    var pending = false;
+    function scheduleNormalize() {
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(function () {
+            pending = false;
+            normalize(document.body);
+        });
+    }
+
+    normalize(document.body);
+    new MutationObserver(scheduleNormalize).observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+        characterData: true
+    });
+})();
+
 (function () {
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     const now = new Date();

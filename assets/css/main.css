@@ -3,6 +3,13 @@
    Combines: logo.css · index.css · style.css (post pages)
    ============================================================ */
 
+/* Guards the "ŞAHvMAT" wordmark's casing against ancestor
+   text-transform (uppercase/lowercase/capitalize) — see the
+   normalizer in main.js that wraps every occurrence in this span. */
+.brand-name {
+    text-transform: none !important;
+}
+
 /* ── CSS Variables ──────────────────────────────────────────── */
 :root {
     --ink: #121212;
