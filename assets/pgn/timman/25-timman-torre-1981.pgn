@@ -1,16 +1,8 @@
 [Event "Hoogovens"]
 [Site "Wijk aan Zee NED"]
 [Date "1981.01.27"]
-[Round "9"]
 [White "Jan Timman"]
 [Black "Eugenio Torre"]
 [Result "1-0"]
-[Variant "Standard"]
-[ECO "D44"]
-[Opening "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"]
-[StudyName "TIMMAN"]
-[ChapterName "Jan Timman - Eugenio Torre"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/bbdAbyCd"]
-[Annotator "https://lichess.org/@/NaSil"]
 
 1. d4 d5 2. c4 c6 3. Nc3 Nf6 4. Nf3 e6 5. Bg5 dxc4 6. e4 b5 7. e5 h6 8. Bh4 g5 9. Nxg5 hxg5 10. Bxg5 Nbd7 11. g3 Qa5 12. exf6 b4 13. Ne4 Ba6 14. Be2 O-O-O 15. O-O Qf5 16. Qc2 Nb6 17. Rad1 Qh3 18. Bh4 Rxh4 19. gxh4 Bh6 20. h5 Bb7 { DD } 21. Ng3 c5 { Bu turnuvayı kazanıyor. } 22. d5 Bxd5 { DDD } 23. Rxd5 exd5 24. Qh7 Bf4 25. Qxf7 Kb8 26. Qg7 Qe6 27. Bg4 Qe5 28. h6 Qe8 29. h7 Qf8 30. Re1 Bh6 31. Qxf8 Rxf8 32. f7 { 1-0 White wins. } 1-0

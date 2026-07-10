@@ -1,24 +1,14 @@
 [Event "Import"]
 [Site "https://lichess.org/l8nPaj9h"]
 [Date "2020.04.10"]
-[Round "-"]
 [White "Timman, Jan H"]
 [Black "Kortschnoj, Viktor"]
 [Result "1-0"]
 [WhiteElo "2630"]
 [BlackElo "2610"]
-[TimeControl "-"]
-[Termination "Normal"]
-[Annotator "https://lichess.org/@/NaSil"]
-[GameId "l8nPaj9h"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "TIMMAN"]
-[ChapterName "Timman, Jan H (2630) - Kortschnoj, Viktor (2610)"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/W5AWqjug"]
-[FEN "r1bqr1k1/pp1n1ppp/5b2/4N1B1/3p3P/8/PPPQ1PP1/2K1RB1R w - - 1 13"]
 [SetUp "1"]
+[FEN "r1bqr1k1/pp1n1ppp/5b2/4N1B1/3p3P/8/PPPQ1PP1/2K1RB1R w - - 1 13"]
+
 
 { [P] }
 13. Nxf7 Rxe1+ 14. Qxe1 Kxf7 { [P] } 15. Bc4+ Kf8 { [P] } 16. Qe6 Bxg5+ 17. hxg5 Qxg5+ 18. Kb1 Ne5 { [P] } 19. Qg8+ Ke7 { [P] } 20. Re1 Bd7 21. Qxa8 Qd2 22. Rxe5+ Kf6 23. a3 Kxe5 24. Qb8+ Kf5 25. Qf8+ { Fili kaybedeceğini gören Siyah terk etti. } 1-0
