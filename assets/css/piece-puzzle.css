@@ -50,6 +50,20 @@
   border-bottom: none;
 }
 
+/* ── Selected square while awaiting a click-to-move destination ─ */
+.pp-puzzle-wrap [data-square].sah-puzzle-selected {
+  position: relative;
+}
+
+.pp-puzzle-wrap [data-square].sah-puzzle-selected::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 /* ── Sun overlay on target square ───────────────────────────── */
 .pp-sun {
   position: absolute;

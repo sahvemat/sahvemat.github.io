@@ -14,6 +14,77 @@
 
   function rand(n) { return Math.floor(Math.random() * n); }
 
+  // ── Click-and-click / tap-and-tap move input ────────────────────
+  // ChessPublica's <puzzle> board only wires chessboardjs's onDrop
+  // callback (unlike pgn-player's puzzle mode, it doesn't even gate
+  // onDragStart), so it only ever accepts drag gestures. Its onDrop
+  // handler is a plain closure baked directly into the chessboardjs
+  // instance at construction time — there's no public hook to call it
+  // directly the way pgn-player's puzzle.handleDrop() could be wrapped.
+  // Rather than reimplement that handler's move validation, shake,
+  // solved-state and arrow/glyph rendering ourselves (all private
+  // closures we have no access to), replay a real drag through
+  // chessboardjs's own mousedown/mouseup handling: mousedown reads the
+  // source square from the event target's data-square attribute, and
+  // mouseup resolves the destination straight from the event's own
+  // coordinates — no intervening mousemove is needed for either to
+  // resolve correctly.
+  function fireBoardDrag(fromEl, toEl) {
+    var rf = fromEl.getBoundingClientRect();
+    var rt = toEl.getBoundingClientRect();
+    fromEl.dispatchEvent(new MouseEvent('mousedown', {
+      bubbles: true, cancelable: true, view: window, button: 0,
+      clientX: rf.left + rf.width / 2, clientY: rf.top + rf.height / 2
+    }));
+    window.dispatchEvent(new MouseEvent('mouseup', {
+      bubbles: true, cancelable: true, view: window, button: 0,
+      clientX: rt.left + rt.width / 2, clientY: rt.top + rt.height / 2
+    }));
+  }
+
+  function wireClickToMove(boardHost) {
+    if (!boardHost || !boardHost.__board || boardHost.__sahClickWired) return;
+    boardHost.__sahClickWired = true;
+
+    var selected = null;
+    var squareEl = function (sq) { return boardHost.querySelector('[data-square="' + sq + '"]'); };
+    var clearSelected = function () {
+      if (!selected) return;
+      var s = squareEl(selected);
+      if (s) s.classList.remove('sah-puzzle-selected');
+      selected = null;
+    };
+    var setSelected = function (sq) {
+      clearSelected();
+      selected = sq;
+      var s = squareEl(sq);
+      if (s) s.classList.add('sah-puzzle-selected');
+    };
+
+    boardHost.addEventListener('click', function (e) {
+      var target = e.target.closest('[data-square]');
+      if (!target || !boardHost.contains(target)) return;
+      var square = target.getAttribute('data-square');
+      var board = boardHost.__board;
+      var state = boardHost.__state;
+      if (!board || typeof board.position !== 'function' || !state || !state.game) return;
+      var pos = board.position();
+      var piece = pos ? pos[square] : null;
+      var mine = !!piece && piece[0] === state.game.turn();
+
+      if (!selected) {
+        if (mine) setSelected(square);
+        return;
+      }
+      if (square === selected) { clearSelected(); return; }
+      if (mine) { setSelected(square); return; }
+
+      var fromEl = squareEl(selected);
+      clearSelected();
+      if (fromEl) fireBoardDrag(fromEl, target);
+    });
+  }
+
   // ── Legal moves ───────────────────────────────────────────────
   function legalMoves(piece, r, c) {
     var m = [];
@@ -182,6 +253,8 @@
       if (boardSq || ++overlayAttempts > 60) {
         clearInterval(overlayTimer);
         if (!boardSq) return;
+
+        wireClickToMove(wrapper.querySelector('.cp-puzzle-board'));
 
         // Hide kings (kept in FEN for legality, invisible to user)
         ['a1', 'h8'].forEach(function (ksq) {
