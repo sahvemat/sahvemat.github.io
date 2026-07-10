@@ -12,7 +12,7 @@ reading_time: 45
 
 Aşağıdaki 27 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve Jan Timman'ın kariyerini gençlik yıllarından 1990'lara uzanan geniş bir yelpazede ele aldığı **TIMMAN** adlı çalışmadan aktarılmıştır.
 
-## Jan Timman - Bent Larsen
+## Jan TIMMAN - Bent Larsen
 
 Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı. Şampiyon şöyle diyordu:
 
@@ -22,7 +22,7 @@ Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'
 
 <div class="post-game" id="timman-larsen-1982" data-pgn="{{ '/assets/pgn/timman/01-timman-larsen-1982.pgn' | relative_url }}"></div>
 
-## Ulf Andersson - Jan Timman
+## Ulf Andersson - Jan TIMMAN
 
 Oyunun kendisi belki çok heyecan verici değil, ancak bu videoyu paylaşmama vesile oluyor:
 
@@ -34,7 +34,7 @@ Sade, teknik konumlara olan hakimiyeti nedeniyle bir oyunsonu efsanesi olarak an
 
 <div class="post-game" id="andersson-timman-1982" data-pgn="{{ '/assets/pgn/timman/02-andersson-timman-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Miguel Najdorf
+## Jan TIMMAN - MIGUEL Najdorf
 
 Turnuva oynandığı sırada 71 yaşında olan Miguel Najdorf, yaşına rağmen bu devler arenasında yalnızca 3 oyun kaybetmişti. 30 yaşındaki rakibi ise belki de bu oyunun yarattığı ivmeyle turnuva zaferine imza atacaktı.
 
@@ -43,37 +43,37 @@ Kasparov şöyle aktarıyor:
 
 <div class="post-game" id="timman-najdorf-1982" data-pgn="{{ '/assets/pgn/timman/03-timman-najdorf-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Oscar Panno
+## Jan TIMMAN - Oscar Panno
 
 Arjantin satrancına damga vuran isimlerden şu an 91 yaşındaki Büyükusta Oscar Panno 1953'te Dünya Gençler Şampiyonu olmuş ve oyunlarını incelediğimiz geleneksel Mar del Plata turnuvasını farklı yıllarda kazanmıştı. Acaba Timman 0.5/2 ile başladığı turnuvanın geri kalanını 8/8 ile devam ettirebileceğini hayal edebilir miydi?
 
 <div class="post-game" id="timman-panno-1982" data-pgn="{{ '/assets/pgn/timman/04-timman-panno-1982.pgn' | relative_url }}"></div>
 
-## Anatoly Karpov - Jan Timman
+## Anatoly Karpov - Jan TIMMAN
 
 "Batı'nın En İyisi" Timman'ın Merano'dan yorgun dönen Dünya Şampiyonu karşısında nasıl bir performans sergileyeceği belki de kendisi için turnuvanın kaderini de tayin edecekti. Karpov ise bundan önceki Clarin turnuvasını kazanmış ve o yıllarda neredeyse önüne çıkan her turnuvayı kazanıyordu. Timman ve Polugaevsky'e göre Korchnoi'ya karşı birkaç ay önce ünvanını savunmuş olması bu turnuvadaki performansını olumsuz etkilemişti.
 
 <div class="post-game" id="karpov-timman-1982" data-pgn="{{ '/assets/pgn/timman/05-karpov-timman-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Sergio Carlos Giardelli
+## Jan TIMMAN - SERGIO Carlos GIARDELLI
 
 Dünya'nın iki numarası için yine kazanılması gereken bir oyun. Henüz Uluslararası Usta bile olmayan Arjantinli rakibi karşısında büyük reyting ve tecrübe farkının ortaya konması gerekiyordu.
 
 <div class="post-game" id="timman-giardelli-1982" data-pgn="{{ '/assets/pgn/timman/06-timman-giardelli-1982.pgn' | relative_url }}"></div>
 
-## Carlos Garcia Palermo - Jan Timman
+## Carlos GARCIA Palermo - Jan TIMMAN
 
 İkinci turda Andersson'a karşı olaysız geçen bir beraberenin ardından Timman, üçüncü turda siyah taşlarla mutlaka kazanması gereken bir karşılaşmaya çıkıyordu.
 
 <div class="post-game" id="garcia-palermo-timman-1982" data-pgn="{{ '/assets/pgn/timman/07-garcia-palermo-timman-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Miguel Angel Quinteros 
+## Jan TIMMAN - MIGUEL Angel QUINTEROS 
 
 Fischer'ın en yakın dostu ve yardımcısı Arjantinli Büyükusta Miguel Quinteros 1972'de Spassky'e karşı hazırlanırken Fischer'a yardım etmiş ve hatta 1992 senesindeki rövanş maçında da Fischer'ın yanında bulunmuştur.
 
 <div class="post-game" id="timman-quinteros-1982" data-pgn="{{ '/assets/pgn/timman/08-timman-quinteros-1982.pgn' | relative_url }}"></div>
 
-## Lajos Portisch - Jan Timman
+## Lajos PORTISCH - Jan TIMMAN
 
 Timman'ın Macar Büyükusta Lajos Portisch ile olan partileri her zaman incelemeyi hak eder. Öyle ki, 1994 yılında yayınlanan ve kariyerinin 1983-1993 arasında oynadığı 80 oyuna odaklanan eseri "Chess the Adventurous Way" kitabında aralarında oynadıkları 3 oyuna yer vermiştir. Portisch turnuvaya 6 oyunda 5.5 puanla inanılmaz bir başlangıç yapmış, fakat 7. turda Timman'ı da yenen Larsen'e kaybetmişti.
 
@@ -81,75 +81,75 @@ Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Cl
 
 <div class="post-game" id="portisch-timman-1982" data-pgn="{{ '/assets/pgn/timman/09-portisch-timman-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Zenon Franco Ocampos
+## Jan TIMMAN - Zenon Franco Ocampos
 
 <div class="post-game" id="timman-franco-ocampos-1982" data-pgn="{{ '/assets/pgn/timman/10-timman-franco-ocampos-1982.pgn' | relative_url }}"></div>
 
-## Fernando Alberto Braga - Jan Timman
+## Fernando Alberto Braga - Jan TIMMAN
 
 <div class="post-game" id="braga-timman-1982" data-pgn="{{ '/assets/pgn/timman/11-braga-timman-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Yasser Seirawan
+## Jan TIMMAN - Yasser SEIRAWAN
 
 On bir sene sonra Karpov'a karşı FIDE Dünya Şampiyonası maçında (O sırada FIDE'ye bayrak açan Kasparov da Short ile PCA Dünya Şampiyonası maçında karşılaşıyordu) Ulf Andersson ve Jeroen Piket ile birlikte Timman'a yardımcı olacak Yasser Seirawan, turnuva liderine karşı Siyah taşlarla gözde silahı Caro-Kann'a sarılmıştı.
 
 <div class="post-game" id="timman-seirawan-1982" data-pgn="{{ '/assets/pgn/timman/12-timman-seirawan-1982.pgn' | relative_url }}"></div>
 
-## Lev Polugaevsky - Jan Timman
+## Lev Polugaevsky - Jan TIMMAN
 
 <div class="post-game" id="polugaevsky-timman-1982" data-pgn="{{ '/assets/pgn/timman/13-polugaevsky-timman-1982.pgn' | relative_url }}"></div>
 
-## Jan Timman - Anatoly Karpov
+## Jan TIMMAN - Anatoly Karpov
 
 Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ın beşinci turdaki rakibi Dünya Şampiyonu Karpov'dan başkası değildi.
 
 <div class="post-game" id="timman-karpov-1978" data-pgn="{{ '/assets/pgn/timman/14-timman-karpov-1978.pgn' | relative_url }}"></div>
 
-## Jan Timman - Jerzy Kostro
+## Jan TIMMAN - Jerzy Kostro
 
 <div class="post-game" id="timman-kostro-1971" data-pgn="{{ '/assets/pgn/timman/15-timman-kostro-1971.pgn' | relative_url }}"></div>
 
-## Jan Timman - Jorge Vos van Zalingen
+## Jan TIMMAN - Jorge Vos van ZALINGEN
 
 <div class="post-game" id="timman-vos-van-zalingen-1966" data-pgn="{{ '/assets/pgn/timman/16-timman-vos-van-zalingen-1966.pgn' | relative_url }}"></div>
 
-## Jan Timman - Viktor Kortschnoj
+## Jan TIMMAN - VIKTOR Kortschnoj
 
 <div class="post-game" id="timman-kortschnoj" data-pgn="{{ '/assets/pgn/timman/17-timman-kortschnoj.pgn' | relative_url }}"></div>
 
-## Jan Timman - Ulf Andersson
+## Jan TIMMAN - Ulf Andersson
 
 <div class="post-game" id="timman-andersson-1981" data-pgn="{{ '/assets/pgn/timman/18-timman-andersson-1981.pgn' | relative_url }}"></div>
 
-## Jan Timman - Werner Hug
+## Jan TIMMAN - Werner Hug
 
 <div class="post-game" id="timman-hug-1974" data-pgn="{{ '/assets/pgn/timman/19-timman-hug-1974.pgn' | relative_url }}"></div>
 
-## Eugenio Torre - Jan Timman
+## EUGENIO Torre - Jan TIMMAN
 
 <div class="post-game" id="torre-timman-1982" data-pgn="{{ '/assets/pgn/timman/20-torre-timman-1982.pgn' | relative_url }}"></div>
 
-## Andrei Sokolov - Jan Timman
+## ANDREI Sokolov - Jan TIMMAN
 
 <div class="post-game" id="sokolov-timman-1988" data-pgn="{{ '/assets/pgn/timman/21-sokolov-timman-1988.pgn' | relative_url }}"></div>
 
-## Gudmundur Sigurjonsson - Jan Timman
+## Gudmundur SIGurjonsson - Jan TIMMAN
 
 <div class="post-game" id="sigurjonsson-timman-1980" data-pgn="{{ '/assets/pgn/timman/22-sigurjonsson-timman-1980.pgn' | relative_url }}"></div>
 
-## Taktik - Robert Huebner - Jan Timman
+## Taktik - Robert Huebner - Jan TIMMAN
 
 <div class="post-game" id="huebner-timman-1978" data-pgn="{{ '/assets/pgn/timman/23-huebner-timman-1978.pgn' | relative_url }}"></div>
 
-## Zoltan Ribli - Jan Timman
+## Zoltan RIBLI - Jan TIMMAN
 
 <div class="post-game" id="ribli-timman-1978" data-pgn="{{ '/assets/pgn/timman/24-ribli-timman-1978.pgn' | relative_url }}"></div>
 
-## Jan Timman - Bjorn Brinck Claussen
+## Jan TIMMAN - Bjorn BRINCK Claussen
 
 <div class="post-game" id="timman-brinck-claussen-1971" data-pgn="{{ '/assets/pgn/timman/25-timman-brinck-claussen-1971.pgn' | relative_url }}"></div>
 
-## Jan Timman - Jeroen Piket
+## Jan TIMMAN - Jeroen PIKET
 
 <div class="post-game" id="timman-piket-1995" data-pgn="{{ '/assets/pgn/timman/26-timman-piket-1995.pgn' | relative_url }}"></div>
 
