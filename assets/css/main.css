@@ -3,6 +3,13 @@
    Combines: logo.css · index.css · style.css (post pages)
    ============================================================ */
 
+/* Guards the "ŞAHvMAT" wordmark's casing against ancestor
+   text-transform (uppercase/lowercase/capitalize) — see the
+   normalizer in main.js that wraps every occurrence in this span. */
+.brand-name {
+    text-transform: none !important;
+}
+
 /* ── CSS Variables ──────────────────────────────────────────── */
 :root {
     --ink: #121212;
@@ -992,11 +999,21 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    .articles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1024px) {
-    .articles-grid { grid-template-columns: repeat(3, 1fr); }
+    .articles-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Grid/flex items default to a content-based min size, so the fixed-size
+   chess board thumbnail can force its column (and the whole row) wider
+   than the grid track and overflow the page — at any viewport width, not
+   just the mobile breakpoint below. Let every link in the chain shrink. */
+.article-card,
+.article-thumbnail,
+.article-fen {
+    min-width: 0;
 }
 
 .article-card {
@@ -1010,7 +1027,7 @@ a:hover {
     background: var(--ink);
     color: var(--paper);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, auto);
     align-items: center;
     padding: 0.75rem;
     gap: 0.5rem;
@@ -1863,8 +1880,7 @@ pgn-player p {
     .post-article > .post-hero,
     .post-article > .post-epigraph,
     .post-article > .post-colophon,
-    .post-article > .post-archive,
-    .post-article > p:first-of-type {
+    .post-article > .post-archive {
         column-span: all;
     }
 
@@ -2062,6 +2078,7 @@ figcaption > span {
 }
 
 .post-game-round { color: var(--accent); font-weight: 700; }
+.post-game-round-icon { display: block; vertical-align: text-bottom; }
 .post-game-players { flex: 1 1 auto; }
 .post-game-result {
     background: var(--accent);
@@ -2198,6 +2215,14 @@ figcaption > span {
    of stylesheet load order. */
 .post-game pgn-player .player-container.puzzle-active .board-wrap {
     box-shadow: 0 0 0 3px var(--accent);
+}
+
+/* ChessPublica also draws its own blue focus ring on the inner board
+   element itself (`.board-wrap .board-b72b1`), separate from the
+   `.board-wrap` ring above — leaving both visible as a double box.
+   Drop the inner one so only the accent-colored ring shows. */
+.post-game pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
+    box-shadow: none;
 }
 
 .post-ps {

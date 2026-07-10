@@ -1,3 +1,66 @@
+// Enforce the "ŞAHvMAT" wordmark's exact casing everywhere it appears in
+// rendered text, regardless of any ancestor's text-transform (many headings
+// on this site are visually uppercased via CSS) or of the source casing.
+// Wraps each match in a span that opts back out of text-transform, and
+// watches the DOM for content added after this first pass runs.
+(function () {
+    var CANONICAL = 'ŞAHvMAT';
+    var PATTERN = /şahvmat/i;
+
+    function isProtected(el) {
+        while (el) {
+            if (el.classList && el.classList.contains('brand-name')) return true;
+            var tag = el.tagName;
+            if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'TEXTAREA' || tag === 'INPUT') return true;
+            el = el.parentElement;
+        }
+        return false;
+    }
+
+    function wrap(node) {
+        var text = node.nodeValue;
+        var m = PATTERN.exec(text);
+        if (!m || !node.parentNode) return;
+        var before = text.slice(0, m.index);
+        var after = text.slice(m.index + m[0].length);
+        var span = document.createElement('span');
+        span.className = 'brand-name';
+        span.textContent = CANONICAL;
+        var frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(span);
+        if (after) frag.appendChild(document.createTextNode(after));
+        node.parentNode.replaceChild(frag, node);
+    }
+
+    function normalize(root) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var targets = [];
+        var n;
+        while ((n = walker.nextNode())) {
+            if (PATTERN.test(n.nodeValue) && !isProtected(n.parentElement)) targets.push(n);
+        }
+        targets.forEach(wrap);
+    }
+
+    var pending = false;
+    function scheduleNormalize() {
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(function () {
+            pending = false;
+            normalize(document.body);
+        });
+    }
+
+    normalize(document.body);
+    new MutationObserver(scheduleNormalize).observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+        characterData: true
+    });
+})();
+
 (function () {
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     const now = new Date();
@@ -485,16 +548,28 @@
     function formatPostTitle(h1) {
         var title = h1.dataset.title;
         if (!title) return;
-        var words = title.split(' ');
-        var veIdx = words.indexOf('ve');
-        var up = function (w) { return w.toLocaleUpperCase('tr-TR'); };
-        if (veIdx === -1) {
-            h1.textContent = words.map(up).join(' ');
-            return;
+        var up = function (s) { return s.toLocaleUpperCase('tr-TR'); };
+
+        var before, after;
+        var colonIdx = title.indexOf(':');
+        if (colonIdx !== -1) {
+            before = title.slice(0, colonIdx + 1);
+            after = title.slice(colonIdx + 1).trim();
+        } else {
+            var words = title.split(' ');
+            var veIdx = words.indexOf('ve');
+            if (veIdx !== -1) {
+                before = words.slice(0, veIdx).join(' ');
+                after = words.slice(veIdx).join(' ');
+            } else if (words.length > 1) {
+                before = words[0];
+                after = words.slice(1).join(' ');
+            } else {
+                h1.textContent = up(title);
+                return;
+            }
         }
-        var before = words.slice(0, veIdx).map(up).join(' ');
-        var after = ['ve'].concat(words.slice(veIdx + 1).map(up)).join(' ');
-        h1.innerHTML = before + '<br><em>' + after + '</em>';
+        h1.innerHTML = up(before) + '<br><em>' + up(after) + '</em>';
     }
 
     document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
@@ -502,6 +577,7 @@
 
 (function () {
     var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
+    var ROUND_MISSING_ICON = '<svg class="post-game-round-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';
 
     function parseHeader(pgn, tag) {
         var m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
@@ -562,16 +638,28 @@
                     var bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
                     var players = wp + ' — ' + bp;
                     var displayResult = resultMap[result] || result;
-                    var roundLabel = round + '. Tur';
+                    var roundLabel = round ? round + '. Tur' : '';
 
                     var roundEl = game.querySelector('.post-game-round');
                     var playersEl = game.querySelector('.post-game-players');
                     var resultEl = game.querySelector('.post-game-result');
-                    if (roundEl) roundEl.textContent = roundLabel;
+                    if (roundEl) {
+                        if (round) {
+                            roundEl.textContent = roundLabel;
+                        } else {
+                            roundEl.innerHTML = ROUND_MISSING_ICON;
+                            roundEl.title = 'Tur bilgisi mevcut değil';
+                        }
+                    }
                     if (playersEl) playersEl.textContent = players;
                     if (resultEl) resultEl.textContent = displayResult;
 
-                    return { id: game.id, roundLabel: roundLabel, players: players, result: displayResult };
+                    return {
+                        id: game.id,
+                        roundDisplay: round ? roundLabel : ROUND_MISSING_ICON,
+                        players: players,
+                        result: displayResult
+                    };
                 });
         });
 
@@ -588,7 +676,7 @@
                 '<div class="archive-grid">' +
                 valid.map(function (g) {
                     return '<a class="archive-card" href="#' + g.id + '">' +
-                        '<span class="archive-card-round">' + g.roundLabel + '</span>' +
+                        '<span class="archive-card-round">' + g.roundDisplay + '</span>' +
                         '<span class="archive-card-players">' + g.players + '</span>' +
                         '<span class="archive-card-result">' + g.result + '</span>' +
                         '</a>';
