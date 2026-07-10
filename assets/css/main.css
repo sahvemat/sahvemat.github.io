@@ -2201,6 +2201,14 @@ figcaption > span {
     box-shadow: 0 0 0 3px var(--accent);
 }
 
+/* ChessPublica also draws its own blue focus ring on the inner board
+   element itself (`.board-wrap .board-b72b1`), separate from the
+   `.board-wrap` ring above — leaving both visible as a double box.
+   Drop the inner one so only the accent-colored ring shows. */
+.post-game pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
+    box-shadow: none;
+}
+
 .post-ps {
     margin-top: 3rem;
     padding-top: 1.5rem;
