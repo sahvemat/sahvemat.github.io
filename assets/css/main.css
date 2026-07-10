@@ -999,11 +999,21 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    .articles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1024px) {
-    .articles-grid { grid-template-columns: repeat(3, 1fr); }
+    .articles-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Grid/flex items default to a content-based min size, so the fixed-size
+   chess board thumbnail can force its column (and the whole row) wider
+   than the grid track and overflow the page — at any viewport width, not
+   just the mobile breakpoint below. Let every link in the chain shrink. */
+.article-card,
+.article-thumbnail,
+.article-fen {
+    min-width: 0;
 }
 
 .article-card {
@@ -1017,7 +1027,7 @@ a:hover {
     background: var(--ink);
     color: var(--paper);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, auto);
     align-items: center;
     padding: 0.75rem;
     gap: 0.5rem;
