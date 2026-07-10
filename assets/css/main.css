@@ -1395,6 +1395,14 @@ a.article-thumbnail:hover {
     color: var(--accent);
 }
 
+/* ChessPublica's rendered <puzzle> board (.cp-puzzle) is capped at
+   --board-size and only gets auto side margins under its own mobile
+   breakpoint, so it sits flush-left instead of centered in this wider
+   container on desktop. Center it via the flex container instead. */
+.puzzle-grid {
+    align-items: center;
+}
+
 .puzzle-grid .board-row span {
     font-size: clamp(1.5rem, 4vw, 2.8rem);
 }
