@@ -63,12 +63,17 @@
 
 // ChessPublica's puzzle mode ("[P]"/"[Pn]" PGN annotations) prints its own
 // prompt below the board — only in English, with no localization hook —
-// so translate it in place once it appears.
+// so translate it in place once it appears. <pgn-player> renders into an
+// open shadow root (see the <pgn> shadow-DOM handling above), which plain
+// querySelectorAll/MutationObserver can't see into, so we have to walk
+// into every shadow root we find and watch each one individually.
 (function () {
     var TRANSLATIONS = {
         'Find the best move for White.': 'Hamle sırası Beyazda. Beyazın en iyi hamlesini bulmayı deneyin.',
         'Find the best move for Black.': 'Hamle sırası Siyahta. Siyahın en iyi hamlesini bulmayı deneyin.'
     };
+
+    var watched = new WeakSet();
 
     function translate(root) {
         root.querySelectorAll('.puzzle-prompt .comment-body').forEach(function (el) {
@@ -77,11 +82,24 @@
         });
     }
 
-    translate(document);
-    new MutationObserver(function () { translate(document); }).observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+    function watch(root) {
+        if (watched.has(root)) return;
+        watched.add(root);
+        translate(root);
+        findShadowRoots(root);
+        new MutationObserver(function () {
+            translate(root);
+            findShadowRoots(root);
+        }).observe(root, { childList: true, subtree: true, characterData: true });
+    }
+
+    function findShadowRoots(root) {
+        root.querySelectorAll('*').forEach(function (el) {
+            if (el.shadowRoot) watch(el.shadowRoot);
+        });
+    }
+
+    watch(document);
 })();
 
 (function () {
