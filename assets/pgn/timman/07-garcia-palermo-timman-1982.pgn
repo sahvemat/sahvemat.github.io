@@ -6,13 +6,6 @@
 [Result "0-1"]
 [WhiteElo "2470"]
 [BlackElo "2655"]
-[Variant "Standard"]
-[ECO "E12"]
-[Opening "Queen's Indian Defense: Kasparov Variation"]
-[StudyName "TIMMAN"]
-[ChapterName "Garcia Palermo, Carlos H - Timman, Jan H"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/14MskOXg"]
-[Annotator "https://lichess.org/@/NaSil"]
 
 { İkinci turda Andersson'a karşı olaysız geçen bir beraberenin ardından Timman, üçüncü turda siyah taşlarla mutlaka kazanması gereken bir karşılaşmaya çıkıyordu. }
 1. d4 Nf6 2. c4 e6 3. Nf3 b6 { Vezir-Hint Savunması kariyeri boyunca Timman'ın önemli silahlarından biri olagelmiştir. } 4. Nc3 Bb4 { Artık Nimzo-Hint sularındayız aynı zamanda. } 5. Qb3 c5 6. a3 Ba5! { Gerginliği tutmak oldukça elverişli. } 7. dxc5 bxc5 8. Be3 Ne4! (8... d6 9. O-O-O { Belki de Beyazın planıydı. }) 9. g3 Nc6! 10. Bg2?? { [P]

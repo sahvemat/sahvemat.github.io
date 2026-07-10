@@ -1,17 +1,9 @@
 [Event "Bugojno"]
 [Site "Bugojno YUG"]
 [Date "1978.03.03"]
-[Round "5"]
 [White "Jan Timman"]
 [Black "Anatoly Karpov"]
 [Result "1-0"]
-[Variant "Standard"]
-[ECO "D31"]
-[Opening "Queen's Gambit Declined: Charousek Variation"]
-[StudyName "TIMMAN"]
-[ChapterName "Jan Timman - Anatoly Karpov"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/sdRff32K"]
-[Annotator "https://lichess.org/@/NaSil"]
 
 { Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ın beşinci turdaki rakibi Dünya Şampiyonu Karpov'dan başkası değildi. }
 1. c4 e6 2. Nc3 d5 3. d4 Be7 4. cxd5 exd5 5. Bf4 Nf6 6. e3 O-O 7. Qc2 c6 8. Bd3 Re8 9. Nf3 Nbd7 10. O-O-O!? { Batı'nın En İyisi Jan Timman'ın stiline dair ipuçlarını her dönem oynadığı oyunlarda bulmak mümkün. Rakip kim olursa olsun karmaşadan ve risk almaktan kaçınmayan agresif satranç! } 10... Nf8 11. h3 { [%cal Gg2g4] } 11... Be6 12. Kb1 Rc8 { [P]

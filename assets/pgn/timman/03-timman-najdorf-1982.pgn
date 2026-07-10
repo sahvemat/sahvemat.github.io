@@ -1,22 +1,11 @@
 [Event "Import"]
 [Site "https://lichess.org/ogkEoLmH"]
 [Date "2021.11.29"]
-[Round "-"]
 [White "Timman, Jan H"]
 [Black "Najdorf, Miguel"]
 [Result "1-0"]
 [WhiteElo "2605"]
 [BlackElo "2515"]
-[TimeControl "-"]
-[Termination "Normal"]
-[GameId "ogkEoLmH"]
-[Variant "Standard"]
-[ECO "C85"]
-[Opening "Ruy Lopez: Closed, Delayed Exchange"]
-[StudyName "TIMMAN"]
-[ChapterName "Timman, Jan H - Najdorf, Miguel"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/dqJYuxaB"]
-[Annotator "https://lichess.org/@/NaSil"]
 
 { Turnuva oynandığı sırada 71 yaşında olan Miguel Najdorf, yaşına rağmen bu devler arenasında yalnızca 3 oyun kaybetmişti. 30 yaşındaki rakibi ise belki de bu oyunun yarattığı ivmeyle turnuva zaferine imza atacaktı.
 

@@ -6,12 +6,5 @@
 [Result "1/2-1/2"]
 [WhiteElo "2600"]
 [BlackElo "2655"]
-[Variant "Standard"]
-[ECO "E18"]
-[Opening "Queen's Indian Defense: Classical Variation, Traditional Variation"]
-[StudyName "TIMMAN"]
-[ChapterName "Polugaevsky, Lev - Timman, Jan H"]
-[ChapterURL "https://lichess.org/study/F0mOCg4p/zt6BhrYH"]
-[Annotator "https://lichess.org/@/NaSil"]
 
 1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Be7 6. O-O O-O 7. Nc3 Ne4 8. Nxe4 Bxe4 9. Nh4 Bxg2 10. Nxg2 d5 11. Qa4 Qd7 12. Qxd7 Nxd7 13. cxd5 exd5 14. Be3 c6 { 1/2-1/2  } 1/2-1/2
