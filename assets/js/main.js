@@ -61,6 +61,29 @@
     });
 })();
 
+// ChessPublica's puzzle mode ("[P]"/"[Pn]" PGN annotations) prints its own
+// prompt below the board — only in English, with no localization hook —
+// so translate it in place once it appears.
+(function () {
+    var TRANSLATIONS = {
+        'Find the best move for White.': 'Hamle sırası beyazda. Beyazın en iyi hamlesini bulun.',
+        'Find the best move for Black.': 'Hamle sırası siyahta. Siyahın en iyi hamlesini bulun.'
+    };
+
+    function translate(root) {
+        root.querySelectorAll('.puzzle-prompt .comment-body').forEach(function (el) {
+            var tr = TRANSLATIONS[el.textContent.trim()];
+            if (tr) el.textContent = tr;
+        });
+    }
+
+    translate(document);
+    new MutationObserver(function () { translate(document); }).observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+})();
+
 (function () {
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     const now = new Date();

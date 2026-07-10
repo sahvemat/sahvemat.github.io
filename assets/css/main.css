@@ -1395,6 +1395,14 @@ a.article-thumbnail:hover {
     color: var(--accent);
 }
 
+/* ChessPublica's rendered <puzzle> board (.cp-puzzle) is capped at
+   --board-size and only gets auto side margins under its own mobile
+   breakpoint, so it sits flush-left instead of centered in this wider
+   container on desktop. Center it via the flex container instead. */
+.puzzle-grid {
+    align-items: center;
+}
+
 .puzzle-grid .board-row span {
     font-size: clamp(1.5rem, 4vw, 2.8rem);
 }
@@ -2210,19 +2218,16 @@ figcaption > span {
 
 /* Native [P]/[Pn] puzzle mode (ChessPublica PuzzleMode): match the focus
    ring around the board to the site accent instead of ChessPublica's
-   default blue. Selector is more specific than ChessPublica's own
-   `.player-container.puzzle-active .board-wrap` rule so it wins regardless
-   of stylesheet load order. */
-.post-game pgn-player .player-container.puzzle-active .board-wrap {
-    box-shadow: 0 0 0 3px var(--accent);
-}
-
-/* ChessPublica also draws its own blue focus ring on the inner board
-   element itself (`.board-wrap .board-b72b1`), separate from the
-   `.board-wrap` ring above — leaving both visible as a double box.
-   Drop the inner one so only the accent-colored ring shows. */
+   default blue. Recolor it in place on `.board-wrap .board-b72b1` — the
+   actual chessboard.js board element, sized to its true rendered pixel
+   width — rather than drawing a separate ring on the `.board-wrap`
+   container, whose CSS width (a calc()/min() expression) isn't always a
+   clean multiple of 8 and can leave the board a few px narrower than its
+   container, showing up as a gap on one side. Selector is more specific
+   than ChessPublica's own rule so it wins regardless of stylesheet
+   load order. */
 .post-game pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px var(--accent);
 }
 
 .post-ps {
