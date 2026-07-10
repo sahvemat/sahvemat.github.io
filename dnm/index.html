@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>♔</text></svg>" type="image/svg+xml">
-    <title>{{ page.title }}</title>
+    <title>Günün Maçı — ŞAHvMAT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ChessPublica/ChessPublica.github.io@v0.1.0/dist/ChessPublica.all.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/piece-puzzle.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://chesspublica.github.io/dist/ChessPublica.all.min.css">
+    <link rel="stylesheet" href="/assets/css/piece-puzzle.css">
     <script>
         (function () {
             var stored = localStorage.getItem('sah-theme');
@@ -18,7 +18,7 @@
             if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
         })();
     </script>
-
+</head>
 <body>
 
 <pgn-player>
@@ -35,8 +35,8 @@
 { [P] } 31... Bxc5! { Siyahın güçlü seçeneklerinden yalnızca biri. } 32. Rxc5 Nxc5 33. Bxe5 (33. Qxc5 Rd2 $19 { Siyahın 31. hamlesinin ana fikri buydu. }) 33... Nd3! $19 { Kalite fazla olan Siyah, kolaylıkla olmasa da kazanmasını bildi. } 0-1
 </pgn-player>
 
-    <script src="https://cdn.jsdelivr.net/gh/ChessPublica/ChessPublica.github.io@v0.1.0/dist/ChessPublica.all.min.js"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-    <script src="{{ '/assets/js/piece-puzzle.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="https://chesspublica.github.io/dist/ChessPublica.all.min.js"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/piece-puzzle.js" defer></script>
 </body>
 </html>
