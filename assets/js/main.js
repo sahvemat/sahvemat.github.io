@@ -640,6 +640,7 @@
         if (!bq || bq.tagName !== 'BLOCKQUOTE') return;
         n++;
         var fig = document.createElement('figure');
+        fig.className = 'table-figure';
         var caption = document.createElement('figcaption');
         caption.innerHTML = '<span>Tablo ' + n + '</span> · ' + bq.textContent.trim();
         table.parentNode.insertBefore(fig, table);

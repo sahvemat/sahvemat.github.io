@@ -1889,7 +1889,8 @@ pgn-player p {
     .post-article > .post-epigraph,
     .post-article > .post-colophon,
     .post-article > .post-archive,
-    .post-article > table {
+    .post-article > table,
+    .post-article > figure.table-figure {
         column-span: all;
     }
 
