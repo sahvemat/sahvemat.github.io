@@ -2031,16 +2031,15 @@ pgn-player p {
 
 /* .video-embed is a <figure> (see main.js), so it already picks up
    .post-article > figure's border/background/shadow/margin and the
-   figure figcaption's font/spacing — only the video-specific bits here. */
-.post-article > .video-embed {
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-}
-
+   figure figcaption's font/spacing. The 16:9 box belongs on the iframe
+   itself, not the figure — the figure also holds the figcaption below
+   it, and a fixed-aspect-ratio + overflow:hidden figure clips the
+   caption instead of growing to fit both. */
 .post-article > .video-embed iframe {
     display: block;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
     border: 0;
 }
 
