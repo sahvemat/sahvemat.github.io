@@ -1888,7 +1888,8 @@ pgn-player p {
     .post-article > .post-hero,
     .post-article > .post-epigraph,
     .post-article > .post-colophon,
-    .post-article > .post-archive {
+    .post-article > .post-archive,
+    .post-article > table {
         column-span: all;
     }
 
@@ -2065,6 +2066,68 @@ figcaption > span {
     font-weight: 700;
     text-transform: uppercase;
     margin-right: 0.5rem;
+}
+
+/* Markdown tables — same brutalist card treatment as figures/games:
+   flat border + offset shadow, mono headers stamped in inverted ink.
+   display:block + overflow-x:auto lets wide tables (e.g. tournament
+   crosstables) scroll horizontally on their own, without needing a
+   wrapper div that kramdown doesn't provide. */
+.post-article table {
+    width: 100%;
+    margin: 3rem 0;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 8px 8px 0 0 var(--fg);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.post-article table thead {
+    background: var(--fg);
+}
+
+.post-article table th {
+    color: var(--bg);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.85rem 1.1rem;
+}
+
+.post-article table td {
+    padding: 0.6rem 1.1rem;
+    text-align: center;
+    color: var(--fg);
+    border-top: 1px solid var(--border-08);
+    white-space: nowrap;
+}
+
+.post-article table th:first-child,
+.post-article table td:first-child {
+    text-align: left;
+}
+
+.post-article table tbody tr:nth-child(even) {
+    background: var(--surface-alt);
+}
+
+.post-article table tbody tr:hover {
+    background: var(--border-10);
+}
+
+.post-article table th:last-child,
+.post-article table td:last-child {
+    font-weight: 700;
+    color: var(--accent);
+    border-left: 1px solid var(--border-10);
 }
 
 .post-game {
