@@ -196,76 +196,14 @@
         tick();
     }
 
-    // ChessPublica draws [%cal] arrows and [%csl] squares synchronously
-    // right after board.position() starts chessboardjs's piece animation
-    // (~200ms). Result: arrows pop in before the piece arrives. Defer
-    // the overlay render until the animation finishes, and clear the
-    // previous arrow immediately on each move so it doesn't linger.
-
     // `{[P]}` / `{[Pn]}` PGN comments are now a native ChessPublica
     // feature (PuzzleMode): the marked move becomes a drag-and-drop
     // puzzle on the same board, with its own pause/resume/shake-on-wrong-
     // move handling. We used to reimplement the pause+FEN-modal here by
     // hand; that's gone now that the library owns the whole flow.
 
-    const ANIM_MS = 220;
-    function patchOverlayTiming(el) {
-        const engine = el._engine;
-        if (!engine || engine.__sahOverlayPatched) return;
-        engine.__sahOverlayPatched = true;
-        const origDraw = typeof engine._drawLastMoveArrow === 'function'
-            ? engine._drawLastMoveArrow.bind(engine) : null;
-        const origRender = typeof engine.renderAnnotations === 'function'
-            ? engine.renderAnnotations.bind(engine) : null;
-        const origGoTo = typeof engine.goTo === 'function'
-            ? engine.goTo.bind(engine) : null;
-        const clear = typeof engine.clearOverlay === 'function'
-            ? engine.clearOverlay.bind(engine) : null;
-        if (origDraw) {
-            engine._drawLastMoveArrow = function (idx) {
-                const targetIdx = idx;
-                setTimeout(function () {
-                    if (engine.state && engine.state.index === targetIdx) {
-                        origDraw(targetIdx);
-                    }
-                }, ANIM_MS);
-            };
-        }
-        if (origRender) {
-            engine.renderAnnotations = function (idx) {
-                const targetIdx = idx;
-                setTimeout(function () {
-                    if (engine.state && engine.state.index === targetIdx) {
-                        origRender(targetIdx);
-                    }
-                }, ANIM_MS);
-            };
-        }
-        if (origGoTo && clear) {
-            engine.goTo = function (i) {
-                clear();
-                return origGoTo(i);
-            };
-        }
-    }
-
     function setupOne(el) {
         pollResize(el);
-        // Patch overlay timing once the engine is ready. Keep polling
-        // indefinitely rather than giving up after a fixed number of
-        // attempts — ChessPublica defers building _engine to a
-        // requestAnimationFrame callback, which can be delayed well past
-        // a few seconds on a slow connection or a backgrounded tab, and
-        // giving up here silently disables the overlay-timing patch for
-        // the rest of the page's life with no way to recover.
-        const tryPatch = function () {
-            if (el._engine) {
-                patchOverlayTiming(el);
-                return;
-            }
-            setTimeout(tryPatch, 100);
-        };
-        tryPatch();
         const card = el.closest('.post-game');
         if (card && window.ResizeObserver) {
             const ro = new ResizeObserver(() => refit(el));
