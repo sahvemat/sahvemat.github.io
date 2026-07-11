@@ -731,7 +731,7 @@
                 return;
             }
         }
-        h1.innerHTML = up(before) + '<br><em>' + up(after) + '</em>';
+        h1.innerHTML = up(before) + '<br><em>' + after + '</em>';
     }
 
     document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
