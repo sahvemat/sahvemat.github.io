@@ -10,7 +10,9 @@ FEN: 4r1k1/1pQ3pp/2p2p2/P3n3/1q4b1/6P1/1P2PP1P/2RN1BK1 b - - 0 26
 reading_time: 45
 ---
 
-Aşağıdaki 27 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve Jan Timman'ın kariyerini gençlik yıllarından 1990'lara uzanan geniş bir yelpazede ele aldığı **TIMMAN** adlı çalışmadan aktarılmıştır.
+Bu yazı bir satranç efsanesinin yaşantısından küçük bir bölüme odaklanacak. Timman'ın reyting listesinde Dünya Şampiyonu Karpov'un ardından ikinci sırada yer aldığı 1982 senesine gideceğiz. Buenos Aires'in iyileştirici havasında Timman'ın partilerinin öğretici anlarına odaklanacağız. Yazının ikinci bölümünde ise, Timman'ın kariyerinin farklı bölümlerinden derlediğim öğretici konumlar yer alıyor.
+
+Oyunların önemli gördüğün anlarında okuyucuyu Timman ile birlikte hamleleri bulmaya davet ediyorum.
 
 ![Genç Timman]({{ '/assets/img/timman/portrait-lead.webp' | relative_url }} "Kariyerinin erken yıllarında Jan Timman.")
 
@@ -18,7 +20,7 @@ Aşağıdaki 27 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve
 
 Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı. Şampiyon şöyle diyordu:
 
-*"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki, Arjantin'de bu bölge akciğer rahatsızlığı olan insanlar için favori bir yer."*
+*"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki Arjantin'de bu bölge, akciğer rahatsızlığı olan insanlar için favori bir yermiş."*
 
 Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'de ise Karpov ve Timman önünde kazanan Bent Larsen 1982'ye gelindiğinde harika bir sonuç elde edemese de ilk tura zaferle başlamıştı. Aynı yıl Buenos Aires'e taşınan Larsen ömrünün sonuna kadar orada ikamet etmiştir.
 
@@ -40,8 +42,9 @@ Sade, teknik konumlara olan hakimiyeti nedeniyle bir oyunsonu efsanesi olarak an
 
 Turnuva oynandığı sırada 71 yaşında olan Miguel Najdorf, yaşına rağmen bu devler arenasında yalnızca 3 oyun kaybetmişti. 30 yaşındaki rakibi ise belki de bu oyunun yarattığı ivmeyle turnuva zaferine imza atacaktı.
 
-Kasparov şöyle aktarıyor:
-*"Najdorf, tıpkı Arjantin Şampiyonası'nda olduğu gibi defalarca birinci bitirdiği, geleneksel Buenos Aires ve Mar del Plata turnuvalarının ilham kaynağıydı. Daha sonraki yıllarda, yaşın ağırlığı kendini hissettirmeye başladığında, bu turnuvalara onur konuğu olarak katılırdı. Bazen masaların arasında dolaşıp pozisyonları büyük bir ilgiyle incelerken kendini kaybeder ve boş sandalyelerden birine oturuverirdi. Oyuncular gülümser, belki de içlerinden Najdorf’un tahtada aniden bir hamle yapıp yapmayacağını merak ederlerdi."*
+Kasparov şöyle aktarıyor: *"Najdorf, tıpkı Arjantin Şampiyonası'nda olduğu gibi defalarca birinci bitirdiği, geleneksel Buenos Aires ve Mar del Plata turnuvalarının ilham kaynağıydı. Daha sonraki yıllarda, yaşın ağırlığı kendini hissettirmeye başladığında, bu turnuvalara onur konuğu olarak katılırdı. Bazen masaların arasında dolaşıp pozisyonları büyük bir ilgiyle incelerken kendini kaybeder ve boş sandalyelerden birine oturuverirdi. Oyuncular gülümser, belki de içlerinden Najdorf’un tahtada aniden bir hamle yapıp yapmayacağını merak ederlerdi."*
+
+II. Dünya Savaşı nedeniyle ülkesine dönmeyerek Arjantin'de kalan Najdorf, ülke satrancının gelişimine katkı sunmuş ve Oscar Panno gibi isimlere ilham kaynağı olmuştu.
 
 Konuyla doğrudan ilgisi olmasa da ilginç bir kare: Kasparov, Karpov ve Timman.
 
@@ -51,25 +54,33 @@ Konuyla doğrudan ilgisi olmasa da ilginç bir kare: Kasparov, Karpov ve Timman.
 
 ### JAN TIMMAN - OSCAR PANNO, [SITE], [YEAR]
 
-Arjantin satrancına damga vuran isimlerden şu an 91 yaşındaki Büyükusta Oscar Panno 1953'te Dünya Gençler Şampiyonu olmuş ve oyunlarını incelediğimiz geleneksel Mar del Plata turnuvasını farklı yıllarda kazanmıştı. Acaba Timman 0.5/2 ile başladığı turnuvanın geri kalanını 8/8 ile devam ettirebileceğini hayal edebilir miydi?
+Arjantin satrancına damga vuran 1935 doğumlu Büyükusta Oscar Panno, 1953'te Dünya Gençler Şampiyonu ve yine aynı sene Arjantin şampiyonu olmuştu. Oyunlarını incelediğimiz geleneksel Mar del Plata turnuvasını farklı yıllarda kazanmıştı.
+1950'li yıllarda yıldızı parlayan Oscar Panno, satranç gelişimi için materyalin bulunmadığı bir coğrafyada yaşıyordu. Arjantin'de Shakhmaty dergisinin sayılarını "1 yıl geriden" takip ediyorlar ve bu eksikliği kapatmak için yoğun çaba harcamak zorunda kalıyorlardı. 1956 yılında Adaylar Turnuvası'nda oynamaya hak kazanacak, fakat turnuva zamanına kadar askerlik görevini sürdürdüğü için turnuvaya hazırlanma şansı olmayacaktı. Belki de bu nedenle, Smyslov'un rahatça şampiyon olarak Botvinnik ile oynama hakkı elde ettiği turnuvada, sonuncu olan hemşerisi Pilnik'in önünde dokuzuncu olacaktı. Yıldızının parladığı yıllarda profesyonel satranç oynamak yerine mühendislik yapmayı tercih eden Panno, bu satırların yazarının da sevdiği Şah-Hint Savunması'nda hala sevilen bir varyanta adını vermiştir.
+
+Şu an aktif olmasa da kısa bir süre aktif kalan bir YouTube kanalı da bulunan Büyükusta Oscar Panno, İspanyolca içerikler üretmiş ve Aronian ve Anand gibi isimlerle analizler yapmıştı. Meraklısına: https://www.youtube.com/@GMOscarPanno
+1982'ye dönecel olursak, acaba Timman 0.5/2 ile başladığı turnuvanın geri kalanını 8/8 ile devam ettirebileceğini hayal edebilir miydi?
 
 <div class="post-game" id="timman-panno-1982" data-pgn="{{ '/assets/pgn/timman/04-timman-panno-1982.pgn' | relative_url }}"></div>
 
 ### ANATOLY KARPOV - JAN TIMMAN, MAR DEL PLATA, 1982
 
-"Batı'nın En İyisi" Timman'ın Merano'dan yorgun dönen Dünya Şampiyonu karşısında nasıl bir performans sergileyeceği belki de kendisi için turnuvanın kaderini de tayin edecekti. Karpov ise bundan önceki Clarin turnuvasını kazanmış ve o yıllarda neredeyse önüne çıkan her turnuvayı kazanıyordu. Timman ve Polugaevsky'e göre Korchnoi'ya karşı birkaç ay önce ünvanını savunmuş olması bu turnuvadaki performansını olumsuz etkilemişti.
+Reyting sıralamasında Karpov'dan sonra ikinci sırada yer alan Timman'ın, Merano'dan yorgun dönen Dünya Şampiyonu karşısında nasıl bir performans sergileyeceği belki de kendisi için turnuvanın kaderini belirleyecek ve olası bir maçta dünya şampiyonu karşısındaki şansını gösterecekti. Karpov ise, bundan önceki Clarin turnuvasıyla beraber o yıllarda neredeyse önüne çıkan her turnuvayı kazanmaktaydı. Timman ve Polugaevsky'e göre, Korchnoi'ya karşı birkaç ay önce ünvanını savunmuş olması şampiyonun 1982 Clarin turnuvasındaki performansını olumsuz etkilemişti.
+Ne olursa olsun, Timman'ın kariyerinde "favori oyunu" olarak gördüğü bir parti var sırada.
 
 <div class="post-game" id="karpov-timman-1982" data-pgn="{{ '/assets/pgn/timman/05-karpov-timman-1982.pgn' | relative_url }}"></div>
 
 ### JAN TIMMAN - SERGIO CARLOS GIARDELLI, MAR DEL PLATA, 1982
 
-Dünya'nın iki numarası için yine kazanılması gereken bir oyun. Henüz Uluslararası Usta bile olmayan Arjantinli rakibi karşısında büyük reyting ve tecrübe farkının ortaya konması gerekiyordu.
+Dünya'nın iki numarası için yine kazanılması gereken bir oyun. Karşısında henüz Uluslararası Usta bile olmayan Arjantinli rakibi karşısında büyük reyting ve tecrübe farkının ortaya konması gerekiyordu.
+Daha sonra Uluslararası Usta ünvanına kavuşacak Sergio Carlos Giardelli (1955-2015) bu turnuvada sonuncu olsa da, ülkesini olimpiyatlarda temsil etmiş ve ülke şampiyonasında dereceler elde etmiş Arjantin satrancının önemli isimlerindendi.
 
 <div class="post-game" id="timman-giardelli-1982" data-pgn="{{ '/assets/pgn/timman/06-timman-giardelli-1982.pgn' | relative_url }}"></div>
 
 ### CARLOS GARCIA PALERMO - JAN TIMMAN, MAR DEL PLATA, 1982
 
 İkinci turda Andersson'a karşı olaysız geçen bir beraberenin ardından Timman, üçüncü turda siyah taşlarla mutlaka kazanması gereken bir karşılaşmaya çıkıyordu.
+Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyarete gelen Bobby Fischer'ın 25 kişiye karşı oynadığı simultane gösteride yer almıştı. Geleceğin dünya şampiyonunu yalnızca 15 hamlede devirmeyi başarmıştı: https://www.chessgames.com/perl/chessgame?gid=1279196#google_vignette.
+Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: https://www.ara.org.ar/chs/ajedrez/perlas/#PA32)
 
 ![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında.")
 
@@ -139,7 +150,7 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 <div class="post-game" id="timman-hug-1974" data-pgn="{{ '/assets/pgn/timman/19-timman-hug-1974.pgn' | relative_url }}"></div>
 
-### EUGENIO Torre - JAN TIMMAN, HAMBURG, 1982
+### EUGENIO TORRE - JAN TIMMAN, HAMBURG, 1982
 
 <div class="post-game" id="torre-timman-1982" data-pgn="{{ '/assets/pgn/timman/20-torre-timman-1982.pgn' | relative_url }}"></div>
 
