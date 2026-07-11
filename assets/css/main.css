@@ -2287,8 +2287,15 @@ figcaption > span {
 }
 
 /* Article ("Analizi oku") view placeholder: same loading bar, shorter box
-   since it holds a move list rather than a board. */
+   since it holds a move list rather than a board. It's stretched to an
+   absolute overlay covering the (still in-flow, still rendering) <pgn>
+   beneath it, so it physically obscures whatever ChessPublica shows while
+   loading — its own spinner included — rather than depending on the <pgn>
+   element's own opacity/visibility to stay hidden. min-height is a floor
+   for before <pgn> has any layout of its own to stretch to match. */
 .pgn-placeholder--article {
+    position: absolute;
+    inset: 0;
     min-height: 160px;
 }
 
