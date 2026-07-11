@@ -1982,7 +1982,6 @@ pgn-player p {
 .post-article > h2,
 .post-article > h3 {
     font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
     text-transform: uppercase;
     letter-spacing: -0.02em;
     line-height: 1;
@@ -1992,6 +1991,9 @@ pgn-player p {
     break-inside: avoid;
     break-after: avoid;
 }
+
+.post-article > h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+.post-article > h3 { font-size: clamp(1.15rem, 2.4vw, 1.7rem); }
 
 .post-article > h2::before,
 .post-article > h3::before {
