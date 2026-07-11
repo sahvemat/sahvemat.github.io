@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karlsruhe ve Yol Ayrımları"
+title: "Karlsruhe ve yol ayrımları"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Grenke Açık · A Grubu"
