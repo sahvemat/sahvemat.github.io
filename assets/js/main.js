@@ -566,6 +566,23 @@
 })();
 
 (function () {
+    // Turn <div class="video-embed" data-caption="..."> into a <figure>,
+    // the same treatment photos above get, so video embeds pick up the
+    // same figure/figcaption styling and "Video N" numbering.
+    var n = 0;
+    document.querySelectorAll('.post-article > .video-embed[data-caption]').forEach(function (div) {
+        n++;
+        var fig = document.createElement('figure');
+        fig.className = 'video-embed';
+        while (div.firstChild) fig.appendChild(div.firstChild);
+        var caption = document.createElement('figcaption');
+        caption.innerHTML = '<span>Video ' + n + '</span> · ' + div.dataset.caption;
+        fig.appendChild(caption);
+        div.parentNode.replaceChild(fig, div);
+    });
+})();
+
+(function () {
     var months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     document.querySelectorAll('[data-date]').forEach(function (el) {
         var parts = el.dataset.date.split('-');
