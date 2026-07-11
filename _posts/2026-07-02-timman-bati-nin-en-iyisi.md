@@ -80,7 +80,7 @@ Daha sonra Uluslararası Usta ünvanına kavuşacak Sergio Carlos Giardelli (195
 
 Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyarete gelen Bobby Fischer'ın 25 kişiye karşı oynadığı simultane gösteride yer almıştı. Geleceğin dünya şampiyonunu yalnızca 15 hamlede devirmeyi başarmıştı: https://www.chessgames.com/perl/chessgame?gid=1279196#google_vignette.
 
-Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: https://www.ara.org.ar/chs/ajedrez/perlas/#PA32)
+Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: Arjantin'deki Rosario ve Güney Santa Fe Satranç Derneğinin internet sitesinde, Christian Sánchez imzasıyla 2014 yılında yayımlanan *Satranç İncileri: Özelde Rosario'nun, genelde ise Arjantin'in satranç tarihine bir yolculuk* başlıklı İspanyolca [makale](https://www.ara.org.ar/chs/ajedrez/perlas/#PA32).
 
 ![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında.")
 
