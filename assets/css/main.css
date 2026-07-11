@@ -1979,7 +1979,8 @@ pgn-player p {
 
 .post-article > p em { color: var(--accent); }
 
-.post-article > h2 {
+.post-article > h2,
+.post-article > h3 {
     font-family: var(--font-display);
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
     text-transform: uppercase;
@@ -1992,7 +1993,8 @@ pgn-player p {
     break-after: avoid;
 }
 
-.post-article > h2::before {
+.post-article > h2::before,
+.post-article > h3::before {
     counter-increment: section;
     content: counter(section, decimal-leading-zero);
     font-family: var(--font-mono);
@@ -2003,13 +2005,15 @@ pgn-player p {
     margin-right: 1rem;
 }
 
-.post-article > h2:only-of-type::before {
+.post-article > h2:only-of-type::before,
+.post-article > h3:only-of-type::before {
     content: none;
     margin-right: 0;
 }
 
 @media (min-width: 768px) {
-    .post-article > h2 {
+    .post-article > h2,
+    .post-article > h3 {
         column-span: all;
         margin-top: 2.5rem;
     }
