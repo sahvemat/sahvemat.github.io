@@ -594,26 +594,6 @@
     });
 })();
 
-// Collapsed game-note asides (see main.css .game-note-card) render straight
-// to the annotated <pgn> view instead of the usual interactive board, so
-// they just need their placeholder activated once opened — no board/toggle
-// pair to manage. Reuses the same __sahActivateArticle/__sahCleanPgn path
-// the "Analizi oku" button uses for every other game on the page.
-(function () {
-    document.querySelectorAll('details.game-note').forEach(function (details) {
-        details.addEventListener('toggle', function () {
-            if (!details.open) return;
-            var articleEl = details.querySelector('.post-game-view--article');
-            if (!articleEl || articleEl.dataset.sahActivated) return;
-            articleEl.dataset.sahActivated = '1';
-            if (!window.__sahActivateArticle) return;
-            window.__sahActivateArticle(articleEl).then(function () {
-                if (window.__sahCleanPgn) window.__sahCleanPgn(articleEl);
-            });
-        });
-    });
-})();
-
 (function () {
     const btn = document.getElementById('theme-toggle');
     if (!btn) return;
@@ -762,7 +742,7 @@
 // (which already smartens quotes in post body text). Sweep the rendered
 // page once to curl them up too, skipping code and chess game content.
 (function () {
-    var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1 };
+    var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1, PGN: 1, PUZZLE: 1, 'PGN-PLAYER': 1 };
 
     function smartQuotes(str) {
         return str
