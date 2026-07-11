@@ -152,6 +152,44 @@
 })();
 
 (function () {
+    // Every game's PGN lives at a lichess.org/api/study/... URL, and Lichess
+    // rejects concurrent requests from the same client. Board rendering,
+    // article rendering, and the header-metadata parse below all want the
+    // same PGN text, so route every fetch through one cache + strictly
+    // serial queue: each URL is fetched at most once, and callers that ask
+    // for a URL already in flight share that same pending promise.
+    var pgnCache = {};
+    var pgnQueue = [];
+    var pgnBusy = false;
+
+    function runPgnQueue() {
+        if (pgnBusy || !pgnQueue.length) return;
+        pgnBusy = true;
+        var job = pgnQueue.shift();
+        fetch(job.src)
+            .then(function (r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.text();
+            })
+            .then(job.resolve, job.reject)
+            .then(function () {
+                pgnBusy = false;
+                runPgnQueue();
+            });
+    }
+
+    window.__sahFetchPgn = function (src) {
+        if (pgnCache[src]) return pgnCache[src];
+        var promise = new Promise(function (resolve, reject) {
+            pgnQueue.push({ src: src, resolve: resolve, reject: reject });
+        });
+        pgnCache[src] = promise;
+        runPgnQueue();
+        return promise;
+    };
+})();
+
+(function () {
     // Make pgn-player boards responsive inside .post-game cards.
     //
     // ChessPublica's pgn-player uses chessboardjs under the hood, which
@@ -224,38 +262,56 @@
     // zero boards are initialized on page load. When a placeholder scrolls
     // within 200px of the viewport it is queued; the queue activates one board
     // at a time to prevent a render stampede.
+    //
+    // The placeholder (and its CSS loading bar) stays in the DOM until the
+    // PGN text has actually been fetched — not just until a <pgn-player> is
+    // created — so the progress bar keeps animating for the full real wait
+    // instead of vanishing the instant the DOM swap happens. The fetched
+    // text is handed to ChessPublica via a blob: URL so it doesn't turn
+    // around and re-fetch the same lichess.org URL itself.
     var initQueue = [];
     var initBusy = false;
 
     function activate(ph) {
         var src = ph.dataset.pgnSrc;
-        if (!src || !ph.parentNode) return null;
-        var player = makePlayer(src);
-        ph.parentNode.replaceChild(player, ph);
-        if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
-            window.ChessPublica.initAll();
-        }
-        setupOne(player);
-        return player;
+        if (!src || !ph.parentNode) return Promise.resolve(null);
+        return window.__sahFetchPgn(src).then(function (text) {
+            if (!ph.parentNode) return null;
+            var blob = new Blob([text], { type: 'application/x-chess-pgn' });
+            var player = makePlayer(URL.createObjectURL(blob));
+            ph.parentNode.replaceChild(player, ph);
+            if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
+                window.ChessPublica.initAll();
+            }
+            setupOne(player);
+            return player;
+        }, function () {
+            if (ph.parentNode) {
+                ph.classList.add('pgn-placeholder--error');
+                ph.textContent = 'Parti yüklenemedi.';
+            }
+            return null;
+        });
     }
 
     function drainQueue() {
         if (initBusy || !initQueue.length) return;
         initBusy = true;
         var ph = initQueue.shift();
-        var player = activate(ph);
-        // Wait for chessboardjs to finish before starting the next player.
-        var waited = 0;
-        var poll = function () {
-            if (!player || (player._engine && player._engine.board) || waited >= 30) {
-                initBusy = false;
-                drainQueue();
-            } else {
-                waited++;
-                setTimeout(poll, 100);
-            }
-        };
-        setTimeout(poll, 100);
+        activate(ph).then(function (player) {
+            // Wait for chessboardjs to finish before starting the next player.
+            var waited = 0;
+            var poll = function () {
+                if (!player || (player._engine && player._engine.board) || waited >= 30) {
+                    initBusy = false;
+                    drainQueue();
+                } else {
+                    waited++;
+                    setTimeout(poll, 100);
+                }
+            };
+            setTimeout(poll, 100);
+        });
     }
 
     function enqueue(ph) {
@@ -399,8 +455,13 @@
         btn.dataset.view = showArticle ? 'article' : 'board';
         btn.setAttribute('aria-pressed', showArticle ? 'true' : 'false');
         btn.textContent = showArticle ? LABEL_ARTICLE : LABEL_BOARD;
-        if (showArticle && window.__sahCleanPgn) {
-            window.__sahCleanPgn(article);
+        if (showArticle) {
+            var activateArticle = window.__sahActivateArticle
+                ? window.__sahActivateArticle(article)
+                : Promise.resolve();
+            activateArticle.then(function () {
+                if (window.__sahCleanPgn) window.__sahCleanPgn(article);
+            });
         }
         var placeholder = board.querySelector('.pgn-placeholder');
         var player = board.querySelector('pgn-player');
@@ -540,11 +601,37 @@
             var article = document.createElement('div');
             article.className = 'post-game-view post-game-view--article';
             article.hidden = true;
-            article.innerHTML = '<pgn src="' + src + '"></pgn>';
+            // The <pgn> element is created lazily (on first "Analizi oku"
+            // click) rather than here, so it doesn't fire its own lichess.org
+            // fetch for all 27 games right at page load — see activateArticle.
+            article.innerHTML = '<div class="pgn-placeholder pgn-placeholder--article" data-pgn-src="' + src + '"></div>';
             game.appendChild(board);
             game.appendChild(article);
         });
     }
+
+    function activateArticle(articleEl) {
+        var ph = articleEl.querySelector('.pgn-placeholder');
+        if (!ph) return Promise.resolve();
+        var src = ph.dataset.pgnSrc;
+        if (!src) return Promise.resolve();
+        return window.__sahFetchPgn(src).then(function (text) {
+            if (!ph.parentNode) return;
+            var blob = new Blob([text], { type: 'application/x-chess-pgn' });
+            var pgn = document.createElement('pgn');
+            pgn.setAttribute('src', URL.createObjectURL(blob));
+            ph.parentNode.replaceChild(pgn, ph);
+            if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
+                window.ChessPublica.initAll();
+            }
+        }, function () {
+            if (ph.parentNode) {
+                ph.classList.add('pgn-placeholder--error');
+                ph.textContent = 'Parti yüklenemedi.';
+            }
+        });
+    }
+    window.__sahActivateArticle = activateArticle;
 
     function injectGameHeaders() {
         document.querySelectorAll('.post-game').forEach(function (game) {
@@ -571,8 +658,7 @@
                 src = ph && ph.dataset.pgnSrc;
             }
             if (!src) return Promise.resolve(null);
-            return fetch(src)
-                .then(function (r) { return r.text(); })
+            return window.__sahFetchPgn(src)
                 .then(function (pgn) {
                     var white = parseHeader(pgn, 'White');
                     var black = parseHeader(pgn, 'Black');
@@ -606,7 +692,7 @@
                         players: players,
                         result: displayResult
                     };
-                });
+                }, function () { return null; });
         });
 
         Promise.all(promises).then(function (data) {

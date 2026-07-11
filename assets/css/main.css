@@ -2263,6 +2263,27 @@ figcaption > span {
     100% { transform: translateX(350%); }
 }
 
+/* Article ("Analizi oku") view placeholder: same loading bar, shorter box
+   since it holds a move list rather than a board. */
+.pgn-placeholder--article {
+    min-height: 160px;
+}
+
+/* Shown if the lichess.org fetch fails; stop the bar and surface the error. */
+.pgn-placeholder--error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-muted, #888);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.pgn-placeholder--error::after {
+    display: none;
+}
+
 .post-game pgn-player {
     display: flex;
     flex-direction: column;
