@@ -2083,7 +2083,8 @@ figcaption > span {
    crosstables) scroll horizontally on their own, without needing a
    wrapper div that kramdown doesn't provide. */
 .post-article table {
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
     margin: 3rem 0;
     border-collapse: collapse;
     background: var(--surface);
@@ -2164,7 +2165,6 @@ figcaption > span {
 }
 
 .post-game-round { color: var(--accent); font-weight: 700; }
-.post-game-round-icon { display: block; vertical-align: text-bottom; }
 .post-game-players { flex: 1 1 auto; }
 .post-game-result {
     background: var(--accent);

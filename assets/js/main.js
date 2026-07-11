@@ -626,7 +626,6 @@
 
 (function () {
     var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
-    var ROUND_MISSING_ICON = '<svg class="post-game-round-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';
 
     function parseHeader(pgn, tag) {
         var m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
@@ -728,20 +727,13 @@
                     var roundEl = game.querySelector('.post-game-round');
                     var playersEl = game.querySelector('.post-game-players');
                     var resultEl = game.querySelector('.post-game-result');
-                    if (roundEl) {
-                        if (round) {
-                            roundEl.textContent = roundLabel;
-                        } else {
-                            roundEl.innerHTML = ROUND_MISSING_ICON;
-                            roundEl.title = 'Tur bilgisi mevcut değil';
-                        }
-                    }
+                    if (roundEl) roundEl.textContent = roundLabel;
                     if (playersEl) playersEl.textContent = players;
                     if (resultEl) resultEl.textContent = displayResult;
 
                     return {
                         id: game.id,
-                        roundDisplay: round ? roundLabel : ROUND_MISSING_ICON,
+                        roundDisplay: roundLabel,
                         players: players,
                         result: displayResult
                     };
