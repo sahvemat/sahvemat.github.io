@@ -153,6 +153,6 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 <div class="post-game" id="timman-piket-1995" data-pgn="{{ '/assets/pgn/timman/26-timman-piket-1995.pgn' | relative_url }}"></div>
 
-## Jan Timman - John Van Baarle
+## Jan TIMMAN - John Van Baarle
 
 <div class="post-game" id="timman-van-baarle-1964" data-pgn="{{ '/assets/pgn/timman/27-timman-van-baarle-1964.pgn' | relative_url }}"></div>
