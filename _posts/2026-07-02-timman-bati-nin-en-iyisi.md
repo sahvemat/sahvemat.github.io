@@ -122,9 +122,8 @@ Son tura turnuva şampiyonluğu garanti şekilde giren Timman, bir başka efsane
 
 <div class="post-game" id="polugaevsky-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/zt6BhrYH.pgn"></div>
 
-| ### Mar del Plata 1982 Uluslararası Satranç Turnuvası Çapraz Tablosu                      |
-|-------------------------------------------------------------------------------------------|
 |   |    |    |                | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 1 | 2 | 3 | 4 |    |
+|---|----|----|----------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|----|
 |   | 1  | GM | Timman         | * | 1 | 0 | 1 | ½ | ½ | 0 | 1 | 1 | ½ | 1 | 1 | 1 | 1 | 9½ |
 |   | 2  | GM | Portisch       | 0 | * | 1 | ½ | 1 | ½ | 0 | ½ | ½ | 1 | ½ | 1 | 1 | ½ | 8 |
 | = | 3  | GM | Seirawan       | 1 | 0 | * | ½ | 1 | ½ | 0 | ½ | ½ | 0 | ½ | 1 | 1 | 1 | 7½ |
@@ -139,6 +138,8 @@ Son tura turnuva şampiyonluğu garanti şekilde giren Timman, bir başka efsane
 | = | 12 | GM | Quinteros      | 0 | 0 | 0 | ½ | ½ | ½ | 1 | ½ | ½ | 0 | ½ | * | 0 | 1 | 5 |
 | = | 12 |    | Franco         | 0 | 0 | 0 | 0 | 0 | ½ | ½ | 0 | 0 | 1 | 1 | 1 | * | 1 | 5 |
 |   | 14 |    | Giardelli      | 0 | ½ | 0 | ½ | ½ | ½ | ½ | ½ | ½ | ½ | ½ | 0 | 0 | * | 4½ |
+
+> *Mar del Plata 1982 Uluslararası Satranç Turnuvası çapraz tablosu
 
 ### JAN TIMMAN - ANATOLY KARPOV, BUGOJNO, 1978
 
