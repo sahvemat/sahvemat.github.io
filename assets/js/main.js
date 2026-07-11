@@ -410,23 +410,51 @@
         applyFont(pgn);
     }
 
-    // Poll until ChessPublica has actually parsed the PGN and rendered
+    // Wait until ChessPublica has actually parsed the PGN and rendered
     // .pgn-container (the board/diagrams/arrows) inside a <pgn> element, or
     // give up after ~5s. Shared with activateArticle below so the article's
     // loading bar can stay up through this render pass too, not just
     // through the network fetch.
+    //
+    // A MutationObserver reacts to .pgn-container appearing within a
+    // frame, instead of a fixed-interval poll that could leave our own
+    // loading bar running for up to a whole extra poll tick after the
+    // content (and ChessPublica's own loading UI) is already done. A slow
+    // interval alongside it only exists to re-check whether pgn.shadowRoot
+    // has become available to observe (shadow root attachment itself
+    // isn't a mutation we can subscribe to).
     function waitForPgnContainer(pgn) {
         return new Promise(function (resolve) {
-            var attempts = 0;
-            var poll = function () {
+            var settled = false;
+            var observer = null;
+            var observedRoot = null;
+
+            function finish() {
+                if (settled) return;
+                settled = true;
+                if (observer) observer.disconnect();
+                clearInterval(rootCheckId);
+                clearTimeout(timeoutId);
+                resolve();
+            }
+
+            function check() {
                 var root = pgn.shadowRoot || pgn;
-                if (root.querySelector('.pgn-container') || attempts++ >= 50) {
-                    resolve();
-                } else {
-                    setTimeout(poll, 100);
+                if (root.querySelector('.pgn-container')) {
+                    finish();
+                    return;
                 }
-            };
-            poll();
+                if (root !== observedRoot) {
+                    if (observer) observer.disconnect();
+                    observedRoot = root;
+                    observer = new MutationObserver(check);
+                    observer.observe(root, { childList: true, subtree: true });
+                }
+            }
+
+            check();
+            var rootCheckId = setInterval(check, 250);
+            var timeoutId = setTimeout(finish, 5000);
         });
     }
     window.__sahWaitPgnReady = waitForPgnContainer;
