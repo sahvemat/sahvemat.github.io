@@ -82,18 +82,21 @@ Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyar
 
 <details class="game-note">
 <summary>Oyunu görmek için tıklayın</summary>
-
-<div class="post-game" id="fischer-garcia-palermo-simul-1970"><script type="application/x-chess-pgn">
-[Event "Simul"]
-[Site "La Plata ARG"]
-[Date "1970.08.20"]
-[Result "0-1"]
-[White "Fischer, Robert James"]
-[Black "Garcia Palermo, Carlos"]
-
-1.e4 e5 2.f4 d5 3.exd5 e4 4.Bb5+ c6 5.dxc6 Nxc6 6.d3 Nf6 7.dxe4 Qa5+ 8.Nc3 Bg4 9.Qd4 Be7 10.Qa4 Qb6 11.h3 O-O-O 12.Bxc6 Nxe4 13.Bd7+ Rxd7 14.Qxd7+ Bxd7 15.Nxe4 Bc6 0-1
-</script></div>
-
+<div class="post-game" id="fischer-garcia-palermo-simul-1970">
+  <script type="application/x-chess-pgn">
+  [Event "Simul"]
+  [Site "La Plata, Arjantin"]
+  [Date "1970.08.20"]
+  [Result "0-1"]
+  [White "Fischer, Robert James"]
+  [Black "Garcia Palermo, Carlos"]
+  [Orientation "Black"]
+    
+  1.e4 e5 2.f4 d5 3.exd5 e4 4.Bb5+ c6 5.dxc6 Nxc6
+  6.d3 Nf6 7.dxe4 Qa5+ 8.Nc3 Bg4 9.Qd4 Be7 10.Qa4 Qb6
+  11.h3 O-O-O 12.Bxc6 Nxe4 13.Bd7+ Rxd7 14.Qxd7+ Bxd7 15.Nxe4 Bc6 0-1
+  </script>
+</div>
 </details>
 
 Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: Arjantin'de bulunan <i>Rosario ve Güney Santa Fe Satranç Derneği</i> internet sitesinde, Christian Sánchez imzasıyla 2014 yılında yayımlanan <i>Satranç İncileri: Özelde Rosario'nun, genelde ise Arjantin'in satranç tarihine bir yolculuk</i> başlıklı İspanyolca [makale](https://www.ara.org.ar/chs/ajedrez/perlas/#PA32)).
