@@ -83,7 +83,7 @@ Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyar
 <details class="game-note">
 <summary>Oyunu görmek için tıklayın</summary>
 
-<div class="game-note-card"><div class="post-game-view post-game-view--article" id="fischer-garcia-palermo-simul-1970"><div class="pgn-placeholder pgn-placeholder--article" data-pgn-src="{{ '/assets/pgn/timman/fischer-garcia-palermo-simul-1970.pgn' | relative_url }}"></div></div></div>
+<div class="post-game" id="fischer-garcia-palermo-simul-1970" data-pgn="{{ '/assets/pgn/timman/fischer-garcia-palermo-simul-1970.pgn' | relative_url }}"></div>
 
 </details>
 
