@@ -631,6 +631,25 @@
 })();
 
 (function () {
+    // Turn a markdown table followed by a blockquote caption into a
+    // <figure>, the same treatment photos/videos above get, so tables
+    // pick up the same figure/figcaption styling and "Tablo N" numbering.
+    var n = 0;
+    document.querySelectorAll('.post-article > table').forEach(function (table) {
+        var bq = table.nextElementSibling;
+        if (!bq || bq.tagName !== 'BLOCKQUOTE') return;
+        n++;
+        var fig = document.createElement('figure');
+        var caption = document.createElement('figcaption');
+        caption.innerHTML = '<span>Tablo ' + n + '</span> · ' + bq.textContent.trim();
+        table.parentNode.insertBefore(fig, table);
+        fig.appendChild(table);
+        fig.appendChild(caption);
+        bq.remove();
+    });
+})();
+
+(function () {
     var months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     document.querySelectorAll('[data-date]').forEach(function (el) {
         var parts = el.dataset.date.split('-');
