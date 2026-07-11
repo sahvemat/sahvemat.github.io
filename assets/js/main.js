@@ -385,6 +385,13 @@
                 node = next;
             }
 
+            // ChessPublica's <pgn> article view also renders its own
+            // embedded pgn-player board after the move text. The board is
+            // already available via "Tahtaya dön", so drop the duplicate.
+            root.querySelectorAll('pgn-player').forEach(function (player) {
+                player.remove();
+            });
+
             // Apply font to every element inside the resolved root
             applyFont(root === pgn.shadowRoot ? root.host : pgn);
             root.querySelectorAll('*').forEach(applyFont);
