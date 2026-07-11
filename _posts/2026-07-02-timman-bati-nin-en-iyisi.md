@@ -78,9 +78,16 @@ Daha sonra Uluslararası Usta ünvanına kavuşacak Sergio Carlos Giardelli (195
 
 İkinci turda Andersson'a karşı olaysız geçen bir beraberenin ardından Timman, üçüncü turda siyah taşlarla mutlaka kazanması gereken bir karşılaşmaya çıkıyordu.
 
-Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyarete gelen Bobby Fischer'ın 25 kişiye karşı oynadığı simultane gösteride yer almıştı. Geleceğin dünya şampiyonunu yalnızca 15 hamlede devirmeyi başarmıştı: https://www.chessgames.com/perl/chessgame?gid=1279196#google_vignette.
+Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyarete gelen Bobby Fischer'ın 25 kişiye karşı oynadığı simultane gösteride yer almıştı. Geleceğin dünya şampiyonunu yalnızca 15 hamlede devirmeyi başarmıştı.
 
 Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: Arjantin'de bulunan <i>Rosario ve Güney Santa Fe Satranç Derneği</i> internet sitesinde, Christian Sánchez imzasıyla 2014 yılında yayımlanan <i>Satranç İncileri: Özelde Rosario'nun, genelde ise Arjantin'in satranç tarihine bir yolculuk</i> başlıklı İspanyolca [makale](https://www.ara.org.ar/chs/ajedrez/perlas/#PA32)).
+
+<details class="game-note">
+<summary>Fischer – Garcia Palermo, simultane, La Plata 1970 (15 hamle)</summary>
+
+<div class="post-game" id="fischer-garcia-palermo-simul-1970" data-pgn="{{ '/assets/pgn/timman/fischer-garcia-palermo-simul-1970.pgn' | relative_url }}"></div>
+
+</details>
 
 ![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında.")
 
