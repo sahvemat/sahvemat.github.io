@@ -1981,6 +1981,15 @@ pgn-player p {
 
 .post-article > p em { color: var(--accent); }
 
+.post-article a {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+}
+
+.post-article a:hover {
+    text-decoration-color: var(--fg);
+}
+
 .post-article > h2,
 .post-article > h3 {
     font-family: var(--font-display);
@@ -2142,10 +2151,18 @@ figcaption > span {
 }
 
 /* When a table gets wrapped into a <figure> (see main.js), the figure
-   already supplies the card border/background/shadow, so strip the
-   table's own copy to avoid a nested card look. */
-.post-article > figure > table {
-    margin: 0 auto;
+   takes over sizing (shrink-to-fit the table, like the table used to
+   do on its own) and supplies the card border/background/shadow, so
+   the table itself just fills the figure with no card of its own. */
+.post-article > figure.table-figure {
+    width: fit-content;
+    max-width: 100%;
+    margin: 3rem auto;
+}
+
+.post-article > figure.table-figure > table {
+    width: 100%;
+    margin: 0;
     border: 0;
     box-shadow: none;
 }
