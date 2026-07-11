@@ -12,4 +12,6 @@ reading_time: 2
 
 ### Bir puzzle var varyant içerisinde
 
+Bu pgn-player'da gösterilen pgn dosyası, lichess.org üzerinde barındırılmaktadır.
+
 <div class="post-game" id="timman-larsen-1982" data-pgn="https://lichess.org/api/study/85CYPXor/A8p2fwlG.pgn"></div>
