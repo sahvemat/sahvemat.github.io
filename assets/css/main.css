@@ -2233,6 +2233,7 @@ figcaption > span {
 }
 
 .post-game-view--article {
+    position: relative;
     padding: 1.5rem 1.25rem;
     background: var(--paper);
 }
