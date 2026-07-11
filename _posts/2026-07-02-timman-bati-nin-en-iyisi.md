@@ -122,6 +122,8 @@ Son tura turnuva şampiyonluğu garanti şekilde giren Timman, bir başka efsane
 
 <div class="post-game" id="polugaevsky-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/zt6BhrYH.pgn"></div>
 
+### Mar del Plata 1982 Uluslararası Satranç Turnuvası Çapraz Tablosu
+
 |   |    |    |                | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 1 | 2 | 3 | 4 |    |
 |---|----|----|----------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|----|
 |   | 1  | GM | Timman         | * | 1 | 0 | 1 | ½ | ½ | 0 | 1 | 1 | ½ | 1 | 1 | 1 | 1 | 9½ |
