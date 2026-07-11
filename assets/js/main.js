@@ -363,38 +363,6 @@
         el.style.fontFamily = SANS;
     }
 
-    // ChessPublica's <pgn> article view also renders its own embedded
-    // pgn-player board after the move text. The board is already available
-    // via "Tahtaya dön", so drop the duplicate. A one-time check after
-    // .pgn-container first appears isn't reliable — the embedded player can
-    // get added to the DOM on its own schedule, separate from
-    // .pgn-container — so keep watching (and stripping) for as long as the
-    // element might still be rendering, not just once.
-    function stripEmbeddedPlayers(pgn) {
-        (pgn.shadowRoot || pgn).querySelectorAll('pgn-player').forEach(function (player) {
-            player.remove();
-        });
-    }
-
-    function watchForEmbeddedPlayer(pgn) {
-        // Poll rather than use a MutationObserver: ChessPublica can attach
-        // an (open) shadow root to `pgn` at some point after this starts
-        // running, and an observer bound to the light DOM up front would
-        // miss everything that happens inside a shadow root attached
-        // later. Re-resolving pgn.shadowRoot || pgn on every tick sidesteps
-        // that regardless of when/whether a shadow root shows up.
-        var elapsed = 0;
-        var interval = 200;
-        var duration = 15000;
-        var tick = function () {
-            stripEmbeddedPlayers(pgn);
-            elapsed += interval;
-            if (elapsed < duration) setTimeout(tick, interval);
-        };
-        tick();
-    }
-    window.__sahWatchEmbeddedPlayer = watchForEmbeddedPlayer;
-
     function cleanPgnElement(pgn) {
         // Determine which root to search: prefer shadow DOM if open, else light DOM.
         var root = (pgn.shadowRoot) || pgn;
@@ -510,16 +478,25 @@
             activateArticle.then(function () {
                 if (window.__sahCleanPgn) window.__sahCleanPgn(article);
             });
-        }
-        var placeholder = board.querySelector('.pgn-placeholder');
-        var player = board.querySelector('pgn-player');
-        if (placeholder && window.__sahEnqueue) {
-            window.__sahEnqueue(placeholder);
-        } else if (player && player._engine && player._engine.board &&
-                typeof player._engine.board.resize === 'function') {
-            setTimeout(function () {
-                try { player._engine.board.resize(); } catch (e) {}
-            }, 50);
+        } else {
+            // Switching to the board view: activate it now if it was never
+            // scrolled into view yet, or just resize it if it already was
+            // (chessboardjs computes square sizes once, from a container
+            // that had zero width while hidden). Only do this when actually
+            // switching to the board — this used to run unconditionally on
+            // every toggle click, which meant clicking "Analizi oku" could
+            // activate and render the board's pgn-player while the board
+            // view was supposed to stay hidden.
+            var placeholder = board.querySelector('.pgn-placeholder');
+            var player = board.querySelector('pgn-player');
+            if (placeholder && window.__sahEnqueue) {
+                window.__sahEnqueue(placeholder);
+            } else if (player && player._engine && player._engine.board &&
+                    typeof player._engine.board.resize === 'function') {
+                setTimeout(function () {
+                    try { player._engine.board.resize(); } catch (e) {}
+                }, 50);
+            }
         }
     });
 })();
@@ -693,7 +670,6 @@
             // .pgn-container actually appears, then reveal it in place.
             pgn.style.cssText = 'position:absolute; top:0; left:0; width:100%; visibility:hidden; pointer-events:none;';
             ph.parentNode.insertBefore(pgn, ph);
-            if (window.__sahWatchEmbeddedPlayer) window.__sahWatchEmbeddedPlayer(pgn);
             if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
                 window.ChessPublica.initAll();
             }
