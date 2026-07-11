@@ -2140,6 +2140,15 @@ figcaption > span {
     border-left: 1px solid var(--border-10);
 }
 
+/* When a table gets wrapped into a <figure> (see main.js), the figure
+   already supplies the card border/background/shadow, so strip the
+   table's own copy to avoid a nested card look. */
+.post-article > figure > table {
+    margin: 0 auto;
+    border: 0;
+    box-shadow: none;
+}
+
 .post-game {
     margin: 3rem 0;
     border: 1px solid var(--line);

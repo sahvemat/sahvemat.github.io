@@ -139,7 +139,7 @@ Son tura turnuva şampiyonluğu garanti şekilde giren Timman, bir başka efsane
 | = | 12 |    | Franco         | 0 | 0 | 0 | 0 | 0 | ½ | ½ | 0 | 0 | 1 | 1 | 1 | * | 1 | 5 |
 |   | 14 |    | Giardelli      | 0 | ½ | 0 | ½ | ½ | ½ | ½ | ½ | ½ | ½ | ½ | 0 | 0 | * | 4½ |
 
-> *Mar del Plata 1982 Uluslararası Satranç Turnuvası çapraz tablosu
+> Mar del Plata 1982 Uluslararası Satranç Turnuvası çapraz tablosu
 
 ### JAN TIMMAN - ANATOLY KARPOV, BUGOJNO, 1978
 
