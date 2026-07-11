@@ -321,7 +321,13 @@
     window.__sahEnqueue = enqueue;
 
     function initBoards() {
-        var placeholders = document.querySelectorAll('.post-game .pgn-placeholder');
+        // Scope to board placeholders only. The article view has its own
+        // .pgn-placeholder--article, handled exclusively by
+        // __sahActivateArticle on toggle click; if this observer also
+        // picked it up, unhiding the article view would make it
+        // "intersect" and get hijacked into a live pgn-player board
+        // dropped inside the article, alongside the annotated content.
+        var placeholders = document.querySelectorAll('.post-game .pgn-placeholder:not(.pgn-placeholder--article)');
         if (!placeholders.length) return;
 
         if (!window.IntersectionObserver) {
