@@ -162,6 +162,17 @@
     var pgnQueue = [];
     var pgnBusy = false;
 
+    // ChessPublica orients the board from Black's side when it sees an
+    // [Orientation "Black"] header. Annotator-side games mark themselves
+    // with [Annotator "Black"] instead, so mirror that into an Orientation
+    // header (unless the PGN already sets one) before handing the text off.
+    function applyAnnotatorOrientation(text) {
+        if (/\[Orientation\s+"/.test(text)) return text;
+        return text.replace(/\[Annotator\s+"Black"\]/, function (match) {
+            return match + '\n[Orientation "Black"]';
+        });
+    }
+
     function runPgnQueue() {
         if (pgnBusy || !pgnQueue.length) return;
         pgnBusy = true;
@@ -171,6 +182,7 @@
                 if (!r.ok) throw new Error('HTTP ' + r.status);
                 return r.text();
             })
+            .then(function (text) { return applyAnnotatorOrientation(text); })
             .then(job.resolve, job.reject)
             .then(function () {
                 pgnBusy = false;
