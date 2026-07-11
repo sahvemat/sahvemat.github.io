@@ -737,6 +737,49 @@
     document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
 })();
 
+// Straight quotes/apostrophes ("..."/') come from YAML front matter and
+// other places that never pass through kramdown's markdown converter
+// (which already smartens quotes in post body text). Sweep the rendered
+// page once to curl them up too, skipping code and chess game content.
+(function () {
+    var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1 };
+
+    function smartQuotes(str) {
+        return str
+            .replace(/(^|[\s ([{—–-])"/g, '$1“')
+            .replace(/"/g, '”')
+            .replace(/(^|[\s ([{—–-])'/g, '$1‘')
+            .replace(/'/g, '’');
+    }
+
+    document.title = smartQuotes(document.title);
+
+    var walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function (node) {
+                if (node.nodeType === 1) {
+                    if (SKIP_TAGS[node.tagName] || node.classList.contains('post-game')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_SKIP;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    var textNodes = [];
+    var n;
+    while ((n = walker.nextNode())) textNodes.push(n);
+    textNodes.forEach(function (t) {
+        if (t.nodeValue.indexOf('"') !== -1 || t.nodeValue.indexOf("'") !== -1) {
+            t.nodeValue = smartQuotes(t.nodeValue);
+        }
+    });
+})();
+
 (function () {
     var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
 
