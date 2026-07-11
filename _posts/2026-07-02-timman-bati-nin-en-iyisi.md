@@ -12,15 +12,15 @@ reading_time: 45
 
 Bu yazı bir satranç efsanesinin yaşantısından küçük bir bölüme odaklanacak. Timman'ın reyting listesinde Dünya Şampiyonu Karpov'un ardından ikinci sırada yer aldığı 1982 senesine gideceğiz. Buenos Aires'in iyileştirici havasında Timman'ın partilerinin öğretici anlarına odaklanacağız. Yazının ikinci bölümünde ise, Timman'ın kariyerinin farklı bölümlerinden derlediğim öğretici konumlar yer alıyor.
 
-Oyunların önemli gördüğün anlarında okuyucuyu Timman ile birlikte hamleleri bulmaya davet ediyorum.
+Oyunların önemli anlarında okuyucuyu Timman ile birlikte hamleleri bulmaya davet ediyorum.  Bu turnuvayı incelerken satranç tarihinin başka efsane isimlerine de elbette değinme şansımız olacak. Benim için öğretici olan bu denemenin okuyucu için de faydalı olacağını umuyorum.
 
 ![Genç Timman]({{ '/assets/img/timman/portrait-lead.webp' | relative_url }} "Kariyerinin erken yıllarında Jan Timman.")
 
 ### JAN TIMMAN - BENT LARSEN, MAR DEL PLATA, 1982
 
-Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı. Şampiyon şöyle diyordu:
+Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı.
 
-*"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki Arjantin'de bu bölge, akciğer rahatsızlığı olan insanlar için favori bir yermiş."*
+Şampiyon şöyle diyordu: *"Acı bir öksürük ve çatlamış dudaklarla kıvranırken, Madrid'den Arjantin Pampas'ına giden, on saatlik direkt gece uçuşuna bindim. Córdoba'da uçaktan indiğimizde hava kararmıştı; güneş hala parlıyordu ve çimenlerin taze kokusunu derin bir nefesle içime çektim. Daha sonra öğrendim ki, Arjantin'de bu bölge akciğer rahatsızlığı olan insanlar için favori bir yer."*
 
 Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'de ise Karpov ve Timman önünde kazanan Bent Larsen 1982'ye gelindiğinde harika bir sonuç elde edemese de ilk tura zaferle başlamıştı. Aynı yıl Buenos Aires'e taşınan Larsen ömrünün sonuna kadar orada ikamet etmiştir.
 
@@ -42,8 +42,8 @@ Sade, teknik konumlara olan hakimiyeti nedeniyle bir oyunsonu efsanesi olarak an
 
 Turnuva oynandığı sırada 71 yaşında olan Miguel Najdorf, yaşına rağmen bu devler arenasında yalnızca 3 oyun kaybetmişti. 30 yaşındaki rakibi ise belki de bu oyunun yarattığı ivmeyle turnuva zaferine imza atacaktı.
 
-Kasparov şöyle aktarıyor: *"Najdorf, tıpkı Arjantin Şampiyonası'nda olduğu gibi defalarca birinci bitirdiği, geleneksel Buenos Aires ve Mar del Plata turnuvalarının ilham kaynağıydı. Daha sonraki yıllarda, yaşın ağırlığı kendini hissettirmeye başladığında, bu turnuvalara onur konuğu olarak katılırdı. Bazen masaların arasında dolaşıp pozisyonları büyük bir ilgiyle incelerken kendini kaybeder ve boş sandalyelerden birine oturuverirdi. Oyuncular gülümser, belki de içlerinden Najdorf’un tahtada aniden bir hamle yapıp yapmayacağını merak ederlerdi."
-*
+Kasparov şöyle aktarıyor: *"Najdorf, tıpkı Arjantin Şampiyonası'nda olduğu gibi defalarca birinci bitirdiği, geleneksel Buenos Aires ve Mar del Plata turnuvalarının ilham kaynağıydı. Daha sonraki yıllarda, yaşın ağırlığı kendini hissettirmeye başladığında, bu turnuvalara onur konuğu olarak katılırdı. Bazen masaların arasında dolaşıp pozisyonları büyük bir ilgiyle incelerken kendini kaybeder ve boş sandalyelerden birine oturuverirdi. Oyuncular gülümser, belki de içlerinden Najdorf’un tahtada aniden bir hamle yapıp yapmayacağını merak ederlerdi."*
+
 II. Dünya Savaşı nedeniyle ülkesine dönmeyerek Arjantin'de kalan Najdorf, ülke satrancının gelişimine katkı sunmuş ve Oscar Panno gibi isimlere ilham kaynağı olmuştu.
 
 Konuyla doğrudan ilgisi olmasa da ilginç bir kare: Kasparov, Karpov ve Timman.
@@ -123,7 +123,26 @@ On bir sene sonra Karpov'a karşı FIDE Dünya Şampiyonası maçında (O sırad
 
 ### LEV POLUGAEVSKY - JAN TIMMAN, MAR DEL PLATA, 1982
 
+Son tura turnuva şampiyonluğu garanti şekilde giren Timman, bir başka efsane Polugaevsky'nin gözünü korkutmuşa benziyor.
+
 <div class="post-game" id="polugaevsky-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/zt6BhrYH.pgn"></div>
+
+|   |    |    |                | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 1 | 2 | 3 | 4 |    |
+|---|----|----|----------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|----|
+|   | 1  | GM | Timman         | * | 1 | 0 | 1 | ½ | ½ | 0 | 1 | 1 | ½ | 1 | 1 | 1 | 1 | 9½ |
+|   | 2  | GM | Portisch       | 0 | * | 1 | ½ | 1 | ½ | 0 | ½ | ½ | 1 | ½ | 1 | 1 | ½ | 8 |
+| = | 3  | GM | Seirawan       | 1 | 0 | * | ½ | 1 | ½ | 0 | ½ | ½ | 0 | ½ | 1 | 1 | 1 | 7½ |
+| = | 3  | GM | Karpov         | 0 | ½ | ½ | * | ½ | ½ | 1 | 0 | 1 | 1 | ½ | ½ | 1 | ½ | 7½ |
+| = | 3  | GM | Polugaevsky    | ½ | 0 | 0 | ½ | * | ½ | ½ | 1 | ½ | 1 | 1 | ½ | 1 | ½ | 7½ |
+|   | 6  | GM | Andersson      | ½ | ½ | ½ | ½ | ½ | * | ½ | 1 | ½ | ½ | ½ | ½ | ½ | ½ | 7 |
+|   | 7  | GM | Larsen         | 1 | 1 | 1 | 0 | ½ | ½ | * | 0 | 1 | 0 | ½ | 0 | ½ | ½ | 6½ |
+| = | 8  | IM | Garcia Palermo | 0 | ½ | ½ | 1 | 0 | 0 | 1 | * | ½ | ½ | 0 | ½ | 1 | ½ | 6 |
+| = | 8  | GM | Najdorf        | 0 | ½ | ½ | 0 | ½ | ½ | 0 | ½ | * | 1 | ½ | ½ | 1 | ½ | 6 |
+| = | 10 |    | Braga          | ½ | 0 | 1 | 0 | 0 | ½ | 1 | ½ | 0 | * | ½ | 1 | 0 | ½ | 5½ |
+| = | 10 | GM | Panno          | 0 | ½ | ½ | ½ | 0 | ½ | ½ | 1 | ½ | ½ | * | ½ | 0 | ½ | 5½ |
+| = | 12 | GM | Quinteros      | 0 | 0 | 0 | ½ | ½ | ½ | 1 | ½ | ½ | 0 | ½ | * | 0 | 1 | 5 |
+| = | 12 |    | Franco         | 0 | 0 | 0 | 0 | 0 | ½ | ½ | 0 | 0 | 1 | 1 | 1 | * | 1 | 5 |
+|   | 14 |    | Giardelli      | 0 | ½ | 0 | ½ | ½ | ½ | ½ | ½ | ½ | ½ | ½ | 0 | 0 | * | 4½ |
 
 ### JAN TIMMAN - ANATOLY KARPOV, BUGOJNO, 1978
 
