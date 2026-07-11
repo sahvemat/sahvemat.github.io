@@ -44,10 +44,6 @@ Kasparov şöyle aktarıyor: *"Najdorf, tıpkı Arjantin Şampiyonası'nda oldu�
 
 II. Dünya Savaşı nedeniyle ülkesine dönmeyerek Arjantin'de kalan Najdorf, ülke satrancının gelişimine katkı sunmuş ve Oscar Panno gibi isimlere ilham kaynağı olmuştu.
 
-Konuyla doğrudan ilgisi olmasa da ilginç bir kare: Kasparov, Karpov ve Timman.
-
-![Kasparov, Karpov ve Timman]({{ '/assets/img/timman/kasparov-karpov-timman.jpg' | relative_url }} "Kasparov, Karpov ve Timman (soldan sağa), Amsterdam'da bir kanal köprüsünde.")
-
 <div class="post-game" id="timman-najdorf-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/dqJYuxaB.pgn"></div>
 
 ### JAN TIMMAN - OSCAR PANNO, [SITE], [YEAR]
@@ -187,7 +183,7 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 <div class="post-game" id="sigurjonsson-timman-1980" data-pgn="https://lichess.org/api/study/F0mOCg4p/bmIFEAaA.pgn"></div>
 
-### *TAKTİK* - ROBERT HUEBNER - JAN TIMMAN, BUGOJNO, 1978
+### TAKTİK - ROBERT HUEBNER - JAN TIMMAN, BUGOJNO, 1978
 
 <div class="post-game" id="huebner-timman-1978" data-pgn="https://lichess.org/api/study/F0mOCg4p/m99Zflrj.pgn"></div>
 
@@ -202,6 +198,8 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 <div class="post-game" id="timman-brinck-claussen-1971" data-pgn="https://lichess.org/api/study/F0mOCg4p/SLIAKTwb.pgn"></div>
 
 ### JAN TIMMAN - JEROEN PIKET, WIJK AAN ZEE, 1995
+
+![Kasparov, Karpov ve Timman]({{ '/assets/img/timman/kasparov-karpov-timman.jpg' | relative_url }} "Kasparov, Karpov ve Timman (soldan sağa), Amsterdam'da bir kanal köprüsünde.")
 
 <div class="post-game" id="timman-piket-1995" data-pgn="https://lichess.org/api/study/F0mOCg4p/fOceQM56.pgn"></div>
 
