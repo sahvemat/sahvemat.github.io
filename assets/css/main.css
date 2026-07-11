@@ -2191,9 +2191,13 @@ figcaption > span {
 
 /* Collapsed-by-default aside for a tangential game (e.g. a mentioned-in-passing
    simul result) that doesn't warrant the weight of a full inline post-game
-   the way the article's main games do. The .post-game inside only starts
-   loading once <details> is opened, since [open] is what gives it layout
-   for the IntersectionObserver in main.js to see. */
+   the way the article's main games do. Deliberately renders straight to the
+   annotated <pgn> view (see the "details.game-note" toggle listener in
+   main.js) instead of the interactive pgn-player board used elsewhere:
+   ChessPublica's pgn-player has a reproducible bug where certain short,
+   comment-free PGNs get silently truncated to a couple of plies, while its
+   <pgn> article renderer parses the exact same file correctly. Routing
+   around the broken widget avoids that instead of fighting it. */
 details.game-note {
     margin: 2rem 0;
 }
@@ -2238,8 +2242,11 @@ details.game-note > summary:focus-visible {
     outline-offset: -2px;
 }
 
-details.game-note > .post-game {
+.game-note-card {
     margin-top: 0.75rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 8px 8px 0 0 var(--fg);
 }
 
 .post-game-header {
