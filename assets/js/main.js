@@ -1,3 +1,50 @@
+// Pair up 2 consecutive "bare" game sections — a heading directly
+// followed by a single .post-game div and nothing else before the next
+// heading — into a side-by-side 2-column row, instead of each one
+// wasting the other column's width. Runs first, before anything else
+// below reads or hydrates .post-game elements, since this only moves
+// the existing heading/div nodes into new wrapper elements.
+(function () {
+    var article = document.querySelector('.post-article');
+    if (!article) return;
+
+    var headings = Array.from(article.children).filter(function (el) {
+        return el.tagName === 'H2' || el.tagName === 'H3';
+    });
+
+    function bareGameDiv(heading) {
+        var next = heading.nextElementSibling;
+        if (!next || !next.classList.contains('post-game')) return null;
+        var after = next.nextElementSibling;
+        if (after && after.tagName !== 'H2' && after.tagName !== 'H3') return null;
+        return next;
+    }
+
+    function makeCol(heading, game) {
+        var col = document.createElement('div');
+        col.className = 'game-pair-col';
+        col.appendChild(heading);
+        col.appendChild(game);
+        return col;
+    }
+
+    var i = 0;
+    while (i < headings.length - 1) {
+        var gameA = bareGameDiv(headings[i]);
+        var gameB = gameA && bareGameDiv(headings[i + 1]);
+        if (gameA && gameB) {
+            var pair = document.createElement('div');
+            pair.className = 'game-pair';
+            headings[i].parentNode.insertBefore(pair, headings[i]);
+            pair.appendChild(makeCol(headings[i], gameA));
+            pair.appendChild(makeCol(headings[i + 1], gameB));
+            i += 2;
+        } else {
+            i += 1;
+        }
+    }
+})();
+
 // Enforce the "ŞAHvMAT" wordmark's exact casing everywhere it appears in
 // rendered text, regardless of any ancestor's text-transform (many headings
 // on this site are visually uppercased via CSS) or of the source casing.

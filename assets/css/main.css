@@ -1890,7 +1890,8 @@ pgn-player p {
     .post-article > .post-colophon,
     .post-article > .post-archive,
     .post-article > table,
-    .post-article > figure.table-figure {
+    .post-article > figure.table-figure,
+    .post-article > .game-pair {
         column-span: all;
     }
 
@@ -1900,6 +1901,14 @@ pgn-player p {
     .post-article > .post-game,
     .post-article > .video-embed {
         break-inside: avoid;
+    }
+
+    /* Two consecutive "bare" game sections (see main.js) sit side by
+       side instead of each wasting the other column's width. */
+    .post-article > .game-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3.5rem;
     }
 }
 
@@ -1991,7 +2000,8 @@ pgn-player p {
 }
 
 .post-article > h2,
-.post-article > h3 {
+.post-article > h3,
+.post-article .game-pair-col > h3 {
     font-family: var(--font-display);
     text-transform: uppercase;
     letter-spacing: -0.02em;
@@ -2004,10 +2014,12 @@ pgn-player p {
 }
 
 .post-article > h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
-.post-article > h3 { font-size: clamp(1.15rem, 2.4vw, 1.7rem); }
+.post-article > h3,
+.post-article .game-pair-col > h3 { font-size: clamp(1.15rem, 2.4vw, 1.7rem); }
 
 .post-article > h2::before,
-.post-article > h3::before {
+.post-article > h3::before,
+.post-article .game-pair-col > h3::before {
     counter-increment: section;
     content: counter(section, decimal-leading-zero);
     font-family: var(--font-mono);
