@@ -673,7 +673,14 @@
             // display:none, so ChessPublica's own size calculations still
             // work — and keep the placeholder's loading bar up until
             // .pgn-container actually appears, then reveal it in place.
-            pgn.style.cssText = 'position:absolute; top:0; left:0; width:100%; visibility:hidden; pointer-events:none;';
+            // Use opacity (not visibility) to hide it: ChessPublica's
+            // internal markup can set visibility:visible on its own
+            // descendants, which overrides an ancestor's visibility:hidden
+            // and would let the still-rendering game peek out from behind
+            // the loading bar. Opacity can't be overridden like that, and
+            // z-index:0 keeps it under .pgn-placeholder's z-index:1 as a
+            // second line of defense.
+            pgn.style.cssText = 'position:absolute; top:0; left:0; width:100%; z-index:0; opacity:0; pointer-events:none;';
             ph.parentNode.insertBefore(pgn, ph);
             if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
                 window.ChessPublica.initAll();

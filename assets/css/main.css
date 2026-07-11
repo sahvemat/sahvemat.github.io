@@ -2257,10 +2257,14 @@ figcaption > span {
     color: var(--ink);
 }
 
-/* Loading bar shown while a pgn-player placeholder waits for initialization */
+/* Loading bar shown while a pgn-player placeholder waits for initialization.
+   z-index pins it above the (still-rendering) pgn/pgn-player element that
+   __sahActivateArticle lays out underneath it during the wait, so the bar
+   stays on top instead of ChessPublica's own render peeking through first. */
 .pgn-placeholder {
     min-height: 380px;
     position: relative;
+    z-index: 1;
     overflow: hidden;
     background: var(--paper);
 }
