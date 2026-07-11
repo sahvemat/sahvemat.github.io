@@ -10,9 +10,9 @@ FEN: 4r1k1/1pQ3pp/2p2p2/P3n3/1q4b1/6P1/1P2PP1P/2RN1BK1 b - - 0 26
 reading_time: 45
 ---
 
-Bu yazı bir satranç efsanesinin yaşantısından küçük bir bölüme odaklanacak. Timman'ın reyting listesinde Dünya Şampiyonu Karpov'un ardından ikinci sırada yer aldığı 1982 senesine gideceğiz. Buenos Aires'in iyileştirici havasında Timman'ın partilerinin öğretici anlarına odaklanacağız. Yazının ikinci bölümünde ise, Timman'ın kariyerinin farklı bölümlerinden derlediğim öğretici konumlar yer alıyor.
+Bu yazı, bir satranç efsanesinin yaşantısından küçük bir bölüme odaklanacak. Timman'ın reyting listesinde Dünya Şampiyonu Karpov'un ardından ikinci sırada yer aldığı 1982 senesine gideceğiz. Buenos Aires'in iyileştirici havasında Timman'ın partilerinin öğretici anlarına odaklanacağız. Yazının ikinci bölümünde ise, Timman'ın kariyerinin farklı bölümlerinden derlediğim öğretici konumlar yer alıyor.
 
-Oyunların önemli anlarında okuyucuyu Timman ile birlikte hamleleri bulmaya davet ediyorum.  Bu turnuvayı incelerken satranç tarihinin başka efsane isimlerine de elbette değinme şansımız olacak. Benim için öğretici olan bu denemenin okuyucu için de faydalı olacağını umuyorum.
+Oyunların önemli anlarında okuyucuyu Timman ile birlikte hamleleri bulmaya davet ediyorum. Timman'ın turnuva oyunlarını incelerken satranç tarihinin başka efsane isimlerine de elbette değinme şansımız olacak. Benim için öğretici olan bu denemenin okuyucu için de faydalı olacağını umuyorum.
 
 ![Genç Timman]({{ '/assets/img/timman/portrait-lead.webp' | relative_url }} "Kariyerinin erken yıllarında Jan Timman.")
 
