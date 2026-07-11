@@ -669,24 +669,20 @@
             pgn.setAttribute('src', URL.createObjectURL(blob));
             // Parsing the PGN and drawing each diagram/arrow is a real CPU
             // cost for heavily annotated games (a couple of seconds), not
-            // just a network wait. Render it laid-out but invisible — not
-            // display:none, so ChessPublica's own size calculations still
-            // work — and keep the placeholder's loading bar up until
-            // .pgn-container actually appears, then reveal it in place.
-            // Use opacity (not visibility) to hide it: ChessPublica's
-            // internal markup can set visibility:visible on its own
-            // descendants, which overrides an ancestor's visibility:hidden
-            // and would let the still-rendering game peek out from behind
-            // the loading bar. Opacity can't be overridden like that, and
-            // z-index:0 keeps it under .pgn-placeholder's z-index:1 as a
-            // second line of defense.
-            pgn.style.cssText = 'position:absolute; top:0; left:0; width:100%; z-index:0; opacity:0; pointer-events:none;';
+            // just a network wait. Let it render normally, in flow, from
+            // the start — ChessPublica's own size calculations need real
+            // layout, and .pgn-placeholder--article is an absolute overlay
+            // (see main.css) stretched to physically cover it the whole
+            // time, loading bar and all. That way whatever ChessPublica
+            // shows while it works — including its own loading UI — stays
+            // hidden behind the overlay rather than depending on some
+            // opacity/visibility trick on <pgn> itself, which its internal
+            // markup could otherwise defeat.
             ph.parentNode.insertBefore(pgn, ph);
             if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
                 window.ChessPublica.initAll();
             }
             return (window.__sahWaitPgnReady ? window.__sahWaitPgnReady(pgn) : Promise.resolve()).then(function () {
-                pgn.style.cssText = '';
                 if (ph.parentNode) ph.parentNode.removeChild(ph);
             });
         }, function () {
