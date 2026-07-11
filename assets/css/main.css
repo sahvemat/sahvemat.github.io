@@ -2230,6 +2230,15 @@ figcaption > span {
     padding: 0;
 }
 
+/* The [hidden] attribute's display:none only comes from the (low-priority)
+   user-agent stylesheet, so any future author rule that sets `display` on
+   .post-game-view or a descendant — however unrelated — would silently
+   win and make a "hidden" board/article view render anyway. Pin it down
+   explicitly instead of relying on [hidden] alone. */
+.post-game-view[hidden] {
+    display: none !important;
+}
+
 .post-game-view--article {
     position: relative;
     padding: 1.5rem 1.25rem;
