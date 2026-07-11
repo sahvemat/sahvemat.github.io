@@ -1981,6 +1981,15 @@ pgn-player p {
 
 .post-article > p em { color: var(--accent); }
 
+.post-article a {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+}
+
+.post-article a:hover {
+    text-decoration-color: var(--fg);
+}
+
 .post-article > h2,
 .post-article > h3 {
     font-family: var(--font-display);
