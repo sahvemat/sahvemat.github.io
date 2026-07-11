@@ -404,21 +404,37 @@
         applyFont(pgn);
     }
 
+    // Poll until ChessPublica has actually parsed the PGN and rendered
+    // .pgn-container (the board/diagrams/arrows) inside a <pgn> element, or
+    // give up after ~5s. Shared with activateArticle below so the article's
+    // loading bar can stay up through this render pass too, not just
+    // through the network fetch.
+    function waitForPgnContainer(pgn) {
+        return new Promise(function (resolve) {
+            var attempts = 0;
+            var poll = function () {
+                var root = pgn.shadowRoot || pgn;
+                if (root.querySelector('.pgn-container') || attempts++ >= 50) {
+                    resolve();
+                } else {
+                    setTimeout(poll, 100);
+                }
+            };
+            poll();
+        });
+    }
+    window.__sahWaitPgnReady = waitForPgnContainer;
+
     function tryCleanAll() {
         document.querySelectorAll('.post-game-view--article pgn').forEach(function (pgn) {
             if (!pgn.dataset.sahCleaned) {
-                // Poll until .pgn-container exists (async PGN load)
-                var attempts = 0;
-                var poll = function () {
+                waitForPgnContainer(pgn).then(function () {
                     var root = pgn.shadowRoot || pgn;
                     if (root.querySelector('.pgn-container')) {
                         cleanPgnElement(pgn);
                         pgn.dataset.sahCleaned = '1';
-                    } else if (attempts++ < 50) {
-                        setTimeout(poll, 100);
                     }
-                };
-                poll();
+                });
             }
         });
     }
@@ -620,10 +636,21 @@
             var blob = new Blob([text], { type: 'application/x-chess-pgn' });
             var pgn = document.createElement('pgn');
             pgn.setAttribute('src', URL.createObjectURL(blob));
-            ph.parentNode.replaceChild(pgn, ph);
+            // Parsing the PGN and drawing each diagram/arrow is a real CPU
+            // cost for heavily annotated games (a couple of seconds), not
+            // just a network wait. Render it laid-out but invisible — not
+            // display:none, so ChessPublica's own size calculations still
+            // work — and keep the placeholder's loading bar up until
+            // .pgn-container actually appears, then reveal it in place.
+            pgn.style.cssText = 'position:absolute; top:0; left:0; width:100%; visibility:hidden; pointer-events:none;';
+            ph.parentNode.insertBefore(pgn, ph);
             if (window.ChessPublica && typeof window.ChessPublica.initAll === 'function') {
                 window.ChessPublica.initAll();
             }
+            return (window.__sahWaitPgnReady ? window.__sahWaitPgnReady(pgn) : Promise.resolve()).then(function () {
+                pgn.style.cssText = '';
+                if (ph.parentNode) ph.parentNode.removeChild(ph);
+            });
         }, function () {
             if (ph.parentNode) {
                 ph.classList.add('pgn-placeholder--error');
