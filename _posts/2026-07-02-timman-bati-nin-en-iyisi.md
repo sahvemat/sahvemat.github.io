@@ -30,9 +30,7 @@ Clarin turnuvasını 1979 senesinde Spassky ve Petrosian'ı da yenerek(!), 1980'
 
 Oyunun kendisi belki çok heyecan verici değil, ancak bu videoyu paylaşmama vesile oluyor:
 
-<div class="video-embed"><iframe src="https://www.youtube.com/embed/E48r-JTSAVM?start=1001" title="Timman, Andersson ve Ree" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-
-*Belgeselin bu bölümünde Timman, Andersson ve Ree sohbet ederken görülebilir.*
+<div class="video-embed" data-caption="Belgeselin bu bölümünde Timman, Andersson ve Ree sohbet ederken görülebilir."><iframe src="https://www.youtube.com/embed/E48r-JTSAVM?start=1001" title="Timman, Andersson ve Ree" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 
 Sade, teknik konumlara olan hakimiyeti nedeniyle bir oyunsonu efsanesi olarak anılan Andersson 1982 Clarin turnuvasını 1 kazanç ve 12 beraberlikle bitirmişti.
 

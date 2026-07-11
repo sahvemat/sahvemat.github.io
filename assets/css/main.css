@@ -2029,12 +2029,11 @@ pgn-player p {
     box-shadow: 8px 8px 0 0 var(--fg);
 }
 
+/* .video-embed is a <figure> (see main.js), so it already picks up
+   .post-article > figure's border/background/shadow/margin and the
+   figure figcaption's font/spacing — only the video-specific bits here. */
 .post-article > .video-embed {
-    margin: 2rem 0;
     aspect-ratio: 16 / 9;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    box-shadow: 8px 8px 0 0 var(--fg);
     overflow: hidden;
 }
 
