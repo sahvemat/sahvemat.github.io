@@ -780,6 +780,34 @@
     });
 })();
 
+// Inline PGN: a .post-game with no data-pgn attribute can instead carry its
+// PGN as the text of a child <script type="application/x-chess-pgn">, for
+// games that don't warrant a whole separate .pgn asset file. That <script>
+// is inert to the browser and already sits outside the quote-smartening
+// sweep above (SCRIPT is in its original SKIP_TAGS, not something added for
+// this), so header tags like [White "..."] keep their literal straight
+// quotes intact. Converted to a blob: URL and stashed as data-pgn so the
+// rest of the pipeline below — lazy loading, header parsing, board/article
+// views — doesn't need to know the difference from a fetched file.
+// Registered before the pipeline's own DOMContentLoaded handler below, so
+// it always runs first.
+(function () {
+    function inlineToBlob() {
+        document.querySelectorAll('.post-game:not([data-pgn])').forEach(function (game) {
+            var inline = game.querySelector('script[type="application/x-chess-pgn"]');
+            if (!inline) return;
+            var blob = new Blob([inline.textContent], { type: 'application/x-chess-pgn' });
+            game.dataset.pgn = URL.createObjectURL(blob);
+            inline.remove();
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', inlineToBlob);
+    } else {
+        inlineToBlob();
+    }
+})();
+
 (function () {
     var resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
 
