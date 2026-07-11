@@ -12,6 +12,8 @@ reading_time: 45
 
 Aşağıdaki 27 parti, Nazmi Can Doğan'ın lichess üzerinde hazırladığı ve Jan Timman'ın kariyerini gençlik yıllarından 1990'lara uzanan geniş bir yelpazede ele aldığı **TIMMAN** adlı çalışmadan aktarılmıştır.
 
+![Genç Timman]({{ '/assets/img/timman/portrait-lead.webp' | relative_url }} "Kariyerinin erken yıllarında Jan Timman.")
+
 ### Jan TIMMAN - Bent Larsen, Mar del Plata, 1982
 
 Dünyanın ilk on isminden beşinin katıldığı (Karpov, Timman, Polugaevsky, Portisch, Andersson) 1982 Mar del Plata turnuvası Timman'ın kariyerinin en önemli zaferlerinden biridir. Oysa öğretici eserleriyle tanınan GM Zenon Franco'nun aktardığına göre turnuvaya katılmadan önce Timman hastadır. İlk turu Bent Larsen'e kaybederek kötü bir başlangıç yapsa da Güney Amerika havasının kendisine yaradığını sonraki turlarda hissedecek ve Arjantin'de oynanan son Clarin turnuvasını kazanacaktı. Şampiyon şöyle diyordu:
@@ -41,6 +43,10 @@ Turnuva oynandığı sırada 71 yaşında olan Miguel Najdorf, yaşına rağmen 
 Kasparov şöyle aktarıyor:
 *"Najdorf, tıpkı Arjantin Şampiyonası'nda olduğu gibi defalarca birinci bitirdiği, geleneksel Buenos Aires ve Mar del Plata turnuvalarının ilham kaynağıydı. Daha sonraki yıllarda, yaşın ağırlığı kendini hissettirmeye başladığında, bu turnuvalara onur konuğu olarak katılırdı. Bazen masaların arasında dolaşıp pozisyonları büyük bir ilgiyle incelerken kendini kaybeder ve boş sandalyelerden birine oturuverirdi. Oyuncular gülümser, belki de içlerinden Najdorf’un tahtada aniden bir hamle yapıp yapmayacağını merak ederlerdi."*
 
+Konuyla doğrudan ilgisi olmasa da ilginç bir kare: Kasparov, Karpov ve Timman.
+
+![Kasparov, Karpov ve Timman]({{ '/assets/img/timman/kasparov-karpov-timman.jpg' | relative_url }} "Kasparov, Karpov ve Timman (soldan sağa), Amsterdam'da bir kanal köprüsünde.")
+
 <div class="post-game" id="timman-najdorf-1982" data-pgn="{{ '/assets/pgn/timman/03-timman-najdorf-1982.pgn' | relative_url }}"></div>
 
 ### Jan TIMMAN - Oscar Panno, [SITE], [YEAR]
@@ -65,6 +71,8 @@ Dünya'nın iki numarası için yine kazanılması gereken bir oyun. Henüz Ulus
 
 İkinci turda Andersson'a karşı olaysız geçen bir beraberenin ardından Timman, üçüncü turda siyah taşlarla mutlaka kazanması gereken bir karşılaşmaya çıkıyordu.
 
+![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında.")
+
 <div class="post-game" id="garcia-palermo-timman-1982" data-pgn="{{ '/assets/pgn/timman/07-garcia-palermo-timman-1982.pgn' | relative_url }}"></div>
 
 ### Jan TIMMAN - MIGUEL Angel QUINTEROS, Mar del Plata, 1982
@@ -76,6 +84,8 @@ Fischer'ın en yakın dostu ve yardımcısı Arjantinli Büyükusta Miguel Quint
 ### Lajos PORTISCH - Jan TIMMAN, Mar del Plata, 1982
 
 Timman'ın Macar Büyükusta Lajos Portisch ile olan partileri her zaman incelemeyi hak eder. Öyle ki, 1994 yılında yayınlanan ve kariyerinin 1983-1993 arasında oynadığı 80 oyuna odaklanan eseri "Chess the Adventurous Way" kitabında aralarında oynadıkları 3 oyuna yer vermiştir. Portisch turnuvaya 6 oyunda 5.5 puanla inanılmaz bir başlangıç yapmış, fakat 7. turda Timman'ı da yenen Larsen'e kaybetmişti.
+
+![Chess the Adventurous Way kapağı]({{ '/assets/img/timman/book-cover.jpg' | relative_url }} "Timman'ın 1983-1993 arasında oynadığı 80 oyuna odaklanan kitabı 'Chess the Adventurous Way'in kapağı.")
 
 Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Clarin'e şöyle demişti: *“Beyaz taşlarla oynayan Portisch'in her zaman zaferi hedefleyeceğini biliyordum. Dahası, sıralamada yarım puan geride olduğu için beni yakalamasının tek yolu kazanmaktı. Bu yüzden bu oyun önemliydi ve dikkatlice hazırlandım.”*
 
@@ -109,11 +119,15 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 <div class="post-game" id="timman-kostro-1971" data-pgn="{{ '/assets/pgn/timman/15-timman-kostro-1971.pgn' | relative_url }}"></div>
 
+![Timman, 1973]({{ '/assets/img/timman/portrait-1973.webp' | relative_url }} "Jan Timman, 1973 yılında; bu dönemde dünya sıralamasında ikinciliğe kadar yükselecekti.")
+
 ### Jan TIMMAN - Jorge Vos van ZALINGEN, Delft, 1966
 
 <div class="post-game" id="timman-vos-van-zalingen-1966" data-pgn="{{ '/assets/pgn/timman/16-timman-vos-van-zalingen-1966.pgn' | relative_url }}"></div>
 
-### Jan TIMMAN - VIKTOR Kortschnoj, [SITE], [YEAR]
+### Jan TIMMAN - VIKTOR Kortschnoj, [SITE], 1982
+
+![Timman - Korchnoi, 1982]({{ '/assets/img/timman/vs-korchnoi-1982.jpg' | relative_url }} "Timman, 1982 yılında Viktor Korchnoi'a karşı.")
 
 <div class="post-game" id="timman-kortschnoj" data-pgn="{{ '/assets/pgn/timman/17-timman-kortschnoj.pgn' | relative_url }}"></div>
 
@@ -135,6 +149,8 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 ### Gudmundur SIGurjonsson - Jan TIMMAN, Wijk aan Zee, 1980
 
+![Timman ve meslektaşları]({{ '/assets/img/timman/portrait-group.webp' | relative_url }} "Timman (solda), diğer büyükustalarla birlikte.")
+
 <div class="post-game" id="sigurjonsson-timman-1980" data-pgn="{{ '/assets/pgn/timman/22-sigurjonsson-timman-1980.pgn' | relative_url }}"></div>
 
 ### Taktik - Robert Huebner - Jan TIMMAN, Bugojno YUG, 1978
@@ -142,6 +158,8 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 <div class="post-game" id="huebner-timman-1978" data-pgn="{{ '/assets/pgn/timman/23-huebner-timman-1978.pgn' | relative_url }}"></div>
 
 ### Zoltan RIBLI - Jan TIMMAN, Amsterdam, 1978
+
+![Timman, 1977]({{ '/assets/img/timman/demo-1977.webp' | relative_url }} "Timman, 1977 yılında bir gösteri karşılaşmasını izlerken.")
 
 <div class="post-game" id="ribli-timman-1978" data-pgn="{{ '/assets/pgn/timman/24-ribli-timman-1978.pgn' | relative_url }}"></div>
 
