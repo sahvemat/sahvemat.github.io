@@ -2085,7 +2085,7 @@ figcaption > span {
 .post-article table {
     width: fit-content;
     max-width: 100%;
-    margin: 3rem 0;
+    margin: 3rem auto;
     border-collapse: collapse;
     background: var(--surface);
     border: 1px solid var(--line);
