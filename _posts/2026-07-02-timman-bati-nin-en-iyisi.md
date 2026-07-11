@@ -7,7 +7,7 @@ event: "1964–1995 · 27 Parti"
 excerpt: "Hollandalı Büyükusta Jan Timman'ın kariyerinden 27 parti: 1964'teki gençlik adımlarından 1982 Mar del Plata Clarin zaferine, klasik pozisyonel oyunlardan yıldırım taktiklere uzanan bir portre."
 date: 2026-07-02
 FEN: 4r1k1/1pQ3pp/2p2p2/P3n3/1q4b1/6P1/1P2PP1P/2RN1BK1 b - - 0 26
-reading_time: 45
+reading_time: 43
 ---
 
 Bu yazı, bir satranç efsanesinin yaşantısından küçük bir bölüme odaklanacak. Timman'ın reyting listesinde Dünya Şampiyonu Karpov'un ardından ikinci sırada yer aldığı 1982 senesine gideceğiz. Buenos Aires'in iyileştirici havasında Timman'ın partilerinin öğretici anlarına odaklanacağız. Yazının ikinci bölümünde ise, Timman'ın kariyerinin farklı bölümlerinden derlediğim öğretici konumlar yer alıyor.
@@ -56,7 +56,8 @@ Arjantin satrancına damga vuran 1935 doğumlu Büyükusta Oscar Panno, 1953'te 
 
 1950'li yıllarda yıldızı parlayan Oscar Panno, satranç gelişimi için materyalin bulunmadığı bir coğrafyada yaşıyordu. Arjantin'de Shakhmaty dergisinin sayılarını "1 yıl geriden" takip ediyorlar ve bu eksikliği kapatmak için yoğun çaba harcamak zorunda kalıyorlardı. 1956 yılında Adaylar Turnuvası'nda oynamaya hak kazanacak, fakat turnuva zamanına kadar askerlik görevini sürdürdüğü için turnuvaya hazırlanma şansı olmayacaktı. Belki de bu nedenle, Smyslov'un rahatça şampiyon olarak Botvinnik ile oynama hakkı elde ettiği turnuvada, sonuncu olan hemşerisi Pilnik'in önünde dokuzuncu olacaktı. Yıldızının parladığı yıllarda profesyonel satranç oynamak yerine mühendislik yapmayı tercih eden Panno, bu satırların yazarının da sevdiği Şah-Hint Savunması'nda hala sevilen bir varyanta adını vermiştir.
 
-Şu an aktif olmasa da kısa bir süre aktif kalan bir YouTube kanalı da bulunan Büyükusta Oscar Panno, İspanyolca içerikler üretmiş ve Aronian ve Anand gibi isimlerle analizler yapmıştı. Meraklısına: https://www.youtube.com/@GMOscarPanno
+Şu an aktif olmasa da kısa bir süre aktif kalan bir [YouTube kanalı](https://www.youtube.com/@GMOscarPanno) da bulunan Büyükusta Oscar Panno, İspanyolca içerikler üretmiş ve Aronian ve Anand gibi isimlerle analizler yapmıştı.
+
 1982'ye dönecel olursak, acaba Timman 0.5/2 ile başladığı turnuvanın geri kalanını 8/8 ile devam ettirebileceğini hayal edebilir miydi?
 
 <div class="post-game" id="timman-panno-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/8E813jMM.pgn"></div>
@@ -71,7 +72,7 @@ Ne olursa olsun, Timman'ın kariyerinde "favori oyunu" olarak gördüğü bir pa
 
 ### JAN TIMMAN - SERGIO CARLOS GIARDELLI, MAR DEL PLATA, 1982
 
-Dünya'nın iki numarası için yine kazanılması gereken bir oyun. Karşısında henüz Uluslararası Usta bile olmayan Arjantinli rakibi karşısında büyük reyting ve tecrübe farkının ortaya konması gerekiyordu.
+Dünyanın iki numarası için yine kazanılması gereken bir oyun. Karşısında henüz Uluslararası Usta bile olmayan Arjantinli rakibi karşısında büyük reyting ve tecrübe farkının ortaya konması gerekiyordu.
 
 Daha sonra Uluslararası Usta ünvanına kavuşacak Sergio Carlos Giardelli (1955-2015) bu turnuvada sonuncu olsa da, ülkesini olimpiyatlarda temsil etmiş ve ülke şampiyonasında dereceler elde etmiş Arjantin satrancının önemli isimlerindendi.
 
