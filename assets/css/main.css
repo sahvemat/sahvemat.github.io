@@ -2051,6 +2051,17 @@ pgn-player p {
     height: auto;
 }
 
+/* Photos start as plain <p><img title="..."></p> markup (kramdown's
+   image-with-title output) and only get wrapped into the styled <figure>
+   above by JS after the page parses. Constrain the raw markup too, so a
+   full-resolution photo (the source files run 1000-4000px wide) never
+   flashes at its native pixel size before that wrap runs. */
+.post-article p > img[title] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .post-article > figure figcaption {
     padding: 1rem 1.25rem;
     border-top: 1px solid var(--line);
