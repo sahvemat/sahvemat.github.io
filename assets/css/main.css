@@ -2288,15 +2288,18 @@ figcaption > span {
 
 /* Article ("Analizi oku") view placeholder: same loading bar, shorter box
    since it holds a move list rather than a board. It's stretched to an
-   absolute overlay covering the (still in-flow, still rendering) <pgn>
-   beneath it, so it physically obscures whatever ChessPublica shows while
-   loading — its own spinner included — rather than depending on the <pgn>
-   element's own opacity/visibility to stay hidden. min-height is a floor
-   for before <pgn> has any layout of its own to stretch to match. */
+   absolute overlay tracking the (still in-flow, still rendering) <pgn>
+   beneath it, so the bar always stays stacked above whatever ChessPublica
+   shows while loading — its own spinner included — instead of the two
+   racing for the same space. Transparent background so that spinner stays
+   visible underneath; only the bar itself needs to be on top. min-height
+   is a floor for before <pgn> has any layout of its own to stretch to
+   match. */
 .pgn-placeholder--article {
     position: absolute;
     inset: 0;
     min-height: 160px;
+    background: transparent;
 }
 
 /* Shown if the lichess.org fetch fails; stop the bar and surface the error. */
