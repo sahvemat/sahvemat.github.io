@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jan TIMMAN: Batı'nın En İyisi"
+title: "JAN TIMMAN: Batı'nın en iyisi"
 author: "Nazmi Can Doğan"
 section: "Klasikler"
 event: "1964–1995 · 27 Parti"
