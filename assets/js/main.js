@@ -762,7 +762,7 @@
 // (which already smartens quotes in post body text). Sweep the rendered
 // page once to curl them up too, skipping code and chess game content.
 (function () {
-    var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1 };
+    var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1, PGN: 1, PUZZLE: 1, 'PGN-PLAYER': 1 };
 
     function smartQuotes(str) {
         return str
