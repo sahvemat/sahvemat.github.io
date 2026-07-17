@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+<!-- ChessPublica's <pgn-study> CSS sets html:has(pgn-study)/body:has(pgn-study)
+     to overflow:hidden, assuming the element is the only thing on the page.
+     We embed it inline in longer articles, so undo that here (same selector,
+     later in the document than the CDN stylesheet — wins the cascade tie)
+     to keep the rest of the post reachable by normal scrolling. -->
+<style>
+html:has(pgn-study), body:has(pgn-study) {
+    height: auto;
+    overflow: visible;
+}
+</style>
 <article class="post-article">
 
 <header class="post-hero">
