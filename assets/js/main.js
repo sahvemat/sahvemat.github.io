@@ -1194,6 +1194,43 @@
             fitHeight(study);
             readyStudies.push(study);
 
+            // The panel stays invisible (see main.css:
+            // .cp-ready:not(.sah-fitted)) from the moment ChessPublica
+            // marks it ready until this class lands, so a reader never
+            // sees ChessPublica's own unfitted defaults — a noticeably
+            // larger board at the wrong column width — painted even for
+            // a moment before the fit above corrects it. Custom web
+            // fonts can still be loading at this point, though, and the
+            // ribbon/title's text metrics factor into the fit; if fonts
+            // are still pending, wait for them and re-fit once they've
+            // settled before revealing, so the *first* thing a reader
+            // ever sees is the final, correct layout rather than one
+            // sized against fallback-font metrics that then visibly
+            // reflows once the real font swaps in.
+            function reveal() {
+                study.classList.add('sah-fitted');
+            }
+            if (document.fonts && document.fonts.status !== 'loaded') {
+                var revealed = false;
+                var refitAndReveal = function () {
+                    if (revealed) return;
+                    revealed = true;
+                    fitWidth(study);
+                    fitHeight(study);
+                    reveal();
+                };
+                // document.fonts.ready never resolving (a blocked font
+                // CDN, an ad-blocker, a flaky connection) must not hide
+                // the panel forever — fall back to revealing with
+                // whatever fit is already in place, on a timer, rather
+                // than waiting indefinitely for fonts that may never
+                // arrive.
+                setTimeout(refitAndReveal, 1500);
+                document.fonts.ready.then(refitAndReveal);
+            } else {
+                reveal();
+            }
+
             // Dragging is tracked here so the ResizeObserver below (which
             // also fires from the board-size changes a drag causes, via
             // 94cqw) defers to the lighter drag-time cap instead of

@@ -2463,6 +2463,23 @@ details.game-note > .post-game {
     max-width: 100%;
     height: min(720px, 78vh);
     margin: 3rem 0;
+    transition: opacity 0.2s ease-out;
+}
+
+/* ChessPublica's own CDN script loads render-blocking (see
+   _layouts/default.html — main.js is deferred, but ChessPublica's own
+   <script> tag isn't), so main.js can be well behind by the time
+   ChessPublica marks a study .cp-ready and it starts painting at its
+   own defaults: a notably wider column and taller board than the fit
+   above ultimately settles on. Without this, a reader would see that —
+   a big board that visibly shrinks into place a moment later — instead
+   of the fit only ever happening off-screen. main.js adds .sah-fitted
+   once its first fit (and, if custom fonts were still loading, a
+   second one against their real metrics) has actually landed; until
+   then, the whole panel stays invisible rather than mid-sized-wrong. */
+.post-article > pgn-study.cp-ready:not(.sah-fitted) {
+    opacity: 0;
+    pointer-events: none;
 }
 
 @media (min-width: 768px) {
