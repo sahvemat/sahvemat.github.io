@@ -966,14 +966,14 @@
 (function () {
     // pgn-study sets its own initial --left-col-width to a fixed ~638px
     // cap the moment it becomes ready, regardless of how wide the board
-    // itself actually rendered — our own --board-size override (main.css)
-    // can make the board considerably narrower than that on shorter
-    // viewports, leaving dead space in the board column and needlessly
-    // squeezing the article column. Once a study is ready (board already
-    // sized), point the divider at the board's own real width instead —
-    // the same place a reader dragging it to fit would land on anyway.
-    // Only the initial position is corrected; a reader's own drag afterward
-    // is left alone.
+    // itself actually rendered — inside our article width (capped well
+    // below ChessPublica's own 90vw full-page assumption), the board can
+    // render considerably narrower than that, leaving dead space in the
+    // board column and needlessly squeezing the article column. Once a
+    // study is ready (board already sized), point the divider at the
+    // board's own real width instead — the same place a reader dragging
+    // it to fit would land on anyway. Only the initial position is
+    // corrected; a reader's own drag afterward is left alone.
     //
     // --board-size includes a `94cqw` term measured against pgn-player's
     // own inline-size — which --left-col-width itself controls. Naively
@@ -986,7 +986,7 @@
     // width instead of pinching it — same 94% divisor CSS uses, run in
     // reverse, plus a rounding buffer so it can't land exactly on the
     // boundary either.
-    function fit(study) {
+    function fitWidth(study) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         var player = study.querySelector('pgn-player');
         var wrap = study.querySelector('.board-wrap');
@@ -1000,14 +1000,46 @@
         study.style.setProperty('--left-col-width', (contentBoxNeeded + pad) + 'px');
     }
 
+    // The left column (board + ribbon, and — once playback reaches a
+    // [P]/[Pn] move — the puzzle hint row below the board) must never need
+    // its own scroll; the panel should grow to fit it instead. pgn-player's
+    // own scrollHeight already reflects that real, unclipped content size
+    // regardless of whatever height the panel currently has, so read it
+    // directly rather than summing up ChessPublica's internal padding/
+    // margin choices by hand. A ResizeObserver on .player-wrapper (the
+    // actual content, sized independently of the panel's own height) keeps
+    // this in sync for as long as the page is open, not just on load —
+    // the hint row can appear well after the initial fit, mid-playback.
+    function fitHeight(study) {
+        if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
+        var player = study.querySelector('pgn-player');
+        if (!player) return;
+        var studyRect = study.getBoundingClientRect();
+        var playerRect = player.getBoundingClientRect();
+        var padBottom = parseFloat(getComputedStyle(study).paddingBottom || 0);
+        var needed = (playerRect.top - studyRect.top) + player.scrollHeight + padBottom;
+        if (!needed) return;
+        study.style.height = needed + 'px';
+    }
+
     function watch(study) {
         if (study.dataset.sahDividerFit) return;
         study.dataset.sahDividerFit = '1';
-        if (study.classList.contains('cp-ready')) { fit(study); return; }
+
+        function ready() {
+            fitWidth(study);
+            fitHeight(study);
+            var wrapper = study.querySelector('.player-wrapper');
+            if (wrapper && window.ResizeObserver) {
+                new ResizeObserver(function () { fitHeight(study); }).observe(wrapper);
+            }
+        }
+
+        if (study.classList.contains('cp-ready')) { ready(); return; }
         var mo = new MutationObserver(function () {
             if (study.classList.contains('cp-ready')) {
                 mo.disconnect();
-                fit(study);
+                ready();
             }
         });
         mo.observe(study, { attributes: true, attributeFilter: ['class'] });
