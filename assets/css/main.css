@@ -2735,26 +2735,29 @@ details.game-note > .post-game {
     padding-left: 0.6rem;
 }
 
-/* pgn-study ribbon: restyle the toolbar to match the site's own dark
-   editorial header bars (.post-game-header, .post-colophon) instead of
-   ChessPublica's neutral white/gray default. ChessPublica's own rule
-   (pgn-study.cp-ready > .pgn-study-ribbon) ties this selector's
-   specificity exactly — .cp-ready here isn't for correctness (the ribbon
-   is already display:none until then) but to win that tie, since
-   main.css loads before the CDN stylesheet in <head>. */
+/* pgn-study ribbon: restyle the toolbar to read as one of the site's own
+   editorial bars instead of ChessPublica's neutral white/gray default.
+   Unlike .post-game-header/.post-colophon (permanently-dark slabs), the
+   ribbon is the only thing left on screen once a study is collapsed, so
+   it uses the theme-adaptive tokens (--surface/--fg) and flips light/dark
+   with the rest of the page rather than staying a fixed dark bar.
+   ChessPublica's own rule (pgn-study.cp-ready > .pgn-study-ribbon) ties
+   this selector's specificity exactly — .cp-ready here isn't for
+   correctness (the ribbon is already display:none until then) but to win
+   that tie, since main.css loads before the CDN stylesheet in <head>. */
 .post-article pgn-study.cp-ready > .pgn-study-ribbon {
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--surface);
+    color: var(--fg);
     border-bottom: 2px solid var(--accent);
 }
 
 .post-article pgn-study .pgn-study-ribbon-btn {
-    color: var(--paper);
+    color: var(--fg);
     border-radius: 999px;
 }
 
 .post-article pgn-study .pgn-study-ribbon-btn:hover:not(:disabled) {
-    background: rgba(253, 252, 248, 0.14);
+    background: var(--border-12);
 }
 
 .post-article pgn-study .pgn-study-ribbon-btn:disabled {
@@ -2771,25 +2774,25 @@ details.game-note > .post-game {
 }
 
 .post-article pgn-study .pgn-study-ribbon-title .lucide-icon {
-    color: var(--paper);
+    color: var(--fg);
 }
 
 .post-article pgn-study .pgn-study-ribbon-title-text {
-    color: var(--paper);
+    color: var(--fg);
     font-family: var(--font-sans);
 }
 
 .post-article pgn-study .pgn-study-ribbon-title-subtext {
-    color: rgba(253, 252, 248, 0.65);
+    color: var(--slate);
 }
 
-/* The table of contents/settings panels drop down from the (now dark)
-   ribbon — give them the article's own paper surface rather than
-   inheriting the ribbon's ink background, so ChessPublica's own text
-   colors for their contents stay legible without touching each one. */
+/* The table of contents/settings panels drop down from the ribbon —
+   give them the article's own surface rather than inheriting the
+   ribbon's background, so ChessPublica's own text colors for their
+   contents stay legible without touching each one. */
 .post-article pgn-study .pgn-study-toc-accordion.open {
-    background: var(--paper);
-    color: var(--ink);
+    background: var(--surface);
+    color: var(--fg);
     margin: 0.5rem calc(-1 * var(--frame-pad)) calc(-1 * var(--frame-pad));
     padding: 0.75rem var(--frame-pad);
 }
