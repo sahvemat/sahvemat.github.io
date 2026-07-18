@@ -1002,25 +1002,71 @@
 
     // The left column (board + ribbon, and — once playback reaches a
     // [P]/[Pn] move — the puzzle hint row below the board) must never need
-    // its own scroll; the panel should grow to fit it instead. pgn-player's
-    // own scrollHeight already reflects that real, unclipped content size
-    // regardless of whatever height the panel currently has, so read it
-    // directly rather than summing up ChessPublica's internal padding/
-    // margin choices by hand. A ResizeObserver on .player-wrapper (the
-    // actual content, sized independently of the panel's own height) keeps
-    // this in sync for as long as the page is open, not just on load —
-    // the hint row can appear well after the initial fit, mid-playback.
+    // its own scroll; the panel grows to fit it instead of clipping it.
+    // But it must also never grow past what the viewport can actually
+    // show at once — the whole element, ribbon included, has to be
+    // visible without scrolling the page — so there's a ceiling: if the
+    // board's natural size would make the panel taller than the visible
+    // viewport (minus the sticky header, which still eats into it), the
+    // board itself is capped down until the panel just clears it.
+    //
+    // Always re-measure from the *natural*, uncapped board size first
+    // (clearing any cap this function applied on a previous run) rather
+    // than shrinking further from whatever's currently applied — content
+    // that shrinks later (e.g. a puzzle hint row going away) should let
+    // the board grow back, not stay pinned at its smallest-ever size.
+    // pgn-player's own scrollHeight reflects the real, unclipped content
+    // height regardless of the panel's current height, so read it
+    // directly instead of summing up ChessPublica's internal padding/
+    // margin choices by hand. A ResizeObserver on .player-wrapper (sized
+    // independently of the panel's own height) keeps this in sync for as
+    // long as the page is open — re-applying only when the computed
+    // height actually changes, so settling into a stable size doesn't
+    // keep re-triggering itself.
     function fitHeight(study) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         var player = study.querySelector('pgn-player');
         if (!player) return;
-        var studyRect = study.getBoundingClientRect();
+
+        player.style.removeProperty('--board-size');
+        var studyTop = study.getBoundingClientRect().top;
         var playerRect = player.getBoundingClientRect();
         var padBottom = parseFloat(getComputedStyle(study).paddingBottom || 0);
-        var needed = (playerRect.top - studyRect.top) + player.scrollHeight + padBottom;
-        if (!needed) return;
-        study.style.height = needed + 'px';
+        var offset = playerRect.top - studyTop;
+        var naturalTotal = offset + player.scrollHeight + padBottom;
+        if (!naturalTotal) return;
+
+        var header = document.querySelector('.main-header');
+        var available = window.innerHeight -
+            (header ? header.getBoundingClientRect().height : 0) - 16;
+
+        var targetHeight = naturalTotal;
+        if (naturalTotal > available) {
+            var wrap = study.querySelector('.board-wrap');
+            var board = wrap && wrap.querySelector('[class*="board-"]');
+            var naturalBoardHeight = board ? board.getBoundingClientRect().height : 0;
+            if (naturalBoardHeight) {
+                var overhead = naturalTotal - naturalBoardHeight;
+                // No real floor here beyond "not zero/negative" — a study
+                // never scrolling its left column (see above) takes
+                // priority over keeping the board above some minimum
+                // comfortable size, in the rare viewport short enough to
+                // force the choice.
+                var cappedBoard = Math.max(40, available - overhead);
+                player.style.setProperty('--board-size', cappedBoard + 'px');
+                targetHeight = Math.min(available, offset + player.scrollHeight + padBottom);
+            }
+        }
+
+        targetHeight = Math.round(targetHeight);
+        if (study.dataset.sahLastHeight !== String(targetHeight)) {
+            study.dataset.sahLastHeight = String(targetHeight);
+            study.style.height = targetHeight + 'px';
+            fitWidth(study);
+        }
     }
+
+    var readyStudies = [];
 
     function watch(study) {
         if (study.dataset.sahDividerFit) return;
@@ -1029,6 +1075,7 @@
         function ready() {
             fitWidth(study);
             fitHeight(study);
+            readyStudies.push(study);
             var wrapper = study.querySelector('.player-wrapper');
             if (wrapper && window.ResizeObserver) {
                 new ResizeObserver(function () { fitHeight(study); }).observe(wrapper);
@@ -1044,6 +1091,23 @@
         });
         mo.observe(study, { attributes: true, attributeFilter: ['class'] });
     }
+
+    // fitHeight's viewport-fit budget depends on the sticky header's
+    // current height, which shrinks once the page scrolls (see the
+    // header-scroll handler above) — typically well after a study has
+    // already run its initial, more conservative fit against the
+    // header's still-full-size height. Re-run it as scrolling settles so
+    // the board can grow into the room the header frees up, without
+    // recalculating on every scroll tick.
+    var scrollFitPending = false;
+    window.addEventListener('scroll', function () {
+        if (scrollFitPending) return;
+        scrollFitPending = true;
+        requestAnimationFrame(function () {
+            scrollFitPending = false;
+            readyStudies.forEach(fitHeight);
+        });
+    }, { passive: true });
 
     document.querySelectorAll('pgn-study').forEach(watch);
     new MutationObserver(function (records) {
