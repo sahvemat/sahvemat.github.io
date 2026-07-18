@@ -1146,7 +1146,16 @@
     }
 
     function fitHeight(study) {
-        capHeight(study, true);
+        // Once a reader has manually dragged a study's divider (flagged
+        // on the element itself, below, so it's visible from both the
+        // per-study drag handlers and this shared function), every
+        // *automatic* re-fit from here on — the ResizeObserver reacting
+        // to a puzzle hint row or variation picker appearing, or the
+        // scroll listener below reacting to the sticky header shrinking —
+        // must stop resetting --left-col-width back to the auto-computed
+        // value. Content changes still need to keep adjusting the height
+        // and board cap, just never the column position the reader chose.
+        capHeight(study, !study.dataset.sahManualWidth);
     }
 
     var readyStudies = [];
@@ -1178,25 +1187,94 @@
             var resizer = study.querySelector('.pgn-study-resizer');
             if (resizer) {
                 var dragCapPending = false;
+                // ChessPublica's own pointermove handler on this same
+                // element (registered first, when the component was set
+                // up, so it runs before ours on every event) writes
+                // --left-col-width straight from the pointer position,
+                // clamped only by its own container-width-based ceiling —
+                // it knows nothing about our viewport-height cap. Left
+                // alone, the reader could keep dragging the divider well
+                // past the point the board actually stops growing, into
+                // dead space. maxColWidthDuringDrag is the column-width
+                // equivalent of the last-known --sah-max-board-h ceiling;
+                // clampColumnWidth() pulls a too-wide column back down to
+                // it synchronously, in the same tick as ChessPublica's own
+                // write, so the divider itself stops right there instead
+                // of the board just quietly refusing to follow it.
+                var maxColWidthDuringDrag = null;
+
+                function computeMaxColWidth(cappedBoardPx) {
+                    var player = study.querySelector('pgn-player');
+                    var pad = parseFloat(getComputedStyle(player).paddingLeft || 0) +
+                        parseFloat(getComputedStyle(player).paddingRight || 0);
+                    return cappedBoardPx / 0.94 + 2 + pad;
+                }
+
+                function clampColumnWidth() {
+                    if (maxColWidthDuringDrag == null) return;
+                    var current = parseFloat(
+                        getComputedStyle(study).getPropertyValue('--left-col-width')
+                    );
+                    if (current > maxColWidthDuringDrag) {
+                        study.style.setProperty('--left-col-width', maxColWidthDuringDrag + 'px');
+                    }
+                }
+
                 resizer.addEventListener('pointerdown', function () {
                     dragging = true;
+                    maxColWidthDuringDrag = null;
                 });
                 resizer.addEventListener('pointermove', function () {
-                    if (!dragging || dragCapPending) return;
+                    if (!dragging) return;
+                    study.dataset.sahManualWidth = '1';
+                    clampColumnWidth();
+                    if (dragCapPending) return;
                     dragCapPending = true;
                     requestAnimationFrame(function () {
                         dragCapPending = false;
-                        if (dragging) capHeight(study, false);
+                        if (!dragging) return;
+                        capHeight(study, false);
+                        // capHeight just recomputed --sah-max-board-h (or
+                        // cleared it, if the column no longer needs
+                        // capping) from the column's current width —
+                        // convert it to the equivalent column-width
+                        // ceiling so the very next raw pointermove above
+                        // can clamp against it immediately, rather than
+                        // waiting a full frame for this throttled pass to
+                        // come back around.
+                        var maxBoardH = parseFloat(
+                            getComputedStyle(study).getPropertyValue('--sah-max-board-h')
+                        );
+                        maxColWidthDuringDrag = maxBoardH ? computeMaxColWidth(maxBoardH) : null;
+                        clampColumnWidth();
                     });
                 });
                 var stopDrag = function () {
                     if (!dragging) return;
-                    dragging = false;
+                    clampColumnWidth();
                     // Final settle now that throttling is done — the
                     // column itself is left exactly where the reader put
                     // it (resetColumn: false), only the height/cap are
-                    // confirmed.
+                    // confirmed. Crucially, `dragging` stays true through
+                    // this call: it resizes .player-wrapper itself (via
+                    // --sah-max-board-h/resizeBoard()), which re-triggers
+                    // the very same ResizeObserver this flag guards.
+                    // Clearing the flag first let that self-triggered
+                    // notification through, which ran the *full* auto-fit
+                    // and reset the column right back — undoing the drag
+                    // a moment after releasing it. Per spec, a resize
+                    // observer fires *after* this frame's rAF callbacks,
+                    // so a single rAF isn't late enough to be sure we've
+                    // been notified and ignored it; a rAF nested inside
+                    // another one is guaranteed to land in the *next*
+                    // frame, after this one's delivery has already
+                    // happened.
                     capHeight(study, false);
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            dragging = false;
+                        });
+                    });
                 };
                 resizer.addEventListener('pointerup', stopDrag);
                 resizer.addEventListener('pointercancel', stopDrag);
