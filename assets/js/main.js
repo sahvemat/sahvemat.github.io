@@ -1085,6 +1085,21 @@
     // mid-interaction.
     function capHeight(study, resetColumn) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
+        if (study.classList.contains('pgn-study-collapsed')) {
+            // Collapsed rides on ChessPublica's own height: auto (see
+            // main.css) — an inline height left over from before
+            // collapsing (or one this very function set moments
+            // earlier) would override that regardless of specificity,
+            // since an inline style always wins over any stylesheet
+            // rule. That's what left a tall blank gap below the
+            // now-collapsed ribbon where the hidden board/article used
+            // to be. Collapsing hides pgn-player, which is itself a
+            // resize of the .player-wrapper ResizeObserver below — so
+            // this runs right away rather than waiting on some
+            // unrelated later re-fit to clear the stale value.
+            study.style.removeProperty('height');
+            return;
+        }
         var player = study.querySelector('pgn-player');
         var wrapper = study.querySelector('.player-wrapper');
         if (!player || !wrapper) return;

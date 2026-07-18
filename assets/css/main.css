@@ -2458,11 +2458,19 @@ details.game-note > .post-game {
    grows to fit that content instead of clipping it; only the article
    column (much longer, expected to scroll) keeps ChessPublica's own
    overflow-y: auto. */
+/* Same brutalist card treatment as figures/tables/.post-game: flat
+   border + offset shadow, so pgn-study reads as the same kind of
+   embedded object rather than ChessPublica's own generic gray-border
+   default. Higher specificity than ChessPublica's own pgn-study rule
+   (0,0,1) wins regardless of stylesheet load order. */
 .post-article > pgn-study {
     width: 100%;
     max-width: 100%;
     height: min(720px, 78vh);
     margin: 3rem 0;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 8px 8px 0 0 var(--fg);
     transition: opacity 0.2s ease-out;
 }
 
@@ -2480,6 +2488,35 @@ details.game-note > .post-game {
 .post-article > pgn-study.cp-ready:not(.sah-fitted) {
     opacity: 0;
     pointer-events: none;
+}
+
+/* ChessPublica's own collapsed layout (margin-left: 5vw, width:
+   fit-content, max-width: 90vw) assumes pgn-study's other context — a
+   near-fullscreen panel sitting alone on a page, where indenting and
+   shrinking the collapsed bar reads as centering it. Inside the
+   article's own column it just reads as a misaligned indent relative
+   to every other card (figures, tables, .post-game) sitting flush at
+   the column edge. Collapsed keeps the same full-width, flush
+   alignment as expanded instead. */
+.post-article > pgn-study.pgn-study-collapsed {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    /* pgn-study's own bottom padding is meant for whatever's below the
+       ribbon when expanded — collapsed hides all of that, so it just
+       leaves a blank strip the same height as the padding. */
+    padding-bottom: 0;
+}
+
+/* ChessPublica's own collapsed override for this (margin-bottom: 0)
+   never actually applies: it and pgn-study.cp-ready > .pgn-study-ribbon
+   (which sets a full margin shorthand, including a 1rem bottom, and
+   comes later in their stylesheet) tie in specificity, and the later
+   rule wins a tie regardless of which one is semantically meant for the
+   current state. Same fix, just specific enough to actually stick. */
+.post-article > pgn-study.pgn-study-collapsed > .pgn-study-ribbon {
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
