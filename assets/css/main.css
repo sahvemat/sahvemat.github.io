@@ -2689,6 +2689,20 @@ details.game-note > .post-game {
     .post-article pgn-study pgn-player .video-comment {
         display: block;
     }
+
+    /* ChessPublica adds its own floating play/replay button to
+       .video-comment whenever the current comment belongs to a
+       variation with more to play — redundant here, since the
+       ribbon's own play/pause button (data-ribbon-action="toggle-play")
+       already does the same job and is the one control a reader
+       already knows about. Un-hiding .video-comment for mobile above
+       means this button, meant for ChessPublica's standalone
+       pgn-player (no ribbon of its own), now shows up too; hide it
+       specifically rather than pull in a second, overlapping way to
+       start playback. */
+    .post-article pgn-study pgn-player .video-comment .comment-play-btn {
+        display: none;
+    }
 }
 
 /* Active-comment highlight: ChessPublica's default is a pale-yellow
