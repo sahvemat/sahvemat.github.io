@@ -2471,6 +2471,43 @@ details.game-note > .post-game {
     }
 }
 
+/* On mobile, main.js's fit never runs (gated to >=900px — the
+   resizable two-column layout it manages doesn't exist there), so the
+   720px/78vh placeholder above is the *live* height there, not just a
+   starting point main.js immediately overrides. Board content varies a
+   lot in height on mobile now that the active move's comment shows
+   under the board (see .video-comment below): some comments run to a
+   couple of sentences. A fixed height, combined with pgn-player's own
+   overflow-y: auto, meant a long comment just got its own internal
+   scrollbar instead of the panel growing to show it — the same problem
+   the desktop fit exists to avoid. Auto height lets the panel grow (and
+   shrink) with whatever's actually inside it on mobile too, just via
+   plain CSS since there's no resizable column here for JS to coordinate
+   against.
+
+   Scoped to :not(.mobile-article-view): the article view is a separate
+   mobile state (board and article are never both visible at once here)
+   that's meant to behave like a normal reader pane — long, and expected
+   to scroll within a bounded panel, same as the article column already
+   does on desktop — so it keeps the fixed 720px/78vh height instead.
+
+   pgn-player's own flex: 1 1 0 (ChessPublica's, sized to fill whatever
+   space a *fixed*-height pgn-study leaves it) is overridden to flex-basis:
+   auto alongside this: flex-basis: 0 inside an auto-height flex container
+   has no content to size from until grow/shrink resolve it, and pgn-player
+   also has overflow-y: auto, which per spec suppresses a flex item's usual
+   content-based automatic minimum size — the combination let it collapse
+   toward zero instead of sizing to the board underneath. flex-basis: auto
+   sizes it from its own content first, sidestepping that. */
+@media (max-width: 899px) {
+    .post-article > pgn-study:not(.mobile-article-view) {
+        height: auto;
+    }
+    .post-article pgn-study > pgn-player {
+        flex: 1 1 auto;
+    }
+}
+
 /* ChessPublica's base .player-wrapper carries a min-height: 500px, sized
    for pgn-player's own standalone layout (title + board + move list +
    comment, all stacked). Inside pgn-study that whole area is hidden by
