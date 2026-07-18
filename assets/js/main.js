@@ -962,3 +962,65 @@
         init();
     }
 })();
+
+(function () {
+    // pgn-study sets its own initial --left-col-width to a fixed ~638px
+    // cap the moment it becomes ready, regardless of how wide the board
+    // itself actually rendered — our own --board-size override (main.css)
+    // can make the board considerably narrower than that on shorter
+    // viewports, leaving dead space in the board column and needlessly
+    // squeezing the article column. Once a study is ready (board already
+    // sized), point the divider at the board's own real width instead —
+    // the same place a reader dragging it to fit would land on anyway.
+    // Only the initial position is corrected; a reader's own drag afterward
+    // is left alone.
+    //
+    // --board-size includes a `94cqw` term measured against pgn-player's
+    // own inline-size — which --left-col-width itself controls. Naively
+    // setting the column to exactly the board's current width makes 94cqw
+    // resolve smaller than the board itself, so the container query
+    // shrinks the board again — chasing a shrinking target down to a tiny
+    // fraction of what it should be. Read the board's width once, while
+    // ChessPublica's own (wide, non-constraining) default column is still
+    // in effect, then size the column so 94cqw comfortably clears that
+    // width instead of pinching it — same 94% divisor CSS uses, run in
+    // reverse, plus a rounding buffer so it can't land exactly on the
+    // boundary either.
+    function fit(study) {
+        if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
+        var player = study.querySelector('pgn-player');
+        var wrap = study.querySelector('.board-wrap');
+        var board = wrap && wrap.querySelector('[class*="board-"]');
+        if (!player || !board) return;
+        var boardWidth = board.getBoundingClientRect().width;
+        if (!boardWidth) return;
+        var pad = parseFloat(getComputedStyle(player).paddingLeft || 0) +
+            parseFloat(getComputedStyle(player).paddingRight || 0);
+        var contentBoxNeeded = boardWidth / 0.94 + 2;
+        study.style.setProperty('--left-col-width', (contentBoxNeeded + pad) + 'px');
+    }
+
+    function watch(study) {
+        if (study.dataset.sahDividerFit) return;
+        study.dataset.sahDividerFit = '1';
+        if (study.classList.contains('cp-ready')) { fit(study); return; }
+        var mo = new MutationObserver(function () {
+            if (study.classList.contains('cp-ready')) {
+                mo.disconnect();
+                fit(study);
+            }
+        });
+        mo.observe(study, { attributes: true, attributeFilter: ['class'] });
+    }
+
+    document.querySelectorAll('pgn-study').forEach(watch);
+    new MutationObserver(function (records) {
+        records.forEach(function (r) {
+            r.addedNodes.forEach(function (n) {
+                if (n.nodeType !== 1) return;
+                if (n.tagName === 'PGN-STUDY') watch(n);
+                if (n.querySelectorAll) n.querySelectorAll('pgn-study').forEach(watch);
+            });
+        });
+    }).observe(document.body, { childList: true, subtree: true });
+})();
