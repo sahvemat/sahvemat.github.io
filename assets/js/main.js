@@ -1011,56 +1011,92 @@
     // viewport (minus the sticky header, which still eats into it), the
     // board itself is capped down until the panel just clears it.
     //
-    // Always re-measure from the *natural*, uncapped board size first
-    // (clearing any cap this function applied on a previous run, and the
-    // column width along with it) rather than shrinking further from
-    // whatever's currently applied — content that shrinks later (e.g. a
-    // puzzle hint row going away) should let the board grow back, not
-    // stay pinned at its smallest-ever size.
-    // pgn-player's own scrollHeight reflects the real, unclipped content
-    // height regardless of the panel's current height, so read it
-    // directly instead of summing up ChessPublica's internal padding/
-    // margin choices by hand. A ResizeObserver on .player-wrapper (sized
-    // independently of the panel's own height) keeps this in sync for as
-    // long as the page is open — the hint row and variation picker can
-    // both appear well after the initial fit, mid-interaction.
-    function fitHeight(study) {
+    // The cap is applied as --sah-max-board-h, a CSS custom property
+    // --board-size itself folds into a min() (see main.css) alongside
+    // ChessPublica's own width-based min(600px, 94cqw) — rather than
+    // overriding --board-size directly. That means the ceiling applies
+    // live to *any* width change automatically, including a reader
+    // dragging the resizer wider (see the drag handling in ready() below)
+    // — the board just stops growing once it hits the ceiling, with no
+    // need to re-run this whole measurement on every pointermove.
+    //
+    // resetColumn is true for automatic fits (initial load, content
+    // changes) and false while a reader is actively dragging the
+    // resizer — dragging must never fight the reader by resetting
+    // --left-col-width out from under their cursor; only --sah-max-board-h
+    // is touched in that case, and fitWidth() is skipped entirely so the
+    // column stays exactly where they put it.
+    //
+    // Always clear the previous --sah-max-board-h before re-measuring —
+    // otherwise a stale (possibly now-too-restrictive) cap would read
+    // back a board smaller than the current width could actually
+    // support, and content that later needs less room (a puzzle hint row
+    // going away) — or a column dragged wider — would never be able to
+    // grow the board back.
+    //
+    // .player-wrapper's own rendered size is used instead of
+    // pgn-player's scrollHeight: scrollHeight does not reliably reflect
+    // a --board-size change here (confirmed by direct measurement —
+    // chessboardjs's internal square elements lag behind the resize()
+    // call by at least a frame, even though the container's own CSS
+    // width/height and getBoundingClientRect() already reflect it).
+    // Trusting scrollHeight sent an earlier version of this function
+    // into a runaway shrink spiral: it read the still-stale, larger
+    // scrollHeight as "content grew", capped the board smaller in
+    // response, and kept doing so every iteration since scrollHeight
+    // never actually caught up — bottoming out at the floor for no
+    // reason. A ResizeObserver on .player-wrapper keeps the automatic
+    // path in sync for as long as the page is open — the hint row and
+    // variation picker can both appear well after the initial fit,
+    // mid-interaction.
+    function capHeight(study, resetColumn) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         var player = study.querySelector('pgn-player');
-        if (!player) return;
+        var wrapper = study.querySelector('.player-wrapper');
+        if (!player || !wrapper) return;
 
         function resizeBoard() {
             // --board-size only reactively resizes .player-wrapper's CSS
             // width — chessboardjs (the actual board underneath) computes
             // its square pixel sizes from that container once and doesn't
             // re-read them on its own (same limitation the .post-game
-            // pgn-player refit() above works around). Without forcing it
-            // to resize on every change below, the visible board lags a
-            // frame or more behind whatever this function just computed
-            // from its current (momentarily stale) rendered size — which
-            // is what actually produced the flicker: each re-fit landing
-            // on a different wrong answer because the board hadn't caught
-            // up to the previous one yet.
+            // pgn-player refit() above works around).
             var engine = player._engine;
             if (engine && engine.board && typeof engine.board.resize === 'function') {
                 try { engine.board.resize(); } catch (e) {}
             }
         }
 
-        // --board-size includes a 94cqw term read against the column's
-        // own current width, so leaving a column that was narrowed for a
-        // *previous* cap in place here would corrupt this measurement:
-        // it'd read back a board smaller than the page can actually fit,
-        // which then gets capped again from that already-wrong number.
-        player.style.removeProperty('--board-size');
-        study.style.removeProperty('--left-col-width');
+        function measure() {
+            var playerStyle = getComputedStyle(player);
+            var playerPad = parseFloat(playerStyle.paddingTop || 0) +
+                parseFloat(playerStyle.paddingBottom || 0);
+            var studyTop = study.getBoundingClientRect().top;
+            var playerTop = player.getBoundingClientRect().top;
+            var padBottom = parseFloat(getComputedStyle(study).paddingBottom || 0);
+            var wrapperHeight = wrapper.getBoundingClientRect().height;
+            // The move-picker is .player-wrapper's last block child, and
+            // .player-wrapper (overflow: visible, no BFC of its own) can't
+            // stop the picker's own bottom margin from collapsing straight
+            // through its own bottom edge — regardless of whether the
+            // picker currently has any content. That margin never shows up
+            // in wrapper's rect height, only to reappear as trapped,
+            // unaccounted-for scroll space once pgn-player's own
+            // overflow: auto (which *does* form a BFC) finally stops it
+            // escaping any further. Add it back in by hand so player never
+            // ends up needing to scroll just to show it.
+            var picker = wrapper.querySelector('.pgn-study-move-picker');
+            if (picker) {
+                wrapperHeight += parseFloat(getComputedStyle(picker).marginBottom || 0);
+            }
+            return (playerTop - studyTop) + playerPad + wrapperHeight + padBottom;
+        }
+
+        study.style.removeProperty('--sah-max-board-h');
+        if (resetColumn) study.style.removeProperty('--left-col-width');
         resizeBoard();
 
-        var studyTop = study.getBoundingClientRect().top;
-        var playerRect = player.getBoundingClientRect();
-        var padBottom = parseFloat(getComputedStyle(study).paddingBottom || 0);
-        var offset = playerRect.top - studyTop;
-        var total = offset + player.scrollHeight + padBottom;
+        var total = measure();
         if (!total) return;
 
         var header = document.querySelector('.main-header');
@@ -1087,19 +1123,30 @@
                 if (!boardHeight) break;
                 var overhead = total - boardHeight;
                 var cappedBoard = Math.max(40, available - overhead);
-                player.style.setProperty('--board-size', cappedBoard + 'px');
+                study.style.setProperty('--sah-max-board-h', cappedBoard + 'px');
                 resizeBoard();
-                total = offset + player.scrollHeight + padBottom;
+                total = measure();
             }
         }
 
-        study.style.height = Math.round(total) + 'px';
-        // We just reset the column above, so it must always be re-fitted
-        // to the board's final size here — not only when the height
-        // changed, or a run that decides "no change needed" would still
-        // leave the column stuck at that wide reset.
-        fitWidth(study);
-        resizeBoard();
+        // Round up, not to nearest: a fractional pixel rounded away is
+        // exactly the kind of shortfall that trips pgn-player's own
+        // overflow: auto into showing a scrollbar for content that
+        // otherwise fits.
+        study.style.height = Math.ceil(total) + 'px';
+        if (resetColumn) {
+            // We just reset the column above, so it must always be
+            // re-fitted to the board's final size here — not only when
+            // the height changed, or a run that decides "no change
+            // needed" would still leave the column stuck at that wide
+            // reset.
+            fitWidth(study);
+            resizeBoard();
+        }
+    }
+
+    function fitHeight(study) {
+        capHeight(study, true);
     }
 
     var readyStudies = [];
@@ -1112,9 +1159,47 @@
             fitWidth(study);
             fitHeight(study);
             readyStudies.push(study);
+
+            // Dragging is tracked here so the ResizeObserver below (which
+            // also fires from the board-size changes a drag causes, via
+            // 94cqw) defers to the lighter drag-time cap instead of
+            // running the full automatic fit — which resets and
+            // re-fits the column, fighting the reader's own drag.
+            var dragging = false;
+
             var wrapper = study.querySelector('.player-wrapper');
             if (wrapper && window.ResizeObserver) {
-                new ResizeObserver(function () { fitHeight(study); }).observe(wrapper);
+                new ResizeObserver(function () {
+                    if (dragging) return;
+                    fitHeight(study);
+                }).observe(wrapper);
+            }
+
+            var resizer = study.querySelector('.pgn-study-resizer');
+            if (resizer) {
+                var dragCapPending = false;
+                resizer.addEventListener('pointerdown', function () {
+                    dragging = true;
+                });
+                resizer.addEventListener('pointermove', function () {
+                    if (!dragging || dragCapPending) return;
+                    dragCapPending = true;
+                    requestAnimationFrame(function () {
+                        dragCapPending = false;
+                        if (dragging) capHeight(study, false);
+                    });
+                });
+                var stopDrag = function () {
+                    if (!dragging) return;
+                    dragging = false;
+                    // Final settle now that throttling is done — the
+                    // column itself is left exactly where the reader put
+                    // it (resetColumn: false), only the height/cap are
+                    // confirmed.
+                    capHeight(study, false);
+                };
+                resizer.addEventListener('pointerup', stopDrag);
+                resizer.addEventListener('pointercancel', stopDrag);
             }
         }
 
