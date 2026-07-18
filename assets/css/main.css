@@ -2484,6 +2484,26 @@ details.game-note > .post-game {
     min-height: 0;
 }
 
+/* --board-size is otherwise width-only (min(600px/400px, 94cqw)) — main.js
+   also caps it by how much vertical room is actually available (ribbon +
+   frame padding + puzzle hint row/variation picker, whichever the
+   viewport leaves after the sticky header), via --sah-max-board-h. Doing
+   this as a CSS min() rather than a direct override means the cap applies
+   live and automatically to *any* width change, including a reader
+   dragging the resizer wider — the board simply stops growing once it
+   hits the ceiling, without main.js having to intercept the drag itself.
+   The 9999px fallback is a no-op "no cap yet" default before main.js has
+   measured anything. */
+.post-article pgn-study pgn-player {
+    --board-size: min(600px, 94cqw, var(--sah-max-board-h, 9999px));
+}
+
+@media (max-width: 899px) {
+    .post-article pgn-study pgn-player {
+        --board-size: min(400px, 94cqw, var(--sah-max-board-h, 9999px));
+    }
+}
+
 /* Active-comment highlight: ChessPublica's default is a pale-yellow
    highlighter-marker box (#fff3cd) that reads as a browser-extension
    annotation, not part of the page. Reuse the site's own callout motif
