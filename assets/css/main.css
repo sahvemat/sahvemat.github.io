@@ -2447,8 +2447,17 @@ details.game-note > .post-game {
 
 /* ChessPublica's <pgn-study> reader: its own stylesheet sizes it as a
    near-fullscreen 90vw x 90vh panel meant to sit alone on a page. Give it
-   the article's own width/height instead of letting it break out of the
-   two-column flow, and span both columns like .post-hero/.game-pair do. */
+   the article's own width instead of letting it break out of the
+   two-column flow, and span both columns like .post-hero/.game-pair do.
+   Height is a placeholder only — pgn-study stays display:none until
+   .cp-ready, and main.js sets an explicit inline height right as that
+   class is added, sized to the board column's real content (see the
+   pgn-study divider/height fit in main.js). The left column must never
+   need its own scroll — including once playback reaches a [P]/[Pn]
+   puzzle move and its hint row appears below the board — so the panel
+   grows to fit that content instead of clipping it; only the article
+   column (much longer, expected to scroll) keeps ChessPublica's own
+   overflow-y: auto. */
 .post-article > pgn-study {
     width: 100%;
     max-width: 100%;
@@ -2467,26 +2476,12 @@ details.game-note > .post-game {
    comment, all stacked). Inside pgn-study that whole area is hidden by
    its own CSS except the board, but the 500px floor stays — and
    pgn-study>pgn-player>.player-wrapper is flex-shrink: 0, so it can never
-   shrink below that regardless of how little vertical room the fixed
-   panel height above actually leaves. The result: on load the panel
-   opens already needing an internal scroll to reveal the whole board.
-   Let it size to its real content (the board) instead. */
+   shrink below that. Let it size to its real content (the board, plus
+   the puzzle hint row when a [P] move is active) instead — main.js reads
+   that real size to set the panel's height, so this floor would otherwise
+   force the panel oversized even when nothing needs the extra room. */
 .post-article pgn-study pgn-player .player-wrapper {
     min-height: 0;
-}
-
-/* Board size is otherwise width-only (94% of the column's own inline-size
-   via container queries), with no awareness of vertical room. Cap it by
-   the same height budget as the panel above too, so a narrow-but-tall
-   column can't still ask for a board taller than the row has space for. */
-.post-article pgn-study pgn-player {
-    --board-size: min(600px, 94cqw, calc(min(720px, 78vh) - 200px));
-}
-
-@media (max-width: 899px) {
-    .post-article pgn-study pgn-player {
-        --board-size: min(400px, 94cqw, calc(min(720px, 78vh) - 200px));
-    }
 }
 
 .post-ps {
