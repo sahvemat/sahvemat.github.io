@@ -2445,6 +2445,23 @@ details.game-note > .post-game {
     box-shadow: 0 0 0 3px var(--accent);
 }
 
+/* ChessPublica's <pgn-study> reader: its own stylesheet sizes it as a
+   near-fullscreen 90vw x 90vh panel meant to sit alone on a page. Give it
+   the article's own width/height instead of letting it break out of the
+   two-column flow, and span both columns like .post-hero/.game-pair do. */
+.post-article > pgn-study {
+    width: 100%;
+    max-width: 100%;
+    height: min(720px, 78vh);
+    margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .post-article > pgn-study {
+        column-span: all;
+    }
+}
+
 .post-ps {
     margin-top: 3rem;
     padding-top: 1.5rem;
