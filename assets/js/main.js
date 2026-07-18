@@ -986,6 +986,33 @@
     // width instead of pinching it — same 94% divisor CSS uses, run in
     // reverse, plus a rounding buffer so it can't land exactly on the
     // boundary either.
+    // The article's diagrams (see capHeight's own diagram-floor logic
+    // below, and the board-size floor in fitWidth/the resizer clamp) are
+    // square, so a single "size" — the larger of the two axes, in case a
+    // margin or subpixel rounding makes them not perfectly equal —
+    // describes them fully. Shared by every place that needs to know how
+    // big the largest one currently is, so they can't disagree with each
+    // other about it.
+    function tallestDiagram(study) {
+        var pgnContainer = study.querySelector('.pgn-container');
+        if (!pgnContainer) return null;
+        var diagrams = pgnContainer.querySelectorAll('.cp-board-wrapper, .fen-container');
+        var tallest = null;
+        diagrams.forEach(function (d) {
+            var rect = d.getBoundingClientRect();
+            var size = Math.max(rect.width, rect.height);
+            if (!tallest || size > tallest.size) {
+                var dStyle = getComputedStyle(d);
+                tallest = {
+                    size: size,
+                    marginTop: parseFloat(dStyle.marginTop || 0),
+                    marginBottom: parseFloat(dStyle.marginBottom || 0),
+                };
+            }
+        });
+        return tallest;
+    }
+
     function fitWidth(study) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         var player = study.querySelector('pgn-player');
@@ -994,9 +1021,16 @@
         if (!player || !board) return;
         var boardWidth = board.getBoundingClientRect().width;
         if (!boardWidth) return;
+        // The board must never be smaller than the article's largest
+        // diagram (see the resizer's own matching clamp below, which
+        // keeps this true through a manual drag too) — sizing the
+        // column for whichever of the two needs more room keeps that
+        // true from the very first, automatic fit as well.
+        var diagram = tallestDiagram(study);
+        var targetBoardWidth = diagram ? Math.max(boardWidth, diagram.size) : boardWidth;
         var pad = parseFloat(getComputedStyle(player).paddingLeft || 0) +
             parseFloat(getComputedStyle(player).paddingRight || 0);
-        var contentBoxNeeded = boardWidth / 0.94 + 2;
+        var contentBoxNeeded = targetBoardWidth / 0.94 + 2;
         study.style.setProperty('--left-col-width', (contentBoxNeeded + pad) + 'px');
     }
 
@@ -1051,6 +1085,21 @@
     // mid-interaction.
     function capHeight(study, resetColumn) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
+        if (study.classList.contains('pgn-study-collapsed')) {
+            // Collapsed rides on ChessPublica's own height: auto (see
+            // main.css) — an inline height left over from before
+            // collapsing (or one this very function set moments
+            // earlier) would override that regardless of specificity,
+            // since an inline style always wins over any stylesheet
+            // rule. That's what left a tall blank gap below the
+            // now-collapsed ribbon where the hidden board/article used
+            // to be. Collapsing hides pgn-player, which is itself a
+            // resize of the .player-wrapper ResizeObserver below — so
+            // this runs right away rather than waiting on some
+            // unrelated later re-fit to clear the stale value.
+            study.style.removeProperty('height');
+            return;
+        }
         var player = study.querySelector('pgn-player');
         var wrapper = study.querySelector('.player-wrapper');
         if (!player || !wrapper) return;
@@ -1171,27 +1220,35 @@
         // move-picker above has to be (that one doesn't exist in the DOM
         // with real content until a reader actually reaches it).
         var pgnContainer = study.querySelector('.pgn-container');
-        if (pgnContainer) {
-            var diagrams = pgnContainer.querySelectorAll('.cp-board-wrapper, .fen-container');
-            var diagramMinHeight = 0;
-            diagrams.forEach(function (d) {
-                var dStyle = getComputedStyle(d);
-                var dHeight = d.getBoundingClientRect().height +
-                    parseFloat(dStyle.marginTop || 0) + parseFloat(dStyle.marginBottom || 0);
-                if (dHeight > diagramMinHeight) diagramMinHeight = dHeight;
-            });
-            if (diagramMinHeight) {
-                // +2px buffer: .pgn-container's clientHeight rounds to a
-                // whole pixel while this is computed from several
-                // fractional measurements, and the two can land a pixel
-                // apart — the same kind of slop fitWidth()'s own buffer
-                // below exists to absorb.
-                var requiredForDiagram = (pgnContainer.getBoundingClientRect().top -
-                    study.getBoundingClientRect().top) + diagramMinHeight +
-                    parseFloat(getComputedStyle(study).paddingBottom || 0) + 2;
-                if (requiredForDiagram > total) total = requiredForDiagram;
-            }
+        var diagram = tallestDiagram(study);
+        if (diagram) {
+            // +2px buffer: .pgn-container's clientHeight rounds to a
+            // whole pixel while this is computed from several
+            // fractional measurements, and the two can land a pixel
+            // apart — the same kind of slop fitWidth()'s own buffer
+            // below exists to absorb.
+            var requiredForDiagram = (pgnContainer.getBoundingClientRect().top -
+                study.getBoundingClientRect().top) + diagram.size +
+                diagram.marginTop + diagram.marginBottom +
+                parseFloat(getComputedStyle(study).paddingBottom || 0) + 2;
+            if (requiredForDiagram > total) total = requiredForDiagram;
+
+            // The board itself (see fitWidth() and the resizer's own
+            // matching clamp) must never be smaller than this same
+            // diagram either — --board-size folds this in as a floor
+            // (see main.css) so it holds even when something *other*
+            // than the column width would otherwise push the board
+            // smaller, e.g. the viewport-fit cap above on a short
+            // screen.
+            study.style.setProperty('--sah-min-board-w', diagram.size + 'px');
+        } else {
+            study.style.removeProperty('--sah-min-board-w');
         }
+        // resetColumn's own resizeBoard() below only runs conditionally;
+        // this one makes sure chessboard.js picks up a --sah-min-board-w
+        // change on every path, including a drag that isn't touching the
+        // column at all.
+        resizeBoard();
 
         // Round up, not to nearest: a fractional pixel rounded away is
         // exactly the kind of shortfall that trips pgn-player's own
@@ -1351,16 +1408,21 @@
                 // up, so it runs before ours on every event) writes
                 // --left-col-width straight from the pointer position,
                 // clamped only by its own container-width-based ceiling —
-                // it knows nothing about our viewport-height cap. Left
-                // alone, the reader could keep dragging the divider well
-                // past the point the board actually stops growing, into
-                // dead space. maxColWidthDuringDrag is the column-width
-                // equivalent of the last-known --sah-max-board-h ceiling;
-                // clampColumnWidth() pulls a too-wide column back down to
-                // it synchronously, in the same tick as ChessPublica's own
+                // it knows nothing about our viewport-height cap, or
+                // about the board never being allowed smaller than the
+                // article's largest diagram. Left alone, the reader
+                // could drag the divider well past the point the board
+                // actually stops growing (into dead space), or narrow it
+                // past the point the board would end up smaller than
+                // that diagram. maxColWidthDuringDrag/minColWidthDuringDrag
+                // are the column-width equivalents of those two ceilings/
+                // floors; clampColumnWidth() pulls a too-wide or too-
+                // narrow column back to whichever it violates,
+                // synchronously, in the same tick as ChessPublica's own
                 // write, so the divider itself stops right there instead
                 // of the board just quietly refusing to follow it.
                 var maxColWidthDuringDrag = null;
+                var minColWidthDuringDrag = null;
 
                 function computeMaxColWidth(cappedBoardPx) {
                     var player = study.querySelector('pgn-player');
@@ -1369,19 +1431,50 @@
                     return cappedBoardPx / 0.94 + 2 + pad;
                 }
 
+                // Same conversion as computeMaxColWidth (and fitWidth()'s
+                // own board-width-to-column-width math) — kept separate
+                // since the two ceilings/floors come from unrelated
+                // sources and are refreshed on different schedules below.
+                var computeMinColWidth = computeMaxColWidth;
+
+                function refreshMinColWidth() {
+                    // The article column narrows as the board column
+                    // widens, which can shrink the diagram itself (it's
+                    // capped at its own natural size, not a fixed one) —
+                    // so this floor isn't a constant for the whole drag
+                    // and has to be re-measured from the diagram's
+                    // *current* rendered size, not just computed once.
+                    var diagram = tallestDiagram(study);
+                    minColWidthDuringDrag = diagram ? computeMinColWidth(diagram.size) : null;
+                }
+
                 function clampColumnWidth() {
-                    if (maxColWidthDuringDrag == null) return;
                     var current = parseFloat(
                         getComputedStyle(study).getPropertyValue('--left-col-width')
                     );
-                    if (current > maxColWidthDuringDrag) {
-                        study.style.setProperty('--left-col-width', maxColWidthDuringDrag + 'px');
+                    var clamped = current;
+                    if (maxColWidthDuringDrag != null && clamped > maxColWidthDuringDrag) {
+                        clamped = maxColWidthDuringDrag;
+                    }
+                    if (minColWidthDuringDrag != null && clamped < minColWidthDuringDrag) {
+                        clamped = minColWidthDuringDrag;
+                    }
+                    if (clamped !== current) {
+                        study.style.setProperty('--left-col-width', clamped + 'px');
                     }
                 }
 
                 resizer.addEventListener('pointerdown', function () {
                     dragging = true;
                     maxColWidthDuringDrag = null;
+                    // Unlike the height ceiling above (which only ever
+                    // matters once a drag has actually made the board
+                    // tall enough to trigger it), the diagram floor is
+                    // knowable immediately — measure it right away so
+                    // even the very first pointermove is already
+                    // protected, rather than waiting one throttled frame
+                    // for it to catch up.
+                    refreshMinColWidth();
                 });
                 resizer.addEventListener('pointermove', function () {
                     if (!dragging) return;
@@ -1405,6 +1498,7 @@
                             getComputedStyle(study).getPropertyValue('--sah-max-board-h')
                         );
                         maxColWidthDuringDrag = maxBoardH ? computeMaxColWidth(maxBoardH) : null;
+                        refreshMinColWidth();
                         clampColumnWidth();
                     });
                 });
