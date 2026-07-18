@@ -1001,7 +1001,8 @@
     }
 
     // The left column (board + ribbon, and — once playback reaches a
-    // [P]/[Pn] move — the puzzle hint row below the board) must never need
+    // [P]/[Pn] move — the puzzle hint row below the board, or once a move
+    // with variations is clicked — the variation picker) must never need
     // its own scroll; the panel grows to fit it instead of clipping it.
     // But it must also never grow past what the viewport can actually
     // show at once — the whole element, ribbon included, has to be
@@ -1011,59 +1012,94 @@
     // board itself is capped down until the panel just clears it.
     //
     // Always re-measure from the *natural*, uncapped board size first
-    // (clearing any cap this function applied on a previous run) rather
-    // than shrinking further from whatever's currently applied — content
-    // that shrinks later (e.g. a puzzle hint row going away) should let
-    // the board grow back, not stay pinned at its smallest-ever size.
+    // (clearing any cap this function applied on a previous run, and the
+    // column width along with it) rather than shrinking further from
+    // whatever's currently applied — content that shrinks later (e.g. a
+    // puzzle hint row going away) should let the board grow back, not
+    // stay pinned at its smallest-ever size.
     // pgn-player's own scrollHeight reflects the real, unclipped content
     // height regardless of the panel's current height, so read it
     // directly instead of summing up ChessPublica's internal padding/
     // margin choices by hand. A ResizeObserver on .player-wrapper (sized
     // independently of the panel's own height) keeps this in sync for as
-    // long as the page is open — re-applying only when the computed
-    // height actually changes, so settling into a stable size doesn't
-    // keep re-triggering itself.
+    // long as the page is open — the hint row and variation picker can
+    // both appear well after the initial fit, mid-interaction.
     function fitHeight(study) {
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         var player = study.querySelector('pgn-player');
         if (!player) return;
 
+        function resizeBoard() {
+            // --board-size only reactively resizes .player-wrapper's CSS
+            // width — chessboardjs (the actual board underneath) computes
+            // its square pixel sizes from that container once and doesn't
+            // re-read them on its own (same limitation the .post-game
+            // pgn-player refit() above works around). Without forcing it
+            // to resize on every change below, the visible board lags a
+            // frame or more behind whatever this function just computed
+            // from its current (momentarily stale) rendered size — which
+            // is what actually produced the flicker: each re-fit landing
+            // on a different wrong answer because the board hadn't caught
+            // up to the previous one yet.
+            var engine = player._engine;
+            if (engine && engine.board && typeof engine.board.resize === 'function') {
+                try { engine.board.resize(); } catch (e) {}
+            }
+        }
+
+        // --board-size includes a 94cqw term read against the column's
+        // own current width, so leaving a column that was narrowed for a
+        // *previous* cap in place here would corrupt this measurement:
+        // it'd read back a board smaller than the page can actually fit,
+        // which then gets capped again from that already-wrong number.
         player.style.removeProperty('--board-size');
+        study.style.removeProperty('--left-col-width');
+        resizeBoard();
+
         var studyTop = study.getBoundingClientRect().top;
         var playerRect = player.getBoundingClientRect();
         var padBottom = parseFloat(getComputedStyle(study).paddingBottom || 0);
         var offset = playerRect.top - studyTop;
-        var naturalTotal = offset + player.scrollHeight + padBottom;
-        if (!naturalTotal) return;
+        var total = offset + player.scrollHeight + padBottom;
+        if (!total) return;
 
         var header = document.querySelector('.main-header');
         var available = window.innerHeight -
             (header ? header.getBoundingClientRect().height : 0) - 16;
 
-        var targetHeight = naturalTotal;
-        if (naturalTotal > available) {
+        if (total > available) {
             var wrap = study.querySelector('.board-wrap');
             var board = wrap && wrap.querySelector('[class*="board-"]');
-            var naturalBoardHeight = board ? board.getBoundingClientRect().height : 0;
-            if (naturalBoardHeight) {
-                var overhead = naturalTotal - naturalBoardHeight;
-                // No real floor here beyond "not zero/negative" — a study
-                // never scrolling its left column (see above) takes
-                // priority over keeping the board above some minimum
-                // comfortable size, in the rare viewport short enough to
-                // force the choice.
+            // Shrinking the board to make room can itself change how much
+            // room is needed: the variation picker below the board wraps
+            // onto more lines at a narrower width, needing *more* height
+            // right as the cap tries to give it less. Iterate a few times
+            // so the cap accounts for its own effect on the content
+            // instead of a single pass based on the pre-shrink layout —
+            // each round only shrinks further (more wrapping needs more
+            // overhead, never less), so this settles rather than
+            // oscillating. No floor beyond "not zero/negative": a study
+            // never scrolling its left column takes priority over
+            // keeping the board above some comfortable minimum size, on
+            // the rare viewport short enough to force that choice.
+            for (var attempt = 0; board && attempt < 6 && total > available; attempt++) {
+                var boardHeight = board.getBoundingClientRect().height;
+                if (!boardHeight) break;
+                var overhead = total - boardHeight;
                 var cappedBoard = Math.max(40, available - overhead);
                 player.style.setProperty('--board-size', cappedBoard + 'px');
-                targetHeight = Math.min(available, offset + player.scrollHeight + padBottom);
+                resizeBoard();
+                total = offset + player.scrollHeight + padBottom;
             }
         }
 
-        targetHeight = Math.round(targetHeight);
-        if (study.dataset.sahLastHeight !== String(targetHeight)) {
-            study.dataset.sahLastHeight = String(targetHeight);
-            study.style.height = targetHeight + 'px';
-            fitWidth(study);
-        }
+        study.style.height = Math.round(total) + 'px';
+        // We just reset the column above, so it must always be re-fitted
+        // to the board's final size here — not only when the height
+        // changed, or a run that decides "no change needed" would still
+        // leave the column stuck at that wide reset.
+        fitWidth(study);
+        resizeBoard();
     }
 
     var readyStudies = [];
