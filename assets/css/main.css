@@ -2547,9 +2547,21 @@ details.game-note > .post-game {
    dragging the resizer wider — the board simply stops growing once it
    hits the ceiling, without main.js having to intercept the drag itself.
    The 9999px fallback is a no-op "no cap yet" default before main.js has
-   measured anything. */
+   measured anything.
+
+   The whole min() is then floored by --sah-min-board-w (main.js, desktop
+   only — the article's biggest inline diagram, see tallestDiagram() in
+   main.js), so the board is never smaller than it. main.js's own resizer
+   clamp keeps 94cqw itself from ever being the reason this floor would
+   have to widen the board past its column (see the drag handling below);
+   this max() only has to step in for --sah-max-board-h, on a viewport
+   short enough that the height cap alone would otherwise push the board
+   under the floor. */
 .post-article pgn-study pgn-player {
-    --board-size: min(600px, 94cqw, var(--sah-max-board-h, 9999px));
+    --board-size: max(
+        var(--sah-min-board-w, 0px),
+        min(600px, 94cqw, var(--sah-max-board-h, 9999px))
+    );
 }
 
 @media (max-width: 899px) {
