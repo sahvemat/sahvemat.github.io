@@ -2525,6 +2525,38 @@ details.game-note > .post-game {
     }
 }
 
+/* ChessPublica's loading skeleton (.pgn-study-loading, id=
+   pgnStudyLoading) isn't part of <pgn-study> at all — its own JS
+   inserts it as a plain sibling immediately *before* the element via
+   insertAdjacentHTML("beforebegin", ...), while <pgn-study> itself
+   stays display: none the whole time this is showing (see
+   pgn-study:not(.cp-ready) above). None of the sizing/positioning
+   rules above ever touch it as a result: it renders at ChessPublica's
+   own near-fullscreen defaults (90vw/90vh, a 600px checkerboard board)
+   with no column-span, so — being a plain block inside the article's
+   own multi-column flow — it can land in whichever column has room,
+   often the second one, cropped by the viewport edge. Gets the exact
+   same width/height/margin/column-span/card treatment as <pgn-study>
+   itself so it occupies the same slot the real element is about to
+   fade into, rather than a wrong-sized, wrong-positioned stand-in that
+   then gets swapped for something completely different a moment
+   later. */
+.post-article > .pgn-study-loading {
+    width: 100%;
+    max-width: 100%;
+    height: min(720px, 78vh);
+    margin: 3rem 0;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 8px 8px 0 0 var(--fg);
+}
+
+@media (min-width: 768px) {
+    .post-article > .pgn-study-loading {
+        column-span: all;
+    }
+}
+
 /* On mobile, main.js's fit never runs (gated to >=900px — the
    resizable two-column layout it manages doesn't exist there), so the
    720px/78vh placeholder above is the *live* height there, not just a
