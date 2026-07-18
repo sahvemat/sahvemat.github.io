@@ -2492,14 +2492,15 @@ details.game-note > .post-game {
 
 /* ChessPublica's own collapsed layout (margin-left: 5vw, width:
    fit-content, max-width: 90vw) assumes pgn-study's other context — a
-   near-fullscreen panel sitting alone on a page, where indenting and
-   shrinking the collapsed bar reads as centering it. Inside the
-   article's own column it just reads as a misaligned indent relative
-   to every other card (figures, tables, .post-game) sitting flush at
-   the column edge. Collapsed keeps the same full-width, flush
-   alignment as expanded instead. */
+   near-fullscreen panel sitting alone on a page, where indenting the
+   collapsed bar reads as centering it. Inside the article's own
+   column that 5vw just reads as a misaligned indent relative to every
+   other card (figures, tables, .post-game) sitting flush at the
+   column edge. Keeps their own fit-content sizing — a collapsed bar
+   is meant to read as compact, not a full-width card with nothing in
+   it — just flush at the column edge instead of indented. */
 .post-article > pgn-study.pgn-study-collapsed {
-    width: 100%;
+    width: fit-content;
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
