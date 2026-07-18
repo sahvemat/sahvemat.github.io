@@ -1103,6 +1103,31 @@
         var available = window.innerHeight -
             (header ? header.getBoundingClientRect().height : 0) - 16;
 
+        // The move-picker only exists in the height budget once it's
+        // actually showing real content (measure() above only accounts
+        // for its collapsed margin while empty) — so a board grown (by
+        // hand, or automatically) while no variation choice happens to be
+        // on screen yet can end up bigger than what's left once one
+        // appears, forcing a much later, more dramatic shrink right as
+        // the reader clicks into it. Reserve headroom for it ahead of
+        // time instead: once we've actually seen it with content, cache
+        // its real height on the study (so future reservations use this
+        // game's actual picker size, not a guess); until then, fall back
+        // to a conservative default close to a typical single-row picker.
+        // This only tightens the *cap* — the study's own committed height
+        // below still comes from the real, uninflated measurement, so a
+        // game that never has a variation to show never grows an unused
+        // gap for one.
+        var picker = wrapper.querySelector('.pgn-study-move-picker');
+        var pickerHeight = picker ? picker.getBoundingClientRect().height : 0;
+        if (picker) {
+            if (pickerHeight) {
+                study.dataset.sahPickerReserve = pickerHeight;
+            } else {
+                available -= parseFloat(study.dataset.sahPickerReserve || 40);
+            }
+        }
+
         if (total > available) {
             var wrap = study.querySelector('.board-wrap');
             var board = wrap && wrap.querySelector('[class*="board-"]');
