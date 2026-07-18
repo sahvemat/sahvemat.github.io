@@ -1154,6 +1154,45 @@
             }
         }
 
+        // The right column's article text can include inline diagrams
+        // (comment annotations like [%csl]/[%cal] rendered as small board
+        // images) — unlike ordinary prose, a diagram that's taller than
+        // the article's own visible height looks broken once scrolled to
+        // (cut off mid-board) rather than just being normal reading
+        // behavior, so the panel must always be tall enough for
+        // .pgn-container's visible area to show the tallest one whole,
+        // even past the viewport-fit cap above if it has to — the same
+        // "never partially show content" priority the left column's own
+        // board already gets. The article's *entire* HTML (every
+        // diagram in the game, not just the currently-scrolled-to one)
+        // is rendered into the DOM up front regardless of scroll
+        // position, so this can be measured directly off the real
+        // elements rather than reserved for in advance the way the
+        // move-picker above has to be (that one doesn't exist in the DOM
+        // with real content until a reader actually reaches it).
+        var pgnContainer = study.querySelector('.pgn-container');
+        if (pgnContainer) {
+            var diagrams = pgnContainer.querySelectorAll('.cp-board-wrapper, .fen-container');
+            var diagramMinHeight = 0;
+            diagrams.forEach(function (d) {
+                var dStyle = getComputedStyle(d);
+                var dHeight = d.getBoundingClientRect().height +
+                    parseFloat(dStyle.marginTop || 0) + parseFloat(dStyle.marginBottom || 0);
+                if (dHeight > diagramMinHeight) diagramMinHeight = dHeight;
+            });
+            if (diagramMinHeight) {
+                // +2px buffer: .pgn-container's clientHeight rounds to a
+                // whole pixel while this is computed from several
+                // fractional measurements, and the two can land a pixel
+                // apart — the same kind of slop fitWidth()'s own buffer
+                // below exists to absorb.
+                var requiredForDiagram = (pgnContainer.getBoundingClientRect().top -
+                    study.getBoundingClientRect().top) + diagramMinHeight +
+                    parseFloat(getComputedStyle(study).paddingBottom || 0) + 2;
+                if (requiredForDiagram > total) total = requiredForDiagram;
+            }
+        }
+
         // Round up, not to nearest: a fractional pixel rounded away is
         // exactly the kind of shortfall that trips pgn-player's own
         // overflow: auto into showing a scrollbar for content that
@@ -1194,12 +1233,107 @@
             fitHeight(study);
             readyStudies.push(study);
 
-            // Dragging is tracked here so the ResizeObserver below (which
-            // also fires from the board-size changes a drag causes, via
-            // 94cqw) defers to the lighter drag-time cap instead of
-            // running the full automatic fit — which resets and
-            // re-fits the column, fighting the reader's own drag.
+            // Dragging is tracked here (ahead of where it's needed
+            // below) so the diagram-settling and .player-wrapper
+            // ResizeObservers can both check it: while a reader is
+            // actively dragging, they defer to the lighter drag-time
+            // cap instead of running the full automatic fit, which
+            // resets and re-fits the column, fighting the drag.
             var dragging = false;
+
+            // The panel stays invisible (see main.css:
+            // .cp-ready:not(.sah-fitted)) from the moment ChessPublica
+            // marks it ready until this class lands, so a reader never
+            // sees ChessPublica's own unfitted defaults painted even for
+            // a moment before the fit above corrects it — and revealing
+            // only happens once *every* input the fit depends on has
+            // actually had a chance to settle, not just the first one
+            // that happens to resolve. Revealing against any one of
+            // these still pending would just trade "starts oversized,
+            // shrinks into place" for a smaller version of the same
+            // thing once the rest land.
+            var revealed = false;
+            var pendingBeforeReveal = 0;
+            function maybeReveal() {
+                if (revealed || pendingBeforeReveal > 0) return;
+                revealed = true;
+                study.classList.add('sah-fitted');
+            }
+            function settled() {
+                pendingBeforeReveal--;
+                maybeReveal();
+            }
+
+            // 1) Custom web fonts: the ribbon/title's text metrics
+            //    factor into the fit, and a fit computed against
+            //    fallback-font metrics visibly reflows once the real
+            //    font swaps in.
+            if (document.fonts && document.fonts.status !== 'loaded') {
+                pendingBeforeReveal++;
+                var fontsDone = false;
+                var onFontsSettled = function () {
+                    if (fontsDone) return;
+                    fontsDone = true;
+                    fitWidth(study);
+                    fitHeight(study);
+                    settled();
+                };
+                // document.fonts.ready never resolving (a blocked font
+                // CDN, an ad-blocker, a flaky connection) must not hide
+                // the panel forever — fall back on a timer instead of
+                // waiting indefinitely for fonts that may never arrive.
+                setTimeout(onFontsSettled, 1500);
+                document.fonts.ready.then(onFontsSettled);
+            }
+
+            // 2) Diagrams embedded in the article (see capHeight's own
+            //    diagram-floor logic below): inserted into the DOM
+            //    before their own internal board widget has necessarily
+            //    finished sizing itself — the same "doesn't have its
+            //    final size immediately" issue chessboard.js has for the
+            //    main board (see resizeBoard() above), just for these
+            //    smaller ones, and just as variable in how long it
+            //    takes. Watched directly rather than via .pgn-container:
+            //    that element has its own fixed height (from the grid)
+            //    and overflow-y: auto, so a diagram growing *inside* it
+            //    changes its scrollHeight, never its own box size —
+            //    .pgn-container's ResizeObserver would only ever fire
+            //    its one mandatory initial-observation notification and
+            //    then stay silent no matter what the diagram does. A
+            //    single notification from the diagrams themselves isn't
+            //    enough to trust as "done" on its own either, since one
+            //    can resize more than once while settling, so wait for a
+            //    short quiet period with no further resize before
+            //    treating it as settled.
+            var pgnContainerEl = study.querySelector('.pgn-container');
+            var diagramEls = pgnContainerEl
+                ? pgnContainerEl.querySelectorAll('.cp-board-wrapper, .fen-container')
+                : [];
+            if (diagramEls.length && window.ResizeObserver) {
+                pendingBeforeReveal++;
+                var diagramsDone = false;
+                var onDiagramsSettled = function () {
+                    if (diagramsDone) return;
+                    diagramsDone = true;
+                    settled();
+                };
+                var diagramSettleTimer = setTimeout(onDiagramsSettled, 1500);
+                var diagramResizeObserver = new ResizeObserver(function () {
+                    if (dragging) return;
+                    fitHeight(study);
+                    clearTimeout(diagramSettleTimer);
+                    diagramSettleTimer = setTimeout(onDiagramsSettled, 120);
+                });
+                diagramEls.forEach(function (d) { diagramResizeObserver.observe(d); });
+            }
+
+            // Both registrations above are synchronous (they only ever
+            // *schedule* async work), so pendingBeforeReveal already
+            // holds its final starting count by this point — if neither
+            // condition needed to register a wait, this reveals right
+            // away instead of waiting on a settled() call that will
+            // never come.
+            maybeReveal();
 
             var wrapper = study.querySelector('.player-wrapper');
             if (wrapper && window.ResizeObserver) {
