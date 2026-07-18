@@ -2557,6 +2557,41 @@ details.game-note > .post-game {
     }
 }
 
+/* The skeleton board itself is still a fixed 600px (desktop) —
+   comparable to <pgn-study>'s own *ceiling* (--board-size:
+   min(600px, 94cqw, ...)), but the real board almost always ends up
+   smaller than that ceiling once main.js's fit actually settles (94cqw
+   alone, before even considering a shorter viewport's height cap on
+   top). A skeleton sized at the ceiling while the real board is
+   comfortably smaller reads as "starts too large, then shrinks" the
+   same way the whole panel used to before the previous fix. Scaled
+   down to roughly what the real board settles at in the common,
+   height-unconstrained case instead: this grid's own 2fr:3fr column
+   split (40% to the board side), run through the same 94% factor
+   --board-size itself uses (94% * 0.4 = 37.6%). container-type has to
+   go on .pgn-study-loading itself — the board has no children of its
+   own for a nested container to size *those* against — so the
+   percentage here is against the whole grid's width, not just its own
+   40% column, which is exactly why it's pre-multiplied by that 40%
+   rather than reusing 94cqw directly.
+
+   The 37.6cqw term alone still runs a bit ahead of the real board on a
+   shorter viewport, where main.js's own height cap (unknowable here —
+   it accounts for the sticky header's current height, the ribbon, and
+   the puzzle-hint-row/variation-picker reserve) shrinks the real board
+   further than column width alone would. There's no way to replicate
+   that exactly in CSS alone before any of it has loaded, but a rough
+   vh-based ceiling — the same idea as the panel's own height capping
+   at 78vh — keeps the gap much smaller on those viewports too. */
+@media (min-width: 900px) {
+    .post-article > .pgn-study-loading {
+        container-type: inline-size;
+    }
+    .post-article > .pgn-study-loading .pgn-study-loading-board {
+        width: min(600px, 37.6cqw, 40vh);
+    }
+}
+
 /* On mobile, main.js's fit never runs (gated to >=900px — the
    resizable two-column layout it manages doesn't exist there), so the
    720px/78vh placeholder above is the *live* height there, not just a
