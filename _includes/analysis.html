@@ -47,6 +47,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="analysis-sidebar">
+        <div class="sidebar-sticky">
             <div class="chess-board-display">
                 <div class="board-header">
                     <span>{{ analysisPost.category }}</span>
@@ -58,11 +62,7 @@
                     <div class="tip-author">Analiz: {{ analysisPost.analysis_author }}</div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="analysis-sidebar">
-        <div class="sidebar-sticky">
-            <pgn-study src="{{ analysisPost.PGNURL | relative_url }}"></pgn-study>
+            <div class="post-game" id="tur-1" data-pgn="{{ analysisPost.PGNURL | relative_url }}"></div>
         </div>
     </div>
 </section>
