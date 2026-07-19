@@ -814,6 +814,15 @@ a:hover {
     max-width: 100%;
 }
 
+/* Sits as the sidebar's own first item (spaced from the pgn-player
+   below it via .sidebar-sticky's flex gap already) rather than under
+   the main column's diagrams grid, so the top margin meant for that
+   spacing isn't wanted here. */
+.sidebar-sticky > .chess-board-display {
+    margin-top: 0;
+    width: 100%;
+}
+
 .board-header {
     display: flex;
     justify-content: space-between;
