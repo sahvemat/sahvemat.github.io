@@ -814,13 +814,20 @@ a:hover {
     max-width: 100%;
 }
 
-/* Sits as the sidebar's own first item (spaced from the pgn-player
-   below it via .sidebar-sticky's flex gap already) rather than under
-   the main column's diagrams grid, so the top margin meant for that
-   spacing isn't wanted here. */
+/* Sits directly on top of the pgn-player card below it, combined into
+   one visual unit with no gap — its own bottom border/shadow would
+   otherwise double up against that card's top edge, so both are
+   dropped here and left to the pgn-player card's own border/shadow to
+   frame the combined block. */
 .sidebar-sticky > .chess-board-display {
-    margin-top: 0;
+    margin: 0;
     width: 100%;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.sidebar-sticky > .post-game {
+    margin: 0;
 }
 
 .board-header {
@@ -872,13 +879,6 @@ a:hover {
     top: 8rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-}
-
-.positions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
 }
 
 .position-card {
@@ -915,6 +915,8 @@ a:hover {
 .diagram-card {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 22rem;
 }
 
 .diagram-card .position-card {
@@ -935,42 +937,8 @@ a:hover {
     letter-spacing: 0.05em;
 }
 
-.position-card--stats {
-    cursor: default;
-    aspect-ratio: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 1.5rem;
-}
-
-.stat-block {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-    border-left: 2px solid var(--accent);
-    padding-left: 0.75rem;
-}
-
-.stat-number {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
-    line-height: 1;
-}
-
-.stat-label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.55);
-}
-
 .tip-card {
     padding: 1.5rem;
-    border-left: 2px solid var(--line);
     background: var(--surface);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -1792,7 +1760,7 @@ pgn-player p {
     .analysis-content,
     .analysis-sidebar,
     .sidebar-sticky,
-    .positions-grid,
+    .diagram-card,
     .position-card,
     .chess-board-display,
     .puzzle-section,
@@ -1838,9 +1806,8 @@ pgn-player p {
     .analysis-sidebar {
         padding: 2rem 1.25rem;
     }
-    .positions-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
+    .diagram-card {
+        max-width: 100%;
     }
     .position-card {
         width: 100%;
@@ -1851,14 +1818,6 @@ pgn-player p {
         width: 100%;
         max-width: 100%;
         height: auto;
-    }
-    .position-card--stats {
-        aspect-ratio: auto;
-        padding: 1rem 0.75rem;
-        gap: 0.75rem;
-    }
-    .position-card--stats .stat-number {
-        font-size: 1.25rem;
     }
 
     /* 4. Article thumbnails must fit the column */
