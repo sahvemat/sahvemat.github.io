@@ -1014,7 +1014,6 @@
     }
 
     function fitWidth(study) {
-        if (study.closest('.analysis-sidebar')) return;
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         var player = study.querySelector('pgn-player');
         var wrap = study.querySelector('.board-wrap');
@@ -1085,7 +1084,6 @@
     // variation picker can both appear well after the initial fit,
     // mid-interaction.
     function capHeight(study, resetColumn) {
-        if (study.closest('.analysis-sidebar')) return;
         if (window.matchMedia && !window.matchMedia('(min-width: 900px)').matches) return;
         if (study.classList.contains('pgn-study-collapsed')) {
             // Collapsed rides on ChessPublica's own height: auto (see
