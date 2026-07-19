@@ -8,6 +8,12 @@ excerpt: "Hollandalı Büyükusta Jan Timman'ın kariyerinden 27 parti: 1964'tek
 date: 2026-07-02
 FEN: 4r1k1/1pQ3pp/2p2p2/P3n3/1q4b1/6P1/1P2PP1P/2RN1BK1 b - - 0 26
 reading_time: 43
+type: analysis
+category: "Klasikler"
+PGNURL: https://lichess.org/api/study/F0mOCg4p/Bp9Dw9mI.pgn
+analysis_tip_label: "Gözde Parti"
+analysis_tip: "Timman'ın kariyerinde 'favori oyunu' olarak andığı karşılaşma: Merano'dan yorgun dönen dünya şampiyonu Karpov'a karşı, dünya ikincisinin cesaretle örülü performansı."
+analysis_author: "Nazmi Can Doğan"
 ---
 
 Bu yazı, bir satranç efsanesinin yaşantısından küçük bir bölüme odaklanacak. Timman'ın reyting listesinde Dünya Şampiyonu Karpov'un ardından ikinci sırada yer aldığı 1982 senesine gideceğiz. Buenos Aires'in iyileştirici havasında Timman'ın partilerinin öğretici anlarına odaklanacağız. Yazının ikinci bölümünde ise, Timman'ın kariyerinin farklı bölümlerinden derlediğim öğretici konumlar yer alıyor.
