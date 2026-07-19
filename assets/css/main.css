@@ -903,24 +903,32 @@ a:hover {
     background: var(--accent);
 }
 
+.diagram-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.diagram-card .position-card {
+    border-radius: 2px 2px 0 0;
+}
+
 .position-card-caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.5rem 0.75rem;
-    background: rgba(0, 0, 0, 0.55);
+    padding: 0.6rem 0.85rem;
+    background: var(--ink);
     color: white;
+    border: 1px solid var(--border-05);
+    border-top: none;
+    border-radius: 0 0 2px 2px;
     font-family: var(--font-mono);
     font-size: 9px;
-    line-height: 1.4;
+    line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    pointer-events: none;
 }
 
 .position-card--stats {
     cursor: default;
+    aspect-ratio: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1228,6 +1236,14 @@ a.article-thumbnail:hover {
     letter-spacing: 0.2em;
     border-bottom: 2px solid var(--accent);
     padding-bottom: 0.25rem;
+}
+
+/* .analysis-content is a column flex container, whose default
+   align-items: stretch overrides display: inline-block's own
+   shrink-to-fit width — without this the underline runs the full
+   column width instead of hugging the link text. */
+.analysis-content > .read-more-link {
+    align-self: flex-start;
 }
 
 /* ── Subscribe Section ──────────────────────────────────────── */
@@ -2541,6 +2557,24 @@ details.game-note > .post-game {
     transition: opacity 0.2s ease-out;
 }
 
+/* Same card treatment for the home page's analysis sidebar — a much
+   narrower column than the article body, which can't fit pgn-study's
+   two-pane board+article layout. It's expected to load collapsed (see
+   main.js and the pgn-study-collapsed rules below) and only expand —
+   full two-pane, same as in an article — once a reader opts in by
+   clicking it, so the base height here is just a loading placeholder,
+   same as .post-article's own. */
+.sidebar-sticky > pgn-study {
+    width: 100%;
+    max-width: 100%;
+    height: min(480px, 60vh);
+    margin: 0;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 8px 8px 0 0 var(--fg);
+    transition: opacity 0.2s ease-out;
+}
+
 /* ChessPublica's own CDN script loads render-blocking (see
    _layouts/default.html — main.js is deferred, but ChessPublica's own
    <script> tag isn't), so main.js can be well behind by the time
@@ -2552,7 +2586,7 @@ details.game-note > .post-game {
    once its first fit (and, if custom fonts were still loading, a
    second one against their real metrics) has actually landed; until
    then, the whole panel stays invisible rather than mid-sized-wrong. */
-.post-article > pgn-study.cp-ready:not(.sah-fitted) {
+:is(.post-article, .sidebar-sticky) > pgn-study.cp-ready:not(.sah-fitted) {
     opacity: 0;
     pointer-events: none;
 }
@@ -2566,7 +2600,7 @@ details.game-note > .post-game {
    column edge. Keeps their own fit-content sizing — a collapsed bar
    is meant to read as compact, not a full-width card with nothing in
    it — just flush at the column edge instead of indented. */
-.post-article > pgn-study.pgn-study-collapsed {
+:is(.post-article, .sidebar-sticky) > pgn-study.pgn-study-collapsed {
     width: fit-content;
     max-width: 100%;
     margin-left: 0;
@@ -2583,7 +2617,7 @@ details.game-note > .post-game {
    comes later in their stylesheet) tie in specificity, and the later
    rule wins a tie regardless of which one is semantically meant for the
    current state. Same fix, just specific enough to actually stick. */
-.post-article > pgn-study.pgn-study-collapsed > .pgn-study-ribbon {
+:is(.post-article, .sidebar-sticky) > pgn-study.pgn-study-collapsed > .pgn-study-ribbon {
     margin-bottom: 0;
 }
 
@@ -2623,6 +2657,18 @@ details.game-note > .post-game {
     .post-article > .pgn-study-loading {
         column-span: all;
     }
+}
+
+/* Same loading-skeleton card, sized for the sidebar's placeholder
+   height instead — see .sidebar-sticky > pgn-study above. */
+.sidebar-sticky > .pgn-study-loading {
+    width: 100%;
+    max-width: 100%;
+    height: min(480px, 60vh);
+    margin: 0;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 8px 8px 0 0 var(--fg);
 }
 
 /* The skeleton board itself is still a fixed 600px (desktop) —
@@ -2689,10 +2735,10 @@ details.game-note > .post-game {
    toward zero instead of sizing to the board underneath. flex-basis: auto
    sizes it from its own content first, sidestepping that. */
 @media (max-width: 899px) {
-    .post-article > pgn-study:not(.mobile-article-view) {
+    :is(.post-article, .sidebar-sticky) > pgn-study:not(.mobile-article-view) {
         height: auto;
     }
-    .post-article pgn-study > pgn-player {
+    :is(.post-article, .analysis-sidebar) pgn-study > pgn-player {
         flex: 1 1 auto;
     }
 }
@@ -2706,7 +2752,7 @@ details.game-note > .post-game {
    the puzzle hint row when a [P] move is active) instead — main.js reads
    that real size to set the panel's height, so this floor would otherwise
    force the panel oversized even when nothing needs the extra room. */
-.post-article pgn-study pgn-player .player-wrapper {
+:is(.post-article, .analysis-sidebar) pgn-study pgn-player .player-wrapper {
     min-height: 0;
 }
 
@@ -2729,7 +2775,7 @@ details.game-note > .post-game {
    this max() only has to step in for --sah-max-board-h, on a viewport
    short enough that the height cap alone would otherwise push the board
    under the floor. */
-.post-article pgn-study pgn-player {
+:is(.post-article, .analysis-sidebar) pgn-study pgn-player {
     --board-size: max(
         var(--sah-min-board-w, 0px),
         min(600px, 94cqw, var(--sah-max-board-h, 9999px))
@@ -2737,7 +2783,7 @@ details.game-note > .post-game {
 }
 
 @media (max-width: 899px) {
-    .post-article pgn-study pgn-player {
+    :is(.post-article, .analysis-sidebar) pgn-study pgn-player {
         --board-size: min(400px, 94cqw, var(--sah-max-board-h, 9999px));
     }
 }
@@ -2753,7 +2799,7 @@ details.game-note > .post-game {
    visibility (commentBox.update() runs on every move navigation), so
    this is a pure display toggle — no extra JS wiring needed. */
 @media (max-width: 899px) {
-    .post-article pgn-study pgn-player .video-comment {
+    :is(.post-article, .analysis-sidebar) pgn-study pgn-player .video-comment {
         display: block;
     }
 
@@ -2767,7 +2813,7 @@ details.game-note > .post-game {
        pgn-player (no ribbon of its own), now shows up too; hide it
        specifically rather than pull in a second, overlapping way to
        start playback. */
-    .post-article pgn-study pgn-player .video-comment .comment-play-btn {
+    :is(.post-article, .analysis-sidebar) pgn-study pgn-player .video-comment .comment-play-btn {
         display: none;
     }
 }
@@ -2780,15 +2826,15 @@ details.game-note > .post-game {
    border is reserved (transparent) on every comment, active or not, so
    turning it accent-colored on activation is a pure color transition
    with no layout shift. */
-.post-article pgn-study .pgn-container .pgn-comment {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-container .pgn-comment {
     border-left: 3px solid transparent;
     padding-left: 0.6rem;
     margin-left: -0.6rem;
     transition: border-color 0.3s ease;
 }
 
-.post-article pgn-study .pgn-container .pgn-comment.pgn-comment-active,
-.post-article pgn-study .pgn-container .pgn-comment-inline.pgn-comment-active {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-container .pgn-comment.pgn-comment-active,
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-container .pgn-comment-inline.pgn-comment-active {
     background: transparent;
     box-shadow: none;
     border-radius: 0;
@@ -2797,7 +2843,7 @@ details.game-note > .post-game {
     font-style: italic;
 }
 
-.post-article pgn-study .pgn-container p.pgn-comment.pgn-comment-active {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-container p.pgn-comment.pgn-comment-active {
     margin-left: -0.6rem;
     padding-left: 0.6rem;
 }
@@ -2812,44 +2858,44 @@ details.game-note > .post-game {
    this selector's specificity exactly — .cp-ready here isn't for
    correctness (the ribbon is already display:none until then) but to win
    that tie, since main.css loads before the CDN stylesheet in <head>. */
-.post-article pgn-study.cp-ready > .pgn-study-ribbon {
+:is(.post-article, .analysis-sidebar) pgn-study.cp-ready > .pgn-study-ribbon {
     background: var(--surface);
     color: var(--fg);
     border-bottom: 2px solid var(--accent);
 }
 
-.post-article pgn-study .pgn-study-ribbon-btn {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-ribbon-btn {
     color: var(--fg);
     border-radius: 999px;
 }
 
-.post-article pgn-study .pgn-study-ribbon-btn:hover:not(:disabled) {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-ribbon-btn:hover:not(:disabled) {
     background: var(--border-12);
 }
 
-.post-article pgn-study .pgn-study-ribbon-btn:disabled {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-ribbon-btn:disabled {
     opacity: 0.3;
 }
 
-.post-article pgn-study .pgn-study-article-btn.active {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-article-btn.active {
     background: var(--accent);
 }
 
-.post-article pgn-study .pgn-study-speed-badge {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-speed-badge {
     background: var(--accent);
     color: #fff;
 }
 
-.post-article pgn-study .pgn-study-ribbon-title .lucide-icon {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-ribbon-title .lucide-icon {
     color: var(--fg);
 }
 
-.post-article pgn-study .pgn-study-ribbon-title-text {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-ribbon-title-text {
     color: var(--fg);
     font-family: var(--font-sans);
 }
 
-.post-article pgn-study .pgn-study-ribbon-title-subtext {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-ribbon-title-subtext {
     color: var(--slate);
 }
 
@@ -2857,7 +2903,7 @@ details.game-note > .post-game {
    give them the article's own surface rather than inheriting the
    ribbon's background, so ChessPublica's own text colors for their
    contents stay legible without touching each one. */
-.post-article pgn-study .pgn-study-toc-accordion.open {
+:is(.post-article, .analysis-sidebar) pgn-study .pgn-study-toc-accordion.open {
     background: var(--surface);
     color: var(--fg);
     margin: 0.5rem calc(-1 * var(--frame-pad)) calc(-1 * var(--frame-pad));
