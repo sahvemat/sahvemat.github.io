@@ -2558,16 +2558,21 @@ details.game-note > .post-game {
 }
 
 /* Same card treatment for the home page's analysis sidebar — a much
-   narrower column than the article body, which can't fit pgn-study's
-   two-pane board+article layout. It's expected to load collapsed (see
-   main.js and the pgn-study-collapsed rules below) and only expand —
-   full two-pane, same as in an article — once a reader opts in by
-   clicking it, so the base height here is just a loading placeholder,
-   same as .post-article's own. */
+   narrower column than the article body, which can never fit
+   pgn-study's two-pane board+article layout even at a wide desktop
+   viewport (the two-pane vs. stacked decision is ChessPublica's own,
+   driven by viewport width, not container width). Rather than fight
+   that at whatever width the sidebar happens to be, this context
+   always gets the same stacked board/article treatment pgn-study
+   itself only normally switches to below 900px — see the width:100%
+   mobile-style rules further down, unconditional here instead of
+   inside @media (max-width: 899px). Height is auto, not a capped
+   placeholder: same reasoning as the mobile case below (content-driven,
+   varies with whichever move's comment is showing). */
 .sidebar-sticky > pgn-study {
     width: 100%;
     max-width: 100%;
-    height: min(480px, 60vh);
+    height: auto;
     margin: 0;
     border: 1px solid var(--line);
     background: var(--surface);
@@ -2735,12 +2740,19 @@ details.game-note > .post-game {
    toward zero instead of sizing to the board underneath. flex-basis: auto
    sizes it from its own content first, sidestepping that. */
 @media (max-width: 899px) {
-    :is(.post-article, .sidebar-sticky) > pgn-study:not(.mobile-article-view) {
+    .post-article > pgn-study:not(.mobile-article-view) {
         height: auto;
     }
-    :is(.post-article, .analysis-sidebar) pgn-study > pgn-player {
+    .post-article pgn-study > pgn-player {
         flex: 1 1 auto;
     }
+}
+
+/* Same flex-basis fix as the mobile case above, applied unconditionally
+   in the analysis sidebar rather than gated to a narrow viewport — see
+   .sidebar-sticky > pgn-study above for why. */
+.analysis-sidebar pgn-study > pgn-player {
+    flex: 1 1 auto;
 }
 
 /* ChessPublica's base .player-wrapper carries a min-height: 500px, sized
@@ -2775,7 +2787,7 @@ details.game-note > .post-game {
    this max() only has to step in for --sah-max-board-h, on a viewport
    short enough that the height cap alone would otherwise push the board
    under the floor. */
-:is(.post-article, .analysis-sidebar) pgn-study pgn-player {
+.post-article pgn-study pgn-player {
     --board-size: max(
         var(--sah-min-board-w, 0px),
         min(600px, 94cqw, var(--sah-max-board-h, 9999px))
@@ -2783,9 +2795,19 @@ details.game-note > .post-game {
 }
 
 @media (max-width: 899px) {
-    :is(.post-article, .analysis-sidebar) pgn-study pgn-player {
+    .post-article pgn-study pgn-player {
         --board-size: min(400px, 94cqw, var(--sah-max-board-h, 9999px));
     }
+}
+
+/* Same board-size ceiling as the mobile case above (no desktop
+   --sah-min-board-w floor either, since main.js's diagram-aware
+   fitting never runs here — capHeight()/fitWidth() both bail out for
+   any pgn-study inside .analysis-sidebar, see main.js), applied
+   unconditionally rather than gated to a narrow viewport — see
+   .sidebar-sticky > pgn-study above for why. */
+.analysis-sidebar pgn-study pgn-player {
+    --board-size: min(400px, 94cqw, var(--sah-max-board-h, 9999px));
 }
 
 /* On mobile, pgn-study's board and article are separate views (only one
@@ -2799,7 +2821,7 @@ details.game-note > .post-game {
    visibility (commentBox.update() runs on every move navigation), so
    this is a pure display toggle — no extra JS wiring needed. */
 @media (max-width: 899px) {
-    :is(.post-article, .analysis-sidebar) pgn-study pgn-player .video-comment {
+    .post-article pgn-study pgn-player .video-comment {
         display: block;
     }
 
@@ -2813,9 +2835,20 @@ details.game-note > .post-game {
        pgn-player (no ribbon of its own), now shows up too; hide it
        specifically rather than pull in a second, overlapping way to
        start playback. */
-    :is(.post-article, .analysis-sidebar) pgn-study pgn-player .video-comment .comment-play-btn {
+    .post-article pgn-study pgn-player .video-comment .comment-play-btn {
         display: none;
     }
+}
+
+/* Same video-comment un-hiding as the mobile case above, applied
+   unconditionally in the analysis sidebar — see .sidebar-sticky >
+   pgn-study above for why. */
+.analysis-sidebar pgn-study pgn-player .video-comment {
+    display: block;
+}
+
+.analysis-sidebar pgn-study pgn-player .video-comment .comment-play-btn {
+    display: none;
 }
 
 /* Active-comment highlight: ChessPublica's default is a pale-yellow
