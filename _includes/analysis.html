@@ -1,4 +1,7 @@
 {% assign analysisPost = site.posts | where: "type", "analysis" | first %}
+{% assign fen_parts = analysisPost.FEN | split: " " %}
+{% assign event_parts = analysisPost.event | split: " · " %}
+{% assign game_count_parts = event_parts[1] | split: " " %}
 <section class="analysis-section">
     <div class="analysis-main">
         <div class="analysis-content">
@@ -18,8 +21,28 @@
             <a href="{{ analysisPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
             <div class="critical-positions">
                 <div class="positions-grid">
-                    <div class="position-card position-card--accent"><fen>{{ analysisPost.FEN }}</fen></div>
-                    <div class="position-card position-card--dark"><fen>{{ analysisPost.FEN }}</fen></div>
+                    <div class="position-card position-card--accent">
+                        <fen>{{ analysisPost.FEN }}</fen>
+                        <span class="position-card-caption">
+                            {{ analysisPost.analysis_position_caption }}
+                            {% if fen_parts[5] %}· {{ fen_parts[5] }}. hamle{% endif %}
+                            {% if fen_parts[1] == "b" %}· Siyah oynar{% elsif fen_parts[1] == "w" %}· Beyaz oynar{% endif %}
+                        </span>
+                    </div>
+                    <div class="position-card position-card--dark position-card--stats">
+                        <div class="stat-block">
+                            <span class="stat-number">{{ game_count_parts[0] }}</span>
+                            <span class="stat-label">Parti</span>
+                        </div>
+                        <div class="stat-block">
+                            <span class="stat-number">{{ event_parts[0] }}</span>
+                            <span class="stat-label">Kariyer</span>
+                        </div>
+                        <div class="stat-block">
+                            <span class="stat-number">{{ analysisPost.reading_time }}</span>
+                            <span class="stat-label">Dk Okuma</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="chess-board-display">

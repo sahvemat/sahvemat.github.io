@@ -11,6 +11,7 @@ reading_time: 43
 type: analysis
 category: "Klasikler"
 PGNURL: https://lichess.org/api/study/F0mOCg4p/Bp9Dw9mI.pgn
+analysis_position_caption: "Karpov – Timman, Mar del Plata 1982"
 analysis_tip_label: "Gözde Parti"
 analysis_tip: "Timman'ın kariyerinde 'favori oyunu' olarak andığı karşılaşma: Merano'dan yorgun dönen dünya şampiyonu Karpov'a karşı, dünya ikincisinin cesaretle örülü performansı."
 analysis_author: "Nazmi Can Doğan"

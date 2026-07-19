@@ -873,6 +873,7 @@ a:hover {
 }
 
 .position-card {
+    position: relative;
     aspect-ratio: 1;
     display: flex;
     align-items: center;
@@ -900,6 +901,54 @@ a:hover {
 
 .position-card--dark:hover {
     background: var(--accent);
+}
+
+.position-card-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+}
+
+.position-card--stats {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+}
+
+.stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    border-left: 2px solid var(--accent);
+    padding-left: 0.75rem;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .tip-card {
@@ -1777,6 +1826,14 @@ pgn-player p {
         width: 100%;
         max-width: 100%;
         height: auto;
+    }
+    .position-card--stats {
+        aspect-ratio: auto;
+        padding: 1rem 0.75rem;
+        gap: 0.75rem;
+    }
+    .position-card--stats .stat-number {
+        font-size: 1.25rem;
     }
 
     /* 4. Article thumbnails must fit the column */
