@@ -21,13 +21,15 @@
             <a href="{{ analysisPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
             <div class="critical-positions">
                 <div class="positions-grid">
-                    <div class="position-card position-card--accent">
-                        <fen>{{ analysisPost.FEN }}</fen>
-                        <span class="position-card-caption">
+                    <div class="diagram-card">
+                        <div class="position-card position-card--accent">
+                            <fen>{{ analysisPost.FEN }}</fen>
+                        </div>
+                        <div class="position-card-caption">
                             {{ analysisPost.analysis_position_caption }}
                             {% if fen_parts[5] %}· {{ fen_parts[5] }}. hamle{% endif %}
                             {% if fen_parts[1] == "b" %}· Siyah oynar{% elsif fen_parts[1] == "w" %}· Beyaz oynar{% endif %}
-                        </span>
+                        </div>
                     </div>
                     <div class="position-card position-card--dark position-card--stats">
                         <div class="stat-block">
@@ -60,7 +62,7 @@
     </div>
     <div class="analysis-sidebar">
         <div class="sidebar-sticky">
-            <div class="post-game" id="tur-1" data-pgn="{{ analysisPost.PGNURL }}"></div>
+            <pgn-study class="pgn-study-collapsed" src="{{ analysisPost.PGNURL | relative_url }}"></pgn-study>
         </div>
     </div>
 </section>
