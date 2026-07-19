@@ -769,6 +769,16 @@ a:hover {
     line-height: 0.9;
 }
 
+.analysis-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.analysis-title a:hover {
+    color: var(--accent);
+}
+
 .analysis-meta {
     display: flex;
     gap: 1rem;

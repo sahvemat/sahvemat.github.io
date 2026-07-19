@@ -3,7 +3,7 @@
     <div class="analysis-main">
         <div class="analysis-content">
             <header class="analysis-header">
-                <h2 class="analysis-title">{{ analysisPost.title }}</h2>
+                <h2 class="analysis-title"><a href="{{ analysisPost.url | relative_url }}">{{ analysisPost.title }}</a></h2>
             </header>
             <div class="analysis-meta">
                 <span>{{ analysisPost.date | date: "%Y" }}</span>
@@ -15,6 +15,7 @@
             <p class="analysis-body drop-cap">
                 "{{ analysisPost.excerpt | strip_html | strip_newlines }}"
             </p>
+            <a href="{{ analysisPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
             <div class="critical-positions">
                 <div class="positions-grid">
                     <div class="position-card position-card--accent"><fen>{{ analysisPost.FEN }}</fen></div>
