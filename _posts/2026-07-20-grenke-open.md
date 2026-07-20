@@ -8,7 +8,8 @@ FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 date: 2026-07-20
 ---
 
-<pgn>
+<div class="post-game" id="grenke-r1">
+<script type="application/x-chess-pgn">
 [Event "GRENKE Açık - A"]
 [Site "?"]
 [Date "2026.04.02"]
@@ -71,4 +72,5 @@ Eski repertuvarım genellikle ...Nf6 ve ...g6 üzerine kuruluydu. Son dönemde �
 - **...a3, ...h5-h4 ve ...Be5** fikirlerinin nasıl birlikte çalıştığı,
 - ve küçük piyon yapısı değişikliklerinin bütün konum değerlendirmesini nasıl değiştirebildiği.
 Turnuvaya gergin bir başlangıç!} 0-1
-</pgn>
+</script>
+</div>
