@@ -1,0 +1,120 @@
+---
+layout: default
+tags: posts
+title: "♗⚔️♘ Fil v. at"
+author: "Adrian Mikailchishin"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt diam, vel dignissim augue. Mauris pretium enim nunc, vel suscipit lorem posuere non. Morbi finibus id nibh id rutrum. Vestibulum porta ante erat, a eleifend mi porttitor nec."
+FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+date: 2026-01-05
+---
+<pgn>
+[Event "URS-chT"]
+[Site "Riga"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Zaichik, Gennadi"]
+[Black "Mikhalchishin, Adrian"]
+[Result "1-0"]
+[ECO "D91"]
+[WhiteElo "2200"]
+[BlackElo "2425"]
+[SetUp "1"]
+[FEN "1r3r2/p4pbk/2p3pp/8/4N3/8/PPK2PPP/3R3R w - - 0 23"]
+[PlyCount "79"]
+[EventDate "1975.07.15"]
+[EventType "team-tourn"]
+[EventRounds "9"]
+[EventCountry "URS"]
+[SourceTitle "MCD"]
+[Source "ChessBase"]
+[SourceDate "1999.07.01"]
+[SourceVersion "1"]
+[SourceVersionDate "1999.07.01"]
+[SourceQuality "1"]
+
+{ A very important part of chess technique is the ability to play, on a high
+level, with bishop against knight or knight against bishop. There are two
+parts to the problem: first, the ability to handle one of the two pieces on
+a high level - to understand its strong possibilities in a given position;
+second, knowing when and how to exchange a bishop for a knight (or vice
+versa), recognizing the right situations and making the correct decision.
+These exchange decisions are very difficult, and players developed strong
+personal preferences. In the Soviet Union there was an old school of
+thought - the so-called Chigorin school - which believed the knight was
+stronger than the bishop, tracing back to Lasker,Emanuel - Chigorin,Mikhail
+Ivanovich, Hastings, 06.08.1895, in which Chigorin demonstrated the
+advantage of two knights over two bishops. Players who preferred the
+knight were nicknamed "Chigorinists," and some schools - the Georgian
+school, for instance - became known for playing the knight at a very high
+level. It is not possible to simply follow Kasparov's joking rule that
+"the worst bishop is better than the worst knight" - that isn't true at
+all. Top players understood when to bring out the advantages of the
+bishop and when to bring out the advantages of the knight, but it is far
+from easy. Here is one of my own games, against (future) Grandmaster
+Gennadi Zaichik, Soviet Team Championship, Riga - I played for Ukraine,
+he played for Georgia. This position comes from a Grunfeld Defense, my
+favorite opening, and I believed my bishop was quite strong here. }
+23. b3 c5 $2 { My plan was to improve the position of the bishop and try to
+open White's king. The threat was simple: play ...c4, then open the files
+with ...Rc8, and White's king comes under fire. [%cal Yc5c4,Yf8c8] }
+(23... Rfd8 $1 { The correct way to handle this position. } 24. Rxd8 Rxd8
+25. Rd1 Rxd1 26. Kxd1 Bf8 27. Kc2 Be7 28. Kd3 f5 29. Nd2 Kg7 30. Kc4 Kf6
+31. Nf3 Ke6 32. Nd4+ Kd7 33. f4 Bf6 34. g3 Kd6 35. Nf3 g5 { A passive but
+defensible setup: Black holds all the light squares around d5/c5/b5.
+White stays better, but it is probably not possible to make further
+progress. }) 24. Nd6 Bd4 { I was quite satisfied with my position: I had
+closed d5, and the bishop stood powerfully on d4. } 25. f3 Rb6 26. Nc4 Re6
+27. Rde1 Rfe8 28. Rxe6 Rxe6 29. Kd3 { Suddenly I realized White's real
+threat: to play b4, then b5, a4, a5 and b6, creating a passed pawn - and
+my bishop was not fighting that pawn at all. The bishop looked beautiful
+in the center, but its function was zero: nobody needed the d-file at
+that moment, and it was not coordinated with my other pieces.
+[%cal Yb3b4,Yb4b5,Ya2a4,Ya4a5,Yb5b6] } Bg7 { Retreating, stopping ...b4. }
+30. Rc1 { Looking at c5 - in chess we always attack the weaknesses. } h5
+{ A very typical prophylactic move: it is useful to control the back rank
+so the opponent's rook cannot infiltrate - a technique we will also see
+later from Karpov and other world champions. } 31. Rc2 Re1 32. Na5 a6
+33. Nb7 (33. Rxc5 Rd1+ 34. Ke2 Rg1 { [%csl Yg2][%cal Ye2f2,Rg7d4] Not
+possible to attack g2, and not possible to play Kf2 because of the
+double attack ...Bd4. }) 33... Re6 34. Kc4 (34. Nxc5 Rd6+
+{ [%cal Rd3c4] } 35. Kc4 Rd4+ { Very unpleasant for White; the king comes
+to c3 under open checks. }) 34... f5 { As Capablanca used to say, in the
+endgame you don't need to hurry - improve your position as much as
+possible first. } 35. Nxc5 Rd6 { [%cal Rd6d4] Threatening the same trick
+as before. } 36. b4 { [%csl Rb3] Now White has a safe square, and the
+trick no longer works. } g5 { Black's strategy: push pawns as far as
+possible to create weaknesses. White's strategy: advance the queenside
+passed pawns. } 37. a4 g4 38. b5 Rd4+ 39. Kb3 axb5 40. axb5 Rd1
+{ [%cal Rd1b1] Trying to get behind the pawn. } 41. Ne6 Bf6 42. f4
+{ Necessary to avoid ...Rf1 or an attack on f3. } Rb1+ 43. Kc4 Be7
+{ [%csl Rb4][%cal Re7b4,Rb1b4] Finally some real coordination between
+rook and bishop - always look for this kind of teamwork. } 44. Nc5 h4
+45. Nd3 { [%cal Rc2b2] Threatening Rb2, transferring the rook to support
+the passed pawn. } Bd6 { Attacking f4 and preventing Rb2 - but this
+allows a tactic, since c6 is now defended. } 46. Kd5 Bb8 47. Kc6 Rh1
+48. Kb7 Bd6 49. Kc6 Bb8 50. Kb7 Bd6 51. b6 Rxh2 52. Rc7+ Kg8 53. Kc6 h3
+54. Kxd6 hxg2 55. Rc1 Rh6+ (55... Rh1 56. b7 Rxc1 57. b8=Q+ Kg7 58. Qa7+
+{ [%cal Ra6g1,Rd3c1] Forking king and rook. }) 56. Ke5 Rxb6 57. Kxf5 Rb3
+58. Ne5 Rg3 59. Kg6 Kf8 60. Kf6 { [%cal Rc2c8] } Kg8 61. Rc8+ Kh7
+62. Ng6 { [%cal Rc8h8] White completes a mating attack; Black resigned.
+
+Postscript: after the game, Grandmaster Eduard Gufeld - a devoted fan of
+the dark-squared bishop, famous for kissing it before trading it away and
+thanking it "for its service" - joked with Garry Kasparov, who played the
+Gruenfeld/King's Indian and had also exchanged his own g7-bishop in a
+game: "Garry, what you did is a crime!" Gufeld then came to our board and
+said: "Oh, young guys, you don't know how to play with bishops - how is
+it possible to spoil a position like this?" Tigran Petrosian, standing
+nearby, laughed and said: "Don't listen to Eduard, young guys - after
+23...c5 this position is theoretically lost. It's lost because you have
+no counterplay and the bishop is bad." He asked if I understood why; I
+said no. Petrosian explained: I had broken Capablanca's rule - if you
+have the bishop, put your pawns on the color opposite to your bishop's
+squares. It is a rule, and if you break it, you get punished. He added:
+if queens were still on the board (say, a Black queen on b6 and a White
+queen on c4), then 23...c5 would actually have been logical, opening an
+attack on White's king - and in that case the bishop would have been
+much stronger than the knight. A very instructive story: 23...c5 lost the
+game because it broke Capablanca's rule. Follow it, and you succeed.
+Break it, and you lose the game - as I did. } 1-0
+</pgn>
