@@ -460,11 +460,20 @@
             root.querySelectorAll('*').forEach(applyFont);
         }
 
-        // Open shadow DOM: inject a stylesheet so future dynamic content inherits it too
+        // Open shadow DOM: inject a stylesheet so future dynamic content inherits it too.
+        // Besides font matching, this also lays the article text out in two
+        // newspaper-style columns (.pgn-container) and forces every diagram
+        // (.cp-board-wrapper / .fen-container — the same two classes
+        // tallestDiagram() below reads for <pgn-study>) to one fixed square
+        // size via --board-size, since left to their own layout these
+        // diagrams can each come out a different size within the same game.
         if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
             var s = document.createElement('style');
             s.setAttribute('data-sah-font', '');
-            s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }';
+            s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }' +
+                '.pgn-container { column-count: 2; column-gap: 2.5rem; column-rule: 1px solid rgba(0,0,0,0.15); }' +
+                '.cp-board-wrapper, .fen-container { column-span: all; break-inside: avoid; ' +
+                'width: var(--board-size, 320px) !important; height: var(--board-size, 320px) !important; margin: 1.5rem auto !important; }';
             pgn.shadowRoot.prepend(s);
         }
 
@@ -524,7 +533,11 @@
     window.__sahWaitPgnReady = waitForPgnContainer;
 
     function tryCleanAll() {
-        document.querySelectorAll('.post-game-view--article pgn').forEach(function (pgn) {
+        // '.post-game-view--article pgn' covers the toggle-created <pgn>
+        // (board <-> article view) used elsewhere on the site; '.post-article > pgn'
+        // covers long-form posts (e.g. fil-v-at) that embed <pgn> directly
+        // in the markdown, with no toggle wrapper around it at all.
+        document.querySelectorAll('.post-game-view--article pgn, .post-article > pgn').forEach(function (pgn) {
             if (!pgn.dataset.sahCleaned) {
                 waitForPgnContainer(pgn).then(function () {
                     var root = pgn.shadowRoot || pgn;
