@@ -524,7 +524,11 @@
     window.__sahWaitPgnReady = waitForPgnContainer;
 
     function tryCleanAll() {
-        document.querySelectorAll('.post-game-view--article pgn').forEach(function (pgn) {
+        // '.post-game-view--article pgn' covers the toggle-created <pgn>
+        // (board <-> article view) used elsewhere on the site; '.post-article > pgn'
+        // covers long-form posts (e.g. fil-v-at) that embed <pgn> directly
+        // in the markdown, with no toggle wrapper around it at all.
+        document.querySelectorAll('.post-game-view--article pgn, .post-article > pgn').forEach(function (pgn) {
             if (!pgn.dataset.sahCleaned) {
                 waitForPgnContainer(pgn).then(function () {
                     var root = pgn.shadowRoot || pgn;
