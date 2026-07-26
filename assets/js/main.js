@@ -472,10 +472,22 @@
         if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
             var s = document.createElement('style');
             s.setAttribute('data-sah-font', '');
+            // !important on every one of these: ChessPublica's own stylesheet
+            // for .pgn-container is presumably injected into this same shadow
+            // root too (possibly after ours, and CSS columns only take effect
+            // on a block/inline-block box in the first place — not a flex or
+            // grid one — so both display and column-count need to win outright
+            // rather than rely on selector specificity/source order).
             s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }' +
-                '.pgn-container { column-count: 2; column-gap: 2.5rem; column-rule: 1px solid rgba(0,0,0,0.15); }' +
-                '.cp-board-wrapper, .fen-container { column-span: all; break-inside: avoid; }';
-            pgn.shadowRoot.prepend(s);
+                '.pgn-container { display: block !important; column-count: 2 !important; ' +
+                'column-gap: 2.5rem !important; column-rule: 1px solid rgba(0,0,0,0.15) !important; }' +
+                '.cp-board-wrapper, .fen-container { column-span: all !important; break-inside: avoid !important; }';
+            // Appended, not prepended: by the time .pgn-container exists (see
+            // waitForPgnContainer below) ChessPublica has already rendered its
+            // own stylesheet(s) into this shadow root, so appending ours after
+            // theirs also wins any same-specificity/!important tie on source
+            // order, instead of risking coming first and losing that tie.
+            pgn.shadowRoot.append(s);
         }
 
         // Light DOM fallback: walk all children and stamp font-family directly
