@@ -462,25 +462,102 @@
 
         // Open shadow DOM: inject a stylesheet so future dynamic content inherits it too.
         // Besides font matching, this also lays the article text out in two
-        // newspaper-style columns (.pgn-container) and forces every diagram
-        // (.cp-board-wrapper / .fen-container — the same two classes
-        // tallestDiagram() below reads for <pgn-study>) to one fixed square
-        // size via --board-size, since left to their own layout these
-        // diagrams can each come out a different size within the same game.
+        // newspaper-style columns (.pgn-container), and keeps diagrams from
+        // ever splitting across a column break (their actual uniform sizing
+        // is handled in JS by normalizeDiagrams() below — a CSS width/height
+        // here can't win: each diagram sizes its own internal board widget
+        // asynchronously after being inserted, same as pgn-study's diagrams,
+        // see the "diagrams settled" comment further down — so it would just
+        // get overwritten).
         if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
             var s = document.createElement('style');
             s.setAttribute('data-sah-font', '');
+            // !important on every one of these: ChessPublica's own stylesheet
+            // for .pgn-container is presumably injected into this same shadow
+            // root too (possibly after ours, and CSS columns only take effect
+            // on a block/inline-block box in the first place — not a flex or
+            // grid one — so both display and column-count need to win outright
+            // rather than rely on selector specificity/source order).
             s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }' +
-                '.pgn-container { column-count: 2; column-gap: 2.5rem; column-rule: 1px solid rgba(0,0,0,0.15); }' +
-                '.cp-board-wrapper, .fen-container { column-span: all; break-inside: avoid; ' +
-                'width: var(--board-size, 320px) !important; height: var(--board-size, 320px) !important; margin: 1.5rem auto !important; }';
-            pgn.shadowRoot.prepend(s);
+                '.pgn-container { display: block !important; column-count: 2 !important; ' +
+                'column-gap: 2.5rem !important; column-rule: 1px solid rgba(0,0,0,0.15) !important; }' +
+                '.cp-board-wrapper, .fen-container { column-span: all !important; break-inside: avoid !important; }';
+            // Appended, not prepended: by the time .pgn-container exists (see
+            // waitForPgnContainer below) ChessPublica has already rendered its
+            // own stylesheet(s) into this shadow root, so appending ours after
+            // theirs also wins any same-specificity/!important tie on source
+            // order, instead of risking coming first and losing that tie.
+            pgn.shadowRoot.append(s);
         }
 
         // Light DOM fallback: walk all children and stamp font-family directly
         // (covers cases where shadow DOM is closed or absent)
         pgn.querySelectorAll('*').forEach(applyFont);
         applyFont(pgn);
+
+        normalizeDiagrams(pgn);
+    }
+
+    // Every diagram (.cp-board-wrapper / .fen-container — the same two
+    // classes tallestDiagram() below reads for <pgn-study>) sizes its own
+    // internal board widget asynchronously once inserted, and can settle at
+    // a different size from the next diagram in the very same game — see
+    // the near-identical "diagrams settled" ResizeObserver further down,
+    // written for that exact reason on <pgn-study>. Wait for each diagram
+    // here to stop resizing itself, then force it to one fixed size the
+    // only way that's safe regardless of *how* it rendered internally
+    // (a JS-positioned board widget, an SVG, ...): move its rendered content
+    // into a plain wrapper at its own natural size, then transform: scale()
+    // that wrapper down/up to the target — a CSS width/height override on
+    // the diagram itself would just get fought (and overwritten) by its own
+    // resize logic.
+    var DIAGRAM_TARGET_PX = 400;
+
+    function normalizeDiagrams(pgn) {
+        var root = pgn.shadowRoot || pgn;
+        var container = root.querySelector('.pgn-container');
+        if (!container) return;
+        var diagrams = container.querySelectorAll('.cp-board-wrapper, .fen-container');
+        if (!diagrams.length) return;
+
+        function fixSize(el) {
+            if (el.dataset.sahDiagramFixed) return;
+            var rect = el.getBoundingClientRect();
+            var natural = Math.max(rect.width, rect.height);
+            if (!natural) return;
+            var inner = document.createElement('div');
+            while (el.firstChild) inner.appendChild(el.firstChild);
+            inner.style.width = natural + 'px';
+            inner.style.height = natural + 'px';
+            inner.style.transformOrigin = 'top left';
+            inner.style.transform = 'scale(' + (DIAGRAM_TARGET_PX / natural) + ')';
+            el.appendChild(inner);
+            el.style.width = DIAGRAM_TARGET_PX + 'px';
+            el.style.height = DIAGRAM_TARGET_PX + 'px';
+            el.style.overflow = 'hidden';
+            el.style.margin = '1.5rem auto';
+            el.dataset.sahDiagramFixed = '1';
+        }
+
+        if (!window.ResizeObserver) {
+            diagrams.forEach(fixSize);
+            return;
+        }
+        var settled = false;
+        var settleTimer;
+        var observer = new ResizeObserver(function () {
+            if (settled) return;
+            clearTimeout(settleTimer);
+            settleTimer = setTimeout(finish, 150);
+        });
+        function finish() {
+            if (settled) return;
+            settled = true;
+            observer.disconnect();
+            diagrams.forEach(fixSize);
+        }
+        diagrams.forEach(function (d) { observer.observe(d); });
+        settleTimer = setTimeout(finish, 1600);
     }
 
     // Wait until ChessPublica has actually parsed the PGN and rendered
