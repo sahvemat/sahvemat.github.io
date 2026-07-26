@@ -460,11 +460,20 @@
             root.querySelectorAll('*').forEach(applyFont);
         }
 
-        // Open shadow DOM: inject a stylesheet so future dynamic content inherits it too
+        // Open shadow DOM: inject a stylesheet so future dynamic content inherits it too.
+        // Besides font matching, this also lays the article text out in two
+        // newspaper-style columns (.pgn-container) and forces every diagram
+        // (.cp-board-wrapper / .fen-container — the same two classes
+        // tallestDiagram() below reads for <pgn-study>) to one fixed square
+        // size via --board-size, since left to their own layout these
+        // diagrams can each come out a different size within the same game.
         if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
             var s = document.createElement('style');
             s.setAttribute('data-sah-font', '');
-            s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }';
+            s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }' +
+                '.pgn-container { column-count: 2; column-gap: 2.5rem; column-rule: 1px solid rgba(0,0,0,0.15); }' +
+                '.cp-board-wrapper, .fen-container { column-span: all; break-inside: avoid; ' +
+                'width: var(--board-size, 320px) !important; height: var(--board-size, 320px) !important; margin: 1.5rem auto !important; }';
             pgn.shadowRoot.prepend(s);
         }
 
