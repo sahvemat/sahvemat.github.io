@@ -423,9 +423,14 @@
     // ChessPublica renders <pgn> content inside a shadow root, so external
     // CSS cannot reach it — we have to patch it via JS.
     var SANS = "Outfit, ui-sans-serif, system-ui, sans-serif";
+    // Match .post-article > p's font-size so article-view PGN text (and any
+    // em-sized inline diagrams within it) reads at the same size as the
+    // surrounding prose instead of ChessPublica's smaller default.
+    var TEXT_SIZE = "1.1rem";
 
     function applyFont(el) {
         el.style.fontFamily = SANS;
+        el.style.fontSize = TEXT_SIZE;
     }
 
     function cleanPgnElement(pgn) {
@@ -459,7 +464,7 @@
         if (pgn.shadowRoot && !pgn.shadowRoot.querySelector('[data-sah-font]')) {
             var s = document.createElement('style');
             s.setAttribute('data-sah-font', '');
-            s.textContent = ':host, * { font-family: ' + SANS + ' !important; }';
+            s.textContent = ':host, * { font-family: ' + SANS + ' !important; font-size: ' + TEXT_SIZE + ' !important; }';
             pgn.shadowRoot.prepend(s);
         }
 
