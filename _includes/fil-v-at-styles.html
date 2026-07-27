@@ -1,0 +1,99 @@
+<style>
+/* This post is long-form prose with full <pgn> games, not the usual
+   short-post/game-pair mix — the site's default 2-column magazine flow
+   (main.css .post-article) crams both the reading text and the boards
+   into narrow half-width columns. Scoped to this page only: keep the
+   prose single-column. */
+@media (min-width: 768px) {
+    .post-article {
+        column-count: 1;
+        column-gap: 0;
+        column-rule: none;
+    }
+}
+
+/* <pgn> is a custom element that replaces *itself* with a plain
+   <div class="pgn-container game-card"> once ChessPublica renders it —
+   there is no shadow root involved, so this can all be done in real CSS
+   instead of trying to reach into one:
+   - .video-title.pgn-title is ChessPublica's own auto-generated
+     player/event header (with its little icon) — kept as-is here.
+   - The actual move-by-move text lives in .pgn-moves, not
+     .pgn-container itself — and ChessPublica's own stylesheet already
+     sets `.pgn-moves { column-count: 1 }`, so *that's* the selector
+     that needs overriding to get the newspaper-style 2-column text
+     this post wants.
+   - Every diagram (.cp-board-wrapper) sits inline inside .pgn-moves,
+     staying *inside* whichever one of the two columns its move falls
+     in (not spanning across both) — same as the surrounding move text.
+   - The 2-column override only applies at the same >=768px breakpoint
+     the rest of this file already uses — on phones .pgn-moves is left
+     at ChessPublica's own column-count: 1, since two columns of move
+     text and diagrams squeezed into a phone-width screen is unreadable.
+   - --board-size (400px by default, from ChessPublica's own :root rule)
+     drives every diagram's width — set it once here so all games'
+     diagrams agree on the same number, and it comfortably fits inside
+     one ~490px-wide column. Inline "Diagram [#]" diagrams get an extra
+     .cp-board-wrapper--small class that shrinks them to 75% of
+     --board-size via ChessPublica's own max-width; overriding max-width
+     directly to a fixed width (rather than leaving ChessPublica's own
+     percentage-based centering math in place) is what makes the small
+     and the auto-printed default diagram end up the exact same size. */
+.post-article > .pgn-container {
+    --board-size: min(400px, calc(100vw - 4rem));
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .post-article > .pgn-container .pgn-moves {
+        column-count: 2 !important;
+        column-gap: 2.5rem;
+        column-rule: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+
+.post-article > .pgn-container .cp-board-wrapper {
+    break-inside: avoid;
+    width: var(--board-size) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Piece icons swapped into the post-hero title in place of the ♗/♘
+   glyphs (see the script below) — sized off the title's own font-size
+   so they scale together, matching the site's piece-theme artwork
+   (assets/img/pieces, as used on /ogren/fil/ and /ogren/at/). */
+.post-title-piece {
+    height: 0.72em;
+    width: auto;
+    vertical-align: -0.08em;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+
+/* The ⚔️ glyph otherwise renders at the title's own huge font-size
+   (inherited straight from .post-title); shrink it to sit between the
+   two piece icons instead of towering over them. */
+.post-title-swords {
+    font-size: 0.4em;
+    vertical-align: 0.08em;
+}
+</style>
+
+<script>
+// The post-hero <h1 class="post-title"> is filled in by main.js's
+// formatPostTitle() (reading data-title) once the DOM is ready — this
+// page's own title starts with the ♗ (bishop) and ♘ (knight) glyphs, so
+// swap those two characters for the site's actual piece-theme artwork
+// right after that happens, instead of relying on the font's Unicode
+// chess-symbol glyphs. The ⚔️ between them is wrapped in a span so it can
+// be shrunk down from the title's own font-size (see .post-title-swords).
+document.addEventListener('DOMContentLoaded', function () {
+    var h1 = document.querySelector('.post-title[data-title]');
+    if (!h1) return;
+    h1.innerHTML = h1.innerHTML
+        .replace(/♗/g, '<img class="post-title-piece" src="{{ "/assets/img/pieces/wB.png" | relative_url }}" alt="Fil">')
+        .replace(/♘/g, '<img class="post-title-piece" src="{{ "/assets/img/pieces/wN.png" | relative_url }}" alt="At">')
+        .replace(/⚔️/g, '<span class="post-title-swords">⚔️</span>');
+});
+</script>
