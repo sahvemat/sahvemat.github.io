@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-3/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Duble Piyon Kuralı
 
 Bu kadarı açık; ama kitaplarda nadiren açıklanan önemli bir özellik daha
@@ -171,7 +173,9 @@ etkileyici bir parti. Elbette Beyaz burada gerçek hatalar yaptı, her
 şeyden önce Capablanca'nın kuralına dikkat etmeyerek. } 0-1
 </pgn>
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-4/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Modern Bir Ustalık Dersi <span class="next-section-arrow">→</span></span>
 </a>
+</div>

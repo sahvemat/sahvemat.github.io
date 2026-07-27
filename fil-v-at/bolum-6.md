@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-6/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Bxc6 Duble Piyon Kalıbı
 
 <pgn>
@@ -75,7 +77,9 @@ rakibin pozisyonunda duble piyon olduğunda at daha iyidir. Bu tür durumlarda p
 kendi lehinize değerlendirebilir, atın file karşı avantajını teknik
 olarak kullanabilirsiniz.
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-7/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Atı Manevra Ettirmek <span class="next-section-arrow">→</span></span>
 </a>
+</div>

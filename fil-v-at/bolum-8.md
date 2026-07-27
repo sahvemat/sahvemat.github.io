@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-8/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Simetri Atın Lehine
 
 Şimdi başka büyük ve dikkate değer bir parti - **simetrik pozisyonlarda
@@ -111,7 +113,9 @@ kuralına göre rakip filinin karelerine yerleştirilmiş piyonlar;
 teknik olarak defalarca yeniden konumlandırmak. Bu son kısım işin en
 zor kısmı.
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-9/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Simetri Duble Piyonlarla Buluştuğunda <span class="next-section-arrow">→</span></span>
 </a>
+</div>

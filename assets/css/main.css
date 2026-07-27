@@ -2918,6 +2918,75 @@ details.game-note > .post-game {
     transform: translateX(-4px);
 }
 
+/* Table of contents for long-form posts split across multiple pages
+   (e.g. /posts/fil-v-at/) — same bordered-card language as
+   .next-section-nav, sits at the top of every part so any chapter is
+   one click away regardless of which page the reader landed on. */
+.toc-box {
+    margin: 2rem 0 3rem;
+    padding: 1.75rem 2rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.toc-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+}
+
+.toc-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 640px) {
+    .toc-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.toc-list li {
+    counter-increment: toc;
+}
+
+.toc-list li::before {
+    content: counter(toc, decimal-leading-zero) ". ";
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.toc-list a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.toc-list a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.toc-list li.toc-current a {
+    color: var(--accent);
+    font-weight: 700;
+    border-color: var(--accent);
+}
+
 .post-colophon {
     margin: 4rem 0 3rem;
     padding: 2rem;

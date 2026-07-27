@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-10/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Modern Bir Örnek Olay
 
 <pgn>
@@ -81,7 +83,9 @@ Nd4 { *Re3* ya da *Kc5-b4-b5* gibi başka tehditler de var - böyle ezici
 bir avantajla sonuç açık. Siyah teslim oldu. } 1-0
 </pgn>
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-11/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Uzun Teknik <span class="next-section-arrow">→</span></span>
 </a>
+</div>

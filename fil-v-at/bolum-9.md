@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-9/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Simetri Duble Piyonlarla Buluştuğunda
 
 <pgn>
@@ -83,7 +85,9 @@ Yani bu partide yanlış karar, esasen, kendi filinin değişimini
 pozisyonundan uzak durmayı başaramadı. Tal kadar büyük bir oyuncu bile
 bu tür bir pozisyonu anlamakta zorlanabiliyordu.
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-10/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Modern Bir Örnek Olay <span class="next-section-arrow">→</span></span>
 </a>
+</div>

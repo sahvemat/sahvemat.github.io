@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-2/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Savunucuyu Ortadan Kaldırmak
 
 <pgn>
@@ -103,7 +105,9 @@ ne zaman attan daha iyidir?* Açık pozisyonlarda filin rolü doğal olarak
 önem kazanır. At ise rakip filin ulaşamadığı kareleri **kapalı** bir
 pozisyonda kontrol ettiğinde güçlüdür.
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-3/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Duble Piyon Kuralı <span class="next-section-arrow">→</span></span>
 </a>
+</div>

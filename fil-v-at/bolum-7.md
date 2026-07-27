@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-7/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Atı Manevra Ettirmek
 
 <pgn>
@@ -102,7 +104,9 @@ Yine çok önemli bir ders: file karşı atınız olduğunda ve at güçlü
 olduğunda, rakibe farklı açılardan saldırabilmek için onu manevra
 ettirmeye, konumunu sürekli değiştirmeye devam etmeniz gerekir.
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-8/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Simetri Atın Lehine <span class="next-section-arrow">→</span></span>
 </a>
+</div>
