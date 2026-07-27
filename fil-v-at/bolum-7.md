@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-7/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Atı Manevra Ettirmek
 
 <pgn>

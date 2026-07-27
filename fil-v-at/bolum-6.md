@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-6/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Bxc6 Duble Piyon Kalıbı
 
 <pgn>

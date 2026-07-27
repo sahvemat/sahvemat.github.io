@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-3/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Duble Piyon Kuralı
 
 Bu kadarı açık; ama kitaplarda nadiren açıklanan önemli bir özellik daha

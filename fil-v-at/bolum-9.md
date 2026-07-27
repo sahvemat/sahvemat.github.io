@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-9/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Simetri Duble Piyonlarla Buluştuğunda
 
 <pgn>

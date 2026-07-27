@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-4/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Modern Bir Ustalık Dersi
 
 Şimdi çok daha karmaşık bir örnek - iki büyük şampiyon arasındaki modern

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 11 — Uzun Teknik"
+title: "♗⚔️♘ fil v. at: Bölüm 11 — Uzun Teknik & Kapanış Düşünceleri"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -9,6 +9,8 @@ permalink: /posts/fil-v-at/bolum-11/
 ---
 
 {% include fil-v-at-styles.html %}
+
+{% include fil-v-at-toc.html %}
 
 ## Uzun Teknik
 
@@ -96,9 +98,19 @@ gücünü gösteren fantastik bir teknik - gerçi Beyaz'ın bütün sorunların�
 ana nedeni çok basitti: duble piyonlar. } 0-1
 </pgn>
 
+## Kapanış Düşünceleri
+
+Sonuç olarak şunu unutmayın: atın file karşı avantajını kullanmaya
+çalışırken ya da bunu bir değişimle hazırlarken, aklınızda şu kalsın -
+simetrik bir pozisyonda atın gücü artar, ama rakibin pozisyonunda duble
+piyon yaratmayı başardığınızda bu güç çok daha fazla artar. Bu tür
+durumlarda at korkunç derecede güçlü hale gelir; nedense bu, kitapların
+çoğunda yazılmaz - üst düzey oyuncular 1920'lere kadar uzanan bir süredir
+bunu bilmiş ve nasıl kullanılacağını da bilmiş olsalar da.
+
 <div>
-<a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-12/' | relative_url }}">
-  <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Kapanış Düşünceleri <span class="next-section-arrow">→</span></span>
+<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/fil-v-at/' | relative_url }}">
+  <span class="next-section-label">Baştan Oku</span>
+  <span class="next-section-title">♗⚔️♘ fil v. at <span class="next-section-arrow">↺</span></span>
 </a>
 </div>

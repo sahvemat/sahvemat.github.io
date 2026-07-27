@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-5/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Kapalı Pozisyonlarda Duble Piyonlar
 
 Yine söyleyelim: duble piyonlar son derece dikkatli olmak için büyük bir

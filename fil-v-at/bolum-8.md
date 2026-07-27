@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-8/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Simetri Atın Lehine
 
 Şimdi başka büyük ve dikkate değer bir parti - **simetrik pozisyonlarda

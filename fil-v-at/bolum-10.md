@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-10/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Modern Bir Örnek Olay
 
 <pgn>

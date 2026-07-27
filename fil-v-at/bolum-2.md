@@ -10,6 +10,8 @@ permalink: /posts/fil-v-at/bolum-2/
 
 {% include fil-v-at-styles.html %}
 
+{% include fil-v-at-toc.html %}
+
 ## Savunucuyu Ortadan Kaldırmak
 
 <pgn>
