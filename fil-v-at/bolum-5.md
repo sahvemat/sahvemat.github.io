@@ -128,7 +128,9 @@ $1) (44. Nh4 $2 Rf2 45. Rxg6+ Kf7 $1) (44. Ng5+ Kf5 45. Nf7 Ba5 $1
 (45... Be7 $2 46. Nh6+ Ke6 47. Rxe7+) 46. g4+ Ke6 47. Nh8 Rf2 $1) 1-0
 </pgn>
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-6/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Bxc6 Duble Piyon Kalıbı <span class="next-section-arrow">→</span></span>
 </a>
+</div>

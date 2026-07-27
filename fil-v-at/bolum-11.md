@@ -96,7 +96,9 @@ gücünü gösteren fantastik bir teknik - gerçi Beyaz'ın bütün sorunların�
 ana nedeni çok basitti: duble piyonlar. } 0-1
 </pgn>
 
+<div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-12/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title">Kapanış Düşünceleri <span class="next-section-arrow">→</span></span>
 </a>
+</div>
