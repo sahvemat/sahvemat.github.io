@@ -86,7 +86,7 @@ Yani bu partide yanlış karar, esasen, kendi filinin değişimini
 pozisyonundan uzak durmayı başaramadı. Tal kadar büyük bir oyuncu bile
 bu tür bir pozisyonu anlamakta zorlanabiliyordu.
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-10/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">10</span> Modern Bir Örnek Olay</span> <span class="next-section-arrow">→</span></span>

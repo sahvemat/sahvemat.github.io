@@ -110,7 +110,7 @@ kuralına göre rakip filinin karelerine yerleştirilmiş piyonlar;
 teknik olarak defalarca yeniden konumlandırmak. Bu son kısım işin en
 zor kısmı.
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-9/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">09</span> Simetri Duble Piyonlarla Buluştuğunda</span> <span class="next-section-arrow">→</span></span>

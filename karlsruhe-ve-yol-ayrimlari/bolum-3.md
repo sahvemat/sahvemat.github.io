@@ -22,7 +22,7 @@ Telefonu her zamanki gibi odada bıraktığım için eşlendirmeyi de ancak sora
 
 <div class="post-game" id="tur-2" data-pgn="{{ '/assets/pgn/karlsruhe/karlsruhe-r2.pgn' | relative_url }}"></div>
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-4/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">Üstten Rakipler</span> <span class="next-section-arrow">→</span></span>

@@ -24,7 +24,7 @@ Nihayet üstten bir rakip çektiğim üçüncü turda 20 yaşındaki genç Alman
 
 <div class="post-game" id="tur-4" data-pgn="{{ '/assets/pgn/karlsruhe/karlsruhe-r4.pgn' | relative_url }}"></div>
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-5/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">Gençler ve Felaketler</span> <span class="next-section-arrow">→</span></span>

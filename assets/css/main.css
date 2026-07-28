@@ -1942,7 +1942,9 @@ pgn-player p {
     .post-article > .post-archive,
     .post-article > table,
     .post-article > figure.table-figure,
-    .post-article > .game-pair {
+    .post-article > .game-pair,
+    .post-article > .toc-box,
+    .post-article > .next-section-nav-wrap {
         column-span: all;
     }
 

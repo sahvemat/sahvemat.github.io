@@ -104,7 +104,7 @@ Yine çok önemli bir ders: file karşı atınız olduğunda ve at güçlü
 olduğunda, rakibe farklı açılardan saldırabilmek için onu manevra
 ettirmeye, konumunu sürekli değiştirmeye devam etmeniz gerekir.
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-8/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">08</span> Simetri Atın Lehine</span> <span class="next-section-arrow">→</span></span>

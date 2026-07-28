@@ -25,7 +25,7 @@ Hayatta bazen kritik yol ayrımlarına geliriz ve seçtiğimiz yol neredeyse ger
 
 ![Karlsruhe piramidi]({{ '/assets/img/karlsruhe/piramit.jpg' | relative_url }} "Karlsruhe şehrini kuran asilzade Karl Wilhelm von Baden-Durlach'ın ebedi istirahatgahı olan kilisenin yerine yapılan piramit kentin simgesi durumunda.")
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-2/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">Yeni Bir Yaklaşım</span> <span class="next-section-arrow">→</span></span>

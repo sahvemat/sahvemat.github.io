@@ -20,7 +20,7 @@ Fakat Grenke için şartlar son derece elverişliydi. Stuttgart havalimanındaki
 
 ![Turnuva salonu]({{ '/assets/img/karlsruhe/salon.jpg' | relative_url }} "Turnuva salonunun önü.")
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-3/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">İyi Bir Başlangıç</span> <span class="next-section-arrow">→</span></span>

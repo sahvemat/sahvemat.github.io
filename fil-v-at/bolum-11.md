@@ -102,7 +102,7 @@ durumlarda at korkunç derecede güçlü hale gelir; nedense bu, kitapların
 çoğunda yazılmaz - üst düzey oyuncular 1920'lere kadar uzanan bir süredir
 bunu bilmiş ve nasıl kullanılacağını da bilmiş olsalar da.
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav next-section-nav--restart" href="{{ '/posts/fil-v-at/' | relative_url }}">
   <span class="next-section-label">İlk sayfaya dön</span>
   <span class="next-section-title"><span class="next-section-text">♗⚔️♘ <span class="notation-case">fil v. at</span></span> <span class="next-section-arrow">↺</span></span>

@@ -118,7 +118,7 @@ Saptırma - tahtadaki en önemli tek piyonu kazanıyor. } Rh3
 *Ng6* ardından gelen *Ra8+*'a karşı da gerçek bir savunma kalmadı. } 1-0
 </pgn>
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-5/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">05</span> Kapalı Pozisyonlarda Duble Piyonlar</span> <span class="next-section-arrow">→</span></span>
