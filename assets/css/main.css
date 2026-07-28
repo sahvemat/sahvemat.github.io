@@ -2107,6 +2107,19 @@ pgn-player p {
     margin-right: 0.28em;
 }
 
+/* Chapter number typed directly into a part's own <h2> text (see the
+   ::before override above) — styled to match the site's own decorative
+   section counter (the accent-red "01"/"02" that normally precedes
+   each heading) instead of sitting there in plain heading color. */
+.chapter-num {
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-right: 1rem;
+}
+
 .post-article > figure {
     margin: 3rem 0;
     border: 1px solid var(--line);

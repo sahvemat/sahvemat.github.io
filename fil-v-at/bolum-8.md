@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-8/
 
 {% include fil-v-at-toc.html %}
 
-## 08 Simetri Atın Lehine
+## <span class="chapter-num">08</span> Simetri Atın Lehine
 
 Şimdi başka büyük ve dikkate değer bir parti - **simetrik pozisyonlarda
 atın filden daha güçlü olduğunu** gerçekten kanıtlayan bir parti. Piyon

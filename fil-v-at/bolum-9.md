@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-9/
 
 {% include fil-v-at-toc.html %}
 
-## 09 Simetri Duble Piyonlarla Buluştuğunda
+## <span class="chapter-num">09</span> Simetri Duble Piyonlarla Buluştuğunda
 
 <pgn>
 [Event "URS-ch37"]

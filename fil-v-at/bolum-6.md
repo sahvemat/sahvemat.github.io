@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-6/
 
 {% include fil-v-at-toc.html %}
 
-## 06 ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı
+## <span class="chapter-num">06</span> ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı
 
 <pgn>
 [Event "Skopje (ol) 14/34"]
