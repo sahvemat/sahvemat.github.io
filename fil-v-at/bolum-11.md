@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-11/
 
 {% include fil-v-at-toc.html %}
 
-## 11 Uzun Teknik
+## <span class="chapter-num">11</span> Uzun Teknik
 
 Şimdi size oyunsonunda gerçekten inanılmaz bir teknik göstermek
 istiyorum: piyonlar duble olduğunda, atın file karşı avantajı tek bir
@@ -92,7 +92,7 @@ gücünü gösteren fantastik bir teknik - gerçi Beyaz'ın bütün sorunların�
 ana nedeni çok basitti: duble piyonlar. } 0-1
 </pgn>
 
-## 12 Kapanış Düşünceleri
+## <span class="chapter-num">12</span> Kapanış Düşünceleri
 
 Sonuç olarak şunu unutmayın: atın file karşı avantajını kullanmaya
 çalışırken ya da bunu bir değişimle hazırlarken, aklınızda şu kalsın -

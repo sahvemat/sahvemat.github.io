@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-7/
 
 {% include fil-v-at-toc.html %}
 
-## 07 Atı Manevra Ettirmek
+## <span class="chapter-num">07</span> Atı Manevra Ettirmek
 
 <pgn>
 [Event "Manila (izt)"]

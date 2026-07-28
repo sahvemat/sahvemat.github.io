@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-2/
 
 {% include fil-v-at-toc.html %}
 
-## 02 Savunucuyu Ortadan Kaldırmak
+## <span class="chapter-num">02</span> Savunucuyu Ortadan Kaldırmak
 
 <pgn>
 [Event "Cienfuegos 31/350"]

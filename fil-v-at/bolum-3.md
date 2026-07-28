@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-3/
 
 {% include fil-v-at-toc.html %}
 
-## 03 Duble Piyon Kuralı
+## <span class="chapter-num">03</span> Duble Piyon Kuralı
 
 Bu kadarı açık; ama kitaplarda nadiren açıklanan önemli bir özellik daha
 var. Bunun bu partide nasıl işlediğini göstereceğim. Beyaz burada
@@ -20,8 +20,6 @@ var. Bunun bu partide nasıl işlediğini göstereceğim. Beyaz burada
 oyuncusundan biriydi; birkaç yıl sonra **Bronstein**'a karşı bir
 Adaylar final maçı oynadı, yani bir süre için esasen dünyanın **üçüncü
 numarasıydı**.
-
-### Boleslavsky – Smyslov, Leningrad 1947
 
 <pgn>
 [Event "Leningrad,tt"]
@@ -96,8 +94,6 @@ yüzden pasif beklemek değildi; gönüllü olarak c3'ü alır, rakibe duble
 piyon dayatır, sonra da başarıyla o piyonlara saldırırdı. Bu gerçek bir
 kuraldır ve nedense kitaplarda nadiren açıklanır: tahtada duble piyon
 olduğunda, atın file karşı avantajı muazzam hale gelir.
-
-### Kontić – Gligorić, Belgrade 1998
 
 <pgn>
 [Event "YUG-ch53"]

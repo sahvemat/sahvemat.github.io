@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-5/
 
 {% include fil-v-at-toc.html %}
 
-## 05 Kapalı Pozisyonlarda Duble Piyonlar
+## <span class="chapter-num">05</span> Kapalı Pozisyonlarda Duble Piyonlar
 
 Yine söyleyelim: duble piyonlar son derece dikkatli olmak için büyük bir
 sebeptir, çünkü bu tür durumlarda atın gücü muazzam hale gelir - pozisyonun

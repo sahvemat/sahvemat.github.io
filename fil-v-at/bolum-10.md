@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-10/
 
 {% include fil-v-at-toc.html %}
 
-## 10 Modern Bir Örnek Olay
+## <span class="chapter-num">10</span> Modern Bir Örnek Olay
 
 <pgn>
 [Event "Bundesliga 2008-9"]
