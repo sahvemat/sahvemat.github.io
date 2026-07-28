@@ -2095,6 +2095,18 @@ pgn-player p {
     }
 }
 
+/* Headings are visually all-caps (see text-transform above), but that
+   flattens algebraic chess notation like "xc6" into unreadable "XC6" —
+   this opts a piece of heading text back out, keeping it exactly as
+   authored (e.g. "♗xc6 Duble Piyon Kalıbı"). */
+.notation-case {
+    text-transform: none;
+    /* h2/h3 are flex containers (see above), which silently collapses
+       a plain space text-node sitting right after this span's closing
+       tag — pad here instead of relying on that whitespace surviving. */
+    margin-right: 0.28em;
+}
+
 .post-article > figure {
     margin: 3rem 0;
     border: 1px solid var(--line);

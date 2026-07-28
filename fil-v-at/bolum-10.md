@@ -25,7 +25,9 @@ permalink: /posts/fil-v-at/bolum-10/
 [ECO "E06"]
 [WhiteElo "2536"]
 [BlackElo "2720"]
-[PlyCount "69"]
+[SetUp "1"]
+[FEN "r4rk1/pp3ppp/2n1bq2/8/2P2Q1N/3p2P1/PP3PBP/R3R1K1 w - - 2 19"]
+[PlyCount "33"]
 [EventDate "2008.10.03"]
 [EventType "team-tourn"]
 [EventRounds "15"]
@@ -45,10 +47,7 @@ Ama böyle bir acele çoğu zaman pozisyonda kendi sorununu doğurur - bu
 partide olan da tam olarak bu. Büyükusta Maksimenko, o dönemde dünyanın
 en iyi on beş oyuncusundan biri olan Eljanov'dan biraz daha zayıf bir
 oyuncu. }
-1. Nf3 Nf6 2. c4 e6 3. g3 d5 4. Bg2 Be7 5. d4 O-O 6. Qc2 c5 7. dxc5 d4 8. O-O
-Nc6 9. e3 e5 10. exd4 exd4 11. Bg5 Nd7 12. Bxe7 Qxe7 13. Re1 Qf6 14. Nbd2
-Nxc5 15. Ne4 Nxe4 16. Qxe4 Bf5 17. Qf4 d3 18. Nh4 { Beyaz atı h4'e
-oynuyor, Siyah'ın filini geri püskürtüyor. } Be6 19. Qxf6 gxf6 20. Bxc6 {
+19. Qxf6 gxf6 20. Bxc6 {
 Ve şimdi Beyaz kendi filini Siyah'ın kalan atıyla değişip Siyah
 için duble piyon yaratıyor - böyle bir pozisyondan çıkarılması gereken
 çok önemli, neredeyse otomatik bir bilgi bu. } bxc6 { At bu şekilde

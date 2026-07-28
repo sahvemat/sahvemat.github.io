@@ -33,13 +33,12 @@ numarasıydı**.
 [Result "0-1"]
 [ECO "C71"]
 [Annotator "Mihalcisin,Adrian"]
-[PlyCount "84"]
+[SetUp "1"]
+[FEN "r4rk1/2B2ppp/p7/3n4/8/5P1P/P4P2/R4RK1 w - - 0 22"]
+[PlyCount "42"]
 [EventDate "2009.04.29"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c4 Bg4 6. Nc3 Nf6 7. h3 Bxf3 8. Qxf3
-Be7 9. Ne2 O-O 10. Bxc6 bxc6 11. d4 d5 12. dxe5 Bb4+ 13. Nc3 Nxe4 14. O-O Bxc3
-15. bxc3 Qe7 16. cxd5 cxd5 17. c4 Qxe5 18. Bf4 Qc3 $1 19. cxd5 Qxf3 20. gxf3
-Nc3 21. Bxc7 Nxd5 { Pozisyon açıldı ve at burada d5'e iniyor. Böyle bir
+{ Pozisyon açıldı ve at burada d5'e iniyor. Böyle bir
 at genellikle çok güçlüdür - örneğin Siyah'ın onu destekleyen e6'da bir
 piyonu daha olsaydı, ona saldırmak ya da onu söküp atmak son derece zor
 olurdu; sonuç da Siyah için çok elverişli olurdu.
