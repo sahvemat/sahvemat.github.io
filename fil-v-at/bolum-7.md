@@ -26,7 +26,9 @@ permalink: /posts/fil-v-at/bolum-7/
 [WhiteElo "2640"]
 [BlackElo "2610"]
 [Annotator "Short,N"]
-[PlyCount "86"]
+[SetUp "1"]
+[FEN "rn1qr1k1/ppp1nppp/3b4/3pN3/3P1BQ1/7P/PPP2PP1/RN3RK1 b - - 6 11"]
+[PlyCount "65"]
 [EventDate "1990.??.??"]
 [EventType "swiss"]
 [EventCountry "PHI"]
@@ -42,9 +44,7 @@ Short** partisiydi, Manila Ara Bölge Turnuvası - Siyah bu partiyi
 kazanmak zorundaydı. Beyaz'ın tercihi bir **Fransız Değişim** idi, ve
 böyle bir pozisyondan Beyaz'ın beraberliğe ulaşması çok kolay
 görünüyor. }
-1. d4 e6 2. e4 d5 3. exd5 exd5 4. Nf3 Bg4 5. h3 (5. Qe2+ $5 Qe7 $11 (5...
-Ne7 6. Qb5+ Nbc6 7. Ne5)) 5... Bh5 6. Be2 Bd6 {N} (6... Nc6) 7. Ne5 $6
-Bxe2 8. Qxe2 Ne7 9. O-O O-O 10. Bf4 (10. c3) 10... Re8 11. Qg4 Bxe5 $1 {
+11... Bxe5 $1 {
 İlk adım: atı ortadan kaldırmak. } 12. Bxe5 Ng6 $15 13. Bg3 Nd7
 14. Nd2 Nf6 15. Qf3 c6 {/\ 16... Qb6 17. Nb3 Ne4} 16. Qb3 Qb6 17. Qxb6
 axb6 { Ve burada pozisyon Beyaz için oldukça basit görünüyor. } 18. a3 {

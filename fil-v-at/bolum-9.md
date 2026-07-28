@@ -23,7 +23,9 @@ permalink: /posts/fil-v-at/bolum-9/
 [Black "Tal, Mihail"]
 [Result "1-0"]
 [ECO "A38"]
-[PlyCount "83"]
+[SetUp "1"]
+[FEN "r4rk1/pp2pp1p/2n3p1/2p2b2/8/1PP2NP1/P3PPBP/R2R2K1 w - - 1 13"]
+[PlyCount "59"]
 [EventDate "1969.09.??"]
 [EventType "tourn"]
 [EventRounds "22"]
@@ -35,14 +37,13 @@ permalink: /posts/fil-v-at/bolum-9/
 [SourceVersionDate "1999.07.01"]
 [SourceQuality "1"]
 
-1. c4 Nf6 2. g3 c5 3. Bg2 Nc6 4. Nc3 g6 5. Nf3 Bg7 6. O-O O-O 7. b3 d5 8. cxd5
-Nxd5 9. Bb2 Nxc3 10. Bxc3 Bxc3 11. dxc3 Qxd1 12. Rfxd1 { Bir üst düzey
+{ Bir üst düzey
 parti daha - ve bir yanlış karar daha, bu sefer **Tal**'e karşı. Burada
 Beyaz açıkça daha iyi: kale d1'de, Beyaz'ın kalan fili de (g2 fianşetto
 fili) uzun diyagonalde güzel bir şekilde yerleşmiş. Ama Siyah kendi
 filine daha iyi baksaydı hâlâ eşitlemeye çalışabilirdi - Siyah'ın fili
-henüz çok aktif değil. } Bf5 13. Nh4 {[%cal Gg2c6]
-Diagram [#]} Be6 $2 { Tal burada pozisyonu yanlış değerlendirdi. }
+henüz çok aktif değil. }
+13. Nh4 {[%cal Gg2c6]} Be6 $2 { Tal burada pozisyonu yanlış değerlendirdi. }
 (13... Rfd8 $1 { Doğru prosedür. } 14. Nxf5 gxf5 15. e3 e6 16. Kf1 Kf8
 17. Ke2 Ke7 { hafifçe daha kötü bir oyunsonu tutulabilir - ve burada,
 olası bir Bxc6 Siyah için neredeyse hiç zararlı olmazdı, çünkü Beyaz'ın

@@ -27,7 +27,9 @@ yapısı simetrik olduğunda şunu unutmayın: atın gücü muazzam hale gelir.
 [Black "Fischer, Robert James"]
 [Result "0-1"]
 [ECO "A32"]
-[PlyCount "112"]
+[SetUp "1"]
+[FEN "6k1/1p3ppp/p4n2/3p4/3P4/P7/1P3PPP/2B3K1 b - - 0 23"]
+[PlyCount "67"]
 [EventDate "1963.12.15"]
 [EventType "tourn"]
 [EventRounds "11"]
@@ -39,17 +41,12 @@ yapısı simetrik olduğunda şunu unutmayın: atın gücü muazzam hale gelir.
 [SourceVersionDate "1999.07.01"]
 [SourceQuality "1"]
 
-1. c4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Ndb5 Bb4 7. a3 Bxc3+
-8. Nxc3 d5 9. e3 O-O 10. cxd5 exd5 11. Be2 Bf5 12. Nb5 Qb6 13. O-O a6 14. Nd4
-Nxd4 15. Qxd4 Qxd4 16. exd4 Rac8 17. Bd1 Bc2 18. Be3 Bxd1 19. Rfxd1 Rc2 20.
-Rd2 Rfc8 21. Rxc2 Rxc2 22. Rc1 { Beyaz ikinci yatay için mücadele etmeye
-çalışıyor - ama rakip kalesi ikinci yatayınızda otururken hayatta kalmak
-mümkün değil, bu yüzden Beyaz onu değişmek zorunda. } Rxc1+
-23. Bxc1 { Ve şimdi, elbette, Capablanca'nın kuralına göre, Beyaz'ın
+{ Ve şimdi, elbette, Capablanca'nın kuralına göre, Beyaz'ın
 piyonları yanlış karelerde: kendi filinin aynı renginde. Beyaz bunları
 *b3* ve *a4* ile yeniden düzenleyebilseydi sorun olmazdı, ama piyon zaten
 d4'te olduğu için bu basitçe mümkün değil. Şimdi Siyah atı yeniden
-konumlandırmak üzerinde çalışmak zorunda. } Nd7 { İlk hamle - ve dikkat
+konumlandırmak üzerinde çalışmak zorunda. }
+23... Nd7 { İlk hamle - ve dikkat
 edin, önce iyileşen *şah değil*, at. } 24. Kf1 Nf8 25. Ke2 Ne6 26. Kd3 h5
 27. Be3 Kh7 28. f3 Kg6 29. a4 Kf5 {[%cal Ge6f4]} { Şimdi planın şah
 kanadında geliştirilmesi gerektiği açık. Siyah'ın genel planı orada daha

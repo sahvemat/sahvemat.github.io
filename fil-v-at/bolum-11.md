@@ -29,18 +29,12 @@ kanatta nasıl kullanılır. Bu parti **Sovyet Bölge Turnuvası,
 [Result "0-1"]
 [ECO "C91"]
 [Annotator "Romanishin,O"]
-[PlyCount "160"]
+[SetUp "1"]
+[FEN "5k2/4Npp1/3p1n1p/4p2b/1P2P3/3nBN1P/5PP1/6K1 w - - 1 30"]
+[PlyCount "102"]
 [EventDate "1978.??.??"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4
-Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. d4 Bg4 10. Be3 Bh5 $6 (10...
-exd4 {Ue 24/291}) 11. h3 Re8 12. Nbd2 Bf8 (12... exd4 13. cxd4 Bf8 14. Rc1
-Nb4 15. Nf1 {#C5 a3#A5}) 13. d5 Na5 14. Bc2 Rc8 15. b4 Nb7 16. a4 $2 (16.
-c4 $1 $16) 16... c6 $1 17. axb5 axb5 18. Ra7 Qc7 (18... cxd5 $5 19. Rxb7
-Rxc3 {#C5 #CAc8}) 19. dxc6 Qxc6 20. c4 Re7 21. Bd3 bxc4 22. Nxc4 h6 23.
-Nb6 (23. b5 Qe8 $1 {#C5 d5#D5}) 23... Rb8 24. Qc1 Qxc1 25. Rxc1 Nc5 $1 26.
-Rxe7 (26. bxc5 Rxa7 27. c6 Rc7 28. Nd5 Nxd5 29. exd5 Bxf3 $15) 26... Nxd3
-27. Rc8 Rxc8 28. Nxc8 Bxe7 29. Nxe7+ Kf8 30. Nf5 Bxf3 31. gxf3 { Bu geri
+30. Nf5 Bxf3 31. gxf3 { Bu geri
 alma, Beyaz'a bütün oyunun geri kalanını belirleyecek yapısal zayıflık
 olan duble f-piyonlarını bırakıyor. } Nxb4 32. Nxd6 Nd3 $15 33.
 Nc4 Ke7 34. Bd2 Nh5 35. Ne3 Ke6 36. Nd5 Nf6 37. Nxf6 Kxf6 38. Kg2 { Şimdi
