@@ -108,6 +108,58 @@
     margin-right: auto !important;
 }
 
+/* Header row (icon + player/event text) gets a third item — the "Oyunu
+   İncele" button below — pushed to the far right via margin-left: auto
+   on the button itself, so ChessPublica's own icon+text markup doesn't
+   need touching. flex-wrap lets the button drop to its own line rather
+   than overflow when a header's player names already run long. */
+.post-article > .pgn-container .video-title.pgn-title {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+}
+
+.pgn-study-btn {
+    margin-left: auto;
+    flex-shrink: 0;
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--line);
+    padding: 0.4rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.pgn-study-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.pgn-study-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .pgn-study-btn {
+        font-size: 10px;
+        padding: 0.35rem 0.75rem;
+    }
+}
+
+/* The dynamically-created <pgn-study> (see the script below) replaces
+   the article view in place, so it gets the same card spacing. */
+.post-article > pgn-study {
+    margin: 3rem 0;
+}
+
 /* Chapter numbers are now typed directly into each part's own <h2>
    text ("11 Uzun Teknik") instead of relying on the site's decorative
    ::before counter — needed because Bölüm 11 carries two <h2>s
@@ -140,6 +192,27 @@
 </style>
 
 <script>
+// ChessPublica renders <pgn> by calling replaceWith() on it with a new
+// <div class="pgn-container ...">, discarding the original element (and
+// with it, the raw PGN source text) in the process — there is no other
+// way to read that source back out once it's rendered. This script tag
+// sits earlier in the page than ChessPublica's own <script> (see
+// _layouts/default.html), so patching replaceWith() here runs before
+// ChessPublica ever calls it: every time *any* <pgn> element is replaced,
+// its original textContent is stashed on the replacement node itself
+// (a plain JS property, not a DOM attribute, so it survives untouched
+// regardless of what the PGN text contains). The "Oyunu İncele" button
+// below reads it back from there to build a <pgn-study> on demand.
+(function () {
+    var nativeReplaceWith = Element.prototype.replaceWith;
+    Element.prototype.replaceWith = function (replacement) {
+        if (this.tagName === 'PGN' && replacement && replacement.nodeType === 1) {
+            replacement.__rawPgn = this.textContent;
+        }
+        return nativeReplaceWith.apply(this, arguments);
+    };
+})();
+
 // The post-hero <h1 class="post-title"> is filled in by main.js's
 // formatPostTitle() (reading data-title) once the DOM is ready — this
 // page's own title starts with the ♗ (bishop) and ♘ (knight) glyphs, so
@@ -159,5 +232,43 @@ document.addEventListener('DOMContentLoaded', function () {
         // (small, mono, accent-red) instead of the title's own huge
         // italic serif.
         .replace(/(\d{2})(<\/em>)/, '<span class="chapter-num">$1</span>$2');
+});
+
+// "Oyunu İncele" button, top-right of each game's header (see
+// .pgn-study-btn above) — mirrors the site's existing .post-game-toggle
+// interaction (a button that swaps the article view for a richer one),
+// but here it swaps the annotated-article <pgn> card for ChessPublica's
+// synced board+text <pgn-study> viewer (see the 2026-07-17 "pgn-study
+// ile tanışın" post), built lazily from the raw PGN text the replaceWith
+// patch above stashed on the card.
+//
+// This has to wait for the window 'load' event, not DOMContentLoaded:
+// ChessPublica itself only renders <pgn> inside its *own*
+// DOMContentLoaded listener, registered when its <script> tag runs —
+// which is after this include's script tag (earlier in the page, see
+// _layouts/default.html) has already registered this listener. Same
+// event, so registration order decides firing order: DOMContentLoaded
+// here would run before ChessPublica's own handler ever creates the
+// .pgn-container cards this loop looks for. 'load' fires strictly after
+// every DOMContentLoaded listener (ChessPublica's included) has already
+// run to completion, so the cards are guaranteed to exist by then.
+window.addEventListener('load', function () {
+    document.querySelectorAll('.post-article > .pgn-container').forEach(function (card) {
+        var rawPgn = card.__rawPgn;
+        var header = card.querySelector('.video-title.pgn-title');
+        if (!rawPgn || !header) return;
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'pgn-study-btn';
+        btn.textContent = 'Oyunu İncele';
+        header.appendChild(btn);
+
+        btn.addEventListener('click', function () {
+            var study = document.createElement('pgn-study');
+            study.textContent = rawPgn;
+            card.replaceWith(study);
+        });
+    });
 });
 </script>
