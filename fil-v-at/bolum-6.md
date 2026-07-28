@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 6 — Bxc6 Duble Piyon Kalıbı"
+title: "♗⚔️♘ fil v. at VI"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-6/
 
 {% include fil-v-at-toc.html %}
 
-## ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı
+## 06 ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı
 
 <pgn>
 [Event "Skopje (ol) 14/34"]

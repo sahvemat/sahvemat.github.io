@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 11 — Uzun Teknik & Kapanış Düşünceleri"
+title: "♗⚔️♘ fil v. at XI"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-11/
 
 {% include fil-v-at-toc.html %}
 
-## Uzun Teknik
+## 11 Uzun Teknik
 
 Şimdi size oyunsonunda gerçekten inanılmaz bir teknik göstermek
 istiyorum: piyonlar duble olduğunda, atın file karşı avantajı tek bir
@@ -92,7 +92,7 @@ gücünü gösteren fantastik bir teknik - gerçi Beyaz'ın bütün sorunların�
 ana nedeni çok basitti: duble piyonlar. } 0-1
 </pgn>
 
-## Kapanış Düşünceleri
+## 12 Kapanış Düşünceleri
 
 Sonuç olarak şunu unutmayın: atın file karşı avantajını kullanmaya
 çalışırken ya da bunu bir değişimle hazırlarken, aklınızda şu kalsın -

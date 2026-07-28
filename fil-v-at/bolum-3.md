@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 3 — Duble Piyon Kuralı"
+title: "♗⚔️♘ fil v. at III"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-3/
 
 {% include fil-v-at-toc.html %}
 
-## Duble Piyon Kuralı
+## 03 Duble Piyon Kuralı
 
 Bu kadarı açık; ama kitaplarda nadiren açıklanan önemli bir özellik daha
 var. Bunun bu partide nasıl işlediğini göstereceğim. Beyaz burada

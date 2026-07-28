@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 4 — Modern Bir Ustalık Dersi"
+title: "♗⚔️♘ fil v. at IV"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-4/
 
 {% include fil-v-at-toc.html %}
 
-## Modern Bir Ustalık Dersi
+## 04 Modern Bir Ustalık Dersi
 
 Şimdi çok daha karmaşık bir örnek - iki büyük şampiyon arasındaki modern
 bir parti, **Karpov'a karşı Kramnik**. 

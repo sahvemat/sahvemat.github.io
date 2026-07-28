@@ -60,6 +60,17 @@
     margin-right: auto !important;
 }
 
+/* Chapter numbers are now typed directly into each part's own <h2>
+   text ("11 Uzun Teknik") instead of relying on the site's decorative
+   ::before counter — needed because Bölüm 11 carries two <h2>s
+   (Uzun Teknik + Kapanış Düşünceleri) on one page, so the normal
+   :only-of-type suppression no longer applies and the counter would
+   print its own "01"/"02" on top of the typed numbers. */
+.post-article > h2::before {
+    content: none;
+    margin-right: 0;
+}
+
 /* Piece icons swapped into the post-hero title in place of the ♗/♘
    glyphs (see the script below) — sized off the title's own font-size
    so they scale together, matching the site's piece-theme artwork

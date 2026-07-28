@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 8 — Simetri Atın Lehine"
+title: "♗⚔️♘ fil v. at VIII"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-8/
 
 {% include fil-v-at-toc.html %}
 
-## Simetri Atın Lehine
+## 08 Simetri Atın Lehine
 
 Şimdi başka büyük ve dikkate değer bir parti - **simetrik pozisyonlarda
 atın filden daha güçlü olduğunu** gerçekten kanıtlayan bir parti. Piyon

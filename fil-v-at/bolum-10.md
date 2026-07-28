@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 10 — Modern Bir Örnek Olay"
+title: "♗⚔️♘ fil v. at X"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-10/
 
 {% include fil-v-at-toc.html %}
 
-## Modern Bir Örnek Olay
+## 10 Modern Bir Örnek Olay
 
 <pgn>
 [Event "Bundesliga 2008-9"]
