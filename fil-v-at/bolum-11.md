@@ -104,7 +104,7 @@ bunu bilmiş ve nasıl kullanılacağını da bilmiş olsalar da.
 
 <div>
 <a class="next-section-nav next-section-nav--restart" href="{{ '/posts/fil-v-at/' | relative_url }}">
-  <span class="next-section-label">Baştan Oku</span>
-  <span class="next-section-title">♗⚔️♘ fil v. at <span class="next-section-arrow">↺</span></span>
+  <span class="next-section-label">İlk sayfaya dön</span>
+  <span class="next-section-title"><span class="next-section-text">♗⚔️♘ <span class="notation-case">fil v. at</span></span> <span class="next-section-arrow">↺</span></span>
 </a>
 </div>
