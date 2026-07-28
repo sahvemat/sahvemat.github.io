@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 9 — Simetri Duble Piyonlarla Buluştuğunda"
+title: "♗⚔️♘ fil v. at IX"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-9/
 
 {% include fil-v-at-toc.html %}
 
-## Simetri Duble Piyonlarla Buluştuğunda
+## 09 Simetri Duble Piyonlarla Buluştuğunda
 
 <pgn>
 [Event "URS-ch37"]

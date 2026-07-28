@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 2 — Savunucuyu Ortadan Kaldırmak"
+title: "♗⚔️♘ fil v. at II"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-2/
 
 {% include fil-v-at-toc.html %}
 
-## Savunucuyu Ortadan Kaldırmak
+## 02 Savunucuyu Ortadan Kaldırmak
 
 <pgn>
 [Event "Cienfuegos 31/350"]

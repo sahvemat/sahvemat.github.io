@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 5 — Kapalı Pozisyonlarda Duble Piyonlar"
+title: "♗⚔️♘ fil v. at V"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-5/
 
 {% include fil-v-at-toc.html %}
 
-## Kapalı Pozisyonlarda Duble Piyonlar
+## 05 Kapalı Pozisyonlarda Duble Piyonlar
 
 Yine söyleyelim: duble piyonlar son derece dikkatli olmak için büyük bir
 sebeptir, çünkü bu tür durumlarda atın gücü muazzam hale gelir - pozisyonun

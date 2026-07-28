@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at: Bölüm 7 — Atı Manevra Ettirmek"
+title: "♗⚔️♘ fil v. at VII"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -12,7 +12,7 @@ permalink: /posts/fil-v-at/bolum-7/
 
 {% include fil-v-at-toc.html %}
 
-## Atı Manevra Ettirmek
+## 07 Atı Manevra Ettirmek
 
 <pgn>
 [Event "Manila (izt)"]
