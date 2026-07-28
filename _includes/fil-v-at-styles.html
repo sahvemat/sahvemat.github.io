@@ -44,6 +44,15 @@
     font-size: 1.1rem;
 }
 
+/* ChessPublica's own .video-title-text has a fixed 1rem font-size,
+   which reads smaller than the 1.1rem move/comment text next to it
+   once that base size is raised above — bump it back up so the
+   auto-generated header sits comfortably above the body text instead
+   of under it. */
+.post-article > .pgn-container .video-title-text {
+    font-size: 1.25rem;
+}
+
 @media (min-width: 768px) {
     .post-article > .pgn-container .pgn-moves {
         column-count: 2 !important;
