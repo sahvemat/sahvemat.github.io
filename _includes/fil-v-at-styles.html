@@ -41,6 +41,13 @@
      and the auto-printed default diagram end up the exact same size. */
 .post-article > .pgn-container {
     --board-size: min(400px, calc(100vw - 4rem));
+    /* --pgn-title-line-height matches ChessPublica's own
+       .video-title-text line-height (1.25) — declared up here (rather
+       than on .video-title-text itself) so the sibling .video-title-emoji
+       rule below can read the same two variables too; custom properties
+       only inherit down the tree, not across siblings. */
+    --pgn-title-font-size: 1.25rem;
+    --pgn-title-line-height: 1.25;
     font-size: 1.1rem;
 }
 
@@ -50,7 +57,16 @@
    auto-generated header sits comfortably above the body text instead
    of under it. */
 .post-article > .pgn-container .video-title-text {
-    font-size: 1.25rem;
+    font-size: var(--pgn-title-font-size);
+}
+
+/* ChessPublica's own .video-title-emoji is a fixed 2rem square icon —
+   size it to the two-line title text's own total height (font-size *
+   line-height * 2 lines) instead of leaving it looking small next to
+   the now-enlarged text. */
+.post-article > .pgn-container .video-title-emoji {
+    width: calc(var(--pgn-title-font-size) * var(--pgn-title-line-height) * 2);
+    height: calc(var(--pgn-title-font-size) * var(--pgn-title-line-height) * 2);
 }
 
 @media (min-width: 768px) {

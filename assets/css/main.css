@@ -3004,6 +3004,15 @@ details.game-note > .post-game {
 @media (min-width: 640px) {
     .toc-list {
         grid-template-columns: 1fr 1fr;
+        /* Default grid auto-placement fills row by row, which reads
+           down each column as odds-then-evens (1,3,5.../2,4,6...).
+           Fixing the row count and switching to column flow instead
+           fills the left column top-to-bottom first, then the right —
+           --toc-rows (ceil(chapter count / 2)) is set inline per post
+           by _includes/chapter-toc.html, since different posts split
+           into different numbers of chapters. */
+        grid-template-rows: repeat(var(--toc-rows, 6), auto);
+        grid-auto-flow: column;
     }
 }
 
