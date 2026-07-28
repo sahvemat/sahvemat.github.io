@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at VII"
+title: "♗⚔️♘ fil v. at 07"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -107,6 +107,6 @@ ettirmeye, konumunu sürekli değiştirmeye devam etmeniz gerekir.
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-8/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Simetri Atın Lehine <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">08</span> Simetri Atın Lehine</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

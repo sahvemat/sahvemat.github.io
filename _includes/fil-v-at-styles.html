@@ -114,6 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
     h1.innerHTML = h1.innerHTML
         .replace(/♗/g, '<img class="post-title-piece" src="{{ "/assets/img/pieces/wB.png" | relative_url }}" alt="Fil">')
         .replace(/♘/g, '<img class="post-title-piece" src="{{ "/assets/img/pieces/wN.png" | relative_url }}" alt="At">')
-        .replace(/⚔️/g, '<span class="post-title-swords">⚔️</span>');
+        .replace(/⚔️/g, '<span class="post-title-swords">⚔️</span>')
+        // Chapter pages end their title in a two-digit number ("fil v.
+        // at 04") — style it like the section headings' own chapter-num
+        // (small, mono, accent-red) instead of the title's own huge
+        // italic serif.
+        .replace(/(\d{2})(<\/em>)/, '<span class="chapter-num">$1</span>$2');
 });
 </script>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at V"
+title: "♗⚔️♘ fil v. at 05"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -133,6 +133,6 @@ $1) (44. Nh4 $2 Rf2 45. Rxg6+ Kf7 $1) (44. Ng5+ Kf5 45. Nf7 Ba5 $1
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-6/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">♗xc6 Duble Piyon Kalıbı <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">06</span> ♗xc6 Duble Piyon Kalıbı</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

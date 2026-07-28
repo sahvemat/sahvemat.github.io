@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at VIII"
+title: "♗⚔️♘ fil v. at 08"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -113,6 +113,6 @@ zor kısmı.
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-9/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Simetri Duble Piyonlarla Buluştuğunda <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">09</span> Simetri Duble Piyonlarla Buluştuğunda</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

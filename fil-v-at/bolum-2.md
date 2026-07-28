@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at II"
+title: "♗⚔️♘ fil v. at 02"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -108,6 +108,6 @@ pozisyonda kontrol ettiğinde güçlüdür.
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-3/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Duble Piyon Kuralı <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">03</span> Duble Piyon Kuralı</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
