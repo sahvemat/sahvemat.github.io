@@ -10,7 +10,7 @@ permalink: /posts/fil-v-at/bolum-5/
 
 {% include fil-v-at-styles.html %}
 
-{% include fil-v-at-toc.html %}
+{% include chapter-toc.html dataset="fil_v_at_toc" %}
 
 ## <span class="chapter-num">05</span> Kapalı Pozisyonlarda Duble Piyonlar
 

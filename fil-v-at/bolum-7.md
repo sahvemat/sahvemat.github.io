@@ -10,7 +10,7 @@ permalink: /posts/fil-v-at/bolum-7/
 
 {% include fil-v-at-styles.html %}
 
-{% include fil-v-at-toc.html %}
+{% include chapter-toc.html dataset="fil_v_at_toc" %}
 
 ## <span class="chapter-num">07</span> Atı Manevra Ettirmek
 

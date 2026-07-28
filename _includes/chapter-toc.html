@@ -1,7 +1,9 @@
+{% assign toc_count = site.data[include.dataset] | size %}
+{% assign toc_rows = toc_count | plus: 1 | divided_by: 2 %}
 <details class="toc-box">
   <summary class="toc-label">İçindekiler</summary>
-  <ol class="toc-list">
-    {% for item in site.data.fil_v_at_toc %}
+  <ol class="toc-list" style="--toc-rows: {{ toc_rows }};">
+    {% for item in site.data[include.dataset] %}
     <li{% if item.url == page.url %} class="toc-current"{% endif %}><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
     {% endfor %}
   </ol>

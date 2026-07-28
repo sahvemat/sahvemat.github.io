@@ -10,7 +10,7 @@ permalink: /posts/fil-v-at/bolum-2/
 
 {% include fil-v-at-styles.html %}
 
-{% include fil-v-at-toc.html %}
+{% include chapter-toc.html dataset="fil_v_at_toc" %}
 
 ## <span class="chapter-num">02</span> Savunucuyu Ortadan Kaldırmak
 
