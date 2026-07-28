@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at X"
+title: "♗⚔️♘ fil v. at 10"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -85,6 +85,6 @@ bir avantajla sonuç açık. Siyah teslim oldu. } 1-0
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-11/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Uzun Teknik <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">11</span> Uzun Teknik</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

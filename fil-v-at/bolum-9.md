@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at IX"
+title: "♗⚔️♘ fil v. at 09"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -89,6 +89,6 @@ bu tür bir pozisyonu anlamakta zorlanabiliyordu.
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-10/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Modern Bir Örnek Olay <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">10</span> Modern Bir Örnek Olay</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

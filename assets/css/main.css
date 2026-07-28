@@ -2116,6 +2116,7 @@ pgn-player p {
     font-size: 0.7em;
     color: var(--accent);
     font-weight: 500;
+    font-style: normal;
     letter-spacing: 0.05em;
     margin-right: 1rem;
 }

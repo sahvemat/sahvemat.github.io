@@ -44,6 +44,15 @@
     font-size: 1.1rem;
 }
 
+/* ChessPublica's own .video-title-text has a fixed 1rem font-size,
+   which reads smaller than the 1.1rem move/comment text next to it
+   once that base size is raised above — bump it back up so the
+   auto-generated header sits comfortably above the body text instead
+   of under it. */
+.post-article > .pgn-container .video-title-text {
+    font-size: 1.25rem;
+}
+
 @media (min-width: 768px) {
     .post-article > .pgn-container .pgn-moves {
         column-count: 2 !important;
@@ -105,6 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
     h1.innerHTML = h1.innerHTML
         .replace(/♗/g, '<img class="post-title-piece" src="{{ "/assets/img/pieces/wB.png" | relative_url }}" alt="Fil">')
         .replace(/♘/g, '<img class="post-title-piece" src="{{ "/assets/img/pieces/wN.png" | relative_url }}" alt="At">')
-        .replace(/⚔️/g, '<span class="post-title-swords">⚔️</span>');
+        .replace(/⚔️/g, '<span class="post-title-swords">⚔️</span>')
+        // Chapter pages end their title in a two-digit number ("fil v.
+        // at 04") — style it like the section headings' own chapter-num
+        // (small, mono, accent-red) instead of the title's own huge
+        // italic serif.
+        .replace(/(\d{2})(<\/em>)/, '<span class="chapter-num">$1</span>$2');
 });
 </script>

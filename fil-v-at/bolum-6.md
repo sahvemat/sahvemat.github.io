@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at VI"
+title: "♗⚔️♘ fil v. at 06"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -80,6 +80,6 @@ olarak kullanabilirsiniz.
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-7/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Atı Manevra Ettirmek <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">07</span> Atı Manevra Ettirmek</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

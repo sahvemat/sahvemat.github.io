@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "♗⚔️♘ fil v. at III"
+title: "♗⚔️♘ fil v. at 03"
 author: "Adrian Mikailchishin"
 section: "Teori"
 event: "Fil - At Mücadelesi · 12 Parti"
@@ -171,6 +171,6 @@ etkileyici bir parti. Elbette Beyaz burada gerçek hatalar yaptı, her
 <div>
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-4/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title">Modern Bir Ustalık Dersi <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">04</span> Modern Bir Ustalık Dersi</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
