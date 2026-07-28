@@ -1944,7 +1944,8 @@ pgn-player p {
     .post-article > figure.table-figure,
     .post-article > .game-pair,
     .post-article > .toc-box,
-    .post-article > .next-section-nav-wrap {
+    .post-article > .next-section-nav-wrap,
+    .post-article > .post-lede {
         column-span: all;
     }
 
@@ -1969,6 +1970,21 @@ pgn-player p {
     border-bottom: 1px solid var(--line);
     padding-bottom: 2rem;
     margin-bottom: 3rem;
+}
+
+/* The archive card's excerpt (see .article-card-desc) otherwise never
+   appears again once a reader is actually on the post — this repeats
+   it as a lead/deck paragraph right under the hero, above the body
+   content (and, on split long-form posts, above the İçindekiler box). */
+.post-lede {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: var(--slate);
+    margin: 0 0 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
 }
 
 .post-eyebrow {
