@@ -28,7 +28,7 @@ Elbette turnuva öncesi beklediğim gibi 30-40 ELO kazanamadığım için çok b
 
 ![Ganimetler]({{ '/assets/img/karlsruhe/ganimet.jpg' | relative_url }} "Ganimetler!")
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-7/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">Eve Dönüş</span> <span class="next-section-arrow">→</span></span>

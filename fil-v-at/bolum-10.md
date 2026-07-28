@@ -82,7 +82,7 @@ Nd4 { *Re3* ya da *Kc5-b4-b5* gibi başka tehditler de var - böyle ezici
 bir avantajla sonuç açık. Siyah teslim oldu. } 1-0
 </pgn>
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-11/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">11</span> Uzun Teknik</span> <span class="next-section-arrow">→</span></span>

@@ -49,6 +49,17 @@
     --pgn-title-font-size: 1.25rem;
     --pgn-title-line-height: 1.25;
     font-size: 1.1rem;
+    /* Same bordered/offset-shadow card frame the site already uses for
+       .post-article > figure/table/pgn-study, so a full annotated game
+       reads as the same kind of "framed" unit as an image or a diagram
+       instead of floating unbounded in the page. The 2rem padding here
+       matches --board-size's own "100vw - 4rem" allowance above, so
+       diagrams keep fitting exactly inside the frame at any width. */
+    margin: 3rem 0;
+    padding: 2rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 8px 8px 0 0 var(--fg);
 }
 
 /* ChessPublica's own .video-title-text has a fixed 1rem font-size,

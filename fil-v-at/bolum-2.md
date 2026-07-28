@@ -105,7 +105,7 @@ ne zaman attan daha iyidir?* Açık pozisyonlarda filin rolü doğal olarak
 önem kazanır. At ise rakip filin ulaşamadığı kareleri **kapalı** bir
 pozisyonda kontrol ettiğinde güçlüdür.
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-3/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">03</span> Duble Piyon Kuralı</span> <span class="next-section-arrow">→</span></span>

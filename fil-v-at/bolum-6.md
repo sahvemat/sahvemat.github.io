@@ -77,7 +77,7 @@ rakibin pozisyonunda duble piyon olduğunda at daha iyidir. Bu tür durumlarda p
 kendi lehinize değerlendirebilir, atın file karşı avantajını teknik
 olarak kullanabilirsiniz.
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-7/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">07</span> Atı Manevra Ettirmek</span> <span class="next-section-arrow">→</span></span>

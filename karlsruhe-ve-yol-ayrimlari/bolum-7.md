@@ -27,7 +27,7 @@ Ertesi gün trenle Stuttgart'a ağırlaşmış bir valizle dönerken aynı tren 
   </dl>
 </aside>
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav next-section-nav--restart" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/' | relative_url }}">
   <span class="next-section-label">İlk sayfaya dön</span>
   <span class="next-section-title"><span class="next-section-text">Karlsruhe ve yol ayrımları</span> <span class="next-section-arrow">↺</span></span>

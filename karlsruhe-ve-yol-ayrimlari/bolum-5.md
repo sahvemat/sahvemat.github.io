@@ -22,7 +22,7 @@ Altıncı tur benim adıma tam bir faciaydı. Yine doğaçlama bir açılış ve
 
 <div class="post-game" id="tur-6" data-pgn="{{ '/assets/pgn/karlsruhe/karlsruhe-r6.pgn' | relative_url }}"></div>
 
-<div>
+<div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-6/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">Son Gün</span> <span class="next-section-arrow">→</span></span>

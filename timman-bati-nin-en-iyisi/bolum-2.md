@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JAN TIMMAN: Batı'nın en iyisi — Bölüm 2: Kariyerden Öğretici Konumlar"
+title: "JAN TIMMAN: Batı'nın en iyisi — Bölüm 2: Mar del Plata 1982 · 6-9. Turlar"
 author: "Nazmi Can Doğan"
 section: "Klasikler"
 event: "1964–1995 · 27 Parti"
@@ -10,77 +10,64 @@ permalink: /posts/timman-bati-nin-en-iyisi/bolum-2/
 
 {% include chapter-toc.html dataset="timman_toc" %}
 
-### TIMMAN - KARPOV, BUGOJNO, 1978
+### TIMMAN - GIARDELLI, MAR DEL PLATA, 1982
 
-Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ın beşinci turdaki rakibi Dünya Şampiyonu Karpov'dan başkası değildi.
+Dünyanın iki numarası için yine kazanılması gereken bir oyun. Karşısında henüz Uluslararası Usta bile olmayan Arjantinli rakibi karşısında büyük reyting ve tecrübe farkının ortaya konması gerekiyordu.
 
-<div class="post-game" id="timman-karpov-1978" data-pgn="https://lichess.org/api/study/F0mOCg4p/sdRff32K.pgn"></div>
+Daha sonra Uluslararası Usta ünvanına kavuşacak Sergio Carlos Giardelli (1955-2015) bu turnuvada sonuncu olsa da, ülkesini olimpiyatlarda temsil etmiş ve ülke şampiyonasında dereceler elde etmiş Arjantin satrancının önemli isimlerindendi.
 
-### TIMMAN - KOSTRO, WIJK AAN ZEE, 1971
+<div class="post-game" id="timman-giardelli-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/Lp5987cz.pgn"></div>
 
-<div class="post-game" id="timman-kostro-1971" data-pgn="https://lichess.org/api/study/F0mOCg4p/kMX32cvq.pgn"></div>
+### PALERMO - TIMMAN, MAR DEL PLATA, 1982
 
-![Timman, 1973]({{ '/assets/img/timman/portrait-1973.webp' | relative_url }} "Jan Timman, 1973 yılında; bu dönemde dünya sıralamasında ikinciliğe kadar yükselecekti.")
+İkinci turda Andersson'a karşı olaysız geçen bir beraberenin ardından Timman, üçüncü turda siyah taşlarla mutlaka kazanması gereken bir karşılaşmaya çıkıyordu.
 
-### TIMMAN - VAN ZALINGEN, DELFT, 1966
+Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyarete gelen Bobby Fischer'ın 25 kişiye karşı oynadığı simultane gösteride yer almıştı. Geleceğin dünya şampiyonunu yalnızca 15 hamlede devirmeyi başarmıştı.
 
-<div class="post-game" id="timman-vos-van-zalingen-1966" data-pgn="https://lichess.org/api/study/F0mOCg4p/39cynJzU.pgn"></div>
+<details class="game-note">
+<summary>Oyunu görmek için tıklayın</summary>
+<div class="post-game" id="fischer-garcia-palermo-simul-1970">
+  <script type="application/x-chess-pgn">
+  [Event "Simul"]
+  [Site "La Plata, Arjantin"]
+  [Date "1970.08.20"]
+  [Result "0-1"]
+  [White "Fischer, Robert James"]
+  [Black "Garcia Palermo, Carlos"]
+  [Orientation "Black"]
+    
+  1.e4 e5 2.f4 d5 3.exd5 e4 4.Bb5+ c6 5.dxc6 Nxc6
+  6.d3 Nf6 7.dxe4 Qa5+ 8.Nc3 Bg4 9.Qd4 Be7 10.Qa4 Qb6
+  11.h3 O-O-O 12.Bxc6 Nxe4 13.Bd7+ Rxd7 14.Qxd7+ Bxd7 15.Nxe4 Bc6 0-1
+  </script>
+</div>
+</details>
 
-### TIMMAN - KORCHNOI, [SITE], 1982
+Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: Arjantin'de bulunan <i>Rosario ve Güney Santa Fe Satranç Derneği</i> internet sitesinde, Christian Sánchez imzasıyla 2014 yılında yayımlanan <i>Satranç İncileri: Özelde Rosario'nun, genelde ise Arjantin'in satranç tarihine bir yolculuk</i> başlıklı İspanyolca [makale](https://www.ara.org.ar/chs/ajedrez/perlas/#PA32)).
 
-![Timman - Korchnoi, 1982]({{ '/assets/img/timman/vs-korchnoi-1982.jpg' | relative_url }} "Timman, 1982 yılında Viktor Korchnoi'a karşı.")
+![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında.")
 
-<div class="post-game" id="timman-kortschnoj" data-pgn="https://lichess.org/api/study/F0mOCg4p/W5AWqjug.pgn"></div>
+<div class="post-game" id="garcia-palermo-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/14MskOXg.pgn"></div>
 
-### TIMMAN - ANDERSSON, WIJK AAN ZEE, 1981
+### TIMMAN - QUINTEROS, MAR DEL PLATA, 1982
 
-<div class="post-game" id="timman-andersson-1981" data-pgn="https://lichess.org/api/study/F0mOCg4p/xNiuVcvi.pgn"></div>
+Fischer'ın en yakın dostu ve yardımcısı Arjantinli Büyükusta Miguel Quinteros 1972'de Spassky'e karşı hazırlanırken Fischer'a yardım etmiş ve hatta 1992 senesindeki rövanş maçında da Fischer'ın yanında bulunmuştur.
 
-### TIMMAN - HUG, NICE, 1974
+<div class="post-game" id="timman-quinteros-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/tWBpZAOX.pgn"></div>
 
-<div class="post-game" id="timman-hug-1974" data-pgn="https://lichess.org/api/study/F0mOCg4p/x7Z1vHuD.pgn"></div>
+### PORTISCH - TIMMAN, MAR DEL PLATA, 1982
 
-### TORRE - TIMMAN, HAMBURG, 1982
+Timman'ın Macar Büyükusta Lajos Portisch ile olan partileri her zaman incelemeyi hak eder. Öyle ki, 1994 yılında yayınlanan ve kariyerinin 1983-1993 arasında oynadığı 80 oyuna odaklanan eseri "Chess the Adventurous Way" kitabında aralarında oynadıkları 3 oyuna yer vermiştir. Portisch turnuvaya 6 oyunda 5.5 puanla inanılmaz bir başlangıç yapmış, fakat 7. turda Timman'ı da yenen Larsen'e kaybetmişti.
 
-<div class="post-game" id="torre-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/FkmwudLh.pgn"></div>
+![Chess the Adventurous Way kapağı]({{ '/assets/img/timman/book-cover.jpg' | relative_url }} "Timman'ın 1983-1993 arasında oynadığı 80 oyuna odaklanan kitabı 'Chess the Adventurous Way'in kapağı.")
 
-### SOKOLOV - TIMMAN, REYKJAVIK, 1988
+Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Clarin'e şöyle demişti: *“Beyaz taşlarla oynayan Portisch'in her zaman zaferi hedefleyeceğini biliyordum. Dahası, sıralamada yarım puan geride olduğu için beni yakalamasının tek yolu kazanmaktı. Bu yüzden bu oyun önemliydi ve dikkatlice hazırlandım.”*
 
-<div class="post-game" id="sokolov-timman-1988" data-pgn="https://lichess.org/api/study/F0mOCg4p/51Dw5FHo.pgn"></div>
+<div class="post-game" id="portisch-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/DmI0Z1fA.pgn"></div>
 
-### SIGURJONSSON - TIMMAN, WIJK AAN ZEE, 1980
-
-![Timman ve meslektaşları]({{ '/assets/img/timman/portrait-group.webp' | relative_url }} "Timman (solda), diğer büyükustalarla birlikte.")
-
-<div class="post-game" id="sigurjonsson-timman-1980" data-pgn="https://lichess.org/api/study/F0mOCg4p/bmIFEAaA.pgn"></div>
-
-### TAKTİK! HUEBNER - TIMMAN, BUGOJNO, 1978
-
-<div class="post-game" id="huebner-timman-1978" data-pgn="https://lichess.org/api/study/F0mOCg4p/m99Zflrj.pgn"></div>
-
-### RIBLI - TIMMAN, AMSTERDAM, 1978
-
-![Timman, 1977]({{ '/assets/img/timman/demo-1977.webp' | relative_url }} "Timman, 1977 yılında bir gösteri karşılaşmasını izlerken.")
-
-<div class="post-game" id="ribli-timman-1978" data-pgn="https://lichess.org/api/study/F0mOCg4p/zEDxPuGC.pgn"></div>
-
-### TIMMAN - CLAUSSEN, WIJK AAN ZEE, 1971
-
-<div class="post-game" id="timman-brinck-claussen-1971" data-pgn="https://lichess.org/api/study/F0mOCg4p/SLIAKTwb.pgn"></div>
-
-### TIMMAN - PIKET, WIJK AAN ZEE, 1995
-
-![Kasparov, Karpov ve Timman]({{ '/assets/img/timman/kasparov-karpov-timman.jpg' | relative_url }} "Kasparov, Karpov ve Timman (soldan sağa), Amsterdam'da bir kanal köprüsünde.")
-
-<div class="post-game" id="timman-piket-1995" data-pgn="https://lichess.org/api/study/F0mOCg4p/fOceQM56.pgn"></div>
-
-### TIMMAN - VAN BAARLE, ROTTERDAM, 1964
-
-<div class="post-game" id="timman-van-baarle-1964" data-pgn="https://lichess.org/api/study/F0mOCg4p/9yCE1Cz7.pgn"></div>
-
-<div>
-<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/timman-bati-nin-en-iyisi/' | relative_url }}">
-  <span class="next-section-label">İlk sayfaya dön</span>
-  <span class="next-section-title"><span class="next-section-text">Mar del Plata 1982</span> <span class="next-section-arrow">↺</span></span>
+<div class="next-section-nav-wrap">
+<a class="next-section-nav" href="{{ '/posts/timman-bati-nin-en-iyisi/bolum-3/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Mar del Plata 1982 · 10-13. Turlar</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
