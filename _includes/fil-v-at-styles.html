@@ -240,7 +240,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // but here it swaps the annotated-article <pgn> card for ChessPublica's
 // synced board+text <pgn-study> viewer (see the 2026-07-17 "pgn-study
 // ile tanışın" post), built lazily from the raw PGN text the replaceWith
-// patch above stashed on the card.
+// patch above stashed on the card. Collapsing that <pgn-study> (its own
+// built-in top-right icon) swaps it back to the plain <pgn> article
+// view instead of leaving ChessPublica's own little collapsed ribbon
+// behind, via window.ChessPublica.initAll() — the same entry point
+// ChessPublica's own DOMContentLoaded listener calls, safe to call
+// again since every renderer it runs skips elements already marked
+// dataset.cpRendered.
 //
 // This has to wait for the window 'load' event, not DOMContentLoaded:
 // ChessPublica itself only renders <pgn> inside its *own*
@@ -253,7 +259,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // every DOMContentLoaded listener (ChessPublica's included) has already
 // run to completion, so the cards are guaranteed to exist by then.
 window.addEventListener('load', function () {
-    document.querySelectorAll('.post-article > .pgn-container').forEach(function (card) {
+    function enhanceCard(card) {
+        if (card.__enhanced) return;
+        card.__enhanced = true;
         var rawPgn = card.__rawPgn;
         var header = card.querySelector('.video-title.pgn-title');
         if (!rawPgn || !header) return;
@@ -268,7 +276,40 @@ window.addEventListener('load', function () {
             var study = document.createElement('pgn-study');
             study.textContent = rawPgn;
             card.replaceWith(study);
+            watchForCollapse(study, rawPgn);
         });
-    });
+    }
+
+    function watchForCollapse(study, rawPgn) {
+        var observer = new MutationObserver(function () {
+            if (!study.classList.contains('pgn-study-collapsed')) return;
+            observer.disconnect();
+            var pgn = document.createElement('pgn');
+            pgn.textContent = rawPgn;
+            study.replaceWith(pgn);
+            // Synchronously re-renders every not-yet-rendered <pgn> (and
+            // <fen>/puzzle) on the page — the same entry point
+            // ChessPublica's own DOMContentLoaded listener calls, safe
+            // to call again since it skips anything already marked
+            // dataset.cpRendered. The resulting .pgn-container is picked
+            // up by the persistent observer below, which re-attaches a
+            // fresh "Oyunu İncele" button to it.
+            window.ChessPublica.initAll();
+        });
+        observer.observe(study, { attributes: true, attributeFilter: ['class'] });
+    }
+
+    // Enhance every card already on the page, and — since collapsing a
+    // <pgn-study> above rebuilds a brand new .pgn-container rather than
+    // reusing the old one — any later one too.
+    var postArticle = document.querySelector('.post-article');
+    document.querySelectorAll('.post-article > .pgn-container').forEach(enhanceCard);
+    new MutationObserver(function (mutations) {
+        mutations.forEach(function (m) {
+            m.addedNodes.forEach(function (node) {
+                if (node.nodeType === 1 && node.classList.contains('pgn-container')) enhanceCard(node);
+            });
+        });
+    }).observe(postArticle, { childList: true });
 });
 </script>
