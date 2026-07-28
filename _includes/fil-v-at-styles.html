@@ -259,6 +259,26 @@ document.addEventListener('DOMContentLoaded', function () {
 // every DOMContentLoaded listener (ChessPublica's included) has already
 // run to completion, so the cards are guaranteed to exist by then.
 window.addEventListener('load', function () {
+    // ChessPublica's <pgn-study> wires its own controls (collapse toggle,
+    // ribbon title, settings, download/flip/speed icons, ...) through
+    // hardcoded page-wide element ids (pgnStudyCollapseToggle,
+    // pgnStudyRibbonTitle, etc.), not scoped to the individual <pgn-study>
+    // instance — with two open at once, document.getElementById always
+    // resolves to the *first* one's elements, so the second instance's
+    // own icons and buttons silently do nothing when clicked. Keeping
+    // only one open at a time (closing any previously open one first)
+    // sidesteps the duplicate-id collision entirely.
+    var openStudy = null; // { study, rawPgn, observer }
+
+    function restoreToArticle(entry) {
+        entry.observer.disconnect();
+        var pgn = document.createElement('pgn');
+        pgn.textContent = entry.rawPgn;
+        entry.study.replaceWith(pgn);
+        window.ChessPublica.initAll();
+        if (openStudy === entry) openStudy = null;
+    }
+
     function enhanceCard(card) {
         if (card.__enhanced) return;
         card.__enhanced = true;
@@ -273,30 +293,25 @@ window.addEventListener('load', function () {
         header.appendChild(btn);
 
         btn.addEventListener('click', function () {
+            if (openStudy) restoreToArticle(openStudy);
+
             var study = document.createElement('pgn-study');
             study.textContent = rawPgn;
             card.replaceWith(study);
-            watchForCollapse(study, rawPgn);
-        });
-    }
 
-    function watchForCollapse(study, rawPgn) {
-        var observer = new MutationObserver(function () {
-            if (!study.classList.contains('pgn-study-collapsed')) return;
-            observer.disconnect();
-            var pgn = document.createElement('pgn');
-            pgn.textContent = rawPgn;
-            study.replaceWith(pgn);
-            // Synchronously re-renders every not-yet-rendered <pgn> (and
-            // <fen>/puzzle) on the page — the same entry point
-            // ChessPublica's own DOMContentLoaded listener calls, safe
-            // to call again since it skips anything already marked
-            // dataset.cpRendered. The resulting .pgn-container is picked
-            // up by the persistent observer below, which re-attaches a
-            // fresh "Oyunu İncele" button to it.
-            window.ChessPublica.initAll();
+            var entry = { study: study, rawPgn: rawPgn, observer: null };
+            entry.observer = new MutationObserver(function () {
+                // ChessPublica's own collapse-toggle icon adds this class
+                // to the <pgn-study> — react to it the same way a switch
+                // to a different game's study does (see restoreToArticle
+                // above and window.ChessPublica.initAll()'s doc comment
+                // there), instead of leaving its own mini collapsed
+                // ribbon behind.
+                if (study.classList.contains('pgn-study-collapsed')) restoreToArticle(entry);
+            });
+            entry.observer.observe(study, { attributes: true, attributeFilter: ['class'] });
+            openStudy = entry;
         });
-        observer.observe(study, { attributes: true, attributeFilter: ['class'] });
     }
 
     // Enhance every card already on the page, and — since collapsing a
