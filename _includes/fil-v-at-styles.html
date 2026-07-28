@@ -62,6 +62,18 @@
     box-shadow: 8px 8px 0 0 var(--fg);
 }
 
+/* On phones, the header (title text + icon, both sized off
+   --pgn-title-font-size) and every diagram (sized off --board-size)
+   scale back down together — smaller frame padding to match, so
+   diagrams still fit exactly inside the card at any phone width. */
+@media (max-width: 640px) {
+    .post-article > .pgn-container {
+        --board-size: min(260px, calc(100vw - 3rem));
+        --pgn-title-font-size: 1rem;
+        padding: 1.25rem;
+    }
+}
+
 /* ChessPublica's own .video-title-text has a fixed 1rem font-size,
    which reads smaller than the 1.1rem move/comment text next to it
    once that base size is raised above — bump it back up so the
