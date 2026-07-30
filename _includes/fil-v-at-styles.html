@@ -65,8 +65,11 @@
 /* On phones, the header (title text + icon, both sized off
    --pgn-title-font-size) and every diagram (sized off --board-size)
    scale back down together — smaller frame padding to match, so
-   diagrams still fit exactly inside the card at any phone width. */
-@media (max-width: 640px) {
+   diagrams still fit exactly inside the card at any phone width.
+   768px matches the shared mobile cutoff used for board sizing
+   everywhere else on the site (.post-game, the ogren/*.md teaching
+   diagrams, etc.) — see main.css's own --board-size rules. */
+@media (max-width: 767px) {
     .post-article > .pgn-container {
         --board-size: min(260px, calc(100vw - 3rem));
         --pgn-title-font-size: 1rem;

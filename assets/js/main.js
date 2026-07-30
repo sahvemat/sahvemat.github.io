@@ -272,8 +272,14 @@
         if (!content) return;
         // board + 10px eval bar must fit in content; keep a generous safety
         // margin to absorb rounding/border discrepancies in ChessPublica's
-        // own layout math.
-        const target = Math.max(160, Math.min(380, content - 25));
+        // own layout math. The ceiling itself switches at the site's shared
+        // 768px mobile breakpoint: 380px on desktop (this card's own
+        // 2-column-aware max, set in main.css), 247px on mobile — the same
+        // ~0.65 ratio fil-v-at (260/400) and pgn-study (390/600) use, just
+        // enforced here in JS since chessboardjs needs an actual measured
+        // pixel value, not a CSS variable it'll never re-read.
+        const ceiling = window.innerWidth < 768 ? 247 : 380;
+        const target = Math.max(160, Math.min(ceiling, content - 25));
         el.style.setProperty('--board-size', target + 'px');
         const engine = el._engine;
         if (engine && engine.board && typeof engine.board.resize === 'function') {
