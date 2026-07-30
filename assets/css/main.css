@@ -1447,6 +1447,27 @@ a.article-thumbnail:hover {
     color: var(--accent);
 }
 
+/* Baseline diagram size for a bare <fen>/<puzzle>/<pgn-player> that
+   isn't inside one of the tuned contexts above (fil-v-at's inline
+   .pgn-container, .post-game's 2-column cards, pgn-study's split pane)
+   — the ogren/*.md teaching diagrams are the main case today. <fen> and
+   <puzzle> get replaced by ChessPublica with a .fen-container/.cp-puzzle
+   div, so those classes are what actually need --board-size; pgn-player
+   is a custom element that stays in the DOM as-is. 400px on desktop
+   just makes ChessPublica's own :root default explicit; the mobile
+   value is that same shared ~0.65 ratio and "100vw - 3rem" margin used
+   everywhere else. More specific selectors (.post-article > .pgn-container
+   etc.) still win here via ordinary CSS specificity. */
+.fen-container, .cp-puzzle, pgn-player {
+    --board-size: 400px;
+}
+
+@media (max-width: 767px) {
+    .fen-container, .cp-puzzle, pgn-player {
+        --board-size: min(260px, calc(100vw - 3rem));
+    }
+}
+
 /* ChessPublica's rendered <puzzle> board (.cp-puzzle) is capped at
    --board-size and only gets auto side margins under its own mobile
    breakpoint, so it sits flush-left instead of centered in this wider
@@ -1875,9 +1896,15 @@ pgn-player p {
         min-width: 0;
         box-sizing: border-box;
         /* Reduce padding so the board + eval bar have room to breathe.
-           refit() will compute --board-size from the available content area. */
+           refit() will compute --board-size from the available content area.
+           247px = this card's own 380px desktop ceiling (see the 768px+
+           rule below) scaled by the same ~0.65 mobile ratio used site-wide
+           (fil-v-at: 260/400, pgn-study: 390/600) — the desktop ceiling
+           itself stays card-specific (it has to fit the eval bar), but the
+           mobile shrink and the "100vw - 3rem" viewport margin match
+           everywhere else. */
         padding: 0.5rem;
-        --board-size: min(300px, calc(100vw - 4rem));
+        --board-size: min(247px, calc(100vw - 3rem));
     }
 
     /* Let ChessPublica size .player-wrapper/.player-container from --board-size,
@@ -2621,6 +2648,26 @@ details.game-note > .post-game {
     }
 }
 
+/* ChessPublica's article-view renderer prints an extra diagram of the
+   starting position at the very top of a game's move list whenever it
+   doesn't begin from the normal starting array (a [SetUp]/[FEN] header)
+   — useful context for a standalone <pgn> card, since the reader has no
+   board otherwise. Inside <pgn-study> that's redundant: its own board
+   pane already shows that exact position, live and interactive, so the
+   same diagram just repeats it a second time for no reason.
+   ChessPublica only marks this auto diagram (and every other inline
+   diagram) with .pgn-clickable-diagram when it's rendering with
+   clickable-moves — which is exactly how pgn-study renders its internal
+   <pgn> — and, unlike any other inline diagram a move's own comment
+   might add later in the list, this one is unconditionally the very
+   first thing appended to .pgn-moves. That combination (:first-child +
+   .pgn-clickable-diagram) is what lets this target pgn-study's copy
+   specifically, while leaving a plain <pgn> card's own start diagram —
+   never clickable-moves, so never matched here — completely alone. */
+.post-article > pgn-study .pgn-moves > .cp-board-wrapper.pgn-clickable-diagram:first-child {
+    display: none;
+}
+
 /* ChessPublica's loading skeleton (.pgn-study-loading, id=
    pgnStudyLoading) isn't part of <pgn-study> at all — its own JS
    inserts it as a plain sibling immediately *before* the element via
@@ -2685,6 +2732,18 @@ details.game-note > .post-game {
     }
     .post-article > .pgn-study-loading .pgn-study-loading-board {
         width: min(600px, 37.6cqw, 40vh);
+    }
+}
+
+/* Below 900px there's no split-pane column to size the skeleton board
+   against (see the mobile case above), so ChessPublica's own vendor
+   default (400px, cp.css) would otherwise show through unmatched —
+   mirror the real board's mobile ceiling (390px, see the pgn-study
+   pgn-player rule above) here too, with the same "100vw - 3rem" viewport
+   margin used everywhere else on mobile. */
+@media (max-width: 899px) {
+    .post-article > .pgn-study-loading .pgn-study-loading-board {
+        width: min(390px, calc(100vw - 3rem));
     }
 }
 
@@ -2764,9 +2823,18 @@ details.game-note > .post-game {
     );
 }
 
+/* 899px (not the site's usual 768px) is deliberate: it matches
+   ChessPublica's own vendor breakpoint where pgn-study's whole layout
+   switches from a single mobile view to the two-column split pane (see
+   cp.css's `@media (min-width:900px){ pgn-study{ display:grid... } }`) —
+   moving only the board size to 768px would shrink the board to mobile
+   size while the surrounding layout was still the desktop split pane.
+   390px keeps the same ~0.65 mobile ratio as everywhere else (of this
+   component's own 600px ceiling above), it just applies at pgn-study's
+   own breakpoint instead of the shared one. */
 @media (max-width: 899px) {
     .post-article pgn-study pgn-player {
-        --board-size: min(400px, 94cqw, var(--sah-max-board-h, 9999px));
+        --board-size: min(390px, 94cqw, var(--sah-max-board-h, 9999px));
     }
 }
 
