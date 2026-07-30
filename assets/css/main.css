@@ -2648,6 +2648,26 @@ details.game-note > .post-game {
     }
 }
 
+/* ChessPublica's article-view renderer prints an extra diagram of the
+   starting position at the very top of a game's move list whenever it
+   doesn't begin from the normal starting array (a [SetUp]/[FEN] header)
+   — useful context for a standalone <pgn> card, since the reader has no
+   board otherwise. Inside <pgn-study> that's redundant: its own board
+   pane already shows that exact position, live and interactive, so the
+   same diagram just repeats it a second time for no reason.
+   ChessPublica only marks this auto diagram (and every other inline
+   diagram) with .pgn-clickable-diagram when it's rendering with
+   clickable-moves — which is exactly how pgn-study renders its internal
+   <pgn> — and, unlike any other inline diagram a move's own comment
+   might add later in the list, this one is unconditionally the very
+   first thing appended to .pgn-moves. That combination (:first-child +
+   .pgn-clickable-diagram) is what lets this target pgn-study's copy
+   specifically, while leaving a plain <pgn> card's own start diagram —
+   never clickable-moves, so never matched here — completely alone. */
+.post-article > pgn-study .pgn-moves > .cp-board-wrapper.pgn-clickable-diagram:first-child {
+    display: none;
+}
+
 /* ChessPublica's loading skeleton (.pgn-study-loading, id=
    pgnStudyLoading) isn't part of <pgn-study> at all — its own JS
    inserts it as a plain sibling immediately *before* the element via
