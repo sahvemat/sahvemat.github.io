@@ -3,7 +3,7 @@ layout: post
 title: "♗⚔️♘ fil v. at 02"
 author: "Adrian Mikailchishin"
 section: "Teori"
-event: "Fil - At Mücadelesi · 12 Parti"
+event: "Fil - At Mücadelesi · 13 Parti"
 date: 2026-07-26
 permalink: /posts/fil-v-at/bolum-2/
 ---
@@ -12,102 +12,97 @@ permalink: /posts/fil-v-at/bolum-2/
 
 {% include chapter-toc.html dataset="fil_v_at_toc" %}
 
-## <span class="chapter-num">02</span> Savunucuyu Ortadan Kaldırmak
+İşte kendi oynadığım partilerden biri: (ileride Büyükusta olacak) **Gennadi Zaichik**'e karşı, SSCB Takımlar Şampiyonası, Riga. Ben Ukrayna adına, o Gürcistan adına oynuyordu.
+
+## <span class="chapter-num">02</span> Capablanca'nın Kuralı
 
 <pgn>
-[Event "Cienfuegos 31/350"]
-[Site "Cienfuegos 31/350"]
-[Date "1981.??.??"]
+[Event "URS-chT"]
+[Site "Riga"]
+[Date "1975.??.??"]
 [Round "?"]
-[White "Mikhalchishin, A."]
-[Black "Chernin, A."]
+[White "Zaichik, Gennadi"]
+[Black "Mikhalchishin, Adrian"]
 [Result "1-0"]
-[ECO "C10"]
-[Annotator "Mikhalchishin,A"]
+[ECO "D91"]
+[WhiteElo "2200"]
+[BlackElo "2425"]
 [SetUp "1"]
-[FEN "r3k2r/p3bppp/4pn2/2p3B1/2R5/5N2/PPP2PPP/2K4R w kq - 0 16"]
-[PlyCount "25"]
-[EventDate "1981.??.??"]
+[FEN "1r3r2/p4pbk/2p3pp/8/4N3/8/PPK2PPP/3R3R w - - 0 23"]
+[PlyCount "79"]
+[EventDate "1975.07.15"]
+[EventType "team-tourn"]
+[EventRounds "9"]
+[EventCountry "URS"]
+[SourceTitle "MCD"]
+[Source "ChessBase"]
+[SourceDate "1999.07.01"]
+[SourceVersion "1"]
+[SourceVersionDate "1999.07.01"]
+[SourceQuality "1"]
 
-{ Bir başka zor karar: *değişmek mi, değişmemek mi.* Birkaç yıl
-sonra, artık ciddi bir büyükusta olduğumda, bu partiyi Cienfuegos'ta
-**Capablanca Memorial**'de Büyükusta **Alexander Chernin**'e karşı
-oynadım. Bir **Fransız Savunması**'ydı; bir şekilde, Spassky'nin parlak
-bir şekilde kazandığı Dünya Şampiyonası maçından ünlü bir **Petrosyan -
-Spassky** partisinin ana hatlarını tekrarlamıştık. Burada Beyaz'ın açık
-bir üstünlüğü var, bu yüzden varyantları hesaplamaya başladım.
-
-Daha sonra bu tam pozisyonu, birkaçı büyükusta olan öğrencilerime ilk
-hamleyi bulmaları için test olarak verdim. }
-16. Bxf6 $1 $16 { Hesapladığım ilk hamle, doğal geliştirme fikri
-olan **son taşı geliştirmek**ti: 16.Rd1, a7'deki zayıflığa saldırmak için
-Rd3-Ra3'e yönelmek. Ama hesaplama gösterdi ki bu bariz görünen hamle
-aslında Beyaz'ın lehine değil - nota bakın.
-
-Sonra *...Nd7*'yi durdurmayı hedefleyen 16.Ne5'i denedim. Bu da bir
-taktik soruna takılıyor - nota bakın.
-
-Yani hesaplama üstüne hesaplama, bu mantıklı görünen hamlelerin hiçbir
-şey vermediğini gösterdi. Yarım saat düşündüm, nedenini bir türlü
-anlayamadım. Sonra anladım: Siyah'ın planı *...Nd7*; **at Siyah'ın
-kilit savunma taşı** - c5'i koruyor, d6'ya yönlenebiliyor. *O at önce
-yok edilmeli.* Dolayısıyla: **16.Bxf6!**, her şeyden önce savunucuyu
-ortadan kaldırıyor. }
-(16. Rd1 {[%cal Rd1d3,Rd3a3]} Nd7 17. Bxe7 Kxe7 18. Rd3 Rhc8 19. Ra3 Nb6
-{ [%csl Ra7][%cal Rc8c7] At güzel bir şekilde b6'ya iniyor, d5'e
-yöneliyor, kale de c7'ye geliyor - Siyah her şeyi koordine etti,
-a7-zayıflığını da korudu. Beyaz'ın saldırısından hiçbir şey çıkmıyor. })
-(16. Ne5 Nd7 17. Bxe7 Nxe5 18. Rxc5 Nd7 { [%csl Rc5,Re7] Bir **çifte
-saldırı**: c5'teki kale vuruluyor, Beyaz da kaliteyi kaybediyor. })
-16... gxf6 17. Rd1 { Şimdi normal, sağlıklı bir hamle - ama sadece
-savunmacı at zaten yok olduğu ve Siyah'ın şah kanadı yapısı harap
-olduğu *için* iyi. } Rb8 (17... Rd8 18. Rxd8+ Kxd8 19. Ra4 $18 { ve
-a7-piyonu kayıp. })
-18. Rd3 $1 {[%cal Rd3a3,Ra3a7]} { Öncekiyle aynı fikir: a3'e gelip
-zayıflığa saldırmak. } Rb4 {[%csl Rd4,Re5,Rf3,Rg5,Rh4]} { Kurnaz bir
-fikir - Siyah, piyon yapısını iyileştirerek *Ra3*'ü durdurmak istiyor.
-Piyonlar koordine olup birbirini korumaya başlarsa (b4'ü destekleyen
-a5 bile olsa), Ra3 artık mümkün olmayacak. } 19. Nd2 { Oyuna başka bir
-taş katma zamanı - at tam olarak pasif değildi, ama o anda
-**çaresizdi**, bu yüzden dahil edilmesi gerekiyor.
-
-Burada sözde **Makogonov kuralını** uyguladım; ünlü Sovyet antrenörün
-adıyla anılan bir kural bu (kendisi Garry Kasparov'un ilk ciddi
-koçlarından biriydi): *doğrudan bir taktik yoksa, en kötü yerleşmiş
-taşını bul ve onu iyileştir.* En kötü taşım neydi? Derin bir hesaplamaya
-gerek kalmadan, onu iyileştirdim - şah f3'e yöneliyor. } (19. Rxb4 cxb4
-{[%cal Ra7a5]}) 19... Rg8 20. g3 Rxc4 21. Nxc4 Rg4 22. f4 h5 (22... e5
-23. h3 {[%cal Rg4c4]} Rg6 24. fxe5 $18) 23. Kd2 $1 $18 (23. Ra3 h4
-24. Rxa7 hxg3 25. hxg3 Rxg3 26. a4 { Beyaz burada da açıkça daha iyi, ama
-bu tür durumlarda rakibe hiç karşı oyun vermeyen daha güvenli yöntemleri
-kullanmak daha doğrudur. }) 23... h4 24. Ke2 hxg3 25. hxg3 Rg6 26. Ra3
-Rh6 27. Kf3 Rh1 (27... Rh2 28. c3 {[%csl Re7]}) 28. Rxa7 { Siyah burada
-teslim oldu; a-piyonunun ilerlemesiyle birleşen *Rxa7*'ye karşı savunma
-yok. } 1-0
+{ Bu pozisyon bir **Grünfeld Savunması**'ndan doğdu - en sevdiğim
+açılış - ve o sırada filimin oldukça güçlü olduğuna inanıyordum. }
+23. b3 c5 $2 { Planım filin konumunu iyileştirmek ve Beyaz'ın şahını
+açmaya çalışmaktı. Tehdit basitti: önce *...c4* oynamak, sonra *...Rc8*
+ile dosyaları açmak; Beyaz'ın şahı böylece ateş altına girecekti.
+[%cal Yc5c4,Yf8c8] }
+(23... Rfd8 $1 { Bu pozisyonu ele almanın **doğru yolu**. } 24. Rxd8
+Rxd8 25. Rd1 Rxd1 26. Kxd1 Bf8 27. Kc2 Be7 28. Kd3 f5 29. Nd2 Kg7 30. Kc4
+Kf6 31. Nf3 Ke6 32. Nd4+ Kd7 33. f4 Bf6 34. g3 Kd6 35. Nf3 g5 { Pasif
+ama savunulabilir bir kuruluş: Siyah, *d5/c5/b5* çevresindeki tüm açık
+kareleri elinde tutuyor. Beyaz daha iyi kalmaya devam ediyor, ama
+muhtemelen daha fazla ilerleme kaydedemez. }) 24. Nd6 Bd4 { Konumumdan
+oldukça memnundum: d5'i kapatmıştım, fil de d4'te güçlü bir şekilde
+duruyordu. }
+25. f3 Rb6 26. Nc4 Re6 27. Rde1 Rfe8 28. Rxe6 Rxe6 29. Kd3 { Aniden
+Beyaz'ın gerçek tehdidini fark ettim: b4, sonra b5, a4, a5 ve b6 oynayıp
+bir geçit piyonu yaratmak. Filim o piyonla hiç mücadele etmiyordu.
+Merkezde güzel görünüyordu ama *işlevi* sıfırdı: o anda kimsenin
+d-dosyasına ihtiyacı yoktu, üstelik diğer taşlarımla da koordineli
+değildi. [%cal Yb3b4,Yb4b5,Ya2a4,Ya4a5,Yb5b6] } Bg7 { Geri çekiliyor,
+*...b4*'ü durduruyor. } 30. Rc1 { c5'e bakıyor - satrançta her zaman
+zayıflıklara saldırırız. } h5 { Çok tipik bir **profilaktik hamle**:
+son yatayı kontrol etmek faydalıdır ki rakip kale sızamasın; aynı
+tekniği ileride Karpov ve diğer dünya şampiyonlarında da göreceğiz. }
+31. Rc2 Re1 32. Na5 a6 33. Nb7 (33. Rxc5 Rd1+ 34. Ke2 Rg1
+{ [%csl Yg2][%cal Ye2f2,Rg7d4] g2'ye saldırmak mümkün değil; çifte
+saldırı *...Bd4* yüzünden Kf2 oynamak da mümkün değil. }) 33... Re6
+34. Kc4 (34. Nxc5 Rd6+ { [%cal Rd3c4] } 35. Kc4 Rd4+ { Beyaz için çok
+tatsız; şah açık şahlarla c3'e geliyor. }) 34... f5 { Capablanca'nın
+dediği gibi, *oyunsonunda acele etmeye gerek yok* - önce konumunu
+olabildiğince iyileştir. } 35. Nxc5 Rd6
+{ [%cal Rd6d4] Önceki gibi aynı hileyle tehdit ediyor. } 36. b4
+{ [%csl Rb3] Artık Beyaz'ın güvenli bir karesi var, hile de işe
+yaramıyor. Üstünlüğü ele geçiren beyaz 62. hamlede oyunu kazandı. } 1-0
 </pgn>
 
-**Filin rolüne bir bakın**: bu partinin tamamında tek bir hamle bile
-yapmadı.
+Parti bittikten sonra, koyu kareli file gönülden bağlı bir hayran olan -
+onu değişmeden önce öpüp "hizmeti için" teşekkür etmesiyle ünlü -
+Büyükusta **Eduard Gufeld**, Gruenfeld/Hint Şahı oynayan ve kendisi de
+bir partide g7-filini değiştirmiş olan **Garry Kasparov**'a takıldı:
+*"Garry, yaptığın şey bir suç!"* Sonra bizim tahtamıza geldi ve şöyle
+dedi: *"Ah, gençler, fille nasıl oynanacağını bilmiyorsunuz - böyle bir
+pozisyonu nasıl bozabilirsiniz?"*
 
-Bu pozisyonu, birkaçı güçlü büyükusta olan birçok öğrencime iki aşamada
-verdim: önce anlık bir cevap - saf sezgiyi ve hissi test ederek -
-sonra, beş dakika düşündükten sonra, o ilk hamleyi doğrulama ya da
-değiştirme şansı. Sadece **yaklaşık %20**'si *16.Bxf6!*'yı buldu.
+Yakınlarda duran **Tigran Petrosyan** güldü ve şunu söyledi: *"Eduard'ı
+dinlemeyin gençler, 23...c5'ten sonra bu pozisyon teorik olarak kayıp.
+Kayıp, çünkü karşı oyununuz yok ve fil kötü."* Nedenini anlayıp
+anlamadığımı sordu; hayır dedim. Bunun üzerine açıkladı: **Capablanca'nın
+kuralını** bozmuştum - *file sahipsen, piyonlarını filinin karelerinin
+zıt renginde tut.* Bu bir kuraldır ve bozarsan cezasını çekersin. Şunu da
+ekledi: vezirler hâlâ tahtada olsaydı (diyelim ki Siyah vezir b6'da,
+Beyaz vezir c4'te), o zaman 23...c5 aslında mantıklı olur, Beyaz'ın
+şahına bir saldırı açardı - ve o durumda fil, attan çok daha güçlü
+olurdu.
 
-Bulunması çok zor bir karar bu. Kendi yolum şöyleydi: Siyah'ın en iyi
-taşının at olduğunu, ana tehdidinin de *...Nd7* olduğunu (bundan sonra
-Siyah her şeyi savunuyor) anladığımda, hamleyi bulmanın yolu **en güçlü
-taşı ortadan kaldırmaktan** geçiyordu - yani tatsız savunma manevrasını
-başlatmakla tehdit eden taşı yok etmekten.
-
-Herkes şunu merak eder: *at gerçekten ne zaman filden daha iyidir, fil
-ne zaman attan daha iyidir?* Açık pozisyonlarda filin rolü doğal olarak
-önem kazanır. At ise rakip filin ulaşamadığı kareleri **kapalı** bir
-pozisyonda kontrol ettiğinde güçlüdür.
+Çok öğretici bir hikâye: **23...c5, Capablanca'nın kuralını bozduğu için
+oyunu kaybettirdi.** Kurala uyarsan başarırsın; bozarsan - benim yaptığım
+gibi - oyunu kaybedersin.
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-3/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">03</span> Duble Piyon Kuralı</span> <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">03</span> Savunucuyu Ortadan Kaldırmak</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

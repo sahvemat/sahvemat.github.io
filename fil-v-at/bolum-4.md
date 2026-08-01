@@ -3,7 +3,7 @@ layout: post
 title: "♗⚔️♘ fil v. at 04"
 author: "Adrian Mikailchishin"
 section: "Teori"
-event: "Fil - At Mücadelesi · 12 Parti"
+event: "Fil - At Mücadelesi · 13 Parti"
 date: 2026-07-26
 permalink: /posts/fil-v-at/bolum-4/
 ---
@@ -12,115 +12,165 @@ permalink: /posts/fil-v-at/bolum-4/
 
 {% include chapter-toc.html dataset="fil_v_at_toc" %}
 
-## <span class="chapter-num">04</span> Modern Bir Ustalık Dersi
+## <span class="chapter-num">04</span> Duble Piyon Kuralı
 
-Şimdi çok daha karmaşık bir örnek - iki büyük şampiyon arasındaki modern
-bir parti, **Karpov'a karşı Kramnik**. 
+Bu kadarı açık; ama kitaplarda nadiren açıklanan önemli bir özellik daha
+var. Bunun bu partide nasıl işlediğini göstereceğim. Beyaz burada
+**Boleslavsky**'ydi - o dönemde dünyanın en iyi beş ya da on
+oyuncusundan biriydi; birkaç yıl sonra **Bronstein**'a karşı bir
+Adaylar final maçı oynadı, yani bir süre için esasen dünyanın **üçüncü
+numarasıydı**.
 
 <pgn>
-[Event "Wien"]
-[Site "Wien"]
-[Date "1996.??.??"]
+[Event "Leningrad,tt"]
+[Site "?"]
+[Date "1947.??.??"]
 [Round "?"]
-[White "Karpov, Anatoly"]
-[Black "Kramnik, Vladimir"]
-[Result "1-0"]
-[ECO "D46"]
-[WhiteElo "2775"]
-[BlackElo "2765"]
-[Annotator "Karpov,An"]
+[White "Boleslavski"]
+[Black "Smyslov"]
+[Result "0-1"]
+[ECO "C71"]
+[Annotator "Mihalcisin,Adrian"]
 [SetUp "1"]
-[FEN "r4r1k/1pb2pp1/p4n1p/8/3B4/5N2/PP3PPP/R4RK1 w - - 0 21"]
-[PlyCount "77"]
-[EventDate "1996.??.??"]
-[EventType "swiss"]
-[EventCountry "AUT"]
-[SourceTitle "Inf 67"]
+[FEN "r4rk1/2B2ppp/p7/3n4/8/5P1P/P4P2/R4RK1 w - - 0 22"]
+[PlyCount "42"]
+[EventDate "2009.04.29"]
 
-{ Pozisyon kabaca eşit görünüyor; Beyaz'ın gelişimi biraz daha iyi, bir
-saldırı başlatmak için Rc1 ya da Rd1 deneyebilir. Ama Karpov saf
-**pozisyonel** oynuyor: hemen değişiyor, çünkü kuralı biliyor
-- *duble piyon olduğunda, at filden çok daha güçlüdür.* Şimdi bunu
-gerçekten fantastik bir şekilde nasıl kullandığını görelim. }
-21. Bxf6 gxf6 22. Rfe1 {[%cal Re2e7]} { Kale elbette e7'ye yöneliyor. }
-Rfe8 { Siyah doğal bir şekilde cevap veriyor. } 23. Rad1 (23. g3 $5 $14 {
-Bu da mümkündü, büyük bir fark yok. }) 23... Rxe1+ 24. Rxe1 {R
-9/i} Rd8 25. g3 {[%cal Rc7g3,Re1e7]} { Doğal olarak **Capablanca'nın
-kuralını** takip ediyor: piyonlarını rakip filinin karelerine koy. }
-Rd7 26. Re2 Kg7 { Her iki taraf da içgüdüsel olarak önce ikinci yatayın
-güvenliğini sağlıyor - herhangi bir kale oyunsonunda ikinci yatay
-tahtanın en savunmasız kısmıdır. Siyah'ın buradaki hamleleri esasen
-otomatik; Beyaz da tam olarak aynısını yapıyor. } 27. Nh4 Rd5 28. Re7
-Rc5 29. Rd7 { Kaleyi iyileştirme zamanı. } b5 (29... a5 $142 $1 30. Kg2
-b5 31. Kf3 $14 { /\ Ke4 }) 30. b4 $1 { Bir kez daha filinin karesine
-başka bir piyon yerleştiriyor. } Rc2 (30... Rc1+ 31. Kg2 Kf8 32. Nf5 Ke8
-33. Rd2 $14) 31. Nf5+ Kg6 (31... Kf8 32. Nxh6 Ke8 33. Rxf7 $16) 32. Ne3
-{ At uzaklaşıyor, ikinci yataydaki şahtan kurtulmaya çalışıyor. } Rc1+
-33. Kg2 Be5 34. Ra7 $1 (34. f4 Bc3 35. Nd5 Rc2+
-36. Kf3 Be1 $132) 34... Rc6 { Öncekiyle aynı fikir: kaleyi aktif
-mevkiinden c6'ya geri çekmek.
+{ Pozisyon açıldı ve at burada d5'e iniyor. Böyle bir
+at genellikle çok güçlüdür - örneğin Siyah'ın onu destekleyen e6'da bir
+piyonu daha olsaydı, ona saldırmak ya da onu söküp atmak son derece zor
+olurdu; sonuç da Siyah için çok elverişli olurdu.
 
-Bu tür bir oyunsonunu nasıl savunacağın, her zaman çok önemli bir
-*pratik* karardır. Bir seçenek, fazla piyonu koruyarak pasif değil aktif
-savunmaktır; diğeri de bir piyon eksik saf kale oyunsonuna geçmeye
-çalışmaktır. Genel bir tavsiye olarak, bu tür durumlarda bir piyon eksik
-olsa bile genellikle kale oyunsonunu hedeflemek doğrudur. Siyah için
-burada daha iyi bir deneme *...Bd4+* olurdu: 35.Nxd4? Rc2+ vb. sonrasında
-- nota bakın - ...Bxe3, fxe3'e doğru değişilir, siyah şahın h5 civarı
-karelere ulaştığı bir kale oyunsonuna geçilirdi. Beyaz'ın h4'teki şahı
-pek rahat olmazdı; sonunda Beyaz fazla a-piyonunu bir b-piyonuna
-çevirip kazanma şansını korurdu - ama *saf bir kale oyunsonunda*, hafif
-taş oyunsonundan farklı olarak, Siyah'ın duble piyonları sonuç için
-gerçek bir sorun olmaktan çıkar. Yani genel tavsiye geçerli kalıyor:
-mümkün olduğunda, bir piyon eksik olsa bile böyle partileri kale
-oyunsonuna yönelerek kurtarmaya çalışın. } (34... Bd4 35. Rxa6 Bxe3
-36. fxe3 Rc2+ 37. Kh3 $16 h5
-{[%csl Ra2,Yb5]}) 35. Nd5 Bd6 $8 36. a3 $1 { Faydalı bir hamle, bir kez
-daha b4-piyonunu koruyor; artık at işini yapmakta özgür. } Kf5
-37. Ne3+ (37. Rxf7 $2 { Cazip bir hile, ama piyon toplamak bu şekilde bir
-çifte saldırıya takılıyor: üç piyon bile atı feda etmeye değmez. } Ke6
-38. Rxf6+ Kxd5 39. Rxh6 Rc3 $19) 37... Kg6 (37... Ke6
-38. g4 $16 {[%csl Yh6][%cal Ye3f5] /\ Nf5 { Ke6 burada yanlış olurdu -
-g4'ten sonra h6-piyonu ciddi bir zayıflık haline gelir, Nf5 de Siyah
-için büyük bir sorun olurdu. }}) 38. Kf3 $1 $36 { Şimdi şahı iyileştirme
-zamanı. } Be5 (38... f5 39. Nd5) 39. Nd5 Kg7 40. Ne7 $1 $16 Rc3+
-(40... Re6 41. Nf5+ Kg6 42. Nh4+ Kg7 43. Kg4 $16 { Bütün süreci burada
-görebilirsiniz: Beyaz, atla Siyah'ın taşlarını sürekli itip kakıyor. })
-41. Kg4 { Siyah aktif bir karşı saldırı deniyor. } Rxa3 { ve bir piyon
-kazanıyor. } 42. f4 Bc3 43. Kh5 $1 Bxb4 44. Nf5+ Kg8 45. Ra8+ Kh7 46. Ra7
-(46. Nxh6 { /\ Ra7+- } Re3 47. Rxa6 Re6 48. Ra8 (48. Ra7 $6 Re7 49. Ra8
-(49. Ra6 Re6) 49... Rb7) 48... Be7 $16) { Beyaz atılıma girmeden önce
-bu, pozisyonun neredeyse bir tekrarı gibi görünüyor. } 46... Kg8 47.
-Nxh6+ Kf8 48. Rxf7+ Ke8 49. Kg6 $1 $40 (49. Rxf6 $6 { Bu aslında burada
-yanlış olurdu - fili çifte işlev üstlenmesine izin verir: hem uzun
-diyagonali kontrol etmek *hem de* aynı anda geçit b-piyonunu desteklemek.
-Fil, iki kanatta birden çalışabildiğinde attan tam olarak böyle net bir
-üstünlük gösterir. } Bc3 $132 {[%cal Yc3h8,Yb5b3]})
-49... Bc3 { Karpov'un onun yerine Kg6 oynamasının nedeni bu. } (49... Be7
-50. Nf5 Bd8 51. Nd6#) (49... Bc5 50. Ng4 $36) 50. Nf5 { b4'ü almadan. }
-b4 51. Rb7 $1 $18 { Çok güzel bir nokta: Siyah *...b3* ile terfi etmeye
-devam ederse, fikir yeterince basit görünüyor (...b2, ...Ra1, ve
-tutunmaya çalışmak) - ama burada aslında Siyah'ın hiç durduramayacağı,
-üç beyaz taşın da fantastik bir koordinasyonuyla güzel bir mat
-saldırısına takılıyor: *Rd7* mat. Bütün beyaz ordunun gerçek
-koordinasyonunu gösteren güzel bir tablo. } Ra2 (51... b3 {[%cal Yb3b2,
-Ya3a1]} 52. Nd6+ Kd8 53. Kf7 b2 54. Ke6 {[%csl Yb7,Yd6,Ye6][%cal Rb7d7]
-/\ Rd7#}) { Bunun yerine Siyah kaleyle karşı saldırmaya çalışıyor. }
-52. h4 a5 53. h5 a4 54. h6 {[%csl Rf6][%cal Rc3h8]} { Çok akıllıca bir
-karar - f6'yı almaya hiç uğraşmıyor. Kimse o piyonu umursamıyor; h6'nın
-amacı basitçe siyah filin h8'e doğru uzun diyagonali kontrol etmesini
-engellemek. } Rh2 55. h7 Kd8 (55... a3 56. Nd6+ Kd8
-(56... Kf8 57. Rf7#) 57. Kf5 a2 58. Ke6 Re2+ 59. Kd5 Rd2+ (59... Rh2
-60. Kc6 { /\ Rd7# }) 60. Kc6 Rxd6+ 61. Kxd6) 56. Nh4 { Ucuz küçük bir
-taktik, işleri kapatıyor.} f5 { Esasen zorunlu. } 57. Rxb4 $1 {
-Saptırma - tahtadaki en önemli tek piyonu kazanıyor. } Rh3
-58. Rxa4 Rxg3+ 59. Kxf5 { Siyah teslim oldu: Beyaz iki piyon fazla,
-*Ng6* ardından gelen *Ra8+*'a karşı da gerçek bir savunma kalmadı. } 1-0
+Burada ise at *pek* o kadar sağlam değil, gerçek soru da onu nasıl
+hayatta tutacağımıza dönüşüyor - bu oyunsonunun bütün teknik sorunu bu. }
+22. Bg3 Rfc8 { Yandan güzel bir savunma. } 23. Rfd1 Rc5
+24. Rd2 { Önce mümkün olanı oynamak gerekiyor. } h6 (24... f6
+{[%cal Rg8e6]} { Bu doğal görünüyor - şahı e6 üzerinden merkeze
+getirmeye hazırlanıyor - } 25. Rb1 {[%cal Rb1b7,Rb7g7]} { - ama bu,
+Beyaz'ın kalesinin b1-b7'ye sallanıp yedinci yatayın tam kontrolünü ele
+geçirmesine izin verir, ki bu Siyah için çok elverişsiz olurdu. Bu
+yüzden Siyah bundan kaçınıyor ve metindeki hamleyi oynuyor. }) 25. Re1
+Rac8 26. Bd6 (26. Kg2 {Smyslov}) 26... Rc1
+27. Rxc1 Rxc1+ 28. Kg2 Nb6 29. Bg3 Rc6 { Rakibin karşı oyununu engellemek
+her zaman önemlidir. Burada aslında Beyaz için 30.Rd6!? denemek hâlâ
+daha iyiydi - nota bakın - ama metindeki hamle (30.Kf1) de gayet iyi.
+Şu anda filin gerçek bir hedefi olmadığına dikkat edin; *sorun tam
+olarak bu*: bir filin somut hedefleri olmadığında boş bir taşa dönüşür.
+Bir ya da iki kareyi kontrol edebilir, şahın bir kareye ulaşmasını
+engelleyebilir, ama gerçek işlevi daha somut bir şey olmalı. Değilse,
+filin rolü çok zayıf hale gelir. Bunu fark etmek önemli. }
+30. Kf1 (30. Rd6 $142 Rxd6 31. Bxd6 f5 32. f4 Kf7 33. Kf3
+g6 {[%csl Rd5][%cal Rf7e6]} { ve siyah şah f7-e6-d5 yürüyüşüne çıkıyor;
+Siyah'ın konumunun daha iyi olduğu böylece açıkça ortaya çıkıyor - gerçi
+kazanmak yine de kolay olmayacak. }) 30... f6 { Siyah artık f6'ya bir
+piyon yerleştirebiliyor, **Capablanca'nın kuralının** ikinci versiyonunu
+takip ederek: rakipte fil varsa, kendi piyonlarını o filin *aynı*
+renkteki karelerine koy, onu kısıtlamak için. Siyah bunu neredeyse
+otomatik olarak yapıyor. } 31. Ke2 Kf7 32. Kd3 Rc5 {[%cal Rc5a5,Ra5a2]}
+{ Artık kale sonunda saldırmaya başlayabiliyor - tehdit *...Ra5*, ve
+aniden Siyah'ın nişan alacağı gerçek hedefler var. } 33. Rb2 Nd7
+34. Kd4 Ra5 35. Rc2 Ke6
+36. Rc6+ Kf5 37. Rc7 Ne5 { Aniden Beyaz için her yerde tehditler ortaya
+çıkıyor. } 38. Rc5 (38. Rxg7 Nxf3+ 39. Ke3 Ra3+ 40. Ke2 Nd4+ 41. Kf1 Rxa2
+{[%cal Ra6a4]} { ve Siyah basitçe a-piyonu yarışını kazanıyor. }) 38...
+Ra3 $1 {[%cal Ra3d3]} { Kalelerin değişimini önleyen çok güzel bir hamle
+- aniden tahtanın ortasında beklenmedik bir mat fikri beliriyor. }
+(38... Rxc5 39. Kxc5 Nxf3 40. Kb6 {[%cal Ra2a6]} { Beyaz bir piyonu geri
+kazanıyor, ama bu önemli değil; şah basitçe kendi a-piyonuna eşlik
+etmek için a6'ya doğru yürüyor, Siyah da tutunmakta büyük sorunlar
+yaşardı. }) 39. Bxe5
+Ra4+ 40. Rc4 (40. Ke3 fxe5 41. Rc2 Ra3+ 42. Ke2 a5 43. Rd2 g6 44. Rc2 h5
+45. Rb2 Rc3 $19 {[%csl Ra2,Rf3,Rh3]} { 40.Ke3 basitçe kaybediyor - Beyaz'ın
+kalan piyonlarının her birinin ne kadar zayıf olduğuna bakın. }) 40... fxe5+
+41. Kd5 Rxa2 42. Rg4 g5 { Beyaz teslim oldu; fazla piyon ve umutsuzca
+zayıf piyon yapısı oyunu belirliyor. } 0-1
+</pgn>
+
+Yani bu örneğin başlangıç pozisyonunda Siyah'ın zaten daha iyi olduğu
+söylenebilirdi, ama *neden* olduğu belli değildi. Şimdi açıklayabiliriz:
+**pozisyonda duble piyon olduğunda, at genellikle filden çok daha
+güçlüdür.** Nimzowitsch'in kendi savunmasındaki devrimci fikri tam da bu
+yüzden pasif beklemek değildi; gönüllü olarak c3'ü alır, rakibe duble
+piyon dayatır, sonra da başarıyla o piyonlara saldırırdı. Bu gerçek bir
+kuraldır ve nedense kitaplarda nadiren açıklanır: tahtada duble piyon
+olduğunda, atın file karşı avantajı muazzam hale gelir.
+
+<pgn>
+[Event "YUG-ch53"]
+[Site "Belgrade "]
+[Date "1998.03.15"]
+[Round "2"]
+[White "Kontic, Djordjije"]
+[Black "Gligoric, Svetozar"]
+[Result "0-1"]
+[ECO "C56"]
+[WhiteElo "2330"]
+[BlackElo "2480"]
+[SetUp "1"]
+[FEN "r4rk1/pp3ppp/2n5/3q4/6b1/2B2N2/PP3PPP/R2QR1K1 b - - 0 17"]
+[PlyCount "49"]
+[EventDate "1998.03.14"]
+[EventType "tourn"]
+[EventRounds "15"]
+[EventCountry "YUG"]
+[EventCategory "10"]
+[SourceTitle "CBM 064"]
+[Source "ChessBase"]
+[SourceDate "1998.06.02"]
+[SourceVersion "1"]
+[SourceVersionDate "1998.06.02"]
+[SourceQuality "1"]
+
+{[%mdl 8192] Çok net olan başka bir örneğe bakalım. Bu pozisyon ilk
+bakışta Beyaz için oldukça sağlam görünüyor - hiçbir şey olmuyormuş gibi
+duruyor. **Beyaz'ın c3'teki fili çok güçlü.** Peki Siyah bu konuda ne
+yapar? } 17... Bxf3 18. Qxf3 Qxf3 19. gxf3 { Hem vezirler hem at kalkıyor
+ve - önemli olan - Beyaz'ın atıyla değişilen *Siyah'ın* fili, Beyaz'ın
+fili değil. Geriye, Beyaz'ın filinin tahtada
+kalan tek hafif taş olduğu temiz bir **fil (Beyaz) - at (Siyah)**
+oyunsonu kalıyor. } Rfd8 { Hâlâ somut bir şey yok. }
+20. Re4 { Çok güçlü bir hamle - kale dördüncü yatayda ikamet ediyor. }
+f6 { Siyah'ın hiçbir yerden uydurduğu bir hamle değil bu; daha önce
+oynayamamıştı sadece, burada nihayet uygun hale geliyor. }
+21. a4 { Beyaz'ın şimdi vezir kanadında genişlemesi gerekiyor, Siyah
+c6-atını daha aktif bir mevkiye yönlendirip gerçek karşı oyun yaratma
+şansı bulmadan önce. } Rd5 22. a5 (22. b4) { Bence 22.a5 aslında bir
+hata. }
+22... a6 23. h4 Kf7 24. Kg2 Rad8 25. Kh3 h5 { Ve şimdi Beyaz koyu bir
+karede başka bir piyon sabitliyor.
+
+Beyaz tam da burada **Capablanca'nın kuralını** bozmaya başlıyor: a5 ve
+h4 ile kendi piyonlarını kendi filinin aynı renkteki (her ikisi de koyu
+kare) karelerine yerleştiriyor - yani kendi taşının hareket kabiliyetini
+kısıtlıyor. Bu kuralın ciddi bir ihlali; gördüğümüz gibi cezasını
+çekiyor. } 26. Rf4 { Yine, çok önemli bir hamle. } R8d7 { Çok sık
+görülen bir hamle türü - üst düzey oyuncular gerçek bir saldırı planına
+başlamadan önce profilaktik, önleyici tedbirler almaları gerektiğini
+bilirler. } 27. Rc4 Rf5 28. Kg2 Rd3 29. f4
+{[%csl Ra5,Rb2,Rf2,Rf4,Rh4]}
+{ Şimdi bakın: Beyaz'ın piyonlarının neredeyse tamamı, kendi filinin
+aynı renginde koyu karelere güzel bir şekilde yerleşti. Bu, tam da bu
+piyon hamlelerini kışkırtarak *Siyah'ın yardımıyla* oldu; şimdi teknik
+prosedür çok kolaylaşıyor: özellikle f3-piyonu asılı; Siyah'ın bütün
+fikri de Beyaz'ın piyonlarını bu koyu karelerde sabitlemeye devam etmek. }
+Rfd5 30. Re1 Rd7 { Kale yedinci yataya dönüyor. Pasif görünüyor, ama
+değil - kalenin yedinci yatayı kontrol etmesi gerekiyor. }
+31. Re3 R3d5 32. Ra4 Ne7 { Şimdi zamanı geldi - atın zamanı! Tahtada
+artık sadece atın saldırabileceği zayıflıklar var. } 33. Rc4 Nf5
+34. Rh3 Rd1 35. Rc5 Kg6 { f5'teki at artık tamamen güvende; ona
+saldırmak basitçe mümkün değil. }
+36. Kh2 Rf1 37. Kg2 Rdd1 { Siyah kaleleri birinci yatayda çiftliyor. }
+38. Rc7 $2 { Sonunda Beyaz bir şeye saldırmayı başarıyor - ve kutluyor.
+Ama bu bir hata. } (38. Rh2 Rg1+ 39. Kf3 Rg4 40. Rc7 $17) 38... Rg1+
+39. Kh2 Rh1+ 40. Kg2 Rdg1+ 41. Kf3 { Ve aniden Beyaz teslim oluyor: şah
+f3'e zorlandıktan sonra Beyaz basitçe kaleyi kaybediyor. } Rxh3+ { Çok
+etkileyici bir parti. Elbette Beyaz burada gerçek hatalar yaptı, her
+şeyden önce Capablanca'nın kuralına dikkat etmeyerek. } 0-1
 </pgn>
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-5/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">05</span> Kapalı Pozisyonlarda Duble Piyonlar</span> <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">05</span> Modern Bir Ustalık Dersi</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

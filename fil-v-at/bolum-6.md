@@ -3,7 +3,7 @@ layout: post
 title: "♗⚔️♘ fil v. at 06"
 author: "Adrian Mikailchishin"
 section: "Teori"
-event: "Fil - At Mücadelesi · 12 Parti"
+event: "Fil - At Mücadelesi · 13 Parti"
 date: 2026-07-26
 permalink: /posts/fil-v-at/bolum-6/
 ---
@@ -12,74 +12,127 @@ permalink: /posts/fil-v-at/bolum-6/
 
 {% include chapter-toc.html dataset="fil_v_at_toc" %}
 
-## <span class="chapter-num">06</span> ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı
+## <span class="chapter-num">06</span> Kapalı Pozisyonlarda Duble Piyonlar
+
+Yine söyleyelim: duble piyonlar son derece dikkatli olmak için büyük bir
+sebeptir, çünkü bu tür durumlarda atın gücü muazzam hale gelir - pozisyonun
+açık ya da kapalı olması bile önemli değildir. Kapalı bir pozisyonda
+aslında daha da kötüdür.
 
 <pgn>
-[Event "Skopje (ol) 14/34"]
-[Site "Skopje (ol) 14/34"]
-[Date "1972.??.??"]
+[Event "London (m/3)"]
+[Site "London"]
+[Date "1991.??.??"]
 [Round "?"]
-[White "Petrosian, T."]
-[Black "Schmidt, Wl"]
+[White "Speelman, J."]
+[Black "Short, N."]
 [Result "1-0"]
-[ECO "A16"]
-[Annotator "Djurasevic,B"]
+[ECO "D85"]
+[WhiteElo "2610"]
+[BlackElo "2635"]
+[Annotator "Speelman,J"]
 [SetUp "1"]
-[FEN "r1bqk2r/ppp1ppbp/1nn3p1/8/8/2NPB1P1/PP2PPBP/R2QK1NR w KQkq - 0 8"]
-[PlyCount "61"]
-[EventDate "1972.??.??"]
+[FEN "2r2r1k/pp2p1bp/6p1/8/3P4/4BN2/P1nK1PPP/2RR4 b - - 0 20"]
+[PlyCount "48"]
+[EventDate "1991.??.??"]
+[EventType "game"]
+[EventCountry "ENG"]
 
-{ Şimdi başka bir dünya şampiyonunun aynı türden bir planı nasıl
-yürüttüğünü görelim - **Petrosyan'a karşı Schmidt**. Bu tür bir
-pozisyonda *Bxc6+* çok tipik bir hamledir. Siyah için gerçek bir kâbus
-planı: Beyaz'ın kendi şah kanadı zayıflarken, hafif karelerde olası
-sorunlarla birlikte Siyah'ın sadece duble piyona sahip olacağı görünüyor
-- ama gerçekte hiç öyle değil. }
-8. Bxc6+ $1 $16 bxc6 9. Qc1 { Çok akıllıca bir hamle - koyu kareli
-filleri de değişmek çok faydalı hale geliyor, ardından Beyaz
-basitçe kaleyi c1'e, atı f3'e getirip oyunu kolayca kendi lehine
-çeviriyor. } h6 (9... O-O 10. Bh6 $16) 10. Nf3 Bh3 11. Rg1 {
-[%cal Gg3g4,Gg1g3]} { Fantastik bir hamle - Beyaz *g4* ve ardından
-*Rg3* ile file saldırmakla tehdit ediyor. } Bg4 12. Nd2 Nd5 13. Nxd5 {
-*Bc5!?* burada da oldukça mümkündü, hatta belki daha da güçlüydü, ama
-Beyaz o kararı almadı, bunun yerine bu yolu seçti. } (13. Bc5 $5 {#C5
-#CCa3, #CDa4, #CAc5, #CBc1}) 13... cxd5 14. Nb3 Qd6 { Ve şimdi Beyaz
-koyu karelerdeki zayıflıkları kullanmaya başlıyor. } 15. f3 Bd7
-{[%cal Ge7e5]} 16. d4 $1 { Beyaz elbette *...e5*'i durdurmak zorunda,
-çünkü Siyah güçlü bir merkezi inisiyatif ele geçirmek istiyor. } Rb8 $2
-{ Burada daha iyisi *...h5* olurdu - gerçi ondan sonra bile Beyaz'ın
-avantajı hâlâ oldukça açık olurdu; Beyaz basitçe *Bf4* gibi bir hamleyle
-büyük bir pozisyonel avantaj elde edebilirdi. } (16... h5 $142 17. Kf2
-e5) (16... h5 17. Bf4) 17.
-Kf2 h5 18. Bf4 e5 19. dxe5 Bxe5 { (Bunun yerine piyonla geri almak
-g-dosyası boyunca sorunlar bırakırdı.) } 20. Qe3 $18 f6 21. Qxa7 { Beyaz
-bir piyon kapıyor. } O-O { Siyah sonunda rok yapmayı başarıyor. }
-22. Rac1 Rfe8
-23. Bxe5 Qxe5 (23... fxe5 24. Qxc7 $18) { Elbette c7-piyonu asılı;
-Siyah bunun yerine *...Rbc8* deneseydi, o zaman *Qd4* fazla piyonu ve
-daha da iyi bir pozisyonu korurdu, bu yüzden Siyah bunun yerine
-*...Ra8* deniyor. } 24. Rge1 Ra8 (24... Rbc8 25. Qd4) 25. Qxc7 Qe3+
-26. Kg2 Ra7
-27. Qd6 { Pozisyon basitçe Beyaz'ın lehine açılıyor - Siyah'ta gerçek bir
-karşı şans kalmadı. } h4 28. gxh4 Be6 29. Rc3 Qh6 30. a3 Rd7 31. Qg3 {
-Şimdi Siyah'ın bütün piyonları saldırı altına giriyor. } d4 32. Rd3 Bxb3
-33. Rxb3 Qd2 34. Kf1 $1 { Şah için koruyucu bir hamle. } Kh7 35. Rb8 Re5
-36. Qg4 f5 37. Qg5 Re3 38. Qf6 { Ve şimdi çok tatsız bir mat tehdidi var:
-Siyah teslim oldu, çünkü *Qf6, ...Rg7, Qf8* sonrasında Beyaz'ın
-saldırısı basitçe kesin. (38. Qf6 Rg7 39. Qf8) }  1-0
+{ Genel olarak konuşmak gerekirse, üst düzey büyükustalar arasında bile
+inanılmaz miktarda hata var - yani karar verme hataları: ne yanlış, ne
+doğru, ne alınmalı, ne alınmamalı. Şu **Adaylar maçı, Londra 1991**'e,
+bir **Grünfeld Savunması**'na (Değişim Varyantı) bakalım. Beyaz biraz
+daha iyi; Siyah'ın e7'deki piyonu biraz garip görünüyor - Beyaz saldırma
+fırsatı bulursa diye bir zayıflık diyebiliriz, gerçi şu an büyük bir
+mesele değil.
+
+Siyah c2'deki atla ne yapmalı? Üç seçenek var: *...Ne3*, *...Na3* ya da
+*...Nb4*. En iyi hamle atı hiç değişmemek, bunun yerine onu
+güçlü c4-karesine yönlendirmeye çalışmak olurdu. }
+20... Nxe3 $4 { Bunun yerine en iyi deneme *...Na3* ardından *...b5*
+olurdu; Beyaz *Ne5!?* denerse *...Bxe5, dxe5* ve at yine güzel bir
+şekilde c4'e iniyor - güçlü yerleşmiş, c-dosyasını kontrol ediyor,
+ardından da *...Rd8* geliyor. Daha ne isteyebilirsin? Bu doğru karar
+olurdu. } (20... Na3 $1 21. Kd3 b5 22. Ne5 $5 Bxe5 23. dxe5 $14 Nc4
+{[%csl Rc4,Re3,Re5]}) 21. fxe3 { Bunun yerine Siyah e3'ü aldı - bunun
+nesi yanlış? Piyon basitçe geri alıyor. } Kg8
+(21... Rfd8 22. Ng5 $1 {[%cal Rg5e6]} { e6'ya yönelen ve Siyah'ın
+pozisyonunu sıkıştıran tatsız bir hamle. } (22. Kd3 e5 $1)) { Şimdi şahı
+oyuna sokmak gerekiyor. } 22. Kd3 Bf6 23. Ke4 Kf7 { Şimdi başka bir
+değerlendirme: Beyaz'ın yapısı biraz daha iyi - tam olarak
+Capablanca'nın kuralına göre, Siyah'ın filinin rengindeki karelerde
+güçlü bir merkezi oluşum var. Siyah'ın biraz zayıflığı var, ama şahının
+konumunu iyileştirip basitçe tutunmak istiyor; henüz büyük bir sorun
+yok gibi görünüyor.
+
+Peki Beyaz'ın planı ne? Beyaz bir zayıflık yaratmak zorunda, tek gerçek
+şans da vezir kanadında atı c5'e yönlendirmek. *Doğru* yol **24.Ne1!**
+idi, ardından *...Ke6, Nd3*, gerçek bir tehdit olarak *Nc5+* fikriyle -
+teknik için nota bakın. }
+24. Ne5+ $2 { Ama bunun yerine Beyaz bunu bu kadar yavaş yapmamaya karar
+verdi - "şahla yapalım, çünkü şah her zaman işleri hızlandırıyormuş gibi
+hissettirir" - ne var ki bu hamle Siyah'a e5'i alma imkânı veriyor. }
+(24. Ne1 $1 Ke6 25. Nd3) 24... Ke6 $2 { Siyah bunun yerine e5'i almış
+olsaydı - *...Bxe5, Kxe5* - o zaman *...Rfd8!* güçlü olurdu, ve *d5, Ke8,
+Rxc8??* (gerçek hata) sonrasında Siyah geri alır, aniden *...Rc4!* siyah
+kaleyi çok tatsız bir tehditle etkinleştirir: *Re4* basitçe matla tehdit
+eder! Yani Siyah o kale oyunsonunda hiç kötü olmazdı; Beyaz'ın *d5*'i
+aslında orada hata olurdu, Beyaz'a gerçek bir avantaj sağlamadan. Çok
+garip: bir üst düzey oyuncu fillerin değişimini hafife alıyor, diğeri
+ise ortaya çıkan kale oyunsonunun tehlikesini abartıyor. }
+(24... Bxe5 25. Kxe5 Rfd8 $1 {Short,N; /\} 26. d5 Ke8 27. Rxc8 $2 Rxc8
+28. Ke6 Rc4 $1 (28... Rd8)) { Ama Siyah e5'i almadı - inanabiliyor
+musunuz? Bunun yerine ...Ke6 oynadı. } 25. Nd3 { c5 üzerinden
+yönlenmekle tehdit ediyor. } Kd6 { Şimdi bir zayıflık yaratmak gerekiyor,
+çünkü sadece bir zayıflığa saldırabilirsin, bütün plan da buna
+dayanmalı. İşte **azınlık piyon yapısının bir çoğunluğa nasıl
+saldırabileceğinin** çok güzel bir örneği. } 26. a4 $1
+{[%csl Rc1][%cal Ra4a5,Rc1b1]} { Fikir *a5*, sonra *Rb1*, b7'ye vurmak,
+sonra da *Nc5* - çok basit bir teknik. }
+b6 { Siyah *...b6* oynarsa, sonunda b6'da bir zayıflık olacak. }
+27. a5 $1 { Beyaz ona saldırmaya hazır. } Rxc1 $5 (27...
+bxa5 28. Nc5 {[%csl Ga7][%cal Rc1a1,Ra1a5]} { Bunun yerine *...bxa5*
+olsaydı, o zaman *Nc5*, sonunda *Rc1-a1* a5-piyonunu kazanır, ama
+zayıflık bu sefer basitçe a7'de son bulur - Beyaz da ona saldırır. })
+{ Yani bu, bir zayıflık yaratmanın basit, adım adım süreci: önce
+*Ne1-d3-c5*'in b6/b7'de bir zayıflık yarattığını fark et, sonra
+*a4-a5* başka bir tane yaratır, en sonunda da ona saldırırsın. Bütün
+süreci burada görebilirsiniz; f6'daki filin de bütün bu süre boyunca ne
+kadar tamamen statik bir rol oynadığına dikkat edin. } 28. Rxc1 Rb8
+29. axb6 (29. a6 $5 {[%cal Gd3b4]} { Burada iki seçenek vardı - a6 çok
+tipik olurdu, *Nb4, Rc6* ile devam edip a7'ye ulaşmaya çalışarak: Siyah
+için çok tatsız, iyi şanslara sahip standart bir plan. } ) { Ama Speelman
+daha hızlı yolu almaya karar verdi: basitçe b6'yı aldı. } 29... axb6
+{ Şimdi zayıflık net. } 30. Nb4 e6
+31. Rc6+ Kd7 32. d5 $5 { Süreci burada görüyorsunuz - az önce baktığımız
+Karpov partisine çok benzeyen inanılmaz bir süreç: Beyaz'ın taşları
+Siyah'ı tahtadan itmeye devam ediyor, Siyah da gerçek bir sorun içinde. }
+Re8 $5 (32... exd5+ $6 33. Kxd5 Be7 34. Nd3 Rd8 35. Ne5+ Ke8+ 36. Ke6)
+33. Rxb6 exd5+ 34. Kd3 Be5 35. h3 { Bu, Siyah'ın son denemesi olarak
+gerekliydi - bu tür bir oyunsonunda acı çekmeye devam etmek için son bir
+şans. Böyle bir acı çekmek gayet iyi; pozisyon muhtemelen Beyaz için
+kazanan, bence çok iyi şanslar var, gerçi %100 kesin değil. Ama Siyah
+muhtemelen mücadele edecek gerçek bir pratik şans kalmadığını hissetti.
+Objektif olarak kayıp olsun ya da olmasın, bazen sadece içinde
+bulunduğun pozisyonu kabul etmen gerekir. } Bc7 $2 (35... Rb8 $1
+$16 36. Rxb8 Bxb8 37. Nxd5) 36. Rf6 Re5 37. Rf7+ Kd6 38. Rxh7 Bb6 39. Nc2
+Re6 40. Rf7 { Kalenin f6'ya geri dönmesine izin vermiyor. } Ke5 41. Nd4
+$18 Rf6 (41... Bxd4 42. exd4+ Kd6 43. Ra7 $1 {[%cal Ga7a6]} { Şimdi kale
+oyunsonu basitçe kayıp - *...Bxd4, exd4+* sonrasında, aniden *Ra7*
+ardından gelen *Ra6* kaleleri değiştirir ve rakibin oyununu kolaylıkla
+kazanır. }) 42. Nf3+ Ke6
+43. Rg7 Bd8 44. Ke2 $1 {[%cal Gg2g4] /\ g4-g5} { Çok güçlü, profilaktik
+bir hamle - şah sanki merkezde iyi yerleşmiş gibi görünüyor, ama burada
+aslında f3'teki atı korumak için daha faydalı. *Ke2*'den sonra
+*g4-g5*'e karşı kalan bir savunma yok; Siyah teslim oldu. }
+(44. Ke2 Kd6 45. g4 Kc5 46. Ne5 $1 Re6 47. Nd3+ Kc4 48. Rxg6
+$1) (44. Nh4 $2 Rf2 45. Rxg6+ Kf7 $1) (44. Ng5+ Kf5 45. Nf7 Ba5 $1
+(45... Be7 $2 46. Nh6+ Ke6 47. Rxe7+) 46. g4+ Ke6 47. Nh8 Rf2 $1) 1-0
 </pgn>
-
-Böyle bir fil değişimiyle rakibin c-piyonlarında duble piyon yaratmak
-türünden bir strateji, ister c3'te ister c6'da olsun, İngiliz
-Savunması'na ya da Sicilya Savunması'na benzer birçok pozisyonda çok
-yaygın hale geldi. Bir kez daha genel kuralı vurgulamak istiyorum:
-rakibin pozisyonunda duble piyon olduğunda at daha iyidir. Bu tür durumlarda pozisyonu her zaman
-kendi lehinize değerlendirebilir, atın file karşı avantajını teknik
-olarak kullanabilirsiniz.
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-7/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">07</span> Atı Manevra Ettirmek</span> <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">07</span> ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
