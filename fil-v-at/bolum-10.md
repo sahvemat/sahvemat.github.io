@@ -3,7 +3,7 @@ layout: post
 title: "♗⚔️♘ fil v. at 10"
 author: "Adrian Mikailchishin"
 section: "Teori"
-event: "Fil - At Mücadelesi · 12 Parti"
+event: "Fil - At Mücadelesi · 13 Parti"
 date: 2026-07-26
 permalink: /posts/fil-v-at/bolum-10/
 ---
@@ -12,79 +12,83 @@ permalink: /posts/fil-v-at/bolum-10/
 
 {% include chapter-toc.html dataset="fil_v_at_toc" %}
 
-## <span class="chapter-num">10</span> Modern Bir Örnek Olay
+## <span class="chapter-num">10</span> Simetri Duble Piyonlarla Buluştuğunda
 
 <pgn>
-[Event "Bundesliga 2008-9"]
-[Site "Bremen GER"]
-[Date "2008.10.05"]
-[Round "2"]
-[White "Maksimenko, A."]
-[Black "Eljanov, P."]
+[Event "URS-ch37"]
+[Site "Moscow"]
+[Date "1969.09.14"]
+[Round "6"]
+[White "Smyslov, Vassily"]
+[Black "Tal, Mihail"]
 [Result "1-0"]
-[ECO "E06"]
-[WhiteElo "2536"]
-[BlackElo "2720"]
+[ECO "A38"]
 [SetUp "1"]
-[FEN "r4rk1/pp3ppp/2n1bq2/8/2P2Q1N/3p2P1/PP3PBP/R3R1K1 w - - 2 19"]
-[PlyCount "33"]
-[EventDate "2008.10.03"]
-[EventType "team-tourn"]
-[EventRounds "15"]
-[EventCountry "GER"]
-[SourceTitle "The Week in Chess 726"]
-[Source "Mark Crowther"]
-[SourceDate "2008.10.06"]
+[FEN "r4rk1/pp2pp1p/2n3p1/2p2b2/8/1PP2NP1/P3PPBP/R2R2K1 w - - 1 13"]
+[PlyCount "59"]
+[EventDate "1969.09.??"]
+[EventType "tourn"]
+[EventRounds "22"]
+[EventCountry "URS"]
+[SourceTitle "URS-ch"]
+[Source "ChessBase"]
+[SourceDate "1999.07.01"]
 [SourceVersion "1"]
-[SourceVersionDate "2008.10.06"]
-[SourceQuality "2"]
+[SourceVersionDate "1999.07.01"]
+[SourceQuality "1"]
 
-{ Şimdi daha modern bir örneğe bakalım: **Maksimenko - Eljanov**. Burada
-Siyah'ın ciddi bir karşı oyunu var - Siyah'ın *...Rd8* oynayıp
-d-piyonunu ilerleteceği, bir noktada kendi geçit piyonunu olabildiğince
-hızlı terfi ettirmek için *...Nd4* ya da *...Nb4* deneyeceği görünüyor.
-Ama böyle bir acele çoğu zaman pozisyonda kendi sorununu doğurur - bu
-partide olan da tam olarak bu. Büyükusta Maksimenko, o dönemde dünyanın
-en iyi on beş oyuncusundan biri olan Eljanov'dan biraz daha zayıf bir
-oyuncu. }
-19. Qxf6 gxf6 20. Bxc6 {
-Ve şimdi Beyaz kendi filini Siyah'ın kalan atıyla değişip Siyah
-için duble piyon yaratıyor - böyle bir pozisyondan çıkarılması gereken
-çok önemli, neredeyse otomatik bir bilgi bu. } bxc6 { At bu şekilde
-ortadan kaldırılıyor, Siyah'a da duble c-piyonu kalıyor.
-
-Evet, Beyaz'ın kendi açık kareleri şimdi biraz zayıf, ama bu hiç önemli
-değil. Tehdit çok basit: *Rd1*, sonra sonunda *Rxd3*; böylece Siyah'ın
-uzun süredir ilerlemiş geçit d3-piyonu ve onunla birlikte oyun
-kazanılır. }
-21. b3 Rfd8 22. Rad1 { Yani Siyah *...Rfd8* deniyor, Beyaz da *Rad1*
-ile cevap veriyor. Siyah'ın karşı oyunu için tek gerçek şans bir piyonu
-değişip kaleyle ikinci yataya nüfuz etmeye çalışmak - çok
-tipik bir savunma kaynağı bu, Siyah da tam olarak bu planı uygulamaya
-çalışıyor. } a5 23. Re3 a4 24. Rexd3 Rxd3 25. Rxd3 axb3 26. axb3 {
-Beyaz'ın planı şimdi *Kg2, Kf3* ve devamı: şah e3'e kadar yürüyüp
-sonunda zayıf c-piyonuna saldırmak için d4 ve c5'e doğru ilerliyor. }
-Bh3 { Siyah taşları koordine etmeye çalışıyor, bir mat tehdidi
-yaratıyor, } 27. f3 { Beyaz da karşılık olarak f3 oynamak zorunda. }
-Ra1+ { Belki *...Ra2* burada daha güçlü olurdu - Beyaz'ın şahının
-etkinleşmesini durdurma fikriyle. O durumda Beyaz, Siyah'ın filine
-saldıran *f4* fikriyle *g4* ile cevap verirdi, yine de tam kazanma
-şansını koruyarak. } (27... Ra2
-28. g4 {[%cal Gf3f4,Gd3g3]}) 28. Kf2 Ra2+ 29. Ke3 Rxh2 { Yani bunun
-yerine *...Ra1+* oynandı, *Kf2* ile karşılandı, Siyah da h2-piyonunu
-kapıyor - karşılığında çok az bir şey için inisiyatifin bir kısmını
-etkin bir şekilde geri veriyor. Bu noktada pozisyonun en önemli özelliği
-c6-piyonunun zayıflığı ve Beyaz'ın şahının etkinliği olarak kalıyor. }
-30. Kd4 Be6 31. Kc5 f5 {[%cal Gf5f4]} { Bir taktik kaynak için deniyor,
-ama yine de Beyaz tarafından çürütülüyor. } 32. f4 Kg7 33. Kxc6 Kh6
-34. Nf3 Rb2 35.
-Nd4 { *Re3* ya da *Kc5-b4-b5* gibi başka tehditler de var - böyle ezici
-bir avantajla sonuç açık. Siyah teslim oldu. } 1-0
+{ Bir üst düzey
+parti daha - ve bir yanlış karar daha, bu sefer **Tal**'e karşı. Burada
+Beyaz açıkça daha iyi: kale d1'de, Beyaz'ın kalan fili de (g2 fianşetto
+fili) uzun diyagonalde güzel bir şekilde yerleşmiş. Ama Siyah kendi
+filine daha iyi baksaydı hâlâ eşitlemeye çalışabilirdi - Siyah'ın fili
+henüz çok aktif değil. }
+13. Nh4 {[%cal Gg2c6]} Be6 $2 { Tal burada pozisyonu yanlış değerlendirdi. }
+(13... Rfd8 $1 { Doğru prosedür. } 14. Nxf5 gxf5 15. e3 e6 16. Kf1 Kf8
+17. Ke2 Ke7 { hafifçe daha kötü bir oyunsonu tutulabilir - ve burada,
+olası bir Bxc6 Siyah için neredeyse hiç zararlı olmazdı, çünkü Beyaz'ın
+Siyah'ın piyonlarına saldırması aslında çok zor olurdu. }) 14. Bxc6
+{ Ama bunun yerine Siyah *...Be6* oynadı, şimdi olana bakın: } bxc6
+15. Nf3 { at zaten e5'e göz dikmiş. } f6 (15... Bg4 16. Ne5 Bxe2 17. Rd2
+Bb5 18. c4 Ba6 19. Nxc6 {
+[%csl Ga7,Ge7][%cal Gd2d7] Siyah bunun yerine burada *...Bg4* oynasaydı,
+*Ne5, Bxe2, Rd2, Bb5, c4, Ba6* ve *Nxc6* sonrasında Beyaz'ın pozisyonu
+kazanan olurdu: Siyah'a iki çok tatsız zayıflık kalırdı, üstelik Beyaz'ın
+kalesi yedinci yataya nüfuz ederdi. }) { Yani Siyah bunun yerine *...f6*
+oynuyor, atı durduruyor. } 16. Nd2 { Ve atın konumunu sürekli
+değiştirdiğini, hep değiştirdiğini görüyorsunuz - artık e5 üzerinden
+gelemiyor, bu yüzden e4 üzerinden gelecek. } Rfd8 17. Ne4 c4 18. Nc5 Bf5
+19. f3 {[%cal Ge2e4,Gg1e3]} { Beyaz'ın planı her şeyi Capablanca'nın
+kuralına göre doğru renge koymak, sonra da şahı oyuna sokmak. } Bc2 {
+Yani Siyah bunu deniyor, dosya için mücadele ediyor. } 20. Rxd8+ Rxd8
+21. Kf2 { [%cal Ga1c1]} { Tehdit basitçe *Rc1*. } Kf7 22. b4 Bf5 23. Ke1
+{ Ve şimdi Siyah'ın kalesi kontrol altında tutuluyor; ikinci yatay bu
+sefer şahın kendisi tarafından korunuyor - tıpkı diğer örneklerde bir
+kale tarafından korunduğunu gördüğümüz gibi - böylece gerçek saldırıya
+başlamak mümkün hale geliyor. } e5 24. Nb7
+Rd7 { Siyah'ın kalan iki piyonuna da çifte saldırı - gerçi elbette daha
+önemlisi c5'e düşen. } 25. Na5 c5
+26. bxc5 Rd5 27. Nb7 Rd7 28. Nd6+ Ke7 { Buradan kazanmak hâlâ o kadar
+kolay değil - Beyaz'ın başka bir piyon kazanması gerekiyor. Yani açık
+dosyaya yönelip kaleyi etkinleştirmek, bunun için de önce Siyah'ın çok
+tatsız filini uzaklaştırmak gerekiyor. } 29. g4 Be6 30. Rb1
+Rc7 31. Rb7 Rxb7 32. Nxb7 Kd7 33. Nd6 h6 34. Kf2 Kc6 35. Ke3 a5 (35... Kxc5
+36. Ne4+ { Bu çifte saldırı yüzünden c5'i hemen almak işe yaramıyor.}) 36.
+Ne8 f5 37. Ng7 Bd7 38. gxf5 gxf5 39. f4 {[%cal Ge5e4]} { Çok güçlü bir
+hamle - şimdi *...e4* olursa, o zaman *Kd4*, sonunda şah e5'e yürür, at
+e5'e gelir, Beyaz da kolayca kazanır. } Kd5 (39... e4 40. Kd4)
+40. c6 Bc8 41. c7 Kd6 42. h4 { Siyah'ın hamlesi kalmıyor, teslim
+oluyor. } 1-0
 </pgn>
+
+Yani bu partide yanlış karar, esasen, kendi filinin değişimini
+*önlememesiydi*: Tal, ortaya çıkan duble piyonlu ata karşı fil
+pozisyonundan uzak durmayı başaramadı. Tal kadar büyük bir oyuncu bile
+bu tür bir pozisyonu anlamakta zorlanabiliyordu.
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-11/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">11</span> Uzun Teknik</span> <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">11</span> Modern Bir Örnek Olay</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

@@ -3,7 +3,7 @@ layout: post
 title: "♗⚔️♘ fil v. at 07"
 author: "Adrian Mikailchishin"
 section: "Teori"
-event: "Fil - At Mücadelesi · 12 Parti"
+event: "Fil - At Mücadelesi · 13 Parti"
 date: 2026-07-26
 permalink: /posts/fil-v-at/bolum-7/
 ---
@@ -12,101 +12,74 @@ permalink: /posts/fil-v-at/bolum-7/
 
 {% include chapter-toc.html dataset="fil_v_at_toc" %}
 
-## <span class="chapter-num">07</span> Atı Manevra Ettirmek
+## <span class="chapter-num">07</span> ♗<span class="notation-case">xc6</span> Duble Piyon Kalıbı
 
 <pgn>
-[Event "Manila (izt)"]
-[Site "Manila"]
-[Date "1990.??.??"]
+[Event "Skopje (ol) 14/34"]
+[Site "Skopje (ol) 14/34"]
+[Date "1972.??.??"]
 [Round "?"]
-[White "Gurevich, M."]
-[Black "Short, N."]
-[Result "0-1"]
-[ECO "C01"]
-[WhiteElo "2640"]
-[BlackElo "2610"]
-[Annotator "Short,N"]
+[White "Petrosian, T."]
+[Black "Schmidt, Wl"]
+[Result "1-0"]
+[ECO "A16"]
+[Annotator "Djurasevic,B"]
 [SetUp "1"]
-[FEN "rn1qr1k1/ppp1nppp/3b4/3pN3/3P1BQ1/7P/PPP2PP1/RN3RK1 b - - 6 11"]
-[PlyCount "65"]
-[EventDate "1990.??.??"]
-[EventType "swiss"]
-[EventCountry "PHI"]
-[SourceTitle "EXT 1998"]
-[Source "ChessBase"]
-[SourceDate "1997.11.17"]
-[SourceVersion "1"]
-[SourceVersionDate "1997.11.17"]
-[SourceQuality "1"]
+[FEN "r1bqk2r/ppp1ppbp/1nn3p1/8/8/2NPB1P1/PP2PPBP/R2QK1NR w KQkq - 0 8"]
+[PlyCount "61"]
+[EventDate "1972.??.??"]
 
-{ Başka güzel bir stratejiye bakalım: ata karşı fil. Bu, **Gurevich -
-Short** partisiydi, Manila Ara Bölge Turnuvası - Siyah bu partiyi
-kazanmak zorundaydı. Beyaz'ın tercihi bir **Fransız Değişim** idi, ve
-böyle bir pozisyondan Beyaz'ın beraberliğe ulaşması çok kolay
-görünüyor. }
-11... Bxe5 $1 {
-İlk adım: atı ortadan kaldırmak. } 12. Bxe5 Ng6 $15 13. Bg3 Nd7
-14. Nd2 Nf6 15. Qf3 c6 {/\ 16... Qb6 17. Nb3 Ne4} 16. Qb3 Qb6 17. Qxb6
-axb6 { Ve burada pozisyon Beyaz için oldukça basit görünüyor. } 18. a3 {
-Beyaz pasif bir hamle oynuyor. En azından biraz inisiyatif ve zayıflık
-yaratmaya çalışarak *a4* oynamak daha iyi olurdu - belki *Nb3*, sonra
-*a5*, pozisyonda bazı delikler açmak için, dediğimiz gibi pozisyonu
-"peynirli" hale getirmek için. } (18. a4 $1 {><b6} Ne4 (18... Re2
-19. Rfd1 Ne4 20. Nxe4 dxe4 21. Rac1 {/\ Kf1}) 19. Nxe4 Rxe4 20. c3 $15)
-18... Ne4 $1 (18... Nh5 19. Bc7 Nhf4 (19... b5 20. Rfe1 Nhf4 21. Bxf4
-Nxf4 22. Kf1 g5 $15) 20. Bxb6 Ra6 21. Bc5 b6 22. Bd6 Ne2+ 23. Kh1 Nxd4
-24. c4 $5 $13) 19. Nxe4 Rxe4 { Bunun Siyah için iyi olması gerektiği
-görünüyor, ama *tam olarak nasıl* atın avantajını kullanmaya devam
-edecek? Her şeyden önce, fil boş - gerçekte ne yapabilir ki? Belki c7 ya
-da b6'ya oturur, bu bile bir hayal olurdu. Buna karşılık atın bütün
-tekniği ve işlevi, **kareleri sürekli değiştirmek**, farklı zamanlarda
-farklı konumlardan farklı açılardan saldırmaktır - atın gerçek gücü
-budur. Şunu her zaman hatırlayın: teknik olarak, at konumunu sürekli
-değiştirirken saldırmak zorundadır. Bunun nasıl işlediğini görelim. }
-20. Rfd1 b5 21.
-Kf1 f6 22. f3 Re6 23. Re1 { Pozisyonun normal bir iyileştirmesi. } Kf7
-24. Rxe6 Kxe6 25. Re1+ (25. Be1 $5 {/\ Bb4}) Kd7 26. Ke2 $6 { Belki
-burada vezir kanadında gerçek tehditler yaratmaya çalışan aktif
-hamleler yapmak gerekiyordu, ya da e6'da bir kale kurmaya çalışan
-*f4-f5*. Genel olarak, pasif oyun basitçe kazandırmaz: her türlü
-pasiflikten herhangi bir gerçek plan daha iyidir. } (26. Bh2 $1
-{/\} h5 27. g4) (26. Bf2 {/\} h5 27. g4) 26... h5 $1 $17 27. Kd3 h4 {
-Capablanca'nın kuralını takip ederek: piyonlar (koyu kareli) filin
-rengine iniyor. } 28. Bh2 Ne7 29. Bf4 Nf5 30. Bd2 b6 31. Re2 (31. Bb4 Rc8
-{(/\ c5)} 32. Re2 c5 33. Bc3 Ra8 {/\ Ra4}) 31... c5 { Her şey koyu
-karelere inmeye devam ediyor - inanılmaz - d5-piyonu dışında, bütün
-pozisyondaki kilit piyon. } 32. Be3 { Peki Beyaz ne oynamak zorunda?
-*Be3*, d4-piyonunu koruyor. } b4 $1 { Ve aniden Siyah *...b4* oynuyor:
-bir piyon fedası! Şimdi *dxc5* olursa, *...bxa3, bxa3* ve a3'teki
-değişimlerden sonra piyon kazanan bir pozisyonla geri geliyor. } (32...
-Kc6 33. Bf2 {/\ Re6<=>}) 33. axb4 { Yani Beyaz bunun yerine *axb4*
-deniyor. } (33. dxc5 bxa3 34. bxa3 Rxa3+ $19) 33... c4+ 34. Kc3 { Şimdi
-her şey koyu karelere takılı kalmış durumda. } (34. Kd2 Ra2 35. Kc1
-Ra1+ 36. Kd2 Rb1 37. Kc3 Nd6) 34... Nd6 { Ve şimdi at d6'ya geliyor -
-korkunç bir tehdit. } 35. Re1 (35. b3 Ra2 {/\ Nb5} 36. bxc4 Ra3+ $19) {
-Nokta *...Nb5+* - ve bütün bunlar boyunca Beyaz'ın filinin konumuna
-bakın: basitçe berbat. } 35... Ra4 36. Kd2 (36. Rb1 $5 Nb5+ 37. Kd2
-Rxb4 38. b3 {/\ } Na3 39. Kc3) 36... Rxb4 37. Ra1 Rxb2 $19 { Ve aniden
-Siyah'ın fazla bir piyonu var. } 38. Ra7+ Ke6 39. Rxg7 { Beyaz şah çekip
-kaleyi etkinleştirmeyi başarıyor, ama bu etkinlik çok geç kalıyor; Beyaz
-için tehdit basitçe korkunç. } b5 40. Bf2 b4 41. Kc1 c3 {[%csl Gc2,
-Gc4][%cal Gd6d5,Gc4a3,Ga3d2]} { Atın burada ne kadar güçlü olabildiğini
-görüyorsunuz: tehdit *...Nc4*, ardından c2-piyonuna saldıran *...Na3*. }
-42. Bxh4 { Karşı oyun için son bir pratik deneme. } Nf5 { Ve şimdi at aynı
-anda birkaç yönde birden saldırıyor: d4, h4, g7 - hepsi aynı anda. }
-(42... Nf5 43. Rg4 Ne3) 43. Rh7 {[%cal Gf5e3]} Ne3 { Siyah her şeye
-saldırıyor, Beyaz da teslim oluyor: *...Ne3*'ten sonra Beyaz'ın
-pozisyonu tamamen kayıp, çünkü hem c2- hem g2-piyonları düşüyor. }
-0-1
+{ Şimdi başka bir dünya şampiyonunun aynı türden bir planı nasıl
+yürüttüğünü görelim - **Petrosyan'a karşı Schmidt**. Bu tür bir
+pozisyonda *Bxc6+* çok tipik bir hamledir. Siyah için gerçek bir kâbus
+planı: Beyaz'ın kendi şah kanadı zayıflarken, hafif karelerde olası
+sorunlarla birlikte Siyah'ın sadece duble piyona sahip olacağı görünüyor
+- ama gerçekte hiç öyle değil. }
+8. Bxc6+ $1 $16 bxc6 9. Qc1 { Çok akıllıca bir hamle - koyu kareli
+filleri de değişmek çok faydalı hale geliyor, ardından Beyaz
+basitçe kaleyi c1'e, atı f3'e getirip oyunu kolayca kendi lehine
+çeviriyor. } h6 (9... O-O 10. Bh6 $16) 10. Nf3 Bh3 11. Rg1 {
+[%cal Gg3g4,Gg1g3]} { Fantastik bir hamle - Beyaz *g4* ve ardından
+*Rg3* ile file saldırmakla tehdit ediyor. } Bg4 12. Nd2 Nd5 13. Nxd5 {
+*Bc5!?* burada da oldukça mümkündü, hatta belki daha da güçlüydü, ama
+Beyaz o kararı almadı, bunun yerine bu yolu seçti. } (13. Bc5 $5 {#C5
+#CCa3, #CDa4, #CAc5, #CBc1}) 13... cxd5 14. Nb3 Qd6 { Ve şimdi Beyaz
+koyu karelerdeki zayıflıkları kullanmaya başlıyor. } 15. f3 Bd7
+{[%cal Ge7e5]} 16. d4 $1 { Beyaz elbette *...e5*'i durdurmak zorunda,
+çünkü Siyah güçlü bir merkezi inisiyatif ele geçirmek istiyor. } Rb8 $2
+{ Burada daha iyisi *...h5* olurdu - gerçi ondan sonra bile Beyaz'ın
+avantajı hâlâ oldukça açık olurdu; Beyaz basitçe *Bf4* gibi bir hamleyle
+büyük bir pozisyonel avantaj elde edebilirdi. } (16... h5 $142 17. Kf2
+e5) (16... h5 17. Bf4) 17.
+Kf2 h5 18. Bf4 e5 19. dxe5 Bxe5 { (Bunun yerine piyonla geri almak
+g-dosyası boyunca sorunlar bırakırdı.) } 20. Qe3 $18 f6 21. Qxa7 { Beyaz
+bir piyon kapıyor. } O-O { Siyah sonunda rok yapmayı başarıyor. }
+22. Rac1 Rfe8
+23. Bxe5 Qxe5 (23... fxe5 24. Qxc7 $18) { Elbette c7-piyonu asılı;
+Siyah bunun yerine *...Rbc8* deneseydi, o zaman *Qd4* fazla piyonu ve
+daha da iyi bir pozisyonu korurdu, bu yüzden Siyah bunun yerine
+*...Ra8* deniyor. } 24. Rge1 Ra8 (24... Rbc8 25. Qd4) 25. Qxc7 Qe3+
+26. Kg2 Ra7
+27. Qd6 { Pozisyon basitçe Beyaz'ın lehine açılıyor - Siyah'ta gerçek bir
+karşı şans kalmadı. } h4 28. gxh4 Be6 29. Rc3 Qh6 30. a3 Rd7 31. Qg3 {
+Şimdi Siyah'ın bütün piyonları saldırı altına giriyor. } d4 32. Rd3 Bxb3
+33. Rxb3 Qd2 34. Kf1 $1 { Şah için koruyucu bir hamle. } Kh7 35. Rb8 Re5
+36. Qg4 f5 37. Qg5 Re3 38. Qf6 { Ve şimdi çok tatsız bir mat tehdidi var:
+Siyah teslim oldu, çünkü *Qf6, ...Rg7, Qf8* sonrasında Beyaz'ın
+saldırısı basitçe kesin. (38. Qf6 Rg7 39. Qf8) }  1-0
 </pgn>
 
-Yine çok önemli bir ders: file karşı atınız olduğunda ve at güçlü
-olduğunda, rakibe farklı açılardan saldırabilmek için onu manevra
-ettirmeye, konumunu sürekli değiştirmeye devam etmeniz gerekir.
+Böyle bir fil değişimiyle rakibin c-piyonlarında duble piyon yaratmak
+türünden bir strateji, ister c3'te ister c6'da olsun, İngiliz
+Savunması'na ya da Sicilya Savunması'na benzer birçok pozisyonda çok
+yaygın hale geldi. Bir kez daha genel kuralı vurgulamak istiyorum:
+rakibin pozisyonunda duble piyon olduğunda at daha iyidir. Bu tür durumlarda pozisyonu her zaman
+kendi lehinize değerlendirebilir, atın file karşı avantajını teknik
+olarak kullanabilirsiniz.
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/fil-v-at/bolum-8/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">08</span> Simetri Atın Lehine</span> <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text"><span class="chapter-num">08</span> Atı Manevra Ettirmek</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
