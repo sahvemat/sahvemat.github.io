@@ -843,9 +843,26 @@
 // Straight quotes/apostrophes ("..."/') come from YAML front matter and
 // other places that never pass through kramdown's markdown converter
 // (which already smartens quotes in post body text). Sweep the rendered
-// page once to curl them up too, skipping code and chess game content.
+// page once to curl them up too, skipping code and chess game content
+// that's still raw, unparsed PGN source at this point (PGN/FEN/PUZZLE/
+// PGN-PLAYER tags) — smartening inside those risks corrupting header
+// syntax like [White "Fischer"] before ChessPublica ever reads it.
+//
+// That source text is exactly what ChessPublica goes on to parse and
+// render, asynchronously, well after this first pass: <pgn>/<fen>/
+// <puzzle> get replaced outright with a rendered div, and <pgn-player>/
+// <pgn-study> (true custom elements that stay in the DOM) get their
+// title/move-list/comment children populated in place — either way, the
+// prose it produces (quoted book excerpts in a move comment, a game's
+// title) never existed in the DOM at the time of the one-shot sweep
+// below, so it was never being swept at all. A persistent observer after
+// it catches each new node as ChessPublica inserts it and sweeps that
+// too, with a narrower skip list: by the time text exists inside a
+// rendered <pgn-player>/pgn-study, it's prose, not PGN source, so
+// PGN-PLAYER no longer needs protecting from this pass.
 (function () {
     var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1, PGN: 1, PUZZLE: 1, 'PGN-PLAYER': 1, FEN: 1 };
+    var RENDERED_SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, IFRAME: 1, SVG: 1, TEXTAREA: 1, INPUT: 1, NOSCRIPT: 1 };
 
     function smartQuotes(str) {
         return str
@@ -855,32 +872,52 @@
             .replace(/'/g, '’');
     }
 
-    document.title = smartQuotes(document.title);
-
-    var walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
-        {
-            acceptNode: function (node) {
-                if (node.nodeType === 1) {
-                    if (SKIP_TAGS[node.tagName] || node.classList.contains('post-game')) {
-                        return NodeFilter.FILTER_REJECT;
+    function sweep(root, skipTags) {
+        var walker = document.createTreeWalker(
+            root,
+            NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function (node) {
+                    if (node.nodeType === 1) {
+                        if (skipTags[node.tagName] || node.classList.contains('post-game')) {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                        return NodeFilter.FILTER_SKIP;
                     }
-                    return NodeFilter.FILTER_SKIP;
+                    return NodeFilter.FILTER_ACCEPT;
                 }
-                return NodeFilter.FILTER_ACCEPT;
             }
-        }
-    );
+        );
 
-    var textNodes = [];
-    var n;
-    while ((n = walker.nextNode())) textNodes.push(n);
-    textNodes.forEach(function (t) {
-        if (t.nodeValue.indexOf('"') !== -1 || t.nodeValue.indexOf("'") !== -1) {
-            t.nodeValue = smartQuotes(t.nodeValue);
-        }
-    });
+        var textNodes = [];
+        var n;
+        while ((n = walker.nextNode())) textNodes.push(n);
+        textNodes.forEach(function (t) {
+            if (t.nodeValue.indexOf('"') !== -1 || t.nodeValue.indexOf("'") !== -1) {
+                t.nodeValue = smartQuotes(t.nodeValue);
+            }
+        });
+    }
+
+    document.title = smartQuotes(document.title);
+    sweep(document.body, SKIP_TAGS);
+
+    // .post-game is deliberately left out of this loosened pass too (see
+    // the classList check inside sweep()) — its content arrives through a
+    // separate fetch+render pipeline this fix hasn't been verified against.
+    new MutationObserver(function (records) {
+        records.forEach(function (record) {
+            record.addedNodes.forEach(function (node) {
+                if (node.nodeType === 3) {
+                    if (node.nodeValue.indexOf('"') !== -1 || node.nodeValue.indexOf("'") !== -1) {
+                        node.nodeValue = smartQuotes(node.nodeValue);
+                    }
+                } else if (node.nodeType === 1) {
+                    sweep(node, RENDERED_SKIP_TAGS);
+                }
+            });
+        });
+    }).observe(document.body, { childList: true, subtree: true });
 })();
 
 // Inline PGN: a .post-game with no data-pgn attribute can instead carry its
