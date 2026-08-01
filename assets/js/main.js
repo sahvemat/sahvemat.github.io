@@ -274,11 +274,13 @@
         // margin to absorb rounding/border discrepancies in ChessPublica's
         // own layout math. The ceiling itself switches at the site's shared
         // 768px mobile breakpoint: 380px on desktop (this card's own
-        // 2-column-aware max, set in main.css), 247px on mobile — the same
-        // ~0.65 ratio fil-v-at (260/400) and pgn-study (390/600) use, just
-        // enforced here in JS since chessboardjs needs an actual measured
-        // pixel value, not a CSS variable it'll never re-read.
-        const ceiling = window.innerWidth < 768 ? 247 : 380;
+        // 2-column-aware max, set in main.css), 320px on mobile — raised
+        // from an earlier, overly-conservative 247px that left the "content
+        // - 25" term far short of ever binding on a real phone (a 375px-wide
+        // card has ~300px of content area); 320px lets that term do the
+        // actual work of filling the available width on typical phones,
+        // with this ceiling only stepping in on wider "mobile" viewports.
+        const ceiling = window.innerWidth < 768 ? 320 : 380;
         const target = Math.max(160, Math.min(ceiling, content - 25));
         el.style.setProperty('--board-size', target + 'px');
         const engine = el._engine;

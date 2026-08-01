@@ -1454,17 +1454,26 @@ a.article-thumbnail:hover {
    <puzzle> get replaced by ChessPublica with a .fen-container/.cp-puzzle
    div, so those classes are what actually need --board-size; pgn-player
    is a custom element that stays in the DOM as-is. 400px on desktop
-   just makes ChessPublica's own :root default explicit; the mobile
-   value is that same shared ~0.65 ratio and "100vw - 3rem" margin used
-   everywhere else. More specific selectors (.post-article > .pgn-container
-   etc.) still win here via ordinary CSS specificity. */
+   just makes ChessPublica's own :root default explicit. More specific
+   selectors (.post-article > .pgn-container etc.) still win here via
+   ordinary CSS specificity. */
 .fen-container, .cp-puzzle, pgn-player {
     --board-size: 400px;
 }
 
 @media (max-width: 767px) {
+    /* Available width here is article's 1rem side padding plus this
+       element's own padding — 1rem for pgn-player (this file's own
+       "POST PAGES" rule above), none for fen-container/cp-puzzle — so
+       "100vw - 4rem" is the tighter (pgn-player) case; fen/puzzle end up
+       with a few px of unused margin rather than risk pgn-player
+       overflowing. 340px is comfortably above what that calc() term
+       produces on every common phone, so the viewport-relative term is
+       what actually binds there, filling almost the full column instead
+       of the old 260px (which left 60-90px of unused margin on a typical
+       375-430px phone); the 340px cap only matters on wider phones. */
     .fen-container, .cp-puzzle, pgn-player {
-        --board-size: min(260px, calc(100vw - 3rem));
+        --board-size: min(340px, calc(100vw - 4rem));
     }
 }
 
@@ -1896,15 +1905,13 @@ pgn-player p {
         min-width: 0;
         box-sizing: border-box;
         /* Reduce padding so the board + eval bar have room to breathe.
-           refit() will compute --board-size from the available content area.
-           247px = this card's own 380px desktop ceiling (see the 768px+
-           rule below) scaled by the same ~0.65 mobile ratio used site-wide
-           (fil-v-at: 260/400, pgn-study: 390/600) — the desktop ceiling
-           itself stays card-specific (it has to fit the eval bar), but the
-           mobile shrink and the "100vw - 3rem" viewport margin match
-           everywhere else. */
+           refit() (main.js) is what actually sets --board-size here — this
+           is just its pre-JS fallback/initial value — and its own mobile
+           ceiling was raised alongside this one; see the comment there for
+           why 320px is what actually fills the card now instead of the old,
+           overly-conservative 247px. */
         padding: 0.5rem;
-        --board-size: min(247px, calc(100vw - 3rem));
+        --board-size: min(320px, calc(100vw - 3rem));
     }
 
     /* Let ChessPublica size .player-wrapper/.player-container from --board-size,
@@ -2829,12 +2836,33 @@ details.game-note > .post-game {
    cp.css's `@media (min-width:900px){ pgn-study{ display:grid... } }`) —
    moving only the board size to 768px would shrink the board to mobile
    size while the surrounding layout was still the desktop split pane.
-   390px keeps the same ~0.65 mobile ratio as everywhere else (of this
-   component's own 600px ceiling above), it just applies at pgn-study's
-   own breakpoint instead of the shared one. */
+   420px is a safety ceiling for wider "mobile" viewports near 899px;
+   94cqw is what actually determines the board size on real phones (see
+   the chrome-tightening rules and comment right below).
+
+   cqw resolves against pgn-player's own content-box, since cp.css puts
+   container-type: inline-size directly on it (pgn-study > pgn-player).
+   That content-box is pgn-study's width minus TWO layers of padding
+   stacked on top of each other: cp.css's own --frame-pad (1.5rem) on
+   pgn-study, then this file's universal pgn-player{padding:1rem} rule
+   (POST PAGES section above) on top of that — and because --board-size
+   is a *percentage* (94cqw) of what's left, every pixel of either
+   padding shrinks the board too. Measured on an iPhone-SE-width phone,
+   that compounded to a board of ~243px despite this 390px cap never
+   being the binding constraint at all. Trimming both paddings down for
+   mobile only (desktop's spacious split-pane keeps the full 1.5rem/1rem)
+   recovers a meaningfully bigger board through the same 94cqw formula —
+   measured ~283px after this change, a real improvement without needing
+   a hand-derived viewport calc() that would go stale if these paddings
+   ever change again. */
 @media (max-width: 899px) {
+    .post-article > pgn-study {
+        --frame-pad: 0.5rem;
+    }
+
     .post-article pgn-study pgn-player {
-        --board-size: min(390px, 94cqw, var(--sah-max-board-h, 9999px));
+        padding: 0.5rem;
+        --board-size: min(420px, 94cqw, var(--sah-max-board-h, 9999px));
     }
 }
 

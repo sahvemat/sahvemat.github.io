@@ -68,10 +68,18 @@
    diagrams still fit exactly inside the card at any phone width.
    768px matches the shared mobile cutoff used for board sizing
    everywhere else on the site (.post-game, the ogren/*.md teaching
-   diagrams, etc.) — see main.css's own --board-size rules. */
+   diagrams, etc.) — see main.css's own --board-size rules.
+
+   340px was measured against this card's true available width: the
+   article's own 1rem side padding plus this card's own 1.25rem padding
+   below, i.e. "100vw - 4.5rem" — calc(100vw - 4.5rem) is what actually
+   binds on every common phone (comfortably under 340px), filling the
+   card edge-to-edge instead of the old 260px, which left ~65-100px of
+   unused margin on a typical 375-430px phone. The 340px cap only matters
+   on wider "mobile" viewports near the 767px ceiling. */
 @media (max-width: 767px) {
     .post-article > .pgn-container {
-        --board-size: min(260px, calc(100vw - 3rem));
+        --board-size: min(340px, calc(100vw - 4.5rem));
         --pgn-title-font-size: 1rem;
         padding: 1.25rem;
     }
