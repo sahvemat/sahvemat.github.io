@@ -1477,6 +1477,18 @@ a.article-thumbnail:hover {
     }
 }
 
+/* ChessPublica's own cp.css gives every .pgn-comment both margin-top and
+   padding-top of 1rem, on top of the previous element's own margin-bottom
+   of 1rem — since margin and padding never collapse into each other, that
+   stacks into a 2rem gap above a comment (move -> comment) versus the 1rem
+   gap below it (comment -> next move), a visibly lopsided rhythm. cp.css
+   already fixes this for pgn-study's own .pgn-container specifically
+   (padding-top: 0 there); apply the same fix generally so any standalone
+   <pgn> gets the same even spacing pgn-study already has. */
+.pgn-container .pgn-comment {
+    padding-top: 0;
+}
+
 /* ChessPublica's rendered <puzzle> board (.cp-puzzle) is capped at
    --board-size and only gets auto side margins under its own mobile
    breakpoint, so it sits flush-left instead of centered in this wider
