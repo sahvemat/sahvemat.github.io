@@ -810,10 +810,41 @@
 })();
 
 (function () {
+    // Split any run of text on a standalone " ve " into a plain-caps lead
+    // and an italic-serif tail, same split used for colon-less titles and
+    // for the chapter-number title case below. Returns [before, after];
+    // `after` is '' when there's no " ve " to split on.
+    function splitOnVe(text) {
+        var words = text.split(' ');
+        var veIdx = words.indexOf('ve');
+        if (veIdx !== -1) {
+            return [words.slice(0, veIdx).join(' '), words.slice(veIdx).join(' ')];
+        }
+        return [text, ''];
+    }
+
     function formatPostTitle(h1) {
         var title = h1.dataset.title;
         if (!title) return;
         var up = function (s) { return s.toLocaleUpperCase('tr-TR'); };
+
+        // A title ending in ": <chapter number>" (the whitsun-style chapter
+        // pages) renders as three pieces instead of two: the plain-caps
+        // series name, an italic-serif " ve ..." clause if the name has
+        // one, and the chapter number set off in the site's accent-red
+        // chapter-num numeral style (the same one used on the chapter's own
+        // "0N Heading" and reused here for visual consistency between the
+        // title and the in-page heading it belongs to).
+        var chapterMatch = title.match(/^(.*):\s*(\d+)\s*$/);
+        if (chapterMatch) {
+            var chapterNum = chapterMatch[2].length < 2 ? '0' + chapterMatch[2] : chapterMatch[2];
+            var parts = splitOnVe(chapterMatch[1]);
+            var html = up(parts[0]) + '<br>';
+            if (parts[1]) html += '<em>' + parts[1] + '</em>';
+            html += '<span class="chapter-num title-chapter-num">' + chapterNum + '</span>';
+            h1.innerHTML = html;
+            return;
+        }
 
         var before, after;
         var colonIdx = title.indexOf(':');
@@ -821,17 +852,19 @@
             before = title.slice(0, colonIdx + 1);
             after = title.slice(colonIdx + 1).trim();
         } else {
-            var words = title.split(' ');
-            var veIdx = words.indexOf('ve');
-            if (veIdx !== -1) {
-                before = words.slice(0, veIdx).join(' ');
-                after = words.slice(veIdx).join(' ');
-            } else if (words.length > 1) {
-                before = words[0];
-                after = words.slice(1).join(' ');
+            var veParts = splitOnVe(title);
+            if (veParts[1]) {
+                before = veParts[0];
+                after = veParts[1];
             } else {
-                h1.textContent = up(title);
-                return;
+                var words = title.split(' ');
+                if (words.length > 1) {
+                    before = words[0];
+                    after = words.slice(1).join(' ');
+                } else {
+                    h1.textContent = up(title);
+                    return;
+                }
             }
         }
         h1.innerHTML = up(before) + '<br><em>' + after + '</em>';
