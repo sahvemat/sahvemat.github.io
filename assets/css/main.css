@@ -2185,6 +2185,18 @@ pgn-player p {
     margin-right: 1rem;
 }
 
+/* Same numeral treatment reused for a chapter's post-title suffix (see
+   formatPostTitle in main.js), but .chapter-num's 0.7em is sized against
+   an <h2> — inside the much larger <h1> post-title it needs its own,
+   far smaller, ratio plus lead-in space instead of chapter-num's
+   trailing margin. */
+.title-chapter-num {
+    font-size: 0.3em;
+    margin-right: 0;
+    margin-left: 0.35em;
+    vertical-align: 0.14em;
+}
+
 .post-article > figure {
     margin: 3rem 0;
     border: 1px solid var(--line);
