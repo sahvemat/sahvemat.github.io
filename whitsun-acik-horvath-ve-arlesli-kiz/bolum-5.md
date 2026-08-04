@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Whitsun Açık, Horvath ve Arlesli Kız: Bölüm 5 — Yeniden Doğuş"
+title: "Whitsun Açık, Horvath ve Arlesli Kız: 5"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
@@ -10,7 +10,7 @@ permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-5/
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
 
-## Yeniden Doğuş
+## <span class="chapter-num">05</span> Yeniden Doğuş
 
 Böylelikle aslında fena başlamadığım turnuvada altıncı tur sonunda ELO kazançlarımı sıfırlamış ve hatta az da olsa eksiye düşmüştüm. Üstelik yedinci turdaki Hintli CM Pratik Mulay da IM Janzelj beraberliğinin gösterdiği üzere yabana atılmaması gereken bir rakipti. Philidor'a karşı pirimiz FM Nazmi Can Doğan'ın bir hazırlığını gözden geçirerek girdiğim turda kısa sürede kendi yoluma saptım. Çoğunlukla olduğu gibi aslında bu yanlış bir yoldu fakat rakibimin becerememesi sonucu rahat bir galibiyete uzandım.
 

@@ -12,7 +12,7 @@ reading_time: 17
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
 
-## Giriş
+## <span class="chapter-num">01</span> Giriş
 
 Paskalya'nın 50 gün sonrasında Hristiyanlar için önemli bir gün daha vardır. Almanların Pfingsten, İngilizlerin White Sunday veya kısaca Whitsun dedikleri; Pentecost olarak da bilinen (Grekçe: ellinci gün) bu günde, Kutsal Ruh'un havarilerin üzerine indiğine inanılır. Her ne kadar inançlı biri olmasam da Paskalya zamanı oynanan Grenke Açık'ı ELO kazancıyla noktalamamın ardından kilise takviminin bir başka önemli gününde yine Almanya'da bir turnuva gördüğümde kayıt yaptırmamı herhalde anlayışla karşılarsınız. Evinin kapısına at nalı asan Niels Bohr gibi satranççıların da bazı batıl itikatlara sahip olması doğal kuşkusuz. Aslında oyunların en rasyonellerinden birini oynayanların irrasyonel sapmaları hakkında Proust'u kıskandıracak kalınlıkta bir kitap bile yazılır ama o başka bir yazının konusu olsun, biz Nazizm'in doğduğu topraklara, Münih'e geri dönelim.
 

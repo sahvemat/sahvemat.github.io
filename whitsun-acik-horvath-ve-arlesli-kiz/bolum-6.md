@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Whitsun Açık, Horvath ve Arlesli Kız: Bölüm 6 — Final"
+title: "Whitsun Açık, Horvath ve Arlesli Kız: 6"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
@@ -10,7 +10,7 @@ permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-6/
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
 
-## Final
+## <span class="chapter-num">06</span> Final
 
 Shakespeare'in dediği gibi "all's well that ends well", sonu iyi biten her şey iyidir. Mutlu bir şekilde son turdan çıkıp yemeğimi yedim ve akşamki konserin yolunu tuttum. Genç Gürcü piyanist Giorgi Gigaşvili'ye aslında Kütahyalı bir Ermeni olan anne tarafımdan hemşerim Fransız Alexandre Altınoğlu'nun şefliğindeki Münih Filharmoni eşlik ediyordu ve bu Küçük Asya-Kafkasya paktına bir Türk olarak mutlaka eşlik etmem gerekiyordu. Mussorgski'nin "Hovanşçina" uvertürü, Haçaturyan'ın Ermeni ezgilerinin yer yer hissedildiği piyano konçertosu ve Bizet'in meşhur "L'Arlesienne" süitleri romantik ve popüler bir program sunuyordu ve birçok ihtiyar Almanla aynı salonda olacağımı maalesef biliyordum.
 
