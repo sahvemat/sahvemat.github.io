@@ -14,11 +14,11 @@ permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-3/
 
 Bu arada tabii ki Münih'i de gezmeye çalışıyordum. Marienplatz ana meydanı merkezli eski şehir Alman Ortaçağ kentlerini sevenleri -her ne kadar savaş sonrası neredeyse yeniden inşa edildiyse de- belki tatmin edebilir fakat eğer benim gibi ana meydanda eski belediye binası, katedral ve etrafına sıralanmış binalar şeklindeki şehir planından nefret ediyorsanız Sultanahmet'ten devam etmenizi öneririm. Fakat Münih'e gezmeye gelmiş X. ile buluştuğumuz gün gittiğimiz meşhur Hofbraeuhaus München'in fazla turistik yerleri sevmeyen beni şaşırtan güzel bir yemek ve bira sunduğunu kabul etmem gerekiyor. Turdan önce bira mı içtin diye soracak olanlara şimdiden söyleyeyim, cevabım tabii ki de evet.
 
-![Hofbräuhaus München'de bir bira]({{ '/assets/img/munich/hofbraeuhaus.jpg' | relative_url }} "Hofbraeuhaus München'in meşhur bira bardağı.")
+![Hofbräuhaus München'de bir ayran]({{ '/assets/img/munich/hofbraeuhaus.jpg' | relative_url }} "Hofbraeuhaus München'in meşhur bardağında bir ayran.")
 
 Bir parantez de kitapçı Hugendubel'a açmam lazım. Stuttgart'ta da gittiğim bu kitapçının Münih şubesi çok etkileyici değilse de yine de bana paramı harcatmayı başardı. Buradan aldığım Ödon von Horvath'ın "Jugend ohne Gott" (Tanrısız Gençlik) adlı kısa romanı bana ilk turlarda eşlik etti. Nazi döneminin çocuklara ve okullara kadar inen korkunçluğunu anlatan çarpıcı bir eser ve bunu Münih'te okumuş olmam da belki kitabın etkisini artırdı. Türkçeye de çevrilmiş bu novellayı okumadıysanız okumanızı tavsiye ederim.
 
-![Jugend ohne Gott]({{ '/assets/img/munich/jugend-ohne-gott.jpg' | relative_url }} "Ödon von Horvath'ın Jugend ohne Gott'u, açık hava kahvesinde bir birayla.")
+![Jugend ohne Gott]({{ '/assets/img/munich/jugend-ohne-gott.jpg' | relative_url }} "Ödon von Horvath'ın Jugend ohne Gott'u, açık hava kahvesinde bir ayranla.")
 
 İlk üç tur sonunda böylece iki puandaydım ve dördüncü tur eşlendirmesi açıklanmadan kimin geleceğini biliyordum. Aslında daha başlangıç listesini gördüğüm andan itibaren oynayacağımızı biliyordum zira genç Bulgar IM Stoyanov ile aynı turnuvada oynayıp da karşılaşmadığımız hiç olmadı! Skorum bir mağlubiyet ve beraberlik şeklindeydi ve durumu eşitlemek istiyordum. Maalesef bunu başaramadım ama kısa ve acısız bir beraberlik oldu, şikayetçi değilim:
 
