@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Whitsun Açık, Horvath ve Arlesli Kız: Bölüm 4 — Cennetten Düşüş"
+title: "Whitsun Açık, Horvath ve Arlesli Kız: 4"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
@@ -10,7 +10,7 @@ permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-4/
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
 
-## Cennetten Düşüş
+## <span class="chapter-num">04</span> Cennetten Düşüş
 
 Beşinci turda Alman GM Christopher Noe ile eşleştim. Yıllar önce Polonya'da da oynadığım rakibimle başa başa bir oyun oynayabileceğimi biliyordum ama maalesef açılıştaki hatalar ve dikkatsizlik yüzünden daha en baştan kötü konuma düştüm ve bir fırsatı da değerlendiremeyince kaybettim.
 

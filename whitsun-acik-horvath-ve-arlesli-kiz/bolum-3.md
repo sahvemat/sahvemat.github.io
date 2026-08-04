@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Whitsun Açık, Horvath ve Arlesli Kız: Bölüm 3 — Münih ve Allahsız Gençlik"
+title: "Whitsun Açık, Horvath ve Arlesli Kız: 3"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
@@ -10,7 +10,7 @@ permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-3/
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
 
-## Münih ve Allahsız Gençlik
+## <span class="chapter-num">03</span> Münih ve Allahsız Gençlik
 
 Bu arada tabii ki Münih'i de gezmeye çalışıyordum. Marienplatz ana meydanı merkezli eski şehir Alman Ortaçağ kentlerini sevenleri -her ne kadar savaş sonrası neredeyse yeniden inşa edildiyse de- belki tatmin edebilir fakat eğer benim gibi ana meydanda eski belediye binası, katedral ve etrafına sıralanmış binalar şeklindeki şehir planından nefret ediyorsanız Sultanahmet'ten devam etmenizi öneririm. Fakat Münih'e gezmeye gelmiş X. ile buluştuğumuz gün gittiğimiz meşhur Hofbraeuhaus München'in fazla turistik yerleri sevmeyen beni şaşırtan güzel bir yemek ve bira sunduğunu kabul etmem gerekiyor. Turdan önce bira mı içtin diye soracak olanlara şimdiden söyleyeyim, cevabım tabii ki de evet.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Whitsun Açık, Horvath ve Arlesli Kız: Bölüm 2 — İlk Turlar"
+title: "Whitsun Açık, Horvath ve Arlesli Kız: 2"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
@@ -10,7 +10,7 @@ permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-2/
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
 
-## İlk Turlar
+## <span class="chapter-num">02</span> İlk Turlar
 
 Yön hareketi gibi benim de ne kadar başarılı olduğum sorgulanabilir kuşkusuz ama en azından ilk tur kazanarak başladım:
 
