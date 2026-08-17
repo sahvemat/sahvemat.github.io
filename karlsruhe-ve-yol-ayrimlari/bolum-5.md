@@ -16,7 +16,7 @@ Bu oyunla başlayan üstten çektiğim rakiplere karşı üstün, hatta kazanç 
 
 <div class="post-game" id="tur-5" data-pgn="{{ '/assets/pgn/karlsruhe/karlsruhe-r5.pgn' | relative_url }}"></div>
 
-![Ormanlık alan]({{ '/assets/img/karlsruhe/ormanlik-alan.jpg' | relative_url }} "Hemen her sabah yürüdüğüm ormanlık alan.")
+![Ormanlık alan]({{ '/assets/img/karlsruhe/ormanlik-alan.jpg' | relative_url }} "Hemen her sabah yürüdüğüm ormanlık alan."){: loading="lazy" decoding="async"}
 
 Altıncı tur benim adıma tam bir faciaydı. Yine doğaçlama bir açılış ve hazırlıksız yakalanan rakibimin kötü oyunu sonucu elde edilmiş kazanç bir konum ardından yanlış tercihler ve fahiş hatalar… Oyunu kaybeden hata benim adıma utanç vericiydi ve tüm parti boyunca moralsiz bir şekilde tahtaya bakan, Doğu Alman filmlerinden çıkmış gibi bir tarza sahip genç rakibimin yüzü o anda gülmeye başladı:
 

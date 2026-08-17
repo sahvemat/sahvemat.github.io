@@ -20,7 +20,7 @@ Yön hareketi gibi benim de ne kadar başarılı olduğum sorgulanabilir kuşkus
 
 <div class="post-game" id="tur-2" data-pgn="{{ '/assets/pgn/munich/munich-r2.pgn' | relative_url }}"></div>
 
-![Turnuva salonu]({{ '/assets/img/munich/salon.jpg' | relative_url }} "Moosach Lisesi'ndeki turnuva salonundan bir görünüm.")
+![Turnuva salonu]({{ '/assets/img/munich/salon.jpg' | relative_url }} "Moosach Lisesi'ndeki turnuva salonundan bir görünüm."){: loading="lazy" decoding="async"}
 
 Üçüncü tur eşleştiğim Letonyalı Saveljevs ilginç bir şekilde benden bir yaş büyüktü, genelde rakiplerimin yaşımın üçte biri civarında olmasına alıştığım için bu hoş sürprizi değerlendirmem şarttı. Her ne kadar bilgisayar bazı delikler bulsa da en azından hamle hamle ilerleterek hızlıca bakıldığında tek taraflı ve iyi bir oyun gibi göründüğünü söyleyebilirim:
 

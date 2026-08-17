@@ -90,13 +90,34 @@
         targets.forEach(wrap);
     }
 
+    // Only re-scan the nodes a mutation actually touched, not the whole
+    // page. ChessPublica inserts dozens of move/comment/diagram nodes
+    // while rendering a single board, each firing a mutation record — a
+    // full document.body TreeWalker per batch (the original approach
+    // here) turned every one of those renders into an O(page size) scan
+    // instead of an O(what changed) one.
+    function normalizeNode(node) {
+        if (node.nodeType === 3) {
+            if (PATTERN.test(node.nodeValue) && node.parentNode && !isProtected(node.parentElement)) wrap(node);
+        } else if (node.nodeType === 1) {
+            normalize(node);
+        }
+    }
+
+    var pendingNodes = [];
     var pending = false;
-    function scheduleNormalize() {
+    function scheduleNormalize(records) {
+        records.forEach(function (record) {
+            if (record.type === 'characterData') pendingNodes.push(record.target);
+            record.addedNodes.forEach(function (node) { pendingNodes.push(node); });
+        });
         if (pending) return;
         pending = true;
         requestAnimationFrame(function () {
             pending = false;
-            normalize(document.body);
+            var nodes = pendingNodes;
+            pendingNodes = [];
+            nodes.forEach(normalizeNode);
         });
     }
 

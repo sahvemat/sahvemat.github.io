@@ -20,7 +20,7 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 <div class="post-game" id="timman-kostro-1971" data-pgn="https://lichess.org/api/study/F0mOCg4p/kMX32cvq.pgn"></div>
 
-![Timman, 1973]({{ '/assets/img/timman/portrait-1973.webp' | relative_url }} "Jan Timman, 1973 yılında; bu dönemde dünya sıralamasında ikinciliğe kadar yükselecekti.")
+![Timman, 1973]({{ '/assets/img/timman/portrait-1973.webp' | relative_url }} "Jan Timman, 1973 yılında; bu dönemde dünya sıralamasında ikinciliğe kadar yükselecekti."){: loading="lazy" decoding="async"}
 
 ### TIMMAN - VAN ZALINGEN, DELFT, 1966
 
@@ -28,7 +28,7 @@ Bugojno'da turnuvaya iki kazanç ve ardından iki kayıp ile başlayan Timman'ı
 
 ### TIMMAN - KORCHNOI, [SITE], 1982
 
-![Timman - Korchnoi, 1982]({{ '/assets/img/timman/vs-korchnoi-1982.jpg' | relative_url }} "Timman, 1982 yılında Viktor Korchnoi'a karşı.")
+![Timman - Korchnoi, 1982]({{ '/assets/img/timman/vs-korchnoi-1982.jpg' | relative_url }} "Timman, 1982 yılında Viktor Korchnoi'a karşı."){: loading="lazy" decoding="async"}
 
 <div class="post-game" id="timman-kortschnoj" data-pgn="https://lichess.org/api/study/F0mOCg4p/W5AWqjug.pgn"></div>
 
