@@ -14,7 +14,7 @@ permalink: /posts/karlsruhe-ve-yol-ayrimlari/bolum-4/
 
 16'da başlayan akşam turunun eşlendirmesi de tur saatine oldukça yakın bir zamanda belli oldu ve yine rakibimin ne oynadığını bilmeden tura girmek durumundaydım. Eğer hazırlığa dayalı bir satranç oynayan bir oyuncuysanız Grenke Açık'ın sizin için pek de uygun olmadığını söylemem lazım. Turnuvanın devasa boyutları tur sonuçlarının ve dolayısıyla eşlendirmenin gecikmesine yol açıyor ve hem sabah turlarının eşlendirmesi ancak gece yarısı belli oluyor hem de akşam turlarının eşlendirmesi ancak turdan çok kısa bir zaman önce öğrenilebiliyor. Benim gibi doğaçlama oynamayı seven ve hazırlık konusunda tembel oyuncular içinse belki de böyle yoğun bir program bir avantaj olabilir. En azından turnuva boyuncu bu hipotezin belki de doğrulandığını söyleyebilirim.
 
-![Karlsruhe Sarayı]({{ '/assets/img/karlsruhe/saray.jpg' | relative_url }} "Karlsruhe Sarayı'nın arka cepheden görünümü.")
+![Karlsruhe Sarayı]({{ '/assets/img/karlsruhe/saray.jpg' | relative_url }} "Karlsruhe Sarayı'nın arka cepheden görünümü."){: loading="lazy" decoding="async"}
 
 Nihayet üstten bir rakip çektiğim üçüncü turda 20 yaşındaki genç Alman Isaac Garner (2403) karşısında tahta başında orijinal bir fikir buldum ve rakibim biraz da gereksiz yere panikleyerek beraberlik teklif edince kabul ederek iyi başlangıcımı sürdürdüm:
 

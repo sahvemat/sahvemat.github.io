@@ -24,7 +24,7 @@ permalink: /posts/timman-bati-nin-en-iyisi/bolum-5/
 
 ### SIGURJONSSON - TIMMAN, WIJK AAN ZEE, 1980
 
-![Timman ve meslektaşları]({{ '/assets/img/timman/portrait-group.webp' | relative_url }} "Timman (solda), diğer büyükustalarla birlikte.")
+![Timman ve meslektaşları]({{ '/assets/img/timman/portrait-group.webp' | relative_url }} "Timman (solda), diğer büyükustalarla birlikte."){: loading="lazy" decoding="async"}
 
 <div class="post-game" id="sigurjonsson-timman-1980" data-pgn="https://lichess.org/api/study/F0mOCg4p/bmIFEAaA.pgn"></div>
 

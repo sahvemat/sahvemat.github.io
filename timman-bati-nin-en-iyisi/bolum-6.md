@@ -12,7 +12,7 @@ permalink: /posts/timman-bati-nin-en-iyisi/bolum-6/
 
 ### RIBLI - TIMMAN, AMSTERDAM, 1978
 
-![Timman, 1977]({{ '/assets/img/timman/demo-1977.webp' | relative_url }} "Timman, 1977 yılında bir gösteri karşılaşmasını izlerken.")
+![Timman, 1977]({{ '/assets/img/timman/demo-1977.webp' | relative_url }} "Timman, 1977 yılında bir gösteri karşılaşmasını izlerken."){: loading="lazy" decoding="async"}
 
 <div class="post-game" id="ribli-timman-1978" data-pgn="https://lichess.org/api/study/F0mOCg4p/zEDxPuGC.pgn"></div>
 

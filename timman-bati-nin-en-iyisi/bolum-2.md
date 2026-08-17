@@ -45,7 +45,7 @@ Daha sonra Büyükusta ünvanına kavuşacak olan Garcia Palermo ülkesini ziyar
 
 Carlos Garcia Palermo bu başarıyı elde ettiğinde 15 yaşındaydı. (Kaynak: Arjantin'de bulunan <i>Rosario ve Güney Santa Fe Satranç Derneği</i> internet sitesinde, Christian Sánchez imzasıyla 2014 yılında yayımlanan <i>Satranç İncileri: Özelde Rosario'nun, genelde ise Arjantin'in satranç tarihine bir yolculuk</i> başlıklı İspanyolca [makale](https://www.ara.org.ar/chs/ajedrez/perlas/#PA32)).
 
-![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında.")
+![Timman - Garcia Palermo]({{ '/assets/img/timman/vs-garcia-palermo-1982.jpg' | relative_url }} "Timman, Garcia Palermo'ya karşı IV. Mar del Plata Internacional de Ajedrez 'Clarin' turnuvasında."){: loading="lazy" decoding="async"}
 
 <div class="post-game" id="garcia-palermo-timman-1982" data-pgn="https://lichess.org/api/study/F0mOCg4p/14MskOXg.pgn"></div>
 
@@ -59,7 +59,7 @@ Fischer'ın en yakın dostu ve yardımcısı Arjantinli Büyükusta Miguel Quint
 
 Timman'ın Macar Büyükusta Lajos Portisch ile olan partileri her zaman incelemeyi hak eder. Öyle ki, 1994 yılında yayınlanan ve kariyerinin 1983-1993 arasında oynadığı 80 oyuna odaklanan eseri "Chess the Adventurous Way" kitabında aralarında oynadıkları 3 oyuna yer vermiştir. Portisch turnuvaya 6 oyunda 5.5 puanla inanılmaz bir başlangıç yapmış, fakat 7. turda Timman'ı da yenen Larsen'e kaybetmişti.
 
-![Chess the Adventurous Way kapağı]({{ '/assets/img/timman/book-cover.jpg' | relative_url }} "Timman'ın 1983-1993 arasında oynadığı 80 oyuna odaklanan kitabı 'Chess the Adventurous Way'in kapağı.")
+![Chess the Adventurous Way kapağı]({{ '/assets/img/timman/book-cover.jpg' | relative_url }} "Timman'ın 1983-1993 arasında oynadığı 80 oyuna odaklanan kitabı 'Chess the Adventurous Way'in kapağı."){: loading="lazy" decoding="async"}
 
 Timman, turnuva hakkında kapsamlı yazılar yayınlayan turnuvanın sponsoru Clarin'e şöyle demişti: *“Beyaz taşlarla oynayan Portisch'in her zaman zaferi hedefleyeceğini biliyordum. Dahası, sıralamada yarım puan geride olduğu için beni yakalamasının tek yolu kazanmaktı. Bu yüzden bu oyun önemliydi ve dikkatlice hazırlandım.”*
 

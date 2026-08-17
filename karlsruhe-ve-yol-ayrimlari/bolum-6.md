@@ -26,7 +26,7 @@ Artık turnuvayı ELO kazancı olarak artıda mı yoksa az da olsa ekside mi bit
 
 Elbette turnuva öncesi beklediğim gibi 30-40 ELO kazanamadığım için çok başarılı bir turnuva olduğunu söyleyemem fakat artıda bitirdiğim ve hedefe biraz da olsa yaklaştığım için turnuva sonu mutluydum. Salonun hemen dışında kurulan kitap standından aldığım kitaplar ve satranç takımıyla kendimi bir anlamda ödüllendirdim ve yan tarafta Nepomniachtchi genç hayranlarına imza dağıtıp fotoğraf çektirirken bir kafein bağımlısı olarak son defa kahve kuyruğuna girdim: <em>"Noch einen schwarzen Kaffee bitte!"</em>
 
-![Ganimetler]({{ '/assets/img/karlsruhe/ganimet.jpg' | relative_url }} "Ganimetler!")
+![Ganimetler]({{ '/assets/img/karlsruhe/ganimet.jpg' | relative_url }} "Ganimetler!"){: loading="lazy" decoding="async"}
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/karlsruhe-ve-yol-ayrimlari/bolum-7/' | relative_url }}">
