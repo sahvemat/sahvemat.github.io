@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Whitsun Açık, Horvath ve Arlesli Kız: 4"
+title: "Whitsun Açık, Horvath ve Arlesli Kız 04"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
