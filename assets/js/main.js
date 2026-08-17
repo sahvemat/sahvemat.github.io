@@ -810,6 +810,18 @@
 })();
 
 (function () {
+    // A chapter title ending in a bare one- or two-digit number (Whitsun's
+    // "... ve Arlesli Kız 02", fil-v-at's "fil v. at 02") gets that number
+    // carried over into the italic tail below, then pulled back out into
+    // the site's own accent-red chapter-num numeral style (mono, upright —
+    // the same span used on the chapter's own "0N Heading") instead of
+    // sitting there in the huge italic serif with the rest of the tail.
+    function styleTrailingChapterNum(html) {
+        return html.replace(/(\d{1,2})(<\/em>)$/, function (_, num, close) {
+            return '<span class="chapter-num">' + (num.length < 2 ? '0' + num : num) + '</span>' + close;
+        });
+    }
+
     function formatPostTitle(h1) {
         var title = h1.dataset.title;
         if (!title) return;
@@ -834,7 +846,7 @@
                 return;
             }
         }
-        h1.innerHTML = up(before) + '<br><em>' + after + '</em>';
+        h1.innerHTML = styleTrailingChapterNum(up(before) + '<br><em>' + after + '</em>');
     }
 
     document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
