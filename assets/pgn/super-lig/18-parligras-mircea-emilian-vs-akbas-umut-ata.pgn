@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Aynı dikey ve çapraz üzerindeki taşların taktiklere maruz kalması bilinen bir durum. Tecrübeli GM Parligras, eşit konumun sadeliğine aldanıyor. }
-31... Bd4! { Siyah terk etti. } { [%clk 0:22:13] } 0-1
+{[P]} 31... Bd4! { Siyah terk etti. } { [%clk 0:22:13] } 0-1

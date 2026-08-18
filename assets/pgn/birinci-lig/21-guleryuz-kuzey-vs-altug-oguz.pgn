@@ -24,4 +24,4 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-16. Nf5! { [%eval 5.17] } { ve mat tehdidi ile e7-fili aynı anda korunamaz. } { [%clk 1:07:29] } 16... Qxf5 { [%eval 5.14] [%clk 1:24:45] } 17. Qxf5 $18 { [%eval 5.37] [%clk 1:07:54] } 1-0
+{[P]} 16. Nf5! { [%eval 5.17] } { ve mat tehdidi ile e7-fili aynı anda korunamaz. } { [%clk 1:07:29] } 16... Qxf5 { [%eval 5.14] [%clk 1:24:45] } 17. Qxf5 $18 { [%eval 5.37] [%clk 1:07:54] } 1-0

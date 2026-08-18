@@ -22,4 +22,4 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-49... Kxe6 { [%eval 4.78] } { g4-piyonu nasıl alınmalı? } { [%clk 0:00:37] } 50. Re4+! { [%eval 4.77] [%clk 0:19:39] } 50... Kd6 { [%eval 4.69] [%clk 0:01:00] } 51. Rxe7 { [%eval 4.47] [%clk 0:20:05] } 51... Kxe7 { [%eval 5.02] [%clk 0:01:28] } 52. Ke5 $18 { [%eval 4.81] } { g4'e yönelen diğer şah hamleleri de elbette kazanır. } { [%clk 0:20:30] } 1-0
+{[P]} 49... Kxe6 { [%eval 4.78] } { g4-piyonu nasıl alınmalı? } { [%clk 0:00:37] } 50. Re4+! { [%eval 4.77] [%clk 0:19:39] } 50... Kd6 { [%eval 4.69] [%clk 0:01:00] } 51. Rxe7 { [%eval 4.47] [%clk 0:20:05] } 51... Kxe7 { [%eval 5.02] [%clk 0:01:28] } 52. Ke5 $18 { [%eval 4.81] } { g4'e yönelen diğer şah hamleleri de elbette kazanır. } { [%clk 0:20:30] } 1-0

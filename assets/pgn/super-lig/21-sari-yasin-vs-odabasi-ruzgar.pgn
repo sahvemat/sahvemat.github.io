@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Beyaz taşların rakiplerinkine göre çok daha iyi yerleştiği bu konumda siyahın şahı biraz yalnız kalmış gibi duruyor. }
-28. f5! { Alınması siyah taşı tamamen çıplak bırakacak önemli bir piyon ilerleyişi. Beyazın başlıca tehdidi f6 ile mat saldırısı başlatmak. } { [%clk 0:25:00] } 28... Nd7 { [%clk 0:18:06] } 29. Rxd6 { [%clk 0:18:39] } (29. f6? Nxf6 { Siyahın fikri buydu. }) 29... Nf8 { [%clk 0:14:37] } 30. c5 { [%clk 0:16:23] } 30... Rxd6 { [%clk 0:13:46] } 31. cxd6 $18 { [%clk 0:16:05] } 1-0
+{[P]} 28. f5! { Alınması siyah taşı tamamen çıplak bırakacak önemli bir piyon ilerleyişi. Beyazın başlıca tehdidi f6 ile mat saldırısı başlatmak. } { [%clk 0:25:00] } 28... Nd7 { [%clk 0:18:06] } 29. Rxd6 { [%clk 0:18:39] } (29. f6? Nxf6 { Siyahın fikri buydu. }) 29... Nf8 { [%clk 0:14:37] } 30. c5 { [%clk 0:16:23] } 30... Rxd6 { [%clk 0:13:46] } 31. cxd6 $18 { [%clk 0:16:05] } 1-0

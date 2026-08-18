@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Karlsruhe ve yol ayrımları"
-author: "Tarık Selbes"
+author: "FM Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Grenke Açık · A Grubu"
 excerpt: "Hayatta bazen kritik yol ayrımlarına geliriz. 21 yıllık bir gecikmeyle de olsa Karlsruhe ile yolum bu yıl Nisan ayında kesişti — \"dünyanın en büyük açık turnuvası\" sloganıyla düzenlenen Grenke Açık'ta oynamak için."

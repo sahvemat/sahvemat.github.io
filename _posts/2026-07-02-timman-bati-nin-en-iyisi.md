@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAN TIMMAN: Batı'nın en iyisi"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Klasikler"
 event: "1964–1995 · 27 Parti"
 excerpt: "Hollandalı Büyükusta Jan Timman'ın kariyerinden 27 parti: 1964'teki gençlik adımlarından 1982 Mar del Plata Clarin zaferine, klasik pozisyonel oyunlardan yıldırım taktiklere uzanan bir portre."
@@ -14,7 +14,7 @@ PGNURL: /assets/pgn/timman/05-karpov-timman-1982.pgn
 analysis_position_caption: "Karpov – Timman, Mar del Plata 1982"
 analysis_tip_label: "Gözde Parti"
 analysis_tip: "Timman'ın kariyerinde 'favori oyunu' olarak andığı karşılaşma: Merano'dan yorgun dönen dünya şampiyonu Karpov'a karşı, dünya ikincisinin cesaretle örülü performansı."
-analysis_author: "Nazmi Can Doğan"
+analysis_author: "FM Nazmi Can Doğan"
 ---
 
 {% include chapter-toc.html dataset="timman_toc" %}

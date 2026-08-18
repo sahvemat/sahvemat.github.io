@@ -24,4 +24,4 @@
 [SetUp "1"]
 
 { İzole piyona karşı güzel oyunu olan Siyahın hızlı bir çözümü de var. }
-23... Nxd4! { [%clk 0:20:38] } 24. Bxd4 { [%clk 0:00:37] } 24... Qxd4! { Beyaz terk etti. } { [%clk 0:20:48] } 0-1
+{[P]} 23... Nxd4! { [%clk 0:20:38] } 24. Bxd4 { [%clk 0:00:37] } 24... Qxd4! { Beyaz terk etti. } { [%clk 0:20:48] } 0-1

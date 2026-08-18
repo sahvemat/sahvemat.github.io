@@ -23,4 +23,4 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-35... c5! { [%eval -6.17] } { ve vezirin kaçacak düzgün bir karesi bulunmuyor. Siyah bu nedenle terk etti. Bir örnek: } { [%clk 0:07:13] } 36. Qd3 Ng4+ $18 { [%csl Gd3,Gh3][%cal Rg4f2,Gh2h3] } 0-1
+{[P]} 35... c5! { [%eval -6.17] } { ve vezirin kaçacak düzgün bir karesi bulunmuyor. Siyah bu nedenle terk etti. Bir örnek: } { [%clk 0:07:13] } 36. Qd3 Ng4+ $18 { [%csl Gd3,Gh3][%cal Rg4f2,Gh2h3] } 0-1

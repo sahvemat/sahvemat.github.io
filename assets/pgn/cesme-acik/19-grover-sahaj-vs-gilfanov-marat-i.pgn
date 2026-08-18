@@ -24,4 +24,4 @@
 [ChapterMode "gamebook"]
 
 { e-dikeyindeki açmazdan yararlanmanın bir yolu var mı? }
-19. Nxd5! { [%eval 1.7] [%clk 0:45:06] } 19... Qxe5 { [%eval 1.62] [%clk 0:13:43] } 20. Bxe5 { [%eval 1.59] [%clk 0:45:07] } 20... Bxd5 { [%eval 1.74] [%clk 0:14:06] } 21. Rxd5! { [%eval 1.77] } { Elbette bu nedenle 19.Axd5 çok iyidir. } { [%clk 0:45:33] } 21... exd5 { [%eval 1.93] [%clk 0:14:23] } 22. Bxg7+ { [%eval 2.0] [%clk 0:45:56] } 22... Kd7 { [%eval 1.82] [%clk 0:14:34] } 23. Bxh8 $18 { [%eval 1.76] } { Beyaz materyal avantajını değerlendirmesini bildi. } { [%clk 0:46:21] } 1-0
+{[P]} 19. Nxd5! { [%eval 1.7] [%clk 0:45:06] } 19... Qxe5 { [%eval 1.62] [%clk 0:13:43] } 20. Bxe5 { [%eval 1.59] [%clk 0:45:07] } 20... Bxd5 { [%eval 1.74] [%clk 0:14:06] } 21. Rxd5! { [%eval 1.77] } { Elbette bu nedenle 19.Axd5 çok iyidir. } { [%clk 0:45:33] } 21... exd5 { [%eval 1.93] [%clk 0:14:23] } 22. Bxg7+ { [%eval 2.0] [%clk 0:45:56] } 22... Kd7 { [%eval 1.82] [%clk 0:14:34] } 23. Bxh8 $18 { [%eval 1.76] } { Beyaz materyal avantajını değerlendirmesini bildi. } { [%clk 0:46:21] } 1-0

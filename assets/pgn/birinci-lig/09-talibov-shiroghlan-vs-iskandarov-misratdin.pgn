@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Beyaz şah tehlikede durmuyor fakat, beyazın koyu renklerde duran taşları saldırının hedefi olacak! }
-32... Rd6! { [%eval -3.56] [%clk 0:13:02] } 33. Qe4 { [%eval -4.21] [%clk 0:02:38] } 33... Rxd4! { [%eval -4.14] [%clk 0:13:11] } 34. Qxd4 { [%eval -4.23] [%clk 0:02:34] } 34... Be5! { [%eval -4.23] [%clk 0:13:35] } 35. Qxg4 { [%eval -3.94] [%clk 0:02:36] } 35... Bxa1 $19 { [%eval -4.13] } { ve siyah üstünlüğünü kazanca çevirmesini bildi. } { [%clk 0:13:54] } 0-1
+{[P]} 32... Rd6! { [%eval -3.56] [%clk 0:13:02] } 33. Qe4 { [%eval -4.21] [%clk 0:02:38] } 33... Rxd4! { [%eval -4.14] [%clk 0:13:11] } 34. Qxd4 { [%eval -4.23] [%clk 0:02:34] } 34... Be5! { [%eval -4.23] [%clk 0:13:35] } 35. Qxg4 { [%eval -3.94] [%clk 0:02:36] } 35... Bxa1 $19 { [%eval -4.13] } { ve siyah üstünlüğünü kazanca çevirmesini bildi. } { [%clk 0:13:54] } 0-1

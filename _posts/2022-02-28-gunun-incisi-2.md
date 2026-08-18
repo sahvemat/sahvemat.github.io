@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Günün İncisi (2)"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 2. Tur"
 excerpt: "Hikaru Nakamura'nın Andrey Esipenko'ya karşı seçtiği az rastlanan devam yolu, İngiliz Açılışı'nın tersten Dragon şeklinde ele alınışına dair tipik planları öğretici bir şekilde gözler önüne seriyor."

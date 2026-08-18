@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Beyaz rakibinin Rxe3 fikrini hesaba kimin şahının daha güvende olduğuna karar vermeli. }
-23. Qxf7! { [%clk 0:18:38] } 23... Rxe3+ { [%clk 0:16:34] } (23... Bg6 24. Rxg6 hxg6 25. Bxf6 Rxe3+ 26. Kf1 $18 { Beyazın şahı güvendedir. }) 24. Kd2 { [%clk 0:15:40] } 24... Rxd3+ { [%clk 0:16:54] } 25. Ke2 { Siyah terk etti, çünkü Beyazın Qf8 ardından Bxg7 tehdidi materyal kaybı olmaksızın engellenemez. } { [%clk 0:16:05] } 1-0
+{[P]} 23. Qxf7! { [%clk 0:18:38] } 23... Rxe3+ { [%clk 0:16:34] } (23... Bg6 24. Rxg6 hxg6 25. Bxf6 Rxe3+ 26. Kf1 $18 { Beyazın şahı güvendedir. }) 24. Kd2 { [%clk 0:15:40] } 24... Rxd3+ { [%clk 0:16:54] } 25. Ke2 { Siyah terk etti, çünkü Beyazın Qf8 ardından Bxg7 tehdidi materyal kaybı olmaksızın engellenemez. } { [%clk 0:16:05] } 1-0

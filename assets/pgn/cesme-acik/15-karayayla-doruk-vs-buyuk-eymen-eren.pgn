@@ -23,4 +23,4 @@
 [ChapterMode "gamebook"]
 
 { Beyaz at kenarda olmasına rağmen tehlikede gibi durmuyor. Siyah oynar! }
-32... Qf4! { Aa3'ün sorunlarını gündeme getiren çok güçlü bir hamle! Beyazın vezileri değişme şansı yok. } { [%clk 1:01:05] } 33. Qb2 { [%clk 0:31:57] } (33. Qxf4 gxf4 $19 { [%cal Gb5b4] }) 33... b4 { [%eval -3.26] [%clk 1:00:29] } 34. Nb1 { [%clk 0:32:01] } 34... Nb5 $19 { Siyah önce d4-piyonunu sonra oyunu kazandı. } { [%clk 0:55:31] } 0-1
+{[P]} 32... Qf4! { Aa3'ün sorunlarını gündeme getiren çok güçlü bir hamle! Beyazın vezileri değişme şansı yok. } { [%clk 1:01:05] } 33. Qb2 { [%clk 0:31:57] } (33. Qxf4 gxf4 $19 { [%cal Gb5b4] }) 33... b4 { [%eval -3.26] [%clk 1:00:29] } 34. Nb1 { [%clk 0:32:01] } 34... Nb5 $19 { Siyah önce d4-piyonunu sonra oyunu kazandı. } { [%clk 0:55:31] } 0-1

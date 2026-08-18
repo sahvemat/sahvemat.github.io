@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Günün İncisi"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 3. Tur"
 excerpt: "Levon Aronian'ın Vincent Keymer'e karşı sergilediği açılış felsefesi ve nadir piyon yapısı, Caro-Kann Savunması'nın değişmeli varyantına dair bölüm bölüm bir inceleme."

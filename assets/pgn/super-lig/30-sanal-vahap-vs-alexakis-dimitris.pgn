@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Kalenin uzak geçer piyonu ile işbirliğinin gücünü gösteren iyi bir örnek. }
-40. b5! { Basit ve etkili bir yarma harekatı. } { [%clk 0:30:56] } 40... Kc7 { [%clk 0:30:41] } (40... Rc4 41. Nb8! { Beyazın geçer sayısı Axa6 ile ikiye yükselir. }) 41. bxa6 { [%clk 0:29:50] } 41... Kxc6 { [%clk 0:20:33] } 42. Rc2+! { Küçük ama çok önemli bir detay. Siyah terk eder. } { [%clk 0:30:12] } 1-0
+{[P]} 40. b5! { Basit ve etkili bir yarma harekatı. } { [%clk 0:30:56] } 40... Kc7 { [%clk 0:30:41] } (40... Rc4 41. Nb8! { Beyazın geçer sayısı Axa6 ile ikiye yükselir. }) 41. bxa6 { [%clk 0:29:50] } 41... Kxc6 { [%clk 0:20:33] } 42. Rc2+! { Küçük ama çok önemli bir detay. Siyah terk eder. } { [%clk 0:30:12] } 1-0

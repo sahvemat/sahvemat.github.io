@@ -23,4 +23,4 @@
 [ChapterMode "gamebook"]
 
 { Beyazın zayıflamış rakip şaha saldırısı etkileyici bir hamle ile başlıyor! }
-28. Ng5! { [%eval 4.32] [%cal Gc2h7] [%clk 0:34:48] } 28... Bxd4+ { [%eval 4.04] [%clk 0:33:37] } (28... Bxg5 29. Rxf7!! { Buz dağının görünmeyen yüzü! Beyaz at elbette alınamazdı. } { [%cal Gc2h7] }) 29. cxd4 { [%eval 4.06] [%clk 0:35:16] } 29... f5 { Siyah taş feda ederek sorunlarını çözmeyi umuyor. } { [%cal Gd8f6] [%clk 0:33:46] } 30. Nf3! { [%eval 4.03] [%clk 0:31:10] } 30... Qf6 { [%eval 4.58] [%clk 0:27:01] } 31. Be3 $18 { ve beyaz üstünlüğünü kazanca dönüştürmesini bildi. } { [%clk 0:30:28] } 1-0
+{[P]} 28. Ng5! { [%eval 4.32] [%cal Gc2h7] [%clk 0:34:48] } 28... Bxd4+ { [%eval 4.04] [%clk 0:33:37] } (28... Bxg5 29. Rxf7!! { Buz dağının görünmeyen yüzü! Beyaz at elbette alınamazdı. } { [%cal Gc2h7] }) 29. cxd4 { [%eval 4.06] [%clk 0:35:16] } 29... f5 { Siyah taş feda ederek sorunlarını çözmeyi umuyor. } { [%cal Gd8f6] [%clk 0:33:46] } 30. Nf3! { [%eval 4.03] [%clk 0:31:10] } 30... Qf6 { [%eval 4.58] [%clk 0:27:01] } 31. Be3 $18 { ve beyaz üstünlüğünü kazanca dönüştürmesini bildi. } { [%clk 0:30:28] } 1-0
