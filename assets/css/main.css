@@ -1999,7 +1999,8 @@ pgn-player p {
     .post-article > p,
     .post-article > figure,
     .post-article > .post-game,
-    .post-article > .video-embed {
+    .post-article > .video-embed,
+    .post-article > pgn-player {
         break-inside: avoid;
     }
 

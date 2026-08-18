@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Oyunsonu Dersi"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Oyunsonu"
 event: "2022 Fide Grand Prix · 1. Tur"
 excerpt: "Taktik bölümünde bir soru olarak karşımıza çıkan Aronian - Gujrathi kale finali, bu kez mercek altında: finalde Nakamura'ya kaybeden Aronian'ın burada sergilediği teknik yine de öğretici."

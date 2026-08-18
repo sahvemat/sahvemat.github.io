@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Günün İncisi (4) ve Açılış Faciası"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "Belgrad 2022 · Sırbistan Büyükustaları Turnuvası"
 excerpt: "Belgrad'da Grand Prix'nin gölgesinde oynanan bir başka güçlü turnuvadan: Maghsoodloo - Sarana partisinde açılış hazırlığının ince bir tuzağa nasıl dönüştüğünü adım adım izliyoruz."

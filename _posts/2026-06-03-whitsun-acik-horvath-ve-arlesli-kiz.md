@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Whitsun Açık, Horvath ve Arlesli Kız"
-author: "Tarık Selbes"
+author: "FM Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
 excerpt: "Paskalya zamanı oynanan Grenke Açık'ı ELO kazancıyla noktalamamın ardından kilise takviminin bir başka önemli gününde yine Almanya'da bir turnuva gördüğümde kayıt yaptırmamı herhalde anlayışla karşılarsınız — biz Nazizm'in doğduğu topraklara, Münih'e geri dönelim."

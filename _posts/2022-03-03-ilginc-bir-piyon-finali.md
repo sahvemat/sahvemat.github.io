@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "İlginç Bir Piyon Finali!"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Oyunsonu"
 event: "2022 Fide Grand Prix · Belgrad"
 excerpt: "Shankland - Grischuk partisinin piyon finalinde ilk bakışta apaçık görünen kazanç yolunun ardında, Stockfish'in bile derinlik istediği ince bir gerçek saklı."

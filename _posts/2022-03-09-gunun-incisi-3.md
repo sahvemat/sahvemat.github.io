@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Günün İncisi (3)"
-author: "Nazmi Can Doğan"
+author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · İkinci Ayak, Belgrad"
 excerpt: "Anish Giri'nin İtalyan Açılışı'ndaki ev hazırlığı, Nikita Vitiugov karşısında açılış felsefesinden merkez mücadelesine, oradan da şah kanadı saldırısına uzanan tam bir ders niteliğinde."
