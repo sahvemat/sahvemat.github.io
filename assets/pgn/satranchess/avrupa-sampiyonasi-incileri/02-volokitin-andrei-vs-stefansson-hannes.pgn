@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.28"]
+[Round "2.4"]
+[White "Volokitin, Andrei"]
+[Black "Stefansson, Hannes"]
+[Result "1-0"]
+[WhiteElo "2687"]
+[BlackElo "2520"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Volokitin, Andrei - Stefansson, Hannes"]
+[ChapterURL "https://lichess.org/study/KojudVFP/N6Apuz9l"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "4r1k1/3qnpp1/1pp1rn1p/RP2p3/2P1P3/4NN1P/2Q2PP1/3R2K1 b - - 0 22"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+22... Rd6 23. Rxd6 Qxd6 24. c5! Qxc5 (24... Qc7 25. cxb6 Qxb6 26. Nc4 { [%cal Gb5b6] }) 25. Qxc5 bxc5 26. b6 Rb8 27. Nc4 Nxe4 28. Nfxe5 Nc8 29. Nd7 Rb7 30. Ra8 Rxd7 31. Rxc8+ Kh7 32. f3 { 1-0 White wins. } { ve Ad6 hamlesi engellenerek Aa5 hazırlanır. } { [%cal Yc4a5] } 1-0
+
+

@@ -1,0 +1,23 @@
+[Event "22nd ch-EUR Indiv 2022"]
+[Site "Terme Catez SLO"]
+[Date "2022.03.27"]
+[Round "1.37"]
+[White "Levin, Guy"]
+[Black "Kozul, Zdenko"]
+[Result "0-1"]
+[WhiteElo "2332"]
+[BlackElo "2619"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Levin, Guy - Kozul, Zdenko"]
+[ChapterURL "https://lichess.org/study/KojudVFP/5pivv2Qf"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "7r/1p3k1r/2b1pp2/p2p1q2/P2P2p1/1P2P1P1/2R2PB1/1Q1RbK2 w - - 0 33"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+33. Rxe1 { Siyah elbette kazanç durumda ve pek çok hamle ile kazanabilir, ancak en hızlı çözümü bulabilir misiniz? } 33... Qf3 { ve 3 hamlede mat ile. } 34. Bxf3 gxf3 35. Kg1 Rh1# { 0-1 Black wins. } 0-1
+
+

@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.29"]
+[Round "3.6"]
+[White "Svane, Rasmus"]
+[Black "Martinovic, Sasa"]
+[Result "1-0"]
+[WhiteElo "2637"]
+[BlackElo "2554"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Svane, Rasmus - Martinovic, Sasa"]
+[ChapterURL "https://lichess.org/study/KojudVFP/OPY1d2PQ"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "1n3rk1/1qr2ppp/2b5/Rp2Q3/8/2P3PB/3NPP1P/R5K1 b - - 0 25"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+25... Re8 26. Qd4 { [%csl Yb7][%cal Ga5a7] } 26... Bd7 27. Ra7 Qc8 28. Rxc7 Qxc7 29. Ra7! Qxa7 30. Qxa7 Bxh3 31. Ne4! { [%cal Ba7b8,Ye8e4] } 31... Nd7 32. Ng5 { 1-0 White wins. } { [%csl Rh3,Rd7] } 1-0
+
+

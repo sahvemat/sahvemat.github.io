@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.28"]
+[Round "2.15"]
+[White "Ivanisevic, Ivan"]
+[Black "Cvitan, Ognjen"]
+[Result "1-0"]
+[WhiteElo "2601"]
+[BlackElo "2458"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Ivanisevic, Ivan - Cvitan, Ognjen"]
+[ChapterURL "https://lichess.org/study/KojudVFP/MIqlrfUG"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "3qr1k1/1p5N/p3ppp1/1b2n3/n2pBQ1P/6P1/P4P2/2B1R1K1 b - - 0 25"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+25... Kxh7 26. Bxg6+!! { [%cal Ge5g6,Rf4h6] } 26... Kg8 (26... Nxg6 27. Qh6+ Kg8 28. Qxg6+ Kh8 29. Re4 f5 30. Bg5 Qxg5 31. hxg5 fxe4 32. Qf7 { [%csl Gg6][%cal Gg5g6] }) 27. Rxe5!! { [%csl Gg8][%cal Bf6e5,Gf4f7,Gf7h7] } 27... Qc7 { [%cal Yc7e5,Yc7c1] } 28. Qxf6! Qxc1+ 29. Kh2 Rf8 30. Bh7+! { 1-0 White wins. } { [%cal Ge5h5,Gh5h8] } 1-0
+
+

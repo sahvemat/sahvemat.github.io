@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.31"]
+[Round "5.16"]
+[White "Firat, Burak"]
+[Black "Volokitin, Andrei"]
+[Result "0-1"]
+[WhiteElo "2487"]
+[BlackElo "2687"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Firat, Burak - Volokitin, Andrei"]
+[ChapterURL "https://lichess.org/study/KojudVFP/ZvX5enah"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "1r3rk1/5pbp/p2p4/q2P2PP/np2p3/1P2B3/1P3Q2/1K1R1B1R w - - 0 26"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+26. Bd4 Nc3+ 27. bxc3 bxc3 28. Bc4 Qa4!! { [%cal Bb8b3,Ra4c4] } 29. h6 Rxb3+! 30. Bxb3 Qxb3+ 31. Kc1 Qa3+ 32. Kb1 Rb8+ { 0-1 Black wins. } 33. Bb6 c2+ { [%csl Ya3][%cal Ya3b2,Ba3a1] } 0-1
+
+

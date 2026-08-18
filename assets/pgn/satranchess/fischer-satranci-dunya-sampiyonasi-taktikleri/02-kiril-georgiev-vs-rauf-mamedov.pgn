@@ -1,0 +1,22 @@
+[Event "Rated Chess960 game"]
+[Site "lichess.org"]
+[Date "2022.09.18"]
+[White "Kiril Georgiev"]
+[Black "Rauf Mamedov"]
+[Result "1-0"]
+[WhiteElo "2375"]
+[BlackElo "2361"]
+[Variant "Chess960"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "CCC & NACCL FRC WCH Tactics"]
+[ChapterName "Kiril Georgiev - Rauf Mamedov"]
+[ChapterURL "https://lichess.org/study/XWceQYxS/DSfptbOc"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "8/5k2/R5P1/4bN2/5p2/1r6/4K3/8 b - - 0 98"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+98... Kg8?? { With very limited material it's still possible for White to win! } 99. Re6! f3+ 100. Kf2 Bg7 101. Re8+ Bf8 102. g7 { 1-0 White wins. } 1-0
+
+

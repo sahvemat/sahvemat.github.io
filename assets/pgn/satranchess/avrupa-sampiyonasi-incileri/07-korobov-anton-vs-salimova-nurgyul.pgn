@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.28"]
+[Round "1.2"]
+[White "Korobov, Anton"]
+[Black "Salimova, Nurgyul"]
+[Result "1-0"]
+[WhiteElo "2695"]
+[BlackElo "2399"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Korobov, Anton - Salimova, Nurgyul"]
+[ChapterURL "https://lichess.org/study/KojudVFP/NYvSsvgY"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "3n2k1/RR3p1p/5b1B/4pN1p/2r1P3/8/P4PPK/3r4 w - - 0 34"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+34. Re7! { [%cal Ge7e8] } 34... Bxe7 35. Rxe7 { [%cal Ge7e8] } 35... f6 36. Rg7+ { 1-0 White wins. } { 36...Şh8 37.Ke7 veya 36...Şf8 37.Kc7 kazanırdı. } 1-0
+
+

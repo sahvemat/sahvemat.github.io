@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.29"]
+[Round "3.2"]
+[White "Can, Emre"]
+[Black "Volokitin, Andrei"]
+[Result "1-0"]
+[WhiteElo "2578"]
+[BlackElo "2687"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Can, Emre - Volokitin, Andrei"]
+[ChapterURL "https://lichess.org/study/KojudVFP/3qPDC99a"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "r1bqk2r/pp3ppp/2n2n2/3p2B1/Qb6/2N3P1/PPP2P1P/R3KBNR w KQkq - 0 9"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+9. Ne2! { [%cal Ge2c3] } 9... Bxc3+ (9... Bg4 10. Bg2 Bxe2 11. Kxe2 O-O 12. Nxd5 Qd7 $132 { Esquivel León, Jorge A. - Somani, Sunil K., 1/2-1/2, MEX-IND 21, 2021, https://lichess.org/b81csgf6 } { [%csl Ge2] }) 10. Nxc3 Qe7+ 11. Be2 Be6 12. O-O-O O-O-O 13. Bb5! d4 14. Bxc6 dxc3 15. Qxa7 cxb2+ 16. Kb1 Qb4 17. Bf4 { 1-0 White wins. } 1-0
+
+
