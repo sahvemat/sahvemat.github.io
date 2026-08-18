@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.29"]
+[Round "3.9"]
+[White "Dragnev, Valentin"]
+[Black "Moussard, Jules"]
+[Result "0-1"]
+[WhiteElo "2546"]
+[BlackElo "2630"]
+[Annotator "Dogan,Nazmi Can"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Dragnev, Valentin - Moussard, Jules"]
+[ChapterURL "https://lichess.org/study/KojudVFP/XQRSlNo6"]
+[FEN "4kb1r/1bq2ppp/p2ppn2/1p6/2rNPPP1/P1NQB3/1PP4P/2KR2R1 w k - 0 17"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+17. g5 Rxc3! 18. Qxc3 Qxc3 19. bxc3 Nxe4 20. Ne2 d5 21. Kb2 Be7 22. Ng3 Nd6! 23. Bd4 Rg8 24. Ka2 g6 25. h4 Nc4 { [%csl Ya3] } 26. a4 Kd7 27. axb5 axb5 28. Ra1 Ra8+ 29. Kb1 Nd2+ 30. Kb2 Ba3+! 31. Rxa3 Nc4+ 32. Kb1 Nxa3+ 33. Kc1 Nc4 34. Kd1 Kd6 35. Rf1 Ra1+ 36. Ke2 Ra2 37. Rc1 Ba6 38. Nf1 b4 39. cxb4 Na3+ 40. Kf3 Bxf1 41. Rxf1 Nxc2 42. Be5+ Kc6 43. b5+ Kxb5 44. Rb1+ Kc4 45. Rb7 Ra3+ 46. Kf2 Nd4 47. Rxf7 Ra2+ 48. Kf1 Nf3 49. Bf6 Kd3 50. Re7 Ke3 51. Rxe6+ Kxf4 52. Bd8 Ra1+ 53. Kf2 Ra2+ 54. Kf1 Nxh4 55. Re7 Nf5 56. Rxh7 d4 57. Rd7 Kf3 58. Ke1 Ne3 59. Rf7+ Ke4 60. Rb7 d3 61. Re7+ Kf3 62. Rf7+ Kg2 63. Rf2+ Rxf2 { 0-1 Black wins. } 0-1
+
+

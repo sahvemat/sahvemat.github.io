@@ -1,0 +1,23 @@
+[Event "European Individual Chess Championship 2"]
+[Site "Terme Catez, Slovenia"]
+[Date "2022.03.29"]
+[Round "3.5"]
+[White "Michalik, Peter"]
+[Black "Kjartansson, Gudmundur"]
+[Result "0-1"]
+[WhiteElo "2585"]
+[BlackElo "2450"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Michalik, Peter - Kjartansson, Gudmundur"]
+[ChapterURL "https://lichess.org/study/KojudVFP/i0rq30rx"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "4r1k1/2p2pp1/1p6/pP3n1p/P2P2q1/R3PpP1/2Q2P1K/7R w - - 0 39"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+39. Qxc7 g5! { Çok yönlü bir hamle! Bu hamleyle birlikte beyazın tüm karşı saldırı ve savunma fikirleri yavaş yavaş çürütülüyor. Önemli fikir ...h4 ile saldırmanın yanında beyazın önemli Vf4 hamlesini kesmekti. Birazdan göreceğimiz gibi saldırırken kendi şahının savunmasına da önemli bir katkısı olacak. } { [%cal Yg5f4,Bc7f4,Rg8g7] } 40. Qc6 Re6 41. Qc7 h4 42. Kg1 Kg7 { Yine güzel bir aktif savunma hamlesi. Siyah şah olası tehditlerden kaçıyor. } { [%csl Yg7] } 43. Qb8 Qe4 { [%csl Gb1][%cal Ge4b1] } 44. Ra1 Nxg3 { 45.fxg3 birkaç hamle içinde beyaz şahın mat olmasıyla sonuçlanırdı. } 45. Rh2 (45. fxg3 Qxe3+ 46. Kh2 Qd2+ 47. Kh3 f5 48. Qb7+ Kg6) 45... Nf5 46. Qd8 Rg6 47. Rc1 Nxe3! 48. Re1 Qg4+ 49. Kh1 Nf5 { [%csl Ga4,Gg7][%cal Gh4d4,Gd4a4] } 50. d5 Qxa4 { Siyahın bundan sonra materyal avantajı ve saldırısı bulunuyor. } 51. Qc8 Qb4 { [%cal Gb4e1] } 52. Rc1 Qd2 { [%csl Gd5,Rf5][%cal Gd2d5,Gd2c1] } 53. Qc4 g4 { [%cal Gg4g3] } 54. Rg1 g3 55. Rh3 (55. fxg3 Nxg3+ 56. Rxg3 Qd1+) 55... Qxf2 56. Qc3+ Kh7 57. Qd3 g2+ 58. Kh2 Qxg1+ { 0-1 Black wins. } { Güzel bir bitiriş, sonraki hamlede ...f2 ile saldırı sonuca ulaşacak. } { [%cal Gf3f2] } 0-1
+
+

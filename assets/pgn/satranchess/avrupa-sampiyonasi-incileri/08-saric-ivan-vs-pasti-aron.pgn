@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.28"]
+[Round "1.4"]
+[White "Saric, Ivan"]
+[Black "Pasti, Aron"]
+[Result "1-0"]
+[WhiteElo "2687"]
+[BlackElo "2398"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Saric, Ivan - Pasti, Aron"]
+[ChapterURL "https://lichess.org/study/KojudVFP/LXJIOYWW"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "b4rk1/6np/p2Q2p1/q7/3NP1P1/2r2N1P/4RP2/4R1K1 b - - 0 35"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+35... Rcxf3? 36. Nxf3 Rxf3 37. Rb1! { Ancak bu şekilde! Siyah şimdi 37...Kf8 ile geri dönse bile 38.Kb8 fili kazanacak. b8-karesi savunulamaz. Örneğin 37.Kb1 yerine 37.Kc1 Kf8 ile karşılanabilirdi. } 37... Rxh3 38. Rb8+ { 1-0 White wins. } 1-0
+
+

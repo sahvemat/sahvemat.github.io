@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.28"]
+[Round "2.6"]
+[White "Budisavljevic, Luka"]
+[Black "Deac, Bogdan-Daniel"]
+[Result "1-0"]
+[WhiteElo "2519"]
+[BlackElo "2679"]
+[Annotator "Dogan,Nazmi Can"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Budisavljevic, Luka - Deac, Bogdan-Daniel"]
+[ChapterURL "https://lichess.org/study/KojudVFP/kjvb0kdu"]
+[FEN "4q3/1p1r1pk1/1P1P2p1/3Qp2p/B6P/6P1/5PK1/8 b - - 0 41"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+41... Kf6 42. f4! exf4 43. Qd4+! Qe5 44. Qxe5+ Kxe5 45. Bxd7 Kxd6 46. Be8 fxg3 47. Bxf7 Kc6 48. Kxg3 Kxb6 49. Kf4 Kc5 50. Ke5! { 1-0 White wins. } { [%cal Yf7g6,Yg6h5,Yh4h8] } 1-0
+
+

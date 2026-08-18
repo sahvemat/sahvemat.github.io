@@ -1,0 +1,23 @@
+[Event "FIDE Worldchess Grand Prix Berlin 2022"]
+[Site "Berlin, Germany"]
+[Date "2022.02.07"]
+[Round "6.1"]
+[White "Grischuk, Alexander"]
+[Black "Bacrot, Etienne"]
+[Result "1-0"]
+[WhiteElo "2764"]
+[BlackElo "2642"]
+[Annotator "Dogan,Nazmi Can"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TAKTİKLER FIDE GP 2022 BLOG"]
+[ChapterName "SİYAH OYNAR KAZANIR"]
+[ChapterURL "https://lichess.org/study/CMs0HIDv/kvbFb0P0"]
+[FEN "3r3r/1p2kp2/p1bppnp1/2q5/4PP2/1BN5/PPPQ3P/1K1R2R1 w - - 0 20"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+20. Rg5 Nxe4 21. Nxe4 Bxe4 22. Rxc5 dxc5 23. Qe1 Rxd1+ 24. Qxd1 Rxh2 { [%csl Gh1][%cal Gh2h1] } 1-0
+
+

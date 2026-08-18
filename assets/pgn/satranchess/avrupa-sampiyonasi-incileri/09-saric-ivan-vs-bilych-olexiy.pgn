@@ -1,0 +1,24 @@
+[Event "European Individual Chess Championship 2"]
+[Site "Terme Catez, Slovenia"]
+[Date "2022.03.29"]
+[Round "3.7"]
+[White "Saric, Ivan"]
+[Black "Bilych, Olexiy"]
+[Result "1-0"]
+[WhiteElo "2687"]
+[BlackElo "2342"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Saric, Ivan - Bilych, Olexiy"]
+[ChapterURL "https://lichess.org/study/KojudVFP/oIp7gpzj"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "r5k1/1ppr1pp1/2qn1np1/p1b1p1N1/P3P2B/2P4P/BPQ2PPK/3RR3 b - - 0 22"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+22... Re8 23. f4! { [%csl Ge5][%cal Ge4e5] } 23... Qb6 (23... Nh7 24. Nf3 exf4 25. e5 Nf5 26. e6 fxe6 27. Ne5) 24. fxe5 Rxe5 25. Nf3! { [%csl Ge5][%cal Ge4e5] } 25... Rde7 26. Nxe5 Rxe5 { Kalite
+öne geçen beyaz zorlu bir oyunun ardından kazanmayı başardı. } 1-0
+
+

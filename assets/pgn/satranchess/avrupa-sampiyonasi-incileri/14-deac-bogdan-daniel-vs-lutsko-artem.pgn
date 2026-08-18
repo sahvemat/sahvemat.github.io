@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.28"]
+[Round "1.8"]
+[White "Deac, Bogdan-Daniel"]
+[Black "Lutsko, Artem"]
+[Result "1-0"]
+[WhiteElo "2679"]
+[BlackElo "2390"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Deac, Bogdan-Daniel - Lutsko, Artem"]
+[ChapterURL "https://lichess.org/study/KojudVFP/s5yU3qLj"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "r5k1/3nQ1p1/p1q2p2/R3p3/5P2/2B3P1/1P5P/6K1 b - - 0 29"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+29... Nb6 { Siyah fxe5 hamlesine Ad5 ve belki Ae3 ile karşı saldırı arıyor. } 30. fxe5 Nd5 31. Qd6! Qxd6 32. exd6 { [%csl Gd5] } 32... Nb6 { Elbette filin alınması durumunda c-piyonu d-piyonu ile bağlanacaktı. } { [%cal Gb6c4] } 33. Rc5! Na4 34. Rc6 Nxc3 35. d7! { 1-0 White wins. } { [%csl Gc8][%cal Gc6c8] } 1-0
+
+

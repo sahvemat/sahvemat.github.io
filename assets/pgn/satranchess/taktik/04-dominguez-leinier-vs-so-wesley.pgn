@@ -1,0 +1,23 @@
+[Event "FIDE Worldchess Grand Prix Berlin 2022"]
+[Site "Berlin, Germany"]
+[Date "2022.02.04"]
+[Round "4.7"]
+[White "Dominguez, Leinier"]
+[Black "So, Wesley"]
+[Result "0-1"]
+[WhiteElo "2752"]
+[BlackElo "2772"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TAKTİKLER FIDE GP 2022 BLOG"]
+[ChapterName "Siyah Oynar"]
+[ChapterURL "https://lichess.org/study/CMs0HIDv/IbuuQqHi"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "r5k1/1p4pp/2p3n1/p2p1r2/3P1n1q/5Q1P/PP1B1PP1/2RBR1K1 w - - 0 23"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+23. Qg3 { Dominguez oyun sonrası röportajında 23.Qg3 Qxg3 24.fxg3 Nd3 25.Bc2 ardından kazandığını düşünmüştü, oysa gerçek farklı mıydı? } 23... Qxg3 24. fxg3 Nd3 25. Bc2 Rf2 26. Bxd3 Rxd2 27. Bxg6 hxg6 0-1
+
+

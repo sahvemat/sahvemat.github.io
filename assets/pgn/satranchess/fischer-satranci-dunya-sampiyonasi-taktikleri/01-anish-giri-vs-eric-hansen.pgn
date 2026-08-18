@@ -1,0 +1,26 @@
+[Event "Offerspill FRC WCH Tactics: Giri - Hansen Analysis"]
+[Date "2022.09.19"]
+[White "Anish Giri"]
+[Black "Eric Hansen"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Offerspill FRC WCH Tactics"]
+[ChapterName "Giri - Hansen Analysis"]
+[ChapterURL "https://lichess.org/study/X6IMPGpt/jniWblHM"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "2kr3r/1ppqn1p1/2b2pn1/p7/P3P2p/2P1QNB1/1PB3PP/RK2R3 w Q - 0 16"]
+[SetUp "1"]
+[UTCDate "2022.09.19"]
+[UTCTime "15:03:16"]
+[ChapterMode "gamebook"]
+
+{ All of these puzzles are from the Offerspill and CCC & NACCL Fischer Random World Championship Qualifiers.
+
+White to play and win, remember that this is not standard chess! }
+16. O-O-O!! { It's very hard not to appreciate this move since in normal chess this would be impossible :) } 16... Qe6 17. Qa7 { Black cannot avoid heavy material losses. } { [%csl Ga8,Gc7][%cal Ga7a8,Ga7c7,Gg3c7] } *
+
+

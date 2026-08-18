@@ -1,0 +1,23 @@
+[Event "FIDE World Chess Grand Prix Berlin 2022"]
+[Site "Berlin, Germany"]
+[Date "2022.02.17"]
+[Round "13.1"]
+[White "Nakamura, Hikaru"]
+[Black "Aronian, Levon"]
+[Result "1-0"]
+[WhiteElo "2736"]
+[BlackElo "2772"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TAKTİKLER FIDE GP 2022 BLOG"]
+[ChapterName "Siyah Oynar"]
+[ChapterURL "https://lichess.org/study/CMs0HIDv/GgwkW3lz"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "8/5p2/4k3/1pR5/1P3K2/2Pr4/8/8 w - - 0 46"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+46. Ke4 Rh3 47. Kd4 Rh4+ 48. Kd3 Rh3+ 49. Kc2 Rh2+ 50. Kb3 f5 { Oyunda Beyaz şah merkezde f-piyonuna yakın kalmıştı, bu şekliyle berabere ulaşmak daha kolay olacaktır. } 1-0
+
+

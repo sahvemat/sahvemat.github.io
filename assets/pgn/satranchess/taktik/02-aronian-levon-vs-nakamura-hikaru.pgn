@@ -1,0 +1,23 @@
+[Event "FIDE World Chess Grand Prix Berlin 2022"]
+[Site "Berlin, Germany"]
+[Date "2022.02.17"]
+[Round "14.1"]
+[White "Aronian, Levon"]
+[Black "Nakamura, Hikaru"]
+[Result "0-1"]
+[WhiteElo "2772"]
+[BlackElo "2736"]
+[Annotator "https://lichess.org/@/loepare"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TAKTİKLER FIDE GP 2022 BLOG"]
+[ChapterName "SİYAH OYNAR KAZANIR"]
+[ChapterURL "https://lichess.org/study/CMs0HIDv/ckvV4e8S"]
+[FEN "6k1/8/p2p1K2/1r5r/1P4p1/1R6/6P1/5R2 w - - 0 48"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+48. Rf4 { 0-1 White resigns. } 48... Rh6+ 49. Ke7 Rb7+ 50. Kd8 Rh8 0-1
+
+

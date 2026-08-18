@@ -1,0 +1,23 @@
+[Event "EICC 22"]
+[Site "Catez, Slovenia"]
+[Date "2022.03.30"]
+[Round "4.2"]
+[White "Kjartansson, Gudmundur"]
+[Black "Svane, Rasmus"]
+[Result "1-0"]
+[WhiteElo "2450"]
+[BlackElo "2637"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Kjartansson, Gudmundur - Svane, Rasmus"]
+[ChapterURL "https://lichess.org/study/KojudVFP/A51UhpWz"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "8/5kp1/P7/3p4/2nP4/2B3Kp/8/8 w - - 0 44"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+44. Ba5 { 1-0 White wins. } 1-0
+
+

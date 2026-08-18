@@ -1,0 +1,23 @@
+[Event "FIDE Worldchess Grand Prix Berlin 2022"]
+[Site "Berlin, Germany"]
+[Date "2022.02.04"]
+[Round "1.1"]
+[White "Esipenko, Andrey"]
+[Black "Grischuk, Alexander"]
+[Result "1/2-1/2"]
+[WhiteElo "2714"]
+[BlackElo "2764"]
+[Annotator "https://lichess.org/@/broadcaster"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "TAKTİKLER FIDE GP 2022 BLOG"]
+[ChapterName "BEYAZ OYNAR"]
+[ChapterURL "https://lichess.org/study/CMs0HIDv/PFTUKNZs"]
+[FEN "2r3k1/5p2/4p1pp/1p6/q7/5PP1/1QN1P1KP/R7 b - - 0 31"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+31... Rxc2 { 1/2-1/2 The game is a draw. } 32. Qf6 Rxe2+ 33. Kh3 Ra2 34. Rc1 Rc2 35. Ra1 Ra2 36. Rc1 1/2-1/2
+
+
