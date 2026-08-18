@@ -24,4 +24,4 @@
 [ChapterMode "gamebook"]
 
 { Siyah Axc6 hamlesini Kc8 ile yanıtlamayı planıyor. Sizce piyon zehirli mi? }
-32. Nxc6! { [%eval 3.21] [%clk 0:14:07] } 32... Rc8 { [%eval 3.57] [%clk 0:20:28] } 33. Rxg6!! $18 { [%eval 3.73] } { Bu hamle olmaksızın beyaz piyonu alamazdı. } { [%csl Gg6][%cal Rc6e7,Rc6e5,Gh7g6] [%clk 0:14:24] } 1-0
+{[P]} 32. Nxc6! { [%eval 3.21] [%clk 0:14:07] } 32... Rc8 { [%eval 3.57] [%clk 0:20:28] } 33. Rxg6!! $18 { [%eval 3.73] } { Bu hamle olmaksızın beyaz piyonu alamazdı. } { [%csl Gg6][%cal Rc6e7,Rc6e5,Gh7g6] [%clk 0:14:24] } 1-0

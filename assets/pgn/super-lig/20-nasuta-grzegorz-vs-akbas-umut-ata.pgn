@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Belki de tüm turnuvanın en kritik anlarından biri, eğer Beyaz kazanabilseydi belki takımı ligde kalacaktı. }
-39. Qd3! { Elbette kazanan tek hamle değil. Siyahın Ba3 tehdidi Rd8'ile bertaraf edilir ve Beyaz iki piyon fazladır. Bu nedenle Siyahın tehdidini önleyen her hamle kazanır. Örneğin; } (39. Qf5?? { oyunda oynanan hamleydi. } { [%clk 0:00:51] } 39... Ba3! { [%clk 0:01:25] } 40. Qxe5 { [%clk 0:31:13] } 40... Qa1+ { [%clk 0:31:52] } 41. Kd2 { [%clk 0:31:30] } 41... Bxb2 $19 { [%clk 0:23:08] }) (39. Qf7! $18) (39. Rc7! $18) 39... Qa5 40. Qd2 Qb6 41. Kb1 $18 *
+{[P]} 39. Qd3! { Elbette kazanan tek hamle değil. Siyahın Ba3 tehdidi Rd8'ile bertaraf edilir ve Beyaz iki piyon fazladır. Bu nedenle Siyahın tehdidini önleyen her hamle kazanır. Örneğin; } (39. Qf5?? { oyunda oynanan hamleydi. } { [%clk 0:00:51] } 39... Ba3! { [%clk 0:01:25] } 40. Qxe5 { [%clk 0:31:13] } 40... Qa1+ { [%clk 0:31:52] } 41. Kd2 { [%clk 0:31:30] } 41... Bxb2 $19 { [%clk 0:23:08] }) (39. Qf7! $18) (39. Rc7! $18) 39... Qa5 40. Qd2 Qb6 41. Kb1 $18 *

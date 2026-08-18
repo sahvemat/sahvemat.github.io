@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Stockfish burada görmesi oldukça iyi hesap gerektiren bir hamlenin altını çiziyor. }
-39. Nxd5!! (39. Qa2 { Oyunda oynanan hamleydi ve büyük karmaşaya sahne olan parti uzun bir mücadele sonunda berabere oldu. } { [%clk 0:03:32] }) 39... Kg7 40. e6! { Çok önemli bir detay. } (40. c6 Qxc6 41. Ne3 Qxg2+ 42. Nxg2 Rxa7 { Siyaha savunma olanakları sunardı. }) 40... fxe6 41. c6! Qxc6 42. Nf4 Qxg2+ 43. Qxg2 { Yedinci yataydaki açmaz nedeniyle şimdi bu mümkün olabiliyor, ancak tek ayrıntı bu değil. } 43... Rxa7 44. Nxe6+! Kf6 45. Qf2+ Kxe6 46. d5+ $18 { Asıl önemli olan konu buydu. } 1/2-1/2
+{[P]} 39. Nxd5!! (39. Qa2 { Oyunda oynanan hamleydi ve büyük karmaşaya sahne olan parti uzun bir mücadele sonunda berabere oldu. } { [%clk 0:03:32] }) 39... Kg7 40. e6! { Çok önemli bir detay. } (40. c6 Qxc6 41. Ne3 Qxg2+ 42. Nxg2 Rxa7 { Siyaha savunma olanakları sunardı. }) 40... fxe6 41. c6! Qxc6 42. Nf4 Qxg2+ 43. Qxg2 { Yedinci yataydaki açmaz nedeniyle şimdi bu mümkün olabiliyor, ancak tek ayrıntı bu değil. } 43... Rxa7 44. Nxe6+! Kf6 45. Qf2+ Kxe6 46. d5+ $18 { Asıl önemli olan konu buydu. } 1/2-1/2

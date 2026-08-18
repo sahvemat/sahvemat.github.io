@@ -22,4 +22,4 @@
 [FEN "6k1/1p1q1pp1/2p1pb1p/1r2n2P/r2P4/3QPBP1/P4PK1/BR1R4 w - - 12 28"]
 [SetUp "1"]
 
-28. Qxb5! { Bu vezir fedası materyal kazandırıyor. } { [%clk 0:17:31] } 28... cxb5 { [%clk 0:08:40] } 29. dxe5 { [%clk 0:17:54] } 29... Qc7 { [%clk 0:07:52] } 30. exf6 { [%clk 0:17:50] } 30... Rxa2 { [%clk 0:08:19] } 31. Rbc1 { [%clk 0:16:21] } 1-0
+{[P]} 28. Qxb5! { Bu vezir fedası materyal kazandırıyor. } { [%clk 0:17:31] } 28... cxb5 { [%clk 0:08:40] } 29. dxe5 { [%clk 0:17:54] } 29... Qc7 { [%clk 0:07:52] } 30. exf6 { [%clk 0:17:50] } 30... Rxa2 { [%clk 0:08:19] } 31. Rbc1 { [%clk 0:16:21] } 1-0

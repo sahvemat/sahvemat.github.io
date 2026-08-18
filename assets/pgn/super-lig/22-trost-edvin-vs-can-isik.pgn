@@ -26,4 +26,4 @@
 [ChapterMode "gamebook"]
 
 { Çiçeği burnunda GM Işık Can basit ve etkili bir hamleyle rakibini terke zorluyor. }
-31... Nc3+ { Beyaz terk etti, çünkü mat olmamak için vezirden vazgeçmek zorundadır. } { [%clk 0:19:06] } 0-1
+{[P]} 31... Nc3+ { Beyaz terk etti, çünkü mat olmamak için vezirden vazgeçmek zorundadır. } { [%clk 0:19:06] } 0-1

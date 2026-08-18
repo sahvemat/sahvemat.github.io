@@ -24,4 +24,4 @@
 [ChapterMode "gamebook"]
 
 { Görünüşe göre siyah kalesini kaçmak zorunda. } { [%cal Gg4h5] }
-18... Bxg5! { [%eval -3.5] [%clk 1:03:54] } 19. Bxh5 { [%eval -3.52] [%clk 0:39:46] } 19... Bf6! { Beyazın gözden kaçırdığı detay buydu! } { [%clk 1:04:11] } 20. Qf2 { [%eval -3.53] [%clk 0:38:25] } 20... Rxh5 $19 { [%eval -3.45] [%clk 1:04:31] } 0-1
+{[P]} 18... Bxg5! { [%eval -3.5] [%clk 1:03:54] } 19. Bxh5 { [%eval -3.52] [%clk 0:39:46] } 19... Bf6! { Beyazın gözden kaçırdığı detay buydu! } { [%clk 1:04:11] } 20. Qf2 { [%eval -3.53] [%clk 0:38:25] } 20... Rxh5 $19 { [%eval -3.45] [%clk 1:04:31] } 0-1

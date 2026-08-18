@@ -26,4 +26,4 @@
 [SetUp "1"]
 
 { Beyazın talihsiz son hamlesi güzel bir bitirişe müsade ediyor. }
-47... Bh2+! { [%clk 0:19:14] } 48. Nxh2 { [%clk 0:03:47] } (48. Kxh2 Qxf2 $19) 48... Rxg2+! { [%clk 0:19:38] } 0-1
+{[P]} 47... Bh2+! { [%clk 0:19:14] } 48. Nxh2 { [%clk 0:03:47] } (48. Kxh2 Qxf2 $19) 48... Rxg2+! { [%clk 0:19:38] } 0-1

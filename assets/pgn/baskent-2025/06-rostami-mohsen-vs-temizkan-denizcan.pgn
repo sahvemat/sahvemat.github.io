@@ -22,4 +22,4 @@
 [SetUp "1"]
 
 { Siyahın nasıl materyal kazandığını görebilir misiniz? }
-19... Bxc3 { [%eval -4.26] [%clk 0:22:57] } 20. Nxc3 { [%eval -4.28] [%clk 0:34:48] } 20... Qf6+ { [%eval -4.25] [%clk 0:23:24] } 21. Kg1 { [%eval -4.12] [%clk 0:34:58] } 21... Qxc3 $19 { [%eval -4.33] [%clk 0:23:51] } 0-1
+{[P]} 19... Bxc3 { [%eval -4.26] [%clk 0:22:57] } 20. Nxc3 { [%eval -4.28] [%clk 0:34:48] } 20... Qf6+ { [%eval -4.25] [%clk 0:23:24] } 21. Kg1 { [%eval -4.12] [%clk 0:34:58] } 21... Qxc3 $19 { [%eval -4.33] [%clk 0:23:51] } 0-1

@@ -25,4 +25,4 @@
 [SetUp "1"]
 
 { Siyahın savunma yapmasının tek yolu iyi bir hesap ile karşı saldırı! }
-38... Rxg2+! { [%clk 0:01:01] } 39. Kxg2 { [%clk 0:04:13] } 39... Nxd6+ { [%clk 0:01:22] } 40. Rf3 { [%clk 0:34:34] } 40... Nf5! { [%clk 0:30:59] } 41. Bf2 { [%clk 0:34:48] } 41... g5! { ve Beyaz zugzwang durumundadır, zira sonraki Nh4 veya Nd4'e müsade etmek zorundadır. } { [%clk 0:31:05] } 42. Be1 { [%clk 0:33:59] } 42... Nd4 { Beyaz terk etti. } { [%clk 0:31:27] } 0-1
+{[P]} 38... Rxg2+! { [%clk 0:01:01] } 39. Kxg2 { [%clk 0:04:13] } 39... Nxd6+ { [%clk 0:01:22] } 40. Rf3 { [%clk 0:34:34] } 40... Nf5! { [%clk 0:30:59] } 41. Bf2 { [%clk 0:34:48] } 41... g5! { ve Beyaz zugzwang durumundadır, zira sonraki Nh4 veya Nd4'e müsade etmek zorundadır. } { [%clk 0:31:05] } 42. Be1 { [%clk 0:33:59] } 42... Nd4 { Beyaz terk etti. } { [%clk 0:31:27] } 0-1
