@@ -1,4 +1,5 @@
 {% assign analysisPost = site.posts | where: "type", "analysis" | first %}
+{% unless analysisPost %}{% assign analysisPost = site.posts | first %}{% endunless %}
 {% assign fen_parts = analysisPost.FEN | split: " " %}
 <section class="analysis-section">
     <div class="analysis-main">

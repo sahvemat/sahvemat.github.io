@@ -1,6 +1,9 @@
 {% assign featurePost = site.posts | where: "type", "feature" | first %}
+{% unless featurePost %}{% assign featurePost = site.posts | first %}{% endunless %}
 {% assign flashPost = site.posts | where: "type", "flash" | first %}
+{% unless flashPost %}{% assign flashPost = site.posts | slice: 1, 1 | first %}{% endunless %}
 {% assign upcomingPost = site.posts | where: "type", "upcoming" | first %}
+{% unless upcomingPost %}{% assign upcomingPost = site.posts | slice: 2, 1 | first %}{% endunless %}
 {% assign tr_months = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
 {% assign feature_month_idx = featurePost.date | date: "%-m" | minus: 1 %}
 
