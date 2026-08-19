@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/HGTFL2PH/cAxD98xK"]
 [FEN "1r3rk1/5ppp/3b1n2/p2p1q2/3N4/PP6/1B3PPP/2RQR1K1 b - - 4 19"]
 [SetUp "1"]
+[Orientation "Black"]
 
 { Önceki örnekte Yunan fedası için harika katkı sunan e5-piyonu bu örnekte yok. Bu durum elbette savunma şanslarını arttıracak. }
 {[P]} 19... Bxh2+!? { [%eval 0.87] [%clk 0:37:35] } 20. Kxh2 { [%eval 0.9] [%clk 0:41:49] } 20... Ng4+ { [%eval 0.94] [%clk 0:36:38] } 21. Kg1? { Bu hamle hemen kaybediyor. Önceki örnekteki savunma biçimi başarılı olacaktı. } { [%clk 0:35:27] } (21. Kg3! Qxf2+ 22. Kh3! (22. Kxg4 Qxg2+ 23. Kf4 Qxb2 { Beyazın zayıf şahı siyaha yeterince oyun verecekti. }) 22... Qxb2 (22... f5 23. Qe2) 23. Qxg4) 21... Qxf2+ { [%eval -7.99] [%clk 0:36:27] } 22. Kh1 { [%eval -8.26] [%clk 0:35:52] } 22... Qh4+ { [%eval -8.21] [%clk 0:36:19] } 23. Kg1 { [%eval -8.16] [%clk 0:36:13] } 23... Qf2+ { [%eval -7.95] [%clk 0:36:47] } 24. Kh1 { [%eval -8.01] [%clk 0:36:41] } 24... Qh4+ { [%eval -8.25] [%clk 0:36:11] } 25. Kg1 { [%eval -8.12] [%clk 0:36:53] } 25... Qh2+ { [%eval -8.14] [%clk 0:38:35] } 26. Kf1 { [%eval -8.09] [%clk 0:37:15] } 26... Qh1+ { [%eval -8.19] [%clk 0:38:57] } 27. Ke2 { [%eval -7.44] [%clk 0:37:19] } 27... Qxg2+ { [%eval -8.06] [%clk 0:39:22] } 28. Kd3 { [%eval -8.02] [%clk 0:37:04] } 28... Nf2+ { [%eval -7.91] [%clk 0:39:43] } 0-1
