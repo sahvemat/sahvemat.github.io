@@ -5,6 +5,7 @@ author: "FM Nazmi Can Doğan"
 section: "Motor Analizi"
 event: "TCEC Sezon 23 · 1. Lig"
 excerpt: "TCEC 23. Sezon 1. Lig'de oynanan iki motor partisi ve Satranchess YouTube kanalındaki analiz videolarıyla, yapay zekaların birbiriyle nasıl boğuştuğuna yakından bakış."
+FEN: r1bqr1k1/1p2pN1p/2p1P1p1/3p1n2/1P3B2/p1bN3P/P4PP1/R2QR1K1 b - - 1 20
 date: 2022-09-16
 reading_time: 3
 ---

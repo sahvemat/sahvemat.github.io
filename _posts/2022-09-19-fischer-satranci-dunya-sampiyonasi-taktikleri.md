@@ -5,6 +5,7 @@ author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Offerspill & CCC/NACL Fischer960 Elemeleri"
 excerpt: "Offerspill ve CCC & NACL Dünya Fischer Satrancı Şampiyonası elemelerinden, standart satrançtaki alışkanlıkların işe yaramadığı iki taktik pozisyon."
+FEN: 2kr3r/1ppqn1p1/2b2pn1/p7/P3P2p/2P1QNB1/1PB3PP/RK2R3 w Q - 0 16
 date: 2022-09-19
 reading_time: 2
 ---
