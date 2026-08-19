@@ -22,6 +22,7 @@
 [FEN "2r1r3/p2q1pk1/1p3np1/3P3p/2P2P2/3RN3/PQ5P/3R2K1 b - - 6 27"]
 [SetUp "1"]
 [ChapterMode "gamebook"]
+[Orientation "Black"]
 
 { Siyah basit bir hesapla kazanıyor! }
 {[P]} 27... Rxe3! { ve beyaz terk etti, çünkü: } { [%clk 0:43:52] } 28. Rxe3 Qg4+! { [%cal Gg4d1,Gg4g1] } 0-1

@@ -21,6 +21,7 @@
 [Annotator "https://lichess.org/@/NaSil"]
 [FEN "2r5/1p1k3p/1p3Rp1/5p2/n1BK1P2/6P1/7P/8 b - - 3 53"]
 [SetUp "1"]
+[Orientation "Black"]
 
 { Beyaz uzun süre baskı altında kalmanın getirdiği yorgunlukla hata yapıyor ve siyaha kazandıra bir taktik imkanı sunuyor. Siyah oynar! }
 {[P]} 53... Rxc4+! { [%eval -6.9] [%clk 0:00:17] } 54. Kxc4 { [%eval -6.39] } 54... Ke7 $19 { [%eval -6.46] [%clk 0:00:44] } 55. Kb4 { [%eval -7.97] } 55... Kxf6 { [%eval -7.37] [%clk 0:01:03] } 56. Kxa4 { [%eval -9.18] } 56... Ke6 { [%eval -8.91] [%clk 0:00:56] } 57. Kb5 { [%eval -8.9] } 57... Kd5 { [%eval -8.32] [%clk 0:01:01] } 58. Kxb6 { [%eval -8.75] } 58... Ke4 { [%eval -8.9] [%clk 0:01:27] } 59. Kxb7 { [%eval -12.16] } 59... Kf3 { [%eval -12.22] [%clk 0:01:54] } 60. Kc6 { [%eval -11.8] } 60... Kg2 { [%eval -11.0] [%clk 0:02:18] } 0-1

@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/HGTFL2PH/wK1dVr8j"]
 [FEN "R7/8/8/8/8/8/1r2p1K1/4k3 b - - 7 80"]
 [SetUp "1"]
+[Orientation "Black"]
 
 { Çok önemli bir kale finali ile karşı karşıyayız. Teorik olarak kazanç bu konumu kazanma yöntemlerinin bilinmesi önem taşıyor. }
 {[P]} 80... Rd2 { [%eval -9.03] [%clk 0:06:35] } 81. Ra1+ { [%eval -9.11] [%clk 0:04:16] } 81... Rd1 { [%eval -8.89] [%clk 0:07:02] } 82. Ra2 { [%eval -62.61] [%clk 0:04:42] } 82... Rd8 { [%eval -42.36] [%clk 0:07:02] } 83. Ra1+ { [%eval -62.36] [%clk 0:04:21] } 83... Rd1 { Kazanç için yeterli ilk fikir şahın geri çekilmesi ve Kd1 fikrinin hazırlanmasıydı. } { [%clk 0:03:56] } (83... Kd2 84. Ra2+ (84. Kf2 Rf8+ $19) 84... Ke3 85. Ra3+ Rd3 86. Ra1 Rd1 $19) 84. Ra2 { [%eval -12.29] [%clk 0:03:26] } 84... Rb1 { [%eval -6.28] [%clk 0:03:38] } 85. Kf3 { [%clk 0:02:14] } 85... Rb3+ { [%eval #-24] [%clk 0:04:07] } 86. Kg2 { [%clk 0:02:37] } 86... Rc3?? { Kazanmak için son şans } { [%clk 0:04:34] } (86... Re3 { Şd1 tehdidi ile. } 87. Ra1+ Kd2 88. Ra2+ Kc3 89. Ra3+ Kd4 90. Ra4+ Kc5 $19) 87. Ra1+ { [%clk 0:01:55] } 87... Kd2 { [%clk 0:04:13] } 88. Kf2 { bu konum artık teorik beraberedir. } { [%clk 0:02:20] } 88... Rc2 { [%clk 0:04:19] } 89. Re1 { [%clk 0:02:06] } 89... Kd3 { [%clk 0:04:45] } 90. Ra1 { [%clk 0:02:17] } 90... Rc3 { [%clk 0:04:27] } 91. Ra8 { [%clk 0:01:34] } 91... Kd2 { [%clk 0:04:54] } 92. Rd8+ { [%clk 0:01:51] } 92... Rd3 { [%clk 0:05:21] } 93. Rxd3+ { [%clk 0:02:12] } 93... Kxd3 { [%clk 0:05:49] } 94. Ke1 { [%clk 0:02:37] } 94... Ke3 { 1/2-1/2 wins. } { [%clk 0:06:15] } 1/2-1/2

@@ -23,6 +23,7 @@
 [ChapterURL "https://lichess.org/study/mjDLC22l/qqoNYZ7E"]
 [FEN "5rk1/4qppp/5b2/R7/4N3/2n1QP2/6PP/2B3K1 b - - 0 31"]
 [SetUp "1"]
+[Orientation "Black"]
 
 { Aynı dikey ve çapraz üzerindeki taşların taktiklere maruz kalması bilinen bir durum. Tecrübeli GM Parligras, eşit konumun sadeliğine aldanıyor. }
 {[P]} 31... Bd4! { Siyah terk etti. } { [%clk 0:22:13] } 0-1
