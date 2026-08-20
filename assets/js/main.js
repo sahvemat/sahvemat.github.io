@@ -769,7 +769,8 @@
 })();
 
 (function () {
-    var n = 0;
+    var article = document.querySelector('.post-article');
+    var n = article ? (parseInt(article.getAttribute('data-photo-start'), 10) || 0) : 0;
     document.querySelectorAll('.post-article p > img[title]').forEach(function (img) {
         var p = img.parentNode;
         if (p.childNodes.length !== 1) return;

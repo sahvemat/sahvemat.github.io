@@ -6,6 +6,7 @@ section: "Turnuva Günlüğü"
 event: "Whitsun Açık · Münih Satranç Festivali"
 date: 2026-06-03
 permalink: /posts/whitsun-acik-horvath-ve-arlesli-kiz/bolum-6/
+photo_start: 4
 ---
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
