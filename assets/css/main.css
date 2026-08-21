@@ -728,6 +728,19 @@ a:hover {
     100% { transform: translateX(-50%); }
 }
 
+/* .hero-grid stacks to a single column below 1024px, which would otherwise
+   bury the marquee under the two teaser cards. A second copy is embedded
+   inside .hero-grid, right after .grid-main, so it lands directly under the
+   main title on mobile; the two copies are swapped per breakpoint so only
+   one is ever visible. */
+.grid-main + .marquee-section { display: block; }
+.hero-grid + .marquee-section { display: none; }
+
+@media (min-width: 1024px) {
+    .grid-main + .marquee-section { display: none; }
+    .hero-grid + .marquee-section { display: block; }
+}
+
 /* ── Analysis Section ───────────────────────────────────────── */
 .analysis-section {
     display: grid;
