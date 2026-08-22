@@ -464,13 +464,6 @@ a:hover {
     grid-template-columns: 1fr;
     border-bottom: 1px solid var(--line);
     min-height: 70vh;
-    /* .sidebar-card uses flex: 1 with an equal-share height target, but its
-       min-height:auto default keeps a tall FEN board diagram at its own
-       content size regardless of that target. When the diagram pushes past
-       its share, the card overflows past the grid row's own bottom edge and
-       collides with the marquee band that follows in source order. Clipping
-       here keeps that overflow contained instead of bleeding into the band. */
-    overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -667,7 +660,13 @@ a:hover {
     background: var(--ink);
     color: var(--paper);
     padding: 2rem 3rem;
-    min-height: 300px;
+    /* No min-height here: it's a sibling of .sidebar-card--light inside a
+       flex: 1 column, and an explicit min-height overrides flexbox's
+       automatic (content-based) minimum, letting the card shrink below a
+       tall FEN diagram's own size. That let the diagram overflow past the
+       card and the hero-grid row into the marquee band below. Leaving the
+       default auto minimum keeps the card at least as tall as its content
+       while still letting it grow to fill the column like before. */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
