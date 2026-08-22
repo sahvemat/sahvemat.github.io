@@ -733,7 +733,7 @@ a:hover {
    inside .hero-grid, right after .grid-main, so it lands directly under the
    main title on mobile; the two copies are swapped per breakpoint so only
    one is ever visible. */
-.grid-main + .marquee-section { display: block; }
+.grid-main + .marquee-section { display: block; margin-top: 1.5rem; border-top: 1px solid var(--line); }
 .hero-grid + .marquee-section { display: none; }
 
 @media (min-width: 1024px) {
