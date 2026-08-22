@@ -464,6 +464,13 @@ a:hover {
     grid-template-columns: 1fr;
     border-bottom: 1px solid var(--line);
     min-height: 70vh;
+    /* .sidebar-card uses flex: 1 with an equal-share height target, but its
+       min-height:auto default keeps a tall FEN board diagram at its own
+       content size regardless of that target. When the diagram pushes past
+       its share, the card overflows past the grid row's own bottom edge and
+       collides with the marquee band that follows in source order. Clipping
+       here keeps that overflow contained instead of bleeding into the band. */
+    overflow: hidden;
 }
 
 @media (min-width: 1024px) {
