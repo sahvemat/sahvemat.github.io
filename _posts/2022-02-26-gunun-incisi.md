@@ -4,11 +4,13 @@ title: "Günün İncisi"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 3. Tur"
-excerpt: "Levon Aronian'ın Vincent Keymer'e karşı sergilediği açılış felsefesi ve nadir piyon yapısı, Caro-Kann Savunması'nın değişmeli varyantına dair bölüm bölüm bir inceleme."
+excerpt: "2022 Fide Grand Prix ve Belgrad'daki büyükusta turnuvasından dört öğretici parti: Aronian–Keymer, Nakamura–Esipenko, Giri–Vitiugov ve Maghsoodloo–Sarana'nın açılış felsefesinden oyunsonu tekniğine uzanan dörtlü bir inceleme."
 date: 2022-02-26
 FEN: rnbqkb1r/pp2pppp/5n2/3p4/3P4/3B3P/PPP2PP1/RNBQK1NR b KQkq - 0 5
-reading_time: 11
+reading_time: 43
 ---
+
+{% include chapter-toc.html dataset="gunun_incisi_toc" %}
 
 ## Levon Aronian - Vincent Keymer 2022 Fide Grand Prix 3. Tur Mücadelesi
 
@@ -241,6 +243,13 @@ Değişmeli Caro-Kann’ın ele alındığı bazı videolar:
 <div class="video-embed" data-caption="Bir Varım, Bir Yokum... | Caro-Kann Savunması"><iframe src="https://www.youtube.com/embed/HWtizq-Rygk" title="Bir Varım, Bir Yokum... | Caro-Kann Savunması" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 
 <div class="video-embed" data-caption="Yıldırım Satranç 5dk | ICC (Rakip GM SnoWKiD) | Caro-Kann Savunması"><iframe src="https://www.youtube.com/embed/pAAmaUmRkWg" title="Yıldırım Satranç 5dk | ICC (Rakip GM SnoWKiD) | Caro-Kann Savunması" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+
+<div class="next-section-nav-wrap">
+<a class="next-section-nav" href="{{ '/posts/gunun-incisi/bolum-2/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Nakamura – Esipenko</span> <span class="next-section-arrow">→</span></span>
+</a>
+</div>
 
 ---
 

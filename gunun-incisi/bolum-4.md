@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Günün İncisi (4) ve Açılış Faciası"
+title: "Günün İncisi: Bölüm 4 — Maghsoodloo – Sarana: Açılış Faciası"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "Belgrad 2022 · Sırbistan Büyükustaları Turnuvası"
-excerpt: "Belgrad'da Grand Prix'nin gölgesinde oynanan bir başka güçlü turnuvadan: Maghsoodloo - Sarana partisinde açılış hazırlığının ince bir tuzağa nasıl dönüştüğünü adım adım izliyoruz."
+permalink: /posts/gunun-incisi/bolum-4/
 date: 2022-03-17
-FEN: rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6
-reading_time: 9
 ---
+
+{% include chapter-toc.html dataset="gunun_incisi_toc" %}
 
 ## Parham Maghsoodloo - Alexei Sarana Belgrad 2022
 
@@ -208,6 +208,13 @@ Hemen kaybediyor. Beyazın Ka7 hamlesini kesmek için 23…Ac5 gerekliydi, fakat
 
 Vezirini kaybetmek üzere olan siyah oyunu terk etti. Eğer at alınmazsa Ab4 vardır.
 Daha önce incelediğimiz Günün İncisi partilerinden farklı olarak açılış hamlelerinin çok daha büyük önem arz ettiği bir oyunu incelemiş olduk. Buradan bize bir ders çıkması gerekirse, kendimize seçtiğimiz açılışları hazırlık düzeyimize göre seçmemiz gerekir. Eğer açılış çalışmayı çok sevmiyorsak Najdorf gibi varyantları seçmek masa başında bize daha büyük zorluklar çıkarabilir. Sarana gibi Najdorf’un önemli uygulayıcılarından kuvvetli bir büyükustanın bile açılış hazırlığından hemen sonra zor duruma düşmesi bize bu konuda düşünmek üzere belli dersler sunabilir.
+
+<div class="next-section-nav-wrap">
+<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/gunun-incisi/' | relative_url }}">
+  <span class="next-section-label">İlk sayfaya dön</span>
+  <span class="next-section-title"><span class="next-section-text">Günün İncisi</span> <span class="next-section-arrow">↺</span></span>
+</a>
+</div>
 
 ---
 

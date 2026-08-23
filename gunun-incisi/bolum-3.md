@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Günün İncisi (3)"
+title: "Günün İncisi: Bölüm 3 — Giri – Vitiugov"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · İkinci Ayak, Belgrad"
-excerpt: "Anish Giri'nin İtalyan Açılışı'ndaki ev hazırlığı, Nikita Vitiugov karşısında açılış felsefesinden merkez mücadelesine, oradan da şah kanadı saldırısına uzanan tam bir ders niteliğinde."
+permalink: /posts/gunun-incisi/bolum-3/
 date: 2022-03-09
-FEN: r1bq1rk1/ppp2pp1/2np1n1p/2b1p3/2B1P3/2PP1N2/PP1N1PPP/R1BQR1K1 b - - 0 8
-reading_time: 12
 ---
+
+{% include chapter-toc.html dataset="gunun_incisi_toc" %}
 
 ## Anish Giri - Nikita Vitiugov Fide Grand Prix İkinci Tur Mücadelesi Belgrad
 
@@ -266,6 +266,13 @@ ve devamında Vh5-Kh8 ile mat kurgusuna çare yok. Bu varyantta bile siyahın 32
 <div class="video-embed" data-caption="Yettim: Carlsen - Nepo Öncesi Son Oyun! | Hızlı Satranç İtalyan Açılışı"><iframe src="https://www.youtube.com/embed/s5ASMyeg2mY" title="Yettim: Carlsen - Nepo Öncesi Son Oyun! | Hızlı Satranç İtalyan Açılışı" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 
 <div class="video-embed" data-caption="Carlsen - Karjakin | Dünya Satranç Şampiyonası (Rapid) 2. Oyun | İtalyan Açılışı"><iframe src="https://www.youtube.com/embed/dG3o5Y5hWdY" title="Carlsen - Karjakin | Dünya Satranç Şampiyonası (Rapid) 2. Oyun | İtalyan Açılışı" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+
+<div class="next-section-nav-wrap">
+<a class="next-section-nav" href="{{ '/posts/gunun-incisi/bolum-4/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Maghsoodloo – Sarana: Açılış Faciası</span> <span class="next-section-arrow">→</span></span>
+</a>
+</div>
 
 ---
 

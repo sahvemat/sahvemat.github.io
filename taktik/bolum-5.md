@@ -29,9 +29,9 @@ Final maçının eşitlik bozma bölümü hızlı satranç ile devam edilmişti 
 Oyun sonu incelikleri! Siyah 35…Kc5 veya 35…f5 arasında seçim yapmak durumunda. Sizin tercihiniz ne olurdu? Bu sorunun cevabını [burada](https://www.satranchess.com/2022/02/25/oyunsonu-dersi.html) bulabilirsiniz.
 
 <div class="next-section-nav-wrap">
-<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/taktik/' | relative_url }}">
-  <span class="next-section-label">İlk sayfaya dön</span>
-  <span class="next-section-title"><span class="next-section-text">Taktik!</span> <span class="next-section-arrow">↺</span></span>
+<a class="next-section-nav" href="{{ '/posts/taktik/bolum-6/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Guwahati: 1-3. Pozisyon</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
 

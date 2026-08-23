@@ -1,16 +1,14 @@
 ---
 layout: post
-title: "Taktik! (2)"
+title: "Taktik!: Bölüm 6 — Guwahati: 1-3. Pozisyon"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Guwahati Uluslararası Turnuvası"
-excerpt: "Guwahati Uluslararası Turnuvası'ndan beş taktik pozisyon: her biri turnuvanın o anki kritik dönemecinden bir kare."
+permalink: /posts/taktik/bolum-6/
 date: 2022-03-17
-FEN: 1bb5/1p1qr1k1/5p1p/P3p1p1/1Q1N4/2B4P/2P2PP1/4R1K1 w - - 9 33
-reading_time: 3
 ---
 
-{% include chapter-toc.html dataset="taktik_2_toc" %}
+{% include chapter-toc.html dataset="taktik_toc" %}
 
 ## Neden Taktik Çözmeyelim ki?
 
@@ -41,8 +39,8 @@ Beyaz son hamlesiyle zaman sıkışmasında e4-e5 ile merkezden geçer piyonunu 
 Mersin Açık turnuvasında beni de yenen Krishna burada da şansı yakalıyor :). Beyaz Ve3-f2 ile şah çekişten kurtulmayı denemişti ama malesef bu iyi bir fikir değildi. Siyah Oynar!
 
 <div class="next-section-nav-wrap">
-<a class="next-section-nav" href="{{ '/posts/taktik-2/bolum-2/' | relative_url }}">
+<a class="next-section-nav" href="{{ '/posts/taktik/bolum-7/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
-  <span class="next-section-title"><span class="next-section-text">4-5. Pozisyon</span> <span class="next-section-arrow">→</span></span>
+  <span class="next-section-title"><span class="next-section-text">Guwahati: 4-5. Pozisyon</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
