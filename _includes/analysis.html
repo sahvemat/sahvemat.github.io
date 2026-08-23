@@ -1,5 +1,13 @@
+{% comment %}
+  A post explicitly reserved for a homepage hero slot (feature/flash/upcoming,
+  see hero.html) must never double up as this fallback — otherwise the same
+  post can end up shown in two places on the homepage at once.
+{% endcomment %}
 {% assign analysisPost = site.posts | where: "type", "analysis" | first %}
-{% unless analysisPost %}{% assign analysisPost = site.posts | first %}{% endunless %}
+{% unless analysisPost %}
+    {% assign analysisCandidates = site.posts | where_exp: "post", "post.type == nil or post.type == 'analysis'" %}
+    {% assign analysisPost = analysisCandidates | first %}
+{% endunless %}
 {% assign fen_parts = analysisPost.FEN | split: " " %}
 <section class="analysis-section">
     <div class="analysis-main">
