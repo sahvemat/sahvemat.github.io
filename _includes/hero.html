@@ -1,9 +1,21 @@
-{% assign featurePost = site.posts | where: "type", "feature" | first %}
-{% unless featurePost %}{% assign featurePost = site.posts | first %}{% endunless %}
-{% assign flashPost = site.posts | where: "type", "flash" | first %}
-{% unless flashPost %}{% assign flashPost = site.posts | slice: 1, 1 | first %}{% endunless %}
-{% assign upcomingPost = site.posts | where: "type", "upcoming" | first %}
-{% unless upcomingPost %}{% assign upcomingPost = site.posts | slice: 2, 1 | first %}{% endunless %}
+{% comment %}
+  A post explicitly reserved for another homepage slot (e.g. type: analysis,
+  used by analysis.html) must never double up as a fallback here — otherwise
+  the same post can end up shown in two places on the homepage at once.
+{% endcomment %}
+{% assign heroCandidates = site.posts | where_exp: "post", "post.type == nil or post.type == 'feature' or post.type == 'flash' or post.type == 'upcoming'" %}
+{% assign featurePost = heroCandidates | where: "type", "feature" | first %}
+{% unless featurePost %}{% assign featurePost = heroCandidates | first %}{% endunless %}
+{% assign flashPost = heroCandidates | where: "type", "flash" | first %}
+{% unless flashPost %}
+    {% assign flashCandidates = heroCandidates | where_exp: "post", "post.url != featurePost.url" %}
+    {% assign flashPost = flashCandidates | first %}
+{% endunless %}
+{% assign upcomingPost = heroCandidates | where: "type", "upcoming" | first %}
+{% unless upcomingPost %}
+    {% assign upcomingCandidates = heroCandidates | where_exp: "post", "post.url != featurePost.url and post.url != flashPost.url" %}
+    {% assign upcomingPost = upcomingCandidates | first %}
+{% endunless %}
 {% assign tr_months = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
 {% assign feature_month_idx = featurePost.date | date: "%-m" | minus: 1 %}
 
