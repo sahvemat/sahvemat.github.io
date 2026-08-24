@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 38 — Muradli (2537) – Iturrizaga Bonelli (2594)"
+title: "Renkli İnciler: Bölüm 38"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"
