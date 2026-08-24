@@ -1,0 +1,22 @@
+[Event "FIDE Chess.com Grand Swiss"]
+[Site "lichess.org"]
+[Date "2019.10.19"]
+[Round "9.28"]
+[White "Akobian, Varuzhan"]
+[Black "Ushenina, Anna"]
+[Result "1-0"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Akobian, Varuzhan - Ushenina, Anna"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/7EVEBF3e"]
+[FEN "1rb1r1k1/3n4/1q4p1/1p1Pp1Pp/2p4P/2b1N3/1PQ3B1/4RR1K w - - 0 27"]
+[SetUp "1"]
+
+{ Acaba c3- karesindeki taşını geri almak zorunda mı? }
+27. Rf6! { Yol
+kesme amacıyla yapılan bir ara hamle! } 27... Nxf6 28. Qxg6+ Kf8 29. Rf1 Ke7 30. Rxf6 Qc5 31. Rf7+ Kd8 32. Qf6+ Re7 33. d6 { 1-0 White wins. } 1-0
+
+
