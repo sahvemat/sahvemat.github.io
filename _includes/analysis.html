@@ -2,10 +2,16 @@
   A post explicitly reserved for a homepage hero slot (feature/flash/upcoming,
   see hero.html) must never double up as this fallback — otherwise the same
   post can end up shown in two places on the homepage at once.
+
+  GitHub Pages builds with Jekyll 3.10's where_exp, whose parse_condition
+  only accepts a single left/operator/right comparison — no and/or chaining
+  (unlike newer Jekyll). Every where_exp below must stay a single condition;
+  multi-condition filtering is done by piping through where_exp more than
+  once instead.
 {% endcomment %}
 {% assign analysisPost = site.posts | where: "type", "analysis" | first %}
 {% unless analysisPost %}
-    {% assign analysisCandidates = site.posts | where_exp: "post", "post.type == nil or post.type == 'analysis'" %}
+    {% assign analysisCandidates = site.posts | where_exp: "post", "post.type != 'feature'" | where_exp: "post", "post.type != 'flash'" | where_exp: "post", "post.type != 'upcoming'" %}
     {% assign analysisPost = analysisCandidates | first %}
 {% endunless %}
 {% assign fen_parts = analysisPost.FEN | split: " " %}
