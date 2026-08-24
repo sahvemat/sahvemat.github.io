@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 27 — Tutisani (2442) – Alonso Rosell (2565)"
+title: "Renkli İnciler: Bölüm 27"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"

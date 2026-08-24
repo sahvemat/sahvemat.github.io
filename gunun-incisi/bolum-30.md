@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 30 — Bernadskiy (2606) – Budisavljevic (2519)"
+title: "Renkli İnciler: Bölüm 30"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"

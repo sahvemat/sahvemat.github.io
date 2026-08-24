@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 39 — Beydullayeva (2308) – Meshkovs (2561)"
+title: "Renkli İnciler: Bölüm 39"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"

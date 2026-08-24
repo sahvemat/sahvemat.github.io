@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 10 — Avantajın Kazanca En Hızlı Dönüşümü"
+title: "Renkli İnciler: Bölüm 10"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"

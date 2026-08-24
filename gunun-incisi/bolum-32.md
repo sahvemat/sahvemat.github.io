@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 32 — O`Gorman (2357) – Ahmadzada (2480)"
+title: "Renkli İnciler: Bölüm 32"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"
