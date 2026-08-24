@@ -25,9 +25,9 @@ Kazanç konumlarda rakibin her türlü karşı oyunu incelikle hesaplanmalı ve 
 [Burada](https://lichess.org/study/KojudVFP) daha fazlasını bulmak mümkün…
 
 <div class="next-section-nav-wrap">
-<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/gunun-incisi/' | relative_url }}">
-  <span class="next-section-label">İlk sayfaya dön</span>
-  <span class="next-section-title"><span class="next-section-text">Renkli İnciler</span> <span class="next-section-arrow">↺</span></span>
+<a class="next-section-nav" href="{{ '/posts/gunun-incisi/bolum-19/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Sargissian (2681) – Kjartansson (2450)</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
 

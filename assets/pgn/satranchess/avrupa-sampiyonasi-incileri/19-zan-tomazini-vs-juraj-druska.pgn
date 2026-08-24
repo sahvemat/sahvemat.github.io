@@ -1,0 +1,22 @@
+[Event "European Chess Championship 2022"]
+[Site "http://www.chessbomb.com"]
+[Date "2022.04.01"]
+[Round "6"]
+[White "Tomazini, Zan"]
+[Black "Druska, Juraj"]
+[Result "0-1"]
+[WhiteElo "2376"]
+[BlackElo "2503"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Tomazini, Zan - Druska, Juraj"]
+[ChapterURL "https://lichess.org/study/KojudVFP/QkyqwMLo"]
+[Annotator "https://lichess.org/@/NaSil"]
+[FEN "r2q1rk1/3nppbp/3p2p1/1pn1P3/3QN3/1P3N2/PB3PPP/R2R2K1 b - - 0 15"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Siyah Axe5 alabilir mi? }
+15... Nxe5 { EVET! } 16. Nxe5 Bxe5 17. Qxe5 dxe5 18. Rxd8 { Hangi kale? } 18... Rfxd8! 19. Nxc5 Rxa2! { İşte tüm mesele bu! Beyaz terk eder. } { [%csl Yg1][%cal Ga2b2,Ga2a1] } 0-1

@@ -4,10 +4,10 @@ title: "Renkli İnciler"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 3. Tur"
-excerpt: "2022 Fide Grand Prix, Belgrad'daki büyükusta turnuvası ve Avrupa Bireysel Şampiyonası'ndan on sekiz bölümlük bir seçki: Aronian–Keymer'in açılış felsefesinden Avrupa Şampiyonası'nın kritik pozisyonlarına uzanan geniş bir inceleme."
+excerpt: "2022 Fide Grand Prix, Belgrad'daki büyükusta turnuvası ve Avrupa Bireysel Şampiyonası'ndan kırk üç bölümlük geniş bir seçki: Aronian–Keymer'in açılış felsefesinden Avrupa Şampiyonası'nın onlarca kritik pozisyonuna uzanan devasa bir inceleme."
 date: 2022-02-26
 FEN: rnbqkb1r/pp2pppp/5n2/3p4/3P4/3B3P/PPP2PP1/RNBQK1NR b KQkq - 0 5
-reading_time: 51
+reading_time: 76
 ---
 
 {% include chapter-toc.html dataset="renkli_inciler_toc" %}

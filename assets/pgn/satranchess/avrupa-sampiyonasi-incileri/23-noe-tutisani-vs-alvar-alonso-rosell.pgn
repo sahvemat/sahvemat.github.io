@@ -1,0 +1,22 @@
+[Event "European Chess Championship 2022"]
+[Site "http://www.chessbomb.com"]
+[Date "2022.04.01"]
+[Round "6"]
+[White "Tutisani, Noe"]
+[Black "Alonso Rosell, Alvar"]
+[Result "0-1"]
+[WhiteElo "2442"]
+[BlackElo "2565"]
+[Annotator "Dogan,Nazmi Can"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Tutisani, Noe - Alonso Rosell, Alvar"]
+[ChapterURL "https://lichess.org/study/KojudVFP/9OrG0tZJ"]
+[FEN "5k2/2RP1p1p/2N5/6p1/2P2n2/P2b3P/4r3/5K2 b - - 0 39"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ "3 Taş Mat Yapar!" - Tartakower }
+39... Rc2+! { En hızlısı! Beyaz burada terk etti. Fakat biz devam edelim. } 40. Ke1 Ng2+ 41. Kd1 Ne3+ 42. Ke1 Re2# { 0-1 Black wins. } 0-1
