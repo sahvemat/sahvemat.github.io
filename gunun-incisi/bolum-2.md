@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Günün İncisi: Bölüm 2 — Nakamura – Esipenko"
+title: "Renkli İnciler: Bölüm 2 — Nakamura – Esipenko"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 2. Tur"
@@ -8,7 +8,7 @@ permalink: /posts/gunun-incisi/bolum-2/
 date: 2022-02-28
 ---
 
-{% include chapter-toc.html dataset="gunun_incisi_toc" %}
+{% include chapter-toc.html dataset="renkli_inciler_toc" %}
 
 ## Hikaru Nakamura - Andrey Esipenko 2022 Fide Grand Prix 2. Tur Mücadelesi
 

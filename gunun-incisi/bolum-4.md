@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Günün İncisi: Bölüm 4 — Maghsoodloo – Sarana: Açılış Faciası"
+title: "Renkli İnciler: Bölüm 4 — Maghsoodloo – Sarana: Açılış Faciası"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "Belgrad 2022 · Sırbistan Büyükustaları Turnuvası"
@@ -8,7 +8,7 @@ permalink: /posts/gunun-incisi/bolum-4/
 date: 2022-03-17
 ---
 
-{% include chapter-toc.html dataset="gunun_incisi_toc" %}
+{% include chapter-toc.html dataset="renkli_inciler_toc" %}
 
 ## Parham Maghsoodloo - Alexei Sarana Belgrad 2022
 
@@ -210,9 +210,9 @@ Vezirini kaybetmek üzere olan siyah oyunu terk etti. Eğer at alınmazsa Ab4 va
 Daha önce incelediğimiz Günün İncisi partilerinden farklı olarak açılış hamlelerinin çok daha büyük önem arz ettiği bir oyunu incelemiş olduk. Buradan bize bir ders çıkması gerekirse, kendimize seçtiğimiz açılışları hazırlık düzeyimize göre seçmemiz gerekir. Eğer açılış çalışmayı çok sevmiyorsak Najdorf gibi varyantları seçmek masa başında bize daha büyük zorluklar çıkarabilir. Sarana gibi Najdorf’un önemli uygulayıcılarından kuvvetli bir büyükustanın bile açılış hazırlığından hemen sonra zor duruma düşmesi bize bu konuda düşünmek üzere belli dersler sunabilir.
 
 <div class="next-section-nav-wrap">
-<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/gunun-incisi/' | relative_url }}">
-  <span class="next-section-label">İlk sayfaya dön</span>
-  <span class="next-section-title"><span class="next-section-text">Günün İncisi</span> <span class="next-section-arrow">↺</span></span>
+<a class="next-section-nav" href="{{ '/posts/gunun-incisi/bolum-5/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">3. Turda Emre Can Şov</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>
 

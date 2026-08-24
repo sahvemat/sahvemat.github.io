@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Günün İncisi: Bölüm 3 — Giri – Vitiugov"
+title: "Renkli İnciler: Bölüm 3 — Giri – Vitiugov"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · İkinci Ayak, Belgrad"
@@ -8,7 +8,7 @@ permalink: /posts/gunun-incisi/bolum-3/
 date: 2022-03-09
 ---
 
-{% include chapter-toc.html dataset="gunun_incisi_toc" %}
+{% include chapter-toc.html dataset="renkli_inciler_toc" %}
 
 ## Anish Giri - Nikita Vitiugov Fide Grand Prix İkinci Tur Mücadelesi Belgrad
 

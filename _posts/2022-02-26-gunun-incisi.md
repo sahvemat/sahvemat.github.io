@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Günün İncisi"
+title: "Renkli İnciler"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 3. Tur"
-excerpt: "2022 Fide Grand Prix ve Belgrad'daki büyükusta turnuvasından dört öğretici parti: Aronian–Keymer, Nakamura–Esipenko, Giri–Vitiugov ve Maghsoodloo–Sarana'nın açılış felsefesinden oyunsonu tekniğine uzanan dörtlü bir inceleme."
+excerpt: "2022 Fide Grand Prix, Belgrad'daki büyükusta turnuvası ve Avrupa Bireysel Şampiyonası'ndan on sekiz bölümlük bir seçki: Aronian–Keymer'in açılış felsefesinden Avrupa Şampiyonası'nın kritik pozisyonlarına uzanan geniş bir inceleme."
 date: 2022-02-26
 FEN: rnbqkb1r/pp2pppp/5n2/3p4/3P4/3B3P/PPP2PP1/RNBQK1NR b KQkq - 0 5
-reading_time: 43
+reading_time: 51
 ---
 
-{% include chapter-toc.html dataset="gunun_incisi_toc" %}
+{% include chapter-toc.html dataset="renkli_inciler_toc" %}
 
 ## Levon Aronian - Vincent Keymer 2022 Fide Grand Prix 3. Tur Mücadelesi
 
