@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Günün İncisi (2)"
+title: "Günün İncisi: Bölüm 2 — Nakamura – Esipenko"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 2. Tur"
-excerpt: "Hikaru Nakamura'nın Andrey Esipenko'ya karşı seçtiği az rastlanan devam yolu, İngiliz Açılışı'nın tersten Dragon şeklinde ele alınışına dair tipik planları öğretici bir şekilde gözler önüne seriyor."
+permalink: /posts/gunun-incisi/bolum-2/
 date: 2022-02-28
-FEN: r1bq1rk1/ppp2ppp/2n5/2bnp3/8/2N2NP1/PPQPPPBP/R1B2RK1 b - - 0 8
-reading_time: 11
 ---
+
+{% include chapter-toc.html dataset="gunun_incisi_toc" %}
 
 ## Hikaru Nakamura - Andrey Esipenko 2022 Fide Grand Prix 2. Tur Mücadelesi
 
@@ -236,6 +236,13 @@ Kf7 46.Vf5]
 İlgili video (**İki Zayıflık Prensibi**)
 
 <div class="video-embed" data-caption="İki Zayıflık Prensibi ve Oyunsonu Tekniği | Hammer - Eljanov FIDE Grand-Prix 2017 Sharjah"><iframe src="https://www.youtube.com/embed/8xa1eMQ5t5c" title="İki Zayıflık Prensibi ve Oyunsonu Tekniği | Hammer - Eljanov FIDE Grand-Prix 2017 Sharjah" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+
+<div class="next-section-nav-wrap">
+<a class="next-section-nav" href="{{ '/posts/gunun-incisi/bolum-3/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Giri – Vitiugov</span> <span class="next-section-arrow">→</span></span>
+</a>
+</div>
 
 ---
 
