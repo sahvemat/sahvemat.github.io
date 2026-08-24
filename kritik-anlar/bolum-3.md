@@ -21,8 +21,8 @@ Carlsbad yapısında kritik bir an! Siyah şahın zayıflaması sonrasında siya
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/03-ege-cakir-vs-emir-ozturk.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">
-<a class="next-section-nav next-section-nav--restart" href="{{ '/posts/kritik-anlar/' | relative_url }}">
-  <span class="next-section-label">İlk sayfaya dön</span>
-  <span class="next-section-title"><span class="next-section-text">Kritik Anlar</span> <span class="next-section-arrow">↺</span></span>
+<a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-4/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Quparadze – Engin</span> <span class="next-section-arrow">→</span></span>
 </a>
 </div>

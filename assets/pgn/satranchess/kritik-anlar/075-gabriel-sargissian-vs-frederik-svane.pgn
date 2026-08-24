@@ -1,0 +1,23 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.11.04"]
+[Round "10.28"]
+[White "Sargissian, Gabriel"]
+[Black "Svane, Frederik"]
+[Result "*"]
+[WhiteElo "2686"]
+[BlackElo "2626"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sargissian, Gabriel - Svane, Frederik"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/BOJt1UxG"]
+[FEN "2Q2N2/6P1/8/1p6/3k4/P7/K7/3qr3 w - - 0 58"]
+[SetUp "1"]
+
+{ Yoğun bir zaman sıkışması yaşanırken
+beyazın yakaladığı fırsatı kazanca çevirmesi mümkün olmamıştır. }
+58. Ne6+! { Bu hamlenin ardından Siyahın tüm yanıtları çürütülebilir. } (58. Qd7+? { Oynanan bu hamleden sonra konum eşit olur ve oyun daha sonra
+berabere olmuştur, çünkü } 58... Kc3 59. Qxd1 Rxd1 60. g8=Q Rd2+ 61. Kb1 Rd1+ 62. Ka2 Rd2+ $10 { Beyazın gözünden kaçan detaydı. }) 58... Rxe6 (58... Kd3 59. Qd7+ Ke4 60. Qxd1 Rxd1 61. g8=Q $18) (58... Ke5 59. Qc5+ Kf6 60. Qg5+ $18) (58... Ke4 59. Qc6+ Kf5) 59. Qd7+ $18 *

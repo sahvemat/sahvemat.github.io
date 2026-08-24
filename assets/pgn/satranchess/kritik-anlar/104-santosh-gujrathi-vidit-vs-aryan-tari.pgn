@@ -1,0 +1,27 @@
+[Event "FIDE Chess.com Grand Swiss"]
+[Site "lichess.org"]
+[Date "2019.10.19"]
+[Round "9.16"]
+[White "Vidit, Santosh Gujrathi"]
+[Black "Tari, Aryan"]
+[Result "1-0"]
+[WhiteElo "2718"]
+[BlackElo "2630"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Vidit, Santosh Gujrathi - Tari, Aryan"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/iMBXnflr"]
+[FEN "r2r2k1/pp2bppp/q1n1bn2/4N3/2Pp1B2/1Q4P1/PP1N1PBP/R3R1K1 w - - 0 16"]
+[SetUp "1"]
+
+{ Teorik hamlelerin hemen ardından ortaya çıkan bir konum. f7- karesinin
+zayıflığı ve e- dikeyindeki taşların gevşek oluşu taktikleri olanaklı
+kılıyor. }
+16. Nxf7! Kxf7 (16... Bxf7 17. Bxc6 Qxc6 18. Rxe7 { Siyah bu
+şekilde piyon eksik oynamak yerine fedayı kabul ediyor. }) 17. Rxe6! { Beyazın önceki hamlesinin nedeni bu feda idi. } 17... Kxe6 18. c5+ Kd7 { veya } 19. Bf1 { Oyunda oynanan hamleden sonra siyah zorlu bir finale geçmeyi başarıyor.
+Basitleştirmelerden kaçınarak saldırının sürdürülmesi ile daha
+hızlı sonuca gidilebilirdi. Örneğin; } (19. Ne4!) (19. Re1!) 19... d3! 20. Bxd3 Nd4! 21. Bxa6 Nxb3 22. Bb5+ Kc8 23. Nxb3 { Beyaz uzun mücadele
+sonunda materyal üstünlüğünü kazanca dönüştürmeyi başardı. } 1-0

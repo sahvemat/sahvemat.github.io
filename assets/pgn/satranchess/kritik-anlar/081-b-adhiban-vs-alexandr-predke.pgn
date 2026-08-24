@@ -1,0 +1,25 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.47"]
+[White "Adhiban, B.."]
+[Black "Predke, Alexandr"]
+[Result "0-1"]
+[WhiteElo "2551"]
+[BlackElo "2656"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Adhiban, B.. - Predke, Alexandr"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/kKw4C8Sn"]
+[FEN "r4r1k/p3Npbp/4b1p1/8/2pNQ3/8/PqP2PPP/3RR1K1 b - - 0 20"]
+[SetUp "1"]
+
+{ Atlara fillerin
+mücadelesi çoğu zaman fillerin zaferine tanıklık eder. Bu durumda beyaz
+atlar zor durumdadır. }
+20... Rae8! 21. Qh4 { İyi bir savunma bulmak zordur. } (21. Ndc6 Bf6 22. Rb1 Qc3 23. Rb7 Bd5! $19) (21. Nec6 Bd7! 22. Qd5 Bxc6 23. Nxc6 Qxc2 $19 { c-piyonu oyunu kazandırır. }) 21... g5! { Atlardan biri
+artık korumasız kalır. } 22. Qxg5 Bxd4 23. Nf5 Bxf2+! { Pek çok
+kazandıran yalnızca biri. } 24. Kxf2 Qxc2+ { Beyaz terk etti. } 0-1

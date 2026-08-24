@@ -1,0 +1,36 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.28"]
+[Round "4.27"]
+[White "Nihal, Sarin"]
+[Black "Ter-Sahakyan, Samvel"]
+[Result "1-0"]
+[WhiteElo "2694"]
+[BlackElo "2618"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Nihal, Sarin - Ter-Sahakyan, Samvel"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/nNxhDjrd"]
+[FEN "3r4/2q2pk1/p3pbp1/2r4p/PpNpQP2/1P1P1RPP/2P2RK1/8 w - - 0 32"]
+[SetUp "1"]
+
+{ Beyazın mükemmel atı,
+siyahın vezir kanadındaki tüm umutlarını söndürüyor. Beyaz için g4-
+sürüşü ile başlayacak şah kanadı saldırısı, kendi şahı da orada
+bulunduğundan riskler barındırıyor. Merkezin ve vezir kanadının kapalı
+olduğu böylesi bir durumda beyaz nasıl bir plan yapabilir? }
+32. Kf1! { Cevap: şahın yürüyüşü! } 32... Rh8 { Siyah olası g4- sürüşü için hazır
+beklemeye çalışıyor. } 33. Ke2 { Stockfish siyahın vezir değişme
+seçeneğini elinden almak için } (33. Ke1! Qc6 34. Qe2! { varyantını
+öneriyor. }) 33... Qd7 { Oyunun gidişatı düşünülünce vezirlerin
+değişimi siyahlar için daha iyi olmalı. } (33... Qc6! { Kxc4-Vxa4 fikri de
+geçerli hale gelir. }) 34. Kd1 Qc7 35. Kc1 Qd7 36. Kb1 Qc7 37. Rf1 Qd7 38. Qe1 a5 39. Qd1 Qc7 40. Qe2 Qc6 41. g4 { Beyaz acele etmeksizin saldırısını
+hazırladı ve piyon ilerleyişi ile saldırıya başlıyor. Siyahın karşı
+oyundan yoksun oluşu beyazın işini kolaylaştıracak. } 41... Qc7 42. Qd1 hxg4 { h- dikeyinin açılışı siyah kalelerin uyumsuz konumu nedeniyle yalnızca
+beyaza yarar. Önceki hamlelerde olduğu gibi beklemeyi sürdürmek daha iyi
+olabilirdi. } 43. hxg4 Rh2 { Sonu hızlandıran başka bir hamle. Rh4 ile
+Beyazın h- dikeyini ele geçirmesi güçleştirilebilirdi. } 44. g5 Bd8 45. Rh1! Rxh1 46. Qxh1 Kf8 47. Qh8+ Ke7 48. Qxd4 { Siyah işkenceyi sonladırıyor ve
+terk ediyor. } 1-0

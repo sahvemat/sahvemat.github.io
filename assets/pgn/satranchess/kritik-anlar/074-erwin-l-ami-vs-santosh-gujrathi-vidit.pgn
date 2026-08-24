@@ -1,0 +1,33 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.15"]
+[White "L'ami, Erwin"]
+[Black "Vidit, Santosh Gujrathi"]
+[Result "1-0"]
+[WhiteElo "2627"]
+[BlackElo "2716"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "L'ami, Erwin - Vidit, Santosh Gujrathi"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/eg5PcJIy"]
+[FEN "8/pp4k1/6r1/8/3r1R2/P2p2N1/1n4P1/3R2K1 w - - 0 41"]
+[SetUp "1"]
+
+{ FIDE Grand Swiss her
+ne kadar en yüksek düzeydeki sporcuların yarıştığı bir turnuva olsa da,
+her seviyede karşılaşılan en büyük sorunlardan biri olan zaman
+sıkışması nedeniyle yapılan büyük hatalara ve kaybedilen puanlara çok
+kez sahne oldu. 2023 Fide Grand Swiss'i kazanan Büyükusta Vidit, ilk turda
+kazanç konum elde etmesinin ardından zaman sıkışmasının etkisiyle bir
+dizi hata ile üstünlüğünü tamamen yitirmişti. Diyagramda görülen
+konumda Vidit zaman kontrolünün son hamlesi olan 40. hamlede 40...Nxb2
+hamlesini oynadı. }
+41. Nf5+! (41. Rxd4 Nxd1 42. Rxd3 $10 { Yalnızca eşit
+bir oyunsonu olacaktı. }) 41... Kh8 42. Rxd4 Nxd1 43. Rh4+! { Her şeyi
+bitiren hamle! Siyah kalite kaybeder. } 43... Kg8 44. Ne7+ Kg7 45. Nxg6 Kxg6 46. Rd4 { Büyükusta L'ami bu üstün finali öğretici bir şekilde kazanıyor. } 46... Nb2 47. Kf2 b5 { Atı c4-karesinden çıkmak amacıyla. } 48. Ke3 a5 49. Rd6+ Kf7 50. Ra6 a4 51. g4 Nc4+ 52. Kxd3 Nxa3 53. Rb6! Kg7 54. g5 Kh7 55. Ke4 Nc4 56. Ra6 a3 57. Kf5 Ne3+ 58. Kf6 Ng4+ 59. Kf7 Ne5+ 60. Kf6 Ng4+ 61. Kf5 Ne3+ 62. Kf4 Nd5+ 63. Ke5 Ne3 64. g6+ Kh6 (64... Kg7 65. Kf4 Nd5+ 66. Kg5 $18) 65. Rxa3! { Siyah terk etti çünkü ...Nc4 ile kale kazanmak beyazın vezir çıkmasına
+neden olur. GM Vidit'in böylesi bir kayba rağmen turnuvayı kazanmayı
+başarması ayrıca takdiri hak ediyor. } 1-0

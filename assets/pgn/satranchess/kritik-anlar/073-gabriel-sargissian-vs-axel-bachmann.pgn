@@ -1,0 +1,29 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.30"]
+[White "Sargissian, Gabriel"]
+[Black "Bachmann, Axel"]
+[Result "1-0"]
+[WhiteElo "2686"]
+[BlackElo "2604"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sargissian, Gabriel - Bachmann, Axel"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/IoVn45Mm"]
+[FEN "3r3r/p1k3pp/4p3/nPp5/3b1P2/4B3/4KPBP/1RR5 w - - 0 22"]
+[SetUp "1"]
+
+{ Beyaz piyon geri ancak sadece piyonu geri almak için filleri
+değişmek yeterli görünmüyor... }
+22. Rxc5+! { Vezirlerin olmadığı bu
+durumda siyah şahı hedef alan beklenmedik bir kalite fedası. } (22. Bxd4 Rxd4 23. Rxc5+ Kb6 $10) 22... Bxc5 23. Bxc5 { Bxa7 ile b- dikeyinde güçlü bir
+geçer yaratma fikrinin yanında Ka1 ile şahı da hedef almak mümkün olur. } 23... Nc4 (23... Kb8 24. b6 a6 25. Ra1! $18) 24. Rc1 (24. Ra1 { Stockfish'e göre
+daha iyidir. }) 24... Nd6 (24... Nb6 { daha iyi bir savunma olsa da } 25. Bf8+ { siyah şah saldırının hedefi olmayı sürdürür. }) 25. Bxa7+ Kd7 26. Bb6 Rc8 27. Bc6+! { Elbette kalelerin değişilmesi düşünülemez. } 27... Ke7 28. Bc5 Rhd8 29. Rd1! { Siyah taşları zugzwang durumundadır. } 29... g5 { Açmazdan bir
+şekilde çıkmak amacıyla. } 30. fxg5 e5 31. Rd3 Ke6 32. Bxd6 Rxd6 33. Rf3? $14 { Zaman sıkışmasının etkisiyle büyük bir hata yapan Beyaz son
+hamlesiyle konumun eşitlenmesine izin veriyor. Maceraların ardından beyaz
+oyunu kazanmayı başardı. } (33. Rxd6+ Kxd6 34. Be4 $18 { b- piyonu çok
+güçlü, siyahın h7- piyonu bakıma muhtaçtır. }) 1-0

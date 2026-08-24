@@ -1,0 +1,21 @@
+[Event "FIDE Chess.com Grand Swiss"]
+[Site "lichess.org"]
+[Date "2019.10.21"]
+[Round "11.24"]
+[White "McShane, Luke J"]
+[Black "Kuzubov, Yuriy"]
+[Result "*"]
+[WhiteElo "2682"]
+[BlackElo "2636"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "McShane, Luke J - Kuzubov, Yuriy"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/4isz5uac"]
+[FEN "2r2bk1/5p2/4qnp1/1p2p2p/1P1nP2P/R1B1N1P1/5PB1/3Q2K1 b - - 0 43"]
+[SetUp "1"]
+
+{ Siyah taşların hakim konumu güzel bir taktiği olanaklı kılıyor. }
+43... Bxb4! 44. Bxb4 Rc1 45. Qxc1 Ne2+ 46. Kh2 Nxc1 $19 *

@@ -1,0 +1,22 @@
+[Event "FIDE Chess.com Grand Swiss"]
+[Site "lichess.org"]
+[Date "2019.10.10"]
+[Round "1.39"]
+[White "Adhiban, B.."]
+[Black "Wu, Li"]
+[Result "1-0"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Adhiban, B.. - Wu, Li"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/4CMTHcGm"]
+[FEN "r2q1rk1/pp2bpp1/4bn1p/2pn4/3P4/P1NQ1N1P/1PB2PP1/R1B1R1K1 w - - 0 17"]
+[SetUp "1"]
+
+{ Siyahın açılışta iyi oynamadığı anlaşılıyor, fakat Adhiban'ın
+cezalandırma yöntemi öğretici! }
+17. Rxe6! fxe6 18. Bxh6! Qe8 (18... gxh6 19. Qg6+ Kh8 20. Qxh6+ Kg8 21. Qg6+ Kh8 22. Ng5 $18) 19. Bg5 $18 { Beyazın feda ettiği materyale karşı kazandıran bir konumsal
+üstünlüğü vardır: rakibinin şahı zayıftır ve piyon yapısı
+kötüdür. Beyaz rakibinin de yardımıyla hızlıca kazandı. } 19... Qh5 20. Re1 cxd4 21. Ne2 Bd6 22. Nexd4 e5 23. Nf5 Rad8 24. Bxf6 Nxf6 25. Nxd6 e4 26. Qb3+ { 1-0 White wins. } 1-0

@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Kritik Anlar: Bölüm 48 — Tasdogen – Avsar"
+author: "FM Nazmi Can Doğan"
+section: "Taktik"
+event: "Türkiye Satranç Ligi"
+permalink: /posts/kritik-anlar/bolum-48/
+date: 2026-08-19
+---
+
+{% include chapter-toc.html dataset="kritik_anlar_toc" %}
+
+<fen>
+[FEN "2kr3r/1p3ppp/p1nq3n/3p2N1/8/P2Q4/3B1PPP/2R2RK1 w - - 2 20"]
+</fen>
+
+*Tasdogen (2351, FM) – Avsar (2157)*
+
+Ters kanada atılmış roklar ve açık bir merkez. Siyah Ag4 gelebilmek istiyor ve 2 piyon fazlası var, fakat sıra beyazda!
+
+<pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/048-dincer-tasdogen-vs-gediz-avsar.pgn' | relative_url }}"></pgn-player>
+
+<div class="next-section-nav-wrap">
+<a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-49/' | relative_url }}">
+  <span class="next-section-label">Sıradaki Bölüm</span>
+  <span class="next-section-title"><span class="next-section-text">Molla – Aydemir</span> <span class="next-section-arrow">→</span></span>
+</a>
+</div>
