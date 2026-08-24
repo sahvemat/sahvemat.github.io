@@ -1,16 +1,14 @@
 ---
 layout: post
-title: "Avrupa Şampiyonası İncileri"
+title: "Renkli İnciler: Bölüm 5 — 3. Turda Emre Can Şov"
 author: "FM Nazmi Can Doğan"
-section: "Turnuva Notları"
+section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"
-excerpt: "2022 Avrupa Bireysel Şampiyonası'nın ilk üç turundan on dört kritik pozisyon: Emre Can'ın Volokitin'e karşı minyatürü başta olmak üzere, zirve mücadelesinden seçmeler."
-FEN: r1bqk2r/pp3ppp/2n2n2/3p2B1/Qb6/2N3P1/PPP2P1P/R3KBNR w KQkq - 0 9
-reading_time: 8
+permalink: /posts/gunun-incisi/bolum-5/
 date: 2022-03-29
 ---
 
-{% include chapter-toc.html dataset="avrupa_sampiyonasi_incileri_toc" %}
+{% include chapter-toc.html dataset="renkli_inciler_toc" %}
 
 ## 2022 Avrupa Bireysel’den Seçmeler
 
@@ -31,7 +29,7 @@ Açılış yavaş yavaş tamamlanırken beyazın taşlarını **izole vezir piyo
 <pgn-player src="{{ '/assets/pgn/satranchess/avrupa-sampiyonasi-incileri/01-can-emre-vs-volokitin-andrei.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">
-<a class="next-section-nav" href="{{ '/posts/avrupa-sampiyonasi-incileri/bolum-2/' | relative_url }}">
+<a class="next-section-nav" href="{{ '/posts/gunun-incisi/bolum-6/' | relative_url }}">
   <span class="next-section-label">Sıradaki Bölüm</span>
   <span class="next-section-title"><span class="next-section-text">İtalyan’da Vezir Kanadı Oyunu</span> <span class="next-section-arrow">→</span></span>
 </a>

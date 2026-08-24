@@ -1,0 +1,22 @@
+[Event "European Chess Championship 2022"]
+[Site "http://www.chessbomb.com"]
+[Date "2022.04.03"]
+[Round "8"]
+[White "Bernadskiy, Vitaliy"]
+[Black "Budisavljevic, Luka"]
+[Result "1-0"]
+[WhiteElo "2606"]
+[BlackElo "2519"]
+[Annotator "Dogan,Nazmi Can"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "2022 Avrupa Şampiyonası"]
+[ChapterName "Bernadskiy, Vitaliy - Budisavljevic, Luka"]
+[ChapterURL "https://lichess.org/study/KojudVFP/G6RtZZ2P"]
+[FEN "5k2/r3n3/1p2Qp1p/2p1q3/6RN/P6P/6P1/6K1 w - - 0 35"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+35. Rg8+ Nxg8 36. Ng6+ Kg7 37. Nxe5 fxe5 38. Qxe5+ $18 { ve Beyaz uzun
+mücadele sonunda kazanmasını bildi. } 1-0
