@@ -1,9 +1,16 @@
 {% comment %}
-  A post explicitly reserved for another homepage slot (e.g. type: analysis,
-  used by analysis.html) must never double up as a fallback here — otherwise
-  the same post can end up shown in two places on the homepage at once.
+  A post explicitly reserved for another homepage slot (currently just
+  type: analysis, used by analysis.html) must never double up as a fallback
+  here — otherwise the same post can end up shown in two places on the
+  homepage at once.
+
+  GitHub Pages builds with Jekyll 3.10's where_exp, whose parse_condition
+  only accepts a single left/operator/right comparison — no and/or chaining
+  (unlike newer Jekyll). Every where_exp below must stay a single condition;
+  multi-condition filtering is done by piping through where_exp more than
+  once instead.
 {% endcomment %}
-{% assign heroCandidates = site.posts | where_exp: "post", "post.type == nil or post.type == 'feature' or post.type == 'flash' or post.type == 'upcoming'" %}
+{% assign heroCandidates = site.posts | where_exp: "post", "post.type != 'analysis'" %}
 {% assign featurePost = heroCandidates | where: "type", "feature" | first %}
 {% unless featurePost %}{% assign featurePost = heroCandidates | first %}{% endunless %}
 {% assign flashPost = heroCandidates | where: "type", "flash" | first %}
@@ -13,7 +20,7 @@
 {% endunless %}
 {% assign upcomingPost = heroCandidates | where: "type", "upcoming" | first %}
 {% unless upcomingPost %}
-    {% assign upcomingCandidates = heroCandidates | where_exp: "post", "post.url != featurePost.url and post.url != flashPost.url" %}
+    {% assign upcomingCandidates = heroCandidates | where_exp: "post", "post.url != featurePost.url" | where_exp: "post", "post.url != flashPost.url" %}
     {% assign upcomingPost = upcomingCandidates | first %}
 {% endunless %}
 {% assign tr_months = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
