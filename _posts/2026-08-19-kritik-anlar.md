@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar"
+title: "Kritik Anlar 1"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"

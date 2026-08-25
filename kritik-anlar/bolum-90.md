@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 90 — Shevchenko Kirill  (UKR) – Artemiev Vladislav  (RUS)"
+title: "Kritik Anlar 90"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

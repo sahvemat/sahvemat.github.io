@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 112 — Alexakis – Manish Anto Cristiano F"
+title: "Kritik Anlar 112"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Çeşme Açık 2025"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 7 — Annaberdiyev – Manish Anto Cristiano F"
+title: "Kritik Anlar 7"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Kritik Anlar"
