@@ -154,6 +154,42 @@
     });
 })();
 
+// ChessPublica's PuzzleMode never refreshes its own ".video-comment" caption
+// once a puzzle is active — that element is only kept in sync with the board
+// by the normal (non-puzzle) move stepper, which PuzzleMode's own internal
+// per-ply renderer bypasses entirely. The result: whatever comment was
+// showing when the puzzle started (the intro line the [P]/[Pn] tag lives in)
+// stays frozen under the board for the puzzle's whole duration instead of
+// clearing once the reader actually starts playing it out. Clear it
+// ourselves the moment the move list shows the puzzle has left its starting
+// position — cheap MutationObserver on class changes, since that's the only
+// signal PuzzleMode exposes for "a ply was just rendered".
+(function () {
+    function watch(player) {
+        if (player._sahPuzzleCommentWatched) return;
+        player._sahPuzzleCommentWatched = true;
+        var comment = player.querySelector('.video-comment');
+        if (!comment) return;
+        var cleared = false;
+        var observer = new MutationObserver(function () {
+            if (cleared || !player.classList.contains('paused')) return;
+            if (player.querySelector('.white-half.active')) {
+                cleared = true;
+                comment.innerHTML = '';
+                observer.disconnect();
+            }
+        });
+        observer.observe(player, { attributes: true, attributeFilter: ['class'], subtree: true });
+    }
+
+    function scan() {
+        document.querySelectorAll('pgn-player').forEach(watch);
+    }
+
+    scan();
+    new MutationObserver(scan).observe(document.body, { childList: true, subtree: true });
+})();
+
 (function () {
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     const now = new Date();
