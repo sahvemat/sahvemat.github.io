@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JAN TIMMAN: Batı'nın en iyisi — Bölüm 5: Kariyerden Öğretici Konumlar II"
+title: "JAN TIMMAN: Batı'nın en iyisi 05"
 author: "Nazmi Can Doğan"
 section: "Klasikler"
 event: "1964–1995 · 27 Parti"

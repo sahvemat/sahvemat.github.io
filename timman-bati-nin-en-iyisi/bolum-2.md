@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JAN TIMMAN: Batı'nın en iyisi — Bölüm 2: Mar del Plata 1982 · 6-9. Turlar"
+title: "JAN TIMMAN: Batı'nın en iyisi 02"
 author: "Nazmi Can Doğan"
 section: "Klasikler"
 event: "1964–1995 · 27 Parti"
