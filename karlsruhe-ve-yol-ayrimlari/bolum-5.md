@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karlsruhe ve yol ayrımları: Bölüm 5 — Gençler ve Felaketler"
+title: "Karlsruhe ve yol ayrımları 5"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Grenke Açık · A Grubu"
