@@ -10,7 +10,7 @@ date: 2023-10-26
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/084-alireza-firouzja-vs-rauf-mamedov.pgn' | relative_url }}"></pgn-player>
+<div class="post-game" id="parti" data-pgn="{{ '/assets/pgn/satranchess/kritik-anlar/084-alireza-firouzja-vs-rauf-mamedov.pgn' | relative_url }}"></div>
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-85/' | relative_url }}">

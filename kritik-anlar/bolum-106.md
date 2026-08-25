@@ -10,7 +10,7 @@ date: 2019-10-10
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/106-yangyi-yu-vs-sandro-mareco.pgn' | relative_url }}"></pgn-player>
+<div class="post-game" id="parti" data-pgn="{{ '/assets/pgn/satranchess/kritik-anlar/106-yangyi-yu-vs-sandro-mareco.pgn' | relative_url }}"></div>
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-107/' | relative_url }}">
