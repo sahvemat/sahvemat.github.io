@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 131 — Dirikolu – Apaar Saxena"
+title: "Kritik Anlar 131"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Kritik Anlar"

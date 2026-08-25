@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 18 — Buyuk – Kamer"
+title: "Kritik Anlar 18"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 101 — Swiercz Dariusz  (USA) – Brkic Ante  (CRO)"
+title: "Kritik Anlar 101"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

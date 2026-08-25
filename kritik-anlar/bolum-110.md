@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 110 — Wang – Bu"
+title: "Kritik Anlar 110"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Chess.com Grand Swiss 2019"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 77 — Tari – Xiong"
+title: "Kritik Anlar 77"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Grand Swiss 2023"

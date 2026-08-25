@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 15 — Yilmazyerli – Demircioglu"
+title: "Kritik Anlar 15"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"

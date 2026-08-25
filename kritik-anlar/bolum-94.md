@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 94 — Pavel Ponkratov – Vadim Zvjaginsev"
+title: "Kritik Anlar 94"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Grand Swiss 2021"

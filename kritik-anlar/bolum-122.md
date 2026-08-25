@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 122 — Karayayla – Buyuk"
+title: "Kritik Anlar 122"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Kritik Anlar"

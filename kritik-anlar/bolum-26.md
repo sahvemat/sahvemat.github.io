@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 26 — Nasuta – Akbas"
+title: "Kritik Anlar 26"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"

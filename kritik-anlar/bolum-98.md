@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 98 — Sargissian Gabriel  (ARM) – Sarana Alexey  (RUS)"
+title: "Kritik Anlar 98"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

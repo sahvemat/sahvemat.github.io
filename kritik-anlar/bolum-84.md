@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 84 — Firouzja – Mamedov"
+title: "Kritik Anlar 84"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Grand Swiss 2023"

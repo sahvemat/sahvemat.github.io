@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 21 — Dudin – Petriashvili"
+title: "Kritik Anlar 21"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"

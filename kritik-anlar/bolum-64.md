@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 64 — Akdogan – Metin"
+title: "Kritik Anlar 64"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"

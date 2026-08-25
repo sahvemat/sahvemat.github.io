@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 95 — Yilmaz Mustafa  (TUR) – Wojtaszek Radoslaw  (POL)"
+title: "Kritik Anlar 95"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

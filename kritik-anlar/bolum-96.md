@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 96 — Praggnanandhaa R  (IND) – Gelfand Boris  (ISR)"
+title: "Kritik Anlar 96"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

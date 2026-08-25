@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 93 — Budisavljevic Luka  (SRB) – Van Foreest Lucas  (NED)"
+title: "Kritik Anlar 93"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

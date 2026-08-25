@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 97 — Goryachkina Aleksandra  (RUS) – Neiksans Arturs  (LAT)"
+title: "Kritik Anlar 97"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

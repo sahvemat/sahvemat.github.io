@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 111 — Amin – Esipenko"
+title: "Kritik Anlar 111"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Chess.com Grand Swiss 2019"

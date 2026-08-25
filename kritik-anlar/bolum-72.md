@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 72 — Nihal – Ter-Sahakyan"
+title: "Kritik Anlar 72"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Grand Swiss 2023"

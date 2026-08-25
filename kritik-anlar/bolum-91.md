@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 91 — Sethuraman S.P.  (IND) – Rakhmanov Aleksandr  (RUS)"
+title: "Kritik Anlar 91"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

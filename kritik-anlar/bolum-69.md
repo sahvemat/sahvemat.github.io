@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 69 — Sanal – Greenfeld"
+title: "Kritik Anlar 69"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Grand Swiss 2023"

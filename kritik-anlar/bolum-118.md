@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 118 — Davies – Romanov"
+title: "Kritik Anlar 118"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Kritik Anlar"

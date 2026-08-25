@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 103 — Najer – Anand"
+title: "Kritik Anlar 103"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Chess.com Grand Swiss 2019"

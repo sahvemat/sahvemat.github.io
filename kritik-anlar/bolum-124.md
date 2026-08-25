@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 124 — Sevig – Pavlovskiy"
+title: "Kritik Anlar 124"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Kritik Anlar"

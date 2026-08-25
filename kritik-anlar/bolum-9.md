@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 9 — Rostami – Temizkan"
+title: "Kritik Anlar 9"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Kritik Anlar"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 104 — Vidit – Tari"
+title: "Kritik Anlar 104"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Chess.com Grand Swiss 2019"

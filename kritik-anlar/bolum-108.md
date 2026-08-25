@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 108 — Amin – Sadhwani"
+title: "Kritik Anlar 108"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "FIDE Chess.com Grand Swiss 2019"

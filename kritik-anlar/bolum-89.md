@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 89 — Shirov Alexei  (ESP) – Adly Ahmed  (EGY)"
+title: "Kritik Anlar 89"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Grand Swiss 2021"

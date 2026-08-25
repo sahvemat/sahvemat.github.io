@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 92 — Pichot Alan  (ARG) – Gretarsson Hjorvar Steinn  (I"
+title: "Kritik Anlar 92"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kritik Anlar: Bölüm 99 — Demchenko Anton  (RUS) – Fedoseev Vladimir  (RUS)"
+title: "Kritik Anlar 99"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "GS Open 2021"
