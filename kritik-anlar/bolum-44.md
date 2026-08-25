@@ -10,7 +10,7 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/044-filip-boe-olsen-vs-pavel-ponkratov.pgn' | relative_url }}"></pgn-player>
+<div class="post-game" id="parti" data-pgn="{{ '/assets/pgn/satranchess/kritik-anlar/044-filip-boe-olsen-vs-pavel-ponkratov.pgn' | relative_url }}"></div>
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-45/' | relative_url }}">

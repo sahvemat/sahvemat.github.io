@@ -10,7 +10,7 @@ date: 2025-06-26
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/112-dimitris-alexakis-vs-manish-anto-cristiano-f.pgn' | relative_url }}"></pgn-player>
+<div class="post-game" id="parti" data-pgn="{{ '/assets/pgn/satranchess/kritik-anlar/112-dimitris-alexakis-vs-manish-anto-cristiano-f.pgn' | relative_url }}"></div>
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-113/' | relative_url }}">

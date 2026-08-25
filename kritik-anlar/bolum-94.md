@@ -10,7 +10,7 @@ date: 2021-10-27
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/094-pavel-ponkratov-vs-vadim-zvjaginsev.pgn' | relative_url }}"></pgn-player>
+<div class="post-game" id="parti" data-pgn="{{ '/assets/pgn/satranchess/kritik-anlar/094-pavel-ponkratov-vs-vadim-zvjaginsev.pgn' | relative_url }}"></div>
 
 <div class="next-section-nav-wrap">
 <a class="next-section-nav" href="{{ '/posts/kritik-anlar/bolum-95/' | relative_url }}">
