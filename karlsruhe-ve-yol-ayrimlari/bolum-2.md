@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karlsruhe ve yol ayrımları: Bölüm 2 — Yeni Bir Yaklaşım"
+title: "Karlsruhe ve yol ayrımları 2"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Grenke Açık · A Grubu"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karlsruhe ve yol ayrımları: Bölüm 3 — İyi Bir Başlangıç"
+title: "Karlsruhe ve yol ayrımları 3"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Grenke Açık · A Grubu"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karlsruhe ve yol ayrımları: Bölüm 6 — Son Gün"
+title: "Karlsruhe ve yol ayrımları 6"
 author: "Tarık Selbes"
 section: "Turnuva Günlüğü"
 event: "Grenke Açık · A Grubu"
