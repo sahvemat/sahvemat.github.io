@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r4rk1/pb1nqp1p/1p2p1p1/2p1P3/2P2QP1/1P3N2/P4PBP/R3R1K1 w - - 1 20"]
-</fen>
-
-*Peng (2491, GM) – Tanriverdi (2413, IM)*
-
-Siyah ...f6 oynayabilirse karşı oyun yaratması mümkün olabilir.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/114-li-min-peng-vs-enes-tanriverdi.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

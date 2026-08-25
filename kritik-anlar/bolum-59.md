@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "R7/8/8/8/8/8/1r2p1K1/4k3 b - - 7 80"]
-</fen>
-
-*Coban (1746) – Danaci (1994, FM)*
-
-Çok önemli bir kale finali ile karşı karşıyayız. Teorik olarak kazanç bu konumu kazanma yöntemlerinin bilinmesi önem taşıyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/059-eren-cinar-coban-vs-ege-danaci.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

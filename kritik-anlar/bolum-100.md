@@ -10,14 +10,6 @@ date: 2021-10-27
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/6p1/2n2p2/p1pNp1p1/3rP1Pk/Rr3P1P/1P1R3K/8 w - - 0 56"]
-</fen>
-
-*Arturs Neiksans (2570) – Alexey Sarana (2649)*
-
-Siyah uzun süredir kazanmak için zorladığı konumda birden kendisini zor durumda bulur.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/100-arturs-neiksans-vs-alexey-sarana.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

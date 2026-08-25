@@ -10,10 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Kuzubov (2605, GM) – Sadykov (2264, FM)*
-
-Turnuvanın en yüksek reytingli sporcusu ve aynı zamanda 7.5/9 puanla birinci masada birincilik madalyası kazanan GM Yuriy Kuzubov Petroff Savunması karşısında öğretici bir saldırıyla kazanıyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/062-yuriy-kuzubov-vs-ramil-sadykov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

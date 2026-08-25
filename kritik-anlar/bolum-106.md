@@ -10,14 +10,6 @@ date: 2019-10-10
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "3r4/2p5/7p/1k2Pp2/1bNn1P2/3NK3/7P/2R5 w - - 0 43"]
-</fen>
-
-*Yu (2763) – Mareco (2634)*
-
-Beyazın tahtadaki kaosu istediği şekilde düzene çevirme imkanı vardır.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/106-yangyi-yu-vs-sandro-mareco.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

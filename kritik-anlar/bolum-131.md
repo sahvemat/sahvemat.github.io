@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/2p1r3/1pp1P3/5k2/3K1Rp1/2P3P1/1P6/8 b - - 1 49"]
-</fen>
-
-*Dirikolu (2188) – Apaar Saxena (2101, FM)*
-
-Kritik an.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/131-deniz-dirikolu-vs-apaar-saxena.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

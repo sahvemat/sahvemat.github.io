@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/2b3pk/4p1r1/2Pn1p1p/7P/5P2/4qBP1/1R1Q1NK1 b - - 16 47"]
-</fen>
-
-*Sanal (2550, GM) – Movahed (2558, GM)*
-
-Beyazın talihsiz son hamlesi güzel bir bitirişe müsade ediyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/040-vahap-sanal-vs-sina-movahed.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

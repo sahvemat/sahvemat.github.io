@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2kr1bnr/1pq2pp1/p1b1p3/2p4p/P3PP2/1PNB4/2P1Q1PP/R1B2RK1 w - - 3 15"]
-</fen>
-
-*Can (2504, GM) – Atis (2104, CM)*
-
-Ters kanada rokların olduğu böylesi bir konumda şaha saldırı adına hatları açmak için fedalardan kaçınmamak gerekiyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/030-isik-can-vs-hasan-atis.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

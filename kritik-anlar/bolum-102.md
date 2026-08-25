@@ -10,10 +10,6 @@ date: 2019-10-11
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Caruana (2812) – Sevian (2654)*
-
-2019 FIDE Grand Swiss turnuvasını etkileyici bir performans ile şampiyon GM Wang Hao ile eş puanda ikinci bitiren GM Fabiano Caruana öğretici oyunlara imza attı. GM Samuel Sevian karşısındaki güzel galibiyetinin 1.c4 hamlesinin o yıllarda artan popülaritesine katkıda bulunduğu düşünülebilir.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/102-fabiano-caruana-vs-samuel-sevian.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

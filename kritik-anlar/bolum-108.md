@@ -10,14 +10,6 @@ date: 2019-10-20
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r2qkb1r/pp3ppp/1np1pn2/4N1Nb/8/6P1/PPQP1PBP/R1B1R1K1 w kq - 0 12"]
-</fen>
-
-*Amin (2699) – Sadhwani (2479)*
-
-Oldukça teorik olan konumda Siyah büyük ihtimalle hamleleri karıştırarak "doğal" 11...e6 hamlesini oynadı.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/108-bassem-amin-vs-raunak-sadhwani.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

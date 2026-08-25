@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "3rr3/p4pkp/1p2pp2/2q1n3/2P2N2/2Q1R3/PP3PPP/4R1K1 b - - 4 28"]
-</fen>
-
-*Yildiz (2188, CM) – Fromm (2444, IM)*
-
-Kritik an.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/121-serdar-murat-yildiz-vs-marius-fromm.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

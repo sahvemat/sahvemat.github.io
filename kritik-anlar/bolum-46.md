@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "1q4k1/p4pp1/4r3/3Q4/1P1B2p1/3P4/P2P1PKb/R7 b - - 1 32"]
-</fen>
-
-*Talibov (2426, IM) – Iskandarov (2534, GM)*
-
-Beyaz şah tehlikede durmuyor fakat, beyazın koyu renklerde duran taşları saldırının hedefi olacak!
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/046-shiroghlan-talibov-vs-misratdin-iskandarov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

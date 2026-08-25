@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r1bqk2r/ppp2ppp/3p4/2b4n/1n2PB2/2NQ1P2/PPP1N1PP/R3KB1R w KQkq - 3 9"]
-</fen>
-
-*Molla (1923) – Aydemir (2160)*
-
-Vd2 mi Vd1 mi?
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/049-ersen-molla-vs-umut-aydemir.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

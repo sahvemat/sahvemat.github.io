@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "7r/1p4k1/p2p2p1/P2PP2n/1P3Pp1/5r2/5B1R/6RK w - - 5 44"]
-</fen>
-
-*Apaar Saxena (2101, FM) – Anand (2304, FM)*
-
-Kritik an.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/120-apaar-saxena-vs-batsukh-anand.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

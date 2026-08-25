@@ -10,14 +10,6 @@ date: 2023-10-30
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r5k1/p2qr2p/b1ppNbp1/5pN1/8/1P5P/P1PQ1PP1/3RR1K1 w - - 0 23"]
-</fen>
-
-*Sanal (2603) – Greenfeld (2455)*
-
-Siyah sonraki hamlesinde 23...Rae8 planlamaktadır. Avantaja giden yol ince bir hesap gerektiriyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/069-vahap-sanal-vs-alon-greenfeld.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "4r2k/1pQ2ppp/2p2n2/5b2/2P4q/3PPBR1/1B3P2/4K3 w - - 4 23"]
-</fen>
-
-*Romanov (2572, GM) – Celik (2481, IM)*
-
-Beyaz rakibinin Rxe3 fikrini hesaba kimin şahının daha güvende olduğuna karar vermeli.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/035-evgeny-romanov-vs-hasan-huseyin-celik.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "1r3rk1/5ppp/3b1n2/p2p1q2/3N4/PP6/1B3PPP/2RQR1K1 b - - 4 19"]
-</fen>
-
-*Gulden (2052, CM) – Sertbay (2124)*
-
-Önceki örnekte Yunan fedası için harika katkı sunan e5-piyonu bu örnekte yok. Bu durum elbette savunma şanslarını arttıracak.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/054-egemen-gulden-vs-huseyin-sertbay.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/8/kq5r/1b6/p1p3Q1/Pp6/1P6/K6R w - - 0 50"]
-</fen>
-
-*Ilgililer (1946) – Asici (1996)*
-
-Siyah fil fazlası ile kazanmaya çalıştığı konumda beyazın bir süprizi var.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/052-bertug-ilgililer-vs-poyraz-efe-asici.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

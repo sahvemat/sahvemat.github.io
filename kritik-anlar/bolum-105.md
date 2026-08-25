@@ -10,14 +10,6 @@ date: 2019-10-21
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2r2bk1/5p2/4qnp1/1p2p2p/1P1nP2P/R1B1N1P1/5PB1/3Q2K1 b - - 0 43"]
-</fen>
-
-*McShane (2682) – Kuzubov (2636)*
-
-Siyah taşların hakim konumu güzel bir taktiği olanaklı kılıyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/105-luke-j-mcshane-vs-yuriy-kuzubov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

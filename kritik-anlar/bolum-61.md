@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r2q1bk1/pp1n1n1p/2p3p1/3p1p2/3P2NP/2P2QN1/PP1B1PP1/4R1K1 w - - 0 21"]
-</fen>
-
-*Suyarov (2473, IM) – Baidetskyi (2475, IM)*
-
-Siyah hem h4-piyonuna hem de ata saldırıyor, beyazın cevabı zorunlu ve etkili.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/061-mukhammadzokhid-suyarov-vs-valentin-baidetskyi.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

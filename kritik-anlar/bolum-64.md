@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r1r3k1/3nq2p/b3pb2/P2p1p2/Q1pP1Np1/4P1P1/5PBP/R2RB1K1 w - - 2 24"]
-</fen>
-
-*Akdogan (2171, FM) – Metin (2141)*
-
-Çok keskin konumda birden doğan olanağı beyaz iyi değerlendiriyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/064-alperen-akdogan-vs-enis-metin.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

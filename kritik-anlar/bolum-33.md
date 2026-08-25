@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "3qr1k1/7p/1pQpb1p1/1PbBB3/8/5P2/6PP/3R3K w - - 5 30"]
-</fen>
-
-*Ahmad (2449, IM) – Kerigan (2370, IM)*
-
-Taşlar arasındaki gerilimin üst düzeyde olduğu zamanlarda detaylar önemli hale gelir.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/033-khagan-ahmad-vs-demre-kerigan.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

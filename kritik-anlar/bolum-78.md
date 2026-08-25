@@ -10,14 +10,6 @@ date: 2023-10-26
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r7/4qpkp/r1pb2p1/4p1n1/P1Q1P1N1/1p3NP1/1P3PK1/R2R4 w - - 0 31"]
-</fen>
-
-*Zhalmakhanov (2447) – Amin (2680)*
-
-31.Rxd6 doğru mu yanlış mı?
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/078-ramazan-zhalmakhanov-vs-bassem-amin.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

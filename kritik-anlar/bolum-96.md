@@ -10,14 +10,6 @@ date: 2021-11-06
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "5r1k/4R1pp/1n2R3/2p5/q7/8/5bPP/5Q1K b - - 0 39"]
-</fen>
-
-*Praggnanandhaa R  (IND) (2618) – Gelfand Boris  (ISR) (2680)*
-
-Siyahın kaleye karşı iki hafif taşı ve bir de piyonu bulunuyor. Son yatay problemleri nedeniyle Rxb6 yanında Qxf2 tehdidiyle de karşı karşıya kalan siyah eğer bu tehditlere yanıt üretebilseydi kazanç konumunu koruyacaktı.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/096-praggnanandhaa-r-ind-vs-gelfand-boris-isr.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

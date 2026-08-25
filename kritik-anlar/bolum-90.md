@@ -10,14 +10,6 @@ date: 2021-11-07
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2rqr1k1/5pp1/5n1p/1Qbpn3/4P3/1B4NP/1P3PP1/R1B1R1K1 b - - 0 27"]
-</fen>
-
-*Shevchenko Kirill  (UKR) (2632) – Artemiev Vladislav  (RUS) (2699)*
-
-Beyaz taşların uyumsuz durumu ve korumasız taşların varlığı taktikleri olanaklı kılar.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/090-shevchenko-kirill-ukr-vs-artemiev-vladislav-rus.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

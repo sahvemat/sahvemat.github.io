@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "3r2k1/pprq1pbp/4p1p1/PR3n2/3PN3/1Q2B3/1P3PPP/3R2K1 b - - 7 23"]
-</fen>
-
-*Salepci (2057) – Celik (2213, FM)*
-
-İzole piyona karşı güzel oyunu olan Siyahın hızlı bir çözümü de var.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/039-osman-firat-salepci-vs-ali-alper-celik.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "5rk1/4qppp/5b2/R7/4N3/2n1QP2/6PP/2B3K1 b - - 0 31"]
-</fen>
-
-*Parligras (2505, GM) – Akbas (2425, IM)*
-
-Aynı dikey ve çapraz üzerindeki taşların taktiklere maruz kalması bilinen bir durum. Tecrübeli GM Parligras, eşit konumun sadeliğine aldanıyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/024-mircea-emilian-parligras-vs-umut-ata-akbas.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

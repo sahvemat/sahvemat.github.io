@@ -2023,6 +2023,24 @@ pgn-player p {
         break-inside: avoid;
     }
 
+    /* Kritik Anlar: one game per chapter, no surrounding prose — the
+       2-column magazine layout above has nothing to reflow into a
+       second column, so it's turned off in favor of a single column
+       with the pgn-player card centered in it, the way a lone table
+       centers itself (width: fit-content + margin: auto). */
+    .post-article--single-col {
+        column-count: 1;
+        column-gap: 0;
+        column-rule: none;
+    }
+
+    .post-article--single-col > pgn-player {
+        width: fit-content;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* Two consecutive "bare" game sections (see main.js) sit side by
        side instead of each wasting the other column's width. */
     .post-article > .game-pair {

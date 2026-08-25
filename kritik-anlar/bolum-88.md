@@ -10,10 +10,6 @@ date: 2021-11-06
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Alireza Firouzja (2770) – David W L Howell (2658)*
-
-2021 FIDE Grand Swiss şampiyonu GM Alireza Firouzja'nın turnuvayı kazanmasını sağlayan oyunlardan biri olan öğretici 10. tur karşılaşmasına göz atalım.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/088-alireza-firouzja-vs-david-w-l-howell.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

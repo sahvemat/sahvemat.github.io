@@ -10,14 +10,6 @@ date: 2021-11-06
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "b2q1r2/p2p1pkp/3N2p1/n1pNP3/P1Bn4/6QP/5PP1/3R2K1 w - - 0 31"]
-</fen>
-
-*Goryachkina Aleksandra  (RUS) (2602) – Neiksans Arturs  (LAT) (2570)*
-
-Siyah atın son hamlede 30...Na5 ile uzaklaşması sonrasında savunma için siyah taş sayısı iyice azalmıştır.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/097-goryachkina-aleksandra-rus-vs-neiksans-arturs-lat.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

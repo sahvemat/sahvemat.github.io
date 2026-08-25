@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2br1n1k/1p2qr1p/p4p1Q/3p1P2/3NpN1P/2P3R1/PP2B1P1/2K5 w - - 11 32"]
-</fen>
-
-*Kantor (2584, GM) – Eren (2423, IM)*
-
-Beyazın kalite geri fakat, kendisinin iyi yerleşmiş taşları zayıflamış siyah şaha yönelecek bitirici vuruş için hazır bekliyor. İyi hesap gerekli!
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/119-gergely-kantor-vs-ataberk-eren.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

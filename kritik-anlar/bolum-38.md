@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/4bkP1/8/8/8/5K1P/RB6/6r1 b - - 0 53"]
-</fen>
-
-*Makarian (2549, IM) – Ozkan (2134, CM)*
-
-Güçlü rakibine karşı iyi bir savunma ortaya koyan Siyah zaman sıkışmasında beraberlik fırsatını kaçırıyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/038-rudik-makarian-vs-ervin-ozkan.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">
