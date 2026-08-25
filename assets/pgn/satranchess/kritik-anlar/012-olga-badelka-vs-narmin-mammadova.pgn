@@ -1,0 +1,28 @@
+[Event "Round 1: Badelka, Olga - Mammadova, Narmin"]
+[Site "lichess.org"]
+[Date "????.??.??"]
+[Round "1.35"]
+[White "Badelka, Olga"]
+[Black "Mammadova, Narmin"]
+[Result "1/2-1/2"]
+[WhiteElo "2381"]
+[WhiteTeam "Bayegan Pendik Satranç Spor Kulübü"]
+[WhiteFideId "-1"]
+[WhiteFideId "-1"]
+[BlackElo "2220"]
+[BlackTeam "Rota Koleji Spor Kulübü"]
+[Annotator "Selbes,Tarik"]
+[GameId "2220907167887726"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Badelka, Olga - Mammadova, Narmin"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/6HSnH8N5"]
+[FEN "4r1k1/1p3pp1/p1pbrqn1/3p4/1P1P4/P3PPPb/R2BBQ2/2RN2K1 b - - 0 25"]
+[SetUp "1"]
+
+{ ANALİZ: FM TARIK SELBES
+
+Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Bayegan Pendik) tamamen kayıp bir konumdan bu oyunu çevirmese Rota Koleji Bayegan Pendik'e sürpriz bir mağlubiyet tattıracaktı ve belki de şampiyonluk gelmeyecekti. }
+25... Qe7? { Azerbaycanlı ustadan normal, fakat biraz "tembel" bir hamle. } (25... Nf4!! 26. gxf4 (26. exf4? Rxe2 $19) (26. Be1 Nxe2+ 27. Rxe2 Qf5 { Fxg3-Kg6 veya Kh6 gibi tehditlerle siyah tamamen kazanç konumda }) 26... Qg6+ 27. Kh1 Qh7 28. Qh2 Rh6) 26. Be1 Rf6 27. Qh2 { Beyaz yeni bir savunma düzenine geçti ve artık g3'ü daha iyi koruyor } 27... Bd7 28. Rc3 { Öğretici bir an! Siyah en kötü taşını iyileştirmeli ve böylece atağı durdurulamaz bir hal alacak! Oyunda ise Mammadova kötü atıyla hiç ilgilenmiyor ve yavaş yavaş üstünlüğünü kaybediyor. } 28... Re6?! (28... Nf8! 29. Bf2 Nh7 30. Rd2 Ng5 $19) 29. Bf1 Qf6 30. Qg2 Bb8 31. Rf2 R6e7 32. Bd3 Bf5 33. Bf1 Bd7 34. Rb3 Qd6 35. Ra2 Re6 36. f4 R6e7? (36... Ne7! $17 { son şanstı }) 37. Be2 Bf5 38. Bf3 Be4 39. Nf2 Bxf3 40. Qxf3 f5 41. Nh3 Nh8 42. Ng5 Nf7 43. Nxf7 Rxf7 44. Rh2 Re6 45. a4 Ba7 46. Bd2 Rh6 47. Rxh6 gxh6 48. b5 Rg7 49. bxa6 bxa6 50. Kf2 Qe6 51. Rb1 Kh7 52. Bc3 Re7 53. Rb2 Rg7 54. Ba5 Rd7 55. Bc3 Rg7 56. Ba5 Rd7 { 1/2-1/2  wins. } 1/2-1/2

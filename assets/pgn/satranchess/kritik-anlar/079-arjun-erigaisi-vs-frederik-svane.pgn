@@ -1,0 +1,21 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.16"]
+[White "Erigaisi, Arjun"]
+[Black "Svane, Frederik"]
+[Result "1-0"]
+[WhiteElo "2712"]
+[BlackElo "2626"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Erigaisi, Arjun - Svane, Frederik"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/ulSXDdp6"]
+[FEN "2rqr3/pp4k1/4bp1p/3pn3/6PB/P1NB1P2/1P1Q4/1K5R w - - 0 29"]
+[SetUp "1"]
+
+{ Beyaz saldırısını nasıl zirveye taşıyabilir? }
+29. Qxh6+! { Basit ve etkili. Vezir alınamaz. } 29... Kf7 (29... Kxh6 30. Bxf6#) 30. Bg6+! Nxg6 31. Qh7+ Kf8 32. Qxg6 { Beyazın saldırısı bitiricidir. } 32... Rc6 33. Bxf6 Bf5+ 34. Qxf5 Rxf6 35. Rh8+ Ke7 36. Nxd5+ Qxd5 (36... Kd6 37. Rxe8 Qxe8 38. Nxf6 $18) 37. Rxe8+ { Siyah terk etti. } 1-0

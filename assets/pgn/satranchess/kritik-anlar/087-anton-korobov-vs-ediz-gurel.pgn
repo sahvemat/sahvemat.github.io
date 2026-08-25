@@ -1,0 +1,23 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.38"]
+[White "Korobov, Anton"]
+[Black "Gurel, Ediz"]
+[Result "*"]
+[WhiteElo "2658"]
+[BlackElo "2514"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Korobov, Anton - Gurel, Ediz"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/A0hOAy55"]
+[FEN "3r1k2/q3bppB/1np1p2p/p3P3/1p3BQ1/1P6/P4PPP/3R2K1 w - - 0 27"]
+[SetUp "1"]
+
+{ Siyah piyon fazla ancak
+şahı ve vezirin konumu ile ilgili sorunları vardır. }
+27. Rxd8+ Bxd8 28. Bxh6! Ke8 (28... gxh6 29. Qg8+ Ke7 30. Bg6! { Korumasız siyah
+vezir nedeniyle Beyaz birkaç piyon önde kalır. } { [%csl Gg6] } 30... Kd7 31. Qxf7+ Be7 32. Qe8+ $18 Kc7 33. Qxe7+) 29. Qxg7 Be7 30. Qg8+ Kd7 31. Qxf7 $18 *

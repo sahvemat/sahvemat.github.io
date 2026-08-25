@@ -1,0 +1,23 @@
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.16"]
+[White "Zhalmakhanov, Ramazan"]
+[Black "Amin, Bassem"]
+[Result "1-0"]
+[WhiteElo "2447"]
+[BlackElo "2680"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Zhalmakhanov, Ramazan - Amin, Bassem"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/HBDNcUaZ"]
+[FEN "r7/4qpkp/r1pb2p1/4p1n1/P1Q1P1N1/1p3NP1/1P3PK1/R2R4 w - - 0 31"]
+[SetUp "1"]
+
+{ 31.Rxd6 doğru mu yanlış mı? }
+31. Rxd6! Qxd6 { Siyah planladığı gibi } (31... Nxf3 { oynayamayacağını fark ediyor. } 32. Qc5! $18 { Açarak saldırı ile vezir kazanma tehdidinden ötürü tempoyla
+kalesini koruyan beyaz materyal kazanır. }) 32. Nxg5 $18 { Beyaz zorlanmadan
+kazandı. } 1-0

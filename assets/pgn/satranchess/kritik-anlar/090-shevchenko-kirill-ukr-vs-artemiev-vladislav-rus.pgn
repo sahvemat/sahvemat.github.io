@@ -1,0 +1,24 @@
+[Event "GS Open"]
+[Site "lichess.org"]
+[Date "2021.11.07"]
+[Round "11.14"]
+[White "Shevchenko Kirill  (UKR)"]
+[Black "Artemiev Vladislav  (RUS)"]
+[Result "0-1"]
+[WhiteElo "2632"]
+[BlackElo "2699"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Shevchenko Kirill  (UKR) - Artemiev Vladislav  (RUS)"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/xvaY8JHI"]
+[FEN "2rqr1k1/5pp1/5n1p/1Qbpn3/4P3/1B4NP/1P3PP1/R1B1R1K1 b - - 0 27"]
+[SetUp "1"]
+
+{ Beyaz taşların uyumsuz durumu ve korumasız taşların varlığı taktikleri
+olanaklı kılar. }
+27... Bxf2+! 28. Kxf2 Rb8! { d3- karesinin kontrolü
+için gerekli devamyoludur. } 29. Qa6 (29. Qa4 Nd3+ 30. Kf1 Nxe1 31. Kxe1 Nxe4 $19) 29... Rxb3 { Siyah kazanç konumdadır ve oyun birkaç hamle sonra sona
+ermiştir. } 30. Ra3 Qb8 31. Qe2 Rxg3 32. Kxg3 Nxe4+ { 0-1 Black wins. } 0-1

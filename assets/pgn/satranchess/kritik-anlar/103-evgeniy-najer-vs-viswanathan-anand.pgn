@@ -1,0 +1,48 @@
+[Event "FIDE Chess.com Grand Swiss"]
+[Site "lichess.org"]
+[Date "2019.10.10"]
+[Round "1.4"]
+[White "Najer, Evgeniy"]
+[Black "Anand, Viswanathan"]
+[Result "1-0"]
+[WhiteElo "2635"]
+[BlackElo "2765"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "E46"]
+[Opening "Nimzo-Indian Defense: Normal Variation"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Najer, Evgeniy - Anand, Viswanathan"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/J7BkvQpk"]
+
+{ GM Evgeniy Najer, eski
+dünya şampiyonu GM Anand'a karşı elde ettiği zaferle adeta bir varyantın
+geleceğini belirliyor. }
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Bd2 d5 6. Nf3 b6 7. Rc1 { Bu bültende ele aldığımız Yılmaz - Harikrishna partisinde
+de karşımıza çıkan bu varyant, günümüzde hala popülerliğini
+korumasını bu oyuna da borçlu. Bu oyun Nimzo-Hint Savunması için çözüm
+arayan teorisyenlerim Bd2 hamlesini keşfetmelerine yardımcı oldu. } 7... Bb7 8. cxd5 { Genellikle b7- filinin önünü kapatmaya çalışmak ve böylece
+yarı-açık c- dikeyini kullanma hedefi hala en iyi yöntem olarak kabul
+ediliyor. } 8... exd5 9. Bd3 Be7 { Pek çok fikirden biri. Yukarıda ele alındığı
+gibi GM Mustafa Yılmaz bu fili farklı konumlandırmıştı. } 10. O-O Nbd7 { [#] } (10... c5 { ve ardından ...Nc6 günümüzde daha popüler. }) 11. Ne5! { Pillsbury'nin silahı! Beyaz f4- sürüşü ile merkezde Pillsbury atı
+yaratmak istiyor. } 11... Nxe5 12. dxe5 Nd7 13. f4 Nc5 14. Bb1 (14. Bxh7+ { bu noktada
+sadece eşitlik için yeterli. } 14... Kxh7 15. Qh5+ Kg8 16. Rf3 g6 (16... f6 17. Rh3 fxe5 18. Qh7+ Kf7 19. Qh5+ $10) 17. Qh6 Bc8 18. Nxd5 Qxd5 19. Bc3 Be6 20. f5 Bxf5 21. e6 f6 22. Rh3 Bxh3 23. Qxg6+ $10) 14... d4! { Önceki hamlenin de
+fikri buydu. Siyah bu hamleyi oynamasaydı Beyaz Be1 ile bunu önleyecekti. } 15. Nb5 d3! { [%csl Gc5] } 16. Nd4 { [#] Uzun düşünme sonucu oynanmış bir
+hamle. } 16... a5 { Siyah b4- ilerleyişini kesmek istyor. Bu hamleyle Siyahın ...Ne4
+fikri engellenmiş oldu. Geçtiğimiz yıllarda bu konuma dair oynanmış
+oyunlarda dikkat çeken bir başka hamle yazışmalı satrançta oynandı: } (16... Qd5 17. Qg4 f5! { İncelediğimiz oyunda mümkün olmayan bu hamle
+siyahı rahatlatır. } 18. Qh3 (18. Nxf5?? Rxf5 $19) 18... a5 { Starodubtsev,
+Vasily Petrovich - Langer, Raimund, 1/2-1/2, VWC10/F, 2021, https://lichess.
+org/raqmk4Ls }) 17. Qg4 { Beyazın basit saldırı planı f-piyonunu ilerletmek
+olacaktır. } 17... g6 (17... Ne4 18. Bxd3! Nxd2 19. Rfd1 Bb4 20. a3 { Beyaz piyon
+öne geçerdi. }) 18. f5! Ne4 19. Bxd3 Nxd2 20. fxg6! (20. Rfd1?? Bg5 $19) 20... fxg6 21. Bxg6 Kh8 { [#] En iyi pratik tercih. Bu noktada Siyaha iyi bir
+hamle önermek zor. } (21... Bc8 22. Rxf8+ Qxf8 23. Bf5+ Kh8 24. Rxc7 Bxf5 25. Nxf5 Re8 26. Rd7 Nc4 27. Rxe7 Rxe7 28. Nxe7 Nxe3 29. Qf3 Qxe7 30. Qxe3 $18) 22. Bxh7!! { Kazandıran tek hamle! Siyah taş fazla, beyaz kale de alınabiliyor
+fakat durum ümitsizdir. } 22... Rxf1+ (22... Nxf1 23. Qh5 $18) 23. Rxf1 Bg5 { Bxe3 ve
+Qg5 ile savunma fikriyle. } 24. Nf5! { Beyaz e3- piyonunu koruyarak tekrar
+Qh5-Bg6 ile siyah şahı hedef alacak. } 24... Qd3 25. Re1 Bxe3+ 26. Kh1 (26. Nxe3?? Qxh7 $10) 26... Bh6 { Anand neden dünyanın en iyi oyuncularından biri
+olduğunu en zorlu savunmaları bularak gösteriyor. } 27. Qg6 { Stockfish bu
+hamleden sonra Siyahın oyuna geri dönebileceği görüşünde ancak zaman
+sıkışmasının yaklaşması ile böylesi karışık bir konumda hatalar
+kaçınılmaz oluyor. } (27. Bg6 Ne4 28. Qh5 Qd2 29. Qxh6+ Qxh6 30. Nxh6 $18) 27... Bxg2+! 28. Kxg2 { [#] } 28... Qd5+? (28... Qf3+ 29. Kg1 Qf4!! { Af3 tehdidi
+oyunun beraberlikle sonuçlanmasına yeterdi. - Stockfish. }) 29. Kh3! Qd3+ 30. Kh4! { ve 30...Nf3 veya 30...Qd8 31.Kh5! ile beyaz şahın rahatsız
+edilemeyeceğini gören Siyah terk etti. } 1-0

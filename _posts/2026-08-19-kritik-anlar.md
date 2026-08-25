@@ -4,9 +4,9 @@ title: "Kritik Anlar"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"
-excerpt: "Türkiye'den ve dünya sahnesinden üç kritik pozisyon: kale finalindeki yoğun hesaptan yol kesme ara hamlesine ve Carlsbad yapısındaki öğretici bir hataya uzanan bir seçki."
+excerpt: "Türkiye'den ve dünya sahnesinden yüz otuz beş kritik pozisyon: amatör lig partilerindeki kale finallerinden FIDE Grand Swiss ve Avrupa Şampiyonası'ndaki büyükusta partilerine uzanan geniş bir seçki."
 FEN: 8/8/2R5/4kpp1/2P2r1p/3P4/4K3/8 w - - 4 52
-reading_time: 3
+reading_time: 165
 date: 2026-08-19
 ---
 

@@ -1,0 +1,24 @@
+[Event "GS Open"]
+[Site "lichess.org"]
+[Date "2021.11.07"]
+[Round "11.44"]
+[White "Pichot Alan  (ARG)"]
+[Black "Gretarsson Hjorvar Steinn  (I"]
+[Result "1-0"]
+[WhiteElo "2628"]
+[BlackElo "2577"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Pichot Alan  (ARG) - Gretarsson Hjorvar Steinn  (I"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/S6KkPs6s"]
+[FEN "r3k2r/3q1p2/n3p1p1/2bpPn1p/Pp3N1P/3Q1N2/3B1PP1/R1R3K1 w kq - 0 23"]
+[SetUp "1"]
+
+{ Siyah 22...g6 hamlesini oynarken konumda gizli duran taktik motifi
+kaçırıyor. }
+23. Qb5! { Kenarda duran atın ve a- dikeyindeki talihsiz
+durumun etkisiyle Rxc5 tehdidini karşılamak güçleşir. } 23... Nd4 (23... Be7 24. Rc6! $18) 24. Nxd4 Bxd4 25. Rab1 Bxe5 { Siyah iki piyon fazladır ancak rok
+atamadığı için durumu kritiktir. } (25... Qxb5 26. axb5 Nc5 27. Rxb4 Kd7 28. Rxd4 Nb3 29. Ne2 $18) 26. Nd3 Bc3 (26... Bd6 27. Rc6! Nc7 28. Qb7 O-O 29. Bxb4 $18) 27. Bxc3 bxc3 28. Rxc3 Rb8 29. Qxb8+! Nxb8 30. Rxb8+ Ke7 31. Rxh8 $18 { Beyaz zorlanmadan kazandı. } 1-0

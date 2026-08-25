@@ -1,0 +1,26 @@
+[Event "GS Open"]
+[Site "lichess.org"]
+[Date "2021.11.06"]
+[Round "10.35"]
+[White "Praggnanandhaa R  (IND)"]
+[Black "Gelfand Boris  (ISR)"]
+[Result "*"]
+[WhiteElo "2618"]
+[BlackElo "2680"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Praggnanandhaa R  (IND) - Gelfand Boris  (ISR)"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/tCfwTVOk"]
+[FEN "5r1k/4R1pp/1n2R3/2p5/q7/8/5bPP/5Q1K b - - 0 39"]
+[SetUp "1"]
+
+{ Siyahın kaleye karşı iki hafif taşı ve
+bir de piyonu bulunuyor. Son yatay problemleri nedeniyle Rxb6 yanında Qxf2
+tehdidiyle de karşı karşıya kalan siyah eğer bu tehditlere yanıt
+üretebilseydi kazanç konumunu koruyacaktı. }
+39... Qa8! { Konumun tüm
+ihtiyaçlarını karşılayan bu hamle oyunda da Siyahın gözünden kaçtı. } (39... Nd7 40. Re8 Qf4 41. Re4 Qf6 42. R4e6 Qf4 43. Re4 Qf6 { Oyun beraberlikle
+sonuçlandı. }) 40. Rxb6 Bh4! $19 *

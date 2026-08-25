@@ -1,0 +1,26 @@
+[Event "GS Open"]
+[Site "lichess.org"]
+[Date "2021.11.07"]
+[Round "11.36"]
+[White "Sethuraman S.P.  (IND)"]
+[Black "Rakhmanov Aleksandr  (RUS)"]
+[Result "0-1"]
+[WhiteElo "2620"]
+[BlackElo "2657"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sethuraman S.P.  (IND) - Rakhmanov Aleksandr  (RUS)"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/KCiVWdsE"]
+[FEN "6k1/p5r1/1P1r2p1/2qPQ1P1/2P2p2/7B/5p1K/R7 b - - 0 51"]
+[SetUp "1"]
+
+{ Siyah piyonları daha etkili kullanmanın bir
+yöntemi olabilir mi? }
+51... Qe3! 52. Be6+ Kh8 53. Qxe3 fxe3 54. Kg2 (54. bxa7 Rxa7 $19 { Siyah piyonlar belirleyici olur. }) 54... axb6 { Bu hamle çok
+anlaşılır bir hatadır, çünkü kazanca giden yolu bulmak oldukça zordur.
+Elbette Stockfish için değil! } (54... Rxb6! 55. c5 Rb2 56. d6 (56. Kf3 { Piyonlar durduruldu ve şimdi Rh1 tehdidi önemlidir! } 56... Rc7! 57. c6 e2 58. Kxf2 e1=Q+ 59. Kxe1 Rh7 $19) 56... Rh7 { Siyah piyonu terfi ettirerek mat
+istiyor. } 57. Kg3 e2 58. Kxf2 e1=Q+ 59. Kxe1 Rh1#) 55. Kf3? { Zaman
+sıkışmasında görmesi güçleşen savunma olanağını kaçırıyor. } (55. Ra8+ Kh7 56. Ra3! { Siyah şahın tehlike altında oluşu beyaza şans verir. } 56... Rc7 57. Rxe3 Rxc4 58. Kxf2 { Siyah yine de kazanmalı. }) 55... Ra7! 56. Rh1+ Rh7 57. Ra1 Rxe6! 58. dxe6 Rh3+! { Son darbe! } 59. Kg2 Kg7! 60. e7 Kf7 { 0-1 Black wins. } 0-1
