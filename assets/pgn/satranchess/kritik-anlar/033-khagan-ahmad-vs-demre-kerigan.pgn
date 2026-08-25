@@ -23,5 +23,5 @@
 [FEN "3qr1k1/7p/1pQpb1p1/1PbBB3/8/5P2/6PP/3R3K w - - 5 30"]
 [SetUp "1"]
 
-{ Taşlar arasındaki gerilimin üst düzeyde olduğu zamanlarda detaylar önemli hale gelir. }
+{ Taşlar arasındaki gerilimin üst düzeyde olduğu zamanlarda detaylar önemli hale gelir. [P1] }
 30. Bf6! { 30...Qc8 basitçe 31.Qxc8 ile yanıtlanır. Bu nedenle Siyah terk etti. } { [%clk 1:04:52] } 1-0

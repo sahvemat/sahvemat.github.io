@@ -23,5 +23,5 @@
 [FEN "4n3/k7/pp5R/3p4/1K1P4/8/8/8 w - - 2 52"]
 [SetUp "1"]
 
-{ Bu zorlu final Siyahın son hamlesi (51...Ne8) olmadan beraberlik olabilirdi. }
+{ Bu zorlu final Siyahın son hamlesi (51...Ne8) olmadan beraberlik olabilirdi. [P3] }
 52. Rh7+ { [%clk 0:27:05] } 52... Kb8 { [%clk 0:19:18] } 53. Rh8 { Gözden kaçan önemli detay siyaha pahalıya mal oluyor. } { [%clk 0:27:33] } 1-0

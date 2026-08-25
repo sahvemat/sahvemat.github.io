@@ -17,5 +17,5 @@
 [FEN "2r3k1/pb2qpp1/1p2p2p/8/4nN2/bP2P1P1/PB2QPBP/3R2K1 w - - 0 23"]
 [SetUp "1"]
 
-{ "Gevşek taşlar düşer!" }
+{ "Gevşek taşlar düşer!" [P13] }
 23. Bxe4 Bxe4 24. Qa6! $18 Rd8 25. Rxd8+ Qxd8 26. Bxa3 g5 27. Ng2 Qd2 28. Qc8+ Kh7 29. Qc1 $18 { 1-0 White wins. } 1-0

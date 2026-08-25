@@ -22,4 +22,5 @@
 [FEN "r1q2rk1/1bp1bppp/1np5/p2pP3/P2N2Q1/2N5/1PP2PPP/R1B1R1K1 w - - 7 16"]
 [SetUp "1"]
 
+{ [P3] }
 16. Nf5! { ve mat tehdidi ile e7-fili aynı anda korunamaz. } { [%clk 1:07:29] } 16... Qxf5 { [%clk 1:24:45] } 17. Qxf5 $18 { 1-0 White wins. } { [%clk 1:07:54] } 1-0

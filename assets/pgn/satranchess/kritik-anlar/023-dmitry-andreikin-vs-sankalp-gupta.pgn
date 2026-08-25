@@ -23,5 +23,5 @@
 [FEN "r5k1/1p3rp1/p1pR3p/2Q2b2/5N1P/4P3/q4PP1/3R2K1 w - - 0 27"]
 [SetUp "1"]
 
-{ Siyah vezirin savunmadan uzak kaldığı bu anda taşları harika konumlanmış olan beyaz saldırısını başlatıyor. }
+{ Siyah vezirin savunmadan uzak kaldığı bu anda taşları harika konumlanmış olan beyaz saldırısını başlatıyor. [P9] }
 27. Rd8+ { [%clk 0:29:39] } 27... Rxd8 { [%clk 0:37:47] } 28. Rxd8+ { [%clk 0:30:04] } 28... Kh7 { [%clk 0:38:13] } 29. Qe5! { Beyazın saldırısının önemli noktası buydu. Ve8 tehdidi engellenemez! } { [%clk 0:30:24] } 29... Bc2 { Siyah kalite feda ederek attan kurtulmak istiyor. } { [%clk 0:22:21] } 30. h5 { [%clk 0:24:12] } 30... Rxf4 { [%clk 0:20:26] } 31. exf4 { Siyah terk etti. } { [%clk 0:24:02] } 1-0

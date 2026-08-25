@@ -23,4 +23,5 @@
 [FEN "r1r3k1/2q2pbp/pn1pbnp1/1p2p3/4PP2/PNN1B2P/1PP1B1P1/3RQRK1 w - - 7 16"]
 [SetUp "1"]
 
+{ [P17] }
 16. fxe5 { [%clk 1:05:05] } 16... dxe5 { [%clk 0:56:09] } 17. Rxf6! { [%clk 1:03:09] } 17... Bxf6 { [%clk 0:52:02] } 18. Qf2 { [%clk 1:03:31] } 18... Bd8 { [%clk 0:50:21] } (18... Nd7 19. Rxd7 Qxd7 20. Qxf6 $18) 19. Rxd8+! { [%clk 1:03:46] } 19... Qxd8 { [%clk 0:50:21] } 20. Bxb6 { [%clk 1:04:10] } 20... Qd6 { [%clk 0:46:41] } 21. Be3 { Üç hafif taşın iki kaleye etkinlik yönünden açıkça üstün oldukları görülmektedir. Özellikle koyu renkler üzerindeki hakimiyet (c5,a5,f6,g7,h6 kareleri) belirleyicidir. } { [%clk 1:02:46] } 21... f5 { [%clk 0:31:53] } 22. exf5 { [%clk 1:00:30] } 22... Bxf5 { [%clk 0:32:18] } 23. Nc5 { [%clk 0:58:05] } 23... Rf8 { [%clk 0:29:16] } 24. Bf3 $18 { 1-0 White wins. } { [%clk 0:57:49] } 1-0

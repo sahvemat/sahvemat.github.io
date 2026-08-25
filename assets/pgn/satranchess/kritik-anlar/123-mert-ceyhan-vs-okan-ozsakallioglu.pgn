@@ -21,5 +21,5 @@
 [FEN "r1r3k1/1b3p2/pp1pp1nQ/4q1pN/P1n1P3/2NR3P/1PP2PP1/4R1K1 w - - 4 23"]
 [SetUp "1"]
 
-{ Beyazın rakibi terk etmeye zorlayan hamlesini bulabilir misiniz? }
+{ Beyazın rakibi terk etmeye zorlayan hamlesini bulabilir misiniz? [P1] }
 23. Rf3 { 1-0 White wins. } { [%csl Gf3] [%clk 0:59:03] } 1-0
