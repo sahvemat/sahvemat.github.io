@@ -18,7 +18,7 @@
 [SetUp "1"]
 
 { Siyah piyonları daha etkili kullanmanın bir
-yöntemi olabilir mi? }
+yöntemi olabilir mi? [P19] }
 51... Qe3! 52. Be6+ Kh8 53. Qxe3 fxe3 54. Kg2 (54. bxa7 Rxa7 $19 { Siyah piyonlar belirleyici olur. }) 54... axb6 { Bu hamle çok
 anlaşılır bir hatadır, çünkü kazanca giden yolu bulmak oldukça zordur.
 Elbette Stockfish için değil! } (54... Rxb6! 55. c5 Rb2 56. d6 (56. Kf3 { Piyonlar durduruldu ve şimdi Rh1 tehdidi önemlidir! } 56... Rc7! 57. c6 e2 58. Kxf2 e1=Q+ 59. Kxe1 Rh7 $19) 56... Rh7 { Siyah piyonu terfi ettirerek mat

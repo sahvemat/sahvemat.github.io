@@ -23,5 +23,5 @@
 [FEN "8/2Q5/8/8/1p2n1PK/1P3k2/P7/5r2 w - - 13 93"]
 [SetUp "1"]
 
-{ Zaman sıkışmasında tek bir hata yeterli olabiliyor. }
+{ Zaman sıkışmasında tek bir hata yeterli olabiliyor. [P2] }
 93. Qf7+? { [%clk 0:01:16] } (93. Qh2 { Beyaz bu şekilde üstünlüğünü kazanca dönüştürmeye çalışabilirdi. }) 93... Kg2 { ve Kh1 mat tehdidi nedeniyle beyaz vezirini feda ederek beraberliğe razı olmak zorunda. 1/2-1/2 } { [%clk 0:00:57] } 1/2-1/2

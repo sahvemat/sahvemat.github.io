@@ -19,7 +19,7 @@
 
 { Beyaz çok üstün konumda bir anlık
 dikkatsizlikle 34.Rxb7 oynuyor ve siyaha bir anda konumu karıştırma
-fırsatı veriyor. }
+fırsatı veriyor. [P6] }
 34... Nd4! { Bir anda beyaz şah ve diğer taşlar
 kendini huzursuz hissediyor. } 35. Bd3 { Ne2 tehdidini savuşturarak. } 35... Re2! { f2- karesi savunulamaz. } 36. Rxf7+! (36. f3 Nxf3+ 37. gxf3 Qg5+ $19) 36... Qxf7 37. Qxd4 $13 { Stockfish'e göre 0.00 olan tamamen belirsiz bu konumu
 siyah kazanmayı başardı. } *

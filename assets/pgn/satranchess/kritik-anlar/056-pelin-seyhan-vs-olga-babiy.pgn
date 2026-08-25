@@ -22,4 +22,5 @@
 [FEN "1r1r2k1/1pp2pb1/4bn2/2Q1p1qp/P3P1p1/2PN2P1/1P1NBPP1/R3K2R b KQ - 5 21"]
 [SetUp "1"]
 
+{ [P7] }
 21... Rxd3! (21... Nd7 { Oyun bu hamle ile belirsiz bir konumla devam etti. }) 22. Bxd3 Rd8 { ve fili korumanın uygun bir yolu yok. } 23. Ke2 { ve şimdi 21...Kxd3 hamlesini hesaplarken siyahın görmesi gereken hamle nedir? } (23. Qb5 c6 $19) 23... Qxd2+! 24. Kxd2 Nxe4+ $19 { 1/2-1/2  } 1/2-1/2

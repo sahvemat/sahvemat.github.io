@@ -18,7 +18,7 @@
 [SetUp "1"]
 
 { Eleme yöntemi ile beyaz
-şahın nasıl korunması gerektiği bulunmalıdır. }
+şahın nasıl korunması gerektiği bulunmalıdır. [P19] }
 24. Ke1! { Diğer
 hamlelerin nasıl elendiğini hesaplamak gerekliydi: } (24. axb5? fxe3 25. Rg8+ (25. Qxe3 Rxf2+ $19) 25... Rxg8 26. Qh5 Rg7! 27. Bd3+ Kg8 28. Qxh4 Rf8 $19) (24. Kg2? Be2! 25. Qxe2 (25. Qh3 fxe3 26. Qxh4 Qd8! $19) 25... f3+ $19) 24... fxe3 25. Qh5! Bxf2+ (25... exf2+ 26. Kd2 $18 { ve zor durumda olan
 siyah şah olur. }) 26. Kd1 e2+ 27. Kd2 e1=Q+ 28. Raxe1 Bxe1+ 29. Kxe1 Rf1+ 30. Rxf1 Bxf1 31. Bg6+! { Zincirin son halkası! } 31... Kg7 32. Qh7+ Kf8 33. Qf7# { 1-0 White wins. } 1-0

@@ -21,5 +21,5 @@
 [FEN "r1bqk2r/ppp2ppp/3p4/2b4n/1n2PB2/2NQ1P2/PPP1N1PP/R3KB1R w KQkq - 3 9"]
 [SetUp "1"]
 
-{ Vd2 mi Vd1 mi? }
+{ Vd2 mi Vd1 mi? [P6] }
 9. Qd2?? { [%clk 1:18:15] } (9. Qd1 { hamlesi doğru olacaktı. }) 9... Nxf4 { [%clk 1:09:26] } 10. Qxf4 { [%clk 1:07:23] } (10. Nxf4 Be3! { nedeniyle 10.Axf4 oynanamaz. }) 10... Nxc2+ { [%clk 1:08:03] } 11. Kd1 { [%clk 1:06:45] } 11... Nxa1 $19 { 0-1 Black wins. } { [%clk 1:08:17] } 0-1

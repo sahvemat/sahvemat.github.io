@@ -18,7 +18,7 @@
 [SetUp "1"]
 
 { Beyaz piyon geri ancak sadece piyonu geri almak için filleri
-değişmek yeterli görünmüyor... }
+değişmek yeterli görünmüyor... [P23] }
 22. Rxc5+! { Vezirlerin olmadığı bu
 durumda siyah şahı hedef alan beklenmedik bir kalite fedası. } (22. Bxd4 Rxd4 23. Rxc5+ Kb6 $10) 22... Bxc5 23. Bxc5 { Bxa7 ile b- dikeyinde güçlü bir
 geçer yaratma fikrinin yanında Ka1 ile şahı da hedef almak mümkün olur. } 23... Nc4 (23... Kb8 24. b6 a6 25. Ra1! $18) 24. Rc1 (24. Ra1 { Stockfish'e göre

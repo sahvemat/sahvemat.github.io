@@ -22,5 +22,5 @@
 [FEN "3r2k1/pprq1pbp/4p1p1/PR3n2/3PN3/1Q2B3/1P3PPP/3R2K1 b - - 7 23"]
 [SetUp "1"]
 
-{ İzole piyona karşı güzel oyunu olan Siyahın hızlı bir çözümü de var. }
+{ İzole piyona karşı güzel oyunu olan Siyahın hızlı bir çözümü de var. [P3] }
 23... Nxd4! { [%clk 0:20:38] } 24. Bxd4 { [%clk 0:00:37] } 24... Qxd4! { Beyaz terk etti. } { [%clk 0:20:48] } 0-1

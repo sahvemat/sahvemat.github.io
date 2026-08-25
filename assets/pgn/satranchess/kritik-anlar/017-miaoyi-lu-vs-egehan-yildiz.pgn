@@ -23,5 +23,5 @@
 [FEN "5rk1/p2qp1bp/b4n2/3pQ1B1/3p2p1/8/PPP2PPP/RN2R1K1 b - - 9 17"]
 [SetUp "1"]
 
-{ Beyaz kalite önde olmasına karşın Siyahın baskısını karşılayacak nitelikte gelişime sahip değildir. }
+{ Beyaz kalite önde olmasına karşın Siyahın baskısını karşılayacak nitelikte gelişime sahip değildir. [P5] }
 17... Ne4! { Bu bariz hamle Beyazın gözünden kaçan detay olmamalı. } { [%clk 0:41:50] } 18. Qxe7 Qf5 { Belki de Beyaz 19.Bh4'e güvenmişti. } { [%clk 0:41:14] } 19. Nd2 { Beyaz mecburen filinden vazgeçiyor. } (19. Bh4 Bf6! $19 { Buz dağının görünmeyen yüzü. }) 19... Nxg5 $19 { İki file karşı kale ve piyon yeterli değildir. Daha da önemlisi siyah taşların etkinliği kazancın uzak olmadığını gösterir niteliktedir. } { [%clk 0:35:58] } 0-1

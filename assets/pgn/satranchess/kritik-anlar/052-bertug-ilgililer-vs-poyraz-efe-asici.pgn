@@ -21,5 +21,5 @@
 [FEN "8/8/kq5r/1b6/p1p3Q1/Pp6/1P6/K6R w - - 0 50"]
 [SetUp "1"]
 
-{ Siyah fil fazlası ile kazanmaya çalıştığı konumda beyazın bir süprizi var. }
+{ Siyah fil fazlası ile kazanmaya çalıştığı konumda beyazın bir süprizi var. [P4] }
 50. Rxh6 { [%clk 0:06:25] } 50... Qxh6 { [%clk 0:01:42] } 51. Qg6+!! { Pat silahı. } { [%clk 0:06:55] } 51... Qxg6 { 1/2-1/2 wins. } { [%clk 0:01:37] } 1/2-1/2

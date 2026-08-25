@@ -23,5 +23,5 @@
 [FEN "1q4k1/p4pp1/4r3/3Q4/1P1B2p1/3P4/P2P1PKb/R7 b - - 1 32"]
 [SetUp "1"]
 
-{ Beyaz şah tehlikede durmuyor fakat, beyazın koyu renklerde duran taşları saldırının hedefi olacak! }
+{ Beyaz şah tehlikede durmuyor fakat, beyazın koyu renklerde duran taşları saldırının hedefi olacak! [P7] }
 32... Rd6! { [%clk 0:13:02] } 33. Qe4 { [%clk 0:02:38] } 33... Rxd4! { [%clk 0:13:11] } 34. Qxd4 { [%clk 0:02:34] } 34... Be5! { [%clk 0:13:35] } 35. Qxg4 { [%clk 0:02:36] } 35... Bxa1 $19 { ve siyah üstünlüğünü kazanca çevirmesini bildi. } { [%clk 0:13:54] } 0-1

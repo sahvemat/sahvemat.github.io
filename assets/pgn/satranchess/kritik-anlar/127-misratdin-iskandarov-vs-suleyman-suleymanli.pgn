@@ -21,5 +21,5 @@
 [FEN "5r2/p6k/2p3pp/Np1b4/1P1Pp2P/P1R1Pr2/5PR1/4K3 w - - 2 32"]
 [SetUp "1"]
 
-{ Siyah Axc6 hamlesini Kc8 ile yanıtlamayı planıyor. Sizce piyon zehirli mi? }
+{ Siyah Axc6 hamlesini Kc8 ile yanıtlamayı planıyor. Sizce piyon zehirli mi? [P3] }
 32. Nxc6! { [%clk 0:14:07] } 32... Rc8 { [%clk 0:20:28] } 33. Rxg6!! $18 { Bu hamle olmaksızın beyaz piyonu alamazdı. } { [%csl Gg6][%cal Rc6e7,Rc6e5,Gh7g6] [%clk 0:14:24] } 1-0
