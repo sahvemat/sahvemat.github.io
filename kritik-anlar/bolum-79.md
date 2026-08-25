@@ -10,14 +10,6 @@ date: 2023-10-25
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2rqr3/pp4k1/4bp1p/3pn3/6PB/P1NB1P2/1P1Q4/1K5R w - - 0 29"]
-</fen>
-
-*Erigaisi (2712) – Svane (2626)*
-
-Beyaz saldırısını nasıl zirveye taşıyabilir?
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/079-arjun-erigaisi-vs-frederik-svane.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

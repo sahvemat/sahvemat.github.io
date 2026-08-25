@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "1rb1r1k1/3n4/1q4p1/1p1Pp1Pp/2p4P/2b1N3/1PQ3B1/4RR1K w - - 0 27"]
-</fen>
-
-*Akobian, Varuzhan - Ushenina, Anna*
-
-Acaba c3-karesindeki taşını geri almak zorunda mı?
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/02-varuzhan-akobian-vs-anna-ushenina.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

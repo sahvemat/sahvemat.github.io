@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "1r3r1k/1bpq2pp/pbpp1pn1/4P3/2QP4/2N1BN1P/PP3PP1/2R1R1K1 b - - 0 17"]
-</fen>
-
-*Tinmaz (2054, FM) – Taspinar (2360, FM)*
-
-Beyaz hareketli merkezinden en yüksek verimi almak için ilerliyor. Siyahın dinamik yanıtı olmaksızın bu fikri fena olmayabilirdi.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/019-kerem-tinmaz-vs-yanki-taspinar.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

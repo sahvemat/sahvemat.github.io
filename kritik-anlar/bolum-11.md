@@ -10,10 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Mamedyarov (2746) – Andreikin (2695)*
-
-ANALİZ: FM TARIK SELBES
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/011-shakhriyar-mamedyarov-vs-dmitry-andreikin.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

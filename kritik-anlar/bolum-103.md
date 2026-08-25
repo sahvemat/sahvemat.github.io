@@ -10,10 +10,6 @@ date: 2019-10-10
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Najer (2635) – Anand (2765)*
-
-GM Evgeniy Najer, eski dünya şampiyonu GM Anand'a karşı elde ettiği zaferle adeta bir varyantın geleceğini belirliyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/103-evgeniy-najer-vs-viswanathan-anand.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2r1r3/p2q1pk1/1p3np1/3P3p/2P2P2/3RN3/PQ5P/3R2K1 b - - 6 27"]
-</fen>
-
-*Davies (2316, GM) – Romanov (2585, GM)*
-
-Siyah basit bir hesapla kazanıyor!
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/118-nigel-r-davies-vs-evgeny-romanov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

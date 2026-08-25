@@ -10,14 +10,6 @@ date: 2021-11-05
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2r3k1/pb2qpp1/1p2p2p/8/4nN2/bP2P1P1/PB2QPBP/3R2K1 w - - 0 23"]
-</fen>
-
-*Swiercz Dariusz  (USA) (2647) – Brkic Ante  (CRO) (2621)*
-
-"Gevşek taşlar düşer!"
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/101-swiercz-dariusz-usa-vs-brkic-ante-cro.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

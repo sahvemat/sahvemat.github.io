@@ -10,10 +10,6 @@ date: 2021-10-28
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Shirov Alexei  (ESP) (2659) – Adly Ahmed  (EGY) (2602)*
-
-Her ne kadar dünyanın zirvesinde yer aldığı günler gerdei kalmış olsa da iyi bir GM Shirov oyunu incelemek için asla geç değildir.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/089-shirov-alexei-esp-vs-adly-ahmed-egy.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

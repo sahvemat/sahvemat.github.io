@@ -10,14 +10,6 @@ date: 2019-10-10
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r2q1rk1/pp2bpp1/4bn1p/2pn4/3P4/P1NQ1N1P/1PB2PP1/R1B1R1K1 w - - 0 17"]
-</fen>
-
-*Adhiban – Wu*
-
-Siyahın açılışta iyi oynamadığı anlaşılıyor, fakat Adhiban'ın cezalandırma yöntemi öğretici!
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/107-b-adhiban-vs-li-wu.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

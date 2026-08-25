@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "6k1/5pp1/2p2n2/1p1p1PP1/3Qn3/4B3/1PP2PBK/q7 b - - 2 35"]
-</fen>
-
-*Sek (2368, IM) – Sanal (2564, GM)*
-
-Kritik an.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/133-konstantin-sek-vs-vahap-sanal.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

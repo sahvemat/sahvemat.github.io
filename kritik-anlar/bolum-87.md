@@ -10,14 +10,6 @@ date: 2023-10-26
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "3r1k2/q3bppB/1np1p2p/p3P3/1p3BQ1/1P6/P4PPP/3R2K1 w - - 0 27"]
-</fen>
-
-*Korobov (2658) – Gurel (2514)*
-
-Siyah piyon fazla ancak şahı ve vezirin konumu ile ilgili sorunları vardır.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/087-anton-korobov-vs-ediz-gurel.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

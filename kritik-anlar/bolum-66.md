@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "6k1/1p1q1pp1/2p1pb1p/1r2n2P/r2P4/3QPBP1/P4PK1/BR1R4 w - - 12 28"]
-</fen>
-
-*Yildiz (2043) – Cekicoglu (1895)*
-
-Kritik an.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/066-talat-yildiz-vs-baris-cekicoglu.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

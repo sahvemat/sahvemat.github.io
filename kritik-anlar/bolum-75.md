@@ -10,14 +10,6 @@ date: 2023-11-04
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2Q2N2/6P1/8/1p6/3k4/P7/K7/3qr3 w - - 0 58"]
-</fen>
-
-*Sargissian (2686) – Svane (2626)*
-
-Yoğun bir zaman sıkışması yaşanırken beyazın yakaladığı fırsatı kazanca çevirmesi mümkün olmamıştır.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/075-gabriel-sargissian-vs-frederik-svane.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

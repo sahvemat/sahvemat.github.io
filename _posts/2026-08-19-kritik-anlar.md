@@ -12,14 +12,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/8/2R5/4kpp1/2P2r1p/3P4/4K3/8 w - - 4 52"]
-</fen>
-
-*Akçiçek, Mert (1740) - Ersoy, Ahmet (1861)*
-
-Kale finalleri oldukça yoğun hesap gerektirdiğini gösteren bir başka örnek.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/01-mert-akcicek-vs-ahmet-ersoy.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

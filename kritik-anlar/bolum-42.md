@@ -10,10 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Özen (2128, CM) – Yalçın (1942)*
-
-Değerli okurlarımız, ben Özgün Yalçın. Sizler için Türkiye 1. Satranç Ligi'nin 9. turunda CM Batuhan Özen'e karşı oynadığım oyunu analiz ettim. Faydalı olması dileğimle... ANALİZ: ÖZGÜN YALÇIN
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/042-batuhan-ozen-vs-ozgun-yalc-n.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

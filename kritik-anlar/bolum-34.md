@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "4n3/k7/pp5R/3p4/1K1P4/8/8/8 w - - 2 52"]
-</fen>
-
-*Mahdavi (2454, IM) – Ioannidis (2491, GM)*
-
-Bu zorlu final Siyahın son hamlesi (51...Ne8) olmadan beraberlik olabilirdi.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/034-reza-mahdavi-vs-evgenios-ioannidis.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

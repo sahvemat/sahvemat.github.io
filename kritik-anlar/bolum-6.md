@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "8/7R/P2k2p1/1ppr4/8/3P2P1/1P6/6K1 b - - 0 41"]
-</fen>
-
-*Primbetov (2161, FM) – Bagaturov (2358, GM)*
-
-Oyun şöyle devam etti:
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/006-kazbek-primbetov-vs-giorgi-bagaturov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

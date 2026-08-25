@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "2q1r1k1/3b1pp1/p2Q1n1p/2pN4/3p4/PN5P/1PP2PP1/3R2K1 b - - 1 27"]
-</fen>
-
-*Erdogdu (2383, GM) – Rasulov (2489, GM)*
-
-Siyahın sürpriz bir devamyolu bulunuyor.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/051-aziz-mert-erdogdu-vs-vugar-rasulov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

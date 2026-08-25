@@ -10,10 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Tirpan (2060, WFM) – Asgharzadeh (2012, WIM)*
-
-Ülkemiz kadın satrancının geleceğine adını yazdıran isimlerden WFM Ceren Tırpan bu turnuvada da gösterdiği performansla yükselişini sürdürdü.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/041-ceren-tirpan-vs-mitra-asgharzadeh.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

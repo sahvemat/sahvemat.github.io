@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r1b1r1k1/2q2pbp/p1ppnnp1/1p5P/2PNP1P1/2N1BP2/PPQ5/2KR1B1R w - - 0 17"]
-</fen>
-
-*Taspinar (2321, FM) – Iskandarov (2534, GM)*
-
-Kritik an.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/113-yanki-taspinar-vs-misratdin-iskandarov.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

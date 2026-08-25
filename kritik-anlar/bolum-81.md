@@ -10,14 +10,6 @@ date: 2023-10-25
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "r4r1k/p3Npbp/4b1p1/8/2pNQ3/8/PqP2PPP/3RR1K1 b - - 0 20"]
-</fen>
-
-*Adhiban (2551) – Predke (2656)*
-
-Atlara fillerin mücadelesi çoğu zaman fillerin zaferine tanıklık eder. Bu durumda beyaz atlar zor durumdadır.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/081-b-adhiban-vs-alexandr-predke.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

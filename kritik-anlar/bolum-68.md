@@ -10,10 +10,6 @@ date: 2023-11-05
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Harikrishna (2716) – Yilmaz (2640)*
-
-Mustafa Yılmaz kariyerinin reyting zirvesine doğru adım adım ilerlerken tecrübeli bir 2700+ GM olan Pentala Harikrishna karşısında siyahlar taşlarla güzel bir galibiyete imza atmıştı.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/068-pentala-harikrishna-vs-mustafa-yilmaz.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

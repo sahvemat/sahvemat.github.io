@@ -10,14 +10,6 @@ date: 2026-08-19
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "5rk1/1bbr4/1p1qp2p/3pRpp1/3P3N/2PB2P1/1PQ2P1P/R5K1 w - - 0 25"]
-</fen>
-
-*Çakır, Ege (2006) - Öztürk, Emir (2139, CM)*
-
-Carlsbad yapısında kritik bir an! Siyah şahın zayıflaması sonrasında siyahın durumu parlak görünmemektedir, fakat beyaz atın geri çekiliş ile e6-piyonu savunusu için Kg7 ve ardından Fc8 yeterli olabilir.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/03-ege-cakir-vs-emir-ozturk.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

@@ -10,10 +10,6 @@ date: 2023-10-25
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-*Jan-Krzysztof Duda (2726) – Pouya Idani (2633)*
-
-Vezir Gambiti beyaza ne gibi bir üstünlük veriyor? Bu sorunun cevabına kapı aralayan hoş bir oyun Duda tarafından oynandı.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/067-jan-krzysztof-duda-vs-pouya-idani.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">

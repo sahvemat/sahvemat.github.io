@@ -10,14 +10,6 @@ date: 2023-10-30
 
 {% include chapter-toc.html dataset="kritik_anlar_toc" %}
 
-<fen>
-[FEN "1r1qr1k1/ppp1bn1p/3p1pp1/1P1N4/2n1BP2/B7/P5PP/R2QR1K1 w - - 0 21"]
-</fen>
-
-*Tari (2619) – Xiong (2693)*
-
-Siyah son hamlei 20...Nxc4 hamlesine filin korunmasının zorunlu olduğunu düşündü.
-
 <pgn-player src="{{ '/assets/pgn/satranchess/kritik-anlar/077-aryan-tari-vs-jeffery-xiong.pgn' | relative_url }}"></pgn-player>
 
 <div class="next-section-nav-wrap">
