@@ -2212,6 +2212,20 @@ pgn-player p {
     box-shadow: 8px 8px 0 0 var(--fg);
 }
 
+/* Bare pgn-player embeds (taktik/kritik-anlar/renkli-inciler style posts,
+   one game per chapter, no .post-game wrapper) get the same brutalist
+   card frame as figures and tables: flat border + offset shadow. Scoped
+   to a direct .post-article child so pgn-player nested inside .post-game
+   or pgn-study — which already carry their own frame — isn't double-
+   framed. Only margin-top/bottom are touched, not the shorthand, so the
+   mobile centering rule's own margin-left/right: auto keeps working. */
+.post-article > pgn-player {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--line);
+    box-shadow: 8px 8px 0 0 var(--fg);
+}
+
 /* .video-embed is a <figure> (see main.js), so it already picks up
    .post-article > figure's border/background/shadow/margin and the
    figure figcaption's font/spacing. The 16:9 box belongs on the iframe
