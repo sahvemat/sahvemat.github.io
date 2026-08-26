@@ -164,6 +164,10 @@
 // ourselves the moment the move list shows the puzzle has left its starting
 // position — cheap MutationObserver on class changes, since that's the only
 // signal PuzzleMode exposes for "a ply was just rendered".
+//
+// The "puzzle-active"/"paused" state lives on the inner .player-container
+// div, not on <pgn-player> itself (which carries no classes of its own) —
+// confirmed against ChessPublica's actual rendered DOM, not just its source.
 (function () {
     function watch(player) {
         if (player._sahPuzzleCommentWatched) return;
@@ -172,8 +176,8 @@
         if (!comment) return;
         var cleared = false;
         var observer = new MutationObserver(function () {
-            if (cleared || !player.classList.contains('paused')) return;
-            if (player.querySelector('.white-half.active')) {
+            if (cleared || !player.querySelector('.puzzle-active')) return;
+            if (player.querySelector('.white-half.active, .black-half.active')) {
                 cleared = true;
                 comment.innerHTML = '';
                 observer.disconnect();
