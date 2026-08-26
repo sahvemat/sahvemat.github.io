@@ -3256,6 +3256,14 @@ details.game-note > .post-game {
 
 .colophon-list dd { color: var(--paper); margin: 0; }
 
+/* Kritik Anlar: exactly one game per chapter, so main.js's populateGames()
+   (see assets/js/main.js) always builds a "Tüm Partiler" archive with a
+   single card that just links back to the game already on the page — never
+   useful, since there's nothing else in it to browse to. */
+.post-article--single-col > .post-archive {
+    display: none;
+}
+
 .post-archive {
     margin-top: 4rem;
     padding-top: 2rem;
