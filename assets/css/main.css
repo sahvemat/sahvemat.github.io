@@ -849,6 +849,15 @@ a:hover {
     margin: 0;
 }
 
+/* ChessPublica's .player-wrapper carries its own min-height: 500px (cp.css) —
+   sized for a wide article board, not the much narrower one this sidebar
+   card actually renders (--board-size shrinks with the column). With little
+   or no comment text either, that floor leaves a large empty gap below the
+   real content instead of the card ending where the content does. */
+.sidebar-sticky > .post-game .player-wrapper {
+    min-height: 0;
+}
+
 .board-header {
     display: flex;
     justify-content: space-between;
