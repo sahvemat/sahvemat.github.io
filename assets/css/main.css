@@ -1529,8 +1529,28 @@ a.article-thumbnail:hover {
     font-size: clamp(1.5rem, 4vw, 2.8rem);
 }
 
+/* This widget uses its own "Çözümü Göster" button (wired in main.js to
+   re-click .puzzle-hint-btn) instead of ChessPublica's own hint button and
+   settings/download menu, so hide both of ChessPublica's own controls here. */
+#puzzle-rotator .settings-toggle,
+#puzzle-rotator .puzzle-hint-btn {
+    display: none;
+}
+
+/* Same oversized ChessPublica default (.player-wrapper min-height: 500px,
+   see the sidebar analysis card fix above) shows up here too: this widget's
+   board is well under 500px, so the card was ending far below its real
+   content, pushing the footer/button down with it. */
+#puzzle-rotator .player-wrapper {
+    min-height: 0;
+}
+
 .puzzle-board-footer {
-    margin-top: 1.5rem;
+    /* pgn-player already carries its own 1rem bottom padding (its card
+       frame, see the base pgn-player rule) plus .video-comment's 8px
+       margin-bottom right above it — this only needs to add a little more
+       air, not stack a second full margin on top of both. */
+    margin-top: 0.5rem;
     display: flex;
     justify-content: center;
 }
@@ -2657,8 +2677,9 @@ details.game-note > .post-game {
    clean multiple of 8 and can leave the board a few px narrower than its
    container, showing up as a gap on one side. Selector is more specific
    than ChessPublica's own rule so it wins regardless of stylesheet
-   load order. */
-.post-game pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
+   load order. Not scoped to `.post-game` — the homepage "Kritik An!"
+   widget (#puzzle-rotator) runs a bare <pgn-player> in PuzzleMode too. */
+pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
     box-shadow: 0 0 0 3px var(--accent);
 }
 
