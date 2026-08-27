@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/4uImNxr8"]
 [FEN "2q1r1k1/3b1pp1/p2Q1n1p/2pN4/3p4/PN5P/1PP2PP1/3R2K1 b - - 1 27"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Siyahın sürpriz bir devamyolu bulunuyor. [P11] }
 27... Nxd5 { [%clk 0:37:30] } 28. Qxd5 { [%clk 0:22:51] } 28... Bxh3! { [%clk 0:37:39] } 29. Rd3 { Beyaz piyon geri oynamaya razı oluyor, ancak } { [%clk 0:17:10] } (29. gxh3 Qxh3 { d1'deki kaleyi tehdit eden Vg4 ve şahı hedef alan Ke6 tehditlerine karşı beyazın yeterli savunması olmazdı. }) 29... Bf5 { [%clk 0:33:39] } 30. Rf3 { [%clk 0:16:20] } 30... Qc7! { Ke1 ve Fe4 aynı anda tehdit ediliyor. } { [%clk 0:31:53] } 31. Rg3 { [%clk 0:14:59] } 31... Qf4 { Ke1 ve ardından Vf2 ile bitirici bir saldırı tehdidiyle. } { [%clk 0:29:47] } 32. Kf1 { [%clk 0:11:25] } 32... Qh4 { Beyazın daha fazla materyal kaybetmeden devam etme şansı kalmadı. } { [%clk 0:29:21] } 0-1

@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/wPaTnyPN"]
 [FEN "6k1/1p3Rp1/2bN3p/2P5/3Bn3/7P/2r3P1/6K1 b - - 2 38"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Siyahın savunma yapmasının tek yolu iyi bir hesap ile karşı saldırı! [P9] }
 38... Rxg2+! { [%clk 0:01:01] } 39. Kxg2 { [%clk 0:04:13] } 39... Nxd6+ { [%clk 0:01:22] } 40. Rf3 { [%clk 0:34:34] } 40... Nf5! { [%clk 0:30:59] } 41. Bf2 { [%clk 0:34:48] } 41... g5! { ve Beyaz zugzwang durumundadır, zira sonraki Nh4 veya Nd4'e müsade etmek zorundadır. } { [%clk 0:31:05] } 42. Be1 { [%clk 0:33:59] } 42... Nd4 { Beyaz terk etti. } { [%clk 0:31:27] } 0-1

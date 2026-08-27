@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/z0ynJutE"]
 [FEN "3r1rk1/1p2b3/4p3/p1n2p1p/2P3nP/BP1p2P1/P4PK1/2RRNN2 b - - 1 26"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Korumasız Ba3 ve aktif siyah taşlar güzel bir taktiğe işaret ediyor. [P7] }
 26... Nxf2! { [%clk 0:20:26] } 27. Bxc5 { [%clk 0:05:38] } (27. Kxf2 Ne4+ 28. Ke3 Bxa3 $19) 27... Bxc5 { [%clk 0:20:08] } 28. Rd2 { [%clk 0:05:54] } 28... e5 { [%clk 0:19:19] } 29. Nf3 { [%clk 0:05:39] } 29... Ng4 { Siyah terk etti. } { [%clk 0:17:03] } 0-1

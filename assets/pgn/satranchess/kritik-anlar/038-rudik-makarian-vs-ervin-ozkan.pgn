@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/DycRE5sj"]
 [FEN "8/4bkP1/8/8/8/5K1P/RB6/6r1 b - - 0 53"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Güçlü rakibine karşı iyi bir savunma ortaya koyan Siyah zaman sıkışmasında beraberlik fırsatını kaçırıyor. [P9] }
 53... Bf6! { Fark etmesi hiç de kolay olmayan bir detay! } (53... Rg6? { Oyunda oynanmış ve Siyah kaybetmişti. } { [%clk 0:00:34] } 54. Ra7 $19 { [%clk 0:27:56] }) 54. Ra7+ (54. g8=Q+ Rxg8 55. Ra7+ Be7 56. Ba3 Re8 57. h4 Ke6 $10) 54... Kg8 55. Bxf6 Rf1+ 56. Kg4 Rxf6 { Piyonların böylesine ayrık olduğu durumda Siyah için beraberlik zor değildir. Beraberlik fikri ise } 57. Kg5 Rg6+ $10 { ardından ortaya çıkar. Beyaz pattan kaçınarak ilerleme kaydedemez. } 1-0

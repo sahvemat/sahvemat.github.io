@@ -18,5 +18,6 @@
 [ChapterURL "https://lichess.org/study/6StL1vWF/yxQ0WmLZ"]
 [FEN "8/2r4p/4p3/3pp1Pk/1p2n2P/5R2/1PP5/2K1R3 w - - 7 32"]
 [SetUp "1"]
+[Orientation "black"]
 
 32. Rh1?? { [%clk 0:00:32] [P1] } 32... Ra7! $19 { 0-1 Black wins. } { [%clk 0:20:29] } 0-1

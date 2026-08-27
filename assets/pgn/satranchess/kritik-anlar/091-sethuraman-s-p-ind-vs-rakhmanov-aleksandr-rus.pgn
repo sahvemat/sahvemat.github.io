@@ -16,6 +16,7 @@
 [ChapterURL "https://lichess.org/study/x3pgbs1D/KCiVWdsE"]
 [FEN "6k1/p5r1/1P1r2p1/2qPQ1P1/2P2p2/7B/5p1K/R7 b - - 0 51"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Siyah piyonları daha etkili kullanmanın bir
 yöntemi olabilir mi? [P19] }
