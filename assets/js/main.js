@@ -293,6 +293,10 @@
         .then(text => {
             games = splitGames(text);
             if (!games.length) return;
+            // A fresh page load should land on a random critical moment, not
+            // always the same one (bölüm 1) — "Sıradaki Bulmaca"/advance()
+            // still just walks forward in series order from wherever that lands.
+            index = Math.floor(Math.random() * games.length);
             render();
         })
         .catch(() => {});
