@@ -1798,6 +1798,18 @@ pgn-player p {
     line-height: inherit;
 }
 
+/* ChessPublica's move list (.video-moves) is a block box that keeps its own
+   top margin and default line-height even when every move span inside it is
+   still hidden (nothing solved/revealed yet, e.g. right when a puzzle first
+   loads or before any navigation) — leaving a wide dead gap between the
+   puzzle hint row above it and the comment below. A revealed move's
+   .move-text span only gets real text content once ChessPublica's reveal()
+   fires, so :has() lets this collapse the box until that's actually true,
+   without touching it once real move text needs to show. */
+.video-moves:not(:has(.move-text:not(:empty))) {
+    display: none;
+}
+
 /* ============================================================
    MOBILE OVERRIDES
    ============================================================ */
