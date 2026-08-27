@@ -8,6 +8,7 @@ excerpt: "Paskalya zamanı oynanan Grenke Açık'ı ELO kazancıyla noktalamamı
 date: 2026-06-03
 FEN: r2r2k1/1p1n1p1p/p1bQp1p1/P4P2/1P2P1Nq/7P/2P1B1P1/3R1RK1 b - - 0 24
 reading_time: 17
+type: upcoming
 ---
 
 {% include chapter-toc.html dataset="whitsun_toc" %}
