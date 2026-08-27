@@ -286,6 +286,20 @@
             render();
         })
         .catch(() => {});
+
+    // The widget's own "Çözümü Göster" button stands in for ChessPublica's
+    // .puzzle-hint-btn (hidden — see main.css), which already calls the
+    // active puzzle's showHint() on click. Re-dispatching a click on it
+    // reuses that same handler instead of reimplementing hint logic here;
+    // looked up fresh each time since render() replaces the <pgn-player> (and
+    // therefore this button) on every advance.
+    const solutionBtn = document.querySelector('.puzzle-board-footer .solution-btn');
+    if (solutionBtn) {
+        solutionBtn.addEventListener('click', () => {
+            const hintBtn = container.querySelector('.puzzle-hint-btn');
+            if (hintBtn) hintBtn.click();
+        });
+    }
 })();
 
 (function () {
