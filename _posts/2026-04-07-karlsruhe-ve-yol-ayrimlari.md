@@ -8,6 +8,7 @@ excerpt: "Hayatta bazen kritik yol ayrımlarına geliriz. 21 yıllık bir gecikm
 date: 2026-04-07
 FEN: r4rk1/2q2pb1/2p3pp/p1pP4/Pp2P3/1Pn1NN1P/2Q1BPP1/R1B2RK1 w - - 0 1
 reading_time: 18
+type: flash
 ---
 
 {% include chapter-toc.html dataset="karlsruhe_toc" %}
