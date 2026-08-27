@@ -16,6 +16,7 @@
 [ChapterURL "https://lichess.org/study/x3pgbs1D/jaXjiNWW"]
 [FEN "8/2Rb2pk/4qp1p/p2r4/1r1B1Q2/4P1P1/PP1R3P/K7 b - - 0 34"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Bir anlık dikkatsizlikle oynanan 34.Rc7 hamlesi
 beyaza pahalıya mal oluyor. [P1] }

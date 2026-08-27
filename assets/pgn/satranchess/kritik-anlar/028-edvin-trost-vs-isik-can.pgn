@@ -22,6 +22,7 @@
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/wJFIWQL7"]
 [FEN "r5k1/1q3p1p/4p1p1/3n4/3Q4/6R1/1PPN3P/1K6 b - - 3 31"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Çiçeği burnunda GM Işık Can basit ve etkili bir hamleyle rakibini terke zorluyor. [P1] }
 31... Nc3+ { Beyaz terk etti, çünkü mat olmamak için vezirden vazgeçmek zorundadır. } { [%clk 0:19:06] } 0-1

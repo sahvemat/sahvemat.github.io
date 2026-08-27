@@ -16,6 +16,7 @@
 [ChapterURL "https://lichess.org/study/x3pgbs1D/nL9qu4u6"]
 [FEN "8/1R3p1k/2n1pqpp/p1P1r3/8/P1Q4P/1PB2PP1/6K1 b - - 0 34"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Beyaz çok üstün konumda bir anlık
 dikkatsizlikle 34.Rxb7 oynuyor ve siyaha bir anda konumu karıştırma

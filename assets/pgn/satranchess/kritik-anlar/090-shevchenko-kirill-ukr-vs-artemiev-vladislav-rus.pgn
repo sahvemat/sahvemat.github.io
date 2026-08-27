@@ -16,6 +16,7 @@
 [ChapterURL "https://lichess.org/study/x3pgbs1D/xvaY8JHI"]
 [FEN "2rqr1k1/5pp1/5n1p/1Qbpn3/4P3/1B4NP/1P3PP1/R1B1R1K1 b - - 0 27"]
 [SetUp "1"]
+[Orientation "black"]
 
 { Beyaz taşların uyumsuz durumu ve korumasız taşların varlığı taktikleri
 olanaklı kılar. [P11] }

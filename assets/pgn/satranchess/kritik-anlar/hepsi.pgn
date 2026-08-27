@@ -151,6 +151,7 @@ kesme amacıyla yapılan bir ara hamle! } 27... Nxf6 28. Qxg6+ Kf8 29. Rf1 Ke7 3
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/kZiIlBVF"]
 [FEN "8/7R/P2k2p1/1ppr4/8/3P2P1/1P6/6K1 b - - 0 41"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "6"]
 
 { Oyun şöyle devam etti: [P18] }
@@ -205,6 +206,7 @@ kesme amacıyla yapılan bir ara hamle! } 27... Nxf6 28. Qxg6+ Kf8 29. Rf1 Ke7 3
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/smaSzrQ6"]
 [FEN "2r5/1p1k3p/1p3Rp1/5p2/n1BK1P2/6P1/7P/8 b - - 3 53"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "8"]
 
 { Beyaz uzun süre baskı altında kalmanın getirdiği yorgunlukla hata yapıyor ve siyaha kazandıra bir taktik imkanı sunuyor. Siyah oynar! [P15] }
@@ -231,6 +233,7 @@ kesme amacıyla yapılan bir ara hamle! } 27... Nxf6 28. Qxg6+ Kf8 29. Rf1 Ke7 3
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/YPDF95xj"]
 [FEN "r2qn1k1/pp3bpp/2p2b2/2Q5/P1P1p3/1PN1B2P/2P1N1P1/R4K2 b - - 4 19"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "9"]
 
 { Siyahın nasıl materyal kazandığını görebilir misiniz? [P5] }
@@ -257,6 +260,7 @@ kesme amacıyla yapılan bir ara hamle! } 27... Nxf6 28. Qxg6+ Kf8 29. Rf1 Ke7 3
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/1Uy6CwR9"]
 [FEN "r4rk1/1p1nnpp1/1qp1p2p/b2pPb2/p2P4/5NNP/PPPB1PP1/2RQRBK1 b - - 0 14"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "10"]
 
 { ANALİZ: FM TARIK SELBES [P68] }
@@ -285,6 +289,7 @@ kesme amacıyla yapılan bir ara hamle! } 27... Nxf6 28. Qxg6+ Kf8 29. Rf1 Ke7 3
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/6HSnH8N5"]
 [FEN "4r1k1/1p3pp1/p1pbrqn1/3p4/1P1P4/P3PPPb/R2BBQ2/2RN2K1 b - - 0 25"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "12"]
 
 { ANALİZ: FM TARIK SELBES
@@ -432,6 +437,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/JfjmxUn2"]
 [FEN "5rk1/p2qp1bp/b4n2/3pQ1B1/3p2p1/8/PPP2PPP/RN2R1K1 b - - 9 17"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "17"]
 
 { Beyaz kalite önde olmasına karşın Siyahın baskısını karşılayacak nitelikte gelişime sahip değildir. [P5] }
@@ -462,6 +468,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/PtkEpVX5"]
 [FEN "2bq1rk1/p4pbp/2pp1np1/8/2PBP3/2N2P2/Pr4PP/R1Q1KB1R b KQ - 1 14"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "18"]
 
 { Tipik bir Şah-Hint Savunması konumu. Beyaz gelişimde tavizler verdiği için zorluklar yaşamak durumunda kalabilir. [P15] }
@@ -491,6 +498,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/eWwyiN4T"]
 [FEN "1r3r1k/1bpq2pp/pbpp1pn1/4P3/2QP4/2N1BN1P/PP3PP1/2R1R1K1 b - - 0 17"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "19"]
 
 { Beyaz hareketli merkezinden en yüksek verimi almak için ilerliyor. Siyahın dinamik yanıtı olmaksızın bu fikri fena olmayabilirdi. [P35] }
@@ -520,6 +528,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/FrPC3Xmz"]
 [FEN "r5k1/1q3pp1/2P2n1p/4p3/Q2bP3/7P/5PP1/2B1RBK1 b - - 0 28"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "20"]
 
 { İki vezir de saldırı altındayken elbette hesap büyük önem taşıyor. [P21] }
@@ -578,6 +587,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/WtIISjCl"]
 [FEN "3r2k1/5pp1/p2rn2p/2q1p3/2P1P3/2Q2PP1/PR2B1KP/1R6 b - - 9 33"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "22"]
 
 { Siyahın eksik piyona karşı güzel oyunu bulunuyordu ve taşların ideal yerleşimi taktikleri de getiriyor. [P11] }
@@ -636,6 +646,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/i3C66F2i"]
 [FEN "5rk1/4qppp/5b2/R7/4N3/2n1QP2/6PP/2B3K1 b - - 0 31"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "24"]
 
 { Aynı dikey ve çapraz üzerindeki taşların taktiklere maruz kalması bilinen bir durum. Tecrübeli GM Parligras, eşit konumun sadeliğine aldanıyor. [P1] }
@@ -665,6 +676,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/z0ynJutE"]
 [FEN "3r1rk1/1p2b3/4p3/p1n2p1p/2P3nP/BP1p2P1/P4PK1/2RRNN2 b - - 1 26"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "25"]
 
 { Korumasız Ba3 ve aktif siyah taşlar güzel bir taktiğe işaret ediyor. [P7] }
@@ -752,6 +764,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/wJFIWQL7"]
 [FEN "r5k1/1q3p1p/4p1p1/3n4/3Q4/6R1/1PPN3P/1K6 b - - 3 31"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "28"]
 
 { Çiçeği burnunda GM Işık Can basit ve etkili bir hamleyle rakibini terke zorluyor. [P1] }
@@ -781,6 +794,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/ghNQxc1c"]
 [FEN "4k3/8/3K4/2P3P1/4r3/7P/8/8 b - - 6 56"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "29"]
 
 { Bu çok ilginç kale finali zaman sıkışmasında oynamak için fazlasıyla karmaşıktır. [P14] }
@@ -1015,6 +1029,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/wPaTnyPN"]
 [FEN "6k1/1p3Rp1/2bN3p/2P5/3Bn3/7P/2r3P1/6K1 b - - 2 38"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "37"]
 
 { Siyahın savunma yapmasının tek yolu iyi bir hesap ile karşı saldırı! [P9] }
@@ -1044,6 +1059,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/DycRE5sj"]
 [FEN "8/4bkP1/8/8/8/5K1P/RB6/6r1 b - - 0 53"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "38"]
 
 { Güçlü rakibine karşı iyi bir savunma ortaya koyan Siyah zaman sıkışmasında beraberlik fırsatını kaçırıyor. [P9] }
@@ -1072,6 +1088,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/ltvHATju"]
 [FEN "3r2k1/pprq1pbp/4p1p1/PR3n2/3PN3/1Q2B3/1P3PPP/3R2K1 b - - 7 23"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "39"]
 
 { İzole piyona karşı güzel oyunu olan Siyahın hızlı bir çözümü de var. [P3] }
@@ -1102,6 +1119,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/qVIvs7RA"]
 [FEN "8/2b3pk/4p1r1/2Pn1p1p/7P/5P2/4qBP1/1R1Q1NK1 b - - 16 47"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "40"]
 
 { Beyazın talihsiz son hamlesi güzel bir bitirişe müsade ediyor. [P3] }
@@ -1131,6 +1149,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/95VjKgkv"]
 [FEN "1r2r1k1/1bpq1pp1/1p1b1n2/pP1p3p/P2P3P/1QN1PB2/2RN1PP1/R5K1 b - - 0 20"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "43"]
 
 { Tahtanın ikiye bölündüğü Carlsbadvari bu tipik konumda siyah şah kanadını beyaz ise vezir kanadını savaş alanı olarak belirliyor. [P33] }
@@ -1160,6 +1179,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/J0Fy2Rbs"]
 [FEN "2r1r3/5pk1/5qp1/1p1Rn3/4R3/p1N5/PP3PPP/1K2Q3 b - - 4 27"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "44"]
 
 { Beyaz son hamlesi 27.Ve1 ile siyahın atını açmaza alarak düşürmüş görünüyor. [P21] }
@@ -1218,6 +1238,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/lFXeVGzg"]
 [FEN "1q4k1/p4pp1/4r3/3Q4/1P1B2p1/3P4/P2P1PKb/R7 b - - 1 32"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "46"]
 
 { Beyaz şah tehlikede durmuyor fakat, beyazın koyu renklerde duran taşları saldırının hedefi olacak! [P7] }
@@ -1360,6 +1381,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/4uImNxr8"]
 [FEN "2q1r1k1/3b1pp1/p2Q1n1p/2pN4/3p4/PN5P/1PP2PP1/3R2K1 b - - 1 27"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "51"]
 
 { Siyahın sürpriz bir devamyolu bulunuyor. [P11] }
@@ -1443,6 +1465,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/u2pKXtk6"]
 [FEN "1r3rk1/5ppp/3b1n2/p2p1q2/3N4/PP6/1B3PPP/2RQR1K1 b - - 4 19"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "54"]
 
 { Önceki örnekte Yunan fedası için harika katkı sunan e5-piyonu bu örnekte yok. Bu durum elbette savunma şanslarını arttıracak. [P19] }
@@ -1471,6 +1494,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/470JgqYZ"]
 [FEN "7r/1b1Q2pr/pq1Rpk2/1pp5/5P2/2P5/PP3P2/2K3R1 b - - 5 27"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "55"]
 
 { Veziri ve şahı arasında tercih yapmak zorunda kalan siyah [P1] }
@@ -1499,6 +1523,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/igME0RBU"]
 [FEN "1r1r2k1/1pp2pb1/4bn2/2Q1p1qp/P3P1p1/2PN2P1/1P1NBPP1/R3K2R b KQ - 5 21"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "56"]
 
 { [P7] }
@@ -1584,6 +1609,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/N2Ugh2xu"]
 [FEN "R7/8/8/8/8/8/1r2p1K1/4k3 b - - 7 80"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "59"]
 
 { Çok önemli bir kale finali ile karşı karşıyayız. Teorik olarak kazanç bu konumu kazanma yöntemlerinin bilinmesi önem taşıyor. [P29] }
@@ -1671,6 +1697,7 @@ Henüz ilk tur olmasına rağmen ligin kaderini tayin eden bir oyun. Badelka (Ba
 [ChapterURL "https://lichess.org/study/iQuJ1Hpn/PFKeIKPU"]
 [FEN "1r2r1k1/5ppp/p2p4/8/P2pP2P/1p1N2P1/1PqbQP2/R2R2K1 b - - 2 28"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "63"]
 
 { Saldırı altındaki filin olası geri çekişlerinden sonra siyahın durumu piyon fazlalığından ötürü iyidir, ancak öyle bir hamle var ki diğerlerinden çok daha iyi... [P59] }
@@ -2095,6 +2122,7 @@ kazandı. } 1-0
 [ChapterURL "https://lichess.org/study/x3pgbs1D/QmV4QU34"]
 [FEN "6k1/2r2p2/pp4qp/3b1Np1/1P4QP/3pP1P1/P4P2/3R2K1 b - - 0 29"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "80"]
 
 { Zaten zor durumda olan Beyazın
@@ -2120,6 +2148,7 @@ için terk etti. } 0-1
 [ChapterURL "https://lichess.org/study/x3pgbs1D/kKw4C8Sn"]
 [FEN "r4r1k/p3Npbp/4b1p1/8/2pNQ3/8/PqP2PPP/3RR1K1 b - - 0 20"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "81"]
 
 { Atlara fillerin
@@ -2147,6 +2176,7 @@ kazandıran yalnızca biri. } 24. Kxf2 Qxc2+ { Beyaz terk etti. } 0-1
 [ChapterURL "https://lichess.org/study/x3pgbs1D/dpa4OT0h"]
 [FEN "3r4/4kp2/8/pp2PPp1/2p1P3/P1Kp2p1/1P4P1/3R4 b - - 0 39"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "82"]
 
 { Çok ilginç bir kale finali. Siyahın konumu
@@ -2225,6 +2255,7 @@ piyon fazla olan beyaz birkaç hamle içinde kazandı. } 1-0
 [ChapterURL "https://lichess.org/study/x3pgbs1D/jaXjiNWW"]
 [FEN "8/2Rb2pk/4qp1p/p2r4/1r1B1Q2/4P1P1/PP1R3P/K7 b - - 0 34"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "85"]
 
 { Bir anlık dikkatsizlikle oynanan 34.Rc7 hamlesi
@@ -2250,6 +2281,7 @@ nedeniyle vezirin kaçamıyor oluşu beyazın terk etmesine neden oldu. } 0-1
 [ChapterURL "https://lichess.org/study/x3pgbs1D/nL9qu4u6"]
 [FEN "8/1R3p1k/2n1pqpp/p1P1r3/8/P1Q4P/1PB2PP1/6K1 b - - 0 34"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "86"]
 
 { Beyaz çok üstün konumda bir anlık
@@ -2302,6 +2334,7 @@ vezir nedeniyle Beyaz birkaç piyon önde kalır. } { [%csl Gg6] } 30... Kd7 31.
 [ChapterURL "https://lichess.org/study/x3pgbs1D/xvaY8JHI"]
 [FEN "2rqr1k1/5pp1/5n1p/1Qbpn3/4P3/1B4NP/1P3PP1/R1B1R1K1 b - - 0 27"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "90"]
 
 { Beyaz taşların uyumsuz durumu ve korumasız taşların varlığı taktikleri
@@ -2328,6 +2361,7 @@ ermiştir. } 30. Ra3 Qb8 31. Qe2 Rxg3 32. Kxg3 Nxe4+ { 0-1 Black wins. } 0-1
 [ChapterURL "https://lichess.org/study/x3pgbs1D/KCiVWdsE"]
 [FEN "6k1/p5r1/1P1r2p1/2qPQ1P1/2P2p2/7B/5p1K/R7 b - - 0 51"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "91"]
 
 { Siyah piyonları daha etkili kullanmanın bir
@@ -2460,6 +2494,7 @@ saldırı gücü karşısında yenik düşecektir. [P7] }
 [ChapterURL "https://lichess.org/study/x3pgbs1D/tCfwTVOk"]
 [FEN "5r1k/4R1pp/1n2R3/2p5/q7/8/5bPP/5Q1K b - - 0 39"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "96"]
 
 { Siyahın kaleye karşı iki hafif taşı ve
@@ -2541,6 +2576,7 @@ gücünü sınamak istemeyen Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/x3pgbs1D/Av3Y7WK7"]
 [FEN "8/5pk1/4p3/4Pqp1/2Q2n2/5NK1/5PP1/8 b - - 0 37"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "99"]
 
 { Vezir ve atın muhteşem uyumuna çok güzel bir örnekle karşı
@@ -2647,6 +2683,7 @@ sonunda materyal üstünlüğünü kazanca dönüştürmeyi başardı. } 1-0
 [ChapterURL "https://lichess.org/study/x3pgbs1D/4isz5uac"]
 [FEN "2r2bk1/5p2/4qnp1/1p2p2p/1P1nP2P/R1B1N1P1/5PB1/3Q2K1 b - - 0 43"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "105"]
 
 { Siyah taşların hakim konumu güzel bir taktiği olanaklı kılıyor. [P7] }
@@ -2882,6 +2919,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/p4xu4QTb"]
 [FEN "5nk1/5p2/pQ1p2p1/1p1P3p/1P2P3/5B1P/q5PK/8 b - - 1 33"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "115"]
 
 { Beyazın d6-piyonunu kazandıktan sonra çok güçlü bir geçer piyonu olacak gibi duruyor! [P33] }
@@ -2936,6 +2974,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/BLu7stuR"]
 [FEN "6k1/4bpp1/1q2pn2/r5P1/3Q4/7P/1B6/1K1R3R b - - 3 26"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "117"]
 
 { Beyaz kalite fazla fakat kimin şahının daha zayıf olduğu daha büyük önem taşıyor. [P11] }
@@ -2963,6 +3002,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/Y1ZElULN"]
 [FEN "2r1r3/p2q1pk1/1p3np1/3P3p/2P2P2/3RN3/PQ5P/3R2K1 b - - 6 27"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "118"]
 
 { Siyah basit bir hesapla kazanıyor! [P3] }
@@ -3044,6 +3084,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/Ee0y7vLi"]
 [FEN "3rr3/p4pkp/1p2pp2/2q1n3/2P2N2/2Q1R3/PP3PPP/4R1K1 b - - 4 28"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "121"]
 
 { [P8] }
@@ -3070,6 +3111,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/FeHZKIGe"]
 [FEN "6k1/n6p/3q1pb1/ppNp2p1/3P4/NP6/P2Q1PPP/6K1 b - - 5 32"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "122"]
 
 { Beyaz at kenarda olmasına rağmen tehlikede gibi durmuyor. Siyah oynar! [P5] }
@@ -3150,6 +3192,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/9lLEAiki"]
 [FEN "1k2n2r/1pq1bpp1/p1bpp3/6Br/3QP1BP/5P2/PPP1N3/1K1R3R b - - 8 18"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "125"]
 
 { Görünüşe göre siyah kalesini kaçmak zorunda. [P5] } { [%cal Gg4h5] }
@@ -3284,6 +3327,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/Kbsx7XWA"]
 [FEN "8/2p1r3/1pp1P3/5k2/3K1Rp1/2P3P1/1P6/8 b - - 1 49"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "131"]
 
 { [P6] }
@@ -3338,6 +3382,7 @@ f2- karesi de güvende. } 28... Bxf2+ 29. Kh1 { Siyah terk etti. } 1-0
 [ChapterURL "https://lichess.org/study/6StL1vWF/8BRPhscU"]
 [FEN "6k1/5pp1/2p2n2/1p1p1PP1/3Qn3/4B3/1PP2PBK/q7 b - - 2 35"]
 [SetUp "1"]
+[Orientation "black"]
 [KritikAnlarNo "133"]
 
 { [P3] }
