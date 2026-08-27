@@ -205,13 +205,28 @@
 })();
 
 (function () {
+    // Homepage "Kritik An!" widget: cycles through the Kritik Anlar series'
+    // own PuzzleMode-tagged positions (see assets/pgn/satranchess/kritik-anlar/
+    // hepsi.pgn, each game carrying the same [P]/[Pn] tag as its full post).
+    // A bare <puzzle> element (ChessPublica's other, simpler board) can't be
+    // used here instead: it treats the *entire* mainline as the puzzle with
+    // no [Pn]-style "only the next N plies, auto-play the rest" support, so
+    // it would demand the opponent's replies be entered by hand too — <pgn-
+    // player> is the only element that actually honors [Pn] the way every
+    // Kritik Anlar post already relies on.
     const container = document.getElementById('puzzle-rotator');
     if (!container) return;
     const src = container.dataset.pgnSrc;
     if (!src) return;
+    const numberEl = document.getElementById('puzzle-rotator-number');
 
     const splitGames = (text) =>
         text.split(/\n(?=\[Event )/).map(s => s.trim()).filter(Boolean);
+
+    const parseHeader = (pgn, tag) => {
+        const m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
+        return m ? m[1] : '';
+    };
 
     const initAll = () => window.ChessPublica && window.ChessPublica.initAll && window.ChessPublica.initAll();
 
@@ -233,20 +248,34 @@
     const render = () => {
         cleanup();
         container.innerHTML = '';
-        const blob = new Blob([games[index]], { type: 'application/x-chess-pgn' });
+        const pgn = games[index];
+        const blob = new Blob([pgn], { type: 'application/x-chess-pgn' });
         currentBlobUrl = URL.createObjectURL(blob);
-        const puzzle = document.createElement('puzzle');
-        puzzle.setAttribute('src', currentBlobUrl);
-        container.appendChild(puzzle);
+        const player = document.createElement('pgn-player');
+        player.setAttribute('src', currentBlobUrl);
+        container.appendChild(player);
         initAll();
 
+        if (numberEl) {
+            const no = parseHeader(pgn, 'KritikAnlarNo');
+            if (no) numberEl.textContent = '#' + no;
+        }
+
+        // PuzzleMode (see the [P]/[Pn] fix in main.js above) marks the board's
+        // .player-container with "puzzle-active" while a puzzle is unsolved
+        // and removes it — via its own _finish()/_deactivate() — the moment
+        // it's solved. That add-then-remove transition is the only signal
+        // ChessPublica exposes for "this puzzle just got solved".
+        let wasActive = false;
         observer = new MutationObserver(() => {
-            if (container.querySelector('.cp-fire-solved')) {
+            const active = !!player.querySelector('.puzzle-active');
+            if (active) wasActive = true;
+            else if (wasActive) {
                 cleanup();
                 setTimeout(advance, 1500);
             }
         });
-        observer.observe(container, { subtree: true, attributes: true, attributeFilter: ['class'], childList: true });
+        observer.observe(player, { subtree: true, attributes: true, attributeFilter: ['class'] });
     };
 
     fetch(src)
