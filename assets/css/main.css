@@ -1029,6 +1029,10 @@ a:hover {
     font-size: clamp(3rem, 8vw, 8rem);
 }
 
+.archive-accent {
+    color: var(--accent);
+}
+
 .archive-filters {
     display: flex;
     gap: 1rem;
@@ -1541,6 +1545,16 @@ a.article-thumbnail:hover {
 #puzzle-rotator .settings-toggle,
 #puzzle-rotator .puzzle-hint-btn {
     display: none;
+}
+
+/* The generic post-page `pgn-player { margin-top: 2rem }` rule below
+   assumes the player sits inline in article prose and needs space above
+   it. Here it's already inside .puzzle-board, right under the widget's
+   own "Kritik Anlar / #N" header bar, so that 2rem stacks on top of the
+   header's own margin-bottom and reads as an oversized gap above the
+   player's title. */
+#puzzle-rotator pgn-player {
+    margin-top: 0;
 }
 
 /* Same oversized ChessPublica default (.player-wrapper min-height: 500px,
