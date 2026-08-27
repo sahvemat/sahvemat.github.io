@@ -219,6 +219,8 @@
     const src = container.dataset.pgnSrc;
     if (!src) return;
     const numberEl = document.getElementById('puzzle-rotator-number');
+    const solutionBtn = document.querySelector('.puzzle-board-footer .solution-btn:not(.next-puzzle-btn)');
+    const nextBtn = document.querySelector('.puzzle-board-footer .next-puzzle-btn');
 
     const splitGames = (text) =>
         text.split(/\n(?=\[Event )/).map(s => s.trim()).filter(Boolean);
@@ -261,18 +263,26 @@
             if (no) numberEl.textContent = '#' + no;
         }
 
+        // A fresh, unsolved puzzle always starts back on "Çözümü Göster";
+        // solving swaps that out for "Sıradaki Bulmaca" below.
+        if (solutionBtn) solutionBtn.hidden = false;
+        if (nextBtn) nextBtn.hidden = true;
+
         // PuzzleMode (see the [P]/[Pn] fix in main.js above) marks the board's
         // .player-container with "puzzle-active" while a puzzle is unsolved
         // and removes it — via its own _finish()/_deactivate() — the moment
         // it's solved. That add-then-remove transition is the only signal
-        // ChessPublica exposes for "this puzzle just got solved".
+        // ChessPublica exposes for "this puzzle just got solved". Solving no
+        // longer auto-advances (the reader may still want the board to sit on
+        // the solved position); "Sıradaki Bulmaca" takes over for that instead.
         let wasActive = false;
         observer = new MutationObserver(() => {
             const active = !!player.querySelector('.puzzle-active');
             if (active) wasActive = true;
             else if (wasActive) {
-                cleanup();
-                setTimeout(advance, 1500);
+                wasActive = false;
+                if (solutionBtn) solutionBtn.hidden = true;
+                if (nextBtn) nextBtn.hidden = false;
             }
         });
         observer.observe(player, { subtree: true, attributes: true, attributeFilter: ['class'] });
@@ -287,18 +297,21 @@
         })
         .catch(() => {});
 
-    // The widget's own "Çözümü Göster" button stands in for ChessPublica's
-    // .puzzle-hint-btn (hidden — see main.css), which already calls the
-    // active puzzle's showHint() on click. Re-dispatching a click on it
-    // reuses that same handler instead of reimplementing hint logic here;
-    // looked up fresh each time since render() replaces the <pgn-player> (and
-    // therefore this button) on every advance.
-    const solutionBtn = document.querySelector('.puzzle-board-footer .solution-btn');
+    // "Çözümü Göster" stands in for ChessPublica's own .puzzle-hint-btn
+    // (hidden — see main.css), which already calls the active puzzle's
+    // showHint() on click. Re-dispatching a click on it reuses that same
+    // handler instead of reimplementing hint logic here; looked up fresh
+    // each time since render() replaces the <pgn-player> (and therefore this
+    // button) on every advance.
     if (solutionBtn) {
         solutionBtn.addEventListener('click', () => {
             const hintBtn = container.querySelector('.puzzle-hint-btn');
             if (hintBtn) hintBtn.click();
         });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', advance);
     }
 })();
 
