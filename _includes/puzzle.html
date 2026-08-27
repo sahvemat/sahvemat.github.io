@@ -1,19 +1,19 @@
 <section class="puzzle-section">
     <div class="puzzle-info">
-        <h2 class="puzzle-title">GÜNÜN<br><span class="puzzle-accent">SORUSU</span></h2>
-        <p class="puzzle-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2 class="puzzle-title">KRİTİK<br><span class="puzzle-accent">AN!</span></h2>
+        <p class="puzzle-desc">"Kritik Anlar" serisinden gerçek turnuva partileri. Doğru hamleyi bulun; her çözümün ardından otomatik olarak bir sonraki kritik ana geçilir.</p>
         <div class="puzzle-meta">
-            <div>Mauris blandit bibendum volutpat.</div>
+            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e 123 kritik pozisyon.</div>
         </div>
     </div>
     <div class="puzzle-board-area">
         <div class="puzzle-board-bg"></div>
         <div class="puzzle-board">
             <header class="puzzle-board-header">
-                <span>Phasellus ut felis</span>
-                <span class="accent-text">Donec et ipsum</span>
+                <span>Kritik Anlar</span>
+                <span class="accent-text" id="puzzle-rotator-number">#1</span>
             </header>
-            <div class="board-grid puzzle-grid" id="puzzle-rotator" data-pgn-src="https://sahvemat.github.io/assets/pgn/matein1.pgn"></div>
+            <div class="board-grid puzzle-grid" id="puzzle-rotator" data-pgn-src="{{ '/assets/pgn/satranchess/kritik-anlar/hepsi.pgn' | relative_url }}"></div>
             <footer class="puzzle-board-footer">
                 <button class="solution-btn">Çözümü Göster</button>
             </footer>
