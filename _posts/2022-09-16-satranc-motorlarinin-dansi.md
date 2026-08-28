@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Satranç Motorlarının Dansı!"
+title: "Satranç motorlarının dansı!"
 author: "FM Nazmi Can Doğan"
 section: "Motor Analizi"
 event: "TCEC Sezon 23 · 1. Lig"
