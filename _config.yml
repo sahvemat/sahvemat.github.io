@@ -5,3 +5,59 @@ url: "https://sahvemat.github.io"
 
 markdown: kramdown
 permalink: /posts/:title/
+
+# Jekyll auto-generates data["excerpt"] for any collection document unless
+# excerpt_separator resolves to an empty string (see Jekyll::Document
+# #generate_excerpt? / #generate_excerpt) — real posts are unaffected
+# either way since they set an explicit `excerpt:` string in front matter,
+# which the auto-generator's `||=` never overwrites. Without this, moving
+# the chapter series below into collections made every chapter (none of
+# which sets `excerpt:`) auto-generate one from its own first line of
+# content — which for all of them is the {% include chapter-toc.html %}
+# call, so the "lede" that showed up under the title was that rendered
+# table of contents' text with the tags stripped.
+excerpt_separator: ""
+
+# Multi-page post series (each chapter a separate file with its own
+# `permalink:` front matter) used to live as loose top-level directories,
+# which Jekyll treated as plain pages but which cluttered the repo root.
+# Declaring them as collections moves each series into its own `_`-prefixed
+# directory (the same convention as _posts/_includes/_data) without
+# changing anything about how they render: every file keeps its existing
+# `permalink:` and `layout:` front matter untouched, `output: true` just
+# tells Jekyll to still build each one as its own page. Collection items
+# are never added to `site.posts` (same as when they were plain pages),
+# so none of this affects the homepage/archive listings.
+collections:
+  avrupa-sampiyonasi-incileri:
+    output: true
+  devlerden-ogrenmek:
+    output: true
+  fil-v-at:
+    output: true
+  fischer-satranci-dunya-sampiyonasi-taktikleri:
+    output: true
+  gunun-incisi:
+    output: true
+  gunun-incisi-2:
+    output: true
+  gunun-incisi-3:
+    output: true
+  gunun-incisi-4-ve-acilis-faciasi:
+    output: true
+  karlsruhe-ve-yol-ayrimlari:
+    output: true
+  kritik-anlar:
+    output: true
+  ogren:
+    output: true
+  satranc-motorlarinin-dansi:
+    output: true
+  taktik:
+    output: true
+  taktik-2:
+    output: true
+  timman-bati-nin-en-iyisi:
+    output: true
+  whitsun-acik-horvath-ve-arlesli-kiz:
+    output: true
