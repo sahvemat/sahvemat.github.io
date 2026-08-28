@@ -10,13 +10,15 @@
   multi-condition filtering is done by piping through where_exp more than
   once instead.
 
-  A page (not just a post) can also claim the feature slot via
-  `type: feature` — e.g. kritik-anlar/index.md, which is a bare page (not
-  in _posts/) so it doesn't get listed as its own card in archive.html's
-  post grid, but still needs to appear here.
+  A collection item (not just a post) can also claim the feature slot via
+  `type: feature` — e.g. _kritik-anlar/index.md, which lives in its own
+  collection (not _posts/) so it doesn't get listed as its own card in
+  archive.html's post grid, but still needs to appear here. `site.documents`
+  is every collection's items combined (posts included), which is where
+  it lives now that it's no longer a plain site.pages entry.
 {% endcomment %}
 {% assign heroCandidates = site.posts | where_exp: "post", "post.type != 'analysis'" %}
-{% assign featurePost = site.pages | where: "type", "feature" | first %}
+{% assign featurePost = site.documents | where: "type", "feature" | first %}
 {% unless featurePost %}{% assign featurePost = heroCandidates | where: "type", "feature" | first %}{% endunless %}
 {% unless featurePost %}{% assign featurePost = heroCandidates | first %}{% endunless %}
 {% assign flashPost = heroCandidates | where: "type", "flash" | first %}

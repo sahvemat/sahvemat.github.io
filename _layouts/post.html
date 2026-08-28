@@ -15,7 +15,16 @@ layout: default
   </div>
 </header>
 
-{% if page.excerpt %}
+{%- comment -%}
+  Collection documents (unlike plain Pages) render excerpt through
+  Jekyll's DocumentDrop#excerpt, which does fallback_data["excerpt"].to_s
+  — coercing a nil (no excerpt set, generation disabled via this site's
+  excerpt_separator: "") into an empty string. Liquid's plain truthiness
+  treats an empty string as truthy, so checking page.excerpt on its own
+  would still render an empty .post-lede on every such page; comparing
+  against the empty literal is Liquid's own way to test for that case.
+{%- endcomment %}
+{% if page.excerpt != empty %}
 <div class="post-lede">{{ page.excerpt | strip_html | strip_newlines }}</div>
 {% endif %}
 
