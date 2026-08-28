@@ -6,6 +6,25 @@ url: "https://sahvemat.github.io"
 markdown: kramdown
 permalink: /posts/:title/
 
+# Every collection folder (including _posts — Jekyll treats posts as just
+# another collection internally) now lives under collections/ instead of
+# directly at the repo root, purely to keep the root tidy. This is an
+# all-or-nothing switch: Jekyll's reader skips _posts/_drafts entirely
+# for any directory outside collections_dir once it's set (see
+# Jekyll::Reader#outside_configured_directory?), so _posts had to move
+# alongside the rest rather than staying at the root on its own.
+#
+# The container directory name deliberately has NO leading underscore.
+# Jekyll's general directory walk (which is what notices _posts needs
+# reading again inside this new location) skips any entry starting with
+# "_" before it ever recurses into it (Jekyll::EntryFilter#special?) —
+# an underscore-prefixed collections_dir would never get visited by that
+# walk at all, silently dropping every real post from the build even
+# though the "posts" collection itself still resolves its directory
+# correctly. The collection folders inside it (_posts, _kritik-anlar,
+# etc.) keep their underscore as usual.
+collections_dir: collections
+
 # Jekyll auto-generates data["excerpt"] for any collection document unless
 # excerpt_separator resolves to an empty string (see Jekyll::Document
 # #generate_excerpt? / #generate_excerpt) — real posts are unaffected
