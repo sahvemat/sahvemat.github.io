@@ -1543,6 +1543,16 @@ a.article-thumbnail:hover {
     display: none;
 }
 
+/* Once a puzzle is solved, ChessPublica adds its own "Replay" button next
+   to the final comment (rewinds the board to move 0 via a raw goTo(0),
+   bypassing this widget's own puzzle-rotator state entirely). This widget
+   already offers its own "Sıradaki Bulmaca" button for what to do next, so
+   the native one is redundant here — and confusing, since clicking it
+   would rewind the board while "Sıradaki Bulmaca" stays showing. */
+#puzzle-rotator .comment-play-btn {
+    display: none;
+}
+
 /* The generic post-page `pgn-player { margin-top: 2rem }` rule below
    assumes the player sits inline in article prose and needs space above
    it. Here it's already inside .puzzle-board, right under the widget's
