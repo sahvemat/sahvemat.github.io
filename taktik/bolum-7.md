@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Taktik!: Bölüm 7"
+title: "Taktik! 7"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Guwahati Uluslararası Turnuvası"

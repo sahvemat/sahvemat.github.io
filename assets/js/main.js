@@ -1063,9 +1063,13 @@
     // the site's own accent-red chapter-num numeral style (mono, upright —
     // the same span used on the chapter's own "0N Heading") instead of
     // sitting there in the huge italic serif with the rest of the tail.
+    function numBadge(num) {
+        return '<span class="chapter-num">' + (num.length < 2 ? '0' + num : num) + '</span>';
+    }
+
     function styleTrailingChapterNum(html) {
         return html.replace(/(\d{1,2})(<\/em>)$/, function (_, num, close) {
-            return '<span class="chapter-num">' + (num.length < 2 ? '0' + num : num) + '</span>' + close;
+            return numBadge(num) + close;
         });
     }
 
@@ -1093,6 +1097,17 @@
                 return;
             }
         }
+
+        // A one-word series name with just a bare chapter number after it
+        // (e.g. "Taktik! 2" -> before="Taktik!", after="2") has no real
+        // subtitle to italicize — the split above would otherwise leave an
+        // empty <em> with just the number badge floating in it. Render it
+        // as a single uppercase line with the badge trailing inline instead.
+        if (/^\d{1,2}$/.test(after)) {
+            el.innerHTML = up(before) + ' ' + numBadge(after);
+            return;
+        }
+
         el.innerHTML = styleTrailingChapterNum(up(before) + '<br><em>' + after + '</em>');
     }
 

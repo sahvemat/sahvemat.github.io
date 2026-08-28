@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 35"
+title: "Renkli İnciler 35"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Avrupa Bireysel Şampiyonası"

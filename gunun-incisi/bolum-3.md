@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 3"
+title: "Renkli İnciler 3"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · İkinci Ayak, Belgrad"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Taktik!: Bölüm 9"
+title: "Taktik! 9"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Offerspill & CCC/NACL Fischer960 Elemeleri"

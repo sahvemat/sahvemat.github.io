@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Renkli İnciler: Bölüm 4"
+title: "Renkli İnciler 4"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "Belgrad 2022 · Sırbistan Büyükustaları Turnuvası"
