@@ -1416,6 +1416,11 @@ a.article-thumbnail:hover {
 }
 
 .puzzle-accent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
     color: var(--accent);
     text-decoration: underline;
     text-decoration-thickness: 4px;
