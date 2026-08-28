@@ -756,7 +756,7 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
-    .analysis-section { grid-template-columns: 2fr 1fr; }
+    .analysis-section { grid-template-columns: 3fr 2fr; }
 }
 
 .analysis-main {
