@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Devlerden Öğrenmek"
+title: "Devlerden öğrenmek"
 author: "FM Nazmi Can Doğan"
 section: "Öğretici Partiler"
 event: "2022 Fide Grand Prix · 1. Tur"
