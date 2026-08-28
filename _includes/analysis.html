@@ -19,7 +19,7 @@
     <div class="analysis-main">
         <div class="analysis-content">
             <header class="analysis-header">
-                <h2 class="analysis-title"><a href="{{ analysisPost.url | relative_url }}">{{ analysisPost.title }}</a></h2>
+                <h2 class="analysis-title"><a href="{{ analysisPost.url | relative_url }}" data-title="{{ analysisPost.title }}"></a></h2>
             </header>
             <div class="analysis-meta">
                 <span>{{ analysisPost.date | date: "%Y" }}</span>

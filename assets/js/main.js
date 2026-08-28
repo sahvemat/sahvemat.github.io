@@ -944,8 +944,8 @@
         });
     }
 
-    function formatPostTitle(h1) {
-        var title = h1.dataset.title;
+    function formatPostTitle(el) {
+        var title = el.dataset.title;
         if (!title) return;
         var up = function (s) { return s.toLocaleUpperCase('tr-TR'); };
 
@@ -964,14 +964,20 @@
                 before = words[0];
                 after = words.slice(1).join(' ');
             } else {
-                h1.textContent = up(title);
+                el.textContent = up(title);
                 return;
             }
         }
-        h1.innerHTML = styleTrailingChapterNum(up(before) + '<br><em>' + after + '</em>');
+        el.innerHTML = styleTrailingChapterNum(up(before) + '<br><em>' + after + '</em>');
     }
 
-    document.querySelectorAll('.post-title[data-title]').forEach(formatPostTitle);
+    // Same treatment everywhere a post/page title is shown, so homepage
+    // cards (hero, sidebar, analysis, archive) match how the title looks
+    // on the post's own page instead of rendering as plain single-tone text.
+    document.querySelectorAll(
+        '.post-title[data-title], .hero-title[data-title], .sidebar-title[data-title], ' +
+        '.sidebar-dark-title[data-title], .analysis-title a[data-title], .article-card-title a[data-title]'
+    ).forEach(formatPostTitle);
 })();
 
 // Straight quotes/apostrophes ("..."/') come from YAML front matter and

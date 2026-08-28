@@ -1,6 +1,6 @@
 <section class="archive-section">
     <div class="archive-header">
-        <h2 class="archive-title">YAZI<span class="archive-accent">LAR</span></h2>
+        <h2 class="archive-title">YAZILAR</h2>
         <div class="archive-filters">
             <button class="filter-btn filter-btn--active">Tümü</button>
             <button class="filter-btn">Bazıları</button>
@@ -27,7 +27,7 @@
                     <span>{{ tr_months_upper[month_idx] }} {{ post.date | date: "%Y" }}</span>
                     <span>{{ post.reading_time | default: "8" }} DK OKUMA</span>
                 </div>
-                <h3 class="article-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <h3 class="article-card-title"><a href="{{ post.url | relative_url }}" data-title="{{ post.title }}"></a></h3>
                 <div class="article-author-row">
                     <span class="article-author-label">YAZAR:</span>
                     <span class="article-author-name">{{ post.author | default: "ŞAHvMAT" }}</span>
