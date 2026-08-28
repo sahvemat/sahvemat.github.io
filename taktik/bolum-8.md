@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Taktik!: Bölüm 8 — Fischer960: Giri – Hansen"
+title: "Taktik!: Bölüm 8"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Offerspill & CCC/NACL Fischer960 Elemeleri"

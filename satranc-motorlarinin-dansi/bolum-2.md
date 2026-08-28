@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Satranç Motorlarının Dansı!: Bölüm 2 — Arasan – Ethereal"
+title: "Satranç Motorlarının Dansı!: Bölüm 2"
 author: "FM Nazmi Can Doğan"
 section: "Motor Analizi"
 event: "TCEC Sezon 23 · 1. Lig"

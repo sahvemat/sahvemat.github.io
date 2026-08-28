@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Taktik!: Bölüm 3 — Esipenko – Grischuk"
+title: "Taktik!: Bölüm 3"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "2022 Fide Grand Prix · Berlin"
