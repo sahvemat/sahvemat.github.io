@@ -48,21 +48,11 @@ excerpt_separator: ""
 # are never added to `site.posts` (same as when they were plain pages),
 # so none of this affects the homepage/archive listings.
 collections:
-  avrupa-sampiyonasi-incileri:
-    output: true
   devlerden-ogrenmek:
     output: true
   fil-v-at:
     output: true
-  fischer-satranci-dunya-sampiyonasi-taktikleri:
-    output: true
   gunun-incisi:
-    output: true
-  gunun-incisi-2:
-    output: true
-  gunun-incisi-3:
-    output: true
-  gunun-incisi-4-ve-acilis-faciasi:
     output: true
   karlsruhe-ve-yol-ayrimlari:
     output: true
@@ -73,8 +63,6 @@ collections:
   satranc-motorlarinin-dansi:
     output: true
   taktik:
-    output: true
-  taktik-2:
     output: true
   timman-bati-nin-en-iyisi:
     output: true
