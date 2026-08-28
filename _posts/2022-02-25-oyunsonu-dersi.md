@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Oyunsonu Dersi"
+title: "Oyunsonu dersi"
 author: "FM Nazmi Can Doğan"
 section: "Oyunsonu"
 event: "2022 Fide Grand Prix · 1. Tur"
