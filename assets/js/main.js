@@ -155,43 +155,147 @@
 })();
 
 // ChessPublica's PuzzleMode never refreshes its own ".video-comment" caption
-// once a puzzle is active — that element is only kept in sync with the board
-// by the normal (non-puzzle) move stepper, which PuzzleMode's own internal
-// per-ply renderer bypasses entirely. The result: whatever comment was
-// showing when the puzzle started (the intro line the [P]/[Pn] tag lives in)
-// stays frozen under the board for the puzzle's whole duration instead of
-// clearing once the reader actually starts playing it out. Clear it
-// ourselves the moment the move list shows the puzzle has left its starting
-// position — cheap MutationObserver on class changes, since that's the only
-// signal PuzzleMode exposes for "a ply was just rendered".
-//
-// The "puzzle-active"/"paused" state lives on the inner .player-container
-// div, not on <pgn-player> itself (which carries no classes of its own) —
-// confirmed against ChessPublica's actual rendered DOM, not just its source.
+// for anything happening inside a puzzle sequence — that element is only
+// kept in sync with the board by the normal (non-puzzle) move stepper,
+// which PuzzleMode's own internal per-ply renderer (_renderPly) bypasses
+// entirely. Two consequences: (1) whatever comment was showing when the
+// puzzle started (the intro line the [P]/[Pn] tag lives in) stays frozen
+// under the board instead of clearing once the reader starts playing it
+// out, and (2) a comment attached to a move *inside* the puzzle's own
+// range — the solver's own correct move, or the opponent's reply that
+// PuzzleMode auto-plays ~300ms later — is never shown at all, and the
+// ~300ms timer gives no time to read it even if it were. Patch the one
+// shared puzzle-instance prototype (every puzzle's pgn-player._engine.
+// puzzle is an instance of it, found via any already-live one on the
+// page) so each ply's own comment renders as it's reached, and the
+// automatic reply is held — waiting for a tap on the board instead of
+// firing on its timer — whenever the ply just shown has a comment to read.
 (function () {
-    function watch(player) {
-        if (player._sahPuzzleCommentWatched) return;
-        player._sahPuzzleCommentWatched = true;
-        var comment = player.querySelector('.video-comment');
-        if (!comment) return;
-        var cleared = false;
-        var observer = new MutationObserver(function () {
-            if (cleared || !player.querySelector('.puzzle-active')) return;
-            if (player.querySelector('.white-half.active, .black-half.active')) {
-                cleared = true;
-                comment.innerHTML = '';
-                observer.disconnect();
+    var patched = false;
+
+    function showComment(engine, text) {
+        var box = engine.commentBox && engine.commentBox.el;
+        if (!box) return;
+        box.innerHTML = '';
+        if (!text) return;
+        var line = document.createElement('div');
+        line.className = 'comment-line';
+        var block = document.createElement('div');
+        block.className = 'comment-text-block';
+        var body = document.createElement('span');
+        body.className = 'comment-body';
+        body.textContent = text;
+        block.appendChild(body);
+        line.appendChild(block);
+        box.appendChild(line);
+    }
+
+    // Resolves whatever is waiting on the current pause, however it was
+    // triggered (a tap on the board, or the "Çözümü Göster" hint button —
+    // see the showHint patch below), so exactly one of them can ever fire.
+    function resolvePending(instance) {
+        if (!instance._sahPendingReply) return;
+        instance._sahPendingReply = false;
+        var resolve = instance._sahPendingResolve;
+        instance._sahPendingResolve = null;
+        if (instance._sahRestoreHint) {
+            instance._sahRestoreHint();
+            instance._sahRestoreHint = null;
+        }
+        if (resolve) resolve();
+    }
+
+    function waitForTap(instance, engine, cb) {
+        instance._sahPendingReply = true;
+        instance._sahPendingResolve = cb;
+        var hint = engine.hintText;
+        var prevHint = hint ? hint.textContent : null;
+        if (hint) hint.textContent = 'Devam etmek için tahtaya dokunun.';
+        instance._sahRestoreHint = function () {
+            if (hint) hint.textContent = prevHint || '';
+        };
+        var target = engine.boardWrap || engine.container;
+        if (!target) {
+            resolvePending(instance);
+            return;
+        }
+        target.addEventListener('click', function onTap(e) {
+            if (!instance._sahPendingReply) return;
+            e.preventDefault();
+            e.stopPropagation();
+            resolvePending(instance);
+        }, { capture: true, once: true });
+    }
+
+    function patch(proto) {
+        if (patched) return;
+        patched = true;
+
+        // "Çözümü Göster" (the site's own solution button, wired to click this
+        // native hint button) plays engine.expected[solvedCount] unconditionally,
+        // with no notion of whose turn it is. Normally that's fine — it's always
+        // the solver's own next move. But while a reply is held pending (above),
+        // solvedCount is already pointing at that reply, not a solver move, so
+        // the native behavior would apply it as a "hint" and then schedule what
+        // it thinks is the *next* automatic step — silently skipping past the
+        // pause instead of resolving it. Treat that click as another way to
+        // continue, same as tapping the board.
+        var nativeShowHint = proto.showHint;
+        proto.showHint = function () {
+            if (this._sahPendingReply) {
+                resolvePending(this);
+                return;
             }
-        });
-        observer.observe(player, { attributes: true, attributeFilter: ['class'], subtree: true });
+            return nativeShowHint.apply(this, arguments);
+        };
+
+        proto._advance = function () {
+            var e = this.startIndex + 1 + this.solvedCount;
+            this.solvedCount++;
+            this._renderPly(e);
+
+            var comments = this.engine.state.comments;
+            showComment(this.engine, comments && comments[e]);
+
+            if (this.solvedCount >= this.plies) {
+                this._finish();
+                return;
+            }
+
+            var self = this;
+            var doReply = function () {
+                if (!self.active) return;
+                var t = self.startIndex + 1 + self.solvedCount;
+                self.chess.move(self.expected[self.solvedCount], { sloppy: true });
+                self.solvedCount++;
+                self._renderPly(t);
+                showComment(self.engine, comments && comments[t]);
+                self.solvedCount >= self.plies && self._finish();
+            };
+
+            if (comments && comments[e]) {
+                waitForTap(self, self.engine, doReply);
+            } else {
+                setTimeout(doReply, 300);
+            }
+        };
     }
 
     function scan() {
-        document.querySelectorAll('pgn-player').forEach(watch);
+        if (patched) return;
+        document.querySelectorAll('pgn-player').forEach(function (player) {
+            var engine = player._engine;
+            if (!patched && engine && engine.puzzle) {
+                patch(Object.getPrototypeOf(engine.puzzle));
+            }
+        });
     }
 
     scan();
-    new MutationObserver(scan).observe(document.body, { childList: true, subtree: true });
+    var interval = setInterval(function () {
+        scan();
+        if (patched) clearInterval(interval);
+    }, 250);
 })();
 
 (function () {
