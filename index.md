@@ -5,6 +5,6 @@ layout: default
 {% include hero.html %}
 {% include marquee.html %}
 {% include analysis.html %}
-{% include archive.html %}
-{% include subscription.html %}
 {% include puzzle.html %}
+{% include subscription.html %}
+{% include archive.html %}

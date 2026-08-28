@@ -9,9 +9,15 @@
   (unlike newer Jekyll). Every where_exp below must stay a single condition;
   multi-condition filtering is done by piping through where_exp more than
   once instead.
+
+  A page (not just a post) can also claim the feature slot via
+  `type: feature` — e.g. kritik-anlar/index.md, which is a bare page (not
+  in _posts/) so it doesn't get listed as its own card in archive.html's
+  post grid, but still needs to appear here.
 {% endcomment %}
 {% assign heroCandidates = site.posts | where_exp: "post", "post.type != 'analysis'" %}
-{% assign featurePost = heroCandidates | where: "type", "feature" | first %}
+{% assign featurePost = site.pages | where: "type", "feature" | first %}
+{% unless featurePost %}{% assign featurePost = heroCandidates | where: "type", "feature" | first %}{% endunless %}
 {% unless featurePost %}{% assign featurePost = heroCandidates | first %}{% endunless %}
 {% assign flashPost = heroCandidates | where: "type", "flash" | first %}
 {% unless flashPost %}
@@ -40,7 +46,7 @@
             </div>
         </div>
         <div class="hero-content stagger-in">
-            <h1 class="hero-title">{{ featurePost.title | replace: " ", "<br>" }}</h1>
+            <h1 class="hero-title" data-title="{{ featurePost.title }}"></h1>
             <div class="hero-meta">
                 <p class="hero-description">"{{ featurePost.excerpt | strip_html | strip_newlines }}"</p>
                 <div class="hero-author">
@@ -58,14 +64,14 @@
 
     <div class="grid-sidebar-right">
         <div class="sidebar-card sidebar-card--light">
-            <h3 class="sidebar-title">{{ flashPost.title }}</h3>
+            <h3 class="sidebar-title" data-title="{{ flashPost.title }}"></h3>
             <p class="sidebar-desc">{{ flashPost.excerpt | strip_html | strip_newlines }}</p>
             <a href="{{ flashPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
         </div>
         <div class="sidebar-card sidebar-card--dark">
             <div class="sidebar-dark-content">
                 <fen>{{ upcomingPost.FEN }}</fen>
-                <h2 class="sidebar-dark-title">{{ upcomingPost.title }}</h2>
+                <h2 class="sidebar-dark-title" data-title="{{ upcomingPost.title }}"></h2>
                 <a href="{{ upcomingPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
             </div>     
             </div>

@@ -1029,10 +1029,6 @@ a:hover {
     font-size: clamp(3rem, 8vw, 8rem);
 }
 
-.archive-accent {
-    color: var(--accent);
-}
-
 .archive-filters {
     display: flex;
     gap: 1rem;
@@ -2153,6 +2149,22 @@ pgn-player p {
 }
 
 .post-title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--accent);
+}
+
+/* Homepage cards (hero, sidebar, analysis, archive) render post/page
+   titles through the same data-title split as .post-title above, so they
+   need the same em treatment to actually look like it. */
+.hero-title em,
+.sidebar-title em,
+.sidebar-dark-title em,
+.analysis-title em,
+.article-card-title em {
     font-family: var(--font-serif);
     font-style: italic;
     font-weight: 400;
