@@ -1422,9 +1422,6 @@ a.article-thumbnail:hover {
     text-transform: none;
     letter-spacing: normal;
     color: var(--accent);
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    text-underline-offset: 20px;
 }
 
 .puzzle-desc {
