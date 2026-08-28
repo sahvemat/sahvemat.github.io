@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "İlginç Bir Piyon Finali!"
+title: "İlginç bir piyon finali"
 author: "FM Nazmi Can Doğan"
 section: "Oyunsonu"
 event: "2022 Fide Grand Prix · Belgrad"
