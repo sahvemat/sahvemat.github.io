@@ -66,14 +66,22 @@
         <div class="sidebar-card sidebar-card--light">
             <h3 class="sidebar-title" data-title="{{ flashPost.title }}"></h3>
             <p class="sidebar-desc">{{ flashPost.excerpt | strip_html | strip_newlines }}</p>
+            <div class="article-author-row">
+                <span class="article-author-label">YAZAR:</span>
+                <span class="article-author-name">{{ flashPost.author }}</span>
+            </div>
             <a href="{{ flashPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
         </div>
         <div class="sidebar-card sidebar-card--dark">
             <div class="sidebar-dark-content">
                 <fen>{{ upcomingPost.FEN }}</fen>
                 <h2 class="sidebar-dark-title" data-title="{{ upcomingPost.title }}"></h2>
+                <div class="article-author-row">
+                    <span class="article-author-label">YAZAR:</span>
+                    <span class="article-author-name">{{ upcomingPost.author }}</span>
+                </div>
                 <a href="{{ upcomingPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
-            </div>     
+            </div>
             </div>
     </div>
     
