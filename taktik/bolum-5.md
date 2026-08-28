@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Taktik!: Bölüm 5 — Nakamura – Aronian"
+title: "Taktik!: Bölüm 5"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "2022 Fide Grand Prix · Berlin"
