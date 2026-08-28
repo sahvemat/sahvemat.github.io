@@ -678,6 +678,20 @@ a:hover {
     line-height: 1;
 }
 
+/* .article-author-row's own -0.25rem margin-top is tuned for sitting
+   right under .article-card-title in the archive grid; here it comes
+   after a paragraph/title with its own spacing, so it needs breathing
+   room on both sides instead. */
+.sidebar-card .article-author-row {
+    margin: 1rem 0;
+}
+
+/* .article-author-label's default color is tuned for light backgrounds;
+   on the dark sidebar card it needs to read against var(--ink) instead. */
+.sidebar-card--dark .article-author-label {
+    color: rgba(253, 252, 248, 0.6);
+}
+
 .sidebar-dark-footer {
     display: flex;
     justify-content: space-between;
@@ -1027,6 +1041,15 @@ a:hover {
 
 .archive-title {
     font-size: clamp(3rem, 8vw, 8rem);
+}
+
+.archive-accent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--accent);
 }
 
 .archive-filters {
