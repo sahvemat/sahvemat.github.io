@@ -168,7 +168,8 @@
 // shared puzzle-instance prototype (every puzzle's pgn-player._engine.
 // puzzle is an instance of it, found via any already-live one on the
 // page) so each ply's own comment renders as it's reached, and the
-// automatic reply is held — waiting for a tap on the board instead of
+// automatic reply is held — waiting for a tap on the board, a press of
+// the play button shown at its center, or the spacebar, instead of
 // firing on its timer — whenever the ply just shown has a comment to read.
 (function () {
     var patched = false;
@@ -208,12 +209,32 @@
     function waitForTap(instance, engine, cb) {
         instance._sahPendingReply = true;
         instance._sahPendingResolve = cb;
+
         var hint = engine.hintText;
         var prevHint = hint ? hint.textContent : null;
         if (hint) hint.textContent = 'Devam etmek için tahtaya dokunun.';
+        // Reuse ChessPublica's own center-of-board play button as the visible
+        // "continue" affordance — it's already hidden for the puzzle's whole
+        // solving phase (see _activate's hidePlayBtn), and clicking it while
+        // a puzzle is active is already a safe no-op in the native play()
+        // (guarded by `this.puzzle.active||...`), so showing it here doesn't
+        // risk triggering real autoplay if this listener weren't attached.
+        if (engine.showPlayBtn) engine.showPlayBtn();
+
+        function onKey(e) {
+            if (e.code !== 'Space' && e.key !== ' ') return;
+            if (!instance._sahPendingReply) return;
+            e.preventDefault();
+            resolvePending(instance);
+        }
+        document.addEventListener('keydown', onKey, true);
+
         instance._sahRestoreHint = function () {
             if (hint) hint.textContent = prevHint || '';
+            if (engine.hidePlayBtn) engine.hidePlayBtn();
+            document.removeEventListener('keydown', onKey, true);
         };
+
         var target = engine.boardWrap || engine.container;
         if (!target) {
             resolvePending(instance);
