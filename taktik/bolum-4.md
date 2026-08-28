@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Taktik!: Bölüm 4"
+title: "Taktik! 4"
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "2022 Fide Grand Prix · Berlin"
