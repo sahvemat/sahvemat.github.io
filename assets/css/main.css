@@ -1617,7 +1617,7 @@ a.article-thumbnail:hover {
     align-items: center;
     margin-bottom: 1.5rem;
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     border-bottom: 1px solid var(--border-10);
     padding-bottom: 1rem;
@@ -1695,7 +1695,7 @@ a.article-thumbnail:hover {
    background — this one sits directly on the card, not in its own box. */
 #puzzle-rotator .puzzle-hint-text {
     font-family: var(--font-mono);
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1703,6 +1703,14 @@ a.article-thumbnail:hover {
 
 #puzzle-rotator .puzzle-hint-prompt .lucide-icon {
     display: none;
+}
+
+/* Slightly larger than .position-card-caption's own 9px elsewhere (e.g. the
+   homepage analysis section) — this widget's header/hint text above (both
+   bumped alongside this one) read a touch bigger too, so the caption stays
+   proportionate to its neighbors here specifically. */
+#puzzle-rotator .position-card-caption {
+    font-size: 11px;
 }
 
 /* Once a puzzle is solved, ChessPublica adds its own "Replay" button next
