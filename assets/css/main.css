@@ -584,7 +584,7 @@ a:hover {
     /* Purely visual nudge — doesn't touch layout flow, so it doesn't
        disturb the KARLSRUHE alignment set via .grid-main's padding-top
        above. */
-    transform: translateY(-1rem);
+    transform: translateY(-1.5rem);
 }
 
 .hero-board .board-grid {
