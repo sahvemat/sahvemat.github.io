@@ -2,7 +2,6 @@
 layout: post
 title: "Kritik Anlar"
 permalink: /posts/kritik-anlar/
-type: feature
 author: "FM Nazmi Can Doğan"
 section: "Taktik"
 event: "Türkiye Satranç Ligi"
