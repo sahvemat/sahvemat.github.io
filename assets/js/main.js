@@ -355,6 +355,12 @@
         return m ? m[1] : '';
     };
 
+    // Same mapping .post-game's populateGames() uses (main.js above) — kept
+    // as its own copy since that function pulls its PGN over the network
+    // per-game, while this widget already holds every game's text in memory
+    // from the single hepsi.pgn fetch below.
+    const resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
+
     const initAll = () => window.ChessPublica && window.ChessPublica.initAll && window.ChessPublica.initAll();
 
     let games = [];
@@ -376,6 +382,28 @@
         cleanup();
         container.innerHTML = '';
         const pgn = games[index];
+
+        // Same "post-game-header" ribbon (dark bar, players + result) the
+        // homepage's analysis section shows above its own pgn-player board
+        // — reusing that markup/CSS as-is is what makes the two sections
+        // read as one consistent design instead of two different-looking
+        // board widgets.
+        const white = parseHeader(pgn, 'White');
+        const black = parseHeader(pgn, 'Black');
+        const whiteElo = parseHeader(pgn, 'WhiteElo');
+        const blackElo = parseHeader(pgn, 'BlackElo');
+        const result = parseHeader(pgn, 'Result');
+        const wp = white + (whiteElo && whiteElo !== '-1' ? ' (' + whiteElo + ')' : '');
+        const bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
+        const header = document.createElement('div');
+        header.className = 'post-game-header';
+        header.innerHTML =
+            '<span class="post-game-players"></span>' +
+            '<span class="post-game-result"></span>';
+        header.querySelector('.post-game-players').textContent = wp + ' — ' + bp;
+        header.querySelector('.post-game-result').textContent = resultMap[result] || result;
+        container.appendChild(header);
+
         const blob = new Blob([pgn], { type: 'application/x-chess-pgn' });
         currentBlobUrl = URL.createObjectURL(blob);
         const player = document.createElement('pgn-player');

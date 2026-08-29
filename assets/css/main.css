@@ -2575,6 +2575,20 @@ details.game-note > .post-game {
     display: none;
 }
 
+/* Same reason: the "Kritik An!" homepage widget (main.js) injects its own
+   .post-game-header ribbon into #puzzle-rotator for each puzzle. */
+#puzzle-rotator .video-title {
+    display: none;
+}
+
+/* .puzzle-grid's align-items: center (above) shrink-fits every child to its
+   own content width by default — fine for the centered board, but it also
+   shrink-fits this injected ribbon down to the width of its text instead of
+   the full-width bar .post-game-header renders as everywhere else. */
+#puzzle-rotator .post-game-header {
+    align-self: stretch;
+}
+
 /* Lowercase keyword inside uppercased headings (Turkish "ve" etc.) */
 .kw-lc {
     text-transform: lowercase;
