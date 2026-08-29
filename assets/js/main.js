@@ -412,7 +412,7 @@
         initAll();
 
         // main.css's own --board-size for this board is a flat viewport
-        // calc() that can't account for .puzzle-section's and .puzzle-
+        // calc() that can't account for .kritik-an-section's and .puzzle-
         // board's nested padding, so it overflows this card on phones.
         // __sahPollResize (main.js above) is the same real-width fix every
         // .post-game board already uses — it re-measures once chessboardjs
@@ -560,7 +560,7 @@
         // #puzzle-rotator widget further below in this file), which isn't
         // wrapped in .post-game but needs the exact same real-width fix:
         // its own CSS --board-size (main.css) is a flat viewport calc()
-        // that has no way to know about .puzzle-section's and .puzzle-
+        // that has no way to know about .kritik-an-section's and .puzzle-
         // board's own nested padding, so it overflows the card on phones.
         const card = el.closest('.post-game') || el.closest('#puzzle-rotator');
         if (!card) return;

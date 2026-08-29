@@ -1410,7 +1410,7 @@ a.article-thumbnail:hover {
 }
 
 /* ── Puzzle Section ─────────────────────────────────────────── */
-.puzzle-section {
+.kritik-an-section {
     padding: 2rem;
     background: var(--surface-alt);
     display: grid;
@@ -1426,15 +1426,15 @@ a.article-thumbnail:hover {
    on mobile below) that together squeezed the "Kritik An!" board
    noticeably smaller than every other pgn-player on the site. */
 @media (max-width: 767px) {
-    .puzzle-section { padding: 2rem 1.25rem; }
+    .kritik-an-section { padding: 2rem 1.25rem; }
 }
 
 @media (min-width: 768px) {
-    .puzzle-section { padding: 6rem; }
+    .kritik-an-section { padding: 6rem; }
 }
 
 @media (min-width: 1024px) {
-    .puzzle-section { grid-template-columns: 1fr 1fr; gap: 6rem; }
+    .kritik-an-section { grid-template-columns: 1fr 1fr; gap: 6rem; }
 }
 
 .puzzle-info {
@@ -1500,7 +1500,7 @@ a.article-thumbnail:hover {
     box-shadow: 12px 12px 0px 0px var(--fg);
 }
 
-/* The card look above (border/shadow/padding) plus .puzzle-section's own
+/* The card look above (border/shadow/padding) plus .kritik-an-section's own
    padding are two layers of width squeezed on top of the board — on a
    narrow phone that left the "Kritik An!" board noticeably smaller than
    every other pgn-player on the site (which only sit inside a single
@@ -1522,16 +1522,23 @@ a.article-thumbnail:hover {
     }
 }
 
+/* Now a caption sitting flush under the board rather than a title above
+   it — same dark-bar-under-a-diagram treatment .position-card-caption
+   uses elsewhere on the homepage (the analysis section's own diagram),
+   so the two read as the same kind of label instead of two different
+   header styles. */
 .puzzle-board-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.6rem 0.85rem;
+    background: var(--ink);
+    color: white;
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 9px;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--border-10);
-    padding-bottom: 1rem;
+    letter-spacing: 0.05em;
 }
 
 .accent-text {
@@ -1965,7 +1972,7 @@ pgn-player p {
     .diagram-card,
     .position-card,
     .chess-board-display,
-    .puzzle-section,
+    .kritik-an-section,
     .puzzle-board-area,
     .puzzle-board,
     .hero-grid,
