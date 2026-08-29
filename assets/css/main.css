@@ -1704,6 +1704,12 @@ a.article-thumbnail:hover {
     border: 1px solid var(--border-05);
     border-bottom: none;
     border-radius: 2px 2px 0 0;
+    /* A touch wider than the board so it covers the puzzle-active focus
+       ring's 3px box-shadow around the board (see .board-b72b1 below) —
+       otherwise that red ring pokes out past this bar's own edges. */
+    width: calc(100% + 8px);
+    margin-left: -4px;
+    margin-right: -4px;
 }
 
 #puzzle-rotator .puzzle-hint-text {
@@ -1724,6 +1730,11 @@ a.article-thumbnail:hover {
    proportionate to its neighbors here specifically. */
 #puzzle-rotator .position-card-caption {
     font-size: 12px;
+    /* Same reasoning as .puzzle-hint-prompt above: wide enough to cover the
+       puzzle-active focus ring's 3px box-shadow around the board. */
+    width: calc(100% + 8px);
+    margin-left: -4px;
+    margin-right: -4px;
 }
 
 /* Once a puzzle is solved, ChessPublica adds its own "Replay" button next
