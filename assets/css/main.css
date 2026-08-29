@@ -672,6 +672,17 @@ a:hover {
     padding-top: 2rem;
 }
 
+/* At >=768px .hero-meta lays the paragraph and this block out side by side
+   (row, align-items: flex-start) instead of stacked — the padding-top above
+   is only for visual separation in that stacked mobile layout, and in the
+   row layout it just pushes this block out of alignment with the
+   paragraph's top. */
+@media (min-width: 768px) {
+    .hero-author {
+        padding-top: 0;
+    }
+}
+
 .author-label {
     font-family: var(--font-mono);
     font-size: 10px;
