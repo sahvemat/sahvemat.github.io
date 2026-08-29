@@ -1419,6 +1419,16 @@ a.article-thumbnail:hover {
     align-items: center;
 }
 
+/* Same reduction .analysis-sidebar gets on mobile (see the "Analysis
+   sidebar position cards must fit" rule further below) and for the same
+   reason: the outer 2rem here is one of two padding layers stacked on top
+   of the board (.puzzle-board's own padding/border is the other, removed
+   on mobile below) that together squeezed the "Kritik An!" board
+   noticeably smaller than every other pgn-player on the site. */
+@media (max-width: 767px) {
+    .puzzle-section { padding: 2rem 1.25rem; }
+}
+
 @media (min-width: 768px) {
     .puzzle-section { padding: 6rem; }
 }
@@ -1488,6 +1498,28 @@ a.article-thumbnail:hover {
     padding: 1.5rem;
     border: 2px solid var(--line);
     box-shadow: 12px 12px 0px 0px var(--fg);
+}
+
+/* The card look above (border/shadow/padding) plus .puzzle-section's own
+   padding are two layers of width squeezed on top of the board — on a
+   narrow phone that left the "Kritik An!" board noticeably smaller than
+   every other pgn-player on the site (which only sit inside a single
+   padded container, e.g. .post-article or .analysis-sidebar). Dropping
+   the frame on mobile only — the desktop card stays as designed, there's
+   width to spare there — brings it back in line with the rest. The
+   offset rotated .puzzle-board-bg accent behind the card only reads as
+   intentional next to that card's hard edge, so it goes with it. */
+@media (max-width: 767px) {
+    .puzzle-board {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .puzzle-board-bg {
+        display: none;
+    }
 }
 
 .puzzle-board-header {
