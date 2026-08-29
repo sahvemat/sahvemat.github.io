@@ -585,6 +585,22 @@ a:hover {
     z-index: 1;
 }
 
+/* .hero-top-row's align-items: end bottom-aligns .hero-title's full layout
+   box against .hero-board — but that box's bottom edge includes the last
+   line's reserved descender space, which "ipsum" itself barely reaches
+   (only its "p" has a descender; the rest of the word sits on the
+   baseline above it). That leaves a visible gap between where the word
+   actually reads as sitting and the board's own bottom edge. Nudging the
+   title down by a small fraction of its own font size (so it scales with
+   the responsive clamp() above rather than a fixed px value) closes that
+   gap, moving the visual baseline instead of the box edge flush with the
+   board. Only scoped to this row — the same em markup elsewhere
+   (sidebar/analysis/article-card titles) isn't bottom-aligned against
+   anything, so it has no such gap to correct. */
+.hero-top-row .hero-title {
+    margin-bottom: -0.07em;
+}
+
 .hero-meta {
     display: flex;
     flex-direction: column;
@@ -2271,6 +2287,7 @@ pgn-player p {
     letter-spacing: normal;
     color: var(--accent);
 }
+
 
 .post-meta {
     font-family: var(--font-mono);
