@@ -67,11 +67,11 @@
     <div class="grid-sidebar-right">
         <div class="sidebar-card sidebar-card--light">
             <h3 class="sidebar-title" data-title="{{ flashPost.title }}"></h3>
-            <p class="sidebar-desc">{{ flashPost.excerpt | strip_html | strip_newlines }}</p>
             <div class="article-author-row">
                 <span class="article-author-label">YAZAR:</span>
                 <span class="article-author-name">{{ flashPost.author }}</span>
             </div>
+            <p class="sidebar-desc">{{ flashPost.excerpt | strip_html | strip_newlines }}</p>
             <a href="{{ flashPost.url | relative_url }}" class="read-more-link">Devamını Oku</a>
         </div>
         <div class="sidebar-card sidebar-card--dark">
