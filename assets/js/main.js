@@ -424,18 +424,23 @@
         const caption = document.createElement('div');
         caption.className = 'position-card-caption';
         caption.textContent = white + ' – ' + black + ' · ' + (resultMap[result] || result);
-        // Placed between .player-container and .video-comment (both direct
-        // children of ChessPublica's own .player-wrapper) so the result line
-        // reads above the move comment instead of below it, without moving
-        // .video-comment itself — same reasoning as the .puzzle-hint-row
-        // move above: leave ChessPublica's own elements' positions in the
-        // tree alone, move only the piece this widget controls. Falls back
-        // to the previous placement (after the whole player) if that
-        // structure isn't found, so a ChessPublica markup change degrades
-        // gracefully instead of silently losing the caption.
+        // Placed before .video-moves (ChessPublica's own move-list box,
+        // still a direct child of .player-wrapper alongside .player-
+        // container/.video-comment) so the result line reads right after
+        // the diagram — above both the move list ChessPublica fills in as
+        // the reader plays through the puzzle and the move comment below
+        // it — without moving either of those elements itself. Same
+        // reasoning as the .puzzle-hint-row move above: leave ChessPublica's
+        // own elements' positions in the tree alone, move only the piece
+        // this widget controls. Falls back to right before .video-comment,
+        // then to the previous placement (after the whole player), so a
+        // ChessPublica markup change degrades gracefully instead of
+        // silently losing the caption.
         const wrapper = player.querySelector('.player-wrapper');
+        const videoMoves = wrapper && wrapper.querySelector('.video-moves');
         const videoComment = wrapper && wrapper.querySelector('.video-comment');
-        if (wrapper && videoComment) wrapper.insertBefore(caption, videoComment);
+        if (wrapper && videoMoves) wrapper.insertBefore(caption, videoMoves);
+        else if (wrapper && videoComment) wrapper.insertBefore(caption, videoComment);
         else container.appendChild(caption);
 
         // main.css's own --board-size for this board is a flat viewport
