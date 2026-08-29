@@ -135,8 +135,8 @@
 // appears (set via .textContent by ChessPublica, not read from markup).
 (function () {
     var TRANSLATIONS = {
-        'Find the best move for White.': 'Hamle sırası Beyazda. Beyazın en iyi hamlesini bulmayı deneyin.',
-        'Find the best move for Black.': 'Hamle sırası Siyahta. Siyahın en iyi hamlesini bulmayı deneyin.'
+        'Find the best move for White.': 'Hamle sırası Beyazda. Oyundaki hamleyi bulmayı deneyin.',
+        'Find the best move for Black.': 'Hamle sırası Siyahta. Oyundaki hamleyi bulmayı deneyin.'
     };
 
     function translate() {
