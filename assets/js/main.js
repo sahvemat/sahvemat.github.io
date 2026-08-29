@@ -411,6 +411,14 @@
         container.appendChild(player);
         initAll();
 
+        // main.css's own --board-size for this board is a flat viewport
+        // calc() that can't account for .puzzle-section's and .puzzle-
+        // board's nested padding, so it overflows this card on phones.
+        // __sahPollResize (main.js above) is the same real-width fix every
+        // .post-game board already uses — it re-measures once chessboardjs
+        // has actually initialized and sets --board-size from that.
+        if (window.__sahPollResize) window.__sahPollResize(player);
+
         if (numberEl) {
             const no = parseHeader(pgn, 'KritikAnlarNo');
             if (no) numberEl.textContent = '#' + no;
@@ -440,6 +448,18 @@
         });
         observer.observe(player, { subtree: true, attributes: true, attributeFilter: ['class'] });
     };
+
+    // Set up once (not per-render, unlike the puzzle-active MutationObserver
+    // above) since the container itself — not the pgn-player render() keeps
+    // replacing — is what actually resizes. Re-queries for the current
+    // pgn-player each time rather than capturing one, since render() swaps
+    // it out on every puzzle change.
+    if (window.ResizeObserver) {
+        new ResizeObserver(() => {
+            const player = container.querySelector('pgn-player');
+            if (player && window.__sahRefitBoard) window.__sahRefitBoard(player);
+        }).observe(container);
+    }
 
     fetch(src)
         .then(r => r.text())
@@ -536,7 +556,13 @@
     //   3. Repeat on viewport resize, on board↔article toggle, and via
     //      a ResizeObserver on the card itself.
     function refit(el) {
-        const card = el.closest('.post-game');
+        // Also used for the homepage "Kritik An!" widget's board (see the
+        // #puzzle-rotator widget further below in this file), which isn't
+        // wrapped in .post-game but needs the exact same real-width fix:
+        // its own CSS --board-size (main.css) is a flat viewport calc()
+        // that has no way to know about .puzzle-section's and .puzzle-
+        // board's own nested padding, so it overflows the card on phones.
+        const card = el.closest('.post-game') || el.closest('#puzzle-rotator');
         if (!card) return;
         // Measure pgn-player's own clientWidth and subtract its padding to get
         // the exact content area available to the board+evalbar row.
@@ -689,12 +715,18 @@
     }
 
     window.__sahInitBoards = initBoards;
+    // Exposed for the "Kritik An!" widget below: same real-width board-size
+    // fix, applied to a pgn-player that isn't inside .post-game (see refit()
+    // above). __sahPollResize repeats refit() until chessboardjs has actually
+    // initialized (a freshly-created pgn-player has no _engine.board yet).
+    window.__sahRefitBoard = refit;
+    window.__sahPollResize = pollResize;
 
     let resizeTimer;
     window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-            document.querySelectorAll('.post-game pgn-player').forEach(refit);
+            document.querySelectorAll('.post-game pgn-player, #puzzle-rotator pgn-player').forEach(refit);
         }, 100);
     }, { passive: true });
 })();
