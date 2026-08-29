@@ -622,13 +622,13 @@ a:hover {
    against the real rendered page rather than re-derived analytically. */
 @media (max-width: 767px) {
     .hero-top-row .hero-title {
-        margin-bottom: calc(-0.07em - 1rem);
+        margin-bottom: calc(-0.07em - 1.25rem);
     }
 }
 
 @media (min-width: 768px) {
     .hero-top-row .hero-title {
-        margin-bottom: calc(-0.07em - 0.375rem);
+        margin-bottom: calc(-0.07em - 0.5rem);
     }
 }
 
