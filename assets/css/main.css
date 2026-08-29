@@ -535,16 +535,26 @@ a:hover {
     z-index: 1;
 }
 
+/* Title and board side by side, vertically centered against each other;
+   .hero-meta (description/author/link) is a separate block below this
+   row instead of stacked directly under the title, so it always ends up
+   under the board rather than beside it. */
+.hero-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
 /* ── Hero Board (FEN backdrop) ──────────────────────────────── */
 .hero-board {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: min(400px, 50%);
+    width: min(400px, 40%);
     aspect-ratio: 1;
     pointer-events: none;
     margin: 0;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .hero-board .board-grid {
@@ -553,18 +563,15 @@ a:hover {
     aspect-ratio: 1;
 }
 
-.hero-content > .hero-title,
-.hero-content > .hero-meta {
-    position: relative;
-    z-index: 1;
-}
-
 /* ── Hero Title ─────────────────────────────────────────────── */
 .hero-title {
     font-size: clamp(3rem, 10vw, 120px);
     line-height: 0.8;
-    margin-bottom: 3rem;
     letter-spacing: -0.04em;
+    /* Lets the title shrink below its own text width inside .hero-top-row's
+       flex row instead of pushing .hero-board out past the row's width —
+       flex items default to a min-width of their content's natural size. */
+    min-width: 0;
 }
 
 .hero-meta {
@@ -1991,13 +1998,9 @@ pgn-player p {
         max-width: 95vw;
     }
 
-    /* 2. Smaller hero board backdrop, anchored top-right */
+    /* 2. Smaller hero board, sitting in the row next to the title */
     .hero-board {
-        top: 0;
-        right: 2rem;
-        left: auto;
-        bottom: auto;
-        width: 250px;
+        width: 150px;
     }
     .hero-board .board-grid {
         width: 100%;
