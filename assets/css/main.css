@@ -605,6 +605,9 @@ a:hover {
        collapsing into whichever paints last. */
     position: relative;
     z-index: 1;
+    /* Purely visual nudge, independent of the baseline-alignment margin
+       correction below — doesn't touch layout flow or that calibration. */
+    transform: translateY(-2rem);
 }
 
 /* .hero-top-row's align-items: end bottom-aligns .hero-title's full layout
