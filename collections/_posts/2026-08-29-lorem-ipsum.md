@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lorem ipsum"
+title: "Lorem ipsum dolor"
 type: feature
 author: "Lorem Ipsum"
 section: "Lorem Ipsum"
