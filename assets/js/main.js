@@ -383,33 +383,33 @@
         container.innerHTML = '';
         const pgn = games[index];
 
-        // Same "post-game-header" ribbon (dark bar, players + result) the
-        // homepage's analysis section shows above its own pgn-player board
-        // — reusing that markup/CSS as-is is what makes the two sections
-        // read as one consistent design instead of two different-looking
-        // board widgets.
-        const white = parseHeader(pgn, 'White');
-        const black = parseHeader(pgn, 'Black');
-        const whiteElo = parseHeader(pgn, 'WhiteElo');
-        const blackElo = parseHeader(pgn, 'BlackElo');
-        const result = parseHeader(pgn, 'Result');
-        const wp = white + (whiteElo && whiteElo !== '-1' ? ' (' + whiteElo + ')' : '');
-        const bp = black + (blackElo && blackElo !== '-1' ? ' (' + blackElo + ')' : '');
-        const header = document.createElement('div');
-        header.className = 'post-game-header';
-        header.innerHTML =
-            '<span class="post-game-players"></span>' +
-            '<span class="post-game-result"></span>';
-        header.querySelector('.post-game-players').textContent = wp + ' — ' + bp;
-        header.querySelector('.post-game-result').textContent = resultMap[result] || result;
-        container.appendChild(header);
-
         const blob = new Blob([pgn], { type: 'application/x-chess-pgn' });
         currentBlobUrl = URL.createObjectURL(blob);
         const player = document.createElement('pgn-player');
         player.setAttribute('src', currentBlobUrl);
         container.appendChild(player);
         initAll();
+
+        // Same .position-card-caption the homepage's analysis section shows
+        // under its own diagram ("Karpov – Timman, Mar del Plata 1982 · 26.
+        // hamle · Siyah oynar") — reusing that class as-is is what makes the
+        // two read as the same kind of caption instead of two different
+        // styles. Event isn't used here: unlike analysis_position_caption
+        // (a hand-written "Tournament Year" string), most games in this PGN
+        // carry a machine-generated Event tag that just repeats the round
+        // and player names, so it would read as redundant clutter rather
+        // than useful context. Move number/side-to-move (the analysis
+        // caption's other two segments) would need parsing the mainline up
+        // to wherever this game's [P]/[Pn] puzzle marker sits, which
+        // ChessPublica does internally but doesn't expose — left out rather
+        // than guessed at.
+        const white = parseHeader(pgn, 'White');
+        const black = parseHeader(pgn, 'Black');
+        const result = parseHeader(pgn, 'Result');
+        const caption = document.createElement('div');
+        caption.className = 'position-card-caption';
+        caption.textContent = white + ' – ' + black + ' · ' + (resultMap[result] || result);
+        container.appendChild(caption);
 
         // main.css's own --board-size for this board is a flat viewport
         // calc() that can't account for .kritik-an-section's and .puzzle-
