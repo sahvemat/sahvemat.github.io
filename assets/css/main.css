@@ -607,7 +607,7 @@ a:hover {
     z-index: 1;
     /* Purely visual nudge, independent of the baseline-alignment margin
        correction below — doesn't touch layout flow or that calibration. */
-    transform: translateY(-2rem);
+    transform: translateY(-3rem);
 }
 
 /* .hero-top-row's align-items: end bottom-aligns .hero-title's full layout
