@@ -501,25 +501,22 @@ a:hover {
     background: var(--border-10);
 }
 
+/* justify-content: flex-start rather than center: .hero-grid is CSS Grid,
+   whose default row stretch makes .grid-main exactly as tall as its
+   tallest sibling column — .grid-sidebar-right, whose two stacked cards
+   (a text card plus a card with its own large FEN diagram) are taller
+   than .grid-main's own content most of the time. Centering .grid-main's
+   shorter content inside that stretched height put visible empty space
+   both above the diagram and below the excerpt — flex-start collapses
+   the top half of that gap, leaving only this padding controlling it. */
 .grid-main {
     padding: 2rem;
     border-right: 1px solid var(--border-10);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
-}
-
-/* Extra top padding pushes the whole centered .hero-content block down a
-   bit further, purely for breathing room under the header on mobile —
-   added here (padding, growing the container) rather than as a margin on
-   .hero-content itself, since a margin on the centered child would only
-   move it down by half as much: justify-content: center would just as
-   readily "spend" the other half pulling it back up to stay centered in
-   the now-taller box. */
-@media (max-width: 767px) {
-    .grid-main { padding-top: 4rem; }
 }
 
 @media (min-width: 768px) {
