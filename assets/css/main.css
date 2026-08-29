@@ -581,6 +581,10 @@ a:hover {
     pointer-events: none;
     margin: 0;
     padding: 0;
+    /* Purely visual nudge — doesn't touch layout flow, so it doesn't
+       disturb the KARLSRUHE alignment set via .grid-main's padding-top
+       above. */
+    transform: translateY(-1rem);
 }
 
 .hero-board .board-grid {
@@ -628,13 +632,13 @@ a:hover {
    against the real rendered page rather than re-derived analytically. */
 @media (max-width: 767px) {
     .hero-top-row .hero-title {
-        margin-bottom: calc(-0.07em - 1.25rem);
+        margin-bottom: calc(-0.07em - 2.25rem);
     }
 }
 
 @media (min-width: 768px) {
     .hero-top-row .hero-title {
-        margin-bottom: calc(-0.07em - 0.5rem);
+        margin-bottom: calc(-0.07em - 1.5rem);
     }
 }
 
