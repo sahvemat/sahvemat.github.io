@@ -1583,8 +1583,25 @@ a.article-thumbnail:hover {
    it. Here it's already inside .puzzle-board, right under the widget's
    own "Kritik Anlar / #N" header bar, so that 2rem stacks on top of the
    header's own margin-bottom and reads as an oversized gap above the
-   player's title. */
+   player's title.
+
+   width: 100% matters for more than layout: cp.css's base pgn-player rule
+   is `width: fit-content`, which shrinks the element down to whatever its
+   *current* content happens to render at. main.js's refit() (the fix for
+   the board overflowing this card on phones) measures this element's own
+   clientWidth to learn how much real space it has to work with — under
+   fit-content that reads back its own already-shrunk size instead of the
+   card's true available width, a self-referential loop that never lets
+   the board grow to the size the card can actually fit. width: 100% (the
+   same fix .post-game pgn-player below already uses) gives clientWidth a
+   stable, correct value to measure. display:flex/column/center-aligned
+   re-centers the board now that pgn-player itself spans the full card
+   width instead of shrink-wrapping around it. */
 #puzzle-rotator pgn-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin-top: 0;
 }
 
