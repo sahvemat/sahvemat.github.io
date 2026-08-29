@@ -1730,8 +1730,18 @@ a.article-thumbnail:hover {
    proportionate to its neighbors here specifically. */
 #puzzle-rotator .position-card-caption {
     font-size: 12px;
-    /* Same reasoning as .puzzle-hint-prompt above: wide enough to cover the
-       puzzle-active focus ring's 3px box-shadow around the board. */
+}
+
+/* Same reasoning as .puzzle-hint-prompt above: wide enough to cover the
+   puzzle-active focus ring's 3px box-shadow around the board — but only
+   while that ring is actually showing. ChessPublica removes .puzzle-active
+   from .player-container the moment the puzzle is solved (see the
+   MutationObserver above watching for exactly that), which drops the ring
+   immediately; the caption (a later sibling of .player-container inside
+   .player-wrapper — see where main.js inserts it) needs to narrow back to
+   the board's own width in step, or it reads as loose/misaligned once
+   there's no ring left to justify the overhang. */
+#puzzle-rotator .player-container.puzzle-active ~ .position-card-caption {
     width: calc(100% + 8px);
     margin-left: -4px;
     margin-right: -4px;
