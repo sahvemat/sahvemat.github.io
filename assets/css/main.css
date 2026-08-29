@@ -535,27 +535,34 @@ a:hover {
     z-index: 1;
 }
 
-/* Title and board side by side, bottom-aligned against each other — the
-   title's last line lands flush with the board's bottom edge.
+/* Board and title share one grid row instead of splitting the row's width
+   between them: the board keeps its own full, independent size (a plain
+   flex row with the title as a sibling was squeezing it down to whatever
+   width was left over) and sits in the row's right column, while the
+   title spans the row's FULL width — so it visually runs in front of the
+   board wherever the two overlap, back to behind it (see .hero-title's
+   own z-index below) — rather than being confined beside it.
+   align-items: end bottom-aligns both against each other regardless of
+   which one is taller, since both sit in the same row.
    .hero-meta (description/author/link) is a separate block below this
    row instead of stacked directly under the title, so it always ends up
    under the board rather than beside it. */
 .hero-top-row {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr min(400px, 50%);
+    align-items: end;
     margin-bottom: 3rem;
 }
 
 /* ── Hero Board (FEN backdrop) ──────────────────────────────── */
 .hero-board {
-    width: min(400px, 40%);
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
     aspect-ratio: 1;
     pointer-events: none;
     margin: 0;
     padding: 0;
-    flex-shrink: 0;
 }
 
 .hero-board .board-grid {
@@ -566,13 +573,16 @@ a:hover {
 
 /* ── Hero Title ─────────────────────────────────────────────── */
 .hero-title {
+    grid-column: 1 / -1;
+    grid-row: 1;
     font-size: clamp(3rem, 10vw, 120px);
     line-height: 0.8;
     letter-spacing: -0.04em;
-    /* Lets the title shrink below its own text width inside .hero-top-row's
-       flex row instead of pushing .hero-board out past the row's width —
-       flex items default to a min-width of their content's natural size. */
-    min-width: 0;
+    /* Spans over the board's column (above); stacking it in front is what
+       "board sits behind the text" means, rather than the two of them
+       collapsing into whichever paints last. */
+    position: relative;
+    z-index: 1;
 }
 
 .hero-meta {
@@ -1999,9 +2009,10 @@ pgn-player p {
         max-width: 95vw;
     }
 
-    /* 2. Smaller hero board, sitting in the row next to the title */
-    .hero-board {
-        width: 150px;
+    /* 2. Smaller hero board column (.hero-board itself is width: 100% of
+       this column, see the base rule above) */
+    .hero-top-row {
+        grid-template-columns: 1fr 250px;
     }
     .hero-board .board-grid {
         width: 100%;
