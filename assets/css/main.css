@@ -511,6 +511,17 @@ a:hover {
     overflow: hidden;
 }
 
+/* Extra top padding pushes the whole centered .hero-content block down a
+   bit further, purely for breathing room under the header on mobile —
+   added here (padding, growing the container) rather than as a margin on
+   .hero-content itself, since a margin on the centered child would only
+   move it down by half as much: justify-content: center would just as
+   readily "spend" the other half pulling it back up to stay centered in
+   the now-taller box. */
+@media (max-width: 767px) {
+    .grid-main { padding-top: 4rem; }
+}
+
 @media (min-width: 768px) {
     .grid-main { padding: 4rem; }
 }
