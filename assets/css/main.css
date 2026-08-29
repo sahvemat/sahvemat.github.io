@@ -520,10 +520,16 @@ a:hover {
     overflow: hidden;
 }
 
+/* padding-top: 2rem is not just a spacing choice — it's what makes
+   .hero-board's own top edge land exactly level with "KARLSRUHE"
+   (.sidebar-title, inside .sidebar-card--light's own 2rem top padding)
+   in .grid-sidebar-right once the two sit side by side at 1024px+.
+   .grid-main and .grid-sidebar-right start from the same row top in
+   .hero-grid, so matching that 2rem here lines their contents up. */
 @media (min-width: 768px) {
     .grid-main {
         padding: 4rem;
-        padding-top: 1.5rem;
+        padding-top: 2rem;
     }
 }
 
