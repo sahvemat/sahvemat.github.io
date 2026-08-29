@@ -535,13 +535,14 @@ a:hover {
     z-index: 1;
 }
 
-/* Title and board side by side, vertically centered against each other;
+/* Title and board side by side, bottom-aligned against each other — the
+   title's last line lands flush with the board's bottom edge.
    .hero-meta (description/author/link) is a separate block below this
    row instead of stacked directly under the title, so it always ends up
    under the board rather than beside it. */
 .hero-top-row {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 2rem;
     margin-bottom: 3rem;
