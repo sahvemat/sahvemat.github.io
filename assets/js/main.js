@@ -390,6 +390,21 @@
         container.appendChild(player);
         initAll();
 
+        // ChessPublica's own <pgn-player> template (built synchronously in
+        // its connectedCallback, so it's already in the DOM by this point —
+        // only the chess engine/board rendering that follows is async) nests
+        // the puzzle prompt (.puzzle-hint-row, holding .puzzle-hint-text)
+        // *inside* .board-wrap, right after .board — i.e. below the diagram.
+        // The widget wants the prompt above the diagram instead; moving the
+        // (still-empty-until-activated) row itself is simpler and safer than
+        // reproducing .board-wrap's layout with a CSS override, since
+        // .board-loading/.play/.board-toolbar in there are all positioned
+        // absolutely and don't participate in normal flow anyway.
+        const boardWrap = player.querySelector('.board-wrap');
+        const hintRow = player.querySelector('.puzzle-hint-row');
+        const boardEl = boardWrap && boardWrap.querySelector('.board');
+        if (boardWrap && hintRow && boardEl) boardWrap.insertBefore(hintRow, boardEl);
+
         // Same .position-card-caption the homepage's analysis section shows
         // under its own diagram ("Karpov – Timman, Mar del Plata 1982 · 26.
         // hamle · Siyah oynar") — reusing that class as-is is what makes the
@@ -409,7 +424,19 @@
         const caption = document.createElement('div');
         caption.className = 'position-card-caption';
         caption.textContent = white + ' – ' + black + ' · ' + (resultMap[result] || result);
-        container.appendChild(caption);
+        // Placed between .player-container and .video-comment (both direct
+        // children of ChessPublica's own .player-wrapper) so the result line
+        // reads above the move comment instead of below it, without moving
+        // .video-comment itself — same reasoning as the .puzzle-hint-row
+        // move above: leave ChessPublica's own elements' positions in the
+        // tree alone, move only the piece this widget controls. Falls back
+        // to the previous placement (after the whole player) if that
+        // structure isn't found, so a ChessPublica markup change degrades
+        // gracefully instead of silently losing the caption.
+        const wrapper = player.querySelector('.player-wrapper');
+        const videoComment = wrapper && wrapper.querySelector('.video-comment');
+        if (wrapper && videoComment) wrapper.insertBefore(caption, videoComment);
+        else container.appendChild(caption);
 
         // main.css's own --board-size for this board is a flat viewport
         // calc() that can't account for .kritik-an-section's and .puzzle-
