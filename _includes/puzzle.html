@@ -1,9 +1,24 @@
+{% comment %}
+  Each Kritik Anlar game already lives as its own single-game PGN file
+  under assets/pgn/satranchess/kritik-anlar/ (hepsi.pgn is a separate,
+  merged copy of the same games used only by the /posts/kritik-anlar/
+  chapter pages' own PuzzleMode boards, kept in sync manually — this
+  widget no longer touches it). Listing site.static_files here instead
+  of hand-maintaining a path array means a new bölüm's PGN file is
+  picked up automatically the moment it's added to the folder.
+{% endcomment %}
+{% assign kritikPgnFiles = site.static_files | where_exp: "f", "f.path contains '/assets/pgn/satranchess/kritik-anlar/'" %}
+{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi.pgn'" %}
+{% assign kritikPgnFiles = kritikPgnFiles | sort: "name" %}
+{% assign kritikPgnPaths = "" | split: "," %}
+{% for f in kritikPgnFiles %}{% assign p = f.path | relative_url %}{% assign kritikPgnPaths = kritikPgnPaths | push: p %}{% endfor %}
+
 <section class="kritik-an-section">
     <div class="puzzle-info">
         <h2 class="puzzle-title">KRİTİK<br><span class="puzzle-accent">an!</span></h2>
         <p class="puzzle-desc">"Kritik Anlar" serisinden gerçek turnuva partileri. Doğru hamleyi bulun; çözdükten sonra dilediğinizde sıradaki kritik ana geçin.</p>
         <div class="puzzle-meta">
-            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e 135 kritik pozisyon.</div>
+            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e {{ kritikPgnPaths | size }} kritik pozisyon.</div>
         </div>
     </div>
     <div class="puzzle-board-area">
@@ -13,11 +28,12 @@
                 <span>Kritik Anlar</span>
                 <span class="accent-text" id="puzzle-rotator-number">#1</span>
             </header>
-            <div class="board-grid puzzle-grid" id="puzzle-rotator" data-pgn-src="{{ '/assets/pgn/satranchess/kritik-anlar/hepsi.pgn' | relative_url }}"></div>
+            <div class="board-grid puzzle-grid" id="puzzle-rotator"></div>
             <footer class="puzzle-board-footer">
                 <button class="solution-btn" type="button">Çözümü Göster</button>
                 <button class="solution-btn next-puzzle-btn" type="button" hidden>Sıradaki Bulmaca</button>
             </footer>
         </div>
     </div>
+    <script type="application/json" id="puzzle-rotator-pgns">{{ kritikPgnPaths | jsonify }}</script>
 </section>

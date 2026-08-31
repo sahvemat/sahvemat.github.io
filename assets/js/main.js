@@ -331,42 +331,62 @@
 
 (function () {
     // Homepage "Kritik An!" widget: cycles through the Kritik Anlar series'
-    // own PuzzleMode-tagged positions (see assets/pgn/satranchess/kritik-anlar/
-    // hepsi.pgn, each game carrying the same [P]/[Pn] tag as its full post).
-    // A bare <puzzle> element (ChessPublica's other, simpler board) can't be
-    // used here instead: it treats the *entire* mainline as the puzzle with
-    // no [Pn]-style "only the next N plies, auto-play the rest" support, so
-    // it would demand the opponent's replies be entered by hand too — <pgn-
-    // player> is the only element that actually honors [Pn] the way every
-    // Kritik Anlar post already relies on.
+    // own PuzzleMode-tagged positions, fetching each one from its own
+    // single-game PGN file under assets/pgn/satranchess/kritik-anlar/ (the
+    // #puzzle-rotator-pgns JSON block puzzle.html renders lists every such
+    // file) rather than one large merged file — each pick is a fresh
+    // network request, but the reader only ever looks at one puzzle at a
+    // time so there's nothing to gain from holding all of them in memory
+    // up front. A bare <puzzle> element (ChessPublica's other, simpler
+    // board) can't be used here instead: it treats the *entire* mainline
+    // as the puzzle with no [Pn]-style "only the next N plies, auto-play
+    // the rest" support, so it would demand the opponent's replies be
+    // entered by hand too — <pgn-player> is the only element that actually
+    // honors [Pn] the way every Kritik Anlar post already relies on.
     const container = document.getElementById('puzzle-rotator');
     if (!container) return;
-    const src = container.dataset.pgnSrc;
-    if (!src) return;
+    const listEl = document.getElementById('puzzle-rotator-pgns');
+    if (!listEl) return;
+    let pgnPaths;
+    try {
+        pgnPaths = JSON.parse(listEl.textContent);
+    } catch (e) {
+        return;
+    }
+    if (!Array.isArray(pgnPaths) || !pgnPaths.length) return;
+
     const numberEl = document.getElementById('puzzle-rotator-number');
     const solutionBtn = document.querySelector('.puzzle-board-footer .solution-btn:not(.next-puzzle-btn)');
     const nextBtn = document.querySelector('.puzzle-board-footer .next-puzzle-btn');
-
-    const splitGames = (text) =>
-        text.split(/\n(?=\[Event )/).map(s => s.trim()).filter(Boolean);
 
     const parseHeader = (pgn, tag) => {
         const m = pgn.match(new RegExp('\\[' + tag + '\\s+"([^"]*)"\\]'));
         return m ? m[1] : '';
     };
 
-    // Same mapping .post-game's populateGames() uses (main.js above) — kept
-    // as its own copy since that function pulls its PGN over the network
-    // per-game, while this widget already holds every game's text in memory
-    // from the single hepsi.pgn fetch below.
     const resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
 
     const initAll = () => window.ChessPublica && window.ChessPublica.initAll && window.ChessPublica.initAll();
 
-    let games = [];
-    let index = 0;
+    // Fisher-Yates: a fresh shuffle of every path, walked front-to-back —
+    // covers all of them exactly once per lap before any repeat, instead of
+    // plain per-pick randomness which could show the same game twice in a
+    // row. Reshuffled again once a lap completes (advance(), below).
+    const shuffle = (arr) => {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    };
+
+    let order = shuffle(pgnPaths);
+    let pos = 0;
     let currentBlobUrl = null;
     let observer = null;
+    let loading = false;
+    const pgnCache = new Map();
 
     const cleanup = () => {
         if (observer) { observer.disconnect(); observer = null; }
@@ -374,14 +394,38 @@
     };
 
     const advance = () => {
-        index = (index + 1) % games.length;
+        if (loading) return;
+        pos += 1;
+        if (pos >= order.length) {
+            order = shuffle(pgnPaths);
+            pos = 0;
+        }
         render();
     };
 
+    const fetchPgn = (path) => {
+        if (pgnCache.has(path)) return Promise.resolve(pgnCache.get(path));
+        return fetch(path)
+            .then(r => r.text())
+            .then(text => {
+                const pgn = text.trim();
+                pgnCache.set(path, pgn);
+                return pgn;
+            });
+    };
+
     const render = () => {
+        const path = order[pos];
+        loading = true;
+        fetchPgn(path)
+            .then(pgn => renderPgn(pgn, path))
+            .catch(() => {})
+            .then(() => { loading = false; });
+    };
+
+    const renderPgn = (pgn, path) => {
         cleanup();
         container.innerHTML = '';
-        const pgn = games[index];
 
         const blob = new Blob([pgn], { type: 'application/x-chess-pgn' });
         currentBlobUrl = URL.createObjectURL(blob);
@@ -452,8 +496,12 @@
         if (window.__sahPollResize) window.__sahPollResize(player);
 
         if (numberEl) {
-            const no = parseHeader(pgn, 'KritikAnlarNo');
-            if (no) numberEl.textContent = '#' + no;
+            // Each file's own leading number (e.g. "004-giga-..." → 4) —
+            // there's no per-game KritikAnlarNo tag to read here since these
+            // are the plain per-bölüm PGN files, not the merged hepsi.pgn
+            // the /posts/kritik-anlar/ chapter pages still use that tag on.
+            const m = path.match(/\/0*(\d+)-[^/]+\.pgn$/);
+            if (m) numberEl.textContent = '#' + m[1];
         }
 
         // A fresh, unsolved puzzle always starts back on "Çözümü Göster";
@@ -493,18 +541,11 @@
         }).observe(container);
     }
 
-    fetch(src)
-        .then(r => r.text())
-        .then(text => {
-            games = splitGames(text);
-            if (!games.length) return;
-            // A fresh page load should land on a random critical moment, not
-            // always the same one (bölüm 1) — "Sıradaki Bulmaca"/advance()
-            // still just walks forward in series order from wherever that lands.
-            index = Math.floor(Math.random() * games.length);
-            render();
-        })
-        .catch(() => {});
+    // A fresh page load should land on a random critical moment, not always
+    // the same one — order is already shuffled above, so the first pick is
+    // order[0]; "Sıradaki Bulmaca"/advance() then walks the rest of that
+    // same shuffle before drawing a new one.
+    render();
 
     // "Çözümü Göster" stands in for ChessPublica's own .puzzle-hint-btn
     // (hidden — see main.css), which already calls the active puzzle's
