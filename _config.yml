@@ -21,7 +21,7 @@ permalink: /posts/:title/
 # an underscore-prefixed collections_dir would never get visited by that
 # walk at all, silently dropping every real post from the build even
 # though the "posts" collection itself still resolves its directory
-# correctly. The collection folders inside it (_posts, _kritik-anlar,
+# correctly. The collection folders inside it (_posts, _taktik,
 # etc.) keep their underscore as usual.
 collections_dir: collections
 
@@ -55,8 +55,6 @@ collections:
   gunun-incisi:
     output: true
   karlsruhe-ve-yol-ayrimlari:
-    output: true
-  kritik-anlar:
     output: true
   ogren:
     output: true

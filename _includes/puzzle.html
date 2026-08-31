@@ -1,21 +1,13 @@
 {% comment %}
-  Each Kritik Anlar game lives as its own single-game PGN file under
-  assets/pgn/satranchess/kritik-anlar/ (used directly by that game's own
-  /posts/kritik-anlar/ chapter page) — kritikPgnFiles below lists those,
-  purely to keep the "N kritik pozisyon" count accurate as bölümler are
-  added, without hand-editing it.
-
-  This widget itself instead fetches straight from the three Lichess
-  studies these games come from (their [ChapterURL] tags all point back
-  to one of these), via Lichess's own "export a study as one PGN, every
-  chapter" API endpoint — no local shard files to keep in sync anymore.
-  Fetching three separate studies here rather than one combined one means
-  a page load only ever has to fetch the one or two studies it actually
-  shows puzzles from, while main.js still shuffles their fetch order
-  every load and shuffles each study's games once it arrives, so — same
-  as before — no game repeats until all of them have been shown.
+  This widget fetches straight from the three Lichess studies these games
+  come from (their own [ChapterURL] tags all point back to one of these),
+  via Lichess's own "export a study as one PGN, every chapter" API
+  endpoint. Fetching three separate studies here rather than one combined
+  one means a page load only ever has to fetch the one or two studies it
+  actually shows puzzles from, while main.js still shuffles their fetch
+  order every load and shuffles each study's games once it arrives, so no
+  game repeats until all of them have been shown.
 {% endcomment %}
-{% assign kritikPgnFiles = site.static_files | where_exp: "f", "f.path contains '/assets/pgn/satranchess/kritik-anlar/'" %}
 {% assign kritikShardPath1 = 'https://lichess.org/api/study/iQuJ1Hpn.pgn' %}
 {% assign kritikShardPath2 = 'https://lichess.org/api/study/x3pgbs1D.pgn' %}
 {% assign kritikShardPath3 = 'https://lichess.org/api/study/6StL1vWF.pgn' %}
@@ -28,9 +20,6 @@
     <div class="puzzle-info">
         <h2 class="puzzle-title">KRİTİK<br><span class="puzzle-accent">an!</span></h2>
         <p class="puzzle-desc">"Kritik Anlar" serisinden gerçek turnuva partileri. Doğru hamleyi bulun; çözdükten sonra dilediğinizde sıradaki kritik ana geçin.</p>
-        <div class="puzzle-meta">
-            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e kritik pozisyon.</div>
-        </div>
     </div>
     <div class="puzzle-board-area">
         <div class="puzzle-board-bg"></div>

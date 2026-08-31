@@ -1555,21 +1555,6 @@ a.article-thumbnail:hover {
     padding-left: 2rem;
 }
 
-.puzzle-meta {
-    display: flex;
-    gap: 3rem;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: rgba(71, 85, 105, 0.6);
-}
-
-.puzzle-meta .bold {
-    color: var(--fg);
-    font-weight: 700;
-}
-
 .puzzle-board-area {
     position: relative;
 }
@@ -2306,27 +2291,6 @@ pgn-player p {
     .post-article > .video-embed,
     .post-article > pgn-player {
         break-inside: avoid;
-    }
-
-    /* Kritik Anlar: one game per chapter, no surrounding prose — the
-       2-column magazine layout above has nothing to reflow into a
-       second column, so it's turned off in favor of a single column
-       with the .post-game card centered in it. Capped at ~31.25rem —
-       what a .post-game card would occupy in one of the two regular
-       article columns ((66rem content width - 3.5rem gap) / 2) — so
-       the card keeps the same proportions as everywhere else on the
-       site instead of stretching edge-to-edge across the now-single,
-       much wider column. */
-    .post-article--single-col {
-        column-count: 1;
-        column-gap: 0;
-        column-rule: none;
-    }
-
-    .post-article--single-col > .post-game {
-        max-width: 32rem;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     /* Two consecutive "bare" game sections (see main.js) sit side by
@@ -3564,14 +3528,6 @@ pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
 }
 
 .colophon-list dd { color: var(--paper); margin: 0; }
-
-/* Kritik Anlar: exactly one game per chapter, so main.js's populateGames()
-   (see assets/js/main.js) always builds a "Tüm Partiler" archive with a
-   single card that just links back to the game already on the page — never
-   useful, since there's nothing else in it to browse to. */
-.post-article--single-col > .post-archive {
-    display: none;
-}
 
 .post-archive {
     margin-top: 4rem;
