@@ -1,0 +1,1367 @@
+[Event "Round 1: Talibov, Shiroghlan - Iskandarov, Misratdin"]
+[Date "????.??.??"]
+[Round "1.7"]
+[White "Talibov, Shiroghlan"]
+[Black "Iskandarov, Misratdin"]
+[Result "0-1"]
+[WhiteElo "2426"]
+[WhiteTitle "IM"]
+[WhiteTeam "KARAMAN SAĞLIK SPOR KULÜBÜ"]
+[WhiteFideId "13429078"]
+[BlackElo "2534"]
+[BlackTitle "GM"]
+[BlackTeam "YILDIZ SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "13400312"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Talibov, Shiroghlan - Iskandarov, Misratdin"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/lFXeVGzg"]
+[FEN "1q4k1/p4pp1/4r3/3Q4/1P1B2p1/3P4/P2P1PKb/R7 b - - 1 32"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "46"]
+
+{ Beyaz şah tehlikede durmuyor fakat, beyazın koyu renklerde duran taşları saldırının hedefi olacak! [P7] }
+32... Rd6! { [%clk 0:13:02] } 33. Qe4 { [%clk 0:02:38] } 33... Rxd4! { [%clk 0:13:11] } 34. Qxd4 { [%clk 0:02:34] } 34... Be5! { [%clk 0:13:35] } 35. Qxg4 { [%clk 0:02:36] } 35... Bxa1 $19 { ve siyah üstünlüğünü kazanca çevirmesini bildi. } { [%clk 0:13:54] } 0-1
+
+[Event "Round 8: Poormosavi, Seyed Kian - Sakmak, Kutay"]
+[Date "????.??.??"]
+[Round "8.12"]
+[White "Poormosavi, Seyed Kian"]
+[Black "Sakmak, Kutay"]
+[Result "1-0"]
+[WhiteElo "2366"]
+[WhiteTitle "IM"]
+[WhiteTeam "BEŞİKTAŞ JİMNASTİK KULÜBÜ"]
+[WhiteFideId "12585807"]
+[BlackElo "2159"]
+[BlackTitle "CM"]
+[BlackTeam "GALVA METAL SPOR KULÜBÜ"]
+[BlackFideId "44581939"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Poormosavi, Seyed Kian - Sakmak, Kutay"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/MK8sM0qQ"]
+[FEN "r5k1/p4ppp/8/bp1N1P2/3P4/4P3/6PP/2R2K2 w - - 0 26"]
+[SetUp "1"]
+[KritikAnlarNo "47"]
+
+{ Diyagramda görülen kale ata karşı kale fil mücadelesinin belirleyeni taşların etkinliği olacak. Siyahın a ve b-dikeyinde bağlı uzak geçerleri olmasına rağmen, beyaz taşların durumu ideale yakın. Eğer siyah piyonlarını hareketlendirebilirse o zaman karşı şansları olabilir... [P21] }
+26. Ra1 { [%clk 0:22:52] } 26... Bd8 { [%clk 0:34:28] } 27. Ra6! { Beyaz taşlar uyumu zirveye taşıyor. Sıra beyaz şahta, acaba zamanında yetişebilecek mi? } { [%clk 0:23:17] } 27... Kf8 { [%clk 0:34:55] } 28. Ke2 { [%clk 0:21:06] } 28... Ke8 { [%clk 0:31:07] } 29. Kd3 { [%clk 0:20:32] } 29... Kd7 { [%clk 0:30:26] } 30. Kc3 { [%clk 0:18:23] } 30... Kc8 { [%clk 0:29:47] } 31. Kb4 { [%clk 0:18:21] } 31... Kb7 { [%clk 0:28:51] } 32. Kxb5 $18 { Tam zamanında, konum kazançtır. } { [%clk 0:18:45] } 32... Rc8 { [%clk 0:29:19] } 33. Rd6 { [%clk 0:16:12] } 33... a6+ { [%clk 0:29:41] } 34. Rxa6 { [%clk 0:10:16] } 34... Rc2 { [%clk 0:30:02] } 35. Rd6 { [%clk 0:09:12] } 35... Kc8 { [%clk 0:30:31] } 36. Rc6+ { 1-0 White wins. } { [%clk 0:09:39] } 1-0
+
+[Event "Round 7: Tasdogen, Dincer - Avsar, Gediz"]
+[Date "????.??.??"]
+[Round "7.21"]
+[White "Tasdogen, Dincer"]
+[Black "Avsar, Gediz"]
+[Result "1-0"]
+[WhiteElo "2351"]
+[WhiteTitle "FM"]
+[WhiteTeam "GALVA METAL SPOR KULÜBÜ"]
+[WhiteFideId "6367097"]
+[BlackElo "2157"]
+[BlackTeam "KARŞIYAKA SATRANÇ İHTİSAS SPOR KULÜBÜ"]
+[BlackFideId "26313405"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Tasdogen, Dincer - Avsar, Gediz"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/UXXEErON"]
+[FEN "2kr3r/1p3ppp/p1nq3n/3p2N1/8/P2Q4/3B1PPP/2R2RK1 w - - 2 20"]
+[SetUp "1"]
+[KritikAnlarNo "48"]
+
+{ Ters kanada atılmış roklar ve açık bir merkez. Siyah Ag4 gelebilmek istiyor ve 2 piyon fazlası var, fakat sıra beyazda! [P15] }
+20. Rxc6+!! { [%clk 0:05:53] } 20... bxc6 { [%clk 0:15:02] } (20... Qxc6 21. Rc1 $18) 21. Rb1! { Beyaz tüm taşları ile siyah şahı hedef alıyor ve siyahın yeterli savunma imkanı bulunmuyor. } { [%clk 0:02:44] } 21... c5 { [%clk 0:11:15] } 22. Bf4! { En etkili savunmacıyı da uzaklaştırarak! } { [%clk 0:03:00] } 22... Qxf4 { [%clk 0:09:40] } 23. Qxa6+ { [%clk 0:03:28] } 23... Kd7 { [%clk 0:09:58] } 24. Rb7+ { [%clk 0:02:56] } 24... Qc7 { [%clk 0:09:16] } (24... Ke8 25. Qe2+ $18) 25. Qb5+ { [%clk 0:03:07] } 25... Kc8 { [%clk 0:09:37] } 26. Rxc7+ { [%clk 0:03:33] } 26... Kxc7 { [%clk 0:10:03] } 27. Qxc5+ $18 { ve beyaz avantajını galibiyete taşımasını bildi. n } { [%clk 0:04:01] } 1-0
+
+[Event "Round 7: Molla, Ersen - Aydemir, Umut"]
+[Date "????.??.??"]
+[Round "7.22"]
+[White "Molla, Ersen"]
+[Black "Aydemir, Umut"]
+[Result "0-1"]
+[WhiteElo "1923"]
+[WhiteTeam "KARŞIYAKA SATRANÇ İHTİSAS SPOR KULÜBÜ"]
+[WhiteFideId "6350763"]
+[BlackElo "2160"]
+[BlackTeam "GALVA METAL SPOR KULÜBÜ"]
+[BlackFideId "34565930"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Molla, Ersen - Aydemir, Umut"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/DBlGyd5i"]
+[FEN "r1bqk2r/ppp2ppp/3p4/2b4n/1n2PB2/2NQ1P2/PPP1N1PP/R3KB1R w KQkq - 3 9"]
+[SetUp "1"]
+[KritikAnlarNo "49"]
+
+{ Vd2 mi Vd1 mi? [P6] }
+9. Qd2?? { [%clk 1:18:15] } (9. Qd1 { hamlesi doğru olacaktı. }) 9... Nxf4 { [%clk 1:09:26] } 10. Qxf4 { [%clk 1:07:23] } (10. Nxf4 Be3! { nedeniyle 10.Axf4 oynanamaz. }) 10... Nxc2+ { [%clk 1:08:03] } 11. Kd1 { [%clk 1:06:45] } 11... Nxa1 $19 { 0-1 Black wins. } { [%clk 1:08:17] } 0-1
+
+[Event "Round 7: Uskov, Artem - Buyukasik, Diyap"]
+[Date "????.??.??"]
+[Round "7.37"]
+[White "Uskov, Artem"]
+[Black "Buyukasik, Diyap"]
+[Result "1-0"]
+[WhiteElo "2500"]
+[WhiteTitle "IM"]
+[WhiteTeam "GÜZELBAHÇE ALTYAPI SATRANÇ SPOR KULÜBÜ"]
+[WhiteFideId "34254854"]
+[BlackElo "2277"]
+[BlackTitle "FM"]
+[BlackTeam "BEYAZKALE SATRANÇ EVİ SPOR KULÜBÜ"]
+[BlackFideId "6319602"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Uskov, Artem - Buyukasik, Diyap"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/ptuKKv1A"]
+[FEN "r1r3k1/2q2pbp/pn1pbnp1/1p2p3/4PP2/PNN1B2P/1PP1B1P1/3RQRK1 w - - 7 16"]
+[SetUp "1"]
+[KritikAnlarNo "50"]
+
+{ [P17] }
+16. fxe5 { [%clk 1:05:05] } 16... dxe5 { [%clk 0:56:09] } 17. Rxf6! { [%clk 1:03:09] } 17... Bxf6 { [%clk 0:52:02] } 18. Qf2 { [%clk 1:03:31] } 18... Bd8 { [%clk 0:50:21] } (18... Nd7 19. Rxd7 Qxd7 20. Qxf6 $18) 19. Rxd8+! { [%clk 1:03:46] } 19... Qxd8 { [%clk 0:50:21] } 20. Bxb6 { [%clk 1:04:10] } 20... Qd6 { [%clk 0:46:41] } 21. Be3 { Üç hafif taşın iki kaleye etkinlik yönünden açıkça üstün oldukları görülmektedir. Özellikle koyu renkler üzerindeki hakimiyet (c5,a5,f6,g7,h6 kareleri) belirleyicidir. } { [%clk 1:02:46] } 21... f5 { [%clk 0:31:53] } 22. exf5 { [%clk 1:00:30] } 22... Bxf5 { [%clk 0:32:18] } 23. Nc5 { [%clk 0:58:05] } 23... Rf8 { [%clk 0:29:16] } 24. Bf3 $18 { 1-0 White wins. } { [%clk 0:57:49] } 1-0
+
+[Event "Round 6: Erdogdu, Aziz Mert - Rasulov, Vugar"]
+[Date "????.??.??"]
+[Round "6.2"]
+[White "Erdogdu, Aziz Mert"]
+[Black "Rasulov, Vugar"]
+[Result "0-1"]
+[WhiteElo "2383"]
+[WhiteTitle "GM"]
+[WhiteTeam "GALVA METAL SPOR KULÜBÜ"]
+[WhiteFideId "6301495"]
+[BlackElo "2489"]
+[BlackTitle "GM"]
+[BlackTeam "GÖZTEPE SPOR KULÜBÜ"]
+[BlackFideId "13402390"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Erdogdu, Aziz Mert - Rasulov, Vugar"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/4uImNxr8"]
+[FEN "2q1r1k1/3b1pp1/p2Q1n1p/2pN4/3p4/PN5P/1PP2PP1/3R2K1 b - - 1 27"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "51"]
+
+{ Siyahın sürpriz bir devamyolu bulunuyor. [P11] }
+27... Nxd5 { [%clk 0:37:30] } 28. Qxd5 { [%clk 0:22:51] } 28... Bxh3! { [%clk 0:37:39] } 29. Rd3 { Beyaz piyon geri oynamaya razı oluyor, ancak } { [%clk 0:17:10] } (29. gxh3 Qxh3 { d1'deki kaleyi tehdit eden Vg4 ve şahı hedef alan Ke6 tehditlerine karşı beyazın yeterli savunması olmazdı. }) 29... Bf5 { [%clk 0:33:39] } 30. Rf3 { [%clk 0:16:20] } 30... Qc7! { Ke1 ve Fe4 aynı anda tehdit ediliyor. } { [%clk 0:31:53] } 31. Rg3 { [%clk 0:14:59] } 31... Qf4 { Ke1 ve ardından Vf2 ile bitirici bir saldırı tehdidiyle. } { [%clk 0:29:47] } 32. Kf1 { [%clk 0:11:25] } 32... Qh4 { Beyazın daha fazla materyal kaybetmeden devam etme şansı kalmadı. } { [%clk 0:29:21] } 0-1
+
+[Event "Round 7: Ilgililer, Bertug - Asici, Poyraz Efe"]
+[Date "????.??.??"]
+[Round "7.42"]
+[White "Ilgililer, Bertug"]
+[Black "Asici, Poyraz Efe"]
+[Result "1/2-1/2"]
+[WhiteElo "1946"]
+[WhiteTeam "BEYAZKALE SATRANÇ EVİ SPOR KULÜBÜ"]
+[WhiteFideId "26369745"]
+[BlackElo "1996"]
+[BlackTeam "GÜZELBAHÇE ALTYAPI SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "51618885"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Ilgililer, Bertug - Asici, Poyraz Efe"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/Z63Wa0Dw"]
+[FEN "8/8/kq5r/1b6/p1p3Q1/Pp6/1P6/K6R w - - 0 50"]
+[SetUp "1"]
+[KritikAnlarNo "52"]
+
+{ Siyah fil fazlası ile kazanmaya çalıştığı konumda beyazın bir süprizi var. [P4] }
+50. Rxh6 { [%clk 0:06:25] } 50... Qxh6 { [%clk 0:01:42] } 51. Qg6+!! { Pat silahı. } { [%clk 0:06:55] } 51... Qxg6 { 1/2-1/2 wins. } { [%clk 0:01:37] } 1/2-1/2
+
+[Event "Round 7: Ayan, Bengu Sena - Ermemis, Zehra Ece"]
+[Date "????.??.??"]
+[Round "7.53"]
+[White "Ayan, Bengu Sena"]
+[Black "Ermemis, Zehra Ece"]
+[Result "1-0"]
+[WhiteElo "1857"]
+[WhiteTitle "WFM"]
+[WhiteTeam "DOĞRU HAMLE SPOR KULÜBÜ"]
+[WhiteFideId "6346120"]
+[BlackElo "1676"]
+[BlackTeam "MAVİŞEHİR ALTYAPI SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "26342715"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Yunan Hediyesi Ayan, Bengu Sena - Ermemis, Zehra Ece"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/soyYz5Ot"]
+[FEN "r4rk1/pbqnnppp/1p2p3/2p1P3/2PP4/1Q1B1N2/P4PPP/R1B1R1K1 w - - 1 16"]
+[SetUp "1"]
+[KritikAnlarNo "53"]
+
+{ Sonraki 2 oyunda aynı temanın farklı yönlerini göreceğiz. [P13] }
+16. Bxh7+! { Yunan hediyesi! } { [%clk 0:49:12] } 16... Kxh7 { [%clk 0:27:09] } 17. Ng5+ { [%clk 0:49:19] } 17... Kg6 { [%clk 0:25:17] } (17... Kg8 18. Qh3 Rfe8 19. Qh7+ Kf8 20. Qh8+ Ng8 21. Nh7+ Ke7 22. Bg5+ f6 23. Qxg7+ Kd8 24. exf6 $18) 18. Qd3+ { [%clk 0:46:40] } 18... Nf5 { [%clk 0:22:59] } 19. g4 { Siyah şah gxf5 ardından Vg3 ile saldırıya uğrayacak, bu nedenle siyah daha fazla materyal feda etmek zorunda. } { [%clk 0:46:37] } 19... Nf6 { [%clk 0:02:59] } 20. gxf5+ { [%clk 0:33:21] } 20... exf5 { [%clk 0:03:20] } 21. exf6 { [%clk 0:30:42] } 21... gxf6 { [%clk 0:03:43] } 22. Nh3 $18 { 1-0 White wins. } { [%clk 0:30:28] } 1-0
+
+[Event "Round 7: Gulden, Egemen - Sertbay, Huseyin"]
+[Date "????.??.??"]
+[Round "7.55"]
+[White "Gulden, Egemen"]
+[Black "Sertbay, Huseyin"]
+[Result "0-1"]
+[WhiteElo "2052"]
+[WhiteTitle "CM"]
+[WhiteTeam "YALOVA BELEDİYE SPOR KULÜBÜ"]
+[WhiteFideId "6324983"]
+[BlackElo "2124"]
+[BlackTeam "İSTANBUL TEKNİK ÜNİVERSİTESİ SPOR KULÜBÜ"]
+[BlackFideId "6334180"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Gulden, Egemen - Sertbay, Huseyin"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/u2pKXtk6"]
+[FEN "1r3rk1/5ppp/3b1n2/p2p1q2/3N4/PP6/1B3PPP/2RQR1K1 b - - 4 19"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "54"]
+
+{ Önceki örnekte Yunan fedası için harika katkı sunan e5-piyonu bu örnekte yok. Bu durum elbette savunma şanslarını arttıracak. [P19] }
+19... Bxh2+!? { [%clk 0:37:35] } 20. Kxh2 { [%clk 0:41:49] } 20... Ng4+ { [%clk 0:36:38] } 21. Kg1? { Bu hamle hemen kaybediyor. Önceki örnekteki savunma biçimi başarılı olacaktı. } { [%clk 0:35:27] } (21. Kg3! Qxf2+ 22. Kh3! (22. Kxg4 Qxg2+ 23. Kf4 Qxb2 { Beyazın zayıf şahı siyaha yeterince oyun verecekti. }) 22... Qxb2 (22... f5 23. Qe2) 23. Qxg4) 21... Qxf2+ { [%clk 0:36:27] } 22. Kh1 { [%clk 0:35:52] } 22... Qh4+ { [%clk 0:36:19] } 23. Kg1 { [%clk 0:36:13] } 23... Qf2+ { [%clk 0:36:47] } 24. Kh1 { [%clk 0:36:41] } 24... Qh4+ { [%clk 0:36:11] } 25. Kg1 { [%clk 0:36:53] } 25... Qh2+ { [%clk 0:38:35] } 26. Kf1 { [%clk 0:37:15] } 26... Qh1+ { [%clk 0:38:57] } 27. Ke2 { [%clk 0:37:19] } 27... Qxg2+ { [%clk 0:39:22] } 28. Kd3 { [%clk 0:37:04] } 28... Nf2+ { 0-1 Black wins. } { [%clk 0:39:43] } 0-1
+
+[Event "Round 8: Dalgar, Hakki Berat - Eldemir, Goksu"]
+[Date "????.??.??"]
+[Round "8.51"]
+[White "Dalgar, Hakki Berat"]
+[Black "Eldemir, Goksu"]
+[Result "1-0"]
+[WhiteElo "2002"]
+[WhiteTitle "CM"]
+[WhiteTeam "KARAMAN SAĞLIK SPOR KULÜBÜ"]
+[WhiteFideId "6347444"]
+[BlackElo "1911"]
+[BlackTeam "DOKTOR METİN SÜRMELİ SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "6336728"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Kaçan Fırsatlar | Dalgar, Hakki Berat - Eldemir, Goksu"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/470JgqYZ"]
+[FEN "7r/1b1Q2pr/pq1Rpk2/1pp5/5P2/2P5/PP3P2/2K3R1 b - - 5 27"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "55"]
+
+{ Veziri ve şahı arasında tercih yapmak zorunda kalan siyah [P1] }
+27... Qxd6 { hamlesi ile devam etti ancak, } (27... Bc8 $19 { Siyahın fil fazla kazanmasına olanak veren tek hamleydi. }) 1-0
+
+[Event "Round 9: Seyhan, Pelin - Babiy, Olga"]
+[Date "????.??.??"]
+[Round "9.17"]
+[White "Seyhan, Pelin"]
+[Black "Babiy, Olga"]
+[Result "1/2-1/2"]
+[WhiteElo "1949"]
+[WhiteTeam "BEŞİKTAŞ JİMNASTİK KULÜBÜ"]
+[WhiteFideId "44582781"]
+[BlackElo "2258"]
+[BlackTitle "WGM"]
+[BlackTeam "KARŞIYAKA SATRANÇ İHTİSAS SPOR KULÜBÜ"]
+[BlackFideId "14117258"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Seyhan, Pelin - Babiy, Olga"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/igME0RBU"]
+[FEN "1r1r2k1/1pp2pb1/4bn2/2Q1p1qp/P3P1p1/2PN2P1/1P1NBPP1/R3K2R b KQ - 5 21"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "56"]
+
+{ [P7] }
+21... Rxd3! (21... Nd7 { Oyun bu hamle ile belirsiz bir konumla devam etti. }) 22. Bxd3 Rd8 { ve fili korumanın uygun bir yolu yok. } 23. Ke2 { ve şimdi 21...Kxd3 hamlesini hesaplarken siyahın görmesi gereken hamle nedir? } (23. Qb5 c6 $19) 23... Qxd2+! 24. Kxd2 Nxe4+ $19 { 1/2-1/2  } 1/2-1/2
+
+[Event "Round 8: Hereklioglu, Sude - Tirpan, Ceren"]
+[Date "????.??.??"]
+[Round "8.35"]
+[White "Hereklioglu, Sude"]
+[Black "Tirpan, Ceren"]
+[Result "1/2-1/2"]
+[WhiteElo "1929"]
+[WhiteTitle "WFM"]
+[WhiteTeam "İSTANBUL TEKNİK ÜNİVERSİTESİ SPOR KULÜBÜ"]
+[WhiteFideId "6359531"]
+[BlackElo "2060"]
+[BlackTitle "WFM"]
+[BlackTeam "RESUL CANER SATRANÇ AKADEMİ VE SPOR KULÜ"]
+[BlackFideId "26385309"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Hereklioglu, Sude - Tirpan, Ceren"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/UsTxSYaY"]
+[FEN "r5k1/Rb1q1p2/6pp/1pPpP3/2nP4/2N3P1/4Q1BP/6K1 w - - 2 39"]
+[SetUp "1"]
+[KritikAnlarNo "57"]
+
+{ Stockfish burada görmesi oldukça iyi hesap gerektiren bir hamlenin altını çiziyor. [P15] }
+39. Nxd5!! (39. Qa2 { Oyunda oynanan hamleydi ve büyük karmaşaya sahne olan parti uzun bir mücadele sonunda berabere oldu. } { [%clk 0:03:32] }) 39... Kg7 40. e6! { Çok önemli bir detay. } (40. c6 Qxc6 41. Ne3 Qxg2+ 42. Nxg2 Rxa7 { Siyaha savunma olanakları sunardı. }) 40... fxe6 41. c6! Qxc6 42. Nf4 Qxg2+ 43. Qxg2 { Yedinci yataydaki açmaz nedeniyle şimdi bu mümkün olabiliyor, ancak tek ayrıntı bu değil. } 43... Rxa7 44. Nxe6+! Kf6 45. Qf2+ Kxe6 46. d5+ $18 { Asıl önemli olan konu buydu. } 1/2-1/2
+
+[Event "Round 9: Guleryuz, Kuzey - Altug, Oguz"]
+[Date "????.??.??"]
+[Round "9.12"]
+[White "Guleryuz, Kuzey"]
+[Black "Altug, Oguz"]
+[Result "1-0"]
+[WhiteElo "2204"]
+[WhiteTitle "CM"]
+[WhiteTeam "YILDIZ SATRANÇ SPOR KULÜBÜ"]
+[WhiteFideId "44500203"]
+[BlackElo "1675"]
+[BlackTeam "BULANCAK İHSANİYE SPOR KULÜBÜ"]
+[BlackFideId "44502354"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Guleryuz, Kuzey - Altug, Oguz"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/HPJD5KXm"]
+[FEN "r1q2rk1/1bp1bppp/1np5/p2pP3/P2N2Q1/2N5/1PP2PPP/R1B1R1K1 w - - 7 16"]
+[SetUp "1"]
+[KritikAnlarNo "58"]
+
+{ [P3] }
+16. Nf5! { ve mat tehdidi ile e7-fili aynı anda korunamaz. } { [%clk 1:07:29] } 16... Qxf5 { [%clk 1:24:45] } 17. Qxf5 $18 { 1-0 White wins. } { [%clk 1:07:54] } 1-0
+
+[Event "Round 9: Coban, Eren Cinar - Danaci, Ege"]
+[Date "????.??.??"]
+[Round "9.36"]
+[White "Coban, Eren Cinar"]
+[Black "Danaci, Ege"]
+[Result "1/2-1/2"]
+[WhiteElo "1746"]
+[WhiteTeam "GÖKYAY VAKFI SPOR KULÜBÜ"]
+[WhiteFideId "34548661"]
+[BlackElo "1994"]
+[BlackTitle "FM"]
+[BlackTeam "MODA SPOR KULÜBÜ"]
+[BlackFideId "34506748"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Coban, Eren Cinar - Danaci, Ege"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/N2Ugh2xu"]
+[FEN "R7/8/8/8/8/8/1r2p1K1/4k3 b - - 7 80"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "59"]
+
+{ Çok önemli bir kale finali ile karşı karşıyayız. Teorik olarak kazanç bu konumu kazanma yöntemlerinin bilinmesi önem taşıyor. [P29] }
+80... Rd2 { [%clk 0:06:35] } 81. Ra1+ { [%clk 0:04:16] } 81... Rd1 { [%clk 0:07:02] } 82. Ra2 { [%clk 0:04:42] } 82... Rd8 { [%clk 0:07:02] } 83. Ra1+ { [%clk 0:04:21] } 83... Rd1 { Kazanç için yeterli ilk fikir şahın geri çekilmesi ve Kd1 fikrinin hazırlanmasıydı. } { [%clk 0:03:56] } (83... Kd2 84. Ra2+ (84. Kf2 Rf8+ $19) 84... Ke3 85. Ra3+ Rd3 86. Ra1 Rd1 $19) 84. Ra2 { [%clk 0:03:26] } 84... Rb1 { [%clk 0:03:38] } 85. Kf3 { [%clk 0:02:14] } 85... Rb3+ { [%clk 0:04:07] } 86. Kg2 { [%clk 0:02:37] } 86... Rc3?? { Kazanmak için son şans } { [%clk 0:04:34] } (86... Re3 { Şd1 tehdidi ile. } 87. Ra1+ Kd2 88. Ra2+ Kc3 89. Ra3+ Kd4 90. Ra4+ Kc5 $19) 87. Ra1+ { [%clk 0:01:55] } 87... Kd2 { [%clk 0:04:13] } 88. Kf2 { bu konum artık teorik beraberedir. } { [%clk 0:02:20] } 88... Rc2 { [%clk 0:04:19] } 89. Re1 { [%clk 0:02:06] } 89... Kd3 { [%clk 0:04:45] } 90. Ra1 { [%clk 0:02:17] } 90... Rc3 { [%clk 0:04:27] } 91. Ra8 { [%clk 0:01:34] } 91... Kd2 { [%clk 0:04:54] } 92. Rd8+ { [%clk 0:01:51] } 92... Rd3 { [%clk 0:05:21] } 93. Rxd3+ { [%clk 0:02:12] } 93... Kxd3 { [%clk 0:05:49] } 94. Ke1 { [%clk 0:02:37] } 94... Ke3 { 1/2-1/2 wins. } { [%clk 0:06:15] } 1/2-1/2
+
+[Event "Round 7: Ertan, Can - Sevgi, Volkan"]
+[Date "????.??.??"]
+[Round "7.3"]
+[White "Ertan, Can"]
+[Black "Sevgi, Volkan"]
+[Result "1/2-1/2"]
+[WhiteElo "2369"]
+[WhiteTitle "IM"]
+[WhiteTeam "MODA SPOR KULÜBÜ"]
+[WhiteFideId "6306330"]
+[BlackElo "2302"]
+[BlackTitle "FM"]
+[BlackTeam "GÖZTEPE SPOR KULÜBÜ"]
+[BlackFideId "6325335"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Ertan, Can - Sevgi, Volkan"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/sCC3bbXt"]
+[FEN "8/2Q5/8/8/1p2n1PK/1P3k2/P7/5r2 w - - 13 93"]
+[SetUp "1"]
+[KritikAnlarNo "60"]
+
+{ Zaman sıkışmasında tek bir hata yeterli olabiliyor. [P2] }
+93. Qf7+? { [%clk 0:01:16] } (93. Qh2 { Beyaz bu şekilde üstünlüğünü kazanca dönüştürmeye çalışabilirdi. }) 93... Kg2 { ve Kh1 mat tehdidi nedeniyle beyaz vezirini feda ederek beraberliğe razı olmak zorunda. 1/2-1/2 } { [%clk 0:00:57] } 1/2-1/2
+
+[Event "Round 6: Suyarov, Mukhammadzokhid - Baidetskyi, Valentin"]
+[Date "????.??.??"]
+[Round "6.43"]
+[White "Suyarov, Mukhammadzokhid"]
+[Black "Baidetskyi, Valentin"]
+[Result "0-1"]
+[WhiteElo "2473"]
+[WhiteTitle "IM"]
+[WhiteTeam "DOKTOR METİN SÜRMELİ SATRANÇ SPOR KULÜBÜ"]
+[WhiteFideId "14210495"]
+[BlackElo "2475"]
+[BlackTitle "IM"]
+[BlackTeam "GÖKYAY VAKFI SPOR KULÜBÜ"]
+[BlackFideId "14142317"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Suyarov, Mukhammadzokhid - Baidetskyi, Valentin"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/hmFJi2zm"]
+[FEN "r2q1bk1/pp1n1n1p/2p3p1/3p1p2/3P2NP/2P2QN1/PP1B1PP1/4R1K1 w - - 0 21"]
+[SetUp "1"]
+[KritikAnlarNo "61"]
+
+{ Siyah hem h4-piyonuna hem de ata saldırıyor, beyazın cevabı zorunlu ve etkili. [P19] }
+21. Nxf5!! { [%clk 0:25:59] } 21... gxf5 { [%clk 0:17:07] } 22. Qxf5 { Beyaz Vxd7 ve ardından Af6 ile tehdit ediyor. } { [%clk 0:26:18] } 22... Bg7 { [%clk 0:17:18] } 23. Bg5! { Ke7 tehdidi ile beraber gelen bir hamle. } (23. h5? { Oyunda oynanan hamle sonunda durum belirsiz bir hal almıştı. } { [%clk 0:26:28] }) 23... Nxg5 24. hxg5 { Beyaz taş feda etmiş olmasına rağmen saldırı gücü öylesine fazla ki, siyahın materyal kaybından kaçınması mümkün değil. Örneğin, } 24... Nf8 (24... a5 25. Qe6+ Kh8 26. Nh6 Bxh6 27. gxh6 { Beyaz bastiçe Vf7 ve Ke7 ile saldırısını sürdürmek istiyor ve siyahın materyal kaybetmeden bunu önleme şansı bulunmuyor. . }) 25. Nf6+ { Ke8 fikriyle. } 25... Bxf6 (25... Kh8 26. Re8 Qxe8 27. Nxe8 Rxe8 28. Qf7 { Siyahın görünüşe göre vezire karşı yeterli materyali bulunuyor, ancak siyahın piyonları yavaş yavaş düşecek ve beyaz kazanç durumda olacak. }) 26. gxf6 Qd6 27. Re7 { siyahın durumu savunulamaz. } 27... Ng6 (27... Kh8 28. Qg5) 28. Rg7+ Kh8 (28... Kf8 29. Rxh7 $18) 29. Qh5 Nf8 30. Qf7 { 0-1 Black wins. } 0-1
+
+[Event "Round 7: Kuzubov, Yuriy - Sadykov, Ramil"]
+[Date "2026.08.19"]
+[Round "7.19"]
+[White "Kuzubov, Yuriy"]
+[Black "Sadykov, Ramil"]
+[Result "1-0"]
+[WhiteElo "2605"]
+[WhiteTitle "GM"]
+[WhiteTeam "TRAKYA SATRANÇ SPOR KULÜBÜ"]
+[WhiteFideId "14112906"]
+[BlackElo "2264"]
+[BlackTitle "FM"]
+[BlackTeam "ESKİŞEHİR TAŞCI SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "24113590"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "C43"]
+[Opening "Petrov's Defense: Modern Attack, Center Variation"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Kuzubov, Yuriy - Sadykov, Ramil"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/JzHlyav2"]
+[KritikAnlarNo "62"]
+
+{ Turnuvanın en yüksek reytingli sporcusu ve aynı zamanda 7.5/9 puanla birinci masada birincilik madalyası kazanan GM Yuriy Kuzubov Petroff Savunması karşısında öğretici bir saldırıyla kazanıyor. }
+1. e4 { [%clk 1:30:52] } 1... e5 { [%clk 1:30:09] } 2. Nf3 { [%clk 1:31:17] } 2... Nf6 { [%clk 1:30:06] } 3. d4 { [%clk 1:17:25] } 3... Nxe4 { [%clk 1:29:24] } 4. Bd3 { [%clk 1:17:49] } 4... d5 { [%clk 1:29:32] } 5. Nxe5 { [%clk 1:18:05] } 5... Bd6 { Siyah simetriyi sürdürerek hemen rok atmak istiyor. } { [%clk 1:17:38] } (5... Nd7 { Beyazın atını hemen yok etmek isteyen bu hamle ana varyant olma özelliğini koruyor. Oyunun devamı beyazın merkezde duran atının önemi hakkında daha iyi fikir verecektir. }) 6. Nc3 { Görüyoruz ki, iki taraf için de e4 ve e5-karelerine yerleşmiş atlara karşı mücadele etmek oldukça önemli. } { [%clk 1:07:12] } 6... Nxc3 { [%clk 1:10:29] } 7. bxc3 { Piyon yapısındaki zedelenmeye karşın d4-piyonunu güçlendirildi ve b-dikeyini kullanabilir. } { [%clk 1:07:12] } 7... O-O { [%clk 1:08:41] } 8. O-O { [%clk 1:03:48] } 8... Nd7 { [%clk 1:06:27] } (8... f6? { Rok yapılmadan önce bu hamle oynanamıyordu fakat şimdi de iyi değil. } 9. Qh5 { ve siyah f-piyonunu yeniden ilerletmek zorunda. } (9. Ng6! { Stockfish'in bu önerisi oldukça öğretici. } 9... hxg6?? 10. Bxg6 { Beyazın sonraki hamlesi Vh5 bitirici bir saldırı verir. })) 9. Re1 { [%clk 1:03:27] } 9... c6 { Bu hamle beyaz güçlerin uyumunu sarsmaya yönelik bir hareket başlatmadığı için pek tercih edilmiyor. } { [%clk 0:44:01] } (9... c5 { Teori sonraki hamlede açık renkli fili b1-h7 çaprazından ...c4 ile sökmeyi hedefleyen bu hamleyi öneriyor. Örneğin; } 10. Qf3 c4 11. Bf5 { ve bu konumda oynanmış bir dizi üst düzey mücadele bulunuyor. }) 10. Qf3 { Beyaz izin verilirse Ff4 ile kalelerin bağlantısını sağlayarak saldırıya hazır hale gelecek. } { [%clk 0:52:59] } 10... Qh4 { Bu tip "aktif" hamleler eğer ordunun geri kalan kısmı eşlik etmiyorsa genellikle geri püskürtülür. } { [%clk 0:35:24] } 11. Rb1 { [%clk 0:30:10] } 11... Rb8 { Stockfish bir an evvel e5-karesindeki atın alınmasını ve vezir kanadı gelişiminin sağlanmasını öneriyor. } { [%clk 0:27:32] } (11... Nxe5 12. dxe5 Re8 13. g3 Qd8 14. Bf4 $36) 12. g3 { [%clk 0:23:11] } 12... Qf6 { [%clk 0:24:28] } 13. Bf4 { Elbette vezirleri değişmek siyahı rahatlatırdı. } { [%clk 0:19:47] } 13... Nb6 { Açık renkli filini geliştirmek isteyen siyah e5-atını yok etme planından vazgeçiyor. Şimdiyse e5-karesindeki atın beyazın saldırısının önemli bir unsuru olduğunu gösteren an geliyor. Siyah şah b6-karesine giden atı özleyecek! } { [%clk 0:20:58] } 14. Qh5! { Beyaz rakibinden ilk şah kanadı zayıflığını yaratmasını istiyor. } { [%clk 0:19:40] } 14... g6 { Siyah koyu renkleri zayıflatarak savunmayı seçiyor. Diğer seçenek daha iyi } { [%clk 0:17:12] } (14... h6 15. h4 $40 { Fg5 tehdidi ile ve Ke3-Kbe1 ile devam etmek amacıyla, beyaz g4-g5 de hazırlayabilir. }) 15. Qh6 { [%clk 0:19:45] } 15... Be6 { [%clk 0:14:20] } 16. Bg5 { [%clk 0:17:29] } 16... Qg7 { [%clk 0:14:06] } 17. Qh4! { Fh6 ve Ff6 tehdidi ile. Tıpkı 12.hamlede olduğu gibi şimdi de vezir değişimi sadece siyahların işine yarardı. } { [%clk 0:17:38] } 17... Rfe8 { Stockfish'in bu durumda siyahın koyu renkli filden vazgeçerek atı alması gerektiğini söylemesi konumun vehametini ortaya koyuyor. } { [%clk 0:13:57] } 18. Bf6 { [%clk 0:17:13] } 18... Qf8 { Siyah Nihayet Ad7 dönmek ve beyaz güçleri piskürtmek istiyor. Beyazın saldırısı nasıl ilerlemeli? } { [%clk 0:14:25] } 19. f4! { Tam zamanında! Beyaz f4-f5 ilerleyişi ile şah kanadında ilerleyişini sürdürmek ve savunma hattını yıkmak istiyor. } { [%clk 0:12:21] } 19... Nd7 { Nihayet at dönüyor. } { [%clk 0:11:46] } 20. Nxd7 { [%clk 0:11:27] } 20... Bxd7 { [%clk 0:12:14] } 21. f5 { [%clk 0:11:46] } 21... Rxe1+ { [%clk 0:08:29] } 22. Rxe1 { [%clk 0:12:11] } 22... Be8?! { Siyah olası fedaları engellemek amacıyla g6-karesini güçlendirmek istiyor. } { [%clk 0:08:29] } (22... Re8 23. Rf1! { Beyazın saldırsı tüm gücüyle devam ederdi! }) 23. Rf1 { Siyah veziri kapana kısıldı ve kale ile vezirin karşı karşıya gelmesi durumunu daha da güçleştiriyor! Siyahın günleri sayılı. } { [%clk 0:08:29] } 23... b5 { ...Kb7 ile devam etmek fikriyle, fakat... } { [%clk 0:08:02] } 24. fxg6 { [%clk 0:07:13] } 24... fxg6 { [%clk 0:08:29] } 25. Be5 { [%clk 0:07:23] } 25... Bf7 { [P1] } { [%clk 0:08:20] } (25... Qe7 26. Qxe7 Bxe7 27. Bxb8 $18) 26. Bxg6! { Vh8 mat olduğu için fil alınamaz. Siyah terk etti. } { [%clk 0:07:44] } 1-0
+
+[Event "Round 6: Atabayev, Yusup - Kalogeris, Ioannis"]
+[Date "????.??.??"]
+[Round "6.1"]
+[White "Atabayev, Yusup"]
+[Black "Kalogeris, Ioannis"]
+[Result "0-1"]
+[WhiteElo "2437"]
+[WhiteTitle "GM"]
+[WhiteTeam "FATMA YILMAZ SPOR KULÜBÜ"]
+[WhiteFideId "14001128"]
+[BlackElo "2429"]
+[BlackTitle "IM"]
+[BlackTeam "DÜZCE SİYAH BEYAZ SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "4239563"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Atabayev, Yusup - Kalogeris, Ioannis"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/PFKeIKPU"]
+[FEN "1r2r1k1/5ppp/p2p4/8/P2pP2P/1p1N2P1/1PqbQP2/R2R2K1 b - - 2 28"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "63"]
+
+{ Saldırı altındaki filin olası geri çekişlerinden sonra siyahın durumu piyon fazlalığından ötürü iyidir, ancak öyle bir hamle var ki diğerlerinden çok daha iyi... [P59] }
+28... Bc3! { [%clk 0:23:02] } (28... Bh6 29. Qf3 Re6 { ve devamında Kae8 ile siyahın üstünlüğünü arttırarak devam etmesi ve sabırlı bir şekilde uğraşmaya devam etmesi gerekecekti. }) 29. Kf1 { [%clk 0:33:26] } (29. Qxc2 bxc2 30. Rdc1 Bxb2 31. Nxb2 Rxb2 $19) 29... f5! { Vezir değişiminden sonra da bu hamle etkili olurdu, fakat 29...d5 30.e5 ile yanıtlanırdı. } { [%clk 0:19:36] } 30. Rac1 { [%clk 0:33:30] } 30... Qxe2+ { [%clk 0:19:02] } 31. Kxe2 { [%clk 0:33:56] } 31... fxe4 { [%clk 0:17:36] } (31... Rbc8! { Stockfish fili soğukkanlı bir şekilde feda eden bu hamleyi daha çok beğeniyor. }) 32. bxc3 { [%clk 0:33:59] } 32... exd3+ { [%clk 0:17:07] } 33. Kxd3 { [%clk 0:34:24] } 33... b2 { [%clk 0:17:23] } 34. Rb1 { [%clk 0:34:49] } 34... dxc3 { [%clk 0:17:47] } 35. Kxc3 { [%clk 0:34:55] } 35... Rec8+ { [%clk 0:18:09] } 36. Kd3 { [%clk 0:34:55] } 36... Rb3+ { [%clk 0:18:16] } 37. Ke2 { Kale finalinin ilginç ve öğretici olması itibariyle devamı da incelenebilir. } { [%clk 0:35:19] } 37... Rc2+? { Bu çok doğal hamle doğru değil. } { [%clk 0:18:10] } (37... Re8+ 38. Kd2 Rb7 39. Kc3 Rc8+ 40. Kd3 Rc5 { Siyahın zayıf a-piyonunu düşürmeye çalışması ve şahını merkezileşmesi daha iyi olurdu. Oyundaki hamleden sonra pasif kalelerin birinden kurtulan beyaz çok iyi savunma şansı elde ediyor. }) 38. Rd2 { [%clk 0:35:33] } 38... Rxd2+ { [%clk 0:18:27] } 39. Kxd2 { [%clk 0:35:58] } 39... Rf3 { [%clk 0:18:00] } 40. Ke2 { [%clk 0:36:03] } 40... Rb3 { [%clk 0:18:26] } 41. Kd2 { [%clk 0:36:14] } 41... Kf7 { [%clk 0:18:53] } 42. Kc2 { [%clk 0:36:38] } 42... Rf3 { [%clk 0:19:03] } 43. Kxb2 { Çok öğretici bir an. } { [%clk 0:36:45] } (43. Rf1 { Geçici pasiflik en iyi çözüm! Beyaz piyon geri kalmadan da kalesini yeniden oyuna katabilecekti. } 43... Ke6 44. Kxb2 Kf5 45. Kc1! { Belki de beyazın gözünden kaçan fikir. } 45... Kg4 46. Re1! Rxf2 47. Re7 $10) 43... Rxf2+ { [%clk 0:19:26] } 44. Kc3 { [%clk 0:37:05] } 44... Rf3+ { [%clk 0:18:04] } 45. Kc4 { [%clk 0:35:59] } (45. Kb4 { Stockfish bu hamleden sonra hala biraz ümit görüyor. } 45... Rxg3 46. Ka5 Rg4 47. h5 { Siyahın hala biraz uğraşması gerekiyor. }) 45... Rxg3 { [%clk 0:18:06] } 46. Rb6 { Beyazın karşı oyunu çok geç kalıyor. } { [%clk 0:36:21] } 46... Rg4+ { [%clk 0:18:24] } 47. Kb3 { [%clk 0:36:46] } 47... Rxh4 { [%clk 0:16:25] } 48. Rxa6 { [%clk 0:37:06] } 48... h5 { [%clk 0:15:03] } 49. Rxd6 { [%clk 0:37:11] } 49... Rh1 { [%clk 0:15:08] } 50. Kb2 { [%clk 0:37:08] } 50... h4 { [%clk 0:13:49] } 51. a5 { [%clk 0:37:34] } 51... Rh2+ { [%clk 0:13:41] } 52. Kb3 { [%clk 0:37:45] } 52... Rh1 { [%clk 0:13:42] } 53. Kb2 { [%clk 0:38:12] } 53... Re1 { [%clk 0:12:37] } 54. a6 { [%clk 0:38:30] } 54... h3 { [%clk 0:11:41] } 55. a7?! { Inaccuracy. Rd7+ was best. } { [%clk 0:37:55] } (55. Rd7+ Kf6 56. Rd6+ Kf5 57. Rd5+ Kg4 58. Rd4+ Kh5 59. Rd3 Re2+ 60. Kb3 h2) 55... Re8 { [%clk 0:11:53] } 56. Rd3 { [%clk 0:38:20] } 56... Ra8 { [%clk 0:11:57] } 57. Rxh3 { [%clk 0:37:39] } 57... Rxa7 { ve uzun bir mücadele ardından siyah kazandı. } { [%clk 0:12:24] } 0-1
+
+[Event "Round 5: Akdogan, Alperen - Metin, Enis"]
+[Date "????.??.??"]
+[Round "5.8"]
+[White "Akdogan, Alperen"]
+[Black "Metin, Enis"]
+[Result "1-0"]
+[WhiteElo "2171"]
+[WhiteTitle "FM"]
+[WhiteTeam "DÜZCE SİYAH BEYAZ SATRANÇ SPOR KULÜBÜ"]
+[WhiteFideId "6347363"]
+[BlackElo "2141"]
+[BlackTeam "İSTİKLAL SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "26306948"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Akdogan, Alperen - Metin, Enis"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/teIBmq7x"]
+[FEN "r1r3k1/3nq2p/b3pb2/P2p1p2/Q1pP1Np1/4P1P1/5PBP/R2RB1K1 w - - 2 24"]
+[SetUp "1"]
+[KritikAnlarNo "64"]
+
+{ Çok keskin konumda birden doğan olanağı beyaz iyi değerlendiriyor. [P29] }
+24. Bxd5! { [%clk 0:17:38] } 24... exd5 { [%clk 0:30:14] } 25. Nxd5 { [%clk 0:18:02] } 25... Qf7 { [%clk 0:29:44] } 26. Qxd7! { Kombinezonun püf noktası! } { [%clk 0:18:24] } 26... Bd8 { [%clk 0:30:03] } 27. Qxf7+ { [%clk 0:16:22] } 27... Kxf7 { [%clk 0:30:32] } 28. Rdb1 { [%clk 0:12:40] } 28... Rab8 { [%clk 0:30:19] } 29. Rxb8 { [%clk 0:05:08] } 29... Rxb8 { [%clk 0:30:45] } 30. Nb4 { [%clk 0:05:27] } 30... Bb7 { [%clk 0:30:32] } 31. a6 { [%clk 0:04:56] } 31... Ba8 { [%clk 0:30:54] } 32. Kf1 $18 { [%clk 0:01:52] } 32... Ke8 33. a7 Rb5 34. Na6 Bb6 35. Ra4 Kd8 36. Nb4 Bc7 37. Na2 Kd7 38. Bb4 { 1-0 White wins. } 1-0
+
+[Event "Round 9: Biyiksiz, Ali Batuhan - Celebi, Mehmet Alper"]
+[Date "????.??.??"]
+[Round "9.6"]
+[White "Biyiksiz, Ali Batuhan"]
+[Black "Celebi, Mehmet Alper"]
+[Result "1-0"]
+[WhiteElo "2052"]
+[WhiteTeam "MUĞLA BÜYÜKŞEHİR BELEDİYESİ SPOR KULÜBÜ"]
+[WhiteFideId "26307251"]
+[BlackElo "2056"]
+[BlackTeam "FATMA YILMAZ SPOR KULÜBÜ"]
+[BlackFideId "51603934"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Biyiksiz, Ali Batuhan - Celebi, Mehmet Alper"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/5FiHgI42"]
+[FEN "1r3rk1/p2qn1bp/1pnp4/2pNp2P/1PP2P2/P2PN2b/5PB1/1RBQ1RK1 w - - 3 20"]
+[SetUp "1"]
+[KritikAnlarNo "65"]
+
+{ [P7] }
+20. b5! { Siyah taşların (Fh3,Ae7) sallantılı konumundan faydalanarak. } { [%clk 0:51:02] } 20... exf4?! { [%clk 0:37:13] } (20... Bxg2 21. bxc6 $18) 21. bxc6 { [%clk 0:51:15] } 21... Nxc6 { [%clk 0:37:27] } 22. Bxh3 { [%clk 0:51:22] } 22... Qxh3 { Siyah şimdi hem atı hem f3 ve ardından Fe5 ile mat etmeyi istiyor. } { [%clk 0:36:44] } 23. Qg4! $18 { Son dokunuş! } { [%clk 0:51:47] } 1-0
+
+[Event "Round 5: Yildiz, Talat - Cekicoglu, Baris"]
+[Date "????.??.??"]
+[Round "5.27"]
+[White "Yildiz, Talat"]
+[Black "Cekicoglu, Baris"]
+[Result "1-0"]
+[WhiteElo "2043"]
+[WhiteTeam "ÇEŞME BELEDİYE SPOR KULÜBÜ"]
+[WhiteFideId "34507400"]
+[BlackElo "1895"]
+[BlackTeam "ÇALLI SATRANÇ SPOR KULÜBÜ"]
+[BlackFideId "34591141"]
+[TimeControl "90+30"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar"]
+[ChapterName "Yildiz, Talat - Cekicoglu, Baris"]
+[ChapterURL "https://lichess.org/study/iQuJ1Hpn/yciJ68or"]
+[FEN "6k1/1p1q1pp1/2p1pb1p/1r2n2P/r2P4/3QPBP1/P4PK1/BR1R4 w - - 12 28"]
+[SetUp "1"]
+[KritikAnlarNo "66"]
+
+{ [P7] }
+28. Qxb5! { Bu vezir fedası materyal kazandırıyor. } { [%clk 0:17:31] } 28... cxb5 { [%clk 0:08:40] } 29. dxe5 { [%clk 0:17:54] } 29... Qc7 { [%clk 0:07:52] } 30. exf6 { [%clk 0:17:50] } 30... Rxa2 { [%clk 0:08:19] } 31. Rbc1 { 1-0 White wins. } { [%clk 0:16:21] } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "Douglas IOM"]
+[Date "2023.10.25"]
+[Round "1.10"]
+[White "Jan-Krzysztof Duda"]
+[Black "Pouya Idani"]
+[Result "1-0"]
+[WhiteElo "2726"]
+[BlackElo "2633"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "D31"]
+[Opening "Queen's Gambit Declined: Queen's Knight Variation"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Jan-Krzysztof Duda - Pouya Idani"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/6rbBSZE8"]
+[KritikAnlarNo "67"]
+
+{ Vezir Gambiti beyaza ne gibi bir üstünlük veriyor? Bu sorunun cevabına
+kapı aralayan hoş bir oyun Duda tarafından oynandı. }
+1. c4 e6 2. Nc3 d5 3. d4 h6 { Son yıllarda oldukça popüler hale gelen bu hamle beyazın Bg5 ile
+devam etmesini engelleyerek Nf6 oynamayı hedefliyor. } 4. Nf3 Nf6 5. Bf4 { En doğal hamle. } (5. g3 { Katalan tipi bir konum elde etmek için sık
+karşılaşılan bir yöntem. }) 5... Bd6 { Siyahın üçüncü hamledeki
+fikirlerinden biri de bu şekilde filleri değişmeyi hazırlamaktı. } 6. Bxd6 Qxd6 { Vezir Gambiti'nin temel üstünlüklerinden biri beyazın merkezde olan
+bitene karar verme konusunda özgür olmasında yatıyor. Dilediği anda cxd5
+oynayarak Carlsbad veya Yarı-Tarrasch tipi merkezi oluşturabilmesi veya
+c4-c5 ile vezir kanadında alan üstünlüğünü arttırarak oynama fikrinin
+yanı sıra, piyon gerilimini olduğu gibi tutarak farklı planları
+gündeminde tutabilmeyi olanaklı kılıyor. Siyah dxc4 aldığında ise
+merkezde fazla piyona sahip olma üstünlüğünü elde eden taraf beyaz
+oluyor. } 7. c5 { Bu ilerleyiş hemen her zaman heyecan verici bir savaşın
+başladığının habercisi. Beyazın iddiası vezir kanadından piyon
+sürüşleriyle somut hedefler yaratması fikrinin, siyahın e6-e5
+ilerleyişiyle elde edeceği karşı oyundan daha güçlü olacağı yönünde.
+Bu konumda oynanan oyun sayısı oldukça az olmasına rağmen bu iddianın
+oldukça eskiye uzanan bir tarihi var. Akıllara ilk gelen örnek Steinitz -
+Zukertort, 1886 dünya şampiyonası maçının 1. oyunu. Elbette o oyunda
+Beyaz koyu renkli filinden bu oyunda olduğu gibi kurtulamamıştı. } 7... Qe7 8. e3 O-O 9. b4 c6 { [#] } 10. Be2 { Beyaz gelişimini hızla tamamlayıp b4-b5 fikrini
+hazırlamaya çalışıyor. } (10. b5? { Bu tip hazırlıksız
+ilerleyişlerden kaçınmak gerektiğini gösteren bir ana tanıklık
+edebiliriz. } 10... b6! { ve siyah vezir kanadında inisiyatifi ele geçirir. }) 10... a6 11. O-O Nbd7 12. a4 e5 { Siyah silahını e5-e4 sürüşü ile beyaz şaha
+da doğrultabildiği için bu tip durumları beyazla oldukça dikkatli oynamak
+gerekiyor. } 13. Qc2 e4 14. Nd2 Nh7 15. b5 { Beyaz vezir kanadında ilk teması
+gerçekleştiriyor. İlk hedef vezir kanadında hatların açılması ve
+zayıflayan piyonlara ve karelere yöneliş. } 15... f5 16. Nb3 { [#] Beyazın planı
+belli oldu: bxc6 ve Aa5. } 16... a5 { Siyah Na5'i engelleyerek rakibini yavaşlatmayı
+deniyor. } (16... f4 { Tıpkı beyazın hazırlıksız b4-b5 yapmaması
+gerektiği gibi siyahın da hazırlıklı bir saldırı başlatması gerekiyor. } 17. exf4 Rxf4 18. bxc6 bxc6 19. Na5 { Siyah için savunması kolay bir
+zaylık gibi görünse de, siyahın yaşadığı gelişim sıkıntıları
+taktikleri beraberinde getiriyor. } 19... Rf6 (19... Qf6 20. Nxc6! Qxc6 21. Nxd5 { Bu sefer daha da etkili olurdu. }) 20. Nxc6! Rxc6 21. Nxd5 Qe8 22. f3 $40 { Gelişimde önde olan tarafın konumu açmaya çalışması gerektiğine
+ilişkin güzel bir örnek olurdu. }) (16... Ndf6 { Stockfish Na5'i Qc7 ile
+yanıtlamayı ve gelişimi sürdürmeyi öneriyor. }) 17. Qd2 { Pa5 mercek
+altında. } 17... g5 { Kritik an geldi, acaba siyahın saldırısı yeterince güçlü
+mü? [P5] } 18. Nxa5! { [#] Beyaz buna iki atını kale ve iki piyona karşı
+değişerek yanıt veriyor. } 18... Rxa5 { Siyahın kendi saldırısına dönmeye
+çalışması Beyazın savunma kaynaklarını göstermeye yardımcı olur. } (18... Qf6 19. Nb3 f4 20. f3! { ve Beyaz gelişim konusunda hala iyi taraf
+olduğu için tahtanın her iki tarafında da oynayabildiğini hatırlatırdı. }) 19. Nxd5 cxd5 20. Qxa5 { Zorunlu hamlelerin ardından siyah saldırısına
+devam etmek dışında seçeneğinin olmadığı bir konumda buluyor kendisini. } 20... Ndf6 21. Qb6 f4 22. a5 f3 { Siyah hayli hızlı bir ilerleme kaydetti, fakat
+saldırısı yeterince güçlü mü? } 23. gxf3 Bh3 { [#] } 24. a6! { Beyazın
+savunmasının püf noktası karşı saldırı! Beyaz kalesini kaçmayı
+deneseydi: } (24. Rfc1 exf3 25. Bxf3? (25. Bd3 Qd7 26. Qd6! { ve beyaz şah
+güvendedir. }) 25... Qd7 { Ardından Qf5 ile şahının yalnız kaldığını
+ve f2-karesinin zayıfladığını hatırlaması gerekirdi. }) 24... exf3 25. Bxf3 bxa6 26. bxa6 g4 (26... Qd7 { Önceki notta belirtildiği gibi Qf5
+planlanırsa, } 27. Qd6 $16 { Beyazın veziri yardıma dönebilirdi. }) 27. Qb7! { Basit ve etkili bir karşı saldırı hamlesi daha. } 27... Qe6 (27... Qxb7?? 28. axb7 $18 { ve Ka8 oyunu bitirir. }) 28. Bh1 { Beyazın fili şahını ve
+e4-karesini korumak zorunda. } 28... Ng5 29. a7 Nf3+ 30. Bxf3 gxf3 31. Qb8 { Yine
+basit ve etkili bir çözüm, beyaz şah tamamen güvende ve oyun bitmiştir. } 31... Bxf1 32. a8=Q { Siyah terk etti. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.11.05"]
+[Round "11.17"]
+[White "Harikrishna, Pentala"]
+[Black "Yilmaz, Mustafa"]
+[Result "0-1"]
+[WhiteElo "2716"]
+[BlackElo "2640"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "E51"]
+[Opening "Nimzo-Indian Defense: Normal Variation, Ragozin Variation"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Harikrishna, Pentala - Yilmaz, Mustafa"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/lSC1bkiC"]
+[KritikAnlarNo "68"]
+
+{ Mustafa Yılmaz kariyerinin reyting zirvesine doğru adım adım ilerlerken tecrübeli bir 2700+ GM olan Pentala Harikrishna karşısında siyahlar taşlarla güzel bir galibiyete imza atmıştı. }
+1. d4 { GM Mustafa Yılmaz bu turnuvada 1.d4 hamlesiyle üç kez karşılaşmış ve
+üç galibiyet elde etmişti! } 1... Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Bb4 { Ragozin Savunması Mustafa Yılmaz'ın repertuvarının önemli bir parçası. } 5. e3 O-O 6. Bd2 { Hamle sıralaması ile Nimzo-Hint Savunması'na ulaşıldı. 6.Bd2
+hamlesi özellike bu turnuva geçtiğimiz yıllarda büyük bir üne
+kavuşmuştu. } 6... b6 { Ana varyant. } 7. Rc1 Bb7 8. cxd5 exd5 9. a3 { Filin konumunu
+sorgulayan bu hamle günümüzde bile nadirdir. Beyaz fili uzaklaştırarak
+g3-Bg2 planlamaktadır. } (9. Bd3 { Bu varyant için açık renkli filin doğal
+gelişim karesi burasıdır, fakat GM Harikrishna bu oyun için başka bir
+gelişim fikri hazırlamıştır. }) 9... Be7 10. g3 { Olası "izole vezir
+piyonu" veya "askıda piyonlar" senaryolarında filin g2- karesindeki konumu
+idealdir, fakat birazdan göreceğimiz gibi siyah taşlar iyi yerleşmiştir
+ve beyaz taşlar arasında d2- filinin yarattığı uyum sorunu vardır. } 10... c5 { Siyah en prensipli fikre gidiyor. Koyu renkli filin d2- karesinde oluşu, dxc5
+durumunda askıda piyonlarla oynamayı Siyah için kolaylaştıracak. } 11. Bg2 { Beyazın fikri doğrudan d5- piyonunu hedef almak olduğundan Siyahın
+sürekli Ne5 gibi hamleleri değerlendirmesi gerekecek. } 11... Nc6 12. O-O Rc8 13. Re1 { [#] Beyaz şimdiye kadar oldukça hızlı oynamıştı, son hamlesi ise 21 dakikalık bir düşünmenin ardından geldi. Belki de Beyaz yukarıda belirtilen Ae5 gibi bir hamle ile zorunlu devam yollarıyla ilerlemek yerine rakibin niyetini anlamak için bu hamleyi oynadı. Kendisi için diğer bir zorluk ise siyahın ... c5-c4 sürüşünü değerlendirmek olmalı. } 13... Ne4 14. Ne2 Re8 { Yine faydalı bir gelişim hamlesi. } (14... c4 { Siyah elini hemen
+göstermek istemiyor ve dxc5 ardından oluşacak askıda piyonlara izin
+vererek vezir kanadında ...b5 ve ...a5 ile piyon çoğunluğu yaratma fikrini
+erteliyor. }) 15. dxc5 bxc5 { Siyahın askıda piyonlardan şikayetçi
+olmasını gerektirecek bir sıkıntısı bulunmuyor. Beyaz taşlar çok pasif
+ve siyah taşlar oldukça iyi yerleşmiş duruyor. } 16. Nf4 { Rakibini ...g5
+oynamaya teşvik ederken Nd3 ile c5- piyonunu hedef almak istiyor. Askıda
+piyonlardan faydalanmak için piyonların ilerletilmeye zorlanması, taş
+değişimleriyle zayıflatmanın yanında önemli bir fikir. } 16... Bf6 { [#] } (16... g5 { Bir sonraki hamlede bu hamlenin önemi ortaya çıkacak. }) 17. Qc2? { Atını kenara gitmek istemeyen beyazın tercih ettiği bu doğal hamle
+aslında bir hata. [P3] } (17. Nh5 { daha iyi olurdu. Siyahın pek çok güzel
+tercihi var. Ben en eğlencelisini sunmak isterim. } 17... Be5 (17... Bxb2? 18. Rb1 $18) 18. Nxe5 Nxe5 { Siyahın kolay bir oyunu olur, örneğin; } 19. Bc3 d4! 20. exd4 Nxc3 21. bxc3 Bxg2 22. Kxg2 Qd5+ 23. f3 Ng6 { Nh5 hala problem taş
+konumundadır. }) 17... g5! { Mustafa Yılmaz rakip kampın zayıf halkasını
+tespit ediyor: Nf3! } 18. Qb3? { Durumun vehametini fark eden Beyaz oyunu
+karıştırmak istiyor, fakat işler daha da kötüye gidecek çünkü vezirin
+uzaklaşması ile artık d2-fili de boşta kalabilir. } (18. Nd3 g4 $17 19. Nh4 Bxh4 20. gxh4 Qxh4 $17) 18... Rb8! { Siyah basitçe filini koruyarak taş
+kazanıyor. GM Mustafa Yılmaz yalnızca 18 hamlenin ardından tamamen kazanç
+bir konum elde etmiştir: Korumasız ve gevşek taşlar konusuna örnek
+oluşturacak güzel bir konum! } 19. Nxd5 Ne5! { En etkili dokunuş! } 20. Nxe5 (20. Nxf6+ Qxf6 $19 { Korumasız f2-karesi nedeniyle siyah materyal kaybederdi. }) 20... Bxd5 21. Qa4 Rxe5 22. Ba5 Qc8 23. Qc2 g4 24. b4 Qc6 25. Red1 { [#] } 25... h5? { Bu hamle Beyaza biraz umut oluyor. } 26. Rxd5! Qxd5 27. Bc7 Rbe8 28. Bxe5 Qxe5 29. Bxe4 Qxe4 30. Qxe4 Rxe4 31. Rxc5 Re5 { Zorunlu hamlelerden sonra beyaz
+piyon kazanmışsa da konum yine siyah için kazanç olmalıdır. } 32. Rc4 { Elbette şimdi ve daha sonra beyazın kaleleri değişme şansı yoktur. } 32... Kg7 33. Kg2 Kg6 34. h3 Kf5 35. Rf4+ Kg5 36. Rc4 Re7 37. a4 Be5 38. Rc8 Rc7 39. Ra8 Bc3 40. Rb8 gxh3+! { En etkilisi. } 41. Kxh3 Be1 42. f4+ Kf6 { Beyaz piyonlar
+artık toplanmaya hazır hale gelmiştir. Rc3 tehdidi iyi bir şekilde
+yanıtlamaz. } 43. e4 Rc3 44. e5+ Kg7 45. Rb7 Rxg3+ 46. Kh2 Re3 47. b5?! Bg3+ 48. Kg2 Bxf4 49. e6 Rxe6 50. Rxa7 Re3 51. Rd7 h4 52. Rd4 h3+ 53. Kf2 h2 { 0-1 Black wins. } 0-1
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.30"]
+[Round "6.55"]
+[White "Sanal, Vahap"]
+[Black "Greenfeld, Alon"]
+[Result "1-0"]
+[WhiteElo "2603"]
+[BlackElo "2455"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sanal, Vahap - Greenfeld, Alon"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/2ttOAEZM"]
+[FEN "r5k1/p2qr2p/b1ppNbp1/5pN1/8/1P5P/P1PQ1PP1/3RR1K1 w - - 0 23"]
+[SetUp "1"]
+[KritikAnlarNo "69"]
+
+{ Siyah sonraki
+hamlesinde 23...Rae8 planlamaktadır. Avantaja giden yol ince bir hesap
+gerektiriyor. [P13] }
+23. Nc5! { İlk bakışta hatalı bir hamle gibi görünse de
+iki fille kalenin değişimini GM Vahap Şanal harika değerlendiriyor. } 23... dxc5 (23... Rxe1+ 24. Qxe1 Qe8 25. Qxe8+ Rxe8 26. Nxh7! Kxh7 27. Nxa6 Re2 28. Nb4 { ve ardından önlenemez Kf1 hamlesi ile beyaz piyon fazla kalırdı. }) 24. Qxd7 Rxd7 25. Rxd7 Bxg5 26. c4! { Bulutlar dağıldı, beyazın kaleleri öylesine
+etkindir ki, siyah için materyal kaybetmeden hamle yapmak zor olur. } 26... Rb8 { Siyah çareyi ...Bb7 yapmaya çalışmakta arıyor. } 27. f4 Bh4?! (27... Bxf4 28. Ree7 $18) 28. Re6 Bb7?! 29. Kh2 { Materyal olarak siyahın büyük bir
+avantajı var gibi dursa da konumu ümitsizdir. Beyazın g3 ile fil kazanma
+tehdidini önleyemeyen Siyah terk etti. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.1"]
+[White "Caruana, Fabiano"]
+[Black "Niemann, Hans Moke"]
+[Result "1-0"]
+[WhiteElo "2786"]
+[BlackElo "2667"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Caruana, Fabiano - Niemann, Hans Moke"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/3vlzimY2"]
+[FEN "r2r2k1/pp2nppp/q7/4p3/6Q1/4B2P/PPP2PP1/R2R2K1 w - - 0 23"]
+[SetUp "1"]
+[KritikAnlarNo "70"]
+
+{ Siyahın bir anlık dikkatsizlikle oynadığı 22...Qa6 hamlesinden sonra
+ulaşılan konumda Beyaza siyah taşların uyumsuzluğunun altını çizme
+imkanı doğuyor. [P15] }
+23. Rxd8+ Rxd8 24. Rd1 { Bir anda siyah vezirin açık dikey
+mücadelesine katılmasında taktik engeller olduğu ortaya çıkıyor. } 24... Ra8 { Siyah son sıra problemlerinden ötürü bu çirkin görünen hamleyi yapmak
+zorunda hissediyor. } (24... Rxd1+ 25. Qxd1 { Mat tehdidiyle birlikte Qd7
+hamlesinin gücü hissedilir olur. Örneğin; } 25... Nc6 26. Qd7 { Koyu renklerden
+hava deliği açmak mümkün olmadığından siyah yine piyon kaybedecek. }) 25. Rd7 Ng6 26. Qf3 { Hem f7- hem b7- piyonu saldırı altında. } 26... Qxa2 27. b3! { Güçlü bir yol kesme hamlesi! Saldırı ve savunma arasındaki güç
+dengesizliği dikkat çekici hale geliyor. } 27... Nh8 28. Qxb7 Re8 29. Qc6 { a7-
+piyonu dışında Rc7 tehdidi ile siyah şah ve kale de hedef alınmaktadır. } 29... h6 30. Rxa7 $18 { Beyaz geçer piyonları ve etkin taşlarıyla zorlanmadan
+kazandı. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.28"]
+[Round "4.9"]
+[White "Niemann, Hans Moke"]
+[Black "Rapport, Richard"]
+[Result "1-0"]
+[WhiteElo "2667"]
+[BlackElo "2752"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Niemann, Hans Moke - Rapport, Richard"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/hPIShpj8"]
+[FEN "k2rr3/1p1q1p2/p1p1p2p/b1B3p1/3PPn2/1Q3P1P/1PR2P2/K1R2B2 w - - 0 40"]
+[SetUp "1"]
+[KritikAnlarNo "71"]
+
+{ Yine zamanın daralmasıyla gelen bir hata
+olan 39...Bxa5 ardından oluşan konum. [P23] }
+40. Qa4! Qc7 (40... Bc7 41. Bxa6 $18) 41. b4 Bb6 42. Bxa6! Kb8 { Buraya kadar her şey zorunlu idi. Belki de
+siyahın 39...Bxa5 oynarken gözünden kaçan Beyazın sonraki hamlesi oldu. } 43. Ra2! Rxd4? (43... bxa6 44. Qxa6 Qb7 45. Qxb6 $18) 44. Bb5! { Filin
+c6-karesini tehdit ederek geri çekilmesinin nedeni birazdan anlaşılacak. } 44... Kc8 45. Bxb6 Qxb6 46. Bxc6! { Gerisi kolaydır. } 46... Nd3 47. Qa8+ Kc7 48. Bxe8+ Nxc1 49. Rc2+ Kd6 50. Qb8+! Ke7 51. Rc7+ { 1-0 White wins. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.28"]
+[Round "4.27"]
+[White "Nihal, Sarin"]
+[Black "Ter-Sahakyan, Samvel"]
+[Result "1-0"]
+[WhiteElo "2694"]
+[BlackElo "2618"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Nihal, Sarin - Ter-Sahakyan, Samvel"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/nNxhDjrd"]
+[FEN "3r4/2q2pk1/p3pbp1/2r4p/PpNpQP2/1P1P1RPP/2P2RK1/8 w - - 0 32"]
+[SetUp "1"]
+[KritikAnlarNo "72"]
+
+{ Beyazın mükemmel atı,
+siyahın vezir kanadındaki tüm umutlarını söndürüyor. Beyaz için g4-
+sürüşü ile başlayacak şah kanadı saldırısı, kendi şahı da orada
+bulunduğundan riskler barındırıyor. Merkezin ve vezir kanadının kapalı
+olduğu böylesi bir durumda beyaz nasıl bir plan yapabilir? [P33] }
+32. Kf1! { Cevap: şahın yürüyüşü! } 32... Rh8 { Siyah olası g4- sürüşü için hazır
+beklemeye çalışıyor. } 33. Ke2 { Stockfish siyahın vezir değişme
+seçeneğini elinden almak için } (33. Ke1! Qc6 34. Qe2! { varyantını
+öneriyor. }) 33... Qd7 { Oyunun gidişatı düşünülünce vezirlerin
+değişimi siyahlar için daha iyi olmalı. } (33... Qc6! { Kxc4-Vxa4 fikri de
+geçerli hale gelir. }) 34. Kd1 Qc7 35. Kc1 Qd7 36. Kb1 Qc7 37. Rf1 Qd7 38. Qe1 a5 39. Qd1 Qc7 40. Qe2 Qc6 41. g4 { Beyaz acele etmeksizin saldırısını
+hazırladı ve piyon ilerleyişi ile saldırıya başlıyor. Siyahın karşı
+oyundan yoksun oluşu beyazın işini kolaylaştıracak. } 41... Qc7 42. Qd1 hxg4 { h- dikeyinin açılışı siyah kalelerin uyumsuz konumu nedeniyle yalnızca
+beyaza yarar. Önceki hamlelerde olduğu gibi beklemeyi sürdürmek daha iyi
+olabilirdi. } 43. hxg4 Rh2 { Sonu hızlandıran başka bir hamle. Rh4 ile
+Beyazın h- dikeyini ele geçirmesi güçleştirilebilirdi. } 44. g5 Bd8 45. Rh1! Rxh1 46. Qxh1 Kf8 47. Qh8+ Ke7 48. Qxd4 { Siyah işkenceyi sonladırıyor ve
+terk ediyor. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.30"]
+[White "Sargissian, Gabriel"]
+[Black "Bachmann, Axel"]
+[Result "1-0"]
+[WhiteElo "2686"]
+[BlackElo "2604"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sargissian, Gabriel - Bachmann, Axel"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/IoVn45Mm"]
+[FEN "3r3r/p1k3pp/4p3/nPp5/3b1P2/4B3/4KPBP/1RR5 w - - 0 22"]
+[SetUp "1"]
+[KritikAnlarNo "73"]
+
+{ Beyaz piyon geri ancak sadece piyonu geri almak için filleri
+değişmek yeterli görünmüyor... [P23] }
+22. Rxc5+! { Vezirlerin olmadığı bu
+durumda siyah şahı hedef alan beklenmedik bir kalite fedası. } (22. Bxd4 Rxd4 23. Rxc5+ Kb6 $10) 22... Bxc5 23. Bxc5 { Bxa7 ile b- dikeyinde güçlü bir
+geçer yaratma fikrinin yanında Ka1 ile şahı da hedef almak mümkün olur. } 23... Nc4 (23... Kb8 24. b6 a6 25. Ra1! $18) 24. Rc1 (24. Ra1 { Stockfish'e göre
+daha iyidir. }) 24... Nd6 (24... Nb6 { daha iyi bir savunma olsa da } 25. Bf8+ { siyah şah saldırının hedefi olmayı sürdürür. }) 25. Bxa7+ Kd7 26. Bb6 Rc8 27. Bc6+! { Elbette kalelerin değişilmesi düşünülemez. } 27... Ke7 28. Bc5 Rhd8 29. Rd1! { Siyah taşları zugzwang durumundadır. } 29... g5 { Açmazdan bir
+şekilde çıkmak amacıyla. } 30. fxg5 e5 31. Rd3 Ke6 32. Bxd6 Rxd6 33. Rf3? $14 { Zaman sıkışmasının etkisiyle büyük bir hata yapan Beyaz son
+hamlesiyle konumun eşitlenmesine izin veriyor. Maceraların ardından beyaz
+oyunu kazanmayı başardı. } (33. Rxd6+ Kxd6 34. Be4 $18 { b- piyonu çok
+güçlü, siyahın h7- piyonu bakıma muhtaçtır. }) 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.15"]
+[White "L'ami, Erwin"]
+[Black "Vidit, Santosh Gujrathi"]
+[Result "1-0"]
+[WhiteElo "2627"]
+[BlackElo "2716"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "L'ami, Erwin - Vidit, Santosh Gujrathi"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/eg5PcJIy"]
+[FEN "8/pp4k1/6r1/8/3r1R2/P2p2N1/1n4P1/3R2K1 w - - 0 41"]
+[SetUp "1"]
+[KritikAnlarNo "74"]
+
+{ FIDE Grand Swiss her
+ne kadar en yüksek düzeydeki sporcuların yarıştığı bir turnuva olsa da,
+her seviyede karşılaşılan en büyük sorunlardan biri olan zaman
+sıkışması nedeniyle yapılan büyük hatalara ve kaybedilen puanlara çok
+kez sahne oldu. 2023 Fide Grand Swiss'i kazanan Büyükusta Vidit, ilk turda
+kazanç konum elde etmesinin ardından zaman sıkışmasının etkisiyle bir
+dizi hata ile üstünlüğünü tamamen yitirmişti. Diyagramda görülen
+konumda Vidit zaman kontrolünün son hamlesi olan 40. hamlede 40...Nxb2
+hamlesini oynadı. [P49] }
+41. Nf5+! (41. Rxd4 Nxd1 42. Rxd3 $10 { Yalnızca eşit
+bir oyunsonu olacaktı. }) 41... Kh8 42. Rxd4 Nxd1 43. Rh4+! { Her şeyi
+bitiren hamle! Siyah kalite kaybeder. } 43... Kg8 44. Ne7+ Kg7 45. Nxg6 Kxg6 46. Rd4 { Büyükusta L'ami bu üstün finali öğretici bir şekilde kazanıyor. } 46... Nb2 47. Kf2 b5 { Atı c4-karesinden çıkmak amacıyla. } 48. Ke3 a5 49. Rd6+ Kf7 50. Ra6 a4 51. g4 Nc4+ 52. Kxd3 Nxa3 53. Rb6! Kg7 54. g5 Kh7 55. Ke4 Nc4 56. Ra6 a3 57. Kf5 Ne3+ 58. Kf6 Ng4+ 59. Kf7 Ne5+ 60. Kf6 Ng4+ 61. Kf5 Ne3+ 62. Kf4 Nd5+ 63. Ke5 Ne3 64. g6+ Kh6 (64... Kg7 65. Kf4 Nd5+ 66. Kg5 $18) 65. Rxa3! { Siyah terk etti çünkü ...Nc4 ile kale kazanmak beyazın vezir çıkmasına
+neden olur. GM Vidit'in böylesi bir kayba rağmen turnuvayı kazanmayı
+başarması ayrıca takdiri hak ediyor. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.11.04"]
+[Round "10.28"]
+[White "Sargissian, Gabriel"]
+[Black "Svane, Frederik"]
+[Result "*"]
+[WhiteElo "2686"]
+[BlackElo "2626"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sargissian, Gabriel - Svane, Frederik"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/BOJt1UxG"]
+[FEN "2Q2N2/6P1/8/1p6/3k4/P7/K7/3qr3 w - - 0 58"]
+[SetUp "1"]
+[KritikAnlarNo "75"]
+
+{ Yoğun bir zaman sıkışması yaşanırken
+beyazın yakaladığı fırsatı kazanca çevirmesi mümkün olmamıştır. [P3] }
+58. Ne6+! { Bu hamlenin ardından Siyahın tüm yanıtları çürütülebilir. } (58. Qd7+? { Oynanan bu hamleden sonra konum eşit olur ve oyun daha sonra
+berabere olmuştur, çünkü } 58... Kc3 59. Qxd1 Rxd1 60. g8=Q Rd2+ 61. Kb1 Rd1+ 62. Ka2 Rd2+ $10 { Beyazın gözünden kaçan detaydı. }) 58... Rxe6 (58... Kd3 59. Qd7+ Ke4 60. Qxd1 Rxd1 61. g8=Q $18) (58... Ke5 59. Qc5+ Kf6 60. Qg5+ $18) (58... Ke4 59. Qc6+ Kf5) 59. Qd7+ $18 *
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.35"]
+[White "Maurizzi, Marc`andria"]
+[Black "Bluebaum, Matthias"]
+[Result "1-0"]
+[WhiteElo "2555"]
+[BlackElo "2668"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Maurizzi, Marc`andria - Bluebaum, Matthias"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/C3WJFMKz"]
+[FEN "r4r1k/1p5B/1q2p3/pb1pP3/P2P1p1b/4BQ2/1P3P1P/R4KR1 w - - 0 24"]
+[SetUp "1"]
+[KritikAnlarNo "76"]
+
+{ Eleme yöntemi ile beyaz
+şahın nasıl korunması gerektiği bulunmalıdır. [P19] }
+24. Ke1! { Diğer
+hamlelerin nasıl elendiğini hesaplamak gerekliydi: } (24. axb5? fxe3 25. Rg8+ (25. Qxe3 Rxf2+ $19) 25... Rxg8 26. Qh5 Rg7! 27. Bd3+ Kg8 28. Qxh4 Rf8 $19) (24. Kg2? Be2! 25. Qxe2 (25. Qh3 fxe3 26. Qxh4 Qd8! $19) 25... f3+ $19) 24... fxe3 25. Qh5! Bxf2+ (25... exf2+ 26. Kd2 $18 { ve zor durumda olan
+siyah şah olur. }) 26. Kd1 e2+ 27. Kd2 e1=Q+ 28. Raxe1 Bxe1+ 29. Kxe1 Rf1+ 30. Rxf1 Bxf1 31. Bg6+! { Zincirin son halkası! } 31... Kg7 32. Qh7+ Kf8 33. Qf7# { 1-0 White wins. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.30"]
+[Round "6.27"]
+[White "Tari, Aryan"]
+[Black "Xiong, Jeffery"]
+[Result "1-0"]
+[WhiteElo "2619"]
+[BlackElo "2693"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Tari, Aryan - Xiong, Jeffery"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/d3Ltuuj5"]
+[FEN "1r1qr1k1/ppp1bn1p/3p1pp1/1P1N4/2n1BP2/B7/P5PP/R2QR1K1 w - - 0 21"]
+[SetUp "1"]
+[KritikAnlarNo "77"]
+
+{ Siyah son hamlei 20...Nxc4
+hamlesine filin korunmasının zorunlu olduğunu düşündü. [P31] }
+21. Qd3! { Beyazın maksadı fili korumak mı? } 21... Nxa3 22. Bxg6! { Ortaya çıkıyor ki
+siyah şahın etrafında kara bulutlar dolaşmaktadır. } 22... hxg6 { Siyah bu
+ziyaretçiye kayıtsız kalamaz. } 23. Qxg6+ Kf8 24. Re3! { Asansör kale
+teması - ilk tehdit Rg3. } 24... f5 25. Rg3 Bg5 26. fxg5 Re5 { Siyah ilk dalgayı g-
+dikeyini kapatarak püskürtmüş gibi görüyor, ancak h- dikeyi açıktır
+ve beyaz taşlar geri püskürtülememiştir. } 27. Nf6 Nxb5 28. Rh3 d5 29. Rh7 Nbd6 30. Rg7! Ke7 31. Rg8 f4 32. Rxd8 Rxd8 33. h4 $18 Rh8 34. Qg7 Nf5 35. Nxd5+ Rxd5 36. Qf6+ { Siyah terk etti. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.16"]
+[White "Zhalmakhanov, Ramazan"]
+[Black "Amin, Bassem"]
+[Result "1-0"]
+[WhiteElo "2447"]
+[BlackElo "2680"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Zhalmakhanov, Ramazan - Amin, Bassem"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/HBDNcUaZ"]
+[FEN "r7/4qpkp/r1pb2p1/4p1n1/P1Q1P1N1/1p3NP1/1P3PK1/R2R4 w - - 0 31"]
+[SetUp "1"]
+[KritikAnlarNo "78"]
+
+{ 31.Rxd6 doğru mu yanlış mı? [P3] }
+31. Rxd6! Qxd6 { Siyah planladığı gibi } (31... Nxf3 { oynayamayacağını fark ediyor. } 32. Qc5! $18 { Açarak saldırı ile vezir kazanma tehdidinden ötürü tempoyla
+kalesini koruyan beyaz materyal kazanır. }) 32. Nxg5 $18 { Beyaz zorlanmadan
+kazandı. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.16"]
+[White "Erigaisi, Arjun"]
+[Black "Svane, Frederik"]
+[Result "1-0"]
+[WhiteElo "2712"]
+[BlackElo "2626"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Erigaisi, Arjun - Svane, Frederik"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/ulSXDdp6"]
+[FEN "2rqr3/pp4k1/4bp1p/3pn3/6PB/P1NB1P2/1P1Q4/1K5R w - - 0 29"]
+[SetUp "1"]
+[KritikAnlarNo "79"]
+
+{ Beyaz saldırısını nasıl zirveye taşıyabilir? [P17] }
+29. Qxh6+! { Basit ve etkili. Vezir alınamaz. } 29... Kf7 (29... Kxh6 30. Bxf6#) 30. Bg6+! Nxg6 31. Qh7+ Kf8 32. Qxg6 { Beyazın saldırısı bitiricidir. } 32... Rc6 33. Bxf6 Bf5+ 34. Qxf5 Rxf6 35. Rh8+ Ke7 36. Nxd5+ Qxd5 (36... Kd6 37. Rxe8 Qxe8 38. Nxf6 $18) 37. Rxe8+ { Siyah terk etti. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.46"]
+[White "Wagner, Dennis"]
+[Black "Pichot, Alan"]
+[Result "0-1"]
+[WhiteElo "2589"]
+[BlackElo "2650"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Wagner, Dennis - Pichot, Alan"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/QmV4QU34"]
+[FEN "6k1/2r2p2/pp4qp/3b1Np1/1P4QP/3pP1P1/P4P2/3R2K1 b - - 0 29"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "80"]
+
+{ Zaten zor durumda olan Beyazın
+dikkatsiz 29.Nf5 hamlesinden sonra Siyaha oyunu bitirme şansı doğuyor. [P5] }
+29... h5! 30. Qxg5 Qxg5 31. hxg5 Bf3 { Beyaz tehditleri savuşturamadığı
+için terk etti. } 0-1
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.47"]
+[White "Adhiban, B.."]
+[Black "Predke, Alexandr"]
+[Result "0-1"]
+[WhiteElo "2551"]
+[BlackElo "2656"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Adhiban, B.. - Predke, Alexandr"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/kKw4C8Sn"]
+[FEN "r4r1k/p3Npbp/4b1p1/8/2pNQ3/8/PqP2PPP/3RR1K1 b - - 0 20"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "81"]
+
+{ Atlara fillerin
+mücadelesi çoğu zaman fillerin zaferine tanıklık eder. Bu durumda beyaz
+atlar zor durumdadır. [P9] }
+20... Rae8! 21. Qh4 { İyi bir savunma bulmak zordur. } (21. Ndc6 Bf6 22. Rb1 Qc3 23. Rb7 Bd5! $19) (21. Nec6 Bd7! 22. Qd5 Bxc6 23. Nxc6 Qxc2 $19 { c-piyonu oyunu kazandırır. }) 21... g5! { Atlardan biri
+artık korumasız kalır. } 22. Qxg5 Bxd4 23. Nf5 Bxf2+! { Pek çok
+kazandıran yalnızca biri. } 24. Kxf2 Qxc2+ { Beyaz terk etti. } 0-1
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "Villa Marina, Douglas, Isle o"]
+[Date "2023.10.25"]
+[Round "1.27"]
+[White "Gupta, Abhijeet"]
+[Black "Fedoseev, Vladimir"]
+[Result "0-1"]
+[WhiteElo "2609"]
+[BlackElo "2691"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Gupta, Abhijeet - Fedoseev, Vladimir"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/dpa4OT0h"]
+[FEN "3r4/4kp2/8/pp2PPp1/2p1P3/P1Kp2p1/1P4P1/3R4 b - - 0 39"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "82"]
+
+{ Çok ilginç bir kale finali. Siyahın konumu
+kazanabilmesi için rakibinin tehdidini anlaması gerekiyor. [P17] }
+39... a4! { Çok önemli! } (39... Rh8 40. a4! { Zinciri parçalamak Beyazın planıydı. }) 40. Kd2 (40. Kb4 Rd4! 41. Kxb5 Rxe4 $19) 40... Rh8 41. Ke3 Rh4 42. Kd4 Rf4 { Siyah kalenin ikinci yataya süzülüşü etkileyicidir. } 43. Kd5 Rf2 44. Rh1 d2 45. e6 { Beyazın karşı oyunu geç kalır. } 45... Rxg2 46. exf7 Rh2 47. Rd1 Rf2 { g-piyonunun da saldırıya dahil olmasıyla Beyazın terk etme zamanı
+gelmiştir. } 0-1
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.27"]
+[Round "3.51"]
+[White "Sargsyan, Shant"]
+[Black "Wu, Li"]
+[Result "1-0"]
+[WhiteElo "2631"]
+[BlackElo "2303"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Sargsyan, Shant - Wu, Li"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/tSbIDRuC"]
+[FEN "4rrk1/ppnq2pp/2pn1p2/3p4/3P1B1P/3Q2N1/PPP2PP1/R3R1K1 w - - 0 18"]
+[SetUp "1"]
+[KritikAnlarNo "83"]
+
+{ Tipik bir
+Petroff Savunması oyunortası ile karşı karşıyayız. [P15] }
+18. Bxd6! { f5- karesine yerleşecek küheylan için yapılan tipik taş değişimi. } 18... Qxd6 19. Nf5 Qd7 20. Qh3! { Veziri şah kanadına tempo ile aktaran güçlü bir
+hamle. Tehdit Nh6. } 20... Re6 21. h5! { Atın konumunu sağlamlaştırma fikriyle. } 21... Rfe8 (21... g6 { Yine de fena olmazdı. } 22. hxg6 hxg6 23. Re3 Qh7! { Siyahların konumu hala sıkıntılı olsa da ince bir savunma ile
+oynanabilirdir. Örneğin; } 24. Rg3! Rfe8! 25. Rf1 Re1 26. Nd6 $14) 22. Re3! { Rg3 ve Rae1 fikirleriyle gelen harika bir hamle. } 22... Qd8? { Baskı altında
+kritik bir hata. } (22... Rxe3 23. Nh6+ $18) 23. Qg4 Qd7 24. Rg3 Re1+ 25. Kh2! { Son incelik, siyah Ae6 da oynayamadığından R1e7 ile kalite
+kaybedeceğinden terk etti. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.18"]
+[White "Firouzja, Alireza"]
+[Black "Mamedov, Rauf"]
+[Result "1-0"]
+[WhiteElo "2777"]
+[BlackElo "2640"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Firouzja, Alireza - Mamedov, Rauf"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/HJ8xxPjK"]
+[FEN "8/2r1pk2/3pRbp1/2nP1pB1/2P2P1P/r4B2/2R3PK/8 w - - 0 41"]
+[SetUp "1"]
+[KritikAnlarNo "84"]
+
+{ Zaman sıkışmasının
+son hamlesi olan 40...Nc5 ardından oluşan konumdayız. [P9] }
+41. Bxf6! Rxf3 (41... Nxe6 42. Bb2! $18 { Beyazın temel fikriydi. }) 42. Rxe7+! Rxe7 (42... Kxf6 43. Rxc7 Rxf4 44. g3 $18) 43. Bxe7 Rxf4 44. g3 Rd4 45. Bxd6 $18 { İki
+piyon fazla olan beyaz birkaç hamle içinde kazandı. } 1-0
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.27"]
+[Round "3.50"]
+[White "Gledura, Benjamin"]
+[Black "Rodrigue-Lemieux, Shawn"]
+[Result "0-1"]
+[WhiteElo "2633"]
+[BlackElo "2488"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Gledura, Benjamin - Rodrigue-Lemieux, Shawn"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/jaXjiNWW"]
+[FEN "8/2Rb2pk/4qp1p/p2r4/1r1B1Q2/4P1P1/PP1R3P/K7 b - - 0 34"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "85"]
+
+{ Bir anlık dikkatsizlikle oynanan 34.Rc7 hamlesi
+beyaza pahalıya mal oluyor. [P1] }
+34... Rf5! { Son yatay sıkıntıları
+nedeniyle vezirin kaçamıyor oluşu beyazın terk etmesine neden oldu. } 0-1
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.32"]
+[White "Akobian, Varuzhan"]
+[Black "Grandelius, Nils"]
+[Result "*"]
+[WhiteElo "2582"]
+[BlackElo "2689"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Akobian, Varuzhan - Grandelius, Nils"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/nL9qu4u6"]
+[FEN "8/1R3p1k/2n1pqpp/p1P1r3/8/P1Q4P/1PB2PP1/6K1 b - - 0 34"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "86"]
+
+{ Beyaz çok üstün konumda bir anlık
+dikkatsizlikle 34.Rxb7 oynuyor ve siyaha bir anda konumu karıştırma
+fırsatı veriyor. [P6] }
+34... Nd4! { Bir anda beyaz şah ve diğer taşlar
+kendini huzursuz hissediyor. } 35. Bd3 { Ne2 tehdidini savuşturarak. } 35... Re2! { f2- karesi savunulamaz. } 36. Rxf7+! (36. f3 Nxf3+ 37. gxf3 Qg5+ $19) 36... Qxf7 37. Qxd4 $13 { Stockfish'e göre 0.00 olan tamamen belirsiz bu konumu
+siyah kazanmayı başardı. } *
+
+[Event "FIDE Grand Swiss 2023"]
+[Site "lichess.org"]
+[Date "2023.10.26"]
+[Round "2.38"]
+[White "Korobov, Anton"]
+[Black "Gurel, Ediz"]
+[Result "*"]
+[WhiteElo "2658"]
+[BlackElo "2514"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Korobov, Anton - Gurel, Ediz"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/A0hOAy55"]
+[FEN "3r1k2/q3bppB/1np1p2p/p3P3/1p3BQ1/1P6/P4PPP/3R2K1 w - - 0 27"]
+[SetUp "1"]
+[KritikAnlarNo "87"]
+
+{ Siyah piyon fazla ancak
+şahı ve vezirin konumu ile ilgili sorunları vardır. [P9] }
+27. Rxd8+ Bxd8 28. Bxh6! Ke8 (28... gxh6 29. Qg8+ Ke7 30. Bg6! { Korumasız siyah
+vezir nedeniyle Beyaz birkaç piyon önde kalır. } { [%csl Gg6] } 30... Kd7 31. Qxf7+ Be7 32. Qe8+ $18 Kc7 33. Qxe7+) 29. Qxg7 Be7 30. Qg8+ Kd7 31. Qxf7 $18 *
+
+[Event "FIDE Grand Swiss 2021"]
+[Site "Riga LAT"]
+[Date "2021.11.06"]
+[Round "10.1"]
+[White "Alireza Firouzja"]
+[Black "David W L Howell"]
+[Result "1-0"]
+[WhiteElo "2770"]
+[BlackElo "2658"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Alireza Firouzja - David W L Howell"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/1vPmwBKz"]
+[KritikAnlarNo "88"]
+
+{ 2021 FIDE Grand Swiss şampiyonu GM Alireza Firouzja'nın
+turnuvayı kazanmasını sağlayan oyunlardan biri olan öğretici 10. tur
+karşılaşmasına göz atalım. }
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. O-O Nf6 5. d3 h6 6. c3 d6 7. Re1 O-O 8. h3 a5 { Açılış üzerine çok fazla şey
+söylenebilecek olsa da bu noktada 8...a5 hamlesinin 8....a6'ya oranla daha
+popüler olduğu ve bunun nedeninin Beyazın vezir kanadında alan
+kazanmasının engellenmesi olduğu söylenebilir. } 9. Nbd2 Be6 10. Bb5 { Öte yandan 8...a5 hamlesinin eksi yanı b5- karesinin zayıflamasıdır. } 10... Ba7 11. Nf1 Ne7 12. Ng3 { Beyaz d3-d4, Siyah ise ...d6-d5 ile bir an önce merkezde
+ilerlemek için hazırlık yapmaktadır. } 12... c6 13. Ba4 b5 14. Bc2 a4 15. d4 { İlk mini zafer, Beyazın d4- sürüşü ile geliyor. } 15... Ng6 16. Be3 Re8 { [#] } 17. Bd3 { Beyaz merkezdeki üstünlüğünü vezir kanadına taşıyacağının
+sinyalini veriyor. } (17. Qd2 { ve ardından Nf5, Rad1 ile oynama fikri de
+mevcuttur. Ancak çoğunlukla İspanyol Açılışı'nda olduğu gibi Beyaz
+rakibinin vezir kanadındaki piyon sürüşlerini kendisi için kullanmaya
+çalışır. }) 17... Bb6 18. a3 Qc7 19. Rc1 { Beyaz niyetini belli ediyor:
+c3-c4 sürüşü. } 19... Ba5 20. Re2 Qb7 21. c4 { Siyah piyonların ilerleyişi ne
+olursa olsun siyah piyonların parçalanması ve Beyaza hedef olması ile
+sonuçlanacaktır. } 21... bxc4 22. Bxc4 d5! { Stratejik olarak rakibine
+üstünlüğü vermemek için Siyah dinamik oyuna başvuruyor. } 23. Bd3 { [#] } 23... exd4 (23... c5! { Stockfish e4- karesini vezir ile hedef alan bu hamleyi
+oldukça beğeniyor. } 24. Rxc5 dxe4 25. Nxe4 Nxe4 26. Bxe4 Qxe4 27. Bd2 Qb7 28. Bxa5 $10 { fakat görüldüğü gibi sonuçlarını hesaplamak ve
+değerlendirmek pek de kolay durmuyor. }) 24. Nxd4 Bd7 25. Ndf5 { Nd6 tehdidiyle. } 25... Bc7 26. exd5 cxd5 { [P10] } (26... Nxd5 27. Bd4 { Siyahın hoşuna gitmemiş olmalı.
+Bu nedenle izole piyona razı oluyor. }) 27. Bd4! { Basit ve etkili. } 27... Be5 28. Nxh6+! gxh6 29. Bxg6 Bxg3 30. Rxe8+ Rxe8 31. Qf3 { [#] } 31... Qc6! { Çok hoş bir
+savunma hamlesi! } 32. Bc2 Bb8 33. Qxf6 Qxf6 34. Bxf6 { Uzun taktik sekansın
+ardından sular duruldu ve beyaz piyon fazla oluşunu değerlendirmeye
+çalışacak. Durum savunulabilir gibi görünse de pratikte Siyahla oynamak
+çok zordur. } 34... Rc8 35. Bc3 d4 36. Bd2 (36. Bxd4? Bf4 37. Be3 Bxe3 38. fxe3 Bf5 $15) 36... Kg7 37. Bd3 Rxc1+ 38. Bxc1 h5 { [#] } 39. h4! { Siyahın h- piyonu
+sabitlendi. Piyonun daha fazla ilerlemesine izin vermek beyaz piyonların
+ilerleyişine engel olurdu. } 39... Bc6 40. g3 { Artık sıra beyaz şahta. } 40... Bd7 41. Kf1 Be5 42. Ke2 Bg4+ 43. Kd2 Bd7 44. Kc2 { Beyaz b- piyonunu ilerleterek a-
+dikeyinde geçer yaratmak istiyor. } 44... Be6 45. Bb5 Bb3+ 46. Kd3 { Beyaz tehditlere
+başvurarak şahının konumunu iyileştirdi. d4- piyonu düşecektir. } 46... Kg6 47. Bd7 Bd1 48. Bd2 f5 49. Bf4 Bg7 50. Bd6 Bf6 51. Be8+ Kh6 52. Bc5 f4 53. Bxd4 Bd8 54. Kd2 Bb3 55. Be5 fxg3 56. fxg3 Ba5+ 57. Kc1 { Direnmenin anlamsız olduğunu
+gören Siyah terk etti. } 1-0
+
+[Event "Grand Swiss"]
+[Site "lichess.org"]
+[Date "2021.10.28"]
+[Round "2.30"]
+[White "Shirov Alexei  (ESP)"]
+[Black "Adly Ahmed  (EGY)"]
+[Result "1-0"]
+[WhiteElo "2659"]
+[BlackElo "2602"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "B69"]
+[Opening "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Nyezhmetdinov Attack"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Shirov Alexei  (ESP) - Adly Ahmed  (EGY)"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/S3vQko9p"]
+[KritikAnlarNo "89"]
+
+{ Her ne kadar dünyanın
+zirvesinde yer aldığı günler gerdei kalmış olsa da iyi bir GM Shirov
+oyunu incelemek için asla geç değildir. }
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 a6 8. O-O-O Bd7 9. f4 { GM Shirov'un
+açılışlar konusunda prensipli oluşundan her zaman etkilenmişimdir.
+Kendisi yine ana devamyolunu seçiyor. } 9... Be7 10. Nf3 b5 11. Bxf6 gxf6 12. Bd3 Qb6 13. Kb1 O-O-O { [#] Günümüzde de oldukça popüler bir varyant
+olduğundan teori henüz buralarda başlıyor. } 14. a4 { Yarım saat
+düşünmenin ardından gelen at fedası fikri. } 14... b4 { [P35] } 15. Nd5! { Hamlenin
+objektif değeri tartışmalı ancak oyunun devamı çok iyi bir hamle olduğu
+kanısını güçlendirecek. } 15... exd5 16. exd5 Nb8 { İlk bakışta at fedasıyla
+Beyazın hedefinin ne olduğunu anlamak güç. Zira Nd5 fedaları tipik
+olmalarına rağmen genelde merkezde kalmış şahı hedef alırlar. Shirov'un
+fikri ne olabilir? } 17. Rhe1 Rde8! { [#] Bu hamlenin iyi oluşunun nedenini
+Siyahın sonraki hamlesi açıklayacak. } 18. a5! { İşte bu! Shirov ne
+pahasına olursa olsun siyah şaha yönelmek istiyor. Bu hamle olmaksızın
+siyah ...a5 oynayarak Beyazın planını tamamen çürütebilirdi. } 18... Qxa5 19. Re4! Bd8! { Çok iyi bir savunma hamlesi. Hem şahı hem veziri korumayı
+hedeflerken kalenin de yolu boşaltılıyor. } 20. Rxb4 Bc7 21. Nd4!? { Siyah
+şah oldukça güvendedir fakat bu sefer siyah vezirin Nb3 tehdidine karşı
+koyması gerekir. } 21... Qxd5 22. Qc3 { [#] Beyaz Nf5 tehdidi siyah veziri hedef
+alacak. } 22... Qxg2 { Buraya kadar neredeyse kusursuz oynayan siyah vezirini
+şahının yanına dönebilmek için bu hamleyi tercih etmiştir. } (22... Qh5 { Bu konuda oynanmış diğer partide Siyah böyle devam etmiş ve kazanmayı
+başarmıştır. } 23. Kc1 { hamlesinin ardından durum belirsizdir. }) 23. Nf5! Re6 24. Be4! { Siyah vezirin savunmaya dönmesi artık mümkün değildir. } 24... Qg4 (24... Qe2 25. Nxd6+ Rxd6 26. Rxd6 Bb5 $18 { Daha iyi olsa da sonuç
+değişmezdi. }) 25. Nxd6+ Rxd6 26. Rxd6 { Beyaz pek çok tehdidin yanında Rb7
+ile oyunu bitirmek istiyor. } 26... Bb5 27. Qc5 { Tehdit Ff5! } 27... Nd7 28. Rxd7! { ve artık son darbeyi indiren bir taktik ile beyaz kazanıyor. } 28... Bxd7 29. Rc4 Qxf4 30. Bb7+! Kxb7 31. Rxf4 Bxf4 32. Qb4+ { Oyun bitmiştir çünkü
+siyahın zayıf şahı ve piyonları hisar kurma fikrine hizmet edecek
+şekilde konumlanmamıştır. } 32... Kc8 33. Qxf4 Be6 34. Qxf6 Rd8 35. b3 h5 36. Qc3+ Kb7 37. Qf3+ { 1-0 White wins. } 1-0
+
+[Event "GS Open"]
+[Site "lichess.org"]
+[Date "2021.11.07"]
+[Round "11.14"]
+[White "Shevchenko Kirill  (UKR)"]
+[Black "Artemiev Vladislav  (RUS)"]
+[Result "0-1"]
+[WhiteElo "2632"]
+[BlackElo "2699"]
+[Annotator "https://lichess.org/@/NaSil"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Kritik Anlar 2"]
+[ChapterName "Shevchenko Kirill  (UKR) - Artemiev Vladislav  (RUS)"]
+[ChapterURL "https://lichess.org/study/x3pgbs1D/xvaY8JHI"]
+[FEN "2rqr1k1/5pp1/5n1p/1Qbpn3/4P3/1B4NP/1P3PP1/R1B1R1K1 b - - 0 27"]
+[SetUp "1"]
+[Orientation "black"]
+[KritikAnlarNo "90"]
+
+{ Beyaz taşların uyumsuz durumu ve korumasız taşların varlığı taktikleri
+olanaklı kılar. [P11] }
+27... Bxf2+! 28. Kxf2 Rb8! { d3- karesinin kontrolü
+için gerekli devamyoludur. } 29. Qa6 (29. Qa4 Nd3+ 30. Kf1 Nxe1 31. Kxe1 Nxe4 $19) 29... Rxb3 { Siyah kazanç konumdadır ve oyun birkaç hamle sonra sona
+ermiştir. } 30. Ra3 Qb8 31. Qe2 Rxg3 32. Kxg3 Nxe4+ { 0-1 Black wins. } 0-1

@@ -331,18 +331,32 @@
 
 (function () {
     // Homepage "Kritik An!" widget: cycles through the Kritik Anlar series'
-    // own PuzzleMode-tagged positions (see assets/pgn/satranchess/kritik-anlar/
-    // hepsi.pgn, each game carrying the same [P]/[Pn] tag as its full post).
-    // A bare <puzzle> element (ChessPublica's other, simpler board) can't be
-    // used here instead: it treats the *entire* mainline as the puzzle with
-    // no [Pn]-style "only the next N plies, auto-play the rest" support, so
-    // it would demand the opponent's replies be entered by hand too — <pgn-
-    // player> is the only element that actually honors [Pn] the way every
-    // Kritik Anlar post already relies on.
+    // own PuzzleMode-tagged positions. puzzle.html renders a JSON list of
+    // the three merged shard files (hepsi1/2/3.pgn, 45 games each — see
+    // that file's own comment) in #puzzle-rotator-pgns; every page load
+    // shuffles those three into a fresh fetch order, and each shard's own
+    // games are shuffled the moment it's fetched, so the reader sees all
+    // 135 games, in a different order each time, before any repeat, while
+    // a single load only ever has to pull the one or two shards it
+    // actually shows puzzles from — never all three, never all 135 files.
+    // A bare <puzzle> element (ChessPublica's other, simpler board) can't
+    // be used here instead: it treats the *entire* mainline as the puzzle
+    // with no [Pn]-style "only the next N plies, auto-play the rest"
+    // support, so it would demand the opponent's replies be entered by
+    // hand too — <pgn-player> is the only element that actually honors
+    // [Pn] the way every Kritik Anlar post already relies on.
     const container = document.getElementById('puzzle-rotator');
     if (!container) return;
-    const src = container.dataset.pgnSrc;
-    if (!src) return;
+    const listEl = document.getElementById('puzzle-rotator-pgns');
+    if (!listEl) return;
+    let shardPaths;
+    try {
+        shardPaths = JSON.parse(listEl.textContent);
+    } catch (e) {
+        return;
+    }
+    if (!Array.isArray(shardPaths) || !shardPaths.length) return;
+
     const numberEl = document.getElementById('puzzle-rotator-number');
     const solutionBtn = document.querySelector('.puzzle-board-footer .solution-btn:not(.next-puzzle-btn)');
     const nextBtn = document.querySelector('.puzzle-board-footer .next-puzzle-btn');
@@ -355,18 +369,31 @@
         return m ? m[1] : '';
     };
 
-    // Same mapping .post-game's populateGames() uses (main.js above) — kept
-    // as its own copy since that function pulls its PGN over the network
-    // per-game, while this widget already holds every game's text in memory
-    // from the single hepsi.pgn fetch below.
     const resultMap = { '1-0': '1–0', '0-1': '0–1', '1/2-1/2': '½–½' };
 
     const initAll = () => window.ChessPublica && window.ChessPublica.initAll && window.ChessPublica.initAll();
 
-    let games = [];
-    let index = 0;
+    // Fisher-Yates: used both for the shard fetch order and, once a shard
+    // arrives, for that shard's own games — either way, a fresh shuffle
+    // walked front-to-back covers everything in it exactly once before any
+    // repeat, instead of plain per-pick randomness which could show the
+    // same game twice in a row.
+    const shuffle = (arr) => {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    };
+
+    let shardOrder = shuffle(shardPaths);
+    let shardPos = 0;
+    let queue = []; // games from the current shard, already shuffled, waiting to be shown
     let currentBlobUrl = null;
     let observer = null;
+    let loading = false;
+    const shardGamesCache = new Map(); // path -> that shard's games, unshuffled (fetched at most once per session)
 
     const cleanup = () => {
         if (observer) { observer.disconnect(); observer = null; }
@@ -374,14 +401,48 @@
     };
 
     const advance = () => {
-        index = (index + 1) % games.length;
+        if (loading) return;
         render();
     };
 
+    const fetchShardGames = (path) => {
+        if (shardGamesCache.has(path)) return Promise.resolve(shardGamesCache.get(path));
+        return fetch(path)
+            .then(r => r.text())
+            .then(text => {
+                const games = splitGames(text);
+                shardGamesCache.set(path, games);
+                return games;
+            });
+    };
+
+    // Refills the queue from the next shard in shardOrder once it runs dry;
+    // wrapping back to a fresh shuffle of all three shards (and therefore
+    // starting a new lap through all 135 games) once every shard in the
+    // current order has been drawn from.
+    const fillQueue = () => {
+        if (shardPos >= shardOrder.length) {
+            shardOrder = shuffle(shardPaths);
+            shardPos = 0;
+        }
+        const path = shardOrder[shardPos++];
+        return fetchShardGames(path).then(games => {
+            queue = queue.concat(shuffle(games));
+        });
+    };
+
     const render = () => {
+        loading = true;
+        const ready = queue.length ? Promise.resolve() : fillQueue();
+        ready
+            .then(() => renderPgn(queue.shift()))
+            .catch(() => {})
+            .then(() => { loading = false; });
+    };
+
+    const renderPgn = (pgn) => {
         cleanup();
         container.innerHTML = '';
-        const pgn = games[index];
 
         const blob = new Blob([pgn], { type: 'application/x-chess-pgn' });
         currentBlobUrl = URL.createObjectURL(blob);
@@ -493,18 +554,12 @@
         }).observe(container);
     }
 
-    fetch(src)
-        .then(r => r.text())
-        .then(text => {
-            games = splitGames(text);
-            if (!games.length) return;
-            // A fresh page load should land on a random critical moment, not
-            // always the same one (bölüm 1) — "Sıradaki Bulmaca"/advance()
-            // still just walks forward in series order from wherever that lands.
-            index = Math.floor(Math.random() * games.length);
-            render();
-        })
-        .catch(() => {});
+    // A fresh page load should land on a random critical moment, not always
+    // the same one — shardOrder is already shuffled above, so render()'s
+    // first fillQueue() pulls from shardOrder[0] and shows a random one of
+    // its games; "Sıradaki Bulmaca"/advance() then works through the rest
+    // of that shard, and the ones after it, before a new lap reshuffles.
+    render();
 
     // "Çözümü Göster" stands in for ChessPublica's own .puzzle-hint-btn
     // (hidden — see main.css), which already calls the active puzzle's
