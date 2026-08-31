@@ -2071,6 +2071,20 @@ pgn-player p {
     display: none;
 }
 
+/* Same dead-gap problem, one element over: ChessPublica's commentBox
+   (kt.update() in ChessPublica.all.min.js) rebuilds .video-comment's
+   innerHTML from scratch on every position and only appends anything to
+   it when that position actually carries a comment — so a position with
+   none leaves .video-comment a genuinely empty element, which :empty
+   catches directly (no :has() needed here, unlike .video-moves above,
+   since nothing ever leaves stray whitespace behind). Left visible, its
+   own margin/padding (cp.css: margin: .5rem 0; padding-bottom: .5rem)
+   still render as a blank strip between whatever's above it and
+   .puzzle-board-footer's buttons below. */
+.video-comment:empty {
+    display: none;
+}
+
 /* ============================================================
    MOBILE OVERRIDES
    ============================================================ */
