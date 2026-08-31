@@ -52,6 +52,23 @@
     --border-20: rgba(253, 252, 248, 0.2);
 }
 
+/* Theme toggle: every element's own transition declares its own
+   (widely varying) duration for color-ish properties, so a plain
+   data-theme flip repaints the page in a visible cascade instead of
+   all at once. While html.theme-switching is present (set briefly by
+   main.js around the flip) every element's color transition is forced
+   to the same duration/timing so the whole page fades in sync; other
+   transitions (transform, layout, etc.) are left untouched. */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+    transition-property: background-color, color, border-color, box-shadow, fill, stroke, outline-color !important;
+    transition-duration: 0.35s !important;
+    transition-timing-function: ease !important;
+    transition-delay: 0s !important;
+}
+
 /* ── Reset & Base ───────────────────────────────────────────── */
 *, *::before, *::after {
     margin: 0;

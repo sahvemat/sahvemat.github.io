@@ -1134,7 +1134,14 @@
     };
     setPressed();
 
+    let switchTimer = null;
     btn.addEventListener('click', function () {
+        root.classList.add('theme-switching');
+        if (switchTimer) clearTimeout(switchTimer);
+        switchTimer = setTimeout(function () {
+            root.classList.remove('theme-switching');
+        }, 400);
+
         const isDark = root.getAttribute('data-theme') === 'dark';
         if (isDark) {
             root.removeAttribute('data-theme');
