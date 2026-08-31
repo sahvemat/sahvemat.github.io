@@ -16,12 +16,12 @@
   repeats until all 135 have been shown.
 {% endcomment %}
 {% assign kritikPgnFiles = site.static_files | where_exp: "f", "f.path contains '/assets/pgn/satranchess/kritik-anlar/'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi1.pgn'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi2.pgn'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi3.pgn'" %}
-{% assign kritikShardPath1 = '/assets/pgn/satranchess/kritik-anlar/hepsi1.pgn' | relative_url %}
-{% assign kritikShardPath2 = '/assets/pgn/satranchess/kritik-anlar/hepsi2.pgn' | relative_url %}
-{% assign kritikShardPath3 = '/assets/pgn/satranchess/kritik-anlar/hepsi3.pgn' | relative_url %}
+{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'iQuJ1Hpn.pgn'" %}
+{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'x3pgbs1D.pgn'" %}
+{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != '6StL1vWF.pgn'" %}
+{% assign kritikShardPath1 = 'https://lichess.org/api/study/iQuJ1Hpn.pgn' %}
+{% assign kritikShardPath2 = 'https://lichess.org/api/study/x3pgbs1D.pgn' %}
+{% assign kritikShardPath3 = 'https://lichess.org/api/study/6StL1vWF.pgn' %}
 {% assign kritikShardPaths = "" | split: "," %}
 {% assign kritikShardPaths = kritikShardPaths | push: kritikShardPath1 %}
 {% assign kritikShardPaths = kritikShardPaths | push: kritikShardPath2 %}
