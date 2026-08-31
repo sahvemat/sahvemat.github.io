@@ -1777,11 +1777,23 @@ a.article-thumbnail:hover {
     min-height: 0;
 }
 
+/* cp.css's own margin: .5rem 0 on .video-comment stacks its 8px
+   margin-bottom on top of pgn-player's 16px bottom padding (its card
+   frame) and .puzzle-board-footer's own margin-top below, widening the
+   gap above "Çözümü Göster" only when the current position actually has
+   a comment — with none, .video-comment:empty above removes it from
+   flow entirely and the gap is 8px narrower. Zeroing this margin (its
+   padding-bottom, the space between the comment text and its own box
+   edge, is untouched) keeps the two cases the same height instead of
+   the non-empty one reading as an extra, unexplained gap. */
+#puzzle-rotator .video-comment {
+    margin-bottom: 0;
+}
+
 .puzzle-board-footer {
     /* pgn-player already carries its own 1rem bottom padding (its card
-       frame, see the base pgn-player rule) plus .video-comment's 8px
-       margin-bottom right above it — this only needs to add a little more
-       air, not stack a second full margin on top of both. */
+       frame, see the base pgn-player rule) — this only needs to add a
+       little more air, not stack a second margin on top of it. */
     margin-top: 0.5rem;
     display: flex;
     justify-content: center;
