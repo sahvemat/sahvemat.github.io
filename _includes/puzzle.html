@@ -1,24 +1,13 @@
 {% comment %}
-  Each Kritik Anlar game lives as its own single-game PGN file under
-  assets/pgn/satranchess/kritik-anlar/ (used directly by that game's own
-  /posts/kritik-anlar/ chapter page) — kritikPgnFiles below lists those,
-  purely to keep the "N kritik pozisyon" count accurate as bölümler are
-  added, without hand-editing it.
-
-  This widget itself instead fetches from hepsi1.pgn/hepsi2.pgn/hepsi3.pgn,
-  three merged shards (45 games each) of those same source files, kept in
-  sync manually — a fixed set of 3 files, so listed directly here rather
-  than discovered via site.static_files. Splitting into a few shards
-  instead of either one big file or 135 tiny ones means a page load only
-  ever has to fetch the one or two shards it actually shows puzzles from,
-  while main.js still shuffles their fetch order every load and shuffles
-  each shard's games once it arrives, so — same as before — no game
-  repeats until all 135 have been shown.
+  This widget fetches straight from the three Lichess studies these games
+  come from (their own [ChapterURL] tags all point back to one of these),
+  via Lichess's own "export a study as one PGN, every chapter" API
+  endpoint. Fetching three separate studies here rather than one combined
+  one means a page load only ever has to fetch the one or two studies it
+  actually shows puzzles from, while main.js still shuffles their fetch
+  order every load and shuffles each study's games once it arrives, so no
+  game repeats until all of them have been shown.
 {% endcomment %}
-{% assign kritikPgnFiles = site.static_files | where_exp: "f", "f.path contains '/assets/pgn/satranchess/kritik-anlar/'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'iQuJ1Hpn.pgn'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'x3pgbs1D.pgn'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != '6StL1vWF.pgn'" %}
 {% assign kritikShardPath1 = 'https://lichess.org/api/study/iQuJ1Hpn.pgn' %}
 {% assign kritikShardPath2 = 'https://lichess.org/api/study/x3pgbs1D.pgn' %}
 {% assign kritikShardPath3 = 'https://lichess.org/api/study/6StL1vWF.pgn' %}
@@ -31,9 +20,6 @@
     <div class="puzzle-info">
         <h2 class="puzzle-title">KRİTİK<br><span class="puzzle-accent">an!</span></h2>
         <p class="puzzle-desc">"Kritik Anlar" serisinden gerçek turnuva partileri. Doğru hamleyi bulun; çözdükten sonra dilediğinizde sıradaki kritik ana geçin.</p>
-        <div class="puzzle-meta">
-            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e kritik pozisyon.</div>
-        </div>
     </div>
     <div class="puzzle-board-area">
         <div class="puzzle-board-bg"></div>

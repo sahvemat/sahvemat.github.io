@@ -11,11 +11,12 @@
   once instead.
 
   A collection item (not just a post) can also claim the feature slot via
-  `type: feature` — e.g. _kritik-anlar/index.md, which lives in its own
-  collection (not _posts/) so it doesn't get listed as its own card in
-  archive.html's post grid, but still needs to appear here. `site.documents`
-  is every collection's items combined (posts included), which is where
-  it lives now that it's no longer a plain site.pages entry.
+  `type: feature` — useful for a series' own index page, which lives in
+  its own collection (not _posts/) so it doesn't get listed as its own
+  card in archive.html's post grid, but still needs to appear here.
+  `site.documents` is every collection's items combined (posts included),
+  which is where such a page would need to live for this to work at all,
+  rather than as a plain site.pages entry.
 {% endcomment %}
 {% assign heroCandidates = site.posts | where_exp: "post", "post.type != 'analysis'" %}
 {% assign featurePost = site.documents | where: "type", "feature" | first %}

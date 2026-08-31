@@ -332,13 +332,14 @@
 (function () {
     // Homepage "Kritik An!" widget: cycles through the Kritik Anlar series'
     // own PuzzleMode-tagged positions. puzzle.html renders a JSON list of
-    // the three merged shard files (hepsi1/2/3.pgn, 45 games each — see
+    // three multi-game PGN sources (currently the three Lichess studies
+    // these games come from, fetched via Lichess's study-export API — see
     // that file's own comment) in #puzzle-rotator-pgns; every page load
-    // shuffles those three into a fresh fetch order, and each shard's own
-    // games are shuffled the moment it's fetched, so the reader sees all
-    // 135 games, in a different order each time, before any repeat, while
-    // a single load only ever has to pull the one or two shards it
-    // actually shows puzzles from — never all three, never all 135 files.
+    // shuffles those three into a fresh fetch order, and each source's own
+    // games are shuffled the moment it's fetched, so the reader sees every
+    // game, in a different order each time, before any repeat, while a
+    // single load only ever has to pull the one or two sources it
+    // actually shows puzzles from — never all three at once.
     // A bare <puzzle> element (ChessPublica's other, simpler board) can't
     // be used here instead: it treats the *entire* mainline as the puzzle
     // with no [Pn]-style "only the next N plies, auto-play the rest"
