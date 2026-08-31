@@ -135,8 +135,8 @@
 // appears (set via .textContent by ChessPublica, not read from markup).
 (function () {
     var TRANSLATIONS = {
-        'Find the best move for White.': 'Hamle sırası Beyazda. Oyundaki hamleyi bulmayı deneyin.',
-        'Find the best move for Black.': 'Hamle sırası Siyahta. Oyundaki hamleyi bulmayı deneyin.'
+        'Find the best move for White.': 'Hamle sırası Beyazda. Doğru hamleyi bulmayı deneyin.',
+        'Find the best move for Black.': 'Hamle sırası Siyahta. Doğru hamleyi bulmayı deneyin.'
     };
 
     function translate() {
@@ -449,6 +449,13 @@
         currentBlobUrl = URL.createObjectURL(blob);
         const player = document.createElement('pgn-player');
         player.setAttribute('src', currentBlobUrl);
+        // The [FEN]/[SetUp] position is the puzzle's own starting point (the
+        // position right before the tagged move), so its side-to-move field
+        // is exactly whose move the puzzle is asking for — show the board
+        // from that side rather than always defaulting to White's.
+        const fen = parseHeader(pgn, 'FEN');
+        const sideToMove = fen.split(' ')[1];
+        if (sideToMove === 'b') player.setAttribute('orientation', 'black');
         container.appendChild(player);
         initAll();
 
