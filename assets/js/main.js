@@ -518,27 +518,32 @@
             if (no) numberEl.textContent = '#' + no;
         }
 
-        // A fresh, unsolved puzzle always starts back on "Çözümü Göster";
-        // solving swaps that out for "Sıradaki Bulmaca" below.
-        if (solutionBtn) solutionBtn.hidden = false;
+        // PuzzleMode (see the [P]/[Pn] fix in main.js above) marks the board's
+        // .player-container with "puzzle-active" only once any auto-played
+        // intro plies finish and the reader is actually being asked for a
+        // move, and removes it again — via its own _finish()/_deactivate() —
+        // the moment that move is solved. Both edges of that class are the
+        // only signal ChessPublica exposes for either transition, so
+        // "Çözümü Göster" tracks it directly instead of defaulting to shown:
+        // hidden through the intro plies (nothing to show a solution for
+        // yet), shown the instant a move is actually being asked for, hidden
+        // again once solved — when "Sıradaki Bulmaca" takes over. Solving no
+        // longer auto-advances (the reader may still want the board to sit on
+        // the solved position).
+        const isPuzzleActive = () => !!player.querySelector('.puzzle-active');
+        let wasActive = isPuzzleActive();
+        if (solutionBtn) solutionBtn.hidden = !wasActive;
         if (nextBtn) nextBtn.hidden = true;
 
-        // PuzzleMode (see the [P]/[Pn] fix in main.js above) marks the board's
-        // .player-container with "puzzle-active" while a puzzle is unsolved
-        // and removes it — via its own _finish()/_deactivate() — the moment
-        // it's solved. That add-then-remove transition is the only signal
-        // ChessPublica exposes for "this puzzle just got solved". Solving no
-        // longer auto-advances (the reader may still want the board to sit on
-        // the solved position); "Sıradaki Bulmaca" takes over for that instead.
-        let wasActive = false;
         observer = new MutationObserver(() => {
-            const active = !!player.querySelector('.puzzle-active');
-            if (active) wasActive = true;
-            else if (wasActive) {
-                wasActive = false;
+            const active = isPuzzleActive();
+            if (active && !wasActive) {
+                if (solutionBtn) solutionBtn.hidden = false;
+            } else if (!active && wasActive) {
                 if (solutionBtn) solutionBtn.hidden = true;
                 if (nextBtn) nextBtn.hidden = false;
             }
+            wasActive = active;
         });
         observer.observe(player, { subtree: true, attributes: true, attributeFilter: ['class'] });
     };
