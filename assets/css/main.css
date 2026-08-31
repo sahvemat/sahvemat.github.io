@@ -2042,14 +2042,71 @@ a.article-thumbnail:hover {
 pgn-player {
     margin-top: 2rem;
     padding: 1rem;
-    background: white;
-    color: var(--ink);
+    background: var(--surface);
+    color: var(--fg);
     font-family: var(--font-serif);
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: normal;
     text-transform: none;
+}
+
+/* ChessPublica's own stylesheet hardcodes these as fixed light-mode
+   colors (#111/#555/#777 text, #e4e4e7/#d4d4d8 grays) that never adapt
+   when the site switches to dark mode. pgn-player's move list itself
+   inherits color from the rule above and needs no help, and pgn-study's
+   ribbon/buttons/title already get a dedicated theme-aware override
+   further down (".post-article pgn-study ..." — see its own comment) —
+   but the auto-generated title (visible on every bare <pgn-player>
+   embed, e.g. taktik/gunun-incisi posts, since only .post-game/
+   #puzzle-rotator hide it), pgn-study's loading/TOC/picker text, and its
+   pane resizer handle aren't covered by that block and still need
+   routing through the site's own theme tokens. Every selector here adds
+   a real ancestor (rather than repeating ChessPublica's own bare class)
+   so it wins on specificity — ChessPublica's stylesheet loads after
+   main.css, so an equal-specificity rule would otherwise lose the tie;
+   same reasoning as the pgn-study-ribbon override below. */
+pgn-player .video-title-players,
+pgn-study .video-title-players,
+.pgn-container .video-title-players {
+    color: var(--fg);
+}
+
+pgn-player .video-title-event,
+pgn-study .video-title-event,
+.pgn-container .video-title-event {
+    color: var(--slate);
+}
+
+.pgn-study-loading .pgn-study-loading-side {
+    color: var(--slate);
+}
+
+pgn-study .pgn-study-toc-move {
+    color: var(--slate);
+}
+
+pgn-player .pgn-study-picker-icon,
+pgn-study .pgn-study-picker-icon {
+    color: var(--slate);
+}
+
+pgn-study .pgn-study-resizer:after,
+pgn-study .pgn-study-resizer-handle {
+    background: var(--border-12);
+}
+
+pgn-study .pgn-study-resizer-handle {
+    border-color: var(--border-20);
+    color: var(--slate);
+}
+
+pgn-study .pgn-study-resizer:hover:after,
+pgn-study .pgn-study-resizer.dragging:after,
+pgn-study .pgn-study-resizer:hover .pgn-study-resizer-handle,
+pgn-study .pgn-study-resizer.dragging .pgn-study-resizer-handle {
+    background: var(--border-20);
 }
 
 pgn-player h1,
@@ -2828,7 +2885,7 @@ details.game-note > .post-game {
 .post-game-view--article {
     position: relative;
     padding: 1.5rem 1.25rem;
-    background: var(--paper);
+    background: var(--surface);
 }
 
 .post-game-view--article pgn,
@@ -2840,7 +2897,7 @@ details.game-note > .post-game {
     display: block;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--ink);
+    color: var(--fg);
 }
 
 /* Loading bar shown while a pgn-player placeholder waits for initialization.
@@ -2852,7 +2909,7 @@ details.game-note > .post-game {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background: var(--paper);
+    background: var(--surface);
 }
 
 .pgn-placeholder::after {
