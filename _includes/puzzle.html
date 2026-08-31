@@ -1,24 +1,34 @@
 {% comment %}
-  Each Kritik Anlar game already lives as its own single-game PGN file
-  under assets/pgn/satranchess/kritik-anlar/ (hepsi.pgn is a separate,
-  merged copy of the same games used only by the /posts/kritik-anlar/
-  chapter pages' own PuzzleMode boards, kept in sync manually — this
-  widget no longer touches it). Listing site.static_files here instead
-  of hand-maintaining a path array means a new bölüm's PGN file is
-  picked up automatically the moment it's added to the folder.
+  Each Kritik Anlar game lives as its own single-game PGN file under
+  assets/pgn/satranchess/kritik-anlar/ (used directly by that game's own
+  /posts/kritik-anlar/ chapter page) — kritikPgnFiles below lists those,
+  purely to keep the "N kritik pozisyon" count accurate as bölümler are
+  added, without hand-editing it.
+
+  This widget itself instead fetches from hepsi1.pgn/hepsi2.pgn/hepsi3.pgn,
+  three merged shards (45 games each) of those same source files, kept in
+  sync manually. Splitting into a few shards instead of either one big
+  file or 135 tiny ones means a page load only ever has to fetch the one
+  or two shards it actually shows puzzles from, while main.js still
+  shuffles their fetch order every load and shuffles each shard's games
+  once it arrives, so — same as before — no game repeats until all 135
+  have been shown.
 {% endcomment %}
-{% assign kritikPgnFiles = site.static_files | where_exp: "f", "f.path contains '/assets/pgn/satranchess/kritik-anlar/'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi.pgn'" %}
-{% assign kritikPgnFiles = kritikPgnFiles | sort: "name" %}
-{% assign kritikPgnPaths = "" | split: "," %}
-{% for f in kritikPgnFiles %}{% assign p = f.path | relative_url %}{% assign kritikPgnPaths = kritikPgnPaths | push: p %}{% endfor %}
+{% assign kritikAnlarFiles = site.static_files | where_exp: "f", "f.path contains '/assets/pgn/satranchess/kritik-anlar/'" %}
+{% assign kritikShardFiles = kritikAnlarFiles | where_exp: "f", "f.name contains 'hepsi'" %}
+{% assign kritikShardFiles = kritikShardFiles | sort: "name" %}
+{% assign kritikPgnFiles = kritikAnlarFiles | where_exp: "f", "f.name != 'hepsi1.pgn'" %}
+{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi2.pgn'" %}
+{% assign kritikPgnFiles = kritikPgnFiles | where_exp: "f", "f.name != 'hepsi3.pgn'" %}
+{% assign kritikShardPaths = "" | split: "," %}
+{% for f in kritikShardFiles %}{% assign p = f.path | relative_url %}{% assign kritikShardPaths = kritikShardPaths | push: p %}{% endfor %}
 
 <section class="kritik-an-section">
     <div class="puzzle-info">
         <h2 class="puzzle-title">KRİTİK<br><span class="puzzle-accent">an!</span></h2>
         <p class="puzzle-desc">"Kritik Anlar" serisinden gerçek turnuva partileri. Doğru hamleyi bulun; çözdükten sonra dilediğinizde sıradaki kritik ana geçin.</p>
         <div class="puzzle-meta">
-            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e {{ kritikPgnPaths | size }} kritik pozisyon.</div>
+            <div>Türkiye Satranç Ligi'nden FIDE Grand Swiss'e {{ kritikPgnFiles | size }} kritik pozisyon.</div>
         </div>
     </div>
     <div class="puzzle-board-area">
@@ -35,5 +45,5 @@
             </footer>
         </div>
     </div>
-    <script type="application/json" id="puzzle-rotator-pgns">{{ kritikPgnPaths | jsonify }}</script>
+    <script type="application/json" id="puzzle-rotator-pgns">{{ kritikShardPaths | jsonify }}</script>
 </section>
