@@ -521,16 +521,34 @@
         // PuzzleMode (see the [P]/[Pn] fix in main.js above) marks the board's
         // .player-container with "puzzle-active" only once any auto-played
         // intro plies finish and the reader is actually being asked for a
-        // move, and removes it again — via its own _finish()/_deactivate() —
-        // the moment that move is solved. Both edges of that class are the
-        // only signal ChessPublica exposes for either transition, so
-        // "Çözümü Göster" tracks it directly instead of defaulting to shown:
-        // hidden through the intro plies (nothing to show a solution for
-        // yet), shown the instant a move is actually being asked for, hidden
-        // again once solved — when "Sıradaki Bulmaca" takes over. Solving no
-        // longer auto-advances (the reader may still want the board to sit on
-        // the solved position).
+        // move, and removes it again the moment that move (the last of the
+        // tagged [Pn] plies, which isn't necessarily the whole game — see
+        // below) is answered. "Çözümü Göster" tracks that transition
+        // directly: hidden through the intro plies (nothing to show a
+        // solution for yet), shown the instant a move is actually being
+        // asked for, hidden again once answered.
+        //
+        // "Sıradaki Bulmaca" needs a stricter signal than that, though: a
+        // [Pn] tag's own plies can end well short of the game's actual
+        // result (e.g. one more only-move before a forced mate the PGN
+        // still plays out in full), and ChessPublica auto-plays that
+        // remainder immediately once the tagged plies are answered — so
+        // reacting to the same puzzle-active transition here would offer
+        // "next puzzle" while the board's still mid-reply, cutting the
+        // reader off from the rest of the game the puzzle led into.
+        // Instead, wait for the engine's own state — exposed on the
+        // pgn-player element as ._engine.state — to report .playing: false
+        // with .index at (or past) .moves.length: the point its own replay
+        // loop (_loopRAF in ChessPublica.all.min.js) actually stops at,
+        // whether that's this puzzle's own trailing moves or, for a [Pn]
+        // that already covers the whole rest of the game, the one-tap
+        // replay play() kicks off immediately after (index having already
+        // reached the end resets it to 0 first) before stopping there again.
         const isPuzzleActive = () => !!player.querySelector('.puzzle-active');
+        const isGameFinished = () => {
+            const state = player._engine && player._engine.state;
+            return !!(state && state.moves && !state.playing && state.index >= state.moves.length);
+        };
         let wasActive = isPuzzleActive();
         if (solutionBtn) solutionBtn.hidden = !wasActive;
         if (nextBtn) nextBtn.hidden = true;
@@ -541,9 +559,12 @@
                 if (solutionBtn) solutionBtn.hidden = false;
             } else if (!active && wasActive) {
                 if (solutionBtn) solutionBtn.hidden = true;
-                if (nextBtn) nextBtn.hidden = false;
             }
             wasActive = active;
+
+            if (nextBtn && nextBtn.hidden && !active && isGameFinished()) {
+                nextBtn.hidden = false;
+            }
         });
         observer.observe(player, { subtree: true, attributes: true, attributeFilter: ['class'] });
     };
