@@ -111,7 +111,7 @@ Kxb7 37. Bf7 Rf8 38. Bd5+ Kb6 39. Bc3 Kb5 40. Bxe4 Kc4 41. Be5 Re8 42. f4 Kb3
 1-0
 </pgn>
 
-<blockquote class="post-epigraph post-epigraph-columns">
+<blockquote class="post-epigraph">
   <p>Korchnoi ile oynamak çok özel bir durum, hele onunla daha önce hiç oynamadıysanız. Böylesine sıradışı bir oyundan ve maç sonrası analizinden sonra, pek çok insan bana bu tecrübeyi sormak istedi. Benim açıklamam şu şekildeydi: Düzensiz bir açılış oynadı, yanıt olarak biraz fazla yaratıcı oynadım ve sonradan gaf olduğu ortaya çıkan zekice bir hamle yaptım... Bu açıklamayı birkaç kez yaptığımı ve 11...Qf6 hamlesinden söz ettiğimi hatırlıyorum. Daha sonra dinleyenlerden 'Ya! Yani 12.d5 hamlesini kaçırdın?' diyerek araya girenlere çabucak 'Hayır! 12.d5'i gördüm, fakat d5'i iki kez alabildiğini görmedim.' yanıtını verdim. Bu kulağa makul geliyor, fakat aslında, tamamen yalan.</p>
 
   <p>Belki de kendime karşı fazla acımasızım ve belki buna kendini kandırma demek daha adildir. Sanıyorum bu hikayeyi ilk söylediğimde egomu korumak ve bu oyunun özel durumunu muhafaza etmek istiyordum. Yaşayan efsaneye karşı oyunun böylesine erken bölümünde acemice bir gafla kaybettiğim fikrine isyan ediyordum. Bunun yerine, oyun hakkında kulağa daha anlamlı gelen bir hikaye anlattım.</p>
