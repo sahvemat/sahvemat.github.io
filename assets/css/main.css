@@ -2551,6 +2551,24 @@ pgn-player p {
     color: var(--fg);
 }
 
+/* ChessPublica's own auto-generated header (player names, ratings,
+   event, date) duplicates the "## <game title>" heading and byline
+   already sitting right above the card, so hide it. It's a light-DOM
+   child (.pgn-title), not shadow content, so a plain rule reaches it —
+   the previous attempt tried to hide it via JS on the wrong (already-
+   replaced, see the column-span comment above) element and never ran. */
+.post-article > .pgn-container.game-card > .pgn-title {
+    display: none;
+}
+
+/* font-family already inherits .post-article > p's var(--font-serif)
+   correctly (no shadow root boundary to block it), but .pgn-container
+   isn't itself a <p> so it misses that rule's font-size and renders at
+   the page's 16px base against 17.6px (1.1rem) surrounding prose. */
+.post-article > .pgn-container.game-card {
+    font-size: 1.1rem;
+}
+
 .post-article > p em { color: var(--accent); }
 
 .post-article > ul,
