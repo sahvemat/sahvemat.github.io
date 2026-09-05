@@ -2409,17 +2409,25 @@ pgn-player p {
        .pgn-container itself carries no column-count at all). Higher
        specificity here (.post-article > .pgn-container.game-card
        .pgn-moves) beats that plain .pgn-moves rule regardless of
-       stylesheet load order, no !important needed. Diagrams span both
-       resulting columns instead of getting squeezed into one. */
+       stylesheet load order, no !important needed. */
     .post-article > .pgn-container.game-card .pgn-moves {
         column-count: 2;
         column-gap: 2.5rem;
         column-rule: 1px solid var(--line);
     }
 
+    /* NOT column-span: all — diagrams here are small (~300px, well
+       under a single ~490px column) and read better as part of the
+       normal two-column flow, sitting in whichever column they land
+       in with the surrounding text continuing right after them
+       (confirmed by rendering against the real bundle: spanning both
+       columns just left-aligns the diagram in a mostly-empty full-width
+       row, since ChessPublica's own centering rule for it is scoped to
+       pgn-study and doesn't reach this plain article-view card).
+       break-inside: avoid only keeps a diagram from being torn in half
+       across the column break. */
     .post-article > .pgn-container.game-card .cp-board-wrapper,
     .post-article > .pgn-container.game-card .fen-container {
-        column-span: all;
         break-inside: avoid;
     }
 
