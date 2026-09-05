@@ -2385,15 +2385,17 @@ pgn-player p {
         column-span: all;
     }
 
-    /* <pgn> is an unknown custom element until ChessPublica's script
-       upgrades it, and even then column-span only takes effect on a
-       block-level box (same reasoning as the shadow-DOM
-       .pgn-container fix in main.js) — force it rather than assume
-       ChessPublica's own shadow styles already set it. */
-    .post-article > pgn {
-        display: block;
-        column-span: all;
-    }
+    /* NOT column-span: all. <pgn>'s own shadow-DOM styling (main.js)
+       already lays its annotation text out in 2 sub-columns via
+       .pgn-container { column-count: 2 }. Spanning it across the
+       article's own two columns as well widens that inner multicol box
+       to ~1056px — and with a diagram ({[%cal]}/[#]) breaking the flow
+       as a column-span: all child partway through, Chromium's column
+       balancer divides the text either side of that break into
+       separate runs and doesn't reliably rebalance each one, leaving a
+       whole column empty on one side of the diagram. Left at the
+       article's own single-column width (~499px) the inner 2 columns
+       stay narrower but actually balance. */
 
     /* Prevent ugly mid-element breaks */
     .post-article > p,
