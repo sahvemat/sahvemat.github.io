@@ -2402,6 +2402,27 @@ pgn-player p {
         column-span: all;
     }
 
+    /* The real newspaper-style 2-column split lives one level deeper
+       than .pgn-container: ChessPublica renders the actual move/comment
+       text into a .pgn-moves child and hard-codes THAT to column-count:
+       1 in its own stylesheet (confirmed against the real bundle —
+       .pgn-container itself carries no column-count at all). Higher
+       specificity here (.post-article > .pgn-container.game-card
+       .pgn-moves) beats that plain .pgn-moves rule regardless of
+       stylesheet load order, no !important needed. Diagrams span both
+       resulting columns instead of getting squeezed into one. */
+    .post-article > .pgn-container.game-card .pgn-moves {
+        column-count: 2;
+        column-gap: 2.5rem;
+        column-rule: 1px solid var(--line);
+    }
+
+    .post-article > .pgn-container.game-card .cp-board-wrapper,
+    .post-article > .pgn-container.game-card .fen-container {
+        column-span: all;
+        break-inside: avoid;
+    }
+
     /* Prevent ugly mid-element breaks */
     .post-article > p,
     .post-article > ul,
