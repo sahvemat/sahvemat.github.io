@@ -2380,12 +2380,25 @@ pgn-player p {
     .post-article > .game-pair,
     .post-article > .toc-box,
     .post-article > .next-section-nav-wrap,
-    .post-article > .post-lede {
+    .post-article > .post-lede,
+    .post-article > .post-fullwidth {
+        column-span: all;
+    }
+
+    /* <pgn> is an unknown custom element until ChessPublica's script
+       upgrades it, and even then column-span only takes effect on a
+       block-level box (same reasoning as the shadow-DOM
+       .pgn-container fix in main.js) — force it rather than assume
+       ChessPublica's own shadow styles already set it. */
+    .post-article > pgn {
+        display: block;
         column-span: all;
     }
 
     /* Prevent ugly mid-element breaks */
     .post-article > p,
+    .post-article > ul,
+    .post-article > ol,
     .post-article > figure,
     .post-article > .post-game,
     .post-article > .video-embed,
@@ -2490,7 +2503,8 @@ pgn-player p {
     color: var(--slate);
 }
 
-.post-epigraph p { margin: 0; }
+.post-epigraph p { margin: 0 0 1.25em; }
+.post-epigraph p:last-of-type { margin-bottom: 0; }
 .post-epigraph cite {
     display: block;
     margin-top: 1rem;
@@ -2502,6 +2516,26 @@ pgn-player p {
     color: var(--fg);
 }
 
+/* Modifier for a long, multi-paragraph quote: splitting it into two
+   sub-columns keeps line length readable even though the epigraph
+   itself already spans the article's full width (see column-span: all
+   above) — a single 1056px-wide line of italic serif text is too long
+   to read comfortably otherwise. */
+@media (min-width: 768px) {
+    .post-epigraph-columns {
+        column-count: 2;
+        column-gap: 2.5rem;
+    }
+
+    .post-epigraph-columns p {
+        break-inside: avoid;
+    }
+
+    .post-epigraph-columns cite {
+        column-span: all;
+    }
+}
+
 .post-article > p {
     font-family: var(--font-serif);
     font-size: 1.1rem;
@@ -2511,6 +2545,30 @@ pgn-player p {
 }
 
 .post-article > p em { color: var(--accent); }
+
+.post-article > ul,
+.post-article > ol {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--fg);
+    margin: 0 0 1.5rem;
+    padding-left: 1.4rem;
+}
+
+.post-article > ul li,
+.post-article > ol li {
+    margin-bottom: 0.75rem;
+}
+
+.post-article > ul li:last-child,
+.post-article > ol li:last-child {
+    margin-bottom: 0;
+}
+
+.post-article > ul li::marker {
+    color: var(--accent);
+}
 
 .post-article a {
     text-decoration: underline;
