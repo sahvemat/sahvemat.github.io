@@ -2385,17 +2385,22 @@ pgn-player p {
         column-span: all;
     }
 
-    /* NOT column-span: all. <pgn>'s own shadow-DOM styling (main.js)
-       already lays its annotation text out in 2 sub-columns via
-       .pgn-container { column-count: 2 }. Spanning it across the
-       article's own two columns as well widens that inner multicol box
-       to ~1056px — and with a diagram ({[%cal]}/[#]) breaking the flow
-       as a column-span: all child partway through, Chromium's column
-       balancer divides the text either side of that break into
-       separate runs and doesn't reliably rebalance each one, leaving a
-       whole column empty on one side of the diagram. Left at the
-       article's own single-column width (~499px) the inner 2 columns
-       stay narrower but actually balance. */
+    /* NOT `.post-article > pgn`: ChessPublica doesn't use Shadow DOM at
+       all (confirmed by loading its real bundle and inspecting the
+       result — zero attachShadow calls, and pgn.shadowRoot is always
+       null). It replaces the whole <pgn> element outright with a
+       plain `<div class="pgn-container game-card">` in the light DOM
+       (see its Qn() render function), so the tag itself is gone by the
+       time this stylesheet matters and `pgn` as a selector never
+       matches anything real. That div lands as a normal direct child
+       of .post-article — with no span, it just sits inside whichever
+       one of the article's own two columns it's laid out into,
+       leaving the other one empty next to it (reproduced by loading
+       the actual ChessPublica bundle against a test page). Spanning
+       the real class fixes it. */
+    .post-article > .pgn-container.game-card {
+        column-span: all;
+    }
 
     /* Prevent ugly mid-element breaks */
     .post-article > p,
@@ -2544,6 +2549,24 @@ pgn-player p {
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: var(--fg);
+}
+
+/* ChessPublica's own auto-generated header (player names, ratings,
+   event, date) duplicates the "## <game title>" heading and byline
+   already sitting right above the card, so hide it. It's a light-DOM
+   child (.pgn-title), not shadow content, so a plain rule reaches it —
+   the previous attempt tried to hide it via JS on the wrong (already-
+   replaced, see the column-span comment above) element and never ran. */
+.post-article > .pgn-container.game-card > .pgn-title {
+    display: none;
+}
+
+/* font-family already inherits .post-article > p's var(--font-serif)
+   correctly (no shadow root boundary to block it), but .pgn-container
+   isn't itself a <p> so it misses that rule's font-size and renders at
+   the page's 16px base against 17.6px (1.1rem) surrounding prose. */
+.post-article > .pgn-container.game-card {
+    font-size: 1.1rem;
 }
 
 .post-article > p em { color: var(--accent); }
