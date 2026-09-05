@@ -2386,6 +2386,8 @@ pgn-player p {
 
     /* Prevent ugly mid-element breaks */
     .post-article > p,
+    .post-article > ul,
+    .post-article > ol,
     .post-article > figure,
     .post-article > .post-game,
     .post-article > .video-embed,
@@ -2511,6 +2513,30 @@ pgn-player p {
 }
 
 .post-article > p em { color: var(--accent); }
+
+.post-article > ul,
+.post-article > ol {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--fg);
+    margin: 0 0 1.5rem;
+    padding-left: 1.4rem;
+}
+
+.post-article > ul li,
+.post-article > ol li {
+    margin-bottom: 0.75rem;
+}
+
+.post-article > ul li:last-child,
+.post-article > ol li:last-child {
+    margin-bottom: 0;
+}
+
+.post-article > ul li::marker {
+    color: var(--accent);
+}
 
 .post-article a {
     text-decoration: underline;
