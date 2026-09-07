@@ -2586,6 +2586,7 @@ pgn-player p {
    the page's 16px base against 17.6px (1.1rem) surrounding prose. */
 .post-article > .pgn-container.game-card {
     font-size: 1.1rem;
+    margin-top: 1rem;
 }
 
 /* Header row (icon + player/event text) gets a third item — the "Oyunu
