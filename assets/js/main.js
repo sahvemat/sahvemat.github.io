@@ -1216,6 +1216,17 @@
         var caption = document.createElement('figcaption');
         caption.innerHTML = '<span>Foto ' + n + '</span> · ' + img.title;
         img.removeAttribute('title');
+        // A markdown IAL ({: .post-fullwidth }) lands on the <img> itself
+        // (kramdown attaches it to the innermost span-level element, not
+        // the <p> wrapping it) — main.css's column-span rule needs it on
+        // this <figure>, .post-article's actual direct child, to have any
+        // effect. A tall portrait image (e.g. a book cover) left in the
+        // normal 2-column flow can throw off the browser's column-balance
+        // guess badly enough to empty one column and overrun the other.
+        if (img.classList.contains('post-fullwidth')) {
+            img.classList.remove('post-fullwidth');
+            fig.classList.add('post-fullwidth');
+        }
         p.parentNode.replaceChild(fig, p);
         fig.appendChild(img);
         fig.appendChild(caption);

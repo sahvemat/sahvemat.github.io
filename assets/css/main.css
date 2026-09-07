@@ -2781,6 +2781,18 @@ pgn-player p {
     height: auto;
 }
 
+/* .post-fullwidth spans both article columns (see the column-span rule
+   above) so a tall portrait image (e.g. a book cover) doesn't throw off
+   the browser's column-balance guess — but the figure's own img still
+   fills 100% of whatever container it's given, so left uncapped it'd
+   stretch across the full ~1056px span instead of just gaining the
+   room to sit centered at a normal, single-column-ish size. */
+.post-article > figure.post-fullwidth {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Photos start as plain <p><img title="..."></p> markup (kramdown's
    image-with-title output) and only get wrapped into the styled <figure>
    above by JS after the page parses. Constrain the raw markup too, so a
