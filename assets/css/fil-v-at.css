@@ -118,51 +118,8 @@
     margin-right: auto !important;
 }
 
-/* Header row (icon + player/event text) gets a third item — the "Oyunu
-   İncele" button below — pushed to the far right via margin-left: auto
-   on the button itself, so ChessPublica's own icon+text markup doesn't
-   need touching. flex-wrap lets the button drop to its own line rather
-   than overflow when a header's player names already run long. */
-.post-article > .pgn-container .video-title.pgn-title {
-    flex-wrap: wrap;
-    row-gap: 0.5rem;
-}
-
-.pgn-study-btn {
-    margin-left: auto;
-    flex-shrink: 0;
-    background: transparent;
-    color: var(--fg);
-    border: 1px solid var(--line);
-    padding: 0.4rem 1rem;
-    font-family: var(--font-sans);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-}
-
-.pgn-study-btn:hover {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-    transform: translateY(-1px);
-}
-
-.pgn-study-btn:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-@media (max-width: 640px) {
-    .pgn-study-btn {
-        font-size: 10px;
-        padding: 0.35rem 0.75rem;
-    }
-}
+/* Header row's flex-wrap (for the "Oyunu İncele" button) and the
+   .pgn-study-btn styling itself now live site-wide in main.css. */
 
 /* The dynamically-created <pgn-study> (see the script below) replaces
    the article view in place, so it gets the same card spacing. */
