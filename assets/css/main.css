@@ -3243,23 +3243,21 @@ pgn-player .player-container.puzzle-active .board-wrap .board-b72b1 {
     }
 }
 
-/* ChessPublica's article-view renderer prints an extra diagram of the
-   starting position at the very top of a game's move list whenever it
-   doesn't begin from the normal starting array (a [SetUp]/[FEN] header)
-   — useful context for a standalone <pgn> card, since the reader has no
-   board otherwise. Inside <pgn-study> that's redundant: its own board
-   pane already shows that exact position, live and interactive, so the
-   same diagram just repeats it a second time for no reason.
-   ChessPublica only marks this auto diagram (and every other inline
-   diagram) with .pgn-clickable-diagram when it's rendering with
-   clickable-moves — which is exactly how pgn-study renders its internal
-   <pgn> — and, unlike any other inline diagram a move's own comment
-   might add later in the list, this one is unconditionally the very
-   first thing appended to .pgn-moves. That combination (:first-child +
-   .pgn-clickable-diagram) is what lets this target pgn-study's copy
-   specifically, while leaving a plain <pgn> card's own start diagram —
-   never clickable-moves, so never matched here — completely alone. */
-.post-article > pgn-study .pgn-moves > .cp-board-wrapper.pgn-clickable-diagram:first-child {
+/* Every inline diagram in a game's move list — the auto-printed
+   starting position ChessPublica adds when a game doesn't begin from
+   the normal array (a [SetUp]/[FEN] header), and any later one a move's
+   own comment adds (e.g. a `[#]`/{[#]} marker) — is useful in a
+   standalone <pgn> card, since the reader has no board otherwise.
+   Inside <pgn-study> every one of them is redundant: its own board pane
+   already shows the live, interactive position move-by-move, so a
+   static snapshot repeated in the move-list text next to it adds
+   nothing. Not scoped to .post-article — this holds for every
+   <pgn-study> on the site, however it was created (the "Oyunu İncele"
+   button, the .post-game board/article toggle escalating to pgn-study,
+   ...). .pgn-moves (not .pgn-container) is what actually holds the
+   move-by-move text, same scoping as the diagram-column rules above. */
+pgn-study .pgn-moves .cp-board-wrapper,
+pgn-study .pgn-moves .fen-container {
     display: none;
 }
 
