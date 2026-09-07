@@ -2449,6 +2449,25 @@ pgn-player p {
         grid-template-columns: 1fr 1fr;
         column-gap: 3.5rem;
     }
+
+    /* Same idea as .game-pair, but hand-placed in markdown rather than
+       JS-paired: a tall, unbreakable figure (e.g. a book cover) sized to
+       fit one column still throws off the browser's automatic column-
+       balance guess just by sitting in the normal flow (its own
+       break-inside: avoid forces whichever column holds it, plus
+       whatever text precedes it, to grow well past a natural half-split
+       — reflowing at a smaller image size doesn't change which
+       paragraphs group with it, only how tall that group gets). Pairing
+       it explicitly against a specific chunk of text — rather than
+       leaving the assignment to automatic balancing — keeps the image
+       at the article's normal column width without the imbalance,
+       since both sides are picked to already run close in height. */
+    .post-article > .cover-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3.5rem;
+        align-items: start;
+    }
 }
 
 .post-hero {
@@ -2586,6 +2605,7 @@ pgn-player p {
    the page's 16px base against 17.6px (1.1rem) surrounding prose. */
 .post-article > .pgn-container.game-card {
     font-size: 1.1rem;
+    margin-top: 1rem;
 }
 
 /* Header row (icon + player/event text) gets a third item — the "Oyunu
@@ -2740,7 +2760,14 @@ pgn-player p {
     margin-right: 1rem;
 }
 
-.post-article > figure {
+/* .cover-pair (see the grid rule above) nests its figure a level
+   deeper than every other .post-article figure, so the plain direct-
+   child selector below doesn't reach it — matched separately here
+   rather than restructuring it to be a direct child, since it needs
+   its own grid cell wrapper (with the paired text) for the pairing to
+   work at all. */
+.post-article > figure,
+.post-article > .cover-pair figure {
     margin: 3rem 0;
     border: 1px solid var(--line);
     background: var(--surface);
@@ -2775,7 +2802,8 @@ pgn-player p {
     border: 0;
 }
 
-.post-article > figure img {
+.post-article > figure img,
+.post-article > .cover-pair figure img {
     display: block;
     width: 100%;
     height: auto;
@@ -2804,7 +2832,8 @@ pgn-player p {
     height: auto;
 }
 
-.post-article > figure figcaption {
+.post-article > figure figcaption,
+.post-article > .cover-pair figure figcaption {
     padding: 1rem 1.25rem;
     border-top: 1px solid var(--line);
     font-family: var(--font-mono);
