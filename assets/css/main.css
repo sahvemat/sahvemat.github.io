@@ -2603,7 +2603,8 @@ pgn-player p {
     }
 }
 
-.post-article > p {
+.post-article > p,
+.post-article > .cover-pair p {
     font-family: var(--font-serif);
     font-size: 1.1rem;
     line-height: 1.8;
