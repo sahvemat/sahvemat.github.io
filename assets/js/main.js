@@ -1,3 +1,27 @@
+// ChessPublica renders <pgn> by calling replaceWith() on it with a new
+// <div class="pgn-container game-card">, discarding the original element
+// (and with it, the raw PGN source text) in the process — there is no
+// other way to read that source back out once it's rendered. This has to
+// sit before ChessPublica's own <script> tag ever runs (it renders <pgn>
+// inside its own DOMContentLoaded listener; this file is loaded `defer`,
+// which always finishes executing before DOMContentLoaded fires,
+// regardless of order relative to ChessPublica's own non-deferred
+// <script> tag in _layouts/default.html), so every <pgn> element's
+// original textContent gets stashed on its replacement node here (a
+// plain JS property, not a DOM attribute, so it survives untouched
+// regardless of what the PGN text contains) before ChessPublica ever
+// gets a chance to discard it. The "Oyunu İncele" button further down
+// reads it back from there to build a <pgn-study> on demand.
+(function () {
+    var nativeReplaceWith = Element.prototype.replaceWith;
+    Element.prototype.replaceWith = function (replacement) {
+        if (this.tagName === 'PGN' && replacement && replacement.nodeType === 1) {
+            replacement.__rawPgn = this.textContent;
+        }
+        return nativeReplaceWith.apply(this, arguments);
+    };
+})();
+
 // Pair up 2 consecutive "bare" game sections — a heading directly
 // followed by a single .post-game div and nothing else before the next
 // heading — into a side-by-side 2-column row, instead of each one
@@ -2180,3 +2204,122 @@
         });
     }).observe(document.body, { childList: true, subtree: true });
 })();
+
+// "Oyunu İncele" button, in the header of every bare <pgn> article-view
+// card (site-wide — originally built for fil-v-at only, promoted here
+// since the swap itself has nothing fil-v-at-specific about it). Mirrors
+// the site's existing .post-game-toggle interaction (a button that swaps
+// the article view for a richer one), but here it swaps the annotated-
+// article <pgn> card for ChessPublica's synced board+text <pgn-study>
+// viewer, built lazily from the raw PGN text the replaceWith patch above
+// stashed on the card. Collapsing that <pgn-study> (its own built-in
+// top-right icon) swaps it back to the plain <pgn> article view instead
+// of leaving ChessPublica's own little collapsed ribbon behind, via
+// window.ChessPublica.initAll() — the same entry point ChessPublica's
+// own DOMContentLoaded listener calls, safe to call again since every
+// renderer it runs skips elements already marked dataset.cpRendered.
+//
+// This has to wait for the window 'load' event, not DOMContentLoaded:
+// ChessPublica itself only renders <pgn> inside its *own*
+// DOMContentLoaded listener, registered when its <script> tag runs —
+// which is after this file's own script tag (earlier in the page, see
+// _layouts/default.html) has already registered this listener. Same
+// event, so registration order decides firing order: DOMContentLoaded
+// here would run before ChessPublica's own handler ever creates the
+// .pgn-container cards this loop looks for. 'load' fires strictly after
+// every DOMContentLoaded listener (ChessPublica's included) has already
+// run to completion, so the cards are guaranteed to exist by then.
+window.addEventListener('load', function () {
+    // ChessPublica's <pgn-study> wires its own controls (collapse toggle,
+    // ribbon title, settings, download/flip/speed icons, ...) through
+    // hardcoded page-wide element ids (pgnStudyCollapseToggle,
+    // pgnStudyRibbonTitle, etc.), not scoped to the individual <pgn-study>
+    // instance — with two open at once, document.getElementById always
+    // resolves to the *first* one's elements, so the second instance's
+    // own icons and buttons silently do nothing when clicked. Keeping
+    // only one open at a time (closing any previously open one first)
+    // sidesteps the duplicate-id collision entirely.
+    var openStudy = null; // { study, rawPgn, observer, tocObserver }
+
+    function restoreToArticle(entry) {
+        entry.observer.disconnect();
+        if (entry.tocObserver) entry.tocObserver.disconnect();
+        var pgn = document.createElement('pgn');
+        pgn.textContent = entry.rawPgn;
+        entry.study.replaceWith(pgn);
+        window.ChessPublica.initAll();
+        if (openStudy === entry) openStudy = null;
+    }
+
+    // ChessPublica's TOC ribbon button is always shown and enabled, even
+    // for a game with no recognized named openings/sub-variations to
+    // list. That lookup is async (it fetches an ECO opening-name table
+    // and only then, if anything matched, appends a heading + list to
+    // #pgnStudyTocAccordion — see the pgn-study element's own script), so
+    // there is no synchronous way to know in advance whether it'll be
+    // empty. Hide the button as soon as the study opens and reveal it
+    // again only once that lookup actually adds something to the
+    // accordion.
+    function hideTocButtonUntilPopulated(entry) {
+        var tocBtn = document.querySelector('.pgn-study-ribbon-btn[data-ribbon-action="toc"]');
+        var accordion = document.getElementById('pgnStudyTocAccordion');
+        if (!tocBtn || !accordion) return;
+        tocBtn.style.display = 'none';
+        entry.tocObserver = new MutationObserver(function () {
+            if (accordion.childElementCount === 0) return;
+            tocBtn.style.display = '';
+            entry.tocObserver.disconnect();
+        });
+        entry.tocObserver.observe(accordion, { childList: true });
+    }
+
+    function enhanceCard(card) {
+        if (card.__enhanced) return;
+        card.__enhanced = true;
+        var rawPgn = card.__rawPgn;
+        var header = card.querySelector('.video-title.pgn-title');
+        if (!rawPgn || !header) return;
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'pgn-study-btn';
+        btn.textContent = 'Oyunu İncele';
+        header.appendChild(btn);
+
+        btn.addEventListener('click', function () {
+            if (openStudy) restoreToArticle(openStudy);
+
+            var study = document.createElement('pgn-study');
+            study.textContent = rawPgn;
+            card.replaceWith(study);
+
+            var entry = { study: study, rawPgn: rawPgn, observer: null, tocObserver: null };
+            hideTocButtonUntilPopulated(entry);
+            entry.observer = new MutationObserver(function () {
+                // ChessPublica's own collapse-toggle icon adds this class
+                // to the <pgn-study> — react to it the same way a switch
+                // to a different game's study does (see restoreToArticle
+                // above and window.ChessPublica.initAll()'s doc comment
+                // there), instead of leaving its own mini collapsed
+                // ribbon behind.
+                if (study.classList.contains('pgn-study-collapsed')) restoreToArticle(entry);
+            });
+            entry.observer.observe(study, { attributes: true, attributeFilter: ['class'] });
+            openStudy = entry;
+        });
+    }
+
+    // Enhance every card already on the page, and — since collapsing a
+    // <pgn-study> above rebuilds a brand new .pgn-container rather than
+    // reusing the old one — any later one too.
+    var postArticle = document.querySelector('.post-article');
+    if (!postArticle) return;
+    document.querySelectorAll('.post-article > .pgn-container').forEach(enhanceCard);
+    new MutationObserver(function (mutations) {
+        mutations.forEach(function (m) {
+            m.addedNodes.forEach(function (node) {
+                if (node.nodeType === 1 && node.classList.contains('pgn-container')) enhanceCard(node);
+            });
+        });
+    }).observe(postArticle, { childList: true });
+});
