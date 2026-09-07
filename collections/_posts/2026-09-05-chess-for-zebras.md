@@ -31,8 +31,6 @@ Aynı yaklaşımla, "atak bir oyuncuyum", "konumsal oynamayı severim", "hesap y
 
 Kitap boyunca konuya eşlik eden örneklerde kendi partilerini, oynarkenki düşüncelerini ve hissettiklerini içten (belki de aşırı içten!) bir şekilde paylaşması kitabın en büyük artılarından. Şimdi ilk bölümün kaba bir özeti sayılabilecek bir kısmını paylaşmak istiyorum. Bir satranç kitabında içtenliğiyle böylesine beni yakalayan ve söyledikleriyle bana ayna tutan başka bir bölüm hatırlamıyorum. Sözünü ettiğim, Hikaye Uydurma (*Fabulation*) alt başlığında Rowson'un yakın zamanda hayata gözlerini yuman Viktor Korchnoi ile karşılaşmasıdır.
 
-## Korchnoi - Rowson, Port Erin 2004
-
 <pgn>
 [Event "Monarch Assurance 13th"]
 [Site "Port Erin"]
