@@ -159,7 +159,8 @@ a:hover {
 }
 
 /* ── Utilities ──────────────────────────────────────────────── */
-.post-article > p:first-of-type::first-letter {
+.post-article > p:first-of-type::first-letter,
+.post-article > .cover-pair p:first-of-type::first-letter {
     font-size: 5rem;
     font-family: var(--font-display);
     font-weight: 900;
@@ -168,6 +169,17 @@ a:hover {
     margin-top: 0.5rem;
     color: var(--fg);
     line-height: 0.7;
+}
+
+/* A .cover-pair (image paired against the opening text — see .cover-pair
+   below) sits *before* the article's real first paragraph in the DOM,
+   but as a <div> it doesn't count against p's own type index, so
+   `p:first-of-type` above still matches the plain paragraph right after
+   it too. That paragraph is no longer actually the article's opening
+   line — the drop cap already landed on .cover-pair's own first
+   paragraph via the second selector above — so undo it here. */
+.post-article > .cover-pair ~ p:first-of-type::first-letter {
+    all: unset;
 }
 
 .stagger-in > * {
